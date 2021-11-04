@@ -1,0 +1,170 @@
+
+const int MAX_CHAPTER = 5;
+const int MAX_MISSIONS = 5;
+
+class C_Npc
+{
+	var int id;
+	var string name[5];
+	var string slot;				//
+	var int npcType;
+	var int flags;
+	var int attribute[ATR_INDEX_MAX];
+	var int protection[PROT_INDEX_MAX];
+	var int damage[DAM_INDEX_MAX];
+	var int damagetype;
+	var int guild;
+	var int level;
+	var func mission[5];			//
+	var int fight_tactic;
+	var int weapon;				//
+	var int voice;
+	var int voicePitch;
+	var int bodymass;				//
+	var func daily_routine;
+	var func start_aistate;
+	var string spawnPoint;
+	var int spawnDelay;
+	var int senses;
+	var int senses_range;
+	var int aivar[50];
+	var string wp;
+	var int exp;
+	var int exp_next;
+	var int lp;
+};
+
+class C_Mission
+{
+	var string name;
+	var string description;
+	var int duration;
+	var int important;
+	var func offerConditions;
+	var func offer;
+	var func successConditions;
+	var func success;
+	var func failureConditions;
+	var func failure;
+	var func obsoleteConditions;
+	var func obsolete;
+	var func running;
+};
+
+class C_Item
+{
+	var int id;
+	var string name;
+	var string nameID;
+	var int hp;
+	var int hp_max;
+	var int mainflag;
+	var int flags;
+	var int weight;
+	var int value;
+	var int damagetype;
+	var int damageTotal;
+	var int damage[DAM_INDEX_MAX];
+	var int wear;
+	var int protection[PROT_INDEX_MAX];
+	var int nutrition;
+	var int cond_atr[3];
+	var int cond_value[3];
+	var int change_atr[3];
+	var int change_value[3];
+	var func magic;
+	var func on_equip;
+	var func on_unequip;
+	var func on_state[4];
+	var func owner;
+	var int ownerGuild;
+	var int disguiseGuild;
+	var string visual;
+	var string visual_change;
+	var int visual_skin;
+	var string scemeName;		// MAP, FOOD, FOODHUGE, MEAT, RICE, JOINT, POTION
+	var int material;
+	var int munition;
+	var int spell;
+	var int range;
+	var int mag_circle;
+	var string description;
+	var string text[6];
+	var int count[6];
+};
+
+class C_Focus
+{
+	var float npc_longrange;
+	var float npc_range1;
+	var float npc_range2;
+	var float npc_azi;
+	var float npc_elevdo;
+	var float npc_elevup;
+	var int npc_prio;
+	var float item_range1;
+	var float item_range2;
+	var float item_azi;
+	var float item_elevdo;
+	var float item_elevup;
+	var int item_prio;
+	var float mob_range1;
+	var float mob_range2;
+	var float mob_azi;
+	var float mob_elevdo;
+	var float mob_elevup;
+	var int mob_prio;
+};
+
+//Новые диалоги становятся доступными, только если начать игру заново.
+//Существующие диалоги можно редактировать и дополнять условиями на лету.
+class C_Info
+{
+	var int npc;				//НэПэЦэ найме у которого будет реплика при удовлетворении CONDITION
+	var int nr;					//number row порядок реплик в окне выбора
+	var int important;			//Заставляет НПС стартовать с ГГ диалог принудительно, если ГГ в селекте у НПС
+	var func condition;		//Ссылка на функцию, если возвращает TRUE, то в окне выбора реплик появляется реплика description
+	var func information;		//Функция выполняется после выбора реплики description
+	var string description;	//Текст реплики, нажав на который тригернётся information
+	var int trade;				//Видимо торговля при 1 и нет при 0
+	var int permanent;			//Если TRUE, то проверка на condition происходит даже если стригерить information, а при FALSE проверка завершается после первого вызова information
+};
+
+class C_ITEMREACT
+{
+	var int npc;
+	var int trade_item;
+	var int trade_amount;
+	var int requested_cat;
+	var int requested_item;
+	var int requested_amount;
+	var func reaction;
+};
+
+instance self(C_Npc)
+{
+};
+
+instance other(C_Npc)
+{
+};
+
+instance victim(C_Npc)
+{
+};
+
+instance item(C_Item)
+{
+};
+
+instance hero(C_Npc)
+{
+};
+
+class C_NPCINFO
+{
+	var int x;
+};
+instance npcinfo(C_NPCINFO)
+{
+};
