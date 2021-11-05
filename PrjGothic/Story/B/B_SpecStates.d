@@ -30,20 +30,37 @@ func int Npc_HasBleeding(var C_NPC npc)
 };
 func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 {
+	PrintDebug("Npc_ReactToSelfSpecStates..");
 	if(Npc_HasBleeding(npc))
 	{
-		if(npc_isworker
-			if(npc_hp < 50
-				npc_notInFight
-					npc.healSelf
-				npc_inFight
-					npc.flee
-		if(npc_notWorker
-			if(npc_inFight
-				if(npc_hp < 20
-					npc.flee
-			if(npc_notInFight
-				npc.healSelf
+		if(C_NpcIsWorker(npc))
+			{
+				if(Npc_GetHPPcnt(npc) < 50)
+				{
+					if(Npc_InFight(npc))
+					{
+						AI_StartState(npc,ZS_Flee,0,"");
+					}
+					else
+					{
+						AI_StartState(npc,ZS_HealSelf,0,"");
+					};
+				};
+		}
+		else
+		{
+			if(Npc_InFight(npc))
+			{
+				if(Npc_GetHPPcnt(npc) < 20)
+				{
+					AI_StartState(npc,ZS_Flee,0,"");
+				};
+			}
+			else
+			{
+				AI_StartState(npc,ZS_HealSelf,0,"");
+			};
+		};
 	};
 };
 func void B_SpecStateTriger_Bleeding(var C_NPC slf,var C_NPC oth)
