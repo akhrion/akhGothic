@@ -127,4 +127,27 @@ func int getTimestamp()
 	return Wld_GetDay() * 1440 + getCurDayMinutes();
 };
 
-
+func int Npc_GetHP(var C_NPC npc)
+{
+	return npc.attribute[ATR_HITPOINTS];
+};
+func int Npc_GetHPPcnt(var C_NPC npc)
+{
+	return npc.attribute[ATR_HITPOINTS] * 100 / npc.attribute[ATR_HITPOINTS_MAX];
+};
+func void Npc_SetHP(var C_NPC npc, var int hp)
+{
+	npc.attribute[ATR_HITPOINTS] = hp;
+};
+func void Npc_SetHPPcnt(var C_NPC npc,var int hp)
+{
+	npc.attribute[ATR_HITPOINTS] = hp * npc.attribute[ATR_HITPOINTS_MAX] / 100;
+};
+func int Npc_InFight(var C_NPC npc)
+{
+	if(Npc_IsInFightMode(npc,FMODE_NONE))
+	{
+		return false;
+	};
+	return true;
+};
