@@ -1,4 +1,4 @@
-func void B_SpecStates_Bleeding(var C_NPC slf,var C_NPC oth)
+func void B_SpecStateInit_Bleeding(var C_NPC slf,var C_NPC oth)
 {
 	if(slf.aivar[AIV_MM_REAL_ID] == ID_WOLF)
 	{
@@ -11,7 +11,10 @@ func void B_SpecStates_Bleeding(var C_NPC slf,var C_NPC oth)
 			};
 		};
 	};
-	if(oth.aivar[AIV_MM_VisualType] == VT_BLOODY)
+};
+func void B_SpecStateLoop_Bleeding(var C_NPC slf)
+{
+	if(slf.aivar[AIV_MM_VisualType] == VT_BLOODY)
 	{
 		//Здесь необходим очередной филд объекта с фрейм-каунтером или таймером
 		//таймер есть в AI_StartState, но переводя объект в AI_StartState
@@ -27,15 +30,30 @@ func void B_SpecStates_Bleeding(var C_NPC slf,var C_NPC oth)
 		//хотя есть другой способ.. через кратность делимого (остаток от %)
 		if(!Npc_GetStateTime(slf) % 5)
 		{
+			PrintDebug("One time in each 5 sec.");
 			//Вот так, раз в 5 сек. будет отрабатывать.
 			//И StateTime не надо сбрасывать.. таким образом не будет конфликтов с родительской функцией состояния
 			//Надо тестить..akh working
+			if(!Hlp_Random(100))
+			{
+				slf.attribute[ATR_HITPOINTS] -=1;
+			};
+			//Эта функция должна вызываться в цикле zs_.._loop
+			//не учтено, то что эти лупы делают больше, чем одну итерацию за секунду..
+			//таким образом.. данная реализация, весьма ограниченно работает. Но работает ;)
+			//Угу.. можно с помощью рандома снизить вероятность урона в итерации
+			//что приводит к выравниванию общего инъекц-урона. Таким образом можно считать вопрос решённым.
+			//Хотя конечно, лучше решать данную проблему через доп филд объекта. Но они ограничены.
 		};
 	};
 };
-func void B_SpecStates(var C_NPC slf, var C_NPC oth)
+func void B_SpecStatesInit(var C_NPC slf, var C_NPC oth)
 {
 	PrintDebug("B_SpecStates..");
 	PrintDebug("Should be invoked from any loop.");
-	B_SpecStates_Bleeding(slf,oth);
+	B_SpecStateInit_Bleeding(slf,oth);
+};
+func void B_SpecStatesLoop(var C_NPC slf)
+{
+	B_SpecStateLoop_Bleeding(slf);
 };

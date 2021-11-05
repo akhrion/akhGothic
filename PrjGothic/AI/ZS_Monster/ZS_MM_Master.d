@@ -761,7 +761,7 @@ func void ZS_MM_Attack()
 
 func int ZS_MM_Attack_Loop()
 {
-	B_SpecStates(self,other);
+	B_SpecStatesInit(self,other);
 	if(Npc_GetPermAttitude(self,other) != ATT_HOSTILE)
 	{
 		return LOOP_END;
