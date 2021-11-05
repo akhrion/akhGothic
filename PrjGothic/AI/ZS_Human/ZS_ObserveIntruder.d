@@ -61,6 +61,7 @@ func void ZS_ObserveIntruderWaitNeutral()
 func int ZS_ObserveIntruderWaitNeutral_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_ObserveIntruderWaitNeutral_Loop");
+	npc_main_loop(self);
 	if(Npc_GetDistToNpc(self,other) > 150)
 	{
 		return LOOP_END;

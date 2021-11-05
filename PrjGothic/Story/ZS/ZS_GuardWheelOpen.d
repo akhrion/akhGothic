@@ -23,6 +23,7 @@ func void ZS_GuardWheelOpen()
 func int ZS_GuardWheelOpen_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_GuardWheelOpen_Loop");
+	npc_main_loop(self);
 	if((self.id == 834) && (Npc_GetDistToWP(hero,"OW_PATH_067") > 1600) && FMTaken && !Npc_IsDead(self))
 	{
 		AI_StartState(self,ZS_GuardWheelClosed,0,"");

@@ -17,6 +17,7 @@ func void ZS_RepairHut_Loop()
 	var int repairreaktion;
 	var int randomizer;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_RepairHut_Loop");
+	npc_main_loop(self);
 	if(C_BodyStateContains(self,BS_MOBINTERACT_INTERRUPT))
 	{
 		repairreaktion = Hlp_Random(100);

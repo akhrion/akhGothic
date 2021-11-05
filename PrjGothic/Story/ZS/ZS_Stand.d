@@ -22,6 +22,7 @@ func void ZS_Stand()
 func void ZS_Stand_loop()
 {
 	var int zufall;
+	npc_main_loop(self);
 	zufall = Hlp_Random(100);
 	if(zufall >= 95)
 	{

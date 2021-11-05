@@ -17,6 +17,7 @@ func void ZS_Ebr_HangAround()
 func void ZS_Ebr_HangAround_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Ebr_HangAround_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

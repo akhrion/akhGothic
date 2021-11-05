@@ -16,6 +16,7 @@ func void ZS_MineBellows()
 func void ZS_MineBellows_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_MineBellows_Loop");
+	npc_main_loop(self);
 	AI_UseMob(self,"BELLOW",1);
 	AI_UseMob(self,"BELLOW",0);
 };

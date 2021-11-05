@@ -16,6 +16,7 @@ func void ZS_Flee()
 func int ZS_Flee_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_Flee_Loop");
+	npc_main_loop(self);
 	if(!Hlp_IsValidNpc(other))
 	{
 		PrintDebugNpc(PD_ZS_Check,"...Gegner nicht mehr gültig!");

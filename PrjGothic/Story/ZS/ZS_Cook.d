@@ -16,6 +16,7 @@ func void ZS_Cook()
 
 func void ZS_Cook_Loop()
 {
+	npc_main_loop(self);
 	var int randomizer;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Cook_Loop");
 	randomizer = Hlp_Random(20);

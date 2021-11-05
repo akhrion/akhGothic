@@ -20,6 +20,7 @@ func void ZS_Babe_Sleep()
 func void ZS_Babe_Sleep_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_BabeSleep_Loop");
+	npc_main_loop(self);
 	Mdl_StartFaceAni(self,"S_EYESCLOSED",1,-1);
 	AI_Wait(self,1);
 };

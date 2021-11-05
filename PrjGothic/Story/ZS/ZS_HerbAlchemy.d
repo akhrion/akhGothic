@@ -18,6 +18,7 @@ func void ZS_HerbAlchemy_Loop()
 {
 	var int randomizer;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_HerbAlchemy_Loop");
+	npc_main_loop(self);
 	randomizer = Hlp_Random(20);
 	if(Npc_GetStateTime(self) >= (100 + randomizer))
 	{

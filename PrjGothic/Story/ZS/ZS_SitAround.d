@@ -17,6 +17,7 @@ func int ZS_SitAround_Loop()
 {
 	var int sitreaktion;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_SitAround_Loop");
+	npc_main_loop(self);
 	if(!C_BodyStateContains(self,BS_SIT))
 	{
 		PrintDebugNpc(PD_TA_CHECK,"...NSC sitzt noch nicht!");
@@ -145,6 +146,7 @@ func void zs_sit()
 
 func int zs_sit_loop()
 {
+	npc_main_loop(self);
 	if(!C_BodyStateContains(self,BS_SIT))
 	{
 		AI_RemoveWeapon(self);

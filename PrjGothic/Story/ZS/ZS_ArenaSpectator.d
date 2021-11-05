@@ -24,6 +24,7 @@ func void ZS_ArenaSpectator_loop()
 	var int randomtime;
 	var int shout;
 	var int anim;
+	npc_main_loop(self);
 	if(!Npc_IsOnFP(self,"STAND") && Wld_IsFPAvailable(self,"STAND"))
 	{
 		AI_SetWalkMode(self,NPC_WALK);

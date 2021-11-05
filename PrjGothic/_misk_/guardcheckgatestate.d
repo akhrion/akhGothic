@@ -57,6 +57,7 @@ func void ZS_GuardWheelClosed()
 func int ZS_GuardWheelClosed_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_GuardWheelClosed_Loop");
+	npc_main_loop(self);
 	if((self.id == 834) && ((Npc_GetDistToWP(hero,"OW_PATH_067") <= 1600) || (Npc_GetDistToWP(hero,"OW_PATH_07_21_GUARD_MIDDLE") <= 1800)) && FMTaken && !Npc_IsDead(self))
 	{
 		AI_StartState(self,ZS_GuardWheelOpen,0,"");

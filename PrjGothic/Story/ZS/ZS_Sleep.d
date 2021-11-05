@@ -17,6 +17,7 @@ func void ZS_Sleep()
 func int zs_sleep_loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Sleep_Loop");
+	npc_main_loop(self);
 	if(Npc_GetDistToWP(self,self.wp) > 300)
 	{
 		AI_SetWalkMode(self,NPC_WALK);

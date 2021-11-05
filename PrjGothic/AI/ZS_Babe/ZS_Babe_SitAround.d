@@ -14,6 +14,7 @@ func void ZS_Babe_SitAround()
 func int ZS_Babe_SitAround_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_BabeSitAround_Loop");
+	npc_main_loop(self);
 	if(!C_BodyStateContains(self,BS_SIT))
 	{
 		if(Wld_IsMobAvailable(self,"CHAIR"))

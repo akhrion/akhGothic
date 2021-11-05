@@ -18,6 +18,7 @@ func void ZS_BodyGuard()
 func void ZS_BodyGuard_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_BodyGuard_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

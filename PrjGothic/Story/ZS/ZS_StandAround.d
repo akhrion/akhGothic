@@ -19,9 +19,9 @@ func void ZS_StandAround()
 
 func int ZS_StandAround_Loop()
 {
-	//akhrionLoop(self);
 	var int choice;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_StandAround_Loop");
+	npc_main_loop(self);
 	if(Npc_WasInState(self,ZS_Smalltalk))
 	{
 		B_GotoFP(self,"SMALLTALK");

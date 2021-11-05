@@ -13,6 +13,7 @@ func void ZS_Listen()
 func void ZS_Listen_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_LISTEN");
+	npc_main_loop(self);
 	if(self.aivar[AIV_FOUNDPERSON] == FALSE)
 	{
 		PrintDebugNpc(PD_TA_CHECK,"...bisher keinen Redner gefunden...!");

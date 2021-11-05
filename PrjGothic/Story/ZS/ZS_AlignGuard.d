@@ -14,6 +14,7 @@ func void ZS_AlignGuard()
 func void ZS_AlignGuard_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Guard_Loop");
+	npc_main_loop(self);
 	B_GotoFP(self,"GUARD");
 	B_PlayArmor();
 	AI_Wait(self,0.5);

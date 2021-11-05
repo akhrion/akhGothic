@@ -34,6 +34,7 @@ func void ZS_ObserveSuspect()
 func int ZS_ObserveSuspect_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_ObserveSuspect_Loop");
+	npc_main_loop(self);
 	B_SmartTurnToNpc(self,other);
 	AI_Wait(self,5);
 	B_Say(self,other,"$GETOUTOFHERE");

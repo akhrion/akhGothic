@@ -19,6 +19,7 @@ func void ZS_PickRice()
 func void ZS_PickRice_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_PickRice_Loop");
+	npc_main_loop(self);
 	if((Npc_GetStateTime(self) >= self.aivar[AIV_ITEMFREQ]) && Hlp_Random(2))
 	{
 		PrintDebugNpc(PD_TA_DETAIL,"PickRice Bücken mit Platzwechsel");

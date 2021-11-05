@@ -21,6 +21,7 @@ func void ZS_Walk()
 func void ZS_Walk_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Walk_Loop");
+	npc_main_loop(self);
 	if(Npc_IsOnFP(self,"WALK_A_") && Wld_IsFPAvailable(self,"WALK_B_"))
 	{
 		AI_GotoFP(self,"WALK_B_");

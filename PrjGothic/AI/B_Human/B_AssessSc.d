@@ -130,7 +130,6 @@ func void B_AssessSC()
 	var C_Npc her;
 	var C_Npc rock;
 	PrintDebugNpc(PD_ZS_FRAME,"B_AssessSc");
-	
 	if(
 		(self.id == 888)
 	)

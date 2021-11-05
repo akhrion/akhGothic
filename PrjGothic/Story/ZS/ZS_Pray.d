@@ -17,6 +17,7 @@ func void ZS_Pray()
 func void ZS_Pray_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Pray_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

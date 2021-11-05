@@ -13,6 +13,7 @@ func void ZS_Babe_Dance_Loop()
 {
 	var int danceStyle;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Babe_Dance_Loop");
+	npc_main_loop(self);
 	danceStyle = Hlp_Random(9);
 	if(danceStyle == 0)
 	{

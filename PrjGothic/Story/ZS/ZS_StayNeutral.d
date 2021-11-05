@@ -21,6 +21,7 @@ func void ZS_StayNeutral()
 func void ZS_StayNeutral_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_StayNeutral_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

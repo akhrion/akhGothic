@@ -18,6 +18,7 @@ func void ZS_Speech()
 func void ZS_Speech_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Speech_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

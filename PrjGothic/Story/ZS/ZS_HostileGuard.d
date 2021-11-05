@@ -18,6 +18,7 @@ func void ZS_HostileGuard()
 func void ZS_HostileGuard_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_HostileGuard_Loop");
+	npc_main_loop(self);
 	B_GotoFP(self,"GUARD");
 	B_PlayArmor();
 	AI_Wait(self,0.5);

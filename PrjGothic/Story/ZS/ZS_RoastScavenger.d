@@ -12,6 +12,7 @@ func void ZS_RoastScavenger()
 
 func void ZS_RoastScavenger_Loop()
 {
+	npc_main_loop(self);
 	var int randomizer;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_RoastScavenger_Loop");
 	randomizer = Hlp_Random(20);

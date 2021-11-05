@@ -37,6 +37,7 @@ func int ZS_WatchFight_Loop()
 	Kharim = Hlp_GetNpc(Sld_729_Kharim);
 	GorHanis = Hlp_GetNpc(Tpl_1422_GorHanis);
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_WatchFight_Loop");
+	npc_main_loop(self);
 	if(Npc_IsDead(other) || Npc_IsDead(victim))
 	{
 		PrintDebugNpc(PD_ZS_LOOP,"...Workaraound für nicht ankommende PERC_ASSESSMURDER!");

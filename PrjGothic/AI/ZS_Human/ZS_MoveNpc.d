@@ -16,6 +16,7 @@ func void ZS_MoveNpcWait()
 func void ZS_MoveNpcWait_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_MoveNpcWait_Loop");
+	npc_main_loop(self);
 	if(Npc_GetStateTime(self) > 2)
 	{
 		if(Npc_IsWayBlocked(self) && (Npc_GetDistToNpc(self,other) < 200) && (other.aivar[AIV_INVINCIBLE] == FALSE))

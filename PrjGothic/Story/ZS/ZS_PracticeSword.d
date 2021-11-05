@@ -21,6 +21,7 @@ func void ZS_PracticeSword()
 func void ZS_PracticeSword_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_PracticeSword_Loop");
+	npc_main_loop(self);
 	AI_GotoWP(self,self.wp);
 	AI_AlignToWP(self);
 	AI_PlayAni(self,"T_1HSFREE");

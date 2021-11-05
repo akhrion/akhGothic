@@ -10,6 +10,7 @@ func void ZS_MCHunting()
 func void ZS_MCHunting_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_MCHunting_End");
+	npc_main_loop(self);
 	if(Wld_DetectNpc(self,-1,NOFUNC,GIL_MINECRAWLER))
 	{
 		PrintDebugNpc(PD_TA_CHECK,"MineCrawler detect");

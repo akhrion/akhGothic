@@ -54,6 +54,7 @@ func void ZS_PracticeBow_Loop()
 	var C_Item rangedweapon;
 	var float aimtime;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_PracticeBow_Loop");
+	npc_main_loop(self);
 	rangedweapon = Npc_GetReadiedWeapon(self);
 	aimtime = IntToFloat(Hlp_Random(2) + 3);
 	self.aivar[AIV_ITEMFREQ] = Hlp_Random(60) + 60;

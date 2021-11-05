@@ -121,6 +121,7 @@ func void ZS_ThorusPracticeSword()
 func void ZS_ThorusPracticeSword_Loop()
 {
 //	AI_GotoWP(self,C_Npc_GetNextWPArr3(self,"OCR_THORUS","OCC_WELL_FIGHT01","OCC_PALISADE_WALLCRACK"));
+	npc_main_loop(self);
 	ThorusPracticeSwordChooceWay();
 	ThorusPracticeSword();
 };

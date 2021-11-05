@@ -19,6 +19,7 @@ func void ZS_Stay()
 func void ZS_Stay_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Stay_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

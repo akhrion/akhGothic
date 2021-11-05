@@ -15,6 +15,7 @@ func void ZS_WalkAround_Loop()
 	var int varianzcounter;
 	var int hlprand;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_WalkAround_Loop");
+	npc_main_loop(self);
 	AI_GotoWP(self,Npc_GetNearestWP(self));
 	if(varianzcounter == 7)
 	{

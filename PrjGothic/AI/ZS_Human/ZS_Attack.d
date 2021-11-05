@@ -13,7 +13,6 @@ func void ZS_Attack()
 	Npc_PercEnable(self,PERC_ASSESSENTERROOM,B_CombatAssessEnterRoom);
 	Npc_PercEnable(self,PERC_CATCHTHIEF,B_CombatCatchThief);
 	Npc_PercEnable(self,PERC_ASSESSFIGHTTOGETHER,B_CombatFightTogether);
-	Npc_SetPercTime(self,0.1);
 	Npc_GetTarget(self);
 	B_WhirlAround(self,other);
 	B_SelectWeapon(self,other);
@@ -22,9 +21,9 @@ func void ZS_Attack()
 
 func int ZS_Attack_Loop()
 {
-	B_SpecStatesLoop(self);
 	var int countPursuitCycles;
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_Attack_Loop");
+	npc_main_loop(self);
 	Npc_GetTarget(self);
 	PrintGlobals(PD_ZS_DETAIL);
 	if(((self.id == 3) || (self.id == 5)) && Npc_IsPlayer(other) && (Kapitel >= 4))

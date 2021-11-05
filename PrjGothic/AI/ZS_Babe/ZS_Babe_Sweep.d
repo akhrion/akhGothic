@@ -23,6 +23,7 @@ func void ZS_Babe_Sweep()
 func void ZS_Babe_Sweep_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Babe_Sweep_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

@@ -17,6 +17,7 @@ func void ZS_WashSelf()
 
 func void ZS_WashSelf_Loop()
 {
+	npc_main_loop(self);
 	if(!Npc_IsOnFP(self,"WASH"))
 	{
 		if(Wld_IsNextFPAvailable(self,"WASH"))

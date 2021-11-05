@@ -15,6 +15,7 @@ func void ZS_GuardPalisade()
 func void ZS_GuardPalisade_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_GuardPalisade_Loop");
+	npc_main_loop(self);
 	if(Npc_CanSeeNpc(self,hero))
 	{
 		if(Npc_GetDistToNpc(self,hero) < HAI_DIST_WATCH)

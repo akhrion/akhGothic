@@ -18,6 +18,7 @@ func void ZS_Preach()
 func void ZS_Preach_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Preach_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

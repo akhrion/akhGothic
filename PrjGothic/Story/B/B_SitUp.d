@@ -43,6 +43,7 @@ func void ZS_WaitForRescue()
 func void ZS_WaitForRescue_Loop()
 {
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_WaitForRescue_Loop");
+	npc_main_loop(self);
 };
 
 func void ZS_WaitForRescue_End()

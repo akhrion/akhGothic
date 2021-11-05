@@ -58,6 +58,7 @@ func void ZS_Talk()
 func int ZS_Talk_Loop()
 {
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_Talk_Loop");
+	npc_main_loop(self);
 	if(C_BodyStateContains(self,BS_SIT))
 	{
 		if(self.aivar[AIV_HangAroundStatus] <= 1)

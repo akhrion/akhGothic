@@ -17,6 +17,7 @@ func void ZS_Guard()
 func void ZS_Guard_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Guard_Loop");
+	npc_main_loop(self);
 	if(!Npc_IsOnFP(self,"GUARD"))
 	{
 		AI_GotoFP(self,"GUARD");

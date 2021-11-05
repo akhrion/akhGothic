@@ -1,10 +1,58 @@
-func void B_SpecStateInit_Bleeding(var C_NPC slf,var C_NPC oth)
+func void Npc_SetSpecStateTik(var C_NPC npc,var int state)
+{
+	if(!isFlagsContainCategorie(npc.aivar[AIV_SpecStatesTiks],state))
+	{
+		npc.aivar[AIV_SpecStatesTiks] += SST_BLEEDING;
+	};
+};
+func void Npc_RemSpecStateTik(var C_NPC npc,var int state)
+{
+	if(isFlagsContainCategorie(npc.aivar[AIV_SpecStatesTiks],state))
+	{
+		npc.aivar[AIV_SpecStatesTiks] -= SST_BLEEDING;
+	};
+};
+func int Npc_HasSpecStateTik(var C_NPC npc,var int state)
+{
+	if(isFlagsContainCategorie(npc.aivar[AIV_SpecStatesTiks],state))
+	{
+		return true;
+	};
+	return false;
+};
+func int Npc_HasBleeding(var C_NPC npc)
+{
+	if(isFlagsContainCategorie(npc.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		return true;
+	};
+	return false;
+};
+func void Npc_ReactToSelfSpecStates(var C_NPC npc)
+{
+	if(Npc_HasBleeding(npc))
+	{
+		if(npc_isworker
+			if(npc_hp < 50
+				npc_notInFight
+					npc.healSelf
+				npc_inFight
+					npc.flee
+		if(npc_notWorker
+			if(npc_inFight
+				if(npc_hp < 20
+					npc.flee
+			if(npc_notInFight
+				npc.healSelf
+	};
+};
+func void B_SpecStateTriger_Bleeding(var C_NPC slf,var C_NPC oth)
 {
 	if(slf.aivar[AIV_MM_REAL_ID] == ID_WOLF)
 	{
-		if(Hlp_Random(2))
+		if(Hlp_Random(100) < NPC_BLEEDING_CHANCE_WOLF)
 		{
-			PrintDebug("50%\50% Bleeding wound by Wolf");
+			PrintDebug("70% get Bleeding wound by Wolf");
 			if(!isFlagsContainCategorie(oth.aivar[AIV_MM_VisualType],VT_BLOODY))
 			{
 				oth.aivar[AIV_MM_VisualType] += VT_BLOODY;
@@ -16,44 +64,29 @@ func void B_SpecStateLoop_Bleeding(var C_NPC slf)
 {
 	if(slf.aivar[AIV_MM_VisualType] == VT_BLOODY)
 	{
-		//Здесь необходим очередной филд объекта с фрейм-каунтером или таймером
-		//таймер есть в AI_StartState, но переводя объект в AI_StartState
-		//необходимо тудаже наследовать и текущее состояние объекта..
-		//т.е. если он файтит, то он должен продолжать файтить
-		//если бегает, прыгает, бодрствует, то должен это продолжать делать
-		//это пздц.
-		//т.е. условно говоря нам нужны реализации:
-		//ZS_Bleeding + Attack|StandAround|Run|Walk + _Loop
-		//и когда объект получает рану, то переходит из одного из этих состояний в одноимённое с префиксом Bleeding
-		//проблема в том, что помимо кровотечения у объекта могут быть дополнительные параллельные состояния
-		//и таким образом кол-во дублирующегося кода неймоверно возрастает.. стрёмно.
-		//хотя есть другой способ.. через кратность делимого (остаток от %)
-		if(!Npc_GetStateTime(slf) % 5)
+		if(!Npc_GetStateTime(slf) % NPC_BLEEDING_TIK_PER_SECS)
 		{
-			PrintDebug("One time in each 5 sec.");
-			//Вот так, раз в 5 сек. будет отрабатывать.
-			//И StateTime не надо сбрасывать.. таким образом не будет конфликтов с родительской функцией состояния
-			//Надо тестить..akh working
-			if(!Hlp_Random(100))
+			PrintDebug("One time in each NPC_BLEEDING_TIK_PER_SECS sec.");
+			if(!Npc_HasSpecStateTik(slf,SST_BLEEDING))
 			{
+				Npc_SetSpecStateTik(slf,SST_BLEEDING);
 				slf.attribute[ATR_HITPOINTS] -=1;
 			};
-			//Эта функция должна вызываться в цикле zs_.._loop
-			//не учтено, то что эти лупы делают больше, чем одну итерацию за секунду..
-			//таким образом.. данная реализация, весьма ограниченно работает. Но работает ;)
-			//Угу.. можно с помощью рандома снизить вероятность урона в итерации
-			//что приводит к выравниванию общего инъекц-урона. Таким образом можно считать вопрос решённым.
-			//Хотя конечно, лучше решать данную проблему через доп филд объекта. Но они ограничены.
+		}
+		else
+		{
+			Npc_RemSpecStateTik(slf,SST_BLEEDING);
 		};
 	};
 };
-func void B_SpecStatesInit(var C_NPC slf, var C_NPC oth)
+func void B_SpecStatesTriger(var C_NPC slf, var C_NPC oth)
 {
 	PrintDebug("B_SpecStates..");
 	PrintDebug("Should be invoked from any loop.");
-	B_SpecStateInit_Bleeding(slf,oth);
+	B_SpecStateTriger_Bleeding(slf,oth);
 };
 func void B_SpecStatesLoop(var C_NPC slf)
 {
 	B_SpecStateLoop_Bleeding(slf);
+	Npc_ReactToSelfSpecStates(slf);
 };

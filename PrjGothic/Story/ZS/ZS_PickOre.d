@@ -22,6 +22,7 @@ func void ZS_PickOre_Loop()
 	var int randomizer;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_PickOre_Loop");
 	PrintAttitudes(PD_TA_LOOP);
+	npc_main_loop(self);
 	randomizer = Hlp_Random(20);
 	if(Npc_GetStateTime(self) >= (100 + randomizer))
 	{

@@ -19,6 +19,7 @@ func void ZS_GuardPassage()
 func int ZS_GuardPassage_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_GuardPassage_Loop");
+	npc_main_loop(self);
 	if(Npc_GetDistToWP(self,self.wp) > 200)
 	{
 		AI_SetWalkMode(self,NPC_RUN);

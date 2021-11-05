@@ -24,6 +24,7 @@ func void ZS_SitCampfire()
 
 func void ZS_SitCampfire_loop()
 {
+	npc_main_loop(self);
 };
 
 func void ZS_SitCampfire_end()

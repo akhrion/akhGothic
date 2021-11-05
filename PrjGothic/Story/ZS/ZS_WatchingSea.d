@@ -19,6 +19,7 @@ func void ZS_WatchIngSea()
 func void ZS_WatchIngSea_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Stay_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

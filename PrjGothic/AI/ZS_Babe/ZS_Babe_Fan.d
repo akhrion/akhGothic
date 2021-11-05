@@ -27,6 +27,7 @@ func void ZS_Babe_Fan()
 func void ZS_Babe_Fan_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Babe_Fan_Loop");
+	npc_main_loop(self);
 };
 
 func void ZS_Babe_Fan_End()

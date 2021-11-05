@@ -11,6 +11,7 @@ func void ZS_SittingDuck()
 func void ZS_SittingDuck_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_SittingDuck_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 };
 

@@ -39,6 +39,7 @@ func void zs_afight()
 
 func int zs_afight_loop()
 {
+	npc_main_loop(self);
 	if((self.id == 251) && Wld_IsTime(19,10,20,18) && (PLAYERINARENA == FALSE))
 	{
 		Npc_SetTarget(self,Sld_729_Kharim);

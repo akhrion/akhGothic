@@ -21,6 +21,7 @@ func void ZS_HerbShop()
 func void ZS_HerbShop_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_HerbShop_Loop");
+	npc_main_loop(self);
 };
 
 func void ZS_HerbShop_End()

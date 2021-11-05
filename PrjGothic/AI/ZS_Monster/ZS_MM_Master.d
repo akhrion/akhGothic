@@ -761,7 +761,6 @@ func void ZS_MM_Attack()
 
 func int ZS_MM_Attack_Loop()
 {
-	B_SpecStatesInit(self,other);
 	if(Npc_GetPermAttitude(self,other) != ATT_HOSTILE)
 	{
 		return LOOP_END;
@@ -798,6 +797,7 @@ func int ZS_MM_Attack_Loop()
 		};
 		if(other.aivar[AIV_INVINCIBLE] == FALSE)
 		{
+			B_SpecStatesTriger(self,other);
 			AI_Attack(self);
 		};
 	}

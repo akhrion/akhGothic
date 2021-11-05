@@ -18,6 +18,7 @@ func void ZS_Intercept()
 func int ZS_Intercept_Loop()
 {
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Intercept_Loop");
+	npc_main_loop(self);
 	AI_Wait(self,1);
 	return LOOP_CONTINUE;
 };

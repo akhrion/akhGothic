@@ -23,6 +23,7 @@ func void ZS_Boss()
 func int ZS_Boss_loop()
 {
 	var int zufall;
+	npc_main_loop(self);
 	zufall = Hlp_Random(1000);
 	if(zufall >= 800)
 	{

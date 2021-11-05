@@ -41,6 +41,7 @@ func void ZS_Smalltalk_Loop()
 {
 	var int talktime;
 	PrintDebugNpc(PD_TA_LOOP,"ZS_Smalltalk_Loop");
+	npc_main_loop(self);
 	Npc_PerceiveAll(self);
 	Wld_DetectNpc(self,-1,ZS_Smalltalk,-1);
 	PrintGlobals(PD_TA_CHECK);

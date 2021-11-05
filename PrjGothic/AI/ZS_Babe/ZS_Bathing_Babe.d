@@ -30,6 +30,7 @@ func void ZS_Bathing_Babe()
 
 func void ZS_Bathing_Babe_Loop()
 {
+	npc_main_loop(self);
 };
 
 func void ZS_Bathing_Babe_End()
