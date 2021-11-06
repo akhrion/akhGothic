@@ -69,7 +69,7 @@ func int Info_GRD_276_Bla_Condition()
 func void Info_GRD_276_Bla_Info()
 {
 	AI_Output(other,self,"Info_GRD_276_Bla_15_00");	//Там, за тобой, Старый лагерь, да?
-	AI_Output(self,other,"DIA_Viran_FetchWeed_Really_07_01");	//Ну да, как же.
+	AI_Output(self,other,"Info_GRD_276_Bla_NULL_01");	//Ну да.
 	AI_StopProcessInfos(self);
 };
 
