@@ -3,7 +3,6 @@ func void ZS_Guard()
 {
 	PrintDebugNpc(PD_TA_FRAME,"ZS_Guard");
 	GuardPerception();
-	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
 	AI_Standup(self);
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_RemoveWeapon(self);

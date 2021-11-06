@@ -6,5 +6,5 @@ func void npc_main_loop(var C_NPC npc)
 	//а конкретно эта функция - это скриптовая попытка повлиять
 	//на каждого отдельного НПС при необходимости.
 	//Если кто-то знает иной способ..
-	B_SpecStatesLoop(npc);
+	B_SpecStatesHandler(npc);
 };
