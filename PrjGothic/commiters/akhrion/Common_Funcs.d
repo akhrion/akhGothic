@@ -143,6 +143,14 @@ func void Npc_SetHPPcnt(var C_NPC npc,var int hp)
 {
 	npc.attribute[ATR_HITPOINTS] = hp * npc.attribute[ATR_HITPOINTS_MAX] / 100;
 };
+func void Npc_DecreaseHP(var C_NPC npc,var int hp)
+{
+	npc.attribute[ATR_HITPOINTS] -= hp;
+};
+func void Npc_IncreaseHP(var C_NPC npc,var int hp)
+{
+	npc.attribute[ATR_HITPOINTS] += hp;
+};
 func int Npc_InFight(var C_NPC npc)
 {
 	if(Npc_IsInFightMode(npc,FMODE_NONE))
@@ -150,4 +158,16 @@ func int Npc_InFight(var C_NPC npc)
 		return false;
 	};
 	return true;
+};
+func int Npc_HasHealPotion(var C_NPC npc)
+{
+	if(
+		Npc_HasItems(npc,ItFo_Potion_Health_01)
+	||	Npc_HasItems(npc,ItFo_Potion_Health_02)
+	||	Npc_HasItems(npc,ItFo_Potion_Health_03)
+	)
+	{
+		return true;
+	};
+	return false;
 };
