@@ -4,6 +4,8 @@ func void ZS_Flee()
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_Flee");
 	PrintGlobals(PD_ZS_Check);
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,B_AssessMagic);
+	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
+	Npc_SetPercTime(self,1);
 	C_ZSInit();
 	AI_SetWalkMode(self,NPC_RUN);
 	Mdl_ApplyOverlayMds(self,"HUMANS_FLEE.MDS");
