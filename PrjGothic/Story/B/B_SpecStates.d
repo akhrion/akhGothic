@@ -28,9 +28,25 @@ func int Npc_HasBleeding(var C_NPC npc)
 	};
 	return false;
 };
+func void Npc_HealBleading(var C_NPC npc)
+{
+	PrintDebug("Npc_HealBleading..");
+	if(isFlagsContainCategorie(npc.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		if(Npc_HasHealPotion(npc))
+		{
+			npc.aivar[AIV_MM_VisualType] -= VT_BLOODY;
+			AI_StartState(npc,ZS_HealSelf,0,"");
+		};
+	};
+};
 func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 {
 	PrintDebug("Npc_ReactToSelfSpecStates..");
+	if(Npc_IsInState(npc,ZS_Flee))
+	{
+		return;
+	};
 	if(Npc_HasBleeding(npc))
 	{
 		if(C_NpcIsWorker(npc))
@@ -43,7 +59,7 @@ func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 					}
 					else
 					{
-						AI_StartState(npc,ZS_HealSelf,0,"");
+						Npc_HealBleading(npc);
 					};
 				};
 		}
@@ -58,7 +74,7 @@ func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 			}
 			else
 			{
-				AI_StartState(npc,ZS_HealSelf,0,"");
+				Npc_HealBleading(npc);
 			};
 		};
 	};
@@ -77,22 +93,47 @@ func void B_SpecStateTriger_Bleeding(var C_NPC slf,var C_NPC oth)
 		};
 	};
 };
-func void B_SpecStateLoop_Bleeding(var C_NPC slf)
+
+func void B_SpecStateHandler_Bleeding(var C_NPC npc)
 {
-	if(slf.aivar[AIV_MM_VisualType] == VT_BLOODY)
+	PrintDebug("akh_test_bleeding_perception");
+	if(isFlagsContainCategorie(npc.aivar[AIV_MM_VisualType], VT_BLOODY))
 	{
-		if(!Npc_GetStateTime(slf) % NPC_BLEEDING_TIK_PER_SECS)
+		if(!(getTimestamp() % (NPC_BLEEDING_TIK_PER_GAME_MINS * 2)))
 		{
 			PrintDebug("One time in each NPC_BLEEDING_TIK_PER_SECS sec.");
-			if(!Npc_HasSpecStateTik(slf,SST_BLEEDING))
+			if(!Npc_HasSpecStateTik(npc,SST_BLEEDING))
 			{
-				Npc_SetSpecStateTik(slf,SST_BLEEDING);
-				slf.attribute[ATR_HITPOINTS] -=1;
+				Npc_SetSpecStateTik(npc,SST_BLEEDING);
+				npc.attribute[ATR_HITPOINTS] -=1;
 			};
 		}
 		else
 		{
-			Npc_RemSpecStateTik(slf,SST_BLEEDING);
+			if(Npc_HasSpecStateTik(npc,SST_BLEEDING))
+			{
+				Npc_RemSpecStateTik(npc,SST_BLEEDING);
+				npc.attribute[ATR_HITPOINTS] -=1;
+			};
+		};
+	};
+};
+func void B_SpecStateHandler_Bleeding_Old(var C_NPC npc)
+{
+	if(isFlagsContainCategorie(npc.aivar[AIV_MM_VisualType], VT_BLOODY))
+	{
+		if(!Npc_GetStateTime(npc) % NPC_BLEEDING_TIK_PER_SECS)
+		{
+			PrintDebug("One time in each NPC_BLEEDING_TIK_PER_SECS sec.");
+			if(!Npc_HasSpecStateTik(npc,SST_BLEEDING))
+			{
+				Npc_SetSpecStateTik(npc,SST_BLEEDING);
+				npc.attribute[ATR_HITPOINTS] -=1;
+			};
+		}
+		else
+		{
+			Npc_RemSpecStateTik(npc,SST_BLEEDING);
 		};
 	};
 };
@@ -102,8 +143,10 @@ func void B_SpecStatesTriger(var C_NPC slf, var C_NPC oth)
 	PrintDebug("Should be invoked from any loop.");
 	B_SpecStateTriger_Bleeding(slf,oth);
 };
-func void B_SpecStatesLoop(var C_NPC slf)
+
+func void B_SpecStatesHandler(var C_NPC npc)
 {
-	B_SpecStateLoop_Bleeding(slf);
-	Npc_ReactToSelfSpecStates(slf);
+//	B_SpecStateHandler_Bleeding_Old(npc);
+	B_SpecStateHandler_Bleeding(npc);
+	Npc_ReactToSelfSpecStates(npc);
 };
