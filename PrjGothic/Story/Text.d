@@ -264,6 +264,7 @@ const string NAME_Bonus_HpMax = "Бонус к макс. жизненной силе:";
 const string NAME_Bonus_ManaMax = "Бонус к макс. магической силе:";
 const string NAME_Bonus_Dex = "Бонус к ловкости:";
 const string NAME_Bonus_Str = "Бонус к силе:";
+const string NAME_Heal_HP_F = "Полностью восстанавливает жизнь";
 const string NAME_OneHanded = "Одноручное оружие";
 const string NAME_TwoHanded = "Двуручное оружие";
 const string NAME_ONEHANDED_BONUS = "Одноручное оружие, бонус +3%";

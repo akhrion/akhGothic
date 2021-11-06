@@ -36,7 +36,8 @@ func void Npc_HealBleading(var C_NPC npc)
 		if(Npc_HasHealPotion(npc))
 		{
 			npc.aivar[AIV_MM_VisualType] -= VT_BLOODY;
-			AI_StartState(npc,ZS_HealSelf,0,"");
+			Npc_UseHealPotion(npc);
+//			AI_StartState(npc,ZS_HealSelf,0,"");
 		};
 	};
 };
