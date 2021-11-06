@@ -173,6 +173,7 @@ commiters\akhrion\dialogues.d
 AI\AI_Intern\C_ZSInit.d
 Story\B\db_say.d
 commiters\akhrion\Story\B\akh_Stealth.d
+commiters\akhrion\npc_main_loop.d
 AI\B_Human\B_CompareNpcInstance.d
 AI\B_Human\B_AssessAndMemorize.d
 AI\B_Human\B_SpreadAndMemorize.d
@@ -222,7 +223,6 @@ AI\Prototypes\Npc_Default.d
 commiters\akhrion\Story\NPC\Prototypes_akh.d
 commiters\akhrion\AI\ZS_RespawnWait.d
 commiters\akhrion\AI\ZS_Respawn.d
-commiters\akhrion\npc_main_loop.d
 AI\ZS_Monster\ZS_MM_AttackMage.d
 AI\ZS_Monster\ZS_MM_Master.d
 AI\ZS_Monster\ZS_MM_SummonedByPC.d
