@@ -171,3 +171,34 @@ func int Npc_HasHealPotion(var C_NPC npc)
 	};
 	return false;
 };
+func void Npc_UseHealPotion(var C_NPC npc)
+{
+	if(Npc_HasItems(self,ItFo_Potion_Health_04))
+	{
+		AI_UseItemToState(self,ItFo_Potion_Health_04,0);
+		AI_PlayAni(self,"T_POTIONFAST_S0_2_STAND");
+		Npc_RemoveInvItem(self,ItFo_Potion_Health_04);
+		Npc_SetHPPcnt(self,100);
+	};
+	if(Npc_HasItems(self,ItFo_Potion_Health_03))
+	{
+		AI_UseItemToState(self,ItFo_Potion_Health_03,0);
+		AI_PlayAni(self,"T_POTIONFAST_S0_2_STAND");
+		Npc_RemoveInvItem(self,ItFo_Potion_Health_03);
+		Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Elixier);
+	};
+	if(Npc_HasItems(self,ItFo_Potion_Health_02))
+	{
+		AI_UseItemToState(self,ItFo_Potion_Health_02,0);
+		AI_PlayAni(self,"T_POTIONFAST_S0_2_STAND");
+		Npc_RemoveInvItem(self,ItFo_Potion_Health_02);
+		Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Extrakt);
+	};
+	if(Npc_HasItems(self,ItFo_Potion_Health_01))
+	{
+		AI_UseItemToState(self,ItFo_Potion_Health_01,0);
+		AI_PlayAni(self,"T_POTIONFAST_S0_2_STAND");
+		Npc_RemoveInvItem(self,ItFo_Potion_Health_01);
+		Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Essenz);
+	};
+};
