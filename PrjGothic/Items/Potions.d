@@ -5,6 +5,7 @@ const int Value_HpExtrakt = 35;
 const int HP_Extrakt = 70;
 const int Value_HpElixier = 50;
 const int HP_Elixier = 100;
+const int Value_HpElixier2 = 150;
 const int Value_ManaEssenz = 25;
 const int Mana_Essenz = 30;
 const int Value_ManaExtrakt = 45;
@@ -172,6 +173,10 @@ func void UseHealthPotion()
 {
 	PrintDebugNpc(PD_ITEM_MOBSI,"UseHealthPotion");
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Essenz);
+	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;
+	};
 };
 
 
@@ -197,6 +202,10 @@ func void UseHealth2Potion()
 {
 	PrintDebugNpc(PD_ITEM_MOBSI,"UseHealthPotion");
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Extrakt);
+	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;
+	};
 };
 
 
@@ -216,12 +225,41 @@ instance ItFo_Potion_Health_03(C_Item)
 	text[5] = NAME_Value;
 	count[5] = Value_HpElixier;
 };
-
-
 func void UseHealth3Potion()
 {
 	PrintDebugNpc(PD_ITEM_MOBSI,"UseHealthPotion");
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Elixier);
+	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;
+	};
+};
+
+instance ItFo_Potion_Health_04(C_Item)
+{
+	name = NAME_Trank;
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = Value_HpElixier2;
+	visual = "ItFo_Potion_Health_03.3ds";
+	material = MAT_GLAS;
+	on_state[0] = UseHealth4Potion;
+	scemeName = "POTIONFAST";
+	description = "Зелье второй жизни";
+	text[1] = NAME_Heal_HP_F;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+
+func void UseHealth4Potion()
+{
+	PrintDebugNpc(PD_ITEM_MOBSI,"UseHealthPotion");
+	Npc_SetHPPcnt(self,100);
+	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;
+	};
 };
 
 
