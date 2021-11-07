@@ -494,6 +494,12 @@ func void B_PrintGuildCondition(var int level)
 	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,"font_old_10_white.tga",_TIME_MESSAGE_Joincamp);
 };
 
+func void B_Print(var string msg)
+{
+	PrintDebugNpc(PD_ZS_FRAME,"B_Print");
+	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,"font_old_10_white.tga",_TIME_MESSAGE_Joincamp);
+};
+
 
 var int Knows_GetTeeth;
 var int Knows_GetFur;

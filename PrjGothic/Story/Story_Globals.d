@@ -411,3 +411,4 @@ var int isSCBenevolent;			//NSC will be coming to SC and ask him about gift them
 var int WolfHunter;				//Увеличивает урон и количество лута.
 var int OrcDogHunter;
 var int Knows_Wolf_prcnt;
+var int RingOfTemporalisPowerEquiped;

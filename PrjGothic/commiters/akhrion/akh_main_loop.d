@@ -111,9 +111,21 @@ func void AssessPerson()
 	};
 };
 var int noone;
-
+func void RingOfTemporalisPower_Handler()
+{
+	if(!RingOfTemporalisPowerEquiped)
+	{
+		return;
+	};
+	RingOfTemporalisPower.hp -=1;
+	if(RingOfTemporalisPower.hp < 1)
+	{
+		UnEquip_RingOfTemporalisPower_Script(hero);
+	};
+};
 func void akhrion_Loop(){
 	josefFight();
+	RingOfTemporalisPower_Handler();
 //	return;
 //	Print("MAIN LOOP");
 //	akh_RescaleDamage(hero);

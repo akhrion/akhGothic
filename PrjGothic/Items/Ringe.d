@@ -795,3 +795,52 @@ func void UnEquip_Machtring()
 	Npc_ChangeAttribute(self,ATR_DEXTERITY,-4);
 };
 
+
+instance RingOfTemporalisPower(C_Item)
+{
+	name = NAME_Ring;
+	hp = 100;
+	mainflag = ITEM_KAT_MAGIC;
+	flags = ITEM_RING;
+	value = 200;
+	visual = "ItMi_Ring_01.3ds";
+	visual_skin = 0;
+	material = MAT_METAL;
+	on_equip = Equip_RingOfTemporalisPower;
+	on_unequip = UnEquip_RingOfTemporalisPower;
+	description = "Кольцо временной мощи";
+	text[2] = "Безграничная сила";
+	count[2] = -1;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+func void Equip_RingOfTemporalisPower()
+{
+	if(
+		!RingOfTemporalisPowerEquiped
+	&&	RingOfTemporalisPower.hp
+	)
+	{
+		self.damage[DAM_INDEX_MAGIC] += 99999;
+		RingOfTemporalisPowerEquiped = true;
+	}
+	else
+	{
+		B_Print("Кажется кольцо утратило свою силу..");
+	};
+};
+
+func void UnEquip_RingOfTemporalisPower()
+{
+	if(RingOfTemporalisPowerEquiped)
+	{
+		self.damage[DAM_INDEX_MAGIC] -= 99999;
+		RingOfTemporalisPowerEquiped = false;
+	};
+};
+func void UnEquip_RingOfTemporalisPower_Script(var C_NPC npc)
+{
+	npc.damage[DAM_INDEX_MAGIC] -= 99999;
+	RingOfTemporalisPowerEquiped = false;
+};
