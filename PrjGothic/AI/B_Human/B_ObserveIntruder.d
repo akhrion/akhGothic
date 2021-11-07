@@ -1,6 +1,9 @@
 
 func void B_ObserveIntruder()
 {
+	//NOW IT HANDLE ALL PERSON IN MAX RANGE 4000 AROUND ESTIMATOR NPC
+	//ASSESSPLAYER assess only SC
+	//THIS FUNC assess everyone stopped NPC in range 4000
 	PrintDebugNpc(PD_ZS_FRAME,"B_ObserveIntruder");
 	if(other.aivar[AIV_INVINCIBLE])
 	{
