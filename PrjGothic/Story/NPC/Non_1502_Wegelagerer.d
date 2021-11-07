@@ -15,8 +15,9 @@ instance Non_1502_Wegelagerer(Npc_Default)
 	attribute[ATR_HITPOINTS] = 195;
 	Mdl_SetVisual(self,"HUMANS.MDS");
 	Mdl_SetVisualBody(self,"hum_body_Naked0",2,3,"Hum_Head_Thief",5,2,-1);
-	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+//	B_Scale(self);
+	Mdl_SetModelScale(self,0.85,0.7,0.8);
+	Mdl_SetModelFatness(self,4);
 	fight_tactic = FAI_HUMAN_Strong;
 	Npc_SetTalentSkill(self,NPC_TALENT_1H,1);
 	EquipItem(self,ItMw_1H_Sword_Old_01);

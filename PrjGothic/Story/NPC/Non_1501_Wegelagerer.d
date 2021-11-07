@@ -15,8 +15,9 @@ instance Non_1501_Wegelagerer(Npc_Default)
 	attribute[ATR_HITPOINTS] = 175;
 	Mdl_SetVisual(self,"HUMANS.MDS");
 	Mdl_SetVisualBody(self,"hum_body_Naked0",3,0,"Hum_Head_Thief",11,3,-1);
-	B_Scale(self);
-	Mdl_SetModelFatness(self,0);
+//	B_Scale(self);
+	Mdl_SetModelScale(self,0.85,0.7,0.8);
+	Mdl_SetModelFatness(self,3);
 	fight_tactic = FAI_HUMAN_COWARD;
 	EquipItem(self,ItMw_1H_Axe_Old_01);
 	CreateInvItem(self,ItFoLoaf);
