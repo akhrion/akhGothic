@@ -309,9 +309,8 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 	if(
 		//Запрет на стрельбу по нехостильным юнитам. Потенциально это надо изменить, но что-бы
 		//нехостильные не умирали.
-		Npc_GetPermAttitude(slf,oth) != ATT_HOSTILE ||
-		(Npc_GetDistToNpc(slf,oth) < HAI_DIST_MELEE) &&
-		(slf.fight_tactic == FAI_HUMAN_RANGED)
+		Npc_GetPermAttitude(slf,oth) != ATT_HOSTILE
+	||	(Npc_GetDistToNpc(slf,oth) < HAI_DIST_MELEE)
 	)
 	{
 		slf.fight_tactic = FAI_HUMAN_Strong;
