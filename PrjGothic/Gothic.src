@@ -185,6 +185,8 @@ AI\B_Human\B_SetFaceExpression.d
 AI\B_Human\B_AssessEnemy.d
 AI\B_Human\B_AssessFighter.d
 AI\B_Human\B_AssessCaster.d
+AI\B_Human\B_AssessOthersDamage.d
+AI\B_Human\B_ReactToOthersDamage.d
 AI\B_Human\B_AssessThreat.d
 AI\B_Human\B_ObserveSuspect.d
 AI\B_Human\B_ObserveIntruder.d

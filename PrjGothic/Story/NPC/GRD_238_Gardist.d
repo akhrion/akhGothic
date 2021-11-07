@@ -156,20 +156,19 @@ instance INFO_GRD238_NAME(C_Info)
 	description = "Как хоть тебя зовут?";
 };
 
-var int PC_HelpToJosef;
 func int info_grd238_name_condition()
 {
-	PC_HelpToJosef = true;		//TEST akh working
-	if(PC_HelpToJosef)
+	if(Josef_IsSCHelpWithOrcDogs)
 	{
-		return 1;
+		return true;
 	};
-	return 0;
+	return false;
 };
 
 func void info_grd238_name_info()
 {
-	AI_Output(self,hero,"Info_GRD238_NAME_NULL_0");  //Меня зовут Йосиф
+	AI_Output(hero,self,"Info_GRD238_NAME_NULL_0");  //Как хоть тебя зовут?
+	AI_Output(self,hero,"Info_GRD238_NAME_NULL_1");  //Меня зовут Йосиф
 	self.name[0] = "Йосиф";
 	AI_StopProcessInfos(self);
 };

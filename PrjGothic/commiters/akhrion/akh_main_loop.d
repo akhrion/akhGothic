@@ -46,10 +46,7 @@ func void josefFight()
 							B_ClearImmortal(OrcDogAgressive2);
 							B_ClearImmortal(OrcDogAgressive3);
  							B_ClearImmortal(josef);
-							if(!Npc_IsDead(GRD_237_Gardist))
-							{
-								B_ClearImmortal(GRD_237_Gardist);
-							};
+							B_ClearImmortal(GRD_237_Gardist);
 						};
 					};
 				}

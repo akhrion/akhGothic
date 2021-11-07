@@ -47,21 +47,21 @@ instance OrcDog(Mst_Default_OrcDog)
 
 instance OrcDogAgressive1(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивная орочья собака";
+	name[0] = "Агрессивный варг";
 	flags = NPC_FLAG_IMMORTAL;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive2(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивная орочья собака";
+	name[0] = "Агрессивный варг";
 	flags = NPC_FLAG_IMMORTAL;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive3(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивная орочья собака";
+	name[0] = "Агрессивный варг";
 	flags = NPC_FLAG_IMMORTAL;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);

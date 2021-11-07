@@ -399,6 +399,7 @@ var int isPlayerMeetJosef;
 var int isSpawnedJosefsMonsters;
 var int isJosefFightHappen;
 var int isJosefFightWaitPlayer;
+var int Josef_IsSCHelpWithOrcDogs;
 var int isPermPass_OCCGATE;
 var int isTempPass_grd212;
 var int tempPassExpires_grd212;
