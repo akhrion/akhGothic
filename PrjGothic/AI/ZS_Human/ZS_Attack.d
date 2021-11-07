@@ -13,6 +13,7 @@ func void ZS_Attack()
 	Npc_PercEnable(self,PERC_ASSESSENTERROOM,B_CombatAssessEnterRoom);
 	Npc_PercEnable(self,PERC_CATCHTHIEF,B_CombatCatchThief);
 	Npc_PercEnable(self,PERC_ASSESSOTHERSDAMAGE,B_AssessOthersDamage);
+	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
 	Npc_GetTarget(self);
 	B_WhirlAround(self,other);
 	B_SelectWeapon(self,other);

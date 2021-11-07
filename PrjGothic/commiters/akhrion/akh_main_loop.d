@@ -5,7 +5,7 @@ func void josefFight()
 	josef = Hlp_GetNpc(GRD_238_Gardist);
 	if(!Npc_IsDead(josef))
 	{
-		if(!isJosefFightHappen)
+		if(!Josef_isOrcDogsFightHappen)
 		{
 //			Print(IntToString(Hlp_Random(3)));
 			if(!isSpawnedJosefsMonsters)
@@ -32,21 +32,30 @@ func void josefFight()
 			{
 				if(isJosefFightWaitPlayer)
 				{
+					if(
+						Npc_IsAiming(hero,OrcDogAgressive1)
+					||	Npc_IsAiming(hero,OrcDogAgressive2)
+					||	Npc_IsAiming(hero,OrcDogAgressive3)
+					)
+					{
+						Josef_StartOrcDogsFight();
+						return;
+					};
+					if(Npc_GetDistToPlayer(josef) < 1000)
+					{
+						Josef_StartOrcDogsFight();
+						return;
+					};
 					if(Npc_GetDistToPlayer(josef) < 3000)
 					{
-						if(josefFightWaitPlayerCounter < 7)
+						if(josefFightWaitPlayerCounter < 15)
 						{
 							josefFightWaitPlayerCounter +=1;
 						}
 						else
 						{
-							isJosefFightWaitPlayer = false;
-							isJosefFightHappen = true;
-							B_ClearImmortal(OrcDogAgressive1);
-							B_ClearImmortal(OrcDogAgressive2);
-							B_ClearImmortal(OrcDogAgressive3);
- 							B_ClearImmortal(josef);
-							B_ClearImmortal(GRD_237_Gardist);
+							Josef_StartOrcDogsFight();
+							return;
 						};
 					};
 				}

@@ -146,6 +146,83 @@ func void info_grd238_die_info()
 	B_SetPermAttitude(GRD_217_Torwache,ATT_HOSTILE);
 };
 
+instance INFO_GRD238_OrcDogsNotHelp(C_Info)
+{
+	npc = GRD_238_Gardist;
+	nr = 1;
+	condition = INFO_GRD238_OrcDogsNotHelp_condition;
+	information = INFO_GRD238_OrcDogsNotHelp_info;
+	permanent = 0;
+	important = 1;
+};
+
+func int INFO_GRD238_OrcDogsNotHelp_condition()
+{
+	if(
+		Josef_isOrcDogsFightHappen
+	&&	!Josef_IsSCHelpWithOrcDogs
+	)
+	{
+		return true;
+	};
+	return false;
+};
+func void INFO_GRD238_OrcDogsNotHelp_info()
+{
+	if(hero.attribute[ATR_STRENGTH] > 90)
+	{
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_0"); //Даа парень.. эта гора мышц пропадает впустую.
+	}
+	else if(hero.attribute[ATR_STRENGTH] > 60)
+	{
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_1"); //Пхах.. ну ты и падлец! Выглядишь сложенно, а стоишь в стороне!
+	}
+	else
+	{
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_2"); //Ну как, насмотрелся? Ты конечно тип.
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_3"); //Хоть-бы на помощь позвал.
+	};
+	if(C_Npc_IsBelongToCamp(hero,OLDCAMP))
+	{
+		if(hero.guild == GIL_VLK)
+		{
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_4"); //Похоже, что работа на шахте, это твое. Инносом данный тебе талант..
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_5"); //Долби себе жилу и ни о чем не думай.
+		}
+		else
+		{
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_6"); //Зачем только Гомез тебя принял. Тьфу.
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_7"); //Не то что-бы он.. а! ладно (отмахивается рукой и отворачивается)
+		};
+	};
+	AI_StopProcessInfos(self);
+};
+
+instance INFO_GRD238_OrcDogsHelp(C_Info)
+{
+	npc = GRD_238_Gardist;
+	nr = 1;
+	condition = INFO_GRD238_OrcDogsHelp_condition;
+	information = INFO_GRD238_OrcDogsHelp_info;
+	permanent = 0;
+	important = 1;
+};
+
+func int INFO_GRD238_OrcDogsHelp_condition()
+{
+	if(Josef_IsSCHelpWithOrcDogs)
+	{
+		return true;
+	};
+	return false;
+};
+func void INFO_GRD238_OrcDogsHelp_info()
+{
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_0"); //Даа.. ух.. Молодые варги - не такие уж и сильные, но живучие.
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_1"); //Спасибо что помог!
+	AI_StopProcessInfos(self);
+};
+
 instance INFO_GRD238_NAME(C_Info)
 {
 	npc = GRD_238_Gardist;

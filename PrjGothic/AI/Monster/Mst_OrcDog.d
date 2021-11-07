@@ -47,22 +47,31 @@ instance OrcDog(Mst_Default_OrcDog)
 
 instance OrcDogAgressive1(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивный варг";
+	name[0] = "Молодой варг";
 	flags = NPC_FLAG_IMMORTAL;
+	attribute[ATR_STRENGTH] = 60;
+	attribute[ATR_HITPOINTS_MAX] = 460;
+	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive2(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивный варг";
+	name[0] = "Молодой варг";
 	flags = NPC_FLAG_IMMORTAL;
+	attribute[ATR_STRENGTH] = 60;
+	attribute[ATR_HITPOINTS_MAX] = 460;
+	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive3(Mst_Default_OrcDog)
 {
-	name[0] = "Агрессивный варг";
+	name[0] = "Молодой варг";
 	flags = NPC_FLAG_IMMORTAL;
+	attribute[ATR_STRENGTH] = 60;
+	attribute[ATR_HITPOINTS_MAX] = 460;
+	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };

@@ -726,10 +726,13 @@ func void B_MM_ReactToCombatDamage()
 		Npc_ClearAIQueue(self);
 		AI_StartState(self,ZS_MM_Flee,0,"");
 	};
-//	if(other == hero)
-//	{
-//		Npc_SetTarget(self,other);
-//	};
+	if(Josef_IsOrcDog(self))
+	{
+		if(Hlp_GetInstanceID(other) == Hlp_GetInstanceID(hero))
+		{
+			Josef_StartOrcDogsFight();
+		};
+	};
 };
 
 func void ZS_MM_Attack()

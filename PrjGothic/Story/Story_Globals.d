@@ -397,7 +397,7 @@ var int dex_elixier_val;
 var int gopstopped_bridge;// ;) nice varName
 var int isPlayerMeetJosef;
 var int isSpawnedJosefsMonsters;
-var int isJosefFightHappen;
+var int Josef_isOrcDogsFightHappen;
 var int isJosefFightWaitPlayer;
 var int Josef_IsSCHelpWithOrcDogs;
 var int isPermPass_OCCGATE;
