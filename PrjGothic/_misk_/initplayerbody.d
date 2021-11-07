@@ -143,6 +143,7 @@ instance VLK_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 5;
 	protection[PROT_MAGIC] = 0;
 	value = value_vlk_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_VLK;
 	wear = WEAR_TORSO;
 	visual = "vlkl.3ds";
 	visual_change = "Hum_VLKL_ARMOR.asc";
@@ -174,6 +175,7 @@ instance VLK_ARMOR_M(C_Item)
 	protection[PROT_MAGIC] = 0;
 	protection[PROT_FALL] = 100;
 	value = value_vlk_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_STT;
 	wear = WEAR_TORSO;
 	visual = "vlkm.3ds";
 	visual_change = "Hum_VLKM_ARMOR.asc";
