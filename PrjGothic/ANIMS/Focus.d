@@ -42,19 +42,19 @@ instance Focus_Melee(C_Focus)
 instance Focus_Ranged(C_Focus)
 {
 	npc_range1 = 0;
-	npc_range2 = 3000;
+	npc_range2 = 4000;
 	npc_azi = 45;
 	npc_elevup = 45;
 	npc_elevdo = -45;
 	npc_prio = 1;
 	item_range1 = 0;
-	item_range2 = 3000;
+	item_range2 = 4000;
 	item_azi = 45;
 	item_elevup = 45;
 	item_elevdo = -45;
 	item_prio = -1;
 	mob_range1 = 0;
-	mob_range2 = 3000;
+	mob_range2 = 4000;
 	mob_azi = 45;
 	mob_elevup = 45;
 	mob_elevdo = -45;
@@ -102,19 +102,19 @@ instance Focus_Throw_Mob(C_Focus)
 instance Focus_Magic(C_Focus)
 {
 	npc_range1 = 0;
-	npc_range2 = 3000;
+	npc_range2 = 4000;
 	npc_azi = 45;
 	npc_elevup = 45;
 	npc_elevdo = -45;
 	npc_prio = 1;
 	item_range1 = 0;
-	item_range2 = 3000;
+	item_range2 = 4000;
 	item_azi = 45;
 	item_elevup = 45;
 	item_elevdo = -45;
 	item_prio = 0;
 	mob_range1 = 0;
-	mob_range2 = 3000;
+	mob_range2 = 4000;
 	mob_azi = 45;
 	mob_elevup = 45;
 	mob_elevdo = -45;
