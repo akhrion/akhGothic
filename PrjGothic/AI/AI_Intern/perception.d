@@ -28,7 +28,7 @@ func void InitPerceptions()
 	Perc_SetRange(PERC_ASSESSDEFEAT,HAI_DIST_RANGED);
 	Perc_SetRange(PERC_ASSESSDAMAGE,PERC_DIST_FLEE);
 	Perc_SetRange(PERC_ASSESSFIGHTER,HAI_DIST_ABORT_MELEE);
-	Perc_SetRange(PERC_ASSESSOTHERSDAMAGE,PERC_DIST_INTERMEDIAT);
+	Perc_SetRange(PERC_ASSESSOTHERSDAMAGE,4000);
 	Perc_SetRange(PERC_ASSESSTHREAT,HAI_DIST_RANGED);
 	Perc_SetRange(PERC_ASSESSREMOVEWEAPON,PERC_DIST_MAX);
 	Perc_SetRange(PERC_OBSERVEINTRUDER,HAI_DIST_OBSERVEINTRUDER);
@@ -60,6 +60,7 @@ func void GuardPerception()
 	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
 	Npc_PercEnable(self,PERC_ASSESSFIGHTER,B_AssessFighter);
 	Npc_PercEnable(self,PERC_ASSESSDAMAGE,ZS_ReactToDamage);
+	Npc_PercEnable(self,PERC_ASSESSOTHERSDAMAGE,B_AssessOthersDamage);
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,B_AssessMagic);
 	Npc_PercEnable(self,PERC_ASSESSCASTER,B_AssessCaster);
 	Npc_PercEnable(self,PERC_ASSESSTHREAT,B_AssessFighter);
@@ -89,6 +90,7 @@ func void ObservingPerception()
 	Npc_PercEnable(self,PERC_ASSESSFIGHTER,B_AssessFighter);
 	Npc_PercEnable(self,PERC_ASSESSPLAYER,B_AssessSC);
 	Npc_PercEnable(self,PERC_ASSESSDAMAGE,ZS_ReactToDamage);
+	Npc_PercEnable(self,PERC_ASSESSOTHERSDAMAGE,B_AssessOthersDamage);
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,B_AssessMagic);
 	Npc_PercEnable(self,PERC_ASSESSCASTER,B_AssessCaster);
 	Npc_PercEnable(self,PERC_ASSESSTHREAT,B_AssessFighter);
