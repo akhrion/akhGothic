@@ -3,22 +3,6 @@ func void B_MoveNpc()
 {
 	PrintDebugNpc(PD_ZS_DETAIL,"B_MoveNpc");
 	PrintDebugNpc(PD_ZS_Check,"...B_AssessSc: self able detect other");
-	msg(self.name,50,44);
-	msg(other.name,50,46);
-	msg("...B_AssessSc: starting ZS_AssessDisgusting CHECK",50,48);
-	if(
-		Npc_CanSeeNpcFreeLOS(self,other) &&
-		C_NpcIsDisgusting(self,other)
-	)
-	{
-		msg("...B_AssessSc: starting ZS_AssessDisgusting",50,56);
-		AI_StartState(self,ZS_AssessDisgusting,0,"");
-		return;
-	};
-
-
-
-
 	if(other.aivar[AIV_INVINCIBLE] == FALSE)
 	{
 		if(Npc_IsInCutscene(self) || Npc_IsInCutscene(other))

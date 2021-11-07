@@ -1,9 +1,8 @@
 //akh working
 func void B_AssessQuietSound()
 {
-	//NOW IT HANDLE ALL PERSON IN MAX RANGE 4000 AROUND ESTIMATOR NPC
-	//ASSESSPLAYER assess only SC
-	//THIS FUNC assess everyone walking/running NPC in range 4000
+	//work with SC and Items only
+	//NPC won't processing
 	PrintDebugNpc(PD_ZS_FRAME,"B_AssessQuietSound");
 	PrintDebugNpc(PD_ZS_FRAME,"В этой асеске не хватает обработки стрейфа, бэк-степа и прыжков.. абуз");	
 	PrintGlobals(PD_ZS_FRAME);
@@ -30,7 +29,7 @@ func void B_AssessQuietSound()
 	{
 		PrintDebugNpc(PD_ZS_Check,"...kann NICHT Gerдuschquelle sehen!");
 //		Npc_ClearAIQueue(self);
-//		AI_StartState(self,ZS_AssessQuietSound,0,"");
+		AI_StartState(self,ZS_AssessQuietSound,0,"");
 	};
 };
 
