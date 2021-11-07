@@ -395,10 +395,11 @@ var int dex_essenz_val;
 var int dex_extrakt_val;
 var int dex_elixier_val;
 var int gopstopped_bridge;// ;) nice varName
-var int isPlayerMeetJosef;
-var int isSpawnedJosefsMonsters;
-var int Josef_isOrcDogsFightHappen;
-var int isJosefFightWaitPlayer;
+var int Josef_bMeetPlayer;
+var int Josef_bSpawnedOrcDogs;
+var int Josef_bOrcDogsFightHappen;
+var int Josef_bOrcDogs_WaitPlayer;
+var int Josef_OrcDogs_WaitPlayer_Counter;
 var int Josef_IsSCHelpWithOrcDogs;
 var int isPermPass_OCCGATE;
 var int isTempPass_grd212;

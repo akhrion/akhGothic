@@ -1,23 +1,22 @@
-var int josefFightWaitPlayerCounter;
 func void josefFight()
 {
 	var C_NPC josef;
 	josef = Hlp_GetNpc(GRD_238_Gardist);
 	if(!Npc_IsDead(josef))
 	{
-		if(!Josef_isOrcDogsFightHappen)
+		if(!Josef_bOrcDogsFightHappen)
 		{
 //			Print(IntToString(Hlp_Random(3)));
-			if(!isSpawnedJosefsMonsters)
+			if(!Josef_bSpawnedOrcDogs)
 			{
 				if(Npc_GetDistToPlayer(josef) < 2000)
 				{
-					isPlayerMeetJosef  = true;
+					Josef_bMeetPlayer  = true;
 				}
-				else if(isPlayerMeetJosef && Npc_GetDistToPlayer(josef) > 5000)
+				else if(Josef_bMeetPlayer && Npc_GetDistToPlayer(josef) > 5000)
 				{
-					isSpawnedJosefsMonsters = true;
-					isJosefFightWaitPlayer = true;
+					Josef_bSpawnedOrcDogs = true;
+					Josef_bOrcDogs_WaitPlayer = true;
 					Wld_InsertNpc(OrcDogAgressive1,josef.wp);
 					Wld_InsertNpc(OrcDogAgressive2,josef.wp);
 					Wld_InsertNpc(OrcDogAgressive3,josef.wp);
@@ -30,7 +29,7 @@ func void josefFight()
 			}
 			else
 			{
-				if(isJosefFightWaitPlayer)
+				if(Josef_bOrcDogs_WaitPlayer)
 				{
 					if(
 						Npc_IsAiming(hero,OrcDogAgressive1)
@@ -48,9 +47,9 @@ func void josefFight()
 					};
 					if(Npc_GetDistToPlayer(josef) < 3000)
 					{
-						if(josefFightWaitPlayerCounter < 15)
+						if(Josef_OrcDogs_WaitPlayer_Counter < 15)
 						{
-							josefFightWaitPlayerCounter +=1;
+							Josef_OrcDogs_WaitPlayer_Counter +=1;
 						}
 						else
 						{

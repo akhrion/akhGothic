@@ -159,7 +159,8 @@ instance INFO_GRD238_OrcDogsNotHelp(C_Info)
 func int INFO_GRD238_OrcDogsNotHelp_condition()
 {
 	if(
-		Josef_isOrcDogsFightHappen
+		Josef_IsOrcDogsDead()
+	&&	Josef_isOrcDogsFightHappen
 	&&	!Josef_IsSCHelpWithOrcDogs
 	)
 	{
@@ -177,11 +178,11 @@ func void INFO_GRD238_OrcDogsNotHelp_info()
 	{
 		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_1"); //Пхах.. ну ты и падлец! Выглядишь сложенно, а стоишь в стороне!
 	}
-	else
+	else if(Josef_OrcDogs_WaitPlayer_Counter > 10)
 	{
 		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_2"); //Ну как, насмотрелся? Ты конечно тип.
-		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_3"); //Хоть-бы на помощь позвал.
 	};
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_3"); //Хоть-бы на помощь позвал.
 	if(C_Npc_IsBelongToCamp(hero,OLDCAMP))
 	{
 		if(hero.guild == GIL_VLK)
@@ -210,7 +211,10 @@ instance INFO_GRD238_OrcDogsHelp(C_Info)
 
 func int INFO_GRD238_OrcDogsHelp_condition()
 {
-	if(Josef_IsSCHelpWithOrcDogs)
+	if(
+		Josef_IsOrcDogsDead()
+	&&	Josef_IsSCHelpWithOrcDogs
+	)
 	{
 		return true;
 	};

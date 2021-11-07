@@ -10,6 +10,18 @@ func int Josef_IsOrcDog(var C_NPC npc)
 	};
 	return false;
 };
+func int Josef_IsOrcDogsDead()
+{
+	if(
+		Npc_IsDead(OrcDogAgressive1)
+	&&	Npc_IsDead(OrcDogAgressive2)
+	&&	Npc_IsDead(OrcDogAgressive3)
+	)
+	{
+		return true;
+	};
+	return false;
+};
 func void Josef_StartOrcDogsFight()
 {
 	isJosefFightWaitPlayer = false;
