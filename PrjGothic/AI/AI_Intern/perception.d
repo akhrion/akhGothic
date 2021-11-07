@@ -66,7 +66,7 @@ func void GuardPerception()
 	Npc_PercEnable(self,PERC_ASSESSTHREAT,B_AssessFighter);
 	Npc_PercEnable(self,PERC_DRAWWEAPON,B_AssessFighter);
 	Npc_PercEnable(self,PERC_ASSESSWARN,B_AssessWarn);
-	Npc_PercEnable(self,PERC_ASSESSMURDER,ZS_AssessMurder);
+	Npc_PercEnable(self,PERC_ASSESSMURDER,B_AssessMurder);
 	Npc_PercEnable(self,PERC_ASSESSDEFEAT,ZS_AssessDefeat);
 	Npc_PercEnable(self,PERC_ASSESSFIGHTSOUND,B_AssessFightSound);
 	Npc_PercEnable(self,PERC_ASSESSQUIETSOUND,B_AssessQuietSound);
@@ -95,7 +95,7 @@ func void ObservingPerception()
 	Npc_PercEnable(self,PERC_ASSESSCASTER,B_AssessCaster);
 	Npc_PercEnable(self,PERC_ASSESSTHREAT,B_AssessFighter);
 	Npc_PercEnable(self,PERC_ASSESSWARN,B_AssessWarn);
-	Npc_PercEnable(self,PERC_ASSESSMURDER,ZS_AssessMurder);
+	Npc_PercEnable(self,PERC_ASSESSMURDER,B_AssessMurder);
 	Npc_PercEnable(self,PERC_ASSESSDEFEAT,ZS_AssessDefeat);
 	Npc_PercEnable(self,PERC_DRAWWEAPON,B_AssessFighter);
 	Npc_PercEnable(self,PERC_ASSESSFIGHTSOUND,B_AssessFightSound);
