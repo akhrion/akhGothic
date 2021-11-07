@@ -345,9 +345,12 @@ func void B_ClearImmortal(var int npcInstance)
 	var C_Npc npc;
 	PrintDebugNpc(PD_ZS_DETAIL,"B_ClearImmortal");
 	npc = Hlp_GetNpc(npcInstance);
-	if(npc.flags == NPC_FLAG_IMMORTAL)
+	if(
+		!Npc_IsDead(npc)
+	&&	isFlagsContainCategorie(npc.flags,NPC_FLAG_IMMORTAL)
+	)
 	{
-		npc.flags = 0;
+		npc.flags -= NPC_FLAG_IMMORTAL;
 	};
 };
 
@@ -356,9 +359,12 @@ func void B_SetImmortal(var int npcInstance)
 	var C_Npc npc;
 	PrintDebugNpc(PD_ZS_DETAIL,"B_SetImmortal");
 	npc = Hlp_GetNpc(npcInstance);
-	if(npc.flags != NPC_FLAG_IMMORTAL)
+	if(
+		!Npc_IsDead(npc)
+	&&	!isFlagsContainCategorie(npc.flags,NPC_FLAG_IMMORTAL)
+	)
 	{
-		npc.flags = 2;
+		npc.flags += NPC_FLAG_IMMORTAL;
 	};
 };
 
