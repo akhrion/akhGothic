@@ -13,7 +13,7 @@ func void B_AssessOthersDamage()
 			||	Hlp_GetInstanceID(victim) == Hlp_GetInstanceID(OrcDogAgressive3)
 			)
 			{
-				Josef_IsSCHelpWithOrcDogs = true;
+				Josef_bSCHelpWithOrcDogs = true;
 			};
 		};
 	};

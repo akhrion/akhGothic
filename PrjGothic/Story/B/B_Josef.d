@@ -24,8 +24,8 @@ func int Josef_IsOrcDogsDead()
 };
 func void Josef_StartOrcDogsFight()
 {
-	isJosefFightWaitPlayer = false;
-	Josef_isOrcDogsFightHappen = true;
+	Josef_bOrcDogs_WaitPlayer = false;
+	Josef_bOrcDogsFightHappen = true;
 	B_ClearImmortal(OrcDogAgressive1);
 	B_ClearImmortal(OrcDogAgressive2);
 	B_ClearImmortal(OrcDogAgressive3);

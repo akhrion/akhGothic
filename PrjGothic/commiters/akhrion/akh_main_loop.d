@@ -47,9 +47,9 @@ func void josefFight()
 					};
 					if(Npc_GetDistToPlayer(josef) < 3000)
 					{
-						if(Josef_OrcDogs_WaitPlayer_Counter < 15)
+						if(Josef_iOrcDogs_WaitPlayer_Counter < 15)
 						{
-							Josef_OrcDogs_WaitPlayer_Counter +=1;
+							Josef_iOrcDogs_WaitPlayer_Counter +=1;
 						}
 						else
 						{

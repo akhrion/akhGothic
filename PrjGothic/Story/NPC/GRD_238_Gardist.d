@@ -160,8 +160,8 @@ func int INFO_GRD238_OrcDogsNotHelp_condition()
 {
 	if(
 		Josef_IsOrcDogsDead()
-	&&	Josef_isOrcDogsFightHappen
-	&&	!Josef_IsSCHelpWithOrcDogs
+	&&	Josef_bOrcDogsFightHappen
+	&&	!Josef_bSCHelpWithOrcDogs
 	)
 	{
 		return true;
@@ -178,7 +178,7 @@ func void INFO_GRD238_OrcDogsNotHelp_info()
 	{
 		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_1"); //Пхах.. ну ты и падлец! Выглядишь сложенно, а стоишь в стороне!
 	}
-	else if(Josef_OrcDogs_WaitPlayer_Counter > 10)
+	else if(Josef_iOrcDogs_WaitPlayer_Counter > 10)
 	{
 		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_2"); //Ну как, насмотрелся? Ты конечно тип.
 	};
@@ -213,7 +213,7 @@ func int INFO_GRD238_OrcDogsHelp_condition()
 {
 	if(
 		Josef_IsOrcDogsDead()
-	&&	Josef_IsSCHelpWithOrcDogs
+	&&	Josef_bSCHelpWithOrcDogs
 	)
 	{
 		return true;
@@ -239,7 +239,7 @@ instance INFO_GRD238_NAME(C_Info)
 
 func int info_grd238_name_condition()
 {
-	if(Josef_IsSCHelpWithOrcDogs)
+	if(Josef_bSCHelpWithOrcDogs)
 	{
 		return true;
 	};
