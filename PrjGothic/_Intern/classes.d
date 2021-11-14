@@ -122,12 +122,12 @@ class C_Info
 {
 	var int npc;				//НэПэЦэ найме у которого будет реплика при удовлетворении CONDITION
 	var int nr;					//number row порядок реплик в окне выбора
-	var int important;			//Заставляет НПС стартовать с ГГ диалог принудительно, если ГГ в селекте у НПС
-	var func condition;		//Ссылка на функцию, если возвращает TRUE, то в окне выбора реплик появляется реплика description
+	var int important;			//Заставляет НПС стартовать диалог с ГГ принудительно, если ГГ в пределах PERC_ASSESSTALK НПС
+	var func condition;		//Ссылка на функцию, если возвращает TRUE, то в окне выбора реплик появляется реплика description. Вызов функции происходит постоянно, если ГГ находится в зоне PERC_ASSESSTALK НПС. Можно использовать как аккумулятор.
 	var func information;		//Функция выполняется после выбора реплики description
 	var string description;	//Текст реплики, нажав на который тригернётся information
 	var int trade;				//Видимо торговля при 1 и нет при 0
-	var int permanent;			//Если TRUE, то проверка на condition происходит даже если стригерить information, а при FALSE проверка завершается после первого вызова information
+	var int permanent;			//Если TRUE, то information воспроизводится снова и снова, если condition удовлетворяет; Если FALSE, то information воспроизведётся только один раз, даже если condition будет оставаться удовлетворительным;
 };
 
 class C_ITEMREACT
