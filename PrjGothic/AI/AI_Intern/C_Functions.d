@@ -256,7 +256,7 @@ func int C_NpcIsDangerousPerson(var C_NPC slf, var C_NPC oth)
 };
 func int C_NpcIsDisgusting(var C_NPC slf, var C_NPC oth)
 {
-//	Print("C_NpcIsDisgusting");
+	Print("C_NpcIsDisgusting");
 	msgISI(slf.guild,"<",GIL_SEPERATOR_HUM,50,52);
 	msgISI(oth.aivar[AIV_MM_REAL_ID], "==", ID_MEATBUG,50,54);
 	PrintDebugNpc(PD_ZS_DETAIL,"C_NpcIsDisgusting");
@@ -265,7 +265,7 @@ func int C_NpcIsDisgusting(var C_NPC slf, var C_NPC oth)
 		oth.aivar[AIV_MM_REAL_ID] == ID_MEATBUG
 	)
 	{
-	Print("C_NpcIsDisgusting TRUUUUE");
+		Print("C_NpcIsDisgusting TRUUUUE");
 		PrintDebugNpc(PD_ZS_DETAIL,"...true");
 		return true;
 	};
