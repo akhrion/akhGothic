@@ -401,6 +401,7 @@ var int Josef_bOrcDogsFightHappen;
 var int Josef_bOrcDogs_WaitPlayer;
 var int Josef_iOrcDogs_WaitPlayer_Counter;
 var int Josef_bSCHelpWithOrcDogs;
+var int Josef_OrcDogsFight_TimeOfTalk;
 var int isPermPass_OCCGATE;
 var int isTempPass_grd212;
 var int tempPassExpires_grd212;

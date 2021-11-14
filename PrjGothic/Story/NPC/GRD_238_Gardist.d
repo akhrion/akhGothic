@@ -170,6 +170,7 @@ func int INFO_GRD238_OrcDogsNotHelp_condition()
 };
 func void INFO_GRD238_OrcDogsNotHelp_info()
 {
+	Josef_OrcDogsFight_TimeOfTalk = getTimestamp();
 	if(hero.attribute[ATR_STRENGTH] > 90)
 	{
 		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_0"); //Даа парень.. эта гора мышц пропадает впустую.
@@ -222,6 +223,7 @@ func int INFO_GRD238_OrcDogsHelp_condition()
 };
 func void INFO_GRD238_OrcDogsHelp_info()
 {
+	Josef_OrcDogsFight_TimeOfTalk = getTimestamp();
 	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_0"); //Даа.. ух.. Молодые варги - не такие уж и сильные, но живучие.
 	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_1"); //Спасибо что помог!
 	AI_StopProcessInfos(self);
@@ -253,6 +255,63 @@ func void info_grd238_name_info()
 	self.name[0] = "Йосиф";
 	AI_StopProcessInfos(self);
 };
+
+instance INFO_GRD238_OrcDogHowOften(C_Info)
+{
+	npc = GRD_238_Gardist;
+	nr = 999;
+	condition = INFO_GRD238_OrcDogHowOften_condition;
+	information = INFO_GRD238_OrcDogHowOften_info;
+	permanent = 0;
+	description = "Как часто тут происходит такое?";
+};
+func int INFO_GRD238_OrcDogHowOften_condition()
+{
+	if(
+		(getTimestamp() - Josef_OrcDogsFight_TimeOfTalk) < 60
+	&&	(
+			Npc_KnowsInfo(other,INFO_GRD238_OrcDogsHelp)
+		||	Npc_KnowsInfo(other,INFO_GRD238_OrcDogsNotHelp)
+		)
+	)
+	{
+		return true;
+	};
+	return false;
+};
+func void INFO_GRD238_OrcDogHowOften_info()
+{
+	AI_StopProcessInfos(self);
+};
+
+instance INFO_GRD238_OrcDogHowOftenL(C_Info)
+{
+	npc = GRD_238_Gardist;
+	nr = 999;
+	condition = INFO_GRD238_OrcDogHowOftenL_condition;
+	information = INFO_GRD238_OrcDogHowOftenL_info;
+	permanent = 0;
+	description = "А как часто, тут, нападают эти варги?";
+};
+func int INFO_GRD238_OrcDogHowOftenL_condition()
+{
+	if(
+		(getTimestamp() - Josef_OrcDogsFight_TimeOfTalk) > 59
+	&&	(
+			Npc_KnowsInfo(other,INFO_GRD238_OrcDogsHelp)
+		||	Npc_KnowsInfo(other,INFO_GRD238_OrcDogsNotHelp)
+		)
+	)
+	{
+		return true;
+	};
+	return false;
+};
+func void INFO_GRD238_OrcDogHowOftenL_info()
+{
+	AI_StopProcessInfos(self);
+};
+
 
 instance INFO_GRD238_EXIT(C_Info)
 {
