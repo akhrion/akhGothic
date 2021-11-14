@@ -175,7 +175,7 @@ instance VLK_ARMOR_M(C_Item)
 	protection[PROT_MAGIC] = 0;
 	protection[PROT_FALL] = 100;
 	value = value_vlk_armor_m / ARMOR_VALUE_DECREASE;
-	disguiseGuild = GIL_STT;
+	disguiseGuild = GIL_VLK;
 	wear = WEAR_TORSO;
 	visual = "vlkm.3ds";
 	visual_change = "Hum_VLKM_ARMOR.asc";
@@ -206,6 +206,7 @@ instance STT_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 0;
 	value = value_stt_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_STT;
 	wear = WEAR_TORSO;
 	visual = "sttm.3ds";
 	visual_change = "Hum_STTM_ARMOR.asc";
@@ -237,6 +238,7 @@ instance STT_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_stt_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_STT;
 	wear = WEAR_TORSO;
 	visual = "stth.3ds";
 	visual_change = "Hum_STTS_ARMOR.asc";
@@ -268,6 +270,7 @@ instance GRD_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_grd_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_GRD;
 	wear = WEAR_TORSO;
 	visual = "grdl.3ds";
 	visual_change = "Hum_GRDL_ARMOR.asc";
@@ -299,6 +302,7 @@ instance GRD_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 25;
 	protection[PROT_MAGIC] = 0;
 	value = value_grd_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_GRD;
 	wear = WEAR_TORSO;
 	visual = "grdm.3ds";
 	visual_change = "Hum_GRDM_ARMOR.asc";
@@ -329,6 +333,7 @@ instance GRD_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 35;
 	protection[PROT_MAGIC] = 0;
 	value = value_grd_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_GRD;
 	wear = WEAR_TORSO;
 	visual = "grdh.3ds";
 	visual_change = "Hum_GRDS_ARMOR.asc";
@@ -359,6 +364,7 @@ instance EBR_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 0;
 	protection[PROT_MAGIC] = 0;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	disguiseGuild = GIL_EBR;
 	wear = WEAR_TORSO;
 	ownerGuild = GIL_EBR;
 	visual = "ebrm.3ds";
@@ -390,6 +396,7 @@ instance EBR_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 10;
 	protection[PROT_MAGIC] = 0;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	disguiseGuild = GIL_EBR;
 	wear = WEAR_TORSO;
 	ownerGuild = GIL_EBR;
 	owner = EBR_100_Gomez;
@@ -422,6 +429,7 @@ instance EBR_ARMOR_H2(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	disguiseGuild = GIL_EBR;
 	wear = WEAR_TORSO;
 	visual = "ebrh2.3ds";
 	visual_change = "Hum_EBRS_ARMOR2.asc";
@@ -452,6 +460,7 @@ instance SFB_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 5;
 	protection[PROT_MAGIC] = 0;
 	value = value_sfb_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_SFB;
 	wear = WEAR_TORSO;
 	visual = "sfbl.3ds";
 	visual_change = "Hum_SFBL_ARMOR.asc";
@@ -482,6 +491,7 @@ instance ORG_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 0;
 	value = value_org_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_ORG;
 	wear = WEAR_TORSO;
 	visual = "orgl2.3ds";
 	visual_change = "Hum_ORGL_ARMOR.asc";
@@ -512,6 +522,7 @@ instance ORG_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 0;
 	value = value_org_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_ORG;
 	wear = WEAR_TORSO;
 	visual = "orgm.3ds";
 	visual_change = "Hum_ORGM_ARMOR.asc";
@@ -542,6 +553,7 @@ instance ORG_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_org_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_ORG;
 	wear = WEAR_TORSO;
 	visual = "orgh.3ds";
 	visual_change = "Hum_ORGS_ARMOR.asc";
@@ -572,6 +584,7 @@ instance SLD_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_sld_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_SLD;
 	wear = WEAR_TORSO;
 	visual = "sldl.3ds";
 	visual_change = "Hum_SLDL_ARMOR.asc";
@@ -603,6 +616,7 @@ instance SLD_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 25;
 	protection[PROT_MAGIC] = 0;
 	value = value_sld_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_SLD;
 	wear = WEAR_TORSO;
 	visual = "sldm.3ds";
 	visual_change = "Hum_SLDM_ARMOR.asc";
@@ -633,6 +647,7 @@ instance SLD_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 35;
 	protection[PROT_MAGIC] = 0;
 	value = value_sld_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_SLD;
 	wear = WEAR_TORSO;
 	visual = "sldh.3ds";
 	visual_change = "Hum_SLDS_ARMOR.asc";
@@ -663,6 +678,7 @@ instance NOV_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 10;
 	protection[PROT_MAGIC] = 0;
 	value = value_nov_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_NOV;
 	wear = WEAR_TORSO;
 	visual = "novl.3ds";
 	visual_change = "Hum_NOVL_ARMOR.asc";
@@ -693,6 +709,7 @@ instance NOV_ARMOR_M(C_Item)
 	protection[PROT_POINT] = 0;
 	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 0;
+	disguiseGuild = GIL_NOV;
 	wear = WEAR_TORSO;
 	value = value_nov_armor_m / ARMOR_VALUE_DECREASE;
 	visual = "novm2.3ds";
@@ -725,6 +742,7 @@ instance NOV_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_nov_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_NOV;
 	wear = WEAR_TORSO;
 	visual = "novh2.3ds";
 	visual_change = "Hum_NOVS_ARMOR.asc";
@@ -756,6 +774,7 @@ instance TPL_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = value_tpl_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_TPL;
 	wear = WEAR_TORSO;
 	visual = "tpll.3ds";
 	visual_change = "Hum_TPLL_ARMOR.asc";
@@ -787,6 +806,7 @@ instance TPL_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 25;
 	protection[PROT_MAGIC] = 0;
 	value = value_tpl_armor_m / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_TPL;
 	wear = WEAR_TORSO;
 	visual = "tplm.3ds";
 	visual_change = "Hum_TPLM_ARMOR.asc";
@@ -818,6 +838,7 @@ instance TPL_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 35;
 	protection[PROT_MAGIC] = 0;
 	value = value_tpl_armor_h / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_TPL;
 	wear = WEAR_TORSO;
 	visual = "tplh.3ds";
 	visual_change = "Hum_TPLS_ARMOR.asc";
@@ -849,6 +870,7 @@ instance GUR_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 35;
 	protection[PROT_MAGIC] = 3;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	disguiseGuild = GIL_GUR;
 	wear = WEAR_TORSO;
 	ownerGuild = GIL_GUR;
 	visual = "gurm.3ds";
@@ -879,6 +901,7 @@ instance GUR_ARMOR_H(C_Item)
 	protection[PROT_POINT] = 8;
 	protection[PROT_FIRE] = 41;
 	protection[PROT_MAGIC] = 4;
+	disguiseGuild = GIL_GUR;
 	wear = WEAR_TORSO;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 	ownerGuild = GIL_GUR;
@@ -910,6 +933,7 @@ instance KDF_ARMOR_L(C_Item)
 	protection[PROT_POINT] = 5;
 	protection[PROT_FIRE] = 25;
 	protection[PROT_MAGIC] = 5;
+	disguiseGuild = GIL_KDF;
 	wear = WEAR_TORSO;
 	value = value_kdf_armor_l / ARMOR_VALUE_DECREASE;
 	visual = "kdfl.3ds";
@@ -940,6 +964,7 @@ instance KDF_ARMOR_H(C_Item)
 	protection[PROT_POINT] = 5;
 	protection[PROT_FIRE] = 30;
 	protection[PROT_MAGIC] = 10;
+	disguiseGuild = GIL_KDF;
 	wear = WEAR_TORSO;
 	value = value_kdf_armor_h / ARMOR_VALUE_DECREASE;
 	visual = "kdfh.3ds";
@@ -971,6 +996,7 @@ instance KDW_ARMOR_L(C_Item)
 	protection[PROT_FIRE] = 40;
 	protection[PROT_MAGIC] = 15;
 	value = value_kdw_armor_l / ARMOR_VALUE_DECREASE;
+	disguiseGuild = GIL_KDW;
 	wear = WEAR_TORSO;
 	visual = "kdwl.3ds";
 	visual_change = "Hum_KDWL_ARMOR.asc";
@@ -1000,6 +1026,7 @@ instance KDW_ARMOR_H(C_Item)
 	protection[PROT_POINT] = 10;
 	protection[PROT_FIRE] = 45;
 	protection[PROT_MAGIC] = 20;
+	disguiseGuild = GIL_KDW;
 	wear = WEAR_TORSO;
 	value = value_kdw_armor_h / ARMOR_VALUE_DECREASE;
 	visual = "kdwh.3ds";
@@ -1030,6 +1057,7 @@ instance DMB_ARMOR_M(C_Item)
 	protection[PROT_POINT] = 20;
 	protection[PROT_FIRE] = 60;
 	protection[PROT_MAGIC] = 30;
+	disguiseGuild = GIL_DMB;
 	wear = WEAR_TORSO;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
 	ownerGuild = GIL_DMB;
@@ -1062,6 +1090,7 @@ instance CRW_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 30;
 	protection[PROT_MAGIC] = 5;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "crws.3ds";
 	visual_change = "Hum_CRAWLER_ARMOR.asc";
@@ -1092,6 +1121,7 @@ instance ORE_ARMOR_M(C_Item)
 	protection[PROT_FIRE] = 40;
 	protection[PROT_MAGIC] = 10;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER * 2;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "magie.3ds";
 	visual_change = "Hum_MAGIE_ARMOR.asc";
@@ -1123,6 +1153,7 @@ instance ORE_ARMOR_H(C_Item)
 	protection[PROT_FIRE] = 45;
 	protection[PROT_MAGIC] = 15;
 	value = protection[PROT_EDGE] * ARMOR_VALUE_MULTIPLIER * 2;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "magie.3ds";
 	visual_change = "Hum_MAGIE_ARMOR.asc";
@@ -1185,6 +1216,7 @@ instance GRD_ARMOR_I(C_Item)
 	protection[PROT_FIRE] = 3;
 	protection[PROT_MAGIC] = 0;
 	value = 100;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "grdi.3ds";
 	visual_change = "Hum_GRDI_ARMOR.asc";
@@ -1252,6 +1284,7 @@ instance ZOM_ARMOR(C_Item)
 	protection[PROT_FIRE] = 0;
 	protection[PROT_MAGIC] = 0;
 	value = 20;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "ebrh.3ds";
 	visual_change = "Hum_EBRS_ARMOR.asc";
@@ -1275,6 +1308,7 @@ instance ORG2N(C_Item)
 	protection[PROT_FIRE] = 10;
 	protection[PROT_MAGIC] = 0;
 	value = 100;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "org2l.3ds";
 	visual_change = "Hum_ORGL_ARMOR.asc";
@@ -1305,6 +1339,7 @@ instance ORG2L(C_Item)
 	protection[PROT_FIRE] = 15;
 	protection[PROT_MAGIC] = 0;
 	value = 150;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "org2l.3ds";
 	visual_change = "Hum_ORGL_ARMOR.asc";
@@ -1335,6 +1370,7 @@ instance ORG2M(C_Item)
 	protection[PROT_FIRE] = 20;
 	protection[PROT_MAGIC] = 0;
 	value = VALUE_ORG_ARMOR_M;
+	disguiseGuild = GIL_None;
 	wear = WEAR_TORSO;
 	visual = "orgm.3ds";
 	visual_change = "Hum_ORGM_ARMOR.asc";

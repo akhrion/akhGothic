@@ -313,7 +313,6 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 	||	(Npc_GetDistToNpc(slf,oth) < HAI_DIST_MELEE)
 	)
 	{
-		slf.fight_tactic = FAI_HUMAN_Strong;
 		PrintDebugNpc(PD_ZS_Check,"...Gegner in Nahkampfreichweite & kein purer Fernkämpfer!");
 		if(B_EquipAndDrawBestMeleeWeapon(slf))
 		{
