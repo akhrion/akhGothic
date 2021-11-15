@@ -20,7 +20,8 @@ prototype Mst_Default_Wolf(C_Npc)
 	damagetype = DAM_EDGE;
 	fight_tactic = FAI_WOLF;
 	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
-	senses_range = 3000;
+//	senses_range = 3000;
+	senses_range = 1054055056; //HEAR|SEE|SMELL -> 054 == 5^4 == 625 HEAR range B_SensesSystem.d
 	aivar[AIV_MM_Behaviour] = PACKHUNTER;
 	aivar[AIV_MM_PercRange] = 1500;
 	aivar[AIV_MM_DrohRange] = 1200;
