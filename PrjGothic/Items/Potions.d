@@ -173,6 +173,7 @@ func void UseHealthPotion()
 {
 	PrintDebugNpc(PD_ITEM_MOBSI,"UseHealthPotion");
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Essenz);
+	Buff_iHeal1 = Buff_Heal1_Time;
 	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
 	{
 		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;

@@ -131,6 +131,10 @@ func int Npc_GetHP(var C_NPC npc)
 {
 	return npc.attribute[ATR_HITPOINTS];
 };
+func int Npc_GetHPMax(var C_NPC npc)
+{
+	return npc.attribute[ATR_HITPOINTS_MAX];
+};
 func int Npc_GetHPPcnt(var C_NPC npc)
 {
 	return npc.attribute[ATR_HITPOINTS] * 100 / npc.attribute[ATR_HITPOINTS_MAX];

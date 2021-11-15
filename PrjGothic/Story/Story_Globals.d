@@ -209,6 +209,8 @@ const int LPCOST_TALENT_PICKLOCK_2 = 10;
 const int LPCOST_TALENT_PICKPOCKET_1 = 5;
 const int LPCOST_TALENT_PICKPOCKET_2 = 10;
 const int FIX_VERSION_START = 14;
+const int Buff_Heal1 = 10;
+const int Buff_Heal1_Time = 30;
 var int fix_version_save;
 var int log_wolftrain;
 var int log_baalcadarsell;
@@ -415,3 +417,4 @@ var int WolfHunter;				//Увеличивает урон и количество лута.
 var int OrcDogHunter;
 var int Knows_Wolf_prcnt;
 var int RingOfTemporalisPowerEquiped;
+var int Buff_iHeal1;

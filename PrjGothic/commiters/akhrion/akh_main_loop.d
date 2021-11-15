@@ -128,9 +128,27 @@ func void RingOfTemporalisPower_Handler()
 		UnEquip_RingOfTemporalisPower_Script(hero);
 	};
 };
+func void akh_Regeneration()
+{
+};
+func void akh_Buff()
+{
+	if(
+		Buff_iHeal1
+	&&	Npc_GetHPMax(hero) != Npc_GetHP(hero)
+	)
+	{
+		Buff_iHeal1 -=1;
+		Npc_IncreaseHP(hero,Buff_Heal1);
+	};
+};
 func void akhrion_Loop(){
 	josefFight();
 	RingOfTemporalisPower_Handler();
+	akh_Regeneration();
+	akh_Buff();
+	Print("akhrion_Loop");
+	PrintI(Josef_OrcDogsFight_TimeOfTalk);
 //	return;
 //	Print("MAIN LOOP");
 //	akh_RescaleDamage(hero);
