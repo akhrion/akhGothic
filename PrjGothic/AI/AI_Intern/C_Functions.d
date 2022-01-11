@@ -1033,4 +1033,18 @@ func int C_Npc_IsBelongToCamp(var C_NPC npc,var int camp)
 	};
 	return false;
 };
-
+func int C_Npc_DidSmelled(var C_Npc slf)
+{
+	return tern(isFlagsContainCategorie(slf.aivar[AIV_Memory], AIV_M_Smelled),true,FALSE);
+};
+func int C_Npc_isAttentioned(var C_Npc slf)
+{
+	return isFlagsContainCategorie(slf.aivar[AIV_Memory],AIV_M_Attentioned);
+};
+func void C_Npc_SetAttentioned(var C_Npc slf)
+{
+	if(!C_Npc_isAttentioned(slf))
+	{
+		slf.aivar[AIV_Memory] += AIV_M_Attentioned;
+	};
+};

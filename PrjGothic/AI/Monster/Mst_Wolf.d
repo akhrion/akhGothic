@@ -46,4 +46,14 @@ instance Wolf(Mst_Default_Wolf)
 	Set_Wolf_Visuals();
 	Npc_SetToFistMode(self);
 };
+func void func_Dead_Wolf()
+{
+	self.attribute[ATR_HITPOINTS] = 0;
+};
+instance Dead_Wolf(Mst_Default_Wolf)
+{
+	start_aistate = func_Dead_Wolf;
+	Set_Wolf_Visuals();
+	Npc_SetToFistMode(self);
+};
 

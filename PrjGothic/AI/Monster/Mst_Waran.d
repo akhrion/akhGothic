@@ -20,7 +20,8 @@ prototype Mst_Default_Waran(C_Npc)
 	damagetype = DAM_EDGE;
 	fight_tactic = FAI_WARAN;
 	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
-	senses_range = 3000;
+//	senses_range = 3000;
+	senses_range = 1452352252;
 	aivar[AIV_FINDABLE] = PASSIVE;
 	aivar[AIV_PCISSTRONGER] = 1400;
 	aivar[AIV_BEENATTACKED] = 1100;

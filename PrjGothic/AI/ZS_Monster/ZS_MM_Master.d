@@ -540,13 +540,12 @@ func void MinecrawlerOM(var C_NPC slf,var C_NPC oth)
 		Npc_SetPermAttitude(MineCrawler,ATT_ANGRY);
 	};
 };
-
-func void B_MM_AssessEnemy()
+func void akh_DebugSenseSystem()
 {
-	MinecrawlerOM(self,other);
-	PrintDebugNpc(PD_MST_FRAME,"B_MM_AssessEnemy");
-	if((Npc_GetDistToNpc(self,other) < self.aivar[AIV_MM_PercRange]) && Npc_CanSeeNpcFreeLOS(self,other))
+//when B_SensesSystem was complited then it func should be removed..
+	if(self.senses_range < 50000)
 	{
+		C_Npc_SetAttentioned(self);
 		if(C_PreyToPredator(other,self))
 		{
 			Npc_SetTarget(self,other);
@@ -575,6 +574,55 @@ func void B_MM_AssessEnemy()
 		};
 	};
 };
+func void B_MM_AssessEnemy()
+{
+	MinecrawlerOM(self,other);
+	PrintDebugNpc(PD_MST_FRAME,"B_MM_AssessEnemy");
+//	PrintI(Npc_GetRange_See(self));
+	if(Npc_CanSeeNpc(self,other))
+	{
+		if(Npc_GetRange_See(self) > Npc_GetDistToNpc(self,other))
+		{
+	//		if((Npc_GetDistToNpc(self,other) < self.aivar[AIV_MM_PercRange]) && Npc_CanSeeNpcFreeLOS(self,other))
+			if((Npc_GetDistToNpc(self,other) < self.aivar[AIV_MM_PercRange]))
+			{
+				C_Npc_SetAttentioned(self);
+				if(C_PreyToPredator(other,self))
+				{
+					Npc_SetTarget(self,other);
+					Npc_ClearAIQueue(self);
+					AI_StartState(self,ZS_MM_Attack,0,"");
+				}
+				else if(C_PreyToPredator(self,other))
+				{
+					Npc_SetTarget(self,other);
+					Npc_ClearAIQueue(self);
+					AI_StartState(self,ZS_MM_Flee,0,"");
+				}
+				else if(
+					Wld_GetGuildAttitude(self.guild,other.guild) != ATT_HOSTILE ||
+					Npc_GetPermAttitude(self,other) != ATT_HOSTILE
+				)
+				{
+					PrintDebug("B_MM_AssessEnemy: ... bug: Npc_SetPermAttitude work only on SC");
+					PrintDebug("B_MM_AssessEnemy: ... bug: Npc_GetPermAttitude inherit att from GuildAttitude for NSC");
+					return;
+				}
+				else
+				{
+					Npc_ClearAIQueue(self);
+					AI_StartState(self,ZS_MM_AssessEnemy,0,"");
+				};
+			};
+		};
+	};
+	if(Npc_GetRange_Hear(self) > Npc_GetDistToNpc(self,other))
+	{
+		C_Npc_SetAttentioned(self);
+		AI_TurnToNpc(self,other);
+	};
+	akh_DebugSenseSystem();
+};
 
 func void ZS_MM_AssessEnemy()
 {
@@ -584,14 +632,17 @@ func void ZS_MM_AssessEnemy()
 	Npc_PercEnable(self,PERC_ASSESSOTHERSDAMAGE,B_MM_ReactToOthersDamage);
 	Npc_PercEnable(self,PERC_ASSESSMAGIC,B_AssessMagic);
 	Npc_PercEnable(self,PERC_ASSESSBODY,B_MM_AssessBody);
-	if(self.aivar[AIV_FINDABLE] == HUNTER)
+	if(self.aivar[AIV_MM_Behaviour] == HUNTER)
 	{
 		AI_Standup(self);
 		AI_TurnToNPC(self,other);
 		AI_PlayAni(self,"T_WARN");
 		AI_SetWalkMode(self,NPC_WALK);
 	};
-	if((self.aivar[AIV_FINDABLE] == PASSIVE) || (self.aivar[AIV_FINDABLE] == PACKHUNTER))
+	if(
+		(self.aivar[AIV_MM_Behaviour] == PASSIVE)
+	|| (self.aivar[AIV_MM_Behaviour] == PACKHUNTER)
+	)
 	{
 		AI_Standup(self);
 		AI_LookAtNpc(self,other);
@@ -605,23 +656,35 @@ func int ZS_MM_AssessEnemy_loop()
 	{
 		return LOOP_END;
 	};
-	if((Npc_GetDistToNpc(self,other) <= self.aivar[AIV_MM_PercRange]) && (Npc_GetDistToNpc(self,other) > self.aivar[AIV_MM_DrohRange]))
+	if(
+		(Npc_GetDistToNpc(self,other) <= self.aivar[AIV_MM_PercRange])
+	&& (Npc_GetDistToNpc(self,other) > self.aivar[AIV_MM_DrohRange])
+	)
 	{
-		if((self.aivar[AIV_FINDABLE] == PASSIVE) || (self.aivar[AIV_FINDABLE] == PACKHUNTER))
+		if(
+			(self.aivar[AIV_MM_Behaviour] == PASSIVE)
+		|| (self.aivar[AIV_MM_Behaviour] == PACKHUNTER)
+		)
 		{
 			if(!Npc_CanSeeNpc(self,other))
 			{
 				AI_TurnToNPC(self,other);
 			};
 		};
-		if(self.aivar[AIV_FINDABLE] == HUNTER)
+		if(self.aivar[AIV_MM_Behaviour] == HUNTER)
 		{
 			AI_GotoNpc(self,other);
 		};
 	};
-	if((Npc_GetDistToNpc(self,other) <= self.aivar[AIV_MM_DrohRange]) && (Npc_GetDistToNpc(self,other) > self.aivar[AIV_MM_AttackRange]))
+	if(
+		(Npc_GetDistToNpc(self,other) <= self.aivar[AIV_MM_DrohRange])
+	&& (Npc_GetDistToNpc(self,other) > self.aivar[AIV_MM_AttackRange])
+	)
 	{
-		if((self.aivar[AIV_FINDABLE] == PASSIVE) || (self.aivar[AIV_FINDABLE] == PACKHUNTER))
+		if(
+			(self.aivar[AIV_MM_Behaviour] == PASSIVE)
+		|| (self.aivar[AIV_MM_Behaviour] == PACKHUNTER)
+		)
 		{
 			if(Npc_GetStateTime(self) > self.aivar[AIV_MM_DrohTime])
 			{
@@ -636,7 +699,7 @@ func int ZS_MM_AssessEnemy_loop()
 				Npc_SendPassivePerc(self,PERC_ASSESSWARN,other,self);
 			};
 		};
-		if(self.aivar[AIV_FINDABLE] == HUNTER)
+		if(self.aivar[AIV_MM_Behaviour] == HUNTER)
 		{
 			AI_GotoNpc(self,other);
 		};
@@ -682,7 +745,7 @@ func void B_MM_ReactToDamage()
 	}
 	else
 	{
-		PrintDebugNpc(PD_MST_FRAME,"...Monster ist Jäger");
+		PrintDebugNpc(PD_MST_FRAME,"...Monster ist JÂ˜ger");
 		Npc_SetTarget(self,other);
 		Npc_ClearAIQueue(self);
 		Npc_PercDisable(self,PERC_ASSESSENEMY);
@@ -694,6 +757,7 @@ func void B_MM_ReactToOthersDamage()
 {
 	PrintDebugNpc(PD_MST_FRAME,"B_MM_ReactToOthersDamage");
 	B_MM_DeSynchronize();
+	IF(Npc_GetDistToNpc(self,victim) > 1000){return;};
 	if(C_PreyToPredator(self,other))
 	{
 		Npc_SetTarget(self,other);
@@ -780,7 +844,7 @@ func int ZS_MM_Attack_Loop()
 		PrintDebugNpc(PD_MST_LOOP,"...Ziel vorhanden!");
 		if(C_BodyStateContains(other,BS_RUN) || C_BodyStateContains(other,BS_JUMP))
 		{
-			PrintDebugNpc(PD_MST_LOOP,"...Ziel läuft oder springt!");
+			PrintDebugNpc(PD_MST_LOOP,"...Ziel lÂ˜uft oder springt!");
 			if(Npc_GetStateTime(self) > self.aivar[AIV_BEGGAR])
 			{
 				PrintDebugNpc(PD_MST_CHECK,"...Ziel schon zu lange verfolgt!");
@@ -806,7 +870,7 @@ func int ZS_MM_Attack_Loop()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Ziel ist ungültig oder kampf-unfähig!");
+		PrintDebugNpc(PD_ZS_Check,"...Ziel ist ungÂ˜ltig oder kampf-unfÂ˜hig!");
 		if(self.aivar[AIV_FINDABLE] == HUNTER)
 		{
 			Npc_ClearAIQueue(self);

@@ -20,7 +20,8 @@ prototype Mst_Default_Zombie(C_Npc)
 	damagetype = DAM_EDGE;
 	fight_tactic = FAI_ZOMBIE;
 	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
-	senses_range = 3000;
+//	senses_range = 3000;
+	senses_range = 1000055000;
 	aivar[AIV_FINDABLE] = HUNTER;
 	aivar[AIV_PCISSTRONGER] = 2000;
 	aivar[AIV_BEENATTACKED] = 1500;
