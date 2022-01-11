@@ -423,6 +423,51 @@ instance ItRw_Bow_War_05(C_Item)
 	count[5] = value;
 };
 
+instance ItRw_Bow_Urizel(C_ITEM)
+{
+	name = "Магический лук";
+	mainflag = ITEM_KAT_FF;
+	flags = ITEM_BOW;
+	material = MAT_WOOD;
+	value = 3800;
+	damageTotal = 150;
+	damagetype = DAM_BARRIER;
+	munition = ItAmMagicArrow;
+	cond_atr[2] = ATR_DEXTERITY;
+	cond_value[2] = 120;
+	visual = "ItRw_Bow_War_05.mms";
+	on_equip = oe_Bow_Magic;
+	on_unequip = ou_Bow_Magic;
+	description = name;
+	text[0] = "Касаясь камня пальцами, за рукой тянется";
+	text[1] = "сгусток магической энергии - кажется ему";
+	text[2] = "не нужны стрелы.";
+	text[3] = NAME_Dex_needed;
+	count[3] = cond_value[2];
+	text[5] = NAME_Value;
+	count[5] = value;	
+};
+
+instance ItAmMagicArrow(C_Item)
+{
+	name = "Магическая стрела";
+	mainflag = ITEM_KAT_MUN;
+	flags = ITEM_BOW | ITEM_MULTI;
+	value = 0;
+	visual = "ItAm_Arrow_01.3ds";
+	material = MAT_WOOD;
+	description = name;
+};
+
+func void oe_Bow_Magic()
+{
+	CreateInvItems(self,ItAmMagicArrow,100 - Npc_HasItems(self,ItAmMagicArrow));
+};
+func void ou_Bow_Magic()
+{
+	Npc_RemoveInvItems(self,ItAmMagicArrow,Npc_HasItems(self,ItAmMagicArrow));
+};
+
 instance ItRw_Bow_Mystic(C_ITEM)
 {
 	name = "???";

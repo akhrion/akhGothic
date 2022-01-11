@@ -751,6 +751,37 @@ func void Info_Xardas_ALTRUNE_Info()
 	B_LogEntry(GE_URIZELRUNE,"Во время нашей последней встречи Ксардас упомянул о том, что силу УРИЗЕЛЯ могут использовать даже маги. Но он расскажет мне об этом только после того, как я заряжу меч.");
 };
 
+instance Info_Xardas_ALTRUNEBOW(C_Info)
+{
+	npc = KDF_404_Xardas;
+	condition = Info_Xardas_ALTRUNEBOW_Condition;
+	information = Info_Xardas_ALTRUNEBOW_Info;
+	important = 0;
+	permanent = 0;
+	description = "Но как лучник я не смогу использовать УРИЗЕЛЬ!";
+};
+
+
+func int Info_Xardas_ALTRUNEBOW_Condition()
+{
+	if(
+		Npc_KnowsInfo(hero,Info_Xardas_FORMULA)
+	&&	hero.attribute[ATR_DEXTERITY] > 50
+	)
+	{
+		return TRUE;
+	};
+};
+
+func void Info_Xardas_ALTRUNEBOW_Info()
+{
+	AI_Output(other,self,"Info_Xardas_ALTRUNEBOW_NULL_01");	//Но как лучник я не смогу использовать УРИЗЕЛЬ!
+	AI_Output(self,other,"Info_Xardas_ALTRUNE_14_02");	//Я знаю один способ...
+	AI_Output(self,other,"Info_Xardas_ALTRUNE_14_03");	//Но сначала восстанови силу меча. Потом я расскажу тебе об этом.
+	Log_CreateTopic(GE_URIZELRUNE,LOG_NOTE);
+	B_LogEntry(GE_URIZELRUNE,"Во время нашей последней встречи Ксардас упомянул о том, что силу УРИЗЕЛЯ могут использовать даже лучники. Но он расскажет мне об этом только после того, как я заряжу меч.");
+};
+
 
 instance Info_Xardas_SWORDLOADED(C_Info)
 {
@@ -789,7 +820,6 @@ instance Info_Xardas_MAKERUNE(C_Info)
 	description = "Ты говорил, что я смогу использовать УРИЗЕЛЬ, даже будучи магом.";
 };
 
-
 func int Info_Xardas_MAKERUNE_Condition()
 {
 	if(Npc_KnowsInfo(hero,Info_Xardas_ALTRUNE) && Npc_KnowsInfo(hero,Info_Xardas_SWORDLOADED))
@@ -807,6 +837,34 @@ func void Info_Xardas_MAKERUNE_Info()
 	AI_Output(other,self,"Info_Xardas_MAKERUNE_15_05");	//Магическую руну из УРИЗЕЛЯ?
 	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_06");	//Эта руна поможет победить твоих врагов так же, как это сделал бы меч.
 	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_07");	//Но есть одно условие: лишь маги Шестого Круга могут использовать такую могущественную руну!
+};
+
+instance Info_Xardas_MAKEBOW(C_Info)
+{
+	npc = KDF_404_Xardas;
+	condition = Info_Xardas_MAKEBOW_Condition;
+	information = Info_Xardas_MAKEBOW_Info;
+	important = 0;
+	permanent = 0;
+	description = "Ты говорил, что я смогу использовать УРИЗЕЛЬ, даже будучи лучником.";
+};
+
+func int Info_Xardas_MAKEBOW_Condition()
+{
+	if(Npc_KnowsInfo(hero,Info_Xardas_ALTRUNEBOW) && Npc_KnowsInfo(hero,Info_Xardas_SWORDLOADED))
+	{
+		return TRUE;
+	};
+};
+
+func void Info_Xardas_MAKEBOW_Info()
+{
+	AI_Output(other,self,"Info_Xardas_MAKEBOW_NULL_01");	//Ты говорил, что я смогу использовать УРИЗЕЛЬ, даже не имея столько силы.
+	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_02");	//Посмотри на него. Его самая важная деталь - синий мерцающий камень на клинке.
+	AI_Output(self,other,"Info_Xardas_MAKERUNE_14_03");	//Он хранит в себе всю силу меча.
+	AI_Output(self,other,"Info_Xardas_MAKEBOW_NULL_04");	//Если перенести этот камень в подходящий лук, тоо.. это может сработать.
+	AI_Output(self,other,"Info_Xardas_MAKEBOW_NULL_05");	//Лук получит свойства камня, а стрелы.. впрочем я не знаю сработает-ли это.. оружие может просто не выдержать силы камня.
+	AI_Output(self,other,"Info_Xardas_MAKEBOW_NULL_06");	//Постарайся найти подходящее вместилище.
 };
 
 
@@ -842,6 +900,34 @@ func void Info_Xardas_MAKERUNEDOIT_Info()
 	Info_AddChoice(Info_Xardas_MAKERUNEDOIT,"Нет, не нужно этого делать!",Info_Xardas_MAKERUNE_NO);
 };
 
+instance Info_Xardas_MAKEBOWDOIT(C_Info)
+{
+	npc = KDF_404_Xardas;
+	condition = Info_Xardas_MAKEBOWDOIT_Condition;
+	information = Info_Xardas_MAKEBOWDOIT_Info;
+	important = 0;
+	permanent = 1;
+	description = "Хорошо, перенеси камень УРИЗЕЛЯ в этот лук!";
+};
+
+
+func int Info_Xardas_MAKEBOWDOIT_Condition()
+{
+	if(Npc_KnowsInfo(hero,Info_Xardas_MAKEBOW) && Npc_HasItems(hero,Mythrilklinge02))
+	{
+		return TRUE;
+	};
+};
+
+func void Info_Xardas_MAKEBOWDOIT_Info()
+{
+	AI_Output(other,self,"Info_Xardas_MAKEBOWDOIT_NULL_01");	//Хорошо, перенеси камень УРИЗЕЛЯ в этот лук!
+	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_03");	//Это будет необратимое изменение меча. Ты действительно хочешь, чтобы я вынул камень?
+	Info_ClearChoices(Info_Xardas_MAKEBOWDOIT);
+	Info_AddChoice(Info_Xardas_MAKEBOWDOIT,"Да, я хочу этого!",Info_Xardas_MAKEBOW_YES);
+	Info_AddChoice(Info_Xardas_MAKEBOWDOIT,"Нет, не нужно этого делать!",Info_Xardas_MAKEBOW_NO);
+};
+
 func void Info_Xardas_MAKERUNE_YES()
 {
 	Info_ClearChoices(Info_Xardas_MAKERUNEDOIT);
@@ -862,9 +948,36 @@ func void Info_Xardas_MAKERUNE_YES()
 	B_LogEntry(GE_URIZELRUNE,"Ксардас отделил магический камень от меча УРИЗЕЛЯ. Теперь вся сила меча перейдет в руну, сделанную из этого камня.");
 };
 
+func void Info_Xardas_MAKEBOW_YES()
+{
+	Info_ClearChoices(Info_Xardas_MAKEBOWDOIT);
+	AI_Output(other,self,"Info_Xardas_MAKERUNEDOIT_15_04");	//Да, я хочу этого!
+	b_printtrademsg1("Отдан заряженный УРИЗЕЛЬ.");
+	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_05_01");	//Я сделаю, как ты просишь.
+	CreateInvItem(self,demourizel);
+	AI_EquipBestMeleeWeapon(self);
+	AI_ReadyMeleeWeapon(self);
+	AI_PlayAni(self,"T_PRACTICEMAGIC4");
+	AI_RemoveWeapon(self);
+	AI_UnequipWeapons(self);
+	AI_Output(self,other,"Info_Xardas_MAKEBOWDOIT_NULL_05_02");	//Вот, возьми меч и лук!
+	b_printtrademsg2("Получен УРИЗЕЛЬ и лук с камнем.");
+	Npc_RemoveInvItem(hero,Mythrilklinge02);
+	CreateInvItems(hero,ItRw_Bow_Urizel,1);
+	CreateInvItems(hero,Mythrilklinge03,1);
+	B_LogEntry(GE_URIZELRUNE,"Ксардас отделил магический камень от меча УРИЗЕЛЯ. И соединил его с новым оружием. Теперь сила камня наделяет лук небывалой энергией.");
+};
+
 func void Info_Xardas_MAKERUNE_NO()
 {
 	Info_ClearChoices(Info_Xardas_MAKERUNEDOIT);
+	AI_Output(other,self,"Info_Xardas_MAKERUNEDOIT_15_06");	//Нет, не нужно этого делать!
+	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_07");	//Да будет так. Пусть меч сохранит свою магическую силу.
+};
+
+func void Info_Xardas_MAKEBOW_NO()
+{
+	Info_ClearChoices(Info_Xardas_MAKEBOWDOIT);
 	AI_Output(other,self,"Info_Xardas_MAKERUNEDOIT_15_06");	//Нет, не нужно этого делать!
 	AI_Output(self,other,"Info_Xardas_MAKERUNEDOIT_14_07");	//Да будет так. Пусть меч сохранит свою магическую силу.
 };
