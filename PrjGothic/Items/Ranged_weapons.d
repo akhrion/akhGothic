@@ -1,7 +1,7 @@
 
 instance ItRw_Bow_Small_01(C_item)
 {
-	name = "Короткий лук";
+	name = "РљРѕСЂРѕС‚РєРёР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -18,9 +18,9 @@ instance ItRw_Bow_Small_01(C_item)
 //	text[2] = NAME_Damage;
 //	count[2] = damageTotal;
 	count[1] = 22;
-	text[1] = "Тугость тетивы:";
+	text[1] = "РўСѓРіРѕСЃС‚СЊ С‚РµС‚РёРІС‹:";
 	count[2] = 20;
-	text[2] = getConcatSIS("Процент ловкости идущей в урон: ",count[2], "%");
+	text[2] = getConcatSIS("РџСЂРѕС†РµРЅС‚ Р»РѕРІРєРѕСЃС‚Рё РёРґСѓС‰РµР№ РІ СѓСЂРѕРЅ: ",count[2], "%");
 	count[3] = cond_value[2];
 	text[3] = NAME_Dex_needed;
 	count[5] = value;
@@ -29,7 +29,7 @@ instance ItRw_Bow_Small_01(C_item)
 
 instance ItRw_Bow_Small_02(C_Item)
 {
-	name = "Лук всадника";
+	name = "Р›СѓРє РІСЃР°РґРЅРёРєР°";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -51,7 +51,7 @@ instance ItRw_Bow_Small_02(C_Item)
 
 instance ItRw_Bow_Small_03(C_Item)
 {
-	name = "Полевой лук";
+	name = "РџРѕР»РµРІРѕР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -73,7 +73,7 @@ instance ItRw_Bow_Small_03(C_Item)
 
 instance ItRw_Bow_Small_04(C_Item)
 {
-	name = "Охотничий лук";
+	name = "РћС…РѕС‚РЅРёС‡РёР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -95,7 +95,7 @@ instance ItRw_Bow_Small_04(C_Item)
 
 instance ItRw_Bow_Small_05(C_Item)
 {
-	name = "Костяной лук";
+	name = "РљРѕСЃС‚СЏРЅРѕР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -117,7 +117,7 @@ instance ItRw_Bow_Small_05(C_Item)
 
 instance ItRw_Bow_Long_01(C_Item)
 {
-	name = "Длинный лук";
+	name = "Р”Р»РёРЅРЅС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -139,7 +139,7 @@ instance ItRw_Bow_Long_01(C_Item)
 
 instance ItRw_Bow_Long_02(C_Item)
 {
-	name = "Осиновый лук";
+	name = "РћСЃРёРЅРѕРІС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -161,7 +161,7 @@ instance ItRw_Bow_Long_02(C_Item)
 
 instance ItRw_Bow_Long_03(C_Item)
 {
-	name = "Ивовый лук";
+	name = "РРІРѕРІС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -183,7 +183,7 @@ instance ItRw_Bow_Long_03(C_Item)
 
 instance ItRw_Bow_Long_04(C_Item)
 {
-	name = "Дубовый лук";
+	name = "Р”СѓР±РѕРІС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -205,7 +205,7 @@ instance ItRw_Bow_Long_04(C_Item)
 
 instance ItRw_Bow_Long_05(C_Item)
 {
-	name = "Убийца волков";
+	name = "РЈР±РёР№С†Р° РІРѕР»РєРѕРІ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -227,7 +227,7 @@ instance ItRw_Bow_Long_05(C_Item)
 
 instance ItRw_Bow_Long_06(C_Item)
 {
-	name = "Пронзающий ветер";
+	name = "РџСЂРѕРЅР·Р°СЋС‰РёР№ РІРµС‚РµСЂ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -249,7 +249,7 @@ instance ItRw_Bow_Long_06(C_Item)
 
 instance ItRw_Bow_Long_07(C_Item)
 {
-	name = "Армейский лук";
+	name = "РђСЂРјРµР№СЃРєРёР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -271,7 +271,7 @@ instance ItRw_Bow_Long_07(C_Item)
 
 instance ItRw_Bow_Long_08(C_Item)
 {
-	name = "Роговой лук";
+	name = "Р РѕРіРѕРІРѕР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -293,7 +293,7 @@ instance ItRw_Bow_Long_08(C_Item)
 
 instance ItRw_Bow_Long_09(C_Item)
 {
-	name = "Нимрод";
+	name = "РќРёРјСЂРѕРґ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -315,7 +315,7 @@ instance ItRw_Bow_Long_09(C_Item)
 
 instance ItRw_Bow_War_01(C_Item)
 {
-	name = "Военный лук";
+	name = "Р’РѕРµРЅРЅС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -337,7 +337,7 @@ instance ItRw_Bow_War_01(C_Item)
 
 instance ItRw_Bow_War_02(C_Item)
 {
-	name = "Убийца орков";
+	name = "РЈР±РёР№С†Р° РѕСЂРєРѕРІ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -359,7 +359,7 @@ instance ItRw_Bow_War_02(C_Item)
 
 instance ItRw_Bow_War_03(C_Item)
 {
-	name = "Штурмовой лук";
+	name = "РЁС‚СѓСЂРјРѕРІРѕР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -381,7 +381,7 @@ instance ItRw_Bow_War_03(C_Item)
 
 instance ItRw_Bow_War_04(C_Item)
 {
-	name = "Лук демона";
+	name = "Р›СѓРє РґРµРјРѕРЅР°";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -403,7 +403,7 @@ instance ItRw_Bow_War_04(C_Item)
 
 instance ItRw_Bow_War_05(C_Item)
 {
-	name = "Несущий смерть";
+	name = "РќРµСЃСѓС‰РёР№ СЃРјРµСЂС‚СЊ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -425,7 +425,7 @@ instance ItRw_Bow_War_05(C_Item)
 
 instance ItRw_Bow_Urizel(C_ITEM)
 {
-	name = "Магический лук";
+	name = "РњР°РіРёС‡РµСЃРєРёР№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -439,9 +439,9 @@ instance ItRw_Bow_Urizel(C_ITEM)
 	on_equip = oe_Bow_Magic;
 	on_unequip = ou_Bow_Magic;
 	description = name;
-	text[0] = "Касаясь камня пальцами, за рукой тянется";
-	text[1] = "сгусток магической энергии - кажется ему";
-	text[2] = "не нужны стрелы.";
+	text[0] = "РљР°СЃР°СЏСЃСЊ РєР°РјРЅСЏ РїР°Р»СЊС†Р°РјРё, Р·Р° СЂСѓРєРѕР№ С‚СЏРЅРµС‚СЃСЏ";
+	text[1] = "СЃРіСѓСЃС‚РѕРє РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё - РєР°Р¶РµС‚СЃСЏ РµРјСѓ";
+	text[2] = "РЅРµ РЅСѓР¶РЅС‹ СЃС‚СЂРµР»С‹.";
 	text[3] = NAME_Dex_needed;
 	count[3] = cond_value[2];
 	text[5] = NAME_Value;
@@ -450,7 +450,7 @@ instance ItRw_Bow_Urizel(C_ITEM)
 
 instance ItAmMagicArrow(C_Item)
 {
-	name = "Магическая стрела";
+	name = "РњР°РіРёС‡РµСЃРєР°СЏ СЃС‚СЂРµР»Р°";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_BOW | ITEM_MULTI;
 	value = 0;
@@ -484,8 +484,8 @@ instance ItRw_Bow_Mystic(C_ITEM)
 	on_equip = oe_Bow_Mystic;
 	on_unequip = ou_Bow_Mystic;
 	description = name;
-	text[0] = "Странный лук, от него веет холодом";
-	text[1] = "и.. чем-то мерзким.";
+	text[0] = "РЎС‚СЂР°РЅРЅС‹Р№ Р»СѓРє, РѕС‚ РЅРµРіРѕ РІРµРµС‚ С…РѕР»РѕРґРѕРј";
+	text[1] = "Рё.. С‡РµРј-С‚Рѕ РјРµСЂР·РєРёРј.";
 	text[2] = NAME_Damage;
 	count[2] = damageTotal;
 	text[3] = NAME_Dex_needed;
@@ -516,7 +516,7 @@ func void ou_Bow_Mystic()
 
 instance ItRw_Crossbow_01(C_Item)
 {
-	name = "Легкий арбалет";
+	name = "Р›РµРіРєРёР№ Р°СЂР±Р°Р»РµС‚";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -538,7 +538,7 @@ instance ItRw_Crossbow_01(C_Item)
 
 instance ItRw_Crossbow_02(C_Item)
 {
-	name = "Охотничий арбалет";
+	name = "РћС…РѕС‚РЅРёС‡РёР№ Р°СЂР±Р°Р»РµС‚";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -562,7 +562,7 @@ instance ItRw_Crossbow_02(C_Item)
 
 instance ItRw_Crossbow_03(C_Item)
 {
-	name = "Тяжелый арбалет";
+	name = "РўСЏР¶РµР»С‹Р№ Р°СЂР±Р°Р»РµС‚";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -584,7 +584,7 @@ instance ItRw_Crossbow_03(C_Item)
 
 instance ItRw_Crossbow_04(C_Item)
 {
-	name = "Военный арбалет";
+	name = "Р’РѕРµРЅРЅС‹Р№ Р°СЂР±Р°Р»РµС‚";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -606,28 +606,28 @@ instance ItRw_Crossbow_04(C_Item)
 
 instance ItAmArrow_01(C_Item)
 {
-	name = "Кривая стрела";
+	name = "РљСЂРёРІР°СЏ СЃС‚СЂРµР»Р°";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_BOW | ITEM_MULTI;
 	value = 2;
 	visual = "ItAm_Arrow_01.3ds";
 	material = MAT_WOOD;
 	description = name;
-	text[2] = "Выглядит сомнительно. Интересно она полетит дальше моих носков?";
+	text[2] = "Р’С‹РіР»СЏРґРёС‚ СЃРѕРјРЅРёС‚РµР»СЊРЅРѕ. РРЅС‚РµСЂРµСЃРЅРѕ РѕРЅР° РїРѕР»РµС‚РёС‚ РґР°Р»СЊС€Рµ РјРѕРёС… РЅРѕСЃРєРѕРІ?";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAmArrow_02(C_Item)
 {
-	name = "Кустарная стрела";
+	name = "РљСѓСЃС‚Р°СЂРЅР°СЏ СЃС‚СЂРµР»Р°";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_BOW | ITEM_MULTI;
 	value = 6;
 	visual = "ItAm_Arrow_01.3ds";
 	material = MAT_WOOD;
 	description = name;
-	text[2] = "Кажется эти стрелы делают все кому не лень.";
+	text[2] = "РљР°Р¶РµС‚СЃСЏ СЌС‚Рё СЃС‚СЂРµР»С‹ РґРµР»Р°СЋС‚ РІСЃРµ РєРѕРјСѓ РЅРµ Р»РµРЅСЊ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -635,7 +635,7 @@ instance ItAmArrow_02(C_Item)
 
 instance ItAmArrow(C_Item)
 {
-	name = "Стрела";
+	name = "РЎС‚СЂРµР»Р°";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_BOW | ITEM_MULTI;
 	value = 10;
@@ -648,21 +648,21 @@ instance ItAmArrow(C_Item)
 
 instance ItAmBolt_01(C_Item)
 {
-	name = "Щепка";
+	name = "Р©РµРїРєР°";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_CROSSBOW | ITEM_MULTI;
 	value = 2;
 	visual = "ItAm_Arrow_01.3ds";
 	material = MAT_WOOD;
 	description = name;
-	text[2] = "Это что вообще такое?";
+	text[2] = "Р­С‚Рѕ С‡С‚Рѕ РІРѕРѕР±С‰Рµ С‚Р°РєРѕРµ?";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAmBolt(C_Item)
 {
-	name = "Арбалетный болт";
+	name = "РђСЂР±Р°Р»РµС‚РЅС‹Р№ Р±РѕР»С‚";
 	mainflag = ITEM_KAT_MUN;
 	flags = ITEM_CROSSBOW | ITEM_MULTI;
 	value = 10;
