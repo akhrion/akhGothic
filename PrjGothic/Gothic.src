@@ -56,6 +56,7 @@ Story\B\B_MagicHurtNpc.d
 Story\B\B_InsertInExtremo.d
 Story\B\B_RaiseAttribute.d
 Story\B\B_ReduceAttribute.d
+Story\B\B_SensesSystem.d
 Story\CHAPTERS\B_Story_AccessToXardas.d
 Story\CHAPTERS\B_Story_BackFromOrcGraveyard.d
 Story\CHAPTERS\B_Story_BringFirstFocus.d
@@ -177,6 +178,7 @@ commiters\akhrion\Story\B\akh_Stealth.d
 commiters\akhrion\npc_main_loop.d
 AI\B_Human\B_CompareNpcInstance.d
 AI\B_Human\B_AssessAndMemorize.d
+AI\B_Human\B_AssessMurder.d
 AI\B_Human\B_SpreadAndMemorize.d
 AI\B_Human\B_FetchWeapon.d
 AI\B_Human\B_SelectWeapon.d
