@@ -724,3 +724,99 @@ func void UseHastePotion3()
 	PrintDebugNpc(PD_ITEM_MOBSI,"Я стал быстрее.");
 };
 
+instance ItFo_Potion_Size_20(C_Item)
+{
+	name = NAME_Trank;
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = Value_Haste3;
+	visual = "ItFo_Potion_Dex_03.3ds";
+	material = MAT_GLAS;
+	on_state[0] = UseSizePotion20;
+	scemeName = "POTIONFAST";
+	description = "Зелье изменения размера";
+	text[1] = "Выпивший станет могуч как тролль.";
+	text[3] = NAME_Duration;
+	count[3] = Time_Haste3 / 60000;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+func void UseSizePotion20()
+{
+	Mdl_SetModelScale(self,2.0,2.0,2.0);
+	PrintDebugNpc(PD_ITEM_MOBSI,"Что с моим размером?");
+};
+
+instance ItFo_Potion_Size_10(C_Item)
+{
+	name = NAME_Trank;
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = Value_Haste3;
+	visual = "ItFo_Potion_Dex_03.3ds";
+	material = MAT_GLAS;
+	on_state[0] = UseSizePotion10;
+	scemeName = "POTIONFAST";
+	description = "Зелье изменения размера";
+	text[1] = "Меняет размер существа до нормального.";
+	text[3] = NAME_Duration;
+	count[3] = Time_Haste3 / 60000;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+func void UseSizePotion10()
+{
+	Mdl_SetModelScale(self,1.0,1.0,1.0);
+	PrintDebugNpc(PD_ITEM_MOBSI,"Что с моим размером?");
+};
+
+instance ItFo_Potion_Size_05(C_Item)
+{
+	name = NAME_Trank;
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = Value_Haste3;
+	visual = "ItFo_Potion_Dex_03.3ds";
+	material = MAT_GLAS;
+	on_state[0] = UseSizePotion05;
+	scemeName = "POTIONFAST";
+	description = "Зелье изменения размера";
+	text[1] = "Меняет размер существа до размеров детеныша падальщика.";
+	text[3] = NAME_Duration;
+	count[3] = Time_Haste3 / 60000;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+func void UseSizePotion05()
+{
+	Mdl_SetModelScale(self,0.5,0.5,0.5);
+	PrintDebugNpc(PD_ITEM_MOBSI,"Что с моим размером?");
+};
+
+instance ItFo_Potion_Size_01(C_Item)
+{
+	name = NAME_Trank;
+	mainflag = ITEM_KAT_POTIONS;
+	flags = ITEM_MULTI;
+	value = Value_Haste3;
+	visual = "ItFo_Potion_Dex_03.3ds";
+	material = MAT_GLAS;
+	on_state[0] = UseSizePotion01;
+	scemeName = "POTIONFAST";
+	description = "Зелье изменения размера";
+	text[1] = "Меняет размер существа до размеров мясного жука.";
+	text[3] = NAME_Duration;
+	count[3] = Time_Haste3 / 60000;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+
+func void UseSizePotion01()
+{
+	Mdl_SetModelScale(self,0.1,0.1,0.1);
+	PrintDebugNpc(PD_ITEM_MOBSI,"Что с моим размером?");
+};
+
