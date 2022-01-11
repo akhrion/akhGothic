@@ -142,17 +142,158 @@ func void akh_Buff()
 		Npc_IncreaseHP(hero,Buff_Heal1);
 	};
 };
+
+// //////////////////////
+// //////////////////////
+// //////////////////////
+const int Surprise_ActionPoints_Size = 3;
+const string Surprise_strArrActionPoints[Surprise_ActionPoints_Size] =
+{
+	//spisok ActionPoints
+	"SPAWN_OW_SCAVNEGER_04_PSI3",
+	"MOVEMENT_OW_PATH_SCAVENGER01_SPAWN01",
+	"OC1"
+};
+//array s sostojanijami each ActionPoint (locked|unlocked)
+var int Surprise_bArrLockedActionPoints[Surprise_ActionPoints_Size];
+func void Surprise_ActionPoint_SetLock(var string ActionPoint_,var int bMode_)
+{
+	//blokiruet ili razblokiruet ActionPoint_
+	//ActionPoint_ blokiruetsja esli na nej est' sobytie v kotorom SC esche ne uchastvoval
+	if(Hlp_StrCmp(ActionPoint_,Surprise_strArrActionPoints[0]))
+	{
+		Surprise_bArrLockedActionPoints[0] = bMode_;
+	};
+	if(Hlp_StrCmp(ActionPoint_,Surprise_strArrActionPoints[1]))
+	{
+		Surprise_bArrLockedActionPoints[1] = bMode_;
+	};
+	if(Hlp_StrCmp(ActionPoint_,Surprise_strArrActionPoints[2]))
+	{
+		Surprise_bArrLockedActionPoints[2] = bMode_;
+	};
+};
+func int Surprise_ActionPoint_IsLocked(var string ActionPoint_)
+{
+	//proverjaet zablokirovana-li ActionPoint
+	if(
+		Hlp_StrCmp(
+			ActionPoint_,
+			Surprise_strArrActionPoints[0]
+		)
+	)
+	{
+		return Surprise_bArrLockedActionPoints[0];
+	};
+	if(
+		Hlp_StrCmp(
+			ActionPoint_,
+			Surprise_strArrActionPoints[1]
+		)
+	)
+	{
+		return Surprise_bArrLockedActionPoints[1];
+	};
+	if(
+		Hlp_StrCmp(
+			ActionPoint_,
+			Surprise_strArrActionPoints[2]
+		)
+	)
+	{
+		return Surprise_bArrLockedActionPoints[2];
+	};
+	return true;
+};
+func int Surprise_IsGoodPlaceForSpawn(var string ActionPoint_)
+{
+	//proverjaet mozhno-li spawn na ActionPoint
+	if(Surprise_ActionPoint_IsLocked(ActionPoint_))
+	{
+		PrintDebug("Find someelse place for Surprise.. cause it's already using..");
+		return false;
+	};
+	if(
+		Npc_GetDistToWP(hero,ActionPoint_) > 3000
+	&&	Npc_GetDistToWP(hero,ActionPoint_) < 5000
+	)
+	{
+		return true;
+	};
+	return false;
+};
+func void Surprise_Spawn(var string ActionPoint_)
+{
+	//spawnet mertvogo volka i blokiruet ActionPoint
+	Print(ActionPoint_);
+	Surprise_ActionPoint_SetLock(ActionPoint_,TRUE);
+	Wld_InsertNpc(Dead_Wolf,ActionPoint_);
+};
+func void akh_SpawnSurprise()
+{
+//zadacha funkcii - spawn on spec WP or FP vnezapnye sobytija..
+//ybityh monstrov, ludej, grabitelej, spasauchihsja ot napadenija NPC
+//eto nyzhno dlja napolnenija mira zhivost'u.. dlja pridanija miru dvizhenija..
+	if(Surprise_IsGoodPlaceForSpawn(Surprise_strArrActionPoints[0]))
+	{
+		Surprise_Spawn(Surprise_strArrActionPoints[0]);
+	};
+	if(Surprise_IsGoodPlaceForSpawn(Surprise_strArrActionPoints[1]))
+	{
+		Surprise_Spawn(Surprise_strArrActionPoints[1]);
+	};
+	if(Surprise_IsGoodPlaceForSpawn(Surprise_strArrActionPoints[2]))
+	{
+		Surprise_Spawn(Surprise_strArrActionPoints[2]);
+	};
+};
+func void Surprise_Refresh()
+{
+	//razblokiruet ActionPoint if SC podojdjet blizko k nej
+	if(
+		Npc_GetDistToWP(hero,Surprise_strArrActionPoints[0]) < 3000
+	&&	Surprise_ActionPoint_IsLocked(Surprise_strArrActionPoints[0])
+	)
+	{
+		Surprise_ActionPoint_SetLock(Surprise_strArrActionPoints[0],false);
+	};
+	if(
+		Npc_GetDistToWP(hero,Surprise_strArrActionPoints[1]) < 3000
+	&&	Surprise_ActionPoint_IsLocked(Surprise_strArrActionPoints[1])
+	)
+	{
+		Surprise_ActionPoint_SetLock(Surprise_strArrActionPoints[1],false);
+	};
+	if(
+		Npc_GetDistToWP(hero,Surprise_strArrActionPoints[2]) < 3000
+	&&	Surprise_ActionPoint_IsLocked(Surprise_strArrActionPoints[2])
+	)
+	{
+		Surprise_ActionPoint_SetLock(Surprise_strArrActionPoints[2],false);
+	};
+};
+func void akh_SurpriseSystem()
+{
+	if(!Hlp_Random(10))
+	{
+		Print("Spawn");
+//		Wld_SpawnNpcRange(hero,Dead_Wolf,1,100.0);
+		akh_SpawnSurprise();
+	};
+	Surprise_Refresh();
+};
+// //////////////////////
+// //////////////////////
+// //////////////////////
 func void akhrion_Loop(){
 	josefFight();
 	RingOfTemporalisPower_Handler();
 	akh_Regeneration();
 	akh_Buff();
-	Print("akhrion_Loop");
-	PrintI(Josef_OrcDogsFight_TimeOfTalk);
+//	akh_SurpriseSystem();
 //	return;
 //	Print("MAIN LOOP");
 //	akh_RescaleDamage(hero);
-
 	if(Npc_HasReadiedWeapon(hero))
 	{
 		var C_ITEM itm;
