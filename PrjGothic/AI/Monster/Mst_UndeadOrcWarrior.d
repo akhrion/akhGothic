@@ -1,7 +1,7 @@
 
 prototype Mst_Default_UndeadOrcWarrior(C_Npc)
 {
-	name[0] = "Страж храма";
+	name[0] = "РЎС‚СЂР°Р¶ С…СЂР°РјР°";
 	guild = GIL_UNDEADORC;
 	aivar[AIV_IMPORTANT] = ID_UNDEADORCWARRIOR;
 	level = 25;
@@ -46,7 +46,7 @@ instance UndeadOrcWarrior(Mst_Default_UndeadOrcWarrior)
 
 instance UndeadOWH(Mst_Default_UndeadOrcWarrior)
 {
-	name[0] = "Верховный страж храма";
+	name[0] = "Р’РµСЂС…РѕРІРЅС‹Р№ СЃС‚СЂР°Р¶ С…СЂР°РјР°";
 	level = 40;
 	attribute[ATR_STRENGTH] = 120;
 	protection[PROT_BLUNT] = 70;

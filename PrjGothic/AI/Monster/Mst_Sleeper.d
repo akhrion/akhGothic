@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Sleeper(C_Npc)
 {
-	name[0] = "Спящий";
+	name[0] = "РЎРїСЏС‰РёР№";
 	guild = GIL_SLF;
 	aivar[AIV_IMPORTANT] = ID_SLEEPER;
 	level = 2000;

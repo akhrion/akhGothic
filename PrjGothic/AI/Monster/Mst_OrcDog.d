@@ -1,9 +1,8 @@
 
 prototype Mst_Default_OrcDog(C_Npc)
 {
-	name[0] = "Орочья собака";
 	guild = GIL_ORCDOG;
-	aivar[AIV_IMPORTANT] = ID_BLACKWOLF;
+	aivar[AIV_IMPORTANT] = ID_ORCDOG;
 	level = 12;
 	attribute[ATR_STRENGTH] = 80;
 	attribute[ATR_DEXTERITY] = 80;
@@ -41,37 +40,48 @@ func void Set_OrcDog_Visuals()
 
 instance OrcDog(Mst_Default_OrcDog)
 {
+	name[0] = "РћСЂРѕС‡СЊСЏ СЃРѕР±Р°РєР°";
 	Set_OrcDog_Visuals();
 	Npc_SetToFistMode(self);
 };
 
 instance OrcDogAgressive1(Mst_Default_OrcDog)
 {
-	name[0] = "Молодой варг";
+	name[0] = "РњРѕР»РѕРґРѕР№ РІР°СЂРі";
 	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_HITPOINTS_MAX] = 460;
 	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
+	Mdl_SetModelScale(self,1.1,1.1,1.1);
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive2(Mst_Default_OrcDog)
 {
-	name[0] = "Молодой варг";
+	name[0] = "РњРѕР»РѕРґРѕР№ РІР°СЂРі";
 	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_HITPOINTS_MAX] = 460;
 	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
+	Mdl_SetModelScale(self,1.1,1.1,1.1);
 	Npc_SetToFistMode(self);
 };
 instance OrcDogAgressive3(Mst_Default_OrcDog)
 {
-	name[0] = "Молодой варг";
+	name[0] = "РњРѕР»РѕРґРѕР№ РІР°СЂРі";
 	flags = NPC_FLAG_IMMORTAL;
 	attribute[ATR_STRENGTH] = 60;
 	attribute[ATR_HITPOINTS_MAX] = 460;
 	attribute[ATR_HITPOINTS] = 460;
 	Set_OrcDog_Visuals();
+	Mdl_SetModelScale(self,1.1,1.1,1.1);
 	Npc_SetToFistMode(self);
+};
+instance OrcDog_Egg(Egg)
+{
+	name[0] = "РЇР№С†Рѕ РѕСЂРѕС‡СЊРµР№ СЃРѕР±Р°РєРё";
+	guild = GIL_ORCDOG;
+	spawnDelay = 1200;
+	start_aistate = B_MM_Respawn;
 };

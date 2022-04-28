@@ -1,7 +1,7 @@
 
 instance VLK_574_Mud(Npc_Default)
 {
-	name[0] = "Мад";
+	name[0] = "РњР°Рґ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 0;

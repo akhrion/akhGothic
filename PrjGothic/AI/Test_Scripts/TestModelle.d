@@ -1,7 +1,7 @@
 
 prototype Npc_TestDefault(C_Npc)
 {
-	name[0] = "Прототип";
+	name[0] = "РџСЂРѕС‚РѕС‚РёРї";
 	guild = GIL_None;
 	level = 1;
 	attribute[ATR_STRENGTH] = 5;
@@ -98,7 +98,7 @@ func void Rtn_start_3003()
 instance DTestmodell(Npc_TestDefault)
 {
 	name[0] = "DTestmodell";
-	slot = "Гуру";
+	slot = "Р“СѓСЂСѓ";
 	guild = GIL_GUR;
 	level = 6;
 	voice = 11;
@@ -144,7 +144,7 @@ func void Rtn_start_3004()
 instance FTestmodell(Npc_TestDefault)
 {
 	name[0] = "FTestmodell";
-	slot = "Стражник";
+	slot = "РЎС‚СЂР°Р¶РЅРёРє";
 	guild = GIL_GRD;
 	level = 5;
 	voice = 11;
@@ -401,11 +401,11 @@ func int TestInfo_001_07_700_Condition()
 
 func void TestInfo_001_07_700_Info()
 {
-	AI_Output(self,other,"Global_001_07_00");	//Эй, новичок!
-	AI_Output(self,other,"Global_001_07_01");	//Ну, если ты еще не понял...
-	AI_Output(self,other,"Global_001_07_02");	//Здесь, в колонии, есть три больших лагеря.
-	AI_Output(self,other,"Global_001_07_03");	//Старый лагерь, Новый лагерь и Лагерь сектантов.
-	AI_Output(self,other,"Global_001_07_05");	//Если не хочешь прислуживать Баронам в Старом лагере, приходи к нам.
+	AI_Output(self,other,"Global_001_07_00");	//Р­Р№, РЅРѕРІРёС‡РѕРє!
+	AI_Output(self,other,"Global_001_07_01");	//РќСѓ, РµСЃР»Рё С‚С‹ РµС‰Рµ РЅРµ РїРѕРЅСЏР»...
+	AI_Output(self,other,"Global_001_07_02");	//Р—РґРµСЃСЊ, РІ РєРѕР»РѕРЅРёРё, РµСЃС‚СЊ С‚СЂРё Р±РѕР»СЊС€РёС… Р»Р°РіРµСЂСЏ.
+	AI_Output(self,other,"Global_001_07_03");	//РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ, РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ Рё Р›Р°РіРµСЂСЊ СЃРµРєС‚Р°РЅС‚РѕРІ.
+	AI_Output(self,other,"Global_001_07_05");	//Р•СЃР»Рё РЅРµ С…РѕС‡РµС€СЊ РїСЂРёСЃР»СѓР¶РёРІР°С‚СЊ Р‘Р°СЂРѕРЅР°Рј РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ, РїСЂРёС…РѕРґРё Рє РЅР°Рј.
 };
 
 func void Rtn_start_GRD1_Testmodell()
@@ -430,7 +430,7 @@ func int GRD1_Testmodell_Trade_01_Func()
 {
 	if(GRD1_Testmodell_Trade_01.requested_amount == 1)
 	{
-		Print("Обмен удался.");
+		Print("РћР±РјРµРЅ СѓРґР°Р»СЃСЏ.");
 		return 1;
 	};
 	return 0;

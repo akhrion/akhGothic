@@ -10,7 +10,7 @@ func void B_AssessEnemy()
 			PrintDebugNpc(PD_ZS_FRAME,"...Feind ist Mensch!");
 			if(self.aivar[AIV_TALKBEFOREATTACK])
 			{
-				PrintDebugNpc(PD_ZS_Check,"...'letzte Nachricht' für den Feind!");
+				PrintDebugNpc(PD_ZS_Check,"...'letzte Nachricht' fÑŒr den Feind!");
 				if(B_CheckForImportantInfo(self,other))
 				{
 					return;

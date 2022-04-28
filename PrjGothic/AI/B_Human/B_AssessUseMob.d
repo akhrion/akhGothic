@@ -20,7 +20,7 @@ func void B_AssessUseMob()
 	{
 		if(Npc_IsDetectedMobOwnedByNpc(other,self) || Npc_IsDetectedMobOwnedByGuild(other,self.guild))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...MOB gehört NSC oder seiner Gilde!");
+			PrintDebugNpc(PD_ZS_Check,"...MOB gehÑ†rt NSC oder seiner Gilde!");
 			if((Npc_GetPermAttitude(self,other) == ATT_FRIENDLY) || (self.guild == other.guild))
 			{
 				PrintDebugNpc(PD_ZS_Check,"...Manipulator ist FRIENDLY oder in gleicher Gilde!");

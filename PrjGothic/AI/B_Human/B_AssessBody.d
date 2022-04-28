@@ -11,7 +11,7 @@ func void B_AssessBody()
 			self.guild < GIL_SEPERATOR_ORC
 		)
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Kцrper nдher als 10m!");
+			PrintDebugNpc(PD_ZS_Check,"...KС†rper nРґher als 10m!");
 			B_FullStop(self);
 			AI_StartState(self,ZS_AssessBody,0,"");
 		};
@@ -38,13 +38,13 @@ func void b_checkitems_orik()
 		B_Say(self,other,"$YouStoleFromMe");
 		if(Npc_HasItems(other,orik_key))
 		{
-			PrintScreen("Орик забрал свой ключ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("РћСЂРёРє Р·Р°Р±СЂР°Р» СЃРІРѕР№ РєР»СЋС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(other,orik_key);
 			CreateInvItem(self,orik_key);
 		};
 		if(Npc_HasItems(other,Oriks_Axt))
 		{
-			PrintScreen("Орик забрал свой топор.",-1,43,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("РћСЂРёРє Р·Р°Р±СЂР°Р» СЃРІРѕР№ С‚РѕРїРѕСЂ.",-1,43,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(other,Oriks_Axt);
 			CreateInvItem(self,Oriks_Axt);
 			AI_EquipBestMeleeWeapon(self);
@@ -64,12 +64,12 @@ func void b_checkitems_lord()
 		B_Say(self,other,"$YouStoleFromMe");
 		if(Npc_HasItems(other,ItKey_RB_01))
 		{
-			PrintScreen("Лорд забрал свой ключ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("Р›РѕСЂРґ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РєР»СЋС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(other,ItKey_RB_01);
 		};
 		if(Npc_HasItems(other,Heerscherstab))
 		{
-			PrintScreen("Лорд забрал свой посох.",-1,43,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("Р›РѕСЂРґ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РїРѕСЃРѕС….",-1,43,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(other,Heerscherstab);
 			CreateInvItem(self,Heerscherstab);
 			AI_EquipBestMeleeWeapon(self);
@@ -87,7 +87,7 @@ func void b_checkitems_cavalorn()
 	if(Npc_HasItems(other,ItKeCavalorn01))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Кавалорн забрал свой ключ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РљР°РІР°Р»РѕСЂРЅ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РєР»СЋС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,ItKeCavalorn01);
 		B_Plunder();
 	}
@@ -102,14 +102,14 @@ func void b_checkitems_whistler()
 	if(Npc_HasItems(other,Whistlers_Schwert))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Уистлер забрал свой меч.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЈРёСЃС‚Р»РµСЂ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РјРµС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,Whistlers_Schwert);
 		CreateInvItem(self,Whistlers_Schwert);
 		AI_EquipBestMeleeWeapon(self);
 		if((Whistler_BuyMySword == LOG_RUNNING) && (Kapitel == 1))
 		{
 			Whistler_BuyMySword = LOG_FAILED;
-			B_LogEntry(CH1_JoinOC,"Я все испортил. Уистлер рассержен на меня.");
+			B_LogEntry(CH1_JoinOC,"РЇ РІСЃРµ РёСЃРїРѕСЂС‚РёР». РЈРёСЃС‚Р»РµСЂ СЂР°СЃСЃРµСЂР¶РµРЅ РЅР° РјРµРЅСЏ.");
 		};
 		B_Plunder();
 	}
@@ -124,11 +124,11 @@ func void b_checkitems_aaron()
 	if(Npc_HasItems(other,ItKe_OM_02))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Аарон забрал свой ключ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РђР°СЂРѕРЅ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РєР»СЋС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,ItKe_OM_02);
 		CreateInvItem(self,ItKe_OM_02);
 		AARON_KEY_TAKEN = TRUE;
-		B_LogEntry(CH2_SnipesDeal,"Аарон забрал у меня свой ключ...");
+		B_LogEntry(CH2_SnipesDeal,"РђР°СЂРѕРЅ Р·Р°Р±СЂР°Р» Сѓ РјРµРЅСЏ СЃРІРѕР№ РєР»СЋС‡...");
 		Log_SetTopicStatus(CH2_SnipesDeal,LOG_FAILED);
 		B_Plunder();
 	}
@@ -143,7 +143,7 @@ func void b_checkitems_ulbert()
 	if(Npc_HasItems(other,ItKe_OM_03))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Ульберт забрал ключ от склада.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЈР»СЊР±РµСЂС‚ Р·Р°Р±СЂР°Р» РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,ItKe_OM_03);
 		CreateInvItem(self,ItKe_OM_03);
 		B_Plunder();
@@ -159,7 +159,7 @@ func void b_checkitems_bartholo()
 	if(Npc_HasItems(other,ItKe_Storage_01))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Бартоло забрал ключ от склада.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("Р‘Р°СЂС‚РѕР»Рѕ Р·Р°Р±СЂР°Р» РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,ItKe_Storage_01);
 		if(!Npc_HasItems(self,ItKe_Storage_01))
 		{
@@ -178,7 +178,7 @@ func void b_checkitems_grd279()
 	if(Npc_HasItems(other,itke_weaponry))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Стражник забрал ключ от оружейной.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЎС‚СЂР°Р¶РЅРёРє Р·Р°Р±СЂР°Р» РєР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,itke_weaponry);
 		CreateInvItem(self,itke_weaponry);
 		B_Plunder();
@@ -194,7 +194,7 @@ func void b_checkitems_scar()
 	if(Npc_HasItems(other,Scars_Schwert))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Шрам забрал свой меч.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЁСЂР°Рј Р·Р°Р±СЂР°Р» СЃРІРѕР№ РјРµС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,Scars_Schwert);
 		CreateInvItem(self,Scars_Schwert);
 		AI_EquipBestMeleeWeapon(self);
@@ -211,7 +211,7 @@ func void b_checkitems_arto()
 	if(Npc_HasItems(other,Artos_Schwert))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Арто забрал свой меч.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РђСЂС‚Рѕ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РјРµС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,Artos_Schwert);
 		CreateInvItem(self,Artos_Schwert);
 		AI_EquipBestMeleeWeapon(self);
@@ -228,7 +228,7 @@ func void b_checkitems_stone()
 	if(Npc_HasItems(other,itkey_ob_smith_01))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Стоун забрал железный ключ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЎС‚РѕСѓРЅ Р·Р°Р±СЂР°Р» Р¶РµР»РµР·РЅС‹Р№ РєР»СЋС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,itkey_ob_smith_01);
 		CreateInvItem(self,itkey_ob_smith_01);
 		B_Plunder();
@@ -244,7 +244,7 @@ func void b_checkitems_kalom()
 	if(Npc_HasItems(other,KalomsRecipe))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Кор Галом забрал свой рецепт.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РљРѕСЂ Р“Р°Р»РѕРј Р·Р°Р±СЂР°Р» СЃРІРѕР№ СЂРµС†РµРїС‚.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,KalomsRecipe);
 		CreateInvItem(self,KalomsRecipe);
 		B_Plunder();
@@ -260,7 +260,7 @@ func void b_checkitems_torlof()
 	if(Npc_HasItems(other,Torlofs_Axt))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Торлоф забрал свой топор.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РўРѕСЂР»РѕС„ Р·Р°Р±СЂР°Р» СЃРІРѕР№ С‚РѕРїРѕСЂ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,Torlofs_Axt);
 		CreateInvItem(self,Torlofs_Axt);
 		AI_EquipBestMeleeWeapon(self);
@@ -277,7 +277,7 @@ func void b_checkitems_cord()
 	if(Npc_HasItems(other,Cords_Spalter))
 	{
 		B_Say(self,other,"$YouStoleFromMe");
-		PrintScreen("Корд забрал свой меч.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РљРѕСЂРґ Р·Р°Р±СЂР°Р» СЃРІРѕР№ РјРµС‡.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 		Npc_RemoveInvItem(other,Cords_Spalter);
 		CreateInvItem(self,Cords_Spalter);
 		AI_EquipBestMeleeWeapon(self);
@@ -304,12 +304,12 @@ func void ZS_AssessBody()
 	Npc_PercEnable(self,PERC_ASSESSTALK,B_RefuseTalk);
 	if(other.aivar[AIV_PLUNDERED] == TRUE)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Kцrper bereits geplьndert!");
+		PrintDebugNpc(PD_ZS_Check,"...KС†rper bereits geplСЊndert!");
 		AI_ContinueRoutine(self);
 	};
 	if(Npc_GetDistToNpc(self,other) > PERC_DIST_INTERMEDIAT)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Kцrper zu weit weg!");
+		PrintDebugNpc(PD_ZS_Check,"...KС†rper zu weit weg!");
 		AI_ContinueRoutine(self);
 	};
 };
@@ -334,7 +334,7 @@ func void ZS_AssessBody_End()
 	{
 		if(Npc_HasItems(hero,ItWr_Fire_Letter_01))
 		{
-			PrintScreen("Отобрано запечатанное письмо.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("РћС‚РѕР±СЂР°РЅРѕ Р·Р°РїРµС‡Р°С‚Р°РЅРЅРѕРµ РїРёСЃСЊРјРѕ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(hero,ItWr_Fire_Letter_01);
 			if(B_Plunder())
 			{
@@ -352,7 +352,7 @@ func void ZS_AssessBody_End()
 			CreateInvItems(self,ItMiNugget,120);
 			if(PYROCAR_MESSENGER == LOG_RUNNING)
 			{
-				B_LogEntry(KDFLETTER,"У меня украли письмо! Не стоило болтать о нем кому попало...");
+				B_LogEntry(KDFLETTER,"РЈ РјРµРЅСЏ СѓРєСЂР°Р»Рё РїРёСЃСЊРјРѕ! РќРµ СЃС‚РѕРёР»Рѕ Р±РѕР»С‚Р°С‚СЊ Рѕ РЅРµРј РєРѕРјСѓ РїРѕРїР°Р»Рѕ...");
 				Log_SetTopicStatus(KDFLETTER,LOG_FAILED);
 				PYROCAR_MESSENGER = LOG_FAILED;
 			};
@@ -360,7 +360,7 @@ func void ZS_AssessBody_End()
 		}
 		else if(Npc_HasItems(hero,ItWr_Fire_Letter_02))
 		{
-			PrintScreen("Отобрано письмо.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("РћС‚РѕР±СЂР°РЅРѕ РїРёСЃСЊРјРѕ.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 			Npc_RemoveInvItem(hero,ItWr_Fire_Letter_02);
 			if(B_Plunder())
 			{
@@ -378,7 +378,7 @@ func void ZS_AssessBody_End()
 			CreateInvItems(self,ItMiNugget,30);
 			if(PYROCAR_MESSENGER == LOG_RUNNING)
 			{
-				B_LogEntry(KDFLETTER,"У меня украли письмо! Не стоило болтать о нем кому попало...");
+				B_LogEntry(KDFLETTER,"РЈ РјРµРЅСЏ СѓРєСЂР°Р»Рё РїРёСЃСЊРјРѕ! РќРµ СЃС‚РѕРёР»Рѕ Р±РѕР»С‚Р°С‚СЊ Рѕ РЅРµРј РєРѕРјСѓ РїРѕРїР°Р»Рѕ...");
 				Log_SetTopicStatus(KDFLETTER,LOG_FAILED);
 				PYROCAR_MESSENGER = LOG_FAILED;
 			};
@@ -400,10 +400,10 @@ func void ZS_AssessBody_End()
 		{
 			CreateInvItem(self,ItMi_Amulet_Psi_01);
 			Npc_RemoveInvItem(other,ItMi_Amulet_Psi_01);
-			PrintScreen("Отобран амулет Братства.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("РћС‚РѕР±СЂР°РЅ Р°РјСѓР»РµС‚ Р‘СЂР°С‚СЃС‚РІР°.",-1,40,"FONT_OLD_10_WHITE.TGA",3);
 			if(Npc_KnowsInfo(other,quentin_dia2) && !Npc_KnowsInfo(other,quentin_dia3) && (QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING) && !Npc_IsDead(other))
 			{
-				B_LogEntry(QUENTIN_GANG,"Отморозки около Нового лагеря отобрали у меня амулет Братства! Мне нужно вернуть его, если я хочу завершить задание Квентина.");
+				B_LogEntry(QUENTIN_GANG,"РћС‚РјРѕСЂРѕР·РєРё РѕРєРѕР»Рѕ РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ РѕС‚РѕР±СЂР°Р»Рё Сѓ РјРµРЅСЏ Р°РјСѓР»РµС‚ Р‘СЂР°С‚СЃС‚РІР°! РњРЅРµ РЅСѓР¶РЅРѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ, РµСЃР»Рё СЏ С…РѕС‡Сѓ Р·Р°РІРµСЂС€РёС‚СЊ Р·Р°РґР°РЅРёРµ РљРІРµРЅС‚РёРЅР°.");
 			};
 		};
 		GOPSTOPPED_BRIDGE = FALSE;
@@ -471,7 +471,7 @@ func void ZS_AssessBody_End()
 	}
 	else if((self.fight_tactic != FAI_HUMAN_RANGED) && (self.npcType != npctype_friend) && C_NpcIsHuman(self))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...kein purer Fernkдmpfer und kein NSC-Freund!");
+		PrintDebugNpc(PD_ZS_Check,"...kein purer FernkРґmpfer und kein NSC-Freund!");
 		b_sayplunder();
 	};
 	AI_StartState(self,ZS_AssessBody_RecoverWeapon,1,"");

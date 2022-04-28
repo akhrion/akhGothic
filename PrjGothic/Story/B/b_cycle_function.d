@@ -31,8 +31,8 @@ func void b_cycle_function()
 	};
 	if((RUSSOBITMFIXV13 == FALSE) && Npc_KnowsInfo(hero,Info_Diego_Gamestart))
 	{
-		PrintScreen("Загруженное сохранение не поддерживается!",50,43,"font_old_10_white.tga",2);
-		PrintScreen("Пожалуйста, начните новую игру.",50,40,"font_old_10_white.tga",2);
+		PrintScreen("Р—Р°РіСЂСѓР¶РµРЅРЅРѕРµ СЃРѕС…СЂР°РЅРµРЅРёРµ РЅРµ РїРѕРґРґРµСЂР¶РёРІР°РµС‚СЃСЏ!",50,43,"font_old_10_white.tga",2);
+		PrintScreen("РџРѕР¶Р°Р»СѓР№СЃС‚Р°, РЅР°С‡РЅРёС‚Рµ РЅРѕРІСѓСЋ РёРіСЂСѓ.",50,40,"font_old_10_white.tga",2);
 	};
 	if(RIDDLE1INSERT == TRUE)
 	{

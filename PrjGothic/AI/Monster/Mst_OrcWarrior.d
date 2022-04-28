@@ -1,7 +1,7 @@
 
 prototype Mst_Default_OrcWarrior(C_Npc)
 {
-	name[0] = "Орк-солдат";
+	name[0] = "РћСЂРє-СЃРѕР»РґР°С‚";
 	guild = GIL_ORCWARRIOR;
 	npcType = npctype_guard;
 	voice = 17;
@@ -41,7 +41,7 @@ func void Set_OrcWarrior_Visuals()
 
 instance OrcWarrior1(Mst_Default_OrcWarrior)
 {
-	name[0] = "Орк-боец";
+	name[0] = "РћСЂРє-Р±РѕРµС†";
 	level = 25;
 	Set_OrcWarrior_Visuals();
 	attribute[ATR_STRENGTH] = 55;
@@ -56,7 +56,7 @@ instance OrcWarrior1(Mst_Default_OrcWarrior)
 
 instance OrcWarrior2(Mst_Default_OrcWarrior)
 {
-	name[0] = "Орк-солдат";
+	name[0] = "РћСЂРє-СЃРѕР»РґР°С‚";
 	level = 30;
 	Set_OrcWarrior_Visuals();
 	attribute[ATR_STRENGTH] = 60;
@@ -71,7 +71,7 @@ instance OrcWarrior2(Mst_Default_OrcWarrior)
 
 instance OrcWarrior3(Mst_Default_OrcWarrior)
 {
-	name[0] = "Орк-воин клана";
+	name[0] = "РћСЂРє-РІРѕРёРЅ РєР»Р°РЅР°";
 	level = 35;
 	Set_OrcWarrior_Visuals();
 	attribute[ATR_STRENGTH] = 65;
@@ -86,7 +86,7 @@ instance OrcWarrior3(Mst_Default_OrcWarrior)
 
 instance OrcWarrior4(Mst_Default_OrcWarrior)
 {
-	name[0] = "Орк-страж";
+	name[0] = "РћСЂРє-СЃС‚СЂР°Р¶";
 	level = 40;
 	Set_OrcWarrior_Visuals();
 	attribute[ATR_STRENGTH] = 75;

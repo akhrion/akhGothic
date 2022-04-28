@@ -56,7 +56,7 @@ instance KDW_604_Cronos_Brief(C_Info)
 	condition = KDW_604_Cronos_Brief_Condition;
 	information = KDW_604_Cronos_Brief_Info;
 	permanent = 0;
-	description = "Ó ìåíÿ åñòü ïîñëàíèå ê Âåðõîâíîìó Ìàãó Êðóãà Îãíÿ.";
+	description = "Ð£ Ð¼ÐµÐ½Ñ ÐµÑÑ‚ÑŒ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ Ðº Ð’ÐµÑ€Ñ…Ð¾Ð²Ð½Ð¾Ð¼Ñƒ ÐœÐ°Ð³Ñƒ ÐšÑ€ÑƒÐ³Ð° ÐžÐ³Ð½Ñ.";
 };
 
 
@@ -70,11 +70,11 @@ func int KDW_604_Cronos_Brief_Condition()
 
 func void KDW_604_Cronos_Brief_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_Brief_15_00");	//Ó ìåíÿ åñòü ïîñëàíèå ê Âåðõîâíîìó Ìàãó Êðóãà Îãíÿ.
-	AI_Output(self,other,"DIA_Cronos_Brief_08_01");	//Çäåñü æèâóò òîëüêî ìàãè Êðóãà Âîäû. Ìàãîâ Êðóãà Îãíÿ ìîæíî íàéòè â Ñòàðîì ëàãåðå.
-	AI_Output(other,self,"DIA_Cronos_Brief_15_02");	//Íî ìíå íåëüçÿ â çàìîê. Òû ìîæåøü ïîìî÷ü ìíå ïîïàñòü òóäà?
-	AI_Output(self,other,"DIA_Cronos_Brief_08_03");	//Èíîãäà ìû ïîñûëàåì ãîíöîâ ê íàøèì áðàòüÿì â Ñòàðîì ëàãåðå...
-	AI_Output(self,other,"DIA_Cronos_Brief_08_04");	//Íî ìû äîâåðÿåì ñâîè ïîñëàíèÿ òîëüêî ëþäÿì Ëàðñà. Îí çàáîòèòñÿ î ñîõðàííîñòè íàøèõ ïîñëàíèé â òå÷åíèå ìíîãèõ ëåò.
+	AI_Output(other,self,"DIA_Cronos_Brief_15_00");	//Ð£ Ð¼ÐµÐ½Ñ ÐµÑÑ‚ÑŒ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ Ðº Ð’ÐµÑ€Ñ…Ð¾Ð²Ð½Ð¾Ð¼Ñƒ ÐœÐ°Ð³Ñƒ ÐšÑ€ÑƒÐ³Ð° ÐžÐ³Ð½Ñ.
+	AI_Output(self,other,"DIA_Cronos_Brief_08_01");	//Ð—Ð´ÐµÑÑŒ Ð¶Ð¸Ð²ÑƒÑ‚ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¼Ð°Ð³Ð¸ ÐšÑ€ÑƒÐ³Ð° Ð’Ð¾Ð´Ñ‹. ÐœÐ°Ð³Ð¾Ð² ÐšÑ€ÑƒÐ³Ð° ÐžÐ³Ð½Ñ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸ Ð² Ð¡Ñ‚Ð°Ñ€Ð¾Ð¼ Ð»Ð°Ð³ÐµÑ€Ðµ.
+	AI_Output(other,self,"DIA_Cronos_Brief_15_02");	//ÐÐ¾ Ð¼Ð½Ðµ Ð½ÐµÐ»ÑŒÐ·Ñ Ð² Ð·Ð°Ð¼Ð¾Ðº. Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ð¼Ð½Ðµ Ð¿Ð¾Ð¿Ð°ÑÑ‚ÑŒ Ñ‚ÑƒÐ´Ð°?
+	AI_Output(self,other,"DIA_Cronos_Brief_08_03");	//Ð˜Ð½Ð¾Ð³Ð´Ð° Ð¼Ñ‹ Ð¿Ð¾ÑÑ‹Ð»Ð°ÐµÐ¼ Ð³Ð¾Ð½Ñ†Ð¾Ð² Ðº Ð½Ð°ÑˆÐ¸Ð¼ Ð±Ñ€Ð°Ñ‚ÑŒÑÐ¼ Ð² Ð¡Ñ‚Ð°Ñ€Ð¾Ð¼ Ð»Ð°Ð³ÐµÑ€Ðµ...
+	AI_Output(self,other,"DIA_Cronos_Brief_08_04");	//ÐÐ¾ Ð¼Ñ‹ Ð´Ð¾Ð²ÐµÑ€ÑÐµÐ¼ ÑÐ²Ð¾Ð¸ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ñ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð»ÑŽÐ´ÑÐ¼ Ð›Ð°Ñ€ÑÐ°. ÐžÐ½ Ð·Ð°Ð±Ð¾Ñ‚Ð¸Ñ‚ÑÑ Ð¾ ÑÐ¾Ñ…Ñ€Ð°Ð½Ð½Ð¾ÑÑ‚Ð¸ Ð½Ð°ÑˆÐ¸Ñ… Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ð¹ Ð² Ñ‚ÐµÑ‡ÐµÐ½Ð¸Ðµ Ð¼Ð½Ð¾Ð³Ð¸Ñ… Ð»ÐµÑ‚.
 };
 
 
@@ -85,7 +85,7 @@ instance KDW_604_Cronos_Barrier(C_Info)
 	condition = KDW_604_Cronos_Barrier_Condition;
 	information = KDW_604_Cronos_Barrier_Info;
 	permanent = 0;
-	description = "Âû õîòèòå ðàçðóøèòü Áàðüåð? À êàê ýòî ìîæíî ñäåëàòü?";
+	description = "Ð’Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ñ€ÑƒÑˆÐ¸Ñ‚ÑŒ Ð‘Ð°Ñ€ÑŒÐµÑ€? Ð ÐºÐ°Ðº ÑÑ‚Ð¾ Ð¼Ð¾Ð¶Ð½Ð¾ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ?";
 };
 
 
@@ -99,11 +99,11 @@ func int KDW_604_Cronos_Barrier_Condition()
 
 func void KDW_604_Cronos_Barrier_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_Barrier_15_00");	//Âû õîòèòå ðàçðóøèòü Áàðüåð? À êàê ýòî ìîæíî ñäåëàòü?
-	AI_Output(self,other,"DIA_Cronos_Barrier_08_01");	//Äëÿ ýòîãî íàì íóæíî î÷åíü ìíîãî ðóäû.
-	AI_Output(self,other,"DIA_Cronos_Barrier_08_02");	//Âî âðåìÿ îñîáîé öåðåìîíèè ìû íàïðàâèì âñþ ñèëó ñîáðàííîé ðóäû íà Áàðüåð è óíè÷òîæèì åãî.
-	AI_Output(self,other,"DIA_Cronos_Barrier_08_03");	//Êîíå÷íî, ýòà ðóäà ïðèâëåêàåò ìíîãèõ, êòî ëþáèò áðàòü âñå, ÷òî ïëîõî ëåæèò.
-	AI_Output(self,other,"DIA_Cronos_Barrier_08_04");	//Ïîýòîìó ó íàñ êàæäûé çàùèòíèê íàøåãî ïëàíà íà ñ÷åòó.
+	AI_Output(other,self,"DIA_Cronos_Barrier_15_00");	//Ð’Ñ‹ Ñ…Ð¾Ñ‚Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ñ€ÑƒÑˆÐ¸Ñ‚ÑŒ Ð‘Ð°Ñ€ÑŒÐµÑ€? Ð ÐºÐ°Ðº ÑÑ‚Ð¾ Ð¼Ð¾Ð¶Ð½Ð¾ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ?
+	AI_Output(self,other,"DIA_Cronos_Barrier_08_01");	//Ð”Ð»Ñ ÑÑ‚Ð¾Ð³Ð¾ Ð½Ð°Ð¼ Ð½ÑƒÐ¶Ð½Ð¾ Ð¾Ñ‡ÐµÐ½ÑŒ Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+	AI_Output(self,other,"DIA_Cronos_Barrier_08_02");	//Ð’Ð¾ Ð²Ñ€ÐµÐ¼Ñ Ð¾ÑÐ¾Ð±Ð¾Ð¹ Ñ†ÐµÑ€ÐµÐ¼Ð¾Ð½Ð¸Ð¸ Ð¼Ñ‹ Ð½Ð°Ð¿Ñ€Ð°Ð²Ð¸Ð¼ Ð²ÑÑŽ ÑÐ¸Ð»Ñƒ ÑÐ¾Ð±Ñ€Ð°Ð½Ð½Ð¾Ð¹ Ñ€ÑƒÐ´Ñ‹ Ð½Ð° Ð‘Ð°Ñ€ÑŒÐµÑ€ Ð¸ ÑƒÐ½Ð¸Ñ‡Ñ‚Ð¾Ð¶Ð¸Ð¼ ÐµÐ³Ð¾.
+	AI_Output(self,other,"DIA_Cronos_Barrier_08_03");	//ÐšÐ¾Ð½ÐµÑ‡Ð½Ð¾, ÑÑ‚Ð° Ñ€ÑƒÐ´Ð° Ð¿Ñ€Ð¸Ð²Ð»ÐµÐºÐ°ÐµÑ‚ Ð¼Ð½Ð¾Ð³Ð¸Ñ…, ÐºÑ‚Ð¾ Ð»ÑŽÐ±Ð¸Ñ‚ Ð±Ñ€Ð°Ñ‚ÑŒ Ð²ÑÐµ, Ñ‡Ñ‚Ð¾ Ð¿Ð»Ð¾Ñ…Ð¾ Ð»ÐµÐ¶Ð¸Ñ‚.
+	AI_Output(self,other,"DIA_Cronos_Barrier_08_04");	//ÐŸÐ¾ÑÑ‚Ð¾Ð¼Ñƒ Ñƒ Ð½Ð°Ñ ÐºÐ°Ð¶Ð´Ñ‹Ð¹ Ð·Ð°Ñ‰Ð¸Ñ‚Ð½Ð¸Ðº Ð½Ð°ÑˆÐµÐ³Ð¾ Ð¿Ð»Ð°Ð½Ð° Ð½Ð° ÑÑ‡ÐµÑ‚Ñƒ.
 };
 
 
@@ -114,7 +114,7 @@ instance KDW_604_Cronos_WannaJoin(C_Info)
 	condition = KDW_604_Cronos_WannaJoin_Condition;
 	information = KDW_604_Cronos_WannaJoin_Info;
 	permanent = 0;
-	description = "ß õî÷ó ïðèñîåäèíèòüñÿ ê ýòîìó ëàãåðþ.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº ÑÑ‚Ð¾Ð¼Ñƒ Ð»Ð°Ð³ÐµÑ€ÑŽ.";
 };
 
 
@@ -128,8 +128,8 @@ func int KDW_604_Cronos_WannaJoin_Condition()
 
 func void KDW_604_Cronos_WannaJoin_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_WannaJoin_15_00");	//ß õî÷ó ïðèñîåäèíèòüñÿ ê ýòîìó ëàãåðþ.
-	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01");	//Åñëè òû õî÷åøü ïðèñîåäèíèòüñÿ ê ýòîìó ëàãåðþ, ïîãîâîðè ñ Ëè èëè ñ Ëàðñîì.
+	AI_Output(other,self,"DIA_Cronos_WannaJoin_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº ÑÑ‚Ð¾Ð¼Ñƒ Ð»Ð°Ð³ÐµÑ€ÑŽ.
+	AI_Output(self,other,"DIA_Cronos_WannaJoin_08_01");	//Ð•ÑÐ»Ð¸ Ñ‚Ñ‹ Ñ…Ð¾Ñ‡ÐµÑˆÑŒ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº ÑÑ‚Ð¾Ð¼Ñƒ Ð»Ð°Ð³ÐµÑ€ÑŽ, Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸ Ñ Ð›Ð¸ Ð¸Ð»Ð¸ Ñ Ð›Ð°Ñ€ÑÐ¾Ð¼.
 };
 
 
@@ -140,7 +140,7 @@ instance KDW_604_Cronos_WannaMage(C_Info)
 	condition = KDW_604_Cronos_WannaMage_Condition;
 	information = KDW_604_Cronos_WannaMage_Info;
 	permanent = 0;
-	description = "ß õî÷ó ñòàòü ìàãîì!";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð¼!";
 };
 
 
@@ -154,9 +154,9 @@ func int KDW_604_Cronos_WannaMage_Condition()
 
 func void KDW_604_Cronos_WannaMage_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_WannaMage_15_00");	//ß õî÷ó ñòàòü ìàãîì!
-	AI_Output(self,other,"DIA_Cronos_WannaMage_08_01");	//Ìû íå ìîæåì ðàñêðûâàòü íàøå òàéíîå çíàíèå ñâîèì âðàãàì.
-	AI_Output(self,other,"DIA_Cronos_WannaMage_08_02");	//Òîëüêî êîãäà òû äîêàæåøü íàì, ÷òî òû âåðåí íàøåìó äåëó, ìû ñìîæåì ïðèñòóïèòü ê òâîåìó îáó÷åíèþ.
+	AI_Output(other,self,"DIA_Cronos_WannaMage_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð¼!
+	AI_Output(self,other,"DIA_Cronos_WannaMage_08_01");	//ÐœÑ‹ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÐ¼ Ñ€Ð°ÑÐºÑ€Ñ‹Ð²Ð°Ñ‚ÑŒ Ð½Ð°ÑˆÐµ Ñ‚Ð°Ð¹Ð½Ð¾Ðµ Ð·Ð½Ð°Ð½Ð¸Ðµ ÑÐ²Ð¾Ð¸Ð¼ Ð²Ñ€Ð°Ð³Ð°Ð¼.
+	AI_Output(self,other,"DIA_Cronos_WannaMage_08_02");	//Ð¢Ð¾Ð»ÑŒÐºÐ¾ ÐºÐ¾Ð³Ð´Ð° Ñ‚Ñ‹ Ð´Ð¾ÐºÐ°Ð¶ÐµÑˆÑŒ Ð½Ð°Ð¼, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð²ÐµÑ€ÐµÐ½ Ð½Ð°ÑˆÐµÐ¼Ñƒ Ð´ÐµÐ»Ñƒ, Ð¼Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÐ¼ Ð¿Ñ€Ð¸ÑÑ‚ÑƒÐ¿Ð¸Ñ‚ÑŒ Ðº Ñ‚Ð²Ð¾ÐµÐ¼Ñƒ Ð¾Ð±ÑƒÑ‡ÐµÐ½Ð¸ÑŽ.
 };
 
 
@@ -167,7 +167,7 @@ instance KDW_604_Cronos_Bandit(C_Info)
 	condition = KDW_604_Cronos_Bandit_Condition;
 	information = KDW_604_Cronos_Bandit_Info;
 	permanent = 0;
-	description = "ß ñòàë îäíèì èç ëþäåé Ëàðñà... Ó òåáÿ åñòü äëÿ ìåíÿ ÷òî-íèáóäü?";
+	description = "Ð¯ ÑÑ‚Ð°Ð» Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð»ÑŽÐ´ÐµÐ¹ Ð›Ð°Ñ€ÑÐ°... Ð£ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ñ‡Ñ‚Ð¾-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?";
 };
 
 
@@ -181,15 +181,15 @@ func int KDW_604_Cronos_Bandit_Condition()
 
 func void KDW_604_Cronos_Bandit_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_Bandit_15_00");	//ß ñòàë îäíèì èç ëþäåé Ëàðñà. Òåïåðü ÿ ìîãó íîñèòü ïîñëàíèÿ ìàãàì Îãíÿ. Ó òåáÿ åñòü äëÿ ìåíÿ ÷òî-íèáóäü?
-	AI_Output(self,other,"DIA_Cronos_Bandit_08_01");	//Äà, åñòü. Íî òåáå íóæåí çíàê íàøåãî ïîñëàííèêà, èíà÷å ëþäè Ãîìåçà íå ïðîïóñòÿò òåáÿ â çàìîê.
-	AI_Output(self,other,"DIA_Cronos_Bandit_08_02");	//Âîò, âîçüìè ýòî ïèñüìî è çíàê. À òåïåðü òåáå íóæíî ñïåøèòü!
+	AI_Output(other,self,"DIA_Cronos_Bandit_15_00");	//Ð¯ ÑÑ‚Ð°Ð» Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð»ÑŽÐ´ÐµÐ¹ Ð›Ð°Ñ€ÑÐ°. Ð¢ÐµÐ¿ÐµÑ€ÑŒ Ñ Ð¼Ð¾Ð³Ñƒ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ñ Ð¼Ð°Ð³Ð°Ð¼ ÐžÐ³Ð½Ñ. Ð£ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ñ‡Ñ‚Ð¾-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?
+	AI_Output(self,other,"DIA_Cronos_Bandit_08_01");	//Ð”Ð°, ÐµÑÑ‚ÑŒ. ÐÐ¾ Ñ‚ÐµÐ±Ðµ Ð½ÑƒÐ¶ÐµÐ½ Ð·Ð½Ð°Ðº Ð½Ð°ÑˆÐµÐ³Ð¾ Ð¿Ð¾ÑÐ»Ð°Ð½Ð½Ð¸ÐºÐ°, Ð¸Ð½Ð°Ñ‡Ðµ Ð»ÑŽÐ´Ð¸ Ð“Ð¾Ð¼ÐµÐ·Ð° Ð½Ðµ Ð¿Ñ€Ð¾Ð¿ÑƒÑÑ‚ÑÑ‚ Ñ‚ÐµÐ±Ñ Ð² Ð·Ð°Ð¼Ð¾Ðº.
+	AI_Output(self,other,"DIA_Cronos_Bandit_08_02");	//Ð’Ð¾Ñ‚, Ð²Ð¾Ð·ÑŒÐ¼Ð¸ ÑÑ‚Ð¾ Ð¿Ð¸ÑÑŒÐ¼Ð¾ Ð¸ Ð·Ð½Ð°Ðº. Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ñ‚ÐµÐ±Ðµ Ð½ÑƒÐ¶Ð½Ð¾ ÑÐ¿ÐµÑˆÐ¸Ñ‚ÑŒ!
 	CreateInvItem(other,KdW_Amulett);
 	CreateInvItem(other,Cronos_Brief);
 	Cronos_Messenger = LOG_RUNNING;
 	Log_CreateTopic(KDWLETTER,LOG_MISSION);
 	Log_SetTopicStatus(KDWLETTER,LOG_RUNNING);
-	B_LogEntry(KDWLETTER,"Êðîíîñ äîâåðèë ìíå âàæíîå ïîñëàíèå, êîòîðîå ÿ äîëæåí îòíåñòè ìàãàì Îãíÿ â Ñòàðûé ëàãåðü.");
+	B_LogEntry(KDWLETTER,"ÐšÑ€Ð¾Ð½Ð¾Ñ Ð´Ð¾Ð²ÐµÑ€Ð¸Ð» Ð¼Ð½Ðµ Ð²Ð°Ð¶Ð½Ð¾Ðµ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ñ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¾Ñ‚Ð½ÐµÑÑ‚Ð¸ Ð¼Ð°Ð³Ð°Ð¼ ÐžÐ³Ð½Ñ Ð² Ð¡Ñ‚Ð°Ñ€Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ.");
 };
 
 
@@ -200,7 +200,7 @@ instance KDW_604_Cronos_BriefBack(C_Info)
 	condition = KDW_604_Cronos_BriefBack_Condition;
 	information = KDW_604_Cronos_BriefBack_Info;
 	permanent = 0;
-	description = "ß ïåðåäàë ïîñëàíèå!";
+	description = "Ð¯ Ð¿ÐµÑ€ÐµÐ´Ð°Ð» Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ!";
 };
 
 
@@ -214,14 +214,14 @@ func int KDW_604_Cronos_BriefBack_Condition()
 
 func void KDW_604_Cronos_BriefBack_Info()
 {
-	AI_Output(other,self,"DIA_Cronos_BriefBack_15_00");	//ß ïåðåäàë ïîñëàíèå!
-	AI_Output(self,other,"DIA_Cronos_BriefBack_08_01");	//À, õîðîøî! Âîçüìè ýòî â íàãðàäó çà òâîè òðóäû...
-	b_printtrademsg1("Ïîëó÷åíî ðóäû: 200");
+	AI_Output(other,self,"DIA_Cronos_BriefBack_15_00");	//Ð¯ Ð¿ÐµÑ€ÐµÐ´Ð°Ð» Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ!
+	AI_Output(self,other,"DIA_Cronos_BriefBack_08_01");	//Ð, Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾! Ð’Ð¾Ð·ÑŒÐ¼Ð¸ ÑÑ‚Ð¾ Ð² Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ Ð·Ð° Ñ‚Ð²Ð¾Ð¸ Ñ‚Ñ€ÑƒÐ´Ñ‹...
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ Ñ€ÑƒÐ´Ñ‹: 200");
 	Cronos_Messenger = LOG_SUCCESS;
 	CreateInvItems(hero,ItMiNugget,200);
 	B_GiveXP(XP_CronosLetter);
 	Log_SetTopicStatus(KDWLETTER,LOG_SUCCESS);
-	B_LogEntry(KDWLETTER,"Ìàãè Âîäû äîâîëüíû ìîåé óñëóãîé.");
+	B_LogEntry(KDWLETTER,"ÐœÐ°Ð³Ð¸ Ð’Ð¾Ð´Ñ‹ Ð´Ð¾Ð²Ð¾Ð»ÑŒÐ½Ñ‹ Ð¼Ð¾ÐµÐ¹ ÑƒÑÐ»ÑƒÐ³Ð¾Ð¹.");
 };
 
 
@@ -232,7 +232,7 @@ instance Info_Cronos_NEWS(C_Info)
 	information = Info_Cronos_NEWS_Info;
 	permanent = 0;
 	important = 0;
-	description = "ß õî÷ó ñîîáùèòü Ñàòóðàñó íå÷òî âàæíîå.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÐ¾Ð¾Ð±Ñ‰Ð¸Ñ‚ÑŒ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÑƒ Ð½ÐµÑ‡Ñ‚Ð¾ Ð²Ð°Ð¶Ð½Ð¾Ðµ.";
 };
 
 
@@ -246,8 +246,8 @@ func int Info_Cronos_NEWS_Condition()
 
 func void Info_Cronos_NEWS_Info()
 {
-	AI_Output(other,self,"Info_Cronos_NEWS_15_01");	//ß õî÷ó ñîîáùèòü Ñàòóðàñó íå÷òî âàæíîå.
-	AI_Output(self,other,"Info_Cronos_NEWS_08_02");	//Ðàçâå ýòî ïîñëàíèå òàê âàæíî, ÷òîáû îòâëåêàòü íàøåãî äóõîâíîãî ëèäåðà îò åãî âàæíîé ðàáîòû?
+	AI_Output(other,self,"Info_Cronos_NEWS_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÐ¾Ð¾Ð±Ñ‰Ð¸Ñ‚ÑŒ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÑƒ Ð½ÐµÑ‡Ñ‚Ð¾ Ð²Ð°Ð¶Ð½Ð¾Ðµ.
+	AI_Output(self,other,"Info_Cronos_NEWS_08_02");	//Ð Ð°Ð·Ð²Ðµ ÑÑ‚Ð¾ Ð¿Ð¾ÑÐ»Ð°Ð½Ð¸Ðµ Ñ‚Ð°Ðº Ð²Ð°Ð¶Ð½Ð¾, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¾Ñ‚Ð²Ð»ÐµÐºÐ°Ñ‚ÑŒ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð´ÑƒÑ…Ð¾Ð²Ð½Ð¾Ð³Ð¾ Ð»Ð¸Ð´ÐµÑ€Ð° Ð¾Ñ‚ ÐµÐ³Ð¾ Ð²Ð°Ð¶Ð½Ð¾Ð¹ Ñ€Ð°Ð±Ð¾Ñ‚Ñ‹?
 };
 
 
@@ -259,7 +259,7 @@ instance Info_Cronos_KALOM(C_Info)
 	information = Info_Cronos_KALOM_Info;
 	permanent = 0;
 	important = 0;
-	description = "Êîð Ãàëîì ñ íåñêîëüêèìè ôàíàòèêàìè-Ñòðàæàìè óøëè èç Áðàòñòâà!";
+	description = "ÐšÐ¾Ñ€ Ð“Ð°Ð»Ð¾Ð¼ Ñ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¸Ð¼Ð¸ Ñ„Ð°Ð½Ð°Ñ‚Ð¸ÐºÐ°Ð¼Ð¸-Ð¡Ñ‚Ñ€Ð°Ð¶Ð°Ð¼Ð¸ ÑƒÑˆÐ»Ð¸ Ð¸Ð· Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°!";
 };
 
 
@@ -273,11 +273,11 @@ func int Info_Cronos_KALOM_Condition()
 
 func void Info_Cronos_KALOM_Info()
 {
-	AI_Output(other,self,"Info_Cronos_KALOM_15_01");	//Êîð Ãàëîì ñ íåñêîëüêèìè ôàíàòèêàìè-Ñòðàæàìè óøëè èç Áðàòñòâà!
-	AI_Output(other,self,"Info_Cronos_KALOM_15_02");	//Îíè ñàìè õîòÿò íàéòè Ñïÿùåãî è ïðåðâàòü åãî òûñÿ÷åëåòíèé ñîí.
-	AI_Output(self,other,"Info_Cronos_KALOM_08_03");	//ß íèêîãäà åìó íå äîâåðÿë. Íå âàæíî, êàêîå ìåñòî îí çàíèìàåò, âàæíî òî, ÷òî åãî îñëåïèëà æàæäà âëàñòè. Îí ñïîñîáåí íà âñå.
-	AI_Output(self,other,"Info_Cronos_KALOM_08_04");	//Äóìàþ, áåç íåãî â Áðàòñòâå áóäåò ãîðàçäî ëó÷øå!
-	AI_Output(self,other,"Info_Cronos_KALOM_08_05");	//ß ñîîáùó îá ýòîì Ñàòóðàñó, êàê òîëüêî ó ìåíÿ áóäåò âîçìîæíîñòü. À òåïåðü èäè!
+	AI_Output(other,self,"Info_Cronos_KALOM_15_01");	//ÐšÐ¾Ñ€ Ð“Ð°Ð»Ð¾Ð¼ Ñ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¸Ð¼Ð¸ Ñ„Ð°Ð½Ð°Ñ‚Ð¸ÐºÐ°Ð¼Ð¸-Ð¡Ñ‚Ñ€Ð°Ð¶Ð°Ð¼Ð¸ ÑƒÑˆÐ»Ð¸ Ð¸Ð· Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°!
+	AI_Output(other,self,"Info_Cronos_KALOM_15_02");	//ÐžÐ½Ð¸ ÑÐ°Ð¼Ð¸ Ñ…Ð¾Ñ‚ÑÑ‚ Ð½Ð°Ð¹Ñ‚Ð¸ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾ Ð¸ Ð¿Ñ€ÐµÑ€Ð²Ð°Ñ‚ÑŒ ÐµÐ³Ð¾ Ñ‚Ñ‹ÑÑÑ‡ÐµÐ»ÐµÑ‚Ð½Ð¸Ð¹ ÑÐ¾Ð½.
+	AI_Output(self,other,"Info_Cronos_KALOM_08_03");	//Ð¯ Ð½Ð¸ÐºÐ¾Ð³Ð´Ð° ÐµÐ¼Ñƒ Ð½Ðµ Ð´Ð¾Ð²ÐµÑ€ÑÐ». ÐÐµ Ð²Ð°Ð¶Ð½Ð¾, ÐºÐ°ÐºÐ¾Ðµ Ð¼ÐµÑÑ‚Ð¾ Ð¾Ð½ Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑ‚, Ð²Ð°Ð¶Ð½Ð¾ Ñ‚Ð¾, Ñ‡Ñ‚Ð¾ ÐµÐ³Ð¾ Ð¾ÑÐ»ÐµÐ¿Ð¸Ð»Ð° Ð¶Ð°Ð¶Ð´Ð° Ð²Ð»Ð°ÑÑ‚Ð¸. ÐžÐ½ ÑÐ¿Ð¾ÑÐ¾Ð±ÐµÐ½ Ð½Ð° Ð²ÑÐµ.
+	AI_Output(self,other,"Info_Cronos_KALOM_08_04");	//Ð”ÑƒÐ¼Ð°ÑŽ, Ð±ÐµÐ· Ð½ÐµÐ³Ð¾ Ð² Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð³Ð¾Ñ€Ð°Ð·Ð´Ð¾ Ð»ÑƒÑ‡ÑˆÐµ!
+	AI_Output(self,other,"Info_Cronos_KALOM_08_05");	//Ð¯ ÑÐ¾Ð¾Ð±Ñ‰Ñƒ Ð¾Ð± ÑÑ‚Ð¾Ð¼ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÑƒ, ÐºÐ°Ðº Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñƒ Ð¼ÐµÐ½Ñ Ð±ÑƒÐ´ÐµÑ‚ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ. Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¸Ð´Ð¸!
 	if(Npc_HasItems(other,alchemybook))
 	{
 		Npc_RemoveInvItem(other,alchemybook);
@@ -295,7 +295,7 @@ instance Info_Cronos_YBERION(C_Info)
 	information = Info_Cronos_YBERION_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ãóðó Áðàòñòâà ïðîâåëè îäíó öåðåìîíèþ. Îíè âûçûâàëè Ñïÿùåãî.";
+	description = "Ð“ÑƒÑ€Ñƒ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð° Ð¿Ñ€Ð¾Ð²ÐµÐ»Ð¸ Ð¾Ð´Ð½Ñƒ Ñ†ÐµÑ€ÐµÐ¼Ð¾Ð½Ð¸ÑŽ. ÐžÐ½Ð¸ Ð²Ñ‹Ð·Ñ‹Ð²Ð°Ð»Ð¸ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾.";
 };
 
 
@@ -309,15 +309,15 @@ func int Info_Cronos_YBERION_Condition()
 
 func void Info_Cronos_YBERION_Info()
 {
-	AI_Output(other,self,"Info_Cronos_YBERION_15_03");	//Ãóðó Áðàòñòâà ïðîâåëè îäíó öåðåìîíèþ. Îíè âûçûâàëè Ñïÿùåãî.
-	AI_Output(other,self,"Info_Cronos_YBERION_15_04");	//Íî óìñòâåííîå íàïðÿæåíèå ïëîõî ñêàçàëîñü íà Þáåðèîíå. Îí ýòîãî íå âûäåðæàë.
+	AI_Output(other,self,"Info_Cronos_YBERION_15_03");	//Ð“ÑƒÑ€Ñƒ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð° Ð¿Ñ€Ð¾Ð²ÐµÐ»Ð¸ Ð¾Ð´Ð½Ñƒ Ñ†ÐµÑ€ÐµÐ¼Ð¾Ð½Ð¸ÑŽ. ÐžÐ½Ð¸ Ð²Ñ‹Ð·Ñ‹Ð²Ð°Ð»Ð¸ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾.
+	AI_Output(other,self,"Info_Cronos_YBERION_15_04");	//ÐÐ¾ ÑƒÐ¼ÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ðµ Ð½Ð°Ð¿Ñ€ÑÐ¶ÐµÐ½Ð¸Ðµ Ð¿Ð»Ð¾Ñ…Ð¾ ÑÐºÐ°Ð·Ð°Ð»Ð¾ÑÑŒ Ð½Ð° Ð®Ð±ÐµÑ€Ð¸Ð¾Ð½Ðµ. ÐžÐ½ ÑÑ‚Ð¾Ð³Ð¾ Ð½Ðµ Ð²Ñ‹Ð´ÐµÑ€Ð¶Ð°Ð».
 	if(YBERION_DIED == TRUE)
 	{
-		AI_Output(other,self,"Info_Cronos_YBERION_15_01");	//Þáåðèîí, ëèäåð ñåêòàíòîâ Áîëîòíîãî ëàãåðÿ, óìåð!
+		AI_Output(other,self,"Info_Cronos_YBERION_15_01");	//Ð®Ð±ÐµÑ€Ð¸Ð¾Ð½, Ð»Ð¸Ð´ÐµÑ€ ÑÐµÐºÑ‚Ð°Ð½Ñ‚Ð¾Ð² Ð‘Ð¾Ð»Ð¾Ñ‚Ð½Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ, ÑƒÐ¼ÐµÑ€!
 	};
-	AI_Output(self,other,"Info_Cronos_YBERION_08_02");	//×òî? Êàê ýòî ìîãëî ïðîèçîéòè?
-	AI_Output(self,other,"Info_Cronos_YBERION_08_05");	//Ýòî î÷åíü ïå÷àëüíàÿ íîâîñòü. Þáåðèîí áûë îäíèì èç íàøèõ ñîþçíèêîâ.
-	AI_Output(self,other,"Info_Cronos_YBERION_08_06");	//Íî íå ñòîèò èç-çà ýòîãî îòâëåêàòü Ñàòóðàñà îò èññëåäîâàíèé.
+	AI_Output(self,other,"Info_Cronos_YBERION_08_02");	//Ð§Ñ‚Ð¾? ÐšÐ°Ðº ÑÑ‚Ð¾ Ð¼Ð¾Ð³Ð»Ð¾ Ð¿Ñ€Ð¾Ð¸Ð·Ð¾Ð¹Ñ‚Ð¸?
+	AI_Output(self,other,"Info_Cronos_YBERION_08_05");	//Ð­Ñ‚Ð¾ Ð¾Ñ‡ÐµÐ½ÑŒ Ð¿ÐµÑ‡Ð°Ð»ÑŒÐ½Ð°Ñ Ð½Ð¾Ð²Ð¾ÑÑ‚ÑŒ. Ð®Ð±ÐµÑ€Ð¸Ð¾Ð½ Ð±Ñ‹Ð» Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð½Ð°ÑˆÐ¸Ñ… ÑÐ¾ÑŽÐ·Ð½Ð¸ÐºÐ¾Ð².
+	AI_Output(self,other,"Info_Cronos_YBERION_08_06");	//ÐÐ¾ Ð½Ðµ ÑÑ‚Ð¾Ð¸Ñ‚ Ð¸Ð·-Ð·Ð° ÑÑ‚Ð¾Ð³Ð¾ Ð¾Ñ‚Ð²Ð»ÐµÐºÐ°Ñ‚ÑŒ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÐ° Ð¾Ñ‚ Ð¸ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ð¹.
 	if(Npc_HasItems(other,alchemybook))
 	{
 		Npc_RemoveInvItem(other,alchemybook);
@@ -335,7 +335,7 @@ instance Info_Cronos_SLEEPER(C_Info)
 	information = Info_Cronos_SLEEPER_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ãóðó óçíàëè, ÷òî èõ áîã Ñïÿùèé íà ñàìîì äåëå - çëîé äåìîí!";
+	description = "Ð“ÑƒÑ€Ñƒ ÑƒÐ·Ð½Ð°Ð»Ð¸, Ñ‡Ñ‚Ð¾ Ð¸Ñ… Ð±Ð¾Ð³ Ð¡Ð¿ÑÑ‰Ð¸Ð¹ Ð½Ð° ÑÐ°Ð¼Ð¾Ð¼ Ð´ÐµÐ»Ðµ - Ð·Ð»Ð¾Ð¹ Ð´ÐµÐ¼Ð¾Ð½!";
 };
 
 
@@ -349,17 +349,17 @@ func int Info_Cronos_SLEEPER_Condition()
 
 func void Info_Cronos_SLEEPER_Info()
 {
-	AI_Output(other,self,"Info_Cronos_SLEEPER_15_01");	//Ãóðó óçíàëè, ÷òî èõ áîã Ñïÿùèé íà ñàìîì äåëå - íàñòîÿùèé çëîé äåìîí!
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_02");	//Òåïåðü îíè ñ÷èòàþò Ñïÿùåãî îäíèì èç äåìîíîâ?
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_03");	//Ýòî î÷åíü ïîõîæå íà î÷åðåäíóþ áåçóìíóþ èäåþ áðàòüåâ, íî...
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_04");	//... ×òî åñëè îíè ïðàâû... òîãäà âñÿ íàøà êîëîíèÿ íàõîäèòñÿ â îïàñíîñòè.
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_05");	//Òû äîëæåí ñîîáùèòü îá ýòîì Ñàòóðàñó. Îí ñìîæåò ðåøèòü, ÷òî äåëàòü äàëüøå.
-	AI_Output(other,self,"Info_Cronos_SLEEPER_15_06");	//Ãäå íàéòè Ñàòóðàñà?
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_07");	//Ïîäíèìèñü íà âåðõíèé óðîâåíü. Ñêàæè îõðàííèêàì, ÷òî òû ïîëó÷èë ìîå ðàçðåøåíèå.
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_08");	//Ïàðîëü âõîäà - Òåòðèàíäîõ.
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_09");	//Ñàòóðàñ îáû÷íî ñòîèò ó áîëüøîé ïåíòàãðàììû.
-	AI_Output(self,other,"Info_Cronos_SLEEPER_08_10");	//Òàì îí ïðîâîäèò ñâîè èññëåäîâàíèÿ, ïûòàåòñÿ âû÷èñëèòü, êàê ëó÷øå âñåãî âçîðâàòü ãîðó ðóäû.
-	B_LogEntry(CH3_EscapePlanNC,"Êðîíîñ äàë ìíå ðàçðåøåíèå íà ðàçãîâîð ñ Ñàòóðàñîì. Îáû÷íî âåðõîâíîãî ìàãà ìîæíî íàéòè ó ïåíòàãðàììû. Íóæíî ñêàçàòü ñòðàæíèêàì ïàðîëü... Âîò ÷åðò, íåóæåëè ÿ åãî çàáûë?!");
+	AI_Output(other,self,"Info_Cronos_SLEEPER_15_01");	//Ð“ÑƒÑ€Ñƒ ÑƒÐ·Ð½Ð°Ð»Ð¸, Ñ‡Ñ‚Ð¾ Ð¸Ñ… Ð±Ð¾Ð³ Ð¡Ð¿ÑÑ‰Ð¸Ð¹ Ð½Ð° ÑÐ°Ð¼Ð¾Ð¼ Ð´ÐµÐ»Ðµ - Ð½Ð°ÑÑ‚Ð¾ÑÑ‰Ð¸Ð¹ Ð·Ð»Ð¾Ð¹ Ð´ÐµÐ¼Ð¾Ð½!
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_02");	//Ð¢ÐµÐ¿ÐµÑ€ÑŒ Ð¾Ð½Ð¸ ÑÑ‡Ð¸Ñ‚Ð°ÑŽÑ‚ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾ Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð´ÐµÐ¼Ð¾Ð½Ð¾Ð²?
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_03");	//Ð­Ñ‚Ð¾ Ð¾Ñ‡ÐµÐ½ÑŒ Ð¿Ð¾Ñ…Ð¾Ð¶Ðµ Ð½Ð° Ð¾Ñ‡ÐµÑ€ÐµÐ´Ð½ÑƒÑŽ Ð±ÐµÐ·ÑƒÐ¼Ð½ÑƒÑŽ Ð¸Ð´ÐµÑŽ Ð±Ñ€Ð°Ñ‚ÑŒÐµÐ², Ð½Ð¾...
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_04");	//... Ð§Ñ‚Ð¾ ÐµÑÐ»Ð¸ Ð¾Ð½Ð¸ Ð¿Ñ€Ð°Ð²Ñ‹... Ñ‚Ð¾Ð³Ð´Ð° Ð²ÑÑ Ð½Ð°ÑˆÐ° ÐºÐ¾Ð»Ð¾Ð½Ð¸Ñ Ð½Ð°Ñ…Ð¾Ð´Ð¸Ñ‚ÑÑ Ð² Ð¾Ð¿Ð°ÑÐ½Ð¾ÑÑ‚Ð¸.
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_05");	//Ð¢Ñ‹ Ð´Ð¾Ð»Ð¶ÐµÐ½ ÑÐ¾Ð¾Ð±Ñ‰Ð¸Ñ‚ÑŒ Ð¾Ð± ÑÑ‚Ð¾Ð¼ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÑƒ. ÐžÐ½ ÑÐ¼Ð¾Ð¶ÐµÑ‚ Ñ€ÐµÑˆÐ¸Ñ‚ÑŒ, Ñ‡Ñ‚Ð¾ Ð´ÐµÐ»Ð°Ñ‚ÑŒ Ð´Ð°Ð»ÑŒÑˆÐµ.
+	AI_Output(other,self,"Info_Cronos_SLEEPER_15_06");	//Ð“Ð´Ðµ Ð½Ð°Ð¹Ñ‚Ð¸ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÐ°?
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_07");	//ÐŸÐ¾Ð´Ð½Ð¸Ð¼Ð¸ÑÑŒ Ð½Ð° Ð²ÐµÑ€Ñ…Ð½Ð¸Ð¹ ÑƒÑ€Ð¾Ð²ÐµÐ½ÑŒ. Ð¡ÐºÐ°Ð¶Ð¸ Ð¾Ñ…Ñ€Ð°Ð½Ð½Ð¸ÐºÐ°Ð¼, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð¼Ð¾Ðµ Ñ€Ð°Ð·Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ.
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_08");	//ÐŸÐ°Ñ€Ð¾Ð»ÑŒ Ð²Ñ…Ð¾Ð´Ð° - Ð¢ÐµÑ‚Ñ€Ð¸Ð°Ð½Ð´Ð¾Ñ….
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_09");	//Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ Ð¾Ð±Ñ‹Ñ‡Ð½Ð¾ ÑÑ‚Ð¾Ð¸Ñ‚ Ñƒ Ð±Ð¾Ð»ÑŒÑˆÐ¾Ð¹ Ð¿ÐµÐ½Ñ‚Ð°Ð³Ñ€Ð°Ð¼Ð¼Ñ‹.
+	AI_Output(self,other,"Info_Cronos_SLEEPER_08_10");	//Ð¢Ð°Ð¼ Ð¾Ð½ Ð¿Ñ€Ð¾Ð²Ð¾Ð´Ð¸Ñ‚ ÑÐ²Ð¾Ð¸ Ð¸ÑÑÐ»ÐµÐ´Ð¾Ð²Ð°Ð½Ð¸Ñ, Ð¿Ñ‹Ñ‚Ð°ÐµÑ‚ÑÑ Ð²Ñ‹Ñ‡Ð¸ÑÐ»Ð¸Ñ‚ÑŒ, ÐºÐ°Ðº Ð»ÑƒÑ‡ÑˆÐµ Ð²ÑÐµÐ³Ð¾ Ð²Ð·Ð¾Ñ€Ð²Ð°Ñ‚ÑŒ Ð³Ð¾Ñ€Ñƒ Ñ€ÑƒÐ´Ñ‹.
+	B_LogEntry(CH3_EscapePlanNC,"ÐšÑ€Ð¾Ð½Ð¾Ñ Ð´Ð°Ð» Ð¼Ð½Ðµ Ñ€Ð°Ð·Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ Ð½Ð° Ñ€Ð°Ð·Ð³Ð¾Ð²Ð¾Ñ€ Ñ Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÐ¾Ð¼. ÐžÐ±Ñ‹Ñ‡Ð½Ð¾ Ð²ÐµÑ€Ñ…Ð¾Ð²Ð½Ð¾Ð³Ð¾ Ð¼Ð°Ð³Ð° Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸ Ñƒ Ð¿ÐµÐ½Ñ‚Ð°Ð³Ñ€Ð°Ð¼Ð¼Ñ‹. ÐÑƒÐ¶Ð½Ð¾ ÑÐºÐ°Ð·Ð°Ñ‚ÑŒ ÑÑ‚Ñ€Ð°Ð¶Ð½Ð¸ÐºÐ°Ð¼ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ... Ð’Ð¾Ñ‚ Ñ‡ÐµÑ€Ñ‚, Ð½ÐµÑƒÐ¶ÐµÐ»Ð¸ Ñ ÐµÐ³Ð¾ Ð·Ð°Ð±Ñ‹Ð»?!");
 	B_GiveXP(XP_GetCronosPermission);
 	if(Npc_HasItems(other,alchemybook))
 	{
@@ -378,7 +378,7 @@ instance Info_Cronos_PAROLE(C_Info)
 	information = Info_Cronos_PAROLE_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ñêàæè ìíå ïàðîëü, ÿ íå ñìîã åãî çàïîìíèòü.";
+	description = "Ð¡ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ, Ñ Ð½Ðµ ÑÐ¼Ð¾Ð³ ÐµÐ³Ð¾ Ð·Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ñ‚ÑŒ.";
 };
 
 
@@ -392,8 +392,8 @@ func int Info_Cronos_PAROLE_Condition()
 
 func void Info_Cronos_PAROLE_Info()
 {
-	AI_Output(other,self,"Info_Cronos_PAROLE_15_01");	//Ñêàæè ìíå ïàðîëü, ÿ íå ñìîã åãî çàïîìíèòü.
-	AI_Output(self,other,"Info_Cronos_PAROLE_08_02");	//Äà, ïàìÿòè ó òåáÿ íåò. Çàïîìíè, ïàðîëü - Òåòðèàíäîõ.
+	AI_Output(other,self,"Info_Cronos_PAROLE_15_01");	//Ð¡ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ, Ñ Ð½Ðµ ÑÐ¼Ð¾Ð³ ÐµÐ³Ð¾ Ð·Ð°Ð¿Ð¾Ð¼Ð½Ð¸Ñ‚ÑŒ.
+	AI_Output(self,other,"Info_Cronos_PAROLE_08_02");	//Ð”Ð°, Ð¿Ð°Ð¼ÑÑ‚Ð¸ Ñƒ Ñ‚ÐµÐ±Ñ Ð½ÐµÑ‚. Ð—Ð°Ð¿Ð¾Ð¼Ð½Ð¸, Ð¿Ð°Ñ€Ð¾Ð»ÑŒ - Ð¢ÐµÑ‚Ñ€Ð¸Ð°Ð½Ð´Ð¾Ñ….
 };
 
 
@@ -405,7 +405,7 @@ instance Info_Cronos_REWARD(C_Info)
 	information = Info_Cronos_REWARD_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ñàòóðàñ ñêàçàë, ÷òî ó òåáÿ åñòü äëÿ ìåíÿ íàãðàäà.";
+	description = "Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñƒ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð°.";
 };
 
 
@@ -419,20 +419,20 @@ func int Info_Cronos_REWARD_Condition()
 
 func void Info_Cronos_REWARD_Info()
 {
-	AI_Output(other,self,"Info_Cronos_REWARD_15_01");	//Ñàòóðàñ ñêàçàë, ÷òî ó òåáÿ åñòü äëÿ ìåíÿ íàãðàäà.
-	AI_Output(self,other,"Info_Cronos_REWARD_08_02");	//Êàê õðàíèòåëü ðóäû ÿ äàì òåáå íåáîëüøóþ ÷àñòü íàøèõ çàïàñîâ, êàê íàãðàäó çà òâîè òðóäû.
-	AI_Output(self,other,"Info_Cronos_REWARD_08_03");	//Íàäåþñü, òû ñìîæåøü ðàçóìíî èñïîëüçîâàòü åå.
+	AI_Output(other,self,"Info_Cronos_REWARD_15_01");	//Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñƒ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð°.
+	AI_Output(self,other,"Info_Cronos_REWARD_08_02");	//ÐšÐ°Ðº Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ÐµÐ»ÑŒ Ñ€ÑƒÐ´Ñ‹ Ñ Ð´Ð°Ð¼ Ñ‚ÐµÐ±Ðµ Ð½ÐµÐ±Ð¾Ð»ÑŒÑˆÑƒÑŽ Ñ‡Ð°ÑÑ‚ÑŒ Ð½Ð°ÑˆÐ¸Ñ… Ð·Ð°Ð¿Ð°ÑÐ¾Ð², ÐºÐ°Ðº Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ Ð·Ð° Ñ‚Ð²Ð¾Ð¸ Ñ‚Ñ€ÑƒÐ´Ñ‹.
+	AI_Output(self,other,"Info_Cronos_REWARD_08_03");	//ÐÐ°Ð´ÐµÑŽÑÑŒ, Ñ‚Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ Ñ€Ð°Ð·ÑƒÐ¼Ð½Ð¾ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ ÐµÐµ.
 	if(DIFF_HARD == FALSE)
 	{
 		CreateInvItems(hero,ItMiNugget,1000);
-		b_printtrademsg1("Ïîëó÷åíî ðóäû: 1000");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ Ñ€ÑƒÐ´Ñ‹: 1000");
 	}
 	else
 	{
 		CreateInvItems(hero,ItMiNugget,500);
-		b_printtrademsg1("Ïîëó÷åíî ðóäû: 500");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ Ñ€ÑƒÐ´Ñ‹: 500");
 	};
-	B_LogEntry(CH3_BringFoci,"Êðîíîñ äàë ìíå äîñòàòî÷íî ìíîãî ðóäû, íî îò ýòîãî ðóäíàÿ ãîðà íèñêîëüêî íå óìåíüøèëàñü.");
+	B_LogEntry(CH3_BringFoci,"ÐšÑ€Ð¾Ð½Ð¾Ñ Ð´Ð°Ð» Ð¼Ð½Ðµ Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾ Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹, Ð½Ð¾ Ð¾Ñ‚ ÑÑ‚Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ð½Ð°Ñ Ð³Ð¾Ñ€Ð° Ð½Ð¸ÑÐºÐ¾Ð»ÑŒÐºÐ¾ Ð½Ðµ ÑƒÐ¼ÐµÐ½ÑŒÑˆÐ¸Ð»Ð°ÑÑŒ.");
 	if(Npc_KnowsInfo(hero,Info_Riordian_REWARD))
 	{
 		Log_SetTopicStatus(CH3_BringFoci,LOG_SUCCESS);
@@ -460,7 +460,7 @@ func int KDW_604_Cronos_WELCOME_Condition()
 
 func void KDW_604_Cronos_WELCOME_Info()
 {
-	AI_Output(self,other,"KDW_604_Cronos_WELCOME_Info_08_01");	//Òû ïðèíÿë ïðàâèëüíîå ðåøåíèå. Òåïåðü òû îäèí èç ìàãîâ Âîäû. Äîáðî ïîæàëîâàòü, áðàò!
+	AI_Output(self,other,"KDW_604_Cronos_WELCOME_Info_08_01");	//Ð¢Ñ‹ Ð¿Ñ€Ð¸Ð½ÑÐ» Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾Ðµ Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ. Ð¢ÐµÐ¿ÐµÑ€ÑŒ Ñ‚Ñ‹ Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ð¼Ð°Ð³Ð¾Ð² Ð’Ð¾Ð´Ñ‹. Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ, Ð±Ñ€Ð°Ñ‚!
 	AI_StopProcessInfos(self);
 };
 
@@ -473,7 +473,7 @@ instance KDW_604_Cronos_MANA(C_Info)
 	information = KDW_604_Cronos_MANA_Info;
 	important = 0;
 	permanent = 1;
-	description = "ß õî÷ó óâåëè÷èòü ñâîþ ìàãè÷åñêóþ ñèëó.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ ÑÐ²Ð¾ÑŽ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ.";
 };
 
 
@@ -487,8 +487,8 @@ func int KDW_604_Cronos_MANA_Condition()
 
 func void KDW_604_Cronos_MANA_Info()
 {
-	AI_Output(other,self,"KDW_604_Cronos_MANA_Info_15_01");	//ß õî÷ó óâåëè÷èòü ñâîþ ìàãè÷åñêóþ ñèëó.
-	AI_Output(self,other,"KDW_604_Cronos_MANA_Info_08_02");	//ß ìîãó ïîìî÷ü òåáå â ýòîì. Èñïîëüçóé ñâîþ ñèëó ñ óìîì.
+	AI_Output(other,self,"KDW_604_Cronos_MANA_Info_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ ÑÐ²Ð¾ÑŽ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ.
+	AI_Output(self,other,"KDW_604_Cronos_MANA_Info_08_02");	//Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ñ‚ÐµÐ±Ðµ Ð² ÑÑ‚Ð¾Ð¼. Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹ ÑÐ²Ð¾ÑŽ ÑÐ¸Ð»Ñƒ Ñ ÑƒÐ¼Ð¾Ð¼.
 	b_cronoslearn();
 };
 
@@ -507,15 +507,15 @@ func void KDW_604_Cronos_MANA_MAN_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_MANA_MAX] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,LPCOST_ATTRIBUTE_MANA);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_NotNow");	//Ñåé÷àñ íå âðåìÿ.
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_NotNow");	//Ð¡ÐµÐ¹Ñ‡Ð°Ñ Ð½Ðµ Ð²Ñ€ÐµÐ¼Ñ.
 	};
 	b_cronoslearn();
 };
@@ -530,15 +530,15 @@ func void KDW_604_Cronos_MANA_MAN_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_MANA_MAX] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,5 * LPCOST_ATTRIBUTE_MANA);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_NotNow");	//Ñåé÷àñ íå âðåìÿ.
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_NotNow");	//Ð¡ÐµÐ¹Ñ‡Ð°Ñ Ð½Ðµ Ð²Ñ€ÐµÐ¼Ñ.
 	};
 	b_cronoslearn();
 };
@@ -567,7 +567,7 @@ func int KDW_604_Cronos_SELLSTUFF_Condition()
 
 func void KDW_604_Cronos_SELLSTUFF_Info()
 {
-	AI_Output(other,self,"KDW_604_Cronos_SELLSTUFF_Info_15_01");	//ß õî÷ó ïðèîáðåñòè ìàãè÷åñêèå ñâèòêè.
+	AI_Output(other,self,"KDW_604_Cronos_SELLSTUFF_Info_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑÑ‚Ð¸ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ²Ð¸Ñ‚ÐºÐ¸.
 };
 
 
@@ -578,7 +578,7 @@ instance KDW_604_Cronos_Greet(C_Info)
 	information = KDW_604_Cronos_GREET_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ïðèâåòñòâóþ òåáÿ, ìàã!";
+	description = "ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!";
 };
 
 
@@ -589,12 +589,12 @@ func int KDW_604_Cronos_GREET_Condition()
 
 func void KDW_604_Cronos_GREET_Info()
 {
-	AI_Output(other,self,"KDW_604_Cronos_GREET_Info_15_01");	//Ïðèâåòñòâóþ òåáÿ, ìàã!
-	AI_Output(self,other,"KDW_604_Cronos_GREET_Info_08_02");	//Äà ïðåáóäåò ñ òîáîé áëàãîñëîâåíèå Àäàíîñà! ß ìîãó ïîìî÷ü òâîåìó äóõó ñòàòü ñèëüíåå èëè äàòü òåáå ÷òî-òî ïîëåçíîå.
-	AI_Output(self,other,"KDW_604_Cronos_GREET_Info_08_03");	//×òî ÿ ìîãó ñäåëàòü äëÿ òåáÿ?
+	AI_Output(other,self,"KDW_604_Cronos_GREET_Info_15_01");	//ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!
+	AI_Output(self,other,"KDW_604_Cronos_GREET_Info_08_02");	//Ð”Ð° Ð¿Ñ€ÐµÐ±ÑƒÐ´ÐµÑ‚ Ñ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð±Ð»Ð°Ð³Ð¾ÑÐ»Ð¾Ð²ÐµÐ½Ð¸Ðµ ÐÐ´Ð°Ð½Ð¾ÑÐ°! Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ñ‚Ð²Ð¾ÐµÐ¼Ñƒ Ð´ÑƒÑ…Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ ÑÐ¸Ð»ÑŒÐ½ÐµÐµ Ð¸Ð»Ð¸ Ð´Ð°Ñ‚ÑŒ Ñ‚ÐµÐ±Ðµ Ñ‡Ñ‚Ð¾-Ñ‚Ð¾ Ð¿Ð¾Ð»ÐµÐ·Ð½Ð¾Ðµ.
+	AI_Output(self,other,"KDW_604_Cronos_GREET_Info_08_03");	//Ð§Ñ‚Ð¾ Ñ Ð¼Ð¾Ð³Ñƒ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ Ð´Ð»Ñ Ñ‚ÐµÐ±Ñ?
 	Log_CreateTopic(GE_TraderNC,LOG_NOTE);
-	B_LogEntry(GE_TraderNC,"Êðîíîñ ïðîäàåò ðóíû, ñâèòêè è êîëüöà. Öåëûìè äíÿìè îí ñòîèò ó ðåøåòêè, çàêðûâàþùåé ðóäíóþ ãîðó.");
+	B_LogEntry(GE_TraderNC,"ÐšÑ€Ð¾Ð½Ð¾Ñ Ð¿Ñ€Ð¾Ð´Ð°ÐµÑ‚ Ñ€ÑƒÐ½Ñ‹, ÑÐ²Ð¸Ñ‚ÐºÐ¸ Ð¸ ÐºÐ¾Ð»ÑŒÑ†Ð°. Ð¦ÐµÐ»Ñ‹Ð¼Ð¸ Ð´Ð½ÑÐ¼Ð¸ Ð¾Ð½ ÑÑ‚Ð¾Ð¸Ñ‚ Ñƒ Ñ€ÐµÑˆÐµÑ‚ÐºÐ¸, Ð·Ð°ÐºÑ€Ñ‹Ð²Ð°ÑŽÑ‰ÐµÐ¹ Ñ€ÑƒÐ´Ð½ÑƒÑŽ Ð³Ð¾Ñ€Ñƒ.");
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-	B_LogEntry(GE_TeacherNC,"Êðîíîñ ìîæåò ïîìî÷ü ìíå ïîâûñèòü ìîþ ìàãè÷åñêóþ ñèëó. Åãî ìîæíî íàéòè ó ðóäíîé ãîðû.");
+	B_LogEntry(GE_TeacherNC,"ÐšÑ€Ð¾Ð½Ð¾Ñ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ð¼Ð½Ðµ Ð¿Ð¾Ð²Ñ‹ÑÐ¸Ñ‚ÑŒ Ð¼Ð¾ÑŽ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ. Ð•Ð³Ð¾ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸ Ñƒ Ñ€ÑƒÐ´Ð½Ð¾Ð¹ Ð³Ð¾Ñ€Ñ‹.");
 };
 

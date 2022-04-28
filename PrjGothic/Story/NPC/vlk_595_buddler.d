@@ -1,7 +1,7 @@
 
 instance VLK_595_BUDDLER(Npc_Default)
 {
-	name[0] = "Фокс";
+	name[0] = "Р¤РѕРєСЃ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 2;
@@ -56,7 +56,7 @@ instance DIA_VLK595_QUENTIN_DONE(C_Info)
 	condition = dia_vlk595_quentin_done_condition;
 	information = dia_vlk595_quentin_done_info;
 	permanent = 0;
-	description = "Ну? Теперь ты свободен?";
+	description = "РќСѓ? РўРµРїРµСЂСЊ С‚С‹ СЃРІРѕР±РѕРґРµРЅ?";
 };
 
 
@@ -70,15 +70,15 @@ func int dia_vlk595_quentin_done_condition()
 
 func void dia_vlk595_quentin_done_info()
 {
-	AI_Output(other,self,"DIA_Ghorim_SUCCESS_15_00");	//Ну? Теперь ты свободен?
-	AI_Output(self,other,"SVM_19_Help");	//Бежим!
+	AI_Output(other,self,"DIA_Ghorim_SUCCESS_15_00");	//РќСѓ? РўРµРїРµСЂСЊ С‚С‹ СЃРІРѕР±РѕРґРµРЅ?
+	AI_Output(self,other,"SVM_19_Help");	//Р‘РµР¶РёРј!
 	B_GiveXP(300);
 	b_setorg2hostile();
 	if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 	{
 		QUENTIN_GANG_QUEST_STARTED = LOG_SUCCESS;
 		Log_SetTopicStatus(QUENTIN_GANG,LOG_SUCCESS);
-		B_LogEntry(QUENTIN_GANG,"Я спас рудокопов, которых держал в плену Квентин. Они направились в Старый лагерь.");
+		B_LogEntry(QUENTIN_GANG,"РЇ СЃРїР°СЃ СЂСѓРґРѕРєРѕРїРѕРІ, РєРѕС‚РѕСЂС‹С… РґРµСЂР¶Р°Р» РІ РїР»РµРЅСѓ РљРІРµРЅС‚РёРЅ. РћРЅРё РЅР°РїСЂР°РІРёР»РёСЃСЊ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ.");
 	};
 	AI_StopProcessInfos(self);
 	AI_SetWalkMode(self,NPC_RUN);

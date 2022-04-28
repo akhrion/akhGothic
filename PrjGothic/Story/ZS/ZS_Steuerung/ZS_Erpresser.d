@@ -97,7 +97,7 @@ func void ZS_ErpresserComeToMe()
 	Npc_SetPercTime(self,1);
 	self.voice = 19;
 	B_SayOverlay(self,hero,"$DIEMONSTER");
-//	AI_Output(self,hero,"888_Erpresser_NULL_0"); //(радушно) Иди сюда дружище!
+//	AI_Output(self,hero,"888_Erpresser_NULL_0"); //(СЂР°РґСѓС€РЅРѕ) РРґРё СЃСЋРґР° РґСЂСѓР¶РёС‰Рµ!
 };
 func int ZS_ErpresserComeToMe_Loop()
 {

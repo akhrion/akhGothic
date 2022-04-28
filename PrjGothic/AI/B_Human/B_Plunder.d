@@ -75,7 +75,7 @@ func int B_Plunder()
 	PrintDebugNpc(PD_ZS_Check,"B_Plunder");
 	if(Npc_HasItems(other,ItMiNugget) > 0)
 	{
-		stolennuggettext = ConcatStrings("Отобрано руды: ",IntToString(Npc_HasItems(other,ItMiNugget) / 2));
+		stolennuggettext = ConcatStrings("РћС‚РѕР±СЂР°РЅРѕ СЂСѓРґС‹: ",IntToString(Npc_HasItems(other,ItMiNugget) / 2));
 		if(Npc_HasItems(other,ItMiNugget) > 1)
 		{
 			if(Npc_IsPlayer(other))
@@ -88,7 +88,7 @@ func int B_Plunder()
 		{
 			if(Npc_IsPlayer(other))
 			{
-				PrintScreen("Отобрано руды: 1",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+				PrintScreen("РћС‚РѕР±СЂР°РЅРѕ СЂСѓРґС‹: 1",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 			};
 			B_GiveInvItems(other,self,ItMiNugget,1);
 		};
@@ -216,7 +216,7 @@ func int B_Plunder()
 	{
 		amountPlundered = amountPlundered + 1;
 	};
-	PrintDebugInt(PD_ZS_Check,"...Anzahl geplьnderter Items: ",amountPlundered);
+	PrintDebugInt(PD_ZS_Check,"...Anzahl geplСЊnderter Items: ",amountPlundered);
 	return amountPlundered;
 };
 

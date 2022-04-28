@@ -25,6 +25,7 @@ func void B_AssessFightSound()
 	else if(C_NpcIsMonster(victim) && C_NpcIsHuman(other))
 	{
 		PrintDebugNpc(PD_ZS_Check,"...Mensch greift Monster an!");
+		if(!C_NpcIsDangerousMonster(self,other)){return;};
 		if((Npc_GetAttitude(self,other) == ATT_FRIENDLY) || (Npc_GetAttitude(self,other) == ATT_NEUTRAL))
 		{
 			if(Npc_CanSeeNpcFreeLOS(self,other))
@@ -53,7 +54,7 @@ func void B_AssessFightSound()
 	};
 	if(C_ChargeWasAttacked(self,victim,other))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein Schützling wurde attackiert!");
+		PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein SchÑŒtzling wurde attackiert!");
 		if(Npc_GetPermAttitude(victim,other) == ATT_FRIENDLY)
 		{
 			PrintDebugNpc(PD_ZS_Check,"...war nur 'friendly fire'!");
@@ -73,7 +74,7 @@ func void B_AssessFightSound()
 	}
 	else if(C_NpcIsBoss(self) || C_NpcIsGuard(self) || C_NpcIsGuardArcher(self))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC gehört zu BOSS-Gilde!");
+		PrintDebugNpc(PD_ZS_Check,"...NSC gehÑ†rt zu BOSS-Gilde!");
 		B_SmartTurnToNpc(self,victim);
 		B_AssessFighter();
 		return;

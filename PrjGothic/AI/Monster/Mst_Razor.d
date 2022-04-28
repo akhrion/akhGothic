@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Razor(C_Npc)
 {
-	name[0] = "����";
+	name[0] = "Штек";
 	guild = GIL_SNAPPER;
 	aivar[AIV_IMPORTANT] = ID_RAZOR;
 	level = 20;
@@ -44,4 +44,10 @@ instance Razor(Mst_Default_Razor)
 	Set_Razor_Visuals();
 	Npc_SetToFistMode(self);
 };
-
+instance Razor_Egg(Egg)
+{
+	name[0] = "Яйцо штека";
+	guild = GIL_SNAPPER;
+	spawnDelay = 1200;
+	start_aistate = B_MM_Respawn;
+};

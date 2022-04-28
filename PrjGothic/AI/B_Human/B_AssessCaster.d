@@ -15,14 +15,14 @@ func void B_AssessCaster()
 	};
 	if((Npc_GetActiveSpellCat(other) == SPELL_BAD) && !c_npcisguarding(self))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...böser Zauber!");
+		PrintDebugNpc(PD_ZS_Check,"...bÑ†ser Zauber!");
 		B_FullStop(self);
 		Npc_PercDisable(self,PERC_ASSESSCASTER);
 		AI_StartState(self,ZS_AssessFighter,0,"");
 	}
 	else if(Npc_GetAttitude(self,other) == ATT_HOSTILE)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...böser Zauberer!");
+		PrintDebugNpc(PD_ZS_Check,"...bÑ†ser Zauberer!");
 		B_FullStop(self);
 		AI_StartState(self,ZS_AssessEnemy,0,"");
 	}

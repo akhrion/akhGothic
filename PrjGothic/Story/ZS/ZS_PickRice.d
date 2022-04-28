@@ -22,7 +22,7 @@ func void ZS_PickRice_Loop()
 	npc_main_loop(self);
 	if((Npc_GetStateTime(self) >= self.aivar[AIV_ITEMFREQ]) && Hlp_Random(2))
 	{
-		PrintDebugNpc(PD_TA_DETAIL,"PickRice Bücken mit Platzwechsel");
+		PrintDebugNpc(PD_TA_DETAIL,"PickRice BÑŒcken mit Platzwechsel");
 		if(Npc_IsOnFP(self,"PICKRICE_1") && Wld_IsFPAvailable(self,"PICKRICE_1"))
 		{
 			PrintDebugNpc(PD_TA_DETAIL,"Platzwechsel auf Level 1");
@@ -58,7 +58,7 @@ func void ZS_PickRice_Loop()
 	}
 	else if(Npc_GetStateTime(self) >= self.aivar[AIV_ITEMFREQ])
 	{
-		PrintDebugNpc(PD_TA_DETAIL,"PickRice Bücken");
+		PrintDebugNpc(PD_TA_DETAIL,"PickRice BÑŒcken");
 		if(Npc_IsOnFP(self,"PICKRICE"))
 		{
 			AI_PlayAni(self,"T_PLUNDER");

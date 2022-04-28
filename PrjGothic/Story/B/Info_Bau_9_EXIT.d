@@ -26,7 +26,7 @@ instance Info_Bau_9_WichtigePersonen(C_Info)
 	condition = Info_Bau_9_WichtigePersonen_Condition;
 	information = Info_Bau_9_WichtigePersonen_Info;
 	permanent = 1;
-	description = "А кто следит, как продвигается работа на полях?";
+	description = "Рђ РєС‚Рѕ СЃР»РµРґРёС‚, РєР°Рє РїСЂРѕРґРІРёРіР°РµС‚СЃСЏ СЂР°Р±РѕС‚Р° РЅР° РїРѕР»СЏС…?";
 };
 
 
@@ -38,9 +38,9 @@ func int Info_Bau_9_WichtigePersonen_Condition()
 func void Info_Bau_9_WichtigePersonen_Info()
 {
 	var C_Npc Ricelord;
-	AI_Output(other,self,"Info_Bau_9_WichtigePersonen_15_00");	//А кто следит, как продвигается работа на полях?
-	AI_Output(self,other,"Info_Bau_9_WichtigePersonen_09_01");	//Вообще-то, это обязанность Лорда, но мне кажется, он только и делает, что считает мешки в своих закромах.
-	AI_Output(self,other,"Info_Bau_9_WichtigePersonen_09_02");	//Ну, они с Гомером все это организовали...
+	AI_Output(other,self,"Info_Bau_9_WichtigePersonen_15_00");	//Рђ РєС‚Рѕ СЃР»РµРґРёС‚, РєР°Рє РїСЂРѕРґРІРёРіР°РµС‚СЃСЏ СЂР°Р±РѕС‚Р° РЅР° РїРѕР»СЏС…?
+	AI_Output(self,other,"Info_Bau_9_WichtigePersonen_09_01");	//Р’РѕРѕР±С‰Рµ-С‚Рѕ, СЌС‚Рѕ РѕР±СЏР·Р°РЅРЅРѕСЃС‚СЊ Р›РѕСЂРґР°, РЅРѕ РјРЅРµ РєР°Р¶РµС‚СЃСЏ, РѕРЅ С‚РѕР»СЊРєРѕ Рё РґРµР»Р°РµС‚, С‡С‚Рѕ СЃС‡РёС‚Р°РµС‚ РјРµС€РєРё РІ СЃРІРѕРёС… Р·Р°РєСЂРѕРјР°С….
+	AI_Output(self,other,"Info_Bau_9_WichtigePersonen_09_02");	//РќСѓ, РѕРЅРё СЃ Р“РѕРјРµСЂРѕРј РІСЃРµ СЌС‚Рѕ РѕСЂРіР°РЅРёР·РѕРІР°Р»Рё...
 	Ricelord = Hlp_GetNpc(Bau_900_Ricelord);
 	Ricelord.aivar[AIV_FINDABLE] = TRUE;
 };
@@ -52,7 +52,7 @@ instance Info_Bau_9_DasLager(C_Info)
 	condition = Info_Bau_9_DasLager_Condition;
 	information = Info_Bau_9_DasLager_Info;
 	permanent = 1;
-	description = "Расскажи мне об этом лагере.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ.";
 };
 
 
@@ -63,9 +63,9 @@ func int Info_Bau_9_DasLager_Condition()
 
 func void Info_Bau_9_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Bau_9_DasLager_15_00");	//Расскажи мне об этом лагере.
-	AI_Output(self,other,"Info_Bau_9_DasLager_09_01");	//Лагерь полон всяким отродьем. Была б моя воля, я вышвырнул бы всех этих воров из лагеря.
-	AI_Output(self,other,"Info_Bau_9_DasLager_09_02");	//Лентяи еще те, да и неприятностей от них не оберешься.
+	AI_Output(other,self,"Info_Bau_9_DasLager_15_00");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ.
+	AI_Output(self,other,"Info_Bau_9_DasLager_09_01");	//Р›Р°РіРµСЂСЊ РїРѕР»РѕРЅ РІСЃСЏРєРёРј РѕС‚СЂРѕРґСЊРµРј. Р‘С‹Р»Р° Р± РјРѕСЏ РІРѕР»СЏ, СЏ РІС‹С€РІС‹СЂРЅСѓР» Р±С‹ РІСЃРµС… СЌС‚РёС… РІРѕСЂРѕРІ РёР· Р»Р°РіРµСЂСЏ.
+	AI_Output(self,other,"Info_Bau_9_DasLager_09_02");	//Р›РµРЅС‚СЏРё РµС‰Рµ С‚Рµ, РґР° Рё РЅРµРїСЂРёСЏС‚РЅРѕСЃС‚РµР№ РѕС‚ РЅРёС… РЅРµ РѕР±РµСЂРµС€СЊСЃСЏ.
 };
 
 
@@ -75,7 +75,7 @@ instance Info_Bau_9_DieLage(C_Info)
 	condition = Info_Bau_9_DieLage_Condition;
 	information = Info_Bau_9_DieLage_Info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -86,8 +86,8 @@ func int Info_Bau_9_DieLage_Condition()
 
 func void Info_Bau_9_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Bau_9_DieLage_15_00");	//Как дела?
-	AI_Output(self,other,"Info_Bau_9_DieLage_09_01");	//Мы надрываемся здесь, чтобы получить хоть немного еды.
+	AI_Output(other,self,"Info_Bau_9_DieLage_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Info_Bau_9_DieLage_09_01");	//РњС‹ РЅР°РґСЂС‹РІР°РµРјСЃСЏ Р·РґРµСЃСЊ, С‡С‚РѕР±С‹ РїРѕР»СѓС‡РёС‚СЊ С…РѕС‚СЊ РЅРµРјРЅРѕРіРѕ РµРґС‹.
 };
 
 
@@ -97,7 +97,7 @@ instance Info_Bau_9_Wasser(C_Info)
 	condition = Info_Bau_9_Wasser_Condition;
 	information = Info_Bau_9_Wasser_Info;
 	permanent = 1;
-	description = "Меня прислал Лефти, я принес тебе воды.";
+	description = "РњРµРЅСЏ РїСЂРёСЃР»Р°Р» Р›РµС„С‚Рё, СЏ РїСЂРёРЅРµСЃ С‚РµР±Рµ РІРѕРґС‹.";
 };
 
 
@@ -113,11 +113,11 @@ func int Info_Bau_9_Wasser_Condition()
 
 func void Info_Bau_9_Wasser_Info()
 {
-	AI_Output(other,self,"Info_Bau_9_Wasser_15_00");	//Меня прислал Лефти, я принес тебе воды.
+	AI_Output(other,self,"Info_Bau_9_Wasser_15_00");	//РњРµРЅСЏ РїСЂРёСЃР»Р°Р» Р›РµС„С‚Рё, СЏ РїСЂРёРЅРµСЃ С‚РµР±Рµ РІРѕРґС‹.
 	if(Npc_HasItems(other,ItFo_Potion_Water_01) >= 1)
 	{
-		b_printtrademsg1("Отдана бутылка воды.");
-		AI_Output(self,other,"Info_Bau_9_Wasser_09_01");	//Спасибо, парень. А то я уже был готов пить хоть из лужи.
+		b_printtrademsg1("РћС‚РґР°РЅР° Р±СѓС‚С‹Р»РєР° РІРѕРґС‹.");
+		AI_Output(self,other,"Info_Bau_9_Wasser_09_01");	//РЎРїР°СЃРёР±Рѕ, РїР°СЂРµРЅСЊ. Рђ С‚Рѕ СЏ СѓР¶Рµ Р±С‹Р» РіРѕС‚РѕРІ РїРёС‚СЊ С…РѕС‚СЊ РёР· Р»СѓР¶Рё.
 		B_GiveInvItems(other,self,ItFo_Potion_Water_01,1);
 		if(C_BodyStateContains(self,BS_SIT))
 		{
@@ -134,7 +134,7 @@ func void Info_Bau_9_Wasser_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"Info_Bau_9_Wasser_NOWATER_09_00");	//У тебя же ничего нет. Ладно, может, у других есть.
+		AI_Output(self,other,"Info_Bau_9_Wasser_NOWATER_09_00");	//РЈ С‚РµР±СЏ Р¶Рµ РЅРёС‡РµРіРѕ РЅРµС‚. Р›Р°РґРЅРѕ, РјРѕР¶РµС‚, Сѓ РґСЂСѓРіРёС… РµСЃС‚СЊ.
 	};
 };
 
@@ -145,7 +145,7 @@ instance INFO_BAU_9_WASSER_NOLEFTY(C_Info)
 	condition = info_bau_9_wasser_nolefty_condition;
 	information = info_bau_9_wasser_nolefty_info;
 	permanent = 1;
-	description = "Я принес тебе воды.";
+	description = "РЇ РїСЂРёРЅРµСЃ С‚РµР±Рµ РІРѕРґС‹.";
 };
 
 
@@ -161,9 +161,9 @@ func int info_bau_9_wasser_nolefty_condition()
 
 func void info_bau_9_wasser_nolefty_info()
 {
-	AI_Output(other,self,"Info_Wasser_NoLefty");	//Я принес тебе воды.
-	b_printtrademsg1("Отдана бутылка воды.");
-	AI_Output(self,other,"SVM_9_YeahWellDone");	//Отлично, парень!
+	AI_Output(other,self,"Info_Wasser_NoLefty");	//РЇ РїСЂРёРЅРµСЃ С‚РµР±Рµ РІРѕРґС‹.
+	b_printtrademsg1("РћС‚РґР°РЅР° Р±СѓС‚С‹Р»РєР° РІРѕРґС‹.");
+	AI_Output(self,other,"SVM_9_YeahWellDone");	//РћС‚Р»РёС‡РЅРѕ, РїР°СЂРµРЅСЊ!
 	self.aivar[AIV_DEALDAY] = Wld_GetDay() + 1;
 	B_GiveInvItems(other,self,ItFo_Potion_Water_01,1);
 	if(C_BodyStateContains(self,BS_SIT))

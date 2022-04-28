@@ -26,7 +26,7 @@ instance Info_Mine_Grd_6_Mine(C_Info)
 	condition = Info_Mine_Grd_6_Mine_Condition;
 	information = Info_Mine_Grd_6_Mine_Info;
 	permanent = 1;
-	description = "Что происходит на шахте?";
+	description = "Р§С‚Рѕ РїСЂРѕРёСЃС…РѕРґРёС‚ РЅР° С€Р°С…С‚Рµ?";
 };
 
 
@@ -40,8 +40,8 @@ func int Info_Mine_Grd_6_Mine_Condition()
 
 func void Info_Mine_Grd_6_Mine_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_6_Mine_15_00");	//Что происходит на шахте?
-	AI_Output(self,other,"Info_Mine_Grd_6_Mine_06_01");	//Рудокопы добывают руду. Кто не хочет работать, того ждет нещадное наказание.
+	AI_Output(other,self,"Info_Mine_Grd_6_Mine_15_00");	//Р§С‚Рѕ РїСЂРѕРёСЃС…РѕРґРёС‚ РЅР° С€Р°С…С‚Рµ?
+	AI_Output(self,other,"Info_Mine_Grd_6_Mine_06_01");	//Р СѓРґРѕРєРѕРїС‹ РґРѕР±С‹РІР°СЋС‚ СЂСѓРґСѓ. РљС‚Рѕ РЅРµ С…РѕС‡РµС‚ СЂР°Р±РѕС‚Р°С‚СЊ, С‚РѕРіРѕ Р¶РґРµС‚ РЅРµС‰Р°РґРЅРѕРµ РЅР°РєР°Р·Р°РЅРёРµ.
 };
 
 
@@ -51,7 +51,7 @@ instance Info_Mine_Grd_6_WichtigePersonen(C_Info)
 	condition = Info_Mine_Grd_6_WichtigePersonen_Condition;
 	information = Info_Mine_Grd_6_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто здесь командует?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РєРѕРјР°РЅРґСѓРµС‚?";
 };
 
 
@@ -65,8 +65,8 @@ func int Info_Mine_Grd_6_WichtigePersonen_Condition()
 
 func void Info_Mine_Grd_6_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_6_WichtigePersonen_15_00");	//Кто здесь командует?
-	AI_Output(self,other,"Info_Mine_Grd_6_WichtigePersonen_06_01");	//Асгхан командует стражниками, а Ян управляет шахтой, организует добычу руды.
+	AI_Output(other,self,"Info_Mine_Grd_6_WichtigePersonen_15_00");	//РљС‚Рѕ Р·РґРµСЃСЊ РєРѕРјР°РЅРґСѓРµС‚?
+	AI_Output(self,other,"Info_Mine_Grd_6_WichtigePersonen_06_01");	//РђСЃРіС…Р°РЅ РєРѕРјР°РЅРґСѓРµС‚ СЃС‚СЂР°Р¶РЅРёРєР°РјРё, Р° РЇРЅ СѓРїСЂР°РІР»СЏРµС‚ С€Р°С…С‚РѕР№, РѕСЂРіР°РЅРёР·СѓРµС‚ РґРѕР±С‹С‡Сѓ СЂСѓРґС‹.
 };
 
 
@@ -76,7 +76,7 @@ instance Info_Mine_Grd_6_Minecrawler(C_Info)
 	condition = Info_Mine_Grd_6_Minecrawler_Condition;
 	information = Info_Mine_Grd_6_Minecrawler_Info;
 	permanent = 1;
-	description = "Расскажи мне о ползунах.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ РїРѕР»Р·СѓРЅР°С….";
 };
 
 
@@ -90,8 +90,8 @@ func int Info_Mine_Grd_6_Minecrawler_Condition()
 
 func void Info_Mine_Grd_6_Minecrawler_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_6_Minecrawler_15_00");	//Расскажи мне о ползунах.
-	AI_Output(self,other,"Info_Mine_Grd_6_Minecrawler_06_01");	//Эти твари сильно портят нам жизнь. Даже не знаю, от кого больше проблем: от них или от рудокопов.
+	AI_Output(other,self,"Info_Mine_Grd_6_Minecrawler_15_00");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ РїРѕР»Р·СѓРЅР°С….
+	AI_Output(self,other,"Info_Mine_Grd_6_Minecrawler_06_01");	//Р­С‚Рё С‚РІР°СЂРё СЃРёР»СЊРЅРѕ РїРѕСЂС‚СЏС‚ РЅР°Рј Р¶РёР·РЅСЊ. Р”Р°Р¶Рµ РЅРµ Р·РЅР°СЋ, РѕС‚ РєРѕРіРѕ Р±РѕР»СЊС€Рµ РїСЂРѕР±Р»РµРј: РѕС‚ РЅРёС… РёР»Рё РѕС‚ СЂСѓРґРѕРєРѕРїРѕРІ.
 };
 
 
@@ -101,7 +101,7 @@ instance Info_Mine_Grd_6_DieLage(C_Info)
 	condition = Info_Mine_Grd_6_DieLage_Condition;
 	information = Info_Mine_Grd_6_DieLage_Info;
 	permanent = 1;
-	description = "Как идут дела?";
+	description = "РљР°Рє РёРґСѓС‚ РґРµР»Р°?";
 };
 
 
@@ -115,8 +115,8 @@ func int Info_Mine_Grd_6_DieLage_Condition()
 
 func void Info_Mine_Grd_6_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_6_DieLage_15_00");	//Как идут дела?
-	AI_Output(self,other,"Info_Mine_Grd_6_DieLage_06_01");	//А ты как думаешь?
+	AI_Output(other,self,"Info_Mine_Grd_6_DieLage_15_00");	//РљР°Рє РёРґСѓС‚ РґРµР»Р°?
+	AI_Output(self,other,"Info_Mine_Grd_6_DieLage_06_01");	//Рђ С‚С‹ РєР°Рє РґСѓРјР°РµС€СЊ?
 };
 
 func void B_AssignAmbientInfos_Mine_GRD_6(var C_Npc slf)

@@ -22,15 +22,15 @@ func void ZS_Preach_YBerion_Loop()
 	preachtime = Hlp_Random(100);
 	if(preachtime <= 3)
 	{
-		AI_Output(self,NULL,"ZS_Preach_YBerion01");	//Спящий говорил со мной!
+		AI_Output(self,NULL,"ZS_Preach_YBerion01");	//РЎРїСЏС‰РёР№ РіРѕРІРѕСЂРёР» СЃРѕ РјРЅРѕР№!
 	}
 	else if(preachtime >= 98)
 	{
-		AI_Output(self,NULL,"ZS_Preach_YBerion02");	//Спящий освободит нас.
+		AI_Output(self,NULL,"ZS_Preach_YBerion02");	//РЎРїСЏС‰РёР№ РѕСЃРІРѕР±РѕРґРёС‚ РЅР°СЃ.
 	}
 	else if(preachtime >= 95)
 	{
-		AI_Output(self,NULL,"ZS_Preach_YBerion03");	//Пробудись, о Спящий!
+		AI_Output(self,NULL,"ZS_Preach_YBerion03");	//РџСЂРѕР±СѓРґРёСЃСЊ, Рѕ РЎРїСЏС‰РёР№!
 	};
 	AI_Wait(self,1);
 };

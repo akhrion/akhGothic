@@ -13,7 +13,7 @@ func void ZS_AssessDefeat()
 	{
 		if(C_NpcIsMonster(other))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Sieg von oder über Monster!");
+			PrintDebugNpc(PD_ZS_Check,"...Sieg von oder ÑŒber Monster!");
 			AI_StartState(self,ZS_AssessMonster,0,"");
 			return;
 		}
@@ -29,7 +29,7 @@ func void ZS_AssessDefeat()
 		B_AssessAndMemorize(NEWS_DEFEAT,NEWS_SOURCE_WITNESS,self,other,victim);
 		if(C_ChargeWasAttacked(self,victim,other))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein Schützling wurde besiegt!");
+			PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein SchÑŒtzling wurde besiegt!");
 			B_DrawWeapon(self,other);
 			AI_StartState(self,ZS_ProclaimAndPunish,0,"");
 			return;

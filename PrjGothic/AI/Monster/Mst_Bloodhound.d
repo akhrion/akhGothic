@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Bloodhound(C_Npc)
 {
-	name[0] = "������";
+	name[0] = "Ищейка";
 	guild = GIL_SHADOWBEAST;
 	aivar[AIV_IMPORTANT] = ID_BLOODHOUND;
 	level = 22;
@@ -44,4 +44,10 @@ instance Bloodhound(Mst_Default_Bloodhound)
 	Set_Bloodhound_Visuals();
 	Npc_SetToFistMode(self);
 };
-
+instance Bloodhound_Egg(Egg)
+{
+	name[0] = "Яйцо ишейки";
+	guild = GIL_SHADOWBEAST;
+	spawnDelay = 1500;
+	start_aistate = B_MM_Respawn;
+};

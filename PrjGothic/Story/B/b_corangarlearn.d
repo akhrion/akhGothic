@@ -17,6 +17,7 @@ func void b_corangarlearn()
 		Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5 * LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_5);
 		Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),GUR_1202_CorAngar_Teach_DEX_1);
 	};
+	Npc_ChangeModelFatness(other);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
 	{
 		Info_AddChoice(GUR_1202_CorAngar_Teach,B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0),GUR_1202_CorAngar_ZWEIHAND1);
@@ -57,7 +58,7 @@ instance DIA_CorAngar_LaterTrainer(C_Info)
 	condition = DIA_CorAngar_LaterTrainer_Condition;
 	information = DIA_CorAngar_LaterTrainer_Info;
 	permanent = 0;
-	description = "Ты можешь научить меня чему-нибудь?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ?";
 };
 
 
@@ -71,10 +72,10 @@ func int DIA_CorAngar_LaterTrainer_Condition()
 
 func void DIA_CorAngar_LaterTrainer_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_LaterTrainer_15_00");	//Ты можешь научить меня чему-нибудь?
-	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_01");	//Хочешь стать хорошим воином? Да, тебе действительно нужно найти опытного учителя.
-	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_02");	//Хорошо. Но, к сожалению, я не тот, кто сможет помочь тебе.
-	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_03");	//Я обучаю лишь тех, кто входит в священный круг Стражей.
+	AI_Output(other,self,"GUR_1202_CorAngar_LaterTrainer_15_00");	//РўС‹ РјРѕР¶РµС€СЊ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ?
+	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_01");	//РҐРѕС‡РµС€СЊ СЃС‚Р°С‚СЊ С…РѕСЂРѕС€РёРј РІРѕРёРЅРѕРј? Р”Р°, С‚РµР±Рµ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РЅСѓР¶РЅРѕ РЅР°Р№С‚Рё РѕРїС‹С‚РЅРѕРіРѕ СѓС‡РёС‚РµР»СЏ.
+	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_02");	//РҐРѕСЂРѕС€Рѕ. РќРѕ, Рє СЃРѕР¶Р°Р»РµРЅРёСЋ, СЏ РЅРµ С‚РѕС‚, РєС‚Рѕ СЃРјРѕР¶РµС‚ РїРѕРјРѕС‡СЊ С‚РµР±Рµ.
+	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_03");	//РЇ РѕР±СѓС‡Р°СЋ Р»РёС€СЊ С‚РµС…, РєС‚Рѕ РІС…РѕРґРёС‚ РІ СЃРІСЏС‰РµРЅРЅС‹Р№ РєСЂСѓРі РЎС‚СЂР°Р¶РµР№.
 };
 
 
@@ -85,7 +86,7 @@ instance DIA_CORANGAR_LATERTRAINER2(C_Info)
 	condition = dia_corangar_latertrainer2_condition;
 	information = dia_corangar_latertrainer2_info;
 	permanent = 0;
-	description = "Ты можешь научить меня чему-нибудь?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ?";
 };
 
 
@@ -99,13 +100,13 @@ func int dia_corangar_latertrainer2_condition()
 
 func void dia_corangar_latertrainer2_info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_LaterTrainer_15_00");	//Ты можешь научить меня чему-нибудь?
-	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_01");	//Хочешь стать хорошим воином? Да, тебе действительно нужно найти опытного учителя.
-	AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02");	//Чтобы овладеть техникой боя с двуручным мечом, нужна определенная сила и ловкость.
-	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01");	//Ловкость и сила - очень важные характеристики воина.
+	AI_Output(other,self,"GUR_1202_CorAngar_LaterTrainer_15_00");	//РўС‹ РјРѕР¶РµС€СЊ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ?
+	AI_Output(self,other,"GUR_1202_CorAngar_LaterTrainer_08_01");	//РҐРѕС‡РµС€СЊ СЃС‚Р°С‚СЊ С…РѕСЂРѕС€РёРј РІРѕРёРЅРѕРј? Р”Р°, С‚РµР±Рµ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РЅСѓР¶РЅРѕ РЅР°Р№С‚Рё РѕРїС‹С‚РЅРѕРіРѕ СѓС‡РёС‚РµР»СЏ.
+	AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_02");	//Р§С‚РѕР±С‹ РѕРІР»Р°РґРµС‚СЊ С‚РµС…РЅРёРєРѕР№ Р±РѕСЏ СЃ РґРІСѓСЂСѓС‡РЅС‹Рј РјРµС‡РѕРј, РЅСѓР¶РЅР° РѕРїСЂРµРґРµР»РµРЅРЅР°СЏ СЃРёР»Р° Рё Р»РѕРІРєРѕСЃС‚СЊ.
+	AI_Output(self,other,"GUR_1202_CorAngar_Teach_08_01");	//Р›РѕРІРєРѕСЃС‚СЊ Рё СЃРёР»Р° - РѕС‡РµРЅСЊ РІР°Р¶РЅС‹Рµ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєРё РІРѕРёРЅР°.
 	Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
-	B_LogEntry(GE_TeacherPSI,"Кор Ангар может помочь мне увеличить силу и ловкость. Я смогу найти его на тренировочной площадке Стражей, на втором уровне.");
-	B_LogEntry(GE_TeacherPSI,"Кор Ангар может научить меня обращаться с двуручным мечом. Но это произойдет после того, как я освою бой с одноручным оружием.");
+	B_LogEntry(GE_TeacherPSI,"РљРѕСЂ РђРЅРіР°СЂ РјРѕР¶РµС‚ РїРѕРјРѕС‡СЊ РјРЅРµ СѓРІРµР»РёС‡РёС‚СЊ СЃРёР»Сѓ Рё Р»РѕРІРєРѕСЃС‚СЊ. РЇ СЃРјРѕРіСѓ РЅР°Р№С‚Рё РµРіРѕ РЅР° С‚СЂРµРЅРёСЂРѕРІРѕС‡РЅРѕР№ РїР»РѕС‰Р°РґРєРµ РЎС‚СЂР°Р¶РµР№, РЅР° РІС‚РѕСЂРѕРј СѓСЂРѕРІРЅРµ.");
+	B_LogEntry(GE_TeacherPSI,"РљРѕСЂ РђРЅРіР°СЂ РјРѕР¶РµС‚ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ РѕР±СЂР°С‰Р°С‚СЊСЃСЏ СЃ РґРІСѓСЂСѓС‡РЅС‹Рј РјРµС‡РѕРј. РќРѕ СЌС‚Рѕ РїСЂРѕРёР·РѕР№РґРµС‚ РїРѕСЃР»Рµ С‚РѕРіРѕ, РєР°Рє СЏ РѕСЃРІРѕСЋ Р±РѕР№ СЃ РѕРґРЅРѕСЂСѓС‡РЅС‹Рј РѕСЂСѓР¶РёРµРј.");
 };
 
 
@@ -116,7 +117,7 @@ instance DIA_CorAngar_WieTempler(C_Info)
 	condition = DIA_CorAngar_WieTempler_Condition;
 	information = DIA_CorAngar_WieTempler_Info;
 	permanent = 1;
-	description = "Как мне стать одним из Стражей?";
+	description = "РљР°Рє РјРЅРµ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· РЎС‚СЂР°Р¶РµР№?";
 };
 
 
@@ -130,9 +131,9 @@ func int DIA_CorAngar_WieTempler_Condition()
 
 func void DIA_CorAngar_WieTempler_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_WieTempler_15_00");	//Как мне стать одним из Стражей?
-	AI_Output(self,other,"GUR_1202_CorAngar_WieTempler_08_01");	//Для этого тебе нужно доказать веру в Спящего и преданность ему, став послушником.
-	AI_Output(self,other,"GUR_1202_CorAngar_WieTempler_08_02");	//После этого приходи ко мне, и я буду учить тебя.
+	AI_Output(other,self,"GUR_1202_CorAngar_WieTempler_15_00");	//РљР°Рє РјРЅРµ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· РЎС‚СЂР°Р¶РµР№?
+	AI_Output(self,other,"GUR_1202_CorAngar_WieTempler_08_01");	//Р”Р»СЏ СЌС‚РѕРіРѕ С‚РµР±Рµ РЅСѓР¶РЅРѕ РґРѕРєР°Р·Р°С‚СЊ РІРµСЂСѓ РІ РЎРїСЏС‰РµРіРѕ Рё РїСЂРµРґР°РЅРЅРѕСЃС‚СЊ РµРјСѓ, СЃС‚Р°РІ РїРѕСЃР»СѓС€РЅРёРєРѕРј.
+	AI_Output(self,other,"GUR_1202_CorAngar_WieTempler_08_02");	//РџРѕСЃР»Рµ СЌС‚РѕРіРѕ РїСЂРёС…РѕРґРё РєРѕ РјРЅРµ, Рё СЏ Р±СѓРґСѓ СѓС‡РёС‚СЊ С‚РµР±СЏ.
 	AI_StopProcessInfos(self);
 };
 
@@ -144,7 +145,7 @@ instance GUR_1202_CorAngar_Teach(C_Info)
 	condition = GUR_1202_CorAngar_Teach_Condition;
 	information = GUR_1202_CorAngar_Teach_Info;
 	permanent = 1;
-	description = "Как я могу увеличить силу и ловкость?";
+	description = "РљР°Рє СЏ РјРѕРіСѓ СѓРІРµР»РёС‡РёС‚СЊ СЃРёР»Сѓ Рё Р»РѕРІРєРѕСЃС‚СЊ?";
 };
 
 
@@ -158,7 +159,7 @@ func int GUR_1202_CorAngar_Teach_Condition()
 
 func void GUR_1202_CorAngar_Teach_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_Teach_15_00");	//Как я могу увеличить силу и ловкость?
+	AI_Output(other,self,"GUR_1202_CorAngar_Teach_15_00");	//РљР°Рє СЏ РјРѕРіСѓ СѓРІРµР»РёС‡РёС‚СЊ СЃРёР»Сѓ Рё Р»РѕРІРєРѕСЃС‚СЊ?
 	b_corangarlearn();
 };
 
@@ -177,15 +178,15 @@ func void GUR_1202_CorAngar_Teach_STR_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_STRENGTH] < 100))
 		{
-			b_printtrademsg1("Отдано руды: 10");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Мы еще встретимся!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//РњС‹ РµС‰Рµ РІСЃС‚СЂРµС‚РёРјСЃСЏ!
 	};
 	b_corangarlearn();
 };
@@ -200,15 +201,15 @@ func void GUR_1202_CorAngar_Teach_STR_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_STRENGTH] < 96))
 		{
-			b_printtrademsg1("Отдано руды: 50");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,5 * LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Мы еще встретимся!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//РњС‹ РµС‰Рµ РІСЃС‚СЂРµС‚РёРјСЃСЏ!
 	};
 	b_corangarlearn();
 };
@@ -223,15 +224,15 @@ func void GUR_1202_CorAngar_Teach_DEX_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_DEXTERITY] < 100))
 		{
-			b_printtrademsg1("Отдано руды: 10");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Мы еще встретимся!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//РњС‹ РµС‰Рµ РІСЃС‚СЂРµС‚РёРјСЃСЏ!
 	};
 	b_corangarlearn();
 };
@@ -246,48 +247,48 @@ func void GUR_1202_CorAngar_Teach_DEX_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_DEXTERITY] < 96))
 		{
-			b_printtrademsg1("Отдано руды: 50");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,5 * LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Мы еще встретимся!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//РњС‹ РµС‰Рµ РІСЃС‚СЂРµС‚РёРјСЃСЏ!
 	};
 	b_corangarlearn();
 };
 
 func void GUR_1202_CorAngar_ZWEIHAND1()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND1_Info_15_01");	//Научи меня вести бой двуручным мечом.
+	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND1_Info_15_01");	//РќР°СѓС‡Рё РјРµРЅСЏ РІРµСЃС‚Рё Р±РѕР№ РґРІСѓСЂСѓС‡РЅС‹Рј РјРµС‡РѕРј.
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_1H) < 2)
 	{
-		AI_Output(self,other,"SVM_8_NoLearnYouAlreadyKnow");	//Сначала ты должен изучить основы и только потом переходить к более сложным вещам.
-		PrintScreen("Требуется мастерство одноручного оружия!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+		AI_Output(self,other,"SVM_8_NoLearnYouAlreadyKnow");	//РЎРЅР°С‡Р°Р»Р° С‚С‹ РґРѕР»Р¶РµРЅ РёР·СѓС‡РёС‚СЊ РѕСЃРЅРѕРІС‹ Рё С‚РѕР»СЊРєРѕ РїРѕС‚РѕРј РїРµСЂРµС…РѕРґРёС‚СЊ Рє Р±РѕР»РµРµ СЃР»РѕР¶РЅС‹Рј РІРµС‰Р°Рј.
+		PrintScreen("РўСЂРµР±СѓРµС‚СЃСЏ РјР°СЃС‚РµСЂСЃС‚РІРѕ РѕРґРЅРѕСЂСѓС‡РЅРѕРіРѕ РѕСЂСѓР¶РёСЏ!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	}
 	else if(B_GiveSkill(other,NPC_TALENT_2H,1,LPCOST_TALENT_2H_1))
 	{
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03");	//Ты справишься с таким оружием только тогда, когда сможешь управлять не только своим телом, но и духом.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04");	//Пройдя эту ступень подготовки, закалив свое тело и дух, ты сможешь справиться с мечом.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05");	//Ключ к этому - умение сосредоточиться. В нем тело и дух становятся единым целым.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_03");	//РўС‹ СЃРїСЂР°РІРёС€СЊСЃСЏ СЃ С‚Р°РєРёРј РѕСЂСѓР¶РёРµРј С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° СЃРјРѕР¶РµС€СЊ СѓРїСЂР°РІР»СЏС‚СЊ РЅРµ С‚РѕР»СЊРєРѕ СЃРІРѕРёРј С‚РµР»РѕРј, РЅРѕ Рё РґСѓС…РѕРј.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_04");	//РџСЂРѕР№РґСЏ СЌС‚Сѓ СЃС‚СѓРїРµРЅСЊ РїРѕРґРіРѕС‚РѕРІРєРё, Р·Р°РєР°Р»РёРІ СЃРІРѕРµ С‚РµР»Рѕ Рё РґСѓС…, С‚С‹ СЃРјРѕР¶РµС€СЊ СЃРїСЂР°РІРёС‚СЊСЃСЏ СЃ РјРµС‡РѕРј.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND1_Info_08_05");	//РљР»СЋС‡ Рє СЌС‚РѕРјСѓ - СѓРјРµРЅРёРµ СЃРѕСЃСЂРµРґРѕС‚РѕС‡РёС‚СЊСЃСЏ. Р’ РЅРµРј С‚РµР»Рѕ Рё РґСѓС… СЃС‚Р°РЅРѕРІСЏС‚СЃСЏ РµРґРёРЅС‹Рј С†РµР»С‹Рј.
 	};
 	b_corangarlearn();
 };
 
 func void GUR_1202_CorAngar_ZWEIHAND2()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01");	//Я хочу научиться еще лучше обращаться с двуручным мечом.
+	AI_Output(other,self,"GUR_1202_CorAngar_ZWEIHAND2_Info_15_01");	//РЇ С…РѕС‡Сѓ РЅР°СѓС‡РёС‚СЊСЃСЏ РµС‰Рµ Р»СѓС‡С€Рµ РѕР±СЂР°С‰Р°С‚СЊСЃСЏ СЃ РґРІСѓСЂСѓС‡РЅС‹Рј РјРµС‡РѕРј.
 	if(B_GiveSkill(other,NPC_TALENT_2H,2,LPCOST_TALENT_2H_2))
 	{
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02");	//Ты уже освоил основы владения этим оружием. Теперь я научу тебя приемам, достойным мастера.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_03");	//Сила твоего духа поможет тебе предугадывать движения противника до того, как он нанесет удар.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_04");	//Если ты знаешь тактику противника, то победа уже наполовину в твоих руках.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_05");	//Скорость - твое преимущество. Старайся, чтобы движения были плавными и неожиданными, а удары - точными и сильными.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_06");	//Учись не обращать внимания на боль. Исход битвы будет зависеть от твоей силы воли.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_07");	//Сохраняй спокойствие духа. Ты сможешь победить противника, если будешь идти в бой спокойным и сосредоточенным.
-		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_08");	//Используй свою силу осторожно и помни: тебя легче убить, если ты сам стал причиной поединка.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_02");	//РўС‹ СѓР¶Рµ РѕСЃРІРѕРёР» РѕСЃРЅРѕРІС‹ РІР»Р°РґРµРЅРёСЏ СЌС‚РёРј РѕСЂСѓР¶РёРµРј. РўРµРїРµСЂСЊ СЏ РЅР°СѓС‡Сѓ С‚РµР±СЏ РїСЂРёРµРјР°Рј, РґРѕСЃС‚РѕР№РЅС‹Рј РјР°СЃС‚РµСЂР°.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_03");	//РЎРёР»Р° С‚РІРѕРµРіРѕ РґСѓС…Р° РїРѕРјРѕР¶РµС‚ С‚РµР±Рµ РїСЂРµРґСѓРіР°РґС‹РІР°С‚СЊ РґРІРёР¶РµРЅРёСЏ РїСЂРѕС‚РёРІРЅРёРєР° РґРѕ С‚РѕРіРѕ, РєР°Рє РѕРЅ РЅР°РЅРµСЃРµС‚ СѓРґР°СЂ.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_04");	//Р•СЃР»Рё С‚С‹ Р·РЅР°РµС€СЊ С‚Р°РєС‚РёРєСѓ РїСЂРѕС‚РёРІРЅРёРєР°, С‚Рѕ РїРѕР±РµРґР° СѓР¶Рµ РЅР°РїРѕР»РѕРІРёРЅСѓ РІ С‚РІРѕРёС… СЂСѓРєР°С….
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_05");	//РЎРєРѕСЂРѕСЃС‚СЊ - С‚РІРѕРµ РїСЂРµРёРјСѓС‰РµСЃС‚РІРѕ. РЎС‚Р°СЂР°Р№СЃСЏ, С‡С‚РѕР±С‹ РґРІРёР¶РµРЅРёСЏ Р±С‹Р»Рё РїР»Р°РІРЅС‹РјРё Рё РЅРµРѕР¶РёРґР°РЅРЅС‹РјРё, Р° СѓРґР°СЂС‹ - С‚РѕС‡РЅС‹РјРё Рё СЃРёР»СЊРЅС‹РјРё.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_06");	//РЈС‡РёСЃСЊ РЅРµ РѕР±СЂР°С‰Р°С‚СЊ РІРЅРёРјР°РЅРёСЏ РЅР° Р±РѕР»СЊ. РСЃС…РѕРґ Р±РёС‚РІС‹ Р±СѓРґРµС‚ Р·Р°РІРёСЃРµС‚СЊ РѕС‚ С‚РІРѕРµР№ СЃРёР»С‹ РІРѕР»Рё.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_07");	//РЎРѕС…СЂР°РЅСЏР№ СЃРїРѕРєРѕР№СЃС‚РІРёРµ РґСѓС…Р°. РўС‹ СЃРјРѕР¶РµС€СЊ РїРѕР±РµРґРёС‚СЊ РїСЂРѕС‚РёРІРЅРёРєР°, РµСЃР»Рё Р±СѓРґРµС€СЊ РёРґС‚Рё РІ Р±РѕР№ СЃРїРѕРєРѕР№РЅС‹Рј Рё СЃРѕСЃСЂРµРґРѕС‚РѕС‡РµРЅРЅС‹Рј.
+		AI_Output(self,other,"GUR_1202_CorAngar_ZWEIHAND2_Info_08_08");	//РСЃРїРѕР»СЊР·СѓР№ СЃРІРѕСЋ СЃРёР»Сѓ РѕСЃС‚РѕСЂРѕР¶РЅРѕ Рё РїРѕРјРЅРё: С‚РµР±СЏ Р»РµРіС‡Рµ СѓР±РёС‚СЊ, РµСЃР»Рё С‚С‹ СЃР°Рј СЃС‚Р°Р» РїСЂРёС‡РёРЅРѕР№ РїРѕРµРґРёРЅРєР°.
 	};
 	b_corangarlearn();
 };
@@ -301,7 +302,7 @@ instance GUR_1202_CorAngar_WANNABETPL(C_Info)
 	information = GUR_1202_CorAngar_WANNABETPL_Info;
 	important = 0;
 	permanent = 1;
-	description = "Я хочу стать Стражем!";
+	description = "РЇ С…РѕС‡Сѓ СЃС‚Р°С‚СЊ РЎС‚СЂР°Р¶РµРј!";
 };
 
 
@@ -315,28 +316,28 @@ func int GUR_1202_CorAngar_WANNABETPL_Condition()
 
 func void GUR_1202_CorAngar_WANNABETPL_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_WANNABETPL_Info_15_01");	//Я хочу стать Стражем!
+	AI_Output(other,self,"GUR_1202_CorAngar_WANNABETPL_Info_15_01");	//РЇ С…РѕС‡Сѓ СЃС‚Р°С‚СЊ РЎС‚СЂР°Р¶РµРј!
 	if(CorKalom_BringMCQBalls != LOG_SUCCESS)
 	{
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02");	//Ты еще к этому не готов. Я смогу принять только тогда, когда у тебя будет больше опыта.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02");	//РўС‹ РµС‰Рµ Рє СЌС‚РѕРјСѓ РЅРµ РіРѕС‚РѕРІ. РЇ СЃРјРѕРіСѓ РїСЂРёРЅСЏС‚СЊ С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° Сѓ С‚РµР±СЏ Р±СѓРґРµС‚ Р±РѕР»СЊС€Рµ РѕРїС‹С‚Р°.
 	}
 	else if(hero.level < 10)
 	{
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02");	//Ты еще к этому не готов. Я смогу принять только тогда, когда у тебя будет больше опыта.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_02");	//РўС‹ РµС‰Рµ Рє СЌС‚РѕРјСѓ РЅРµ РіРѕС‚РѕРІ. РЇ СЃРјРѕРіСѓ РїСЂРёРЅСЏС‚СЊ С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° Сѓ С‚РµР±СЏ Р±СѓРґРµС‚ Р±РѕР»СЊС€Рµ РѕРїС‹С‚Р°.
 		B_PrintGuildCondition(10);
 	}
 	else if(hero.level >= 10)
 	{
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_03");	//Твое время пришло, ты можешь присоединиться к нам.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_04");	//Ты должен знать, что Страж не просто защитник лагеря и хороший воин. Мы избранные Стражи Спящего, Стражи духа.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05");	//Мы в равной мере используем силу тела и силу духа. Настоящим Стражем может стать только тот, чье тело и дух пребывают в гармонии.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_06");	//Я рад, что ты добился таких хороших результатов, затратив на это так мало времени. Ты готов быть принятым в круг Стражей.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_07");	//Запомни, когда твой дух силен и тело закалено, ты можешь отразить любую угрозу.
-		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08");	//Сходи к Гор На Тофу на тренировочную площадку. Он даст тебе твои новые доспехи.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_03");	//РўРІРѕРµ РІСЂРµРјСЏ РїСЂРёС€Р»Рѕ, С‚С‹ РјРѕР¶РµС€СЊ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РЅР°Рј.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_04");	//РўС‹ РґРѕР»Р¶РµРЅ Р·РЅР°С‚СЊ, С‡С‚Рѕ РЎС‚СЂР°Р¶ РЅРµ РїСЂРѕСЃС‚Рѕ Р·Р°С‰РёС‚РЅРёРє Р»Р°РіРµСЂСЏ Рё С…РѕСЂРѕС€РёР№ РІРѕРёРЅ. РњС‹ РёР·Р±СЂР°РЅРЅС‹Рµ РЎС‚СЂР°Р¶Рё РЎРїСЏС‰РµРіРѕ, РЎС‚СЂР°Р¶Рё РґСѓС…Р°.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_05");	//РњС‹ РІ СЂР°РІРЅРѕР№ РјРµСЂРµ РёСЃРїРѕР»СЊР·СѓРµРј СЃРёР»Сѓ С‚РµР»Р° Рё СЃРёР»Сѓ РґСѓС…Р°. РќР°СЃС‚РѕСЏС‰РёРј РЎС‚СЂР°Р¶РµРј РјРѕР¶РµС‚ СЃС‚Р°С‚СЊ С‚РѕР»СЊРєРѕ С‚РѕС‚, С‡СЊРµ С‚РµР»Рѕ Рё РґСѓС… РїСЂРµР±С‹РІР°СЋС‚ РІ РіР°СЂРјРѕРЅРёРё.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_06");	//РЇ СЂР°Рґ, С‡С‚Рѕ С‚С‹ РґРѕР±РёР»СЃСЏ С‚Р°РєРёС… С…РѕСЂРѕС€РёС… СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ, Р·Р°С‚СЂР°С‚РёРІ РЅР° СЌС‚Рѕ С‚Р°Рє РјР°Р»Рѕ РІСЂРµРјРµРЅРё. РўС‹ РіРѕС‚РѕРІ Р±С‹С‚СЊ РїСЂРёРЅСЏС‚С‹Рј РІ РєСЂСѓРі РЎС‚СЂР°Р¶РµР№.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_07");	//Р—Р°РїРѕРјРЅРё, РєРѕРіРґР° С‚РІРѕР№ РґСѓС… СЃРёР»РµРЅ Рё С‚РµР»Рѕ Р·Р°РєР°Р»РµРЅРѕ, С‚С‹ РјРѕР¶РµС€СЊ РѕС‚СЂР°Р·РёС‚СЊ Р»СЋР±СѓСЋ СѓРіСЂРѕР·Сѓ.
+		AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_08");	//РЎС…РѕРґРё Рє Р“РѕСЂ РќР° РўРѕС„Сѓ РЅР° С‚СЂРµРЅРёСЂРѕРІРѕС‡РЅСѓСЋ РїР»РѕС‰Р°РґРєСѓ. РћРЅ РґР°СЃС‚ С‚РµР±Рµ С‚РІРѕРё РЅРѕРІС‹Рµ РґРѕСЃРїРµС…Рё.
 		Npc_SetTrueGuild(hero,GIL_TPL);
 		hero.guild = GIL_TPL;
 		Log_CreateTopic(GE_BecomeTemplar,LOG_NOTE);
-		B_LogEntry(GE_BecomeTemplar,"Сегодня Кор Ангар назначил меня Стражем. Я смогу взять свой новый доспех у Гор На Тофа. Обычно он стоит на тренировочной площадке.");
+		B_LogEntry(GE_BecomeTemplar,"РЎРµРіРѕРґРЅСЏ РљРѕСЂ РђРЅРіР°СЂ РЅР°Р·РЅР°С‡РёР» РјРµРЅСЏ РЎС‚СЂР°Р¶РµРј. РЇ СЃРјРѕРіСѓ РІР·СЏС‚СЊ СЃРІРѕР№ РЅРѕРІС‹Р№ РґРѕСЃРїРµС… Сѓ Р“РѕСЂ РќР° РўРѕС„Р°. РћР±С‹С‡РЅРѕ РѕРЅ СЃС‚РѕРёС‚ РЅР° С‚СЂРµРЅРёСЂРѕРІРѕС‡РЅРѕР№ РїР»РѕС‰Р°РґРєРµ.");
 	};
 };
 
@@ -348,7 +349,7 @@ instance GUR_1202_CorAngar_SENDS(C_Info)
 	information = GUR_1202_CorAngar_SENDS_Info;
 	important = 0;
 	permanent = 0;
-	description = "Что же нам теперь делать?";
+	description = "Р§С‚Рѕ Р¶Рµ РЅР°Рј С‚РµРїРµСЂСЊ РґРµР»Р°С‚СЊ?";
 };
 
 
@@ -362,35 +363,35 @@ func int GUR_1202_CorAngar_SENDS_Condition()
 
 func void GUR_1202_CorAngar_SENDS_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_01");	//Что же нам теперь делать?
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_02");	//Наше видение было очень неясным. Оно принесло нам больше вопросов, чем ответов.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03");	//Но одно стало ясно: мы видели орка в темной пещере. Недалеко отсюда есть заброшенный храм орков.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_04");	//Раньше орки хоронили там умерших, поэтому это место называлось у них кладбищем орков.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_05");	//Гуру Идол Люкор взял с собой нескольких Стражей и направился туда. Может быть, там мы найдем то, что послужит ответом на наши вопросы.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06");	//Мне нужен человек, который сможет пойти к ним, а затем вернуться ко мне и рассказать о том, что увидит.
-	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_07");	//Почему ты не можешь пойти туда сам? Ты же предводитель Стражей!
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_08");	//Моя задача - защищать Просвещенного. Я останусь здесь с Юберионом и буду охранять его.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09");	//Ты уже хорошо послужил нашему лагерю. Я доверяю тебе больше, чем кому бы-то ни было.
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10");	//Поэтому я прошу тебя, отправляйся на кладбище орков и расскажи мне, что удалось найти нашим Стражам.
+	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_01");	//Р§С‚Рѕ Р¶Рµ РЅР°Рј С‚РµРїРµСЂСЊ РґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_02");	//РќР°С€Рµ РІРёРґРµРЅРёРµ Р±С‹Р»Рѕ РѕС‡РµРЅСЊ РЅРµСЏСЃРЅС‹Рј. РћРЅРѕ РїСЂРёРЅРµСЃР»Рѕ РЅР°Рј Р±РѕР»СЊС€Рµ РІРѕРїСЂРѕСЃРѕРІ, С‡РµРј РѕС‚РІРµС‚РѕРІ.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_03");	//РќРѕ РѕРґРЅРѕ СЃС‚Р°Р»Рѕ СЏСЃРЅРѕ: РјС‹ РІРёРґРµР»Рё РѕСЂРєР° РІ С‚РµРјРЅРѕР№ РїРµС‰РµСЂРµ. РќРµРґР°Р»РµРєРѕ РѕС‚СЃСЋРґР° РµСЃС‚СЊ Р·Р°Р±СЂРѕС€РµРЅРЅС‹Р№ С…СЂР°Рј РѕСЂРєРѕРІ.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_04");	//Р Р°РЅСЊС€Рµ РѕСЂРєРё С…РѕСЂРѕРЅРёР»Рё С‚Р°Рј СѓРјРµСЂС€РёС…, РїРѕСЌС‚РѕРјСѓ СЌС‚Рѕ РјРµСЃС‚Рѕ РЅР°Р·С‹РІР°Р»РѕСЃСЊ Сѓ РЅРёС… РєР»Р°РґР±РёС‰РµРј РѕСЂРєРѕРІ.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_05");	//Р“СѓСЂСѓ РРґРѕР» Р›СЋРєРѕСЂ РІР·СЏР» СЃ СЃРѕР±РѕР№ РЅРµСЃРєРѕР»СЊРєРёС… РЎС‚СЂР°Р¶РµР№ Рё РЅР°РїСЂР°РІРёР»СЃСЏ С‚СѓРґР°. РњРѕР¶РµС‚ Р±С‹С‚СЊ, С‚Р°Рј РјС‹ РЅР°Р№РґРµРј С‚Рѕ, С‡С‚Рѕ РїРѕСЃР»СѓР¶РёС‚ РѕС‚РІРµС‚РѕРј РЅР° РЅР°С€Рё РІРѕРїСЂРѕСЃС‹.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_06");	//РњРЅРµ РЅСѓР¶РµРЅ С‡РµР»РѕРІРµРє, РєРѕС‚РѕСЂС‹Р№ СЃРјРѕР¶РµС‚ РїРѕР№С‚Рё Рє РЅРёРј, Р° Р·Р°С‚РµРј РІРµСЂРЅСѓС‚СЊСЃСЏ РєРѕ РјРЅРµ Рё СЂР°СЃСЃРєР°Р·Р°С‚СЊ Рѕ С‚РѕРј, С‡С‚Рѕ СѓРІРёРґРёС‚.
+	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_Info_15_07");	//РџРѕС‡РµРјСѓ С‚С‹ РЅРµ РјРѕР¶РµС€СЊ РїРѕР№С‚Рё С‚СѓРґР° СЃР°Рј? РўС‹ Р¶Рµ РїСЂРµРґРІРѕРґРёС‚РµР»СЊ РЎС‚СЂР°Р¶РµР№!
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_08");	//РњРѕСЏ Р·Р°РґР°С‡Р° - Р·Р°С‰РёС‰Р°С‚СЊ РџСЂРѕСЃРІРµС‰РµРЅРЅРѕРіРѕ. РЇ РѕСЃС‚Р°РЅСѓСЃСЊ Р·РґРµСЃСЊ СЃ Р®Р±РµСЂРёРѕРЅРѕРј Рё Р±СѓРґСѓ РѕС…СЂР°РЅСЏС‚СЊ РµРіРѕ.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_09");	//РўС‹ СѓР¶Рµ С…РѕСЂРѕС€Рѕ РїРѕСЃР»СѓР¶РёР» РЅР°С€РµРјСѓ Р»Р°РіРµСЂСЋ. РЇ РґРѕРІРµСЂСЏСЋ С‚РµР±Рµ Р±РѕР»СЊС€Рµ, С‡РµРј РєРѕРјСѓ Р±С‹-С‚Рѕ РЅРё Р±С‹Р»Рѕ.
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_Info_08_10");	//РџРѕСЌС‚РѕРјСѓ СЏ РїСЂРѕС€Сѓ С‚РµР±СЏ, РѕС‚РїСЂР°РІР»СЏР№СЃСЏ РЅР° РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ Рё СЂР°СЃСЃРєР°Р¶Рё РјРЅРµ, С‡С‚Рѕ СѓРґР°Р»РѕСЃСЊ РЅР°Р№С‚Рё РЅР°С€РёРј РЎС‚СЂР°Р¶Р°Рј.
 	Info_ClearChoices(GUR_1202_CorAngar_SENDS);
-	Info_AddChoice(GUR_1202_CorAngar_SENDS,"А что я за это получу?",GUR_1202_CorAngar_SENDS_EARN);
-	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Я сейчас же пойду туда!",GUR_1202_CorAngar_SENDS_KNOW);
+	Info_AddChoice(GUR_1202_CorAngar_SENDS,"Рђ С‡С‚Рѕ СЏ Р·Р° СЌС‚Рѕ РїРѕР»СѓС‡Сѓ?",GUR_1202_CorAngar_SENDS_EARN);
+	Info_AddChoice(GUR_1202_CorAngar_SENDS,"РЇ СЃРµР№С‡Р°СЃ Р¶Рµ РїРѕР№РґСѓ С‚СѓРґР°!",GUR_1202_CorAngar_SENDS_KNOW);
 };
 
 func void GUR_1202_CorAngar_SENDS_EARN()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_EARN_Info_15_01");	//А что я за это получу?
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_EARN_Info_08_02");	//Тебе нужна руда? Наверное, я ошибся в тебе. Но мне все равно нужна твоя помощь. Вот сто кусков руды. Больше у меня нет!
-	b_printtrademsg1("Получено руды: 100");
+	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_EARN_Info_15_01");	//Рђ С‡С‚Рѕ СЏ Р·Р° СЌС‚Рѕ РїРѕР»СѓС‡Сѓ?
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_EARN_Info_08_02");	//РўРµР±Рµ РЅСѓР¶РЅР° СЂСѓРґР°? РќР°РІРµСЂРЅРѕРµ, СЏ РѕС€РёР±СЃСЏ РІ С‚РµР±Рµ. РќРѕ РјРЅРµ РІСЃРµ СЂР°РІРЅРѕ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ. Р’РѕС‚ СЃС‚Рѕ РєСѓСЃРєРѕРІ СЂСѓРґС‹. Р‘РѕР»СЊС€Рµ Сѓ РјРµРЅСЏ РЅРµС‚!
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 100");
 	CreateInvItems(self,ItMiNugget,100);
 	B_GiveInvItems(self,hero,ItMiNugget,100);
 };
 
 func void GUR_1202_CorAngar_SENDS_KNOW()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_KNOW_Info_15_01");	//Я сейчас же пойду туда!
-	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02");	//Возьми вот это кольцо. Оно сможет защитить тебя в битве!
-	b_printtrademsg1("Получено кольцо деревянной кожи.");
+	AI_Output(other,self,"GUR_1202_CorAngar_SENDS_KNOW_Info_15_01");	//РЇ СЃРµР№С‡Р°СЃ Р¶Рµ РїРѕР№РґСѓ С‚СѓРґР°!
+	AI_Output(self,other,"GUR_1202_CorAngar_SENDS_KNOW_Info_08_02");	//Р’РѕР·СЊРјРё РІРѕС‚ СЌС‚Рѕ РєРѕР»СЊС†Рѕ. РћРЅРѕ СЃРјРѕР¶РµС‚ Р·Р°С‰РёС‚РёС‚СЊ С‚РµР±СЏ РІ Р±РёС‚РІРµ!
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ РєРѕР»СЊС†Рѕ РґРµСЂРµРІСЏРЅРЅРѕР№ РєРѕР¶Рё.");
 	B_Story_GotoOrcGraveyard();
 	CreateInvItem(self,Schutzring_Geschosse1);
 	B_GiveInvItems(self,hero,Schutzring_Geschosse1,1);
@@ -405,7 +406,7 @@ instance GUR_1202_CorAngar_WHERE(C_Info)
 	information = GUR_1202_CorAngar_WHERE_Info;
 	important = 0;
 	permanent = 0;
-	description = "Где находится кладбище орков?";
+	description = "Р“РґРµ РЅР°С…РѕРґРёС‚СЃСЏ РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ?";
 };
 
 
@@ -419,9 +420,9 @@ func int GUR_1202_CorAngar_WHERE_Condition()
 
 func void GUR_1202_CorAngar_WHERE_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_WHERE_Info_15_01");	//Где находится кладбище орков?
-	AI_Output(self,other,"GUR_1202_CorAngar_WHERE_Info_08_02");	//Это недалеко. Послушник Талас знает дорогу. Ты сможешь найти его на площади перед Храмом. Он укажет тебе путь.
-	B_LogEntry(CH3_OrcGraveyard,"Послушник Талас сможет показать мне дорогу на кладбище орков. Он ждет меня на площади перед Храмом.");
+	AI_Output(other,self,"GUR_1202_CorAngar_WHERE_Info_15_01");	//Р“РґРµ РЅР°С…РѕРґРёС‚СЃСЏ РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ?
+	AI_Output(self,other,"GUR_1202_CorAngar_WHERE_Info_08_02");	//Р­С‚Рѕ РЅРµРґР°Р»РµРєРѕ. РџРѕСЃР»СѓС€РЅРёРє РўР°Р»Р°СЃ Р·РЅР°РµС‚ РґРѕСЂРѕРіСѓ. РўС‹ СЃРјРѕР¶РµС€СЊ РЅР°Р№С‚Рё РµРіРѕ РЅР° РїР»РѕС‰Р°РґРё РїРµСЂРµРґ РҐСЂР°РјРѕРј. РћРЅ СѓРєР°Р¶РµС‚ С‚РµР±Рµ РїСѓС‚СЊ.
+	B_LogEntry(CH3_OrcGraveyard,"РџРѕСЃР»СѓС€РЅРёРє РўР°Р»Р°СЃ СЃРјРѕР¶РµС‚ РїРѕРєР°Р·Р°С‚СЊ РјРЅРµ РґРѕСЂРѕРіСѓ РЅР° РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ. РћРЅ Р¶РґРµС‚ РјРµРЅСЏ РЅР° РїР»РѕС‰Р°РґРё РїРµСЂРµРґ РҐСЂР°РјРѕРј.");
 };
 
 
@@ -432,7 +433,7 @@ instance GUR_1202_CorAngar_AFTER(C_Info)
 	information = GUR_1202_CorAngar_AFTER_Info;
 	important = 0;
 	permanent = 0;
-	description = "Я был на кладбище орков. Мы не смогли там ничего найти...";
+	description = "РЇ Р±С‹Р» РЅР° РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ. РњС‹ РЅРµ СЃРјРѕРіР»Рё С‚Р°Рј РЅРёС‡РµРіРѕ РЅР°Р№С‚Рё...";
 };
 
 
@@ -446,24 +447,23 @@ func int GUR_1202_CorAngar_AFTER_Condition()
 
 func void GUR_1202_CorAngar_AFTER_Info()
 {
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_01");	//Я был на кладбище орков. Мы не смогли там ничего найти. Никаких знаков, указывающих на Спящего.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_02");	//А что с Идолом Люкором и Стражами?
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03");	//Они все мертвы.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04");	//Мертвы? Но почему, кто смел убить их?
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_05");	//В пещерах очень много орков. Это они убили всех Стражей.
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_06");	//Идол Люкор смог спастись от них, но, к несчастью, он сошел с ума.
-	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07");	//Он стал кричать, что Спящий приказал ему убить меня, и попытался выполнить этот приказ.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_08");	//Наверное, его ум помутился из-за большого разочарования. Он так хотел найти что-нибудь там.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_09");	//Я не верю, что его поступок был вызван волей Спящего.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_10");	//Такого не может... невозможно... Неважно!
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11");	//Главное, что Идол Люкор не смог осуществить свое намерение.
-	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_12");	//Теперь вся наша надежда на Юбериона.
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_01");	//РЇ Р±С‹Р» РЅР° РєР»Р°РґР±РёС‰Рµ РѕСЂРєРѕРІ. РњС‹ РЅРµ СЃРјРѕРіР»Рё С‚Р°Рј РЅРёС‡РµРіРѕ РЅР°Р№С‚Рё. РќРёРєР°РєРёС… Р·РЅР°РєРѕРІ, СѓРєР°Р·С‹РІР°СЋС‰РёС… РЅР° РЎРїСЏС‰РµРіРѕ.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_02");	//Рђ С‡С‚Рѕ СЃ РРґРѕР»РѕРј Р›СЋРєРѕСЂРѕРј Рё РЎС‚СЂР°Р¶Р°РјРё?
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_03");	//РћРЅРё РІСЃРµ РјРµСЂС‚РІС‹.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_04");	//РњРµСЂС‚РІС‹? РќРѕ РїРѕС‡РµРјСѓ, РєС‚Рѕ СЃРјРµР» СѓР±РёС‚СЊ РёС…?
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_05");	//Р’ РїРµС‰РµСЂР°С… РѕС‡РµРЅСЊ РјРЅРѕРіРѕ РѕСЂРєРѕРІ. Р­С‚Рѕ РѕРЅРё СѓР±РёР»Рё РІСЃРµС… РЎС‚СЂР°Р¶РµР№.
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_06");	//РРґРѕР» Р›СЋРєРѕСЂ СЃРјРѕРі СЃРїР°СЃС‚РёСЃСЊ РѕС‚ РЅРёС…, РЅРѕ, Рє РЅРµСЃС‡Р°СЃС‚СЊСЋ, РѕРЅ СЃРѕС€РµР» СЃ СѓРјР°.
+	AI_Output(other,self,"GUR_1202_CorAngar_AFTER_Info_15_07");	//РћРЅ СЃС‚Р°Р» РєСЂРёС‡Р°С‚СЊ, С‡С‚Рѕ РЎРїСЏС‰РёР№ РїСЂРёРєР°Р·Р°Р» РµРјСѓ СѓР±РёС‚СЊ РјРµРЅСЏ, Рё РїРѕРїС‹С‚Р°Р»СЃСЏ РІС‹РїРѕР»РЅРёС‚СЊ СЌС‚РѕС‚ РїСЂРёРєР°Р·.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_08");	//РќР°РІРµСЂРЅРѕРµ, РµРіРѕ СѓРј РїРѕРјСѓС‚РёР»СЃСЏ РёР·-Р·Р° Р±РѕР»СЊС€РѕРіРѕ СЂР°Р·РѕС‡Р°СЂРѕРІР°РЅРёСЏ. РћРЅ С‚Р°Рє С…РѕС‚РµР» РЅР°Р№С‚Рё С‡С‚Рѕ-РЅРёР±СѓРґСЊ С‚Р°Рј.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_09");	//РЇ РЅРµ РІРµСЂСЋ, С‡С‚Рѕ РµРіРѕ РїРѕСЃС‚СѓРїРѕРє Р±С‹Р» РІС‹Р·РІР°РЅ РІРѕР»РµР№ РЎРїСЏС‰РµРіРѕ.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_10");	//РўР°РєРѕРіРѕ РЅРµ РјРѕР¶РµС‚... РЅРµРІРѕР·РјРѕР¶РЅРѕ... РќРµРІР°Р¶РЅРѕ!
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_11");	//Р“Р»Р°РІРЅРѕРµ, С‡С‚Рѕ РРґРѕР» Р›СЋРєРѕСЂ РЅРµ СЃРјРѕРі РѕСЃСѓС‰РµСЃС‚РІРёС‚СЊ СЃРІРѕРµ РЅР°РјРµСЂРµРЅРёРµ.
+	AI_Output(self,other,"GUR_1202_CorAngar_AFTER_Info_08_12");	//РўРµРїРµСЂСЊ РІСЃСЏ РЅР°С€Р° РЅР°РґРµР¶РґР° РЅР° Р®Р±РµСЂРёРѕРЅР°.
 	B_GiveXP(XP_ReportToCorAngar);
 	B_Story_BackFromOrcGraveyard();
 };
 
 
-var int yberion_day;
 
 instance Info_CorAngar_FindHerb(C_Info)
 {
@@ -472,13 +472,17 @@ instance Info_CorAngar_FindHerb(C_Info)
 	information = Info_CorAngar_FindHerb_Info;
 	permanent = 0;
 	important = 0;
-	description = "Как дела у Юбериона?";
+	description = "РљР°Рє РґРµР»Р° Сѓ Р®Р±РµСЂРёРѕРЅР°?";
 };
 
 
 func int Info_CorAngar_FindHerb_Condition()
 {
-	if(Npc_KnowsInfo(hero,GUR_1202_CorAngar_AFTER))
+//	if(Npc_KnowsInfo(hero,GUR_1202_CorAngar_AFTER))
+	if(
+		Kapitel > 2
+	&&	!Npc_IsDead(GUR_1200_YBerion)
+	)
 	{
 		return 1;
 	};
@@ -486,18 +490,17 @@ func int Info_CorAngar_FindHerb_Condition()
 
 func void Info_CorAngar_FindHerb_Info()
 {
-	AI_Output(other,self,"Mis_3_NC_CorAngar_FindHerb_15_01");	//Как дела у Юбериона?
-	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_02");	//Сам он не сможет проснуться. Он быстро слабеет. Я знаю, что может его разбудить, но для этого мне нужна твоя помощь.
-	AI_Output(other,self,"Mis_3_NC_CorAngar_FindHerb_15_03");	//Как я могу ему помочь?
-	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_04");	//Найди мне болотные целебные травы. Принеси мне пять самых действенных из них.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");	//Может быть, Фортуно сможет тебе помочь? Он же травник.
-	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05");	//И, пожалуйста, поторопись!
+	AI_Output(other,self,"Mis_3_NC_CorAngar_FindHerb_15_01");	//РљР°Рє РґРµР»Р° Сѓ Р®Р±РµСЂРёРѕРЅР°?
+	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_02");	//РЎР°Рј РѕРЅ РЅРµ СЃРјРѕР¶РµС‚ РїСЂРѕСЃРЅСѓС‚СЊСЃСЏ. РћРЅ Р±С‹СЃС‚СЂРѕ СЃР»Р°Р±РµРµС‚. РЇ Р·РЅР°СЋ, С‡С‚Рѕ РјРѕР¶РµС‚ РµРіРѕ СЂР°Р·Р±СѓРґРёС‚СЊ, РЅРѕ РґР»СЏ СЌС‚РѕРіРѕ РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.
+	AI_Output(other,self,"Mis_3_NC_CorAngar_FindHerb_15_03");	//РљР°Рє СЏ РјРѕРіСѓ РµРјСѓ РїРѕРјРѕС‡СЊ?
+	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_04");	//РќР°Р№РґРё РјРЅРµ Р±РѕР»РѕС‚РЅС‹Рµ С†РµР»РµР±РЅС‹Рµ С‚СЂР°РІС‹. РџСЂРёРЅРµСЃРё РјРЅРµ РїСЏС‚СЊ СЃР°РјС‹С… РґРµР№СЃС‚РІРµРЅРЅС‹С… РёР· РЅРёС….
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");	//РњРѕР¶РµС‚ Р±С‹С‚СЊ, Р¤РѕСЂС‚СѓРЅРѕ СЃРјРѕР¶РµС‚ С‚РµР±Рµ РїРѕРјРѕС‡СЊ? РћРЅ Р¶Рµ С‚СЂР°РІРЅРёРє.
+	AI_Output(self,other,"Mis_3_NC_CorAngar_FindHerb_08_05");	//Р, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РїРѕС‚РѕСЂРѕРїРёСЃСЊ!
 	AI_StopProcessInfos(self);
 	CorAngar_FindHerb = LOG_RUNNING;
 	Log_CreateTopic(CH3_FindHerbs,LOG_MISSION);
 	Log_SetTopicStatus(CH3_FindHerbs,LOG_RUNNING);
-	B_LogEntry(CH3_FindHerbs,"Юберион все еще без сознания. Кор Ангар попросил меня найти для него пять кустов самых сильных лечебных трав. Но поможет ли это..?");
-	YBERION_DAY = Wld_GetDay();
+	B_LogEntry(CH3_FindHerbs,"Р®Р±РµСЂРёРѕРЅ Р±РµР· СЃРѕР·РЅР°РЅРёСЏ. РљРѕСЂ РђРЅРіР°СЂ РїРѕРїСЂРѕСЃРёР» РјРµРЅСЏ РЅР°Р№С‚Рё РґР»СЏ РЅРµРіРѕ РїСЏС‚СЊ РєСѓСЃС‚РѕРІ СЃР°РјС‹С… СЃРёР»СЊРЅС‹С… Р»РµС‡РµР±РЅС‹С… С‚СЂР°РІ. РќРѕ РїРѕРјРѕР¶РµС‚ Р»Рё СЌС‚Рѕ..?");
 };
 
 
@@ -509,7 +512,7 @@ instance Info_CorAngar_FindHerb_WHERE(C_Info)
 	information = Info_CorAngar_FindHerb_WHERE_Info;
 	permanent = 0;
 	important = 0;
-	description = "А где растут эти травы?";
+	description = "Рђ РіРґРµ СЂР°СЃС‚СѓС‚ СЌС‚Рё С‚СЂР°РІС‹?";
 };
 
 
@@ -523,11 +526,11 @@ func int Info_CorAngar_FindHerb_WHERE_Condition()
 
 func void Info_CorAngar_FindHerb_WHERE_Info()
 {
-	AI_Output(other,self,"Info_CorAngar_FindHerb_WHERE_15_01");	//А где растут эти травы?
-	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_02");	//Поищи в болотах за лагерем. Они растут достаточно далеко отсюда, но будь осторожен, там тебя могут поджидать болотожоры.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03");	//Не стоит терять времени. Иди же!
+	AI_Output(other,self,"Info_CorAngar_FindHerb_WHERE_15_01");	//Рђ РіРґРµ СЂР°СЃС‚СѓС‚ СЌС‚Рё С‚СЂР°РІС‹?
+	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_02");	//РџРѕРёС‰Рё РІ Р±РѕР»РѕС‚Р°С… Р·Р° Р»Р°РіРµСЂРµРј. РћРЅРё СЂР°СЃС‚СѓС‚ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РґР°Р»РµРєРѕ РѕС‚СЃСЋРґР°, РЅРѕ Р±СѓРґСЊ РѕСЃС‚РѕСЂРѕР¶РµРЅ, С‚Р°Рј С‚РµР±СЏ РјРѕРіСѓС‚ РїРѕРґР¶РёРґР°С‚СЊ Р±РѕР»РѕС‚РѕР¶РѕСЂС‹.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_WHERE_08_03");	//РќРµ СЃС‚РѕРёС‚ С‚РµСЂСЏС‚СЊ РІСЂРµРјРµРЅРё. РРґРё Р¶Рµ!
 	AI_StopProcessInfos(self);
-	B_LogEntry(CH3_FindHerbs,"Эти травы я смогу найти далеко на болотах за лагерем Братства. Там обитают опасные болотожоры. Я должен быть очень осторожен.");
+	B_LogEntry(CH3_FindHerbs,"Р­С‚Рё С‚СЂР°РІС‹ СЏ СЃРјРѕРіСѓ РЅР°Р№С‚Рё РґР°Р»РµРєРѕ РЅР° Р±РѕР»РѕС‚Р°С… Р·Р° Р»Р°РіРµСЂРµРј Р‘СЂР°С‚СЃС‚РІР°. РўР°Рј РѕР±РёС‚Р°СЋС‚ РѕРїР°СЃРЅС‹Рµ Р±РѕР»РѕС‚РѕР¶РѕСЂС‹. РЇ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РѕС‡РµРЅСЊ РѕСЃС‚РѕСЂРѕР¶РµРЅ.");
 };
 
 
@@ -539,7 +542,7 @@ instance Info_CorAngar_FindHerb_LOOK(C_Info)
 	information = Info_CorAngar_FindHerb_LOOK_Info;
 	permanent = 0;
 	important = 0;
-	description = "Как мне узнать те травы, которые помогут Юбериону?";
+	description = "РљР°Рє РјРЅРµ СѓР·РЅР°С‚СЊ С‚Рµ С‚СЂР°РІС‹, РєРѕС‚РѕСЂС‹Рµ РїРѕРјРѕРіСѓС‚ Р®Р±РµСЂРёРѕРЅСѓ?";
 };
 
 
@@ -553,11 +556,11 @@ func int Info_CorAngar_FindHerb_LOOK_Condition()
 
 func void Info_CorAngar_FindHerb_LOOK_Info()
 {
-	AI_Output(other,self,"Info_CorAngar_FindHerb_LOOK_15_01");	//Как мне узнать те травы, которые помогут Юбериону?
-	AI_Output(self,other,"Info_CorAngar_FindHerb_LOOK_08_02");	//Они похожи на звезды из восьми зеленых и оранжевых лучей-листьев.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_LOOK_08_03");	//А теперь иди.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_LOOK_15_01");	//РљР°Рє РјРЅРµ СѓР·РЅР°С‚СЊ С‚Рµ С‚СЂР°РІС‹, РєРѕС‚РѕСЂС‹Рµ РїРѕРјРѕРіСѓС‚ Р®Р±РµСЂРёРѕРЅСѓ?
+	AI_Output(self,other,"Info_CorAngar_FindHerb_LOOK_08_02");	//РћРЅРё РїРѕС…РѕР¶Рё РЅР° Р·РІРµР·РґС‹ РёР· РІРѕСЃСЊРјРё Р·РµР»РµРЅС‹С… Рё РѕСЂР°РЅР¶РµРІС‹С… Р»СѓС‡РµР№-Р»РёСЃС‚СЊРµРІ.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_LOOK_08_03");	//Рђ С‚РµРїРµСЂСЊ РёРґРё.
 	AI_StopProcessInfos(self);
-	B_LogEntry(CH3_FindHerbs,"Лечебные травы похожи на звезды из четырех зеленых и четырех оранжевых листьев.");
+	B_LogEntry(CH3_FindHerbs,"Р›РµС‡РµР±РЅС‹Рµ С‚СЂР°РІС‹ РїРѕС…РѕР¶Рё РЅР° Р·РІРµР·РґС‹ РёР· С‡РµС‚С‹СЂРµС… Р·РµР»РµРЅС‹С… Рё С‡РµС‚С‹СЂРµС… РѕСЂР°РЅР¶РµРІС‹С… Р»РёСЃС‚СЊРµРІ.");
 };
 
 
@@ -569,7 +572,7 @@ instance Info_CorAngar_FindHerb_Running(C_Info)
 	information = Info_CorAngar_FindHerb_Running_Info;
 	permanent = 1;
 	important = 0;
-	description = "Тех трав, которые я нашел, будет недостаточно.";
+	description = "РўРµС… С‚СЂР°РІ, РєРѕС‚РѕСЂС‹Рµ СЏ РЅР°С€РµР», Р±СѓРґРµС‚ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ.";
 };
 
 
@@ -584,16 +587,16 @@ func int Info_CorAngar_FindHerb_Running_Condition()
 func void Info_CorAngar_FindHerb_Running_Info()
 {
 	var C_Npc fortuno;
-	AI_Output(other,self,"Info_CorAngar_FindHerb_Running_15_01");	//Тех трав, которые я нашел, будет недостаточно.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");	//Может быть, Фортуно сможет тебе помочь? Он же травник.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");	//Тебе нужно торопиться. Принеси пять кустов. Юберион не может ждать ни минуты.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Running_15_01");	//РўРµС… С‚СЂР°РІ, РєРѕС‚РѕСЂС‹Рµ СЏ РЅР°С€РµР», Р±СѓРґРµС‚ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_02");	//РњРѕР¶РµС‚ Р±С‹С‚СЊ, Р¤РѕСЂС‚СѓРЅРѕ СЃРјРѕР¶РµС‚ С‚РµР±Рµ РїРѕРјРѕС‡СЊ? РћРЅ Р¶Рµ С‚СЂР°РІРЅРёРє.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Running_08_03");	//РўРµР±Рµ РЅСѓР¶РЅРѕ С‚РѕСЂРѕРїРёС‚СЊСЃСЏ. РџСЂРёРЅРµСЃРё РїСЏС‚СЊ РєСѓСЃС‚РѕРІ. Р®Р±РµСЂРёРѕРЅ РЅРµ РјРѕР¶РµС‚ Р¶РґР°С‚СЊ РЅРё РјРёРЅСѓС‚С‹.
 	AI_StopProcessInfos(self);
 	if(!Fortuno_HasYBerionHerbs)
 	{
 		fortuno = Hlp_GetNpc(NOV_1357_Fortuno);
 		CreateInvItems(fortuno,ItFo_Plants_Herb_03,5);
 		Fortuno_HasYBerionHerbs = TRUE;
-		B_LogEntry(CH3_FindHerbs,"Такие травы могут быть припасены у Фортуно.");
+		B_LogEntry(CH3_FindHerbs,"РўР°РєРёРµ С‚СЂР°РІС‹ РјРѕРіСѓС‚ Р±С‹С‚СЊ РїСЂРёРїР°СЃРµРЅС‹ Сѓ Р¤РѕСЂС‚СѓРЅРѕ.");
 	};
 };
 
@@ -606,7 +609,7 @@ instance Info_CorAngar_FindHerb_Success(C_Info)
 	information = Info_CorAngar_FindHerb_Success_Info;
 	permanent = 0;
 	important = 0;
-	description = "(отдать целебные травы)";
+	description = "(РѕС‚РґР°С‚СЊ С†РµР»РµР±РЅС‹Рµ С‚СЂР°РІС‹)";
 };
 
 
@@ -618,48 +621,51 @@ func int Info_CorAngar_FindHerb_Success_Condition()
 	};
 };
 
-func void Info_CorAngar_FindHerb_Success_Info()
+func void Info_CorAngar_FindHerb_Success_Info___()
 {
 	var C_Npc YBerion;
 	var C_Npc angar;
 	YBerion = Hlp_GetNpc(GUR_1200_YBerion);
 	angar = Hlp_GetNpc(GUR_1202_CorAngar);
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01");	//РЇ РґРѕР±С‹Р» С†РµР»РµР±РЅС‹Рµ С‚СЂР°РІС‹ РґР»СЏ Р®Р±РµСЂРёРѕРЅР°.
 	B_GiveInvItems(other,self,ItFo_Plants_Herb_03,5);
-	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01");	//Я добыл целебные травы для Юбериона.
-	b_printtrademsg1("Отдано 5 целебных корней.");
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_02");	//Отлично. Когда ты уходил, Юберион очнулся ненадолго.
-	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_03");	//Он что-нибудь сказал?
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_04");	//Да, он сказал, что Спящий на самом деле не является тем, что мы о нем думаем. Мы не должны пытаться разбудить его.
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_05");	//Теперь нам остается надеяться на то, что Юбериона можно вылечить.
-	Yberion_dead = LOG_RUNNING;
+	b_printtrademsg1("РћС‚РґР°РЅРѕ 5 С†РµР»РµР±РЅС‹С… РєРѕСЂРЅРµР№.");
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_02");	//РћС‚Р»РёС‡РЅРѕ. РљРѕРіРґР° С‚С‹ СѓС…РѕРґРёР», Р®Р±РµСЂРёРѕРЅ РѕС‡РЅСѓР»СЃСЏ РЅРµРЅР°РґРѕР»РіРѕ.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_03");	//РћРЅ С‡С‚Рѕ-РЅРёР±СѓРґСЊ СЃРєР°Р·Р°Р»?
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_04");	//Р”Р°, РѕРЅ СЃРєР°Р·Р°Р», С‡С‚Рѕ РЎРїСЏС‰РёР№ РЅР° СЃР°РјРѕРј РґРµР»Рµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ С‚РµРј, С‡С‚Рѕ РјС‹ Рѕ РЅРµРј РґСѓРјР°РµРј. РњС‹ РЅРµ РґРѕР»Р¶РЅС‹ РїС‹С‚Р°С‚СЊСЃСЏ СЂР°Р·Р±СѓРґРёС‚СЊ РµРіРѕ.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_NULL_05");	//Р§С‚Рѕ? Р­С‚РѕРіРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ! Р®Р±РµСЂРёРѕРЅ РЅР°РІРµСЂРЅСЏРєР°, С‡С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє РїРѕРЅСЏР»! Рђ РєР°Рє-Р¶Рµ РјР°РіРёСЏ РЎРїСЏС‰РµРіРѕ? РњР°РіРёСЏ, С‡С‚Рѕ РѕРЅ РґР°РµС‚ СЃРѕРІРµСЂС€РµРЅРЅРѕ РЅРµ Р°РіСЂРµСЃСЃРёРІРЅР°, РѕРЅР° СѓРЅРёРєР°Р»СЊРЅР° - РјС‹ РѕР±СЏР·Р°РЅС‹ РёР·СѓС‡РёС‚СЊ РµРµ СЃРёР»СЊРЅРµРµ!
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_NULL_06");	//РњРѕР¶РµС‚ Рё С‚Р°Рє.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_05");	//РўРµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ РЅР° С‚Рѕ, С‡С‚Рѕ Р®Р±РµСЂРёРѕРЅР° РјРѕР¶РЅРѕ РІС‹Р»РµС‡РёС‚СЊ.
+	//AKH WORKING QUEST
 	B_GiveXP(XP_FindHerbs);
-	B_LogEntry(CH3_FindHerbs,"Я передал Кор Ангару лечебные травы, но они не помогли Юбериону... Глава Братства умер...");
-	CorAngar_FindHerb = LOG_FAILED;
-	Log_SetTopicStatus(CH3_FindHerbs,LOG_FAILED);
-	YBERION_DIED = TRUE;
+	B_LogEntry(CH3_FindHerbs,"РЇ РїРµСЂРµРґР°Р» РљРѕСЂ РђРЅРіР°СЂСѓ Р»РµС‡РµР±РЅС‹Рµ С‚СЂР°РІС‹, РЅРѕ РѕРЅРё РЅРµ РїРѕРјРѕРіР»Рё Р®Р±РµСЂРёРѕРЅСѓ... Р“Р»Р°РІР° Р‘СЂР°С‚СЃС‚РІР° СѓРјРµСЂ...");
+	CorAngar_FindHerb = LOG_SUCCESS;
+	Log_SetTopicStatus(CH3_FindHerbs,LOG_SUCCESS);
+//	Yberion_dead = LOG_RUNNING;
+//	YBERION_DIED = TRUE;
 	AI_Wait(self,0.5);
 	AI_GotoWP(self,"PSI_TEMPLE_ROOMS_IN_02");
 	AI_SetWalkMode(self,NPC_RUN);
 	AI_UseMob(self,"BOOK",-1);
 	AI_TurnToNPC(self,YBerion);
-	YBerion.flags = 0;
-	Npc_ChangeAttribute(YBerion,ATR_HITPOINTS,-YBerion.attribute[ATR_HITPOINTS_MAX]);
+//	YBerion.flags = 0;
+//	Npc_ChangeAttribute(YBerion,ATR_HITPOINTS,-YBerion.attribute[ATR_HITPOINTS_MAX]);
 	AI_UseItemToState(self,ItFo_Plants_Herb_03,0);
 	AI_PlayAni(self,"T_PLUNDER");
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_00");	//Юберион умер. Наш духовный учитель оставил нас!
+//	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_00");	//Р®Р±РµСЂРёРѕРЅ СѓРјРµСЂ. РќР°С€ РґСѓС…РѕРІРЅС‹Р№ СѓС‡РёС‚РµР»СЊ РѕСЃС‚Р°РІРёР» РЅР°СЃ!
 	AI_UseItemToState(self,ItFo_Plants_Herb_03,-1);
 	AI_TurnToNPC(self,other);
 	AI_TurnToNPC(other,self);
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_01");	//Даже твоя помощь не смогла отвратить от него смерть!
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Что же теперь будет, Кор Ангар?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03");	//Я всегда доверял Юбериону. Перед смертью он сказал мне, что теперь нам остается надеяться только на магов Воды.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Значит, нам нужно помочь магам Воды.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Да, им нужен будет юнитор и альманах. И то, и другое находится у Кор Галома.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//А где сейчас Кор Галом?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07");	//После слов Юбериона он ужасно рассердился и отправился сам искать путь к Спящему, взяв с собой нескольких Стражей.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//Как же мы теперь сможем забрать юнитор?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//Я думаю, он оставил юнитор и книгу в своей лаборатории. Вот тебе ключ от его сундука.
-	b_printtrademsg2("Получен ключ из лаборатории.");
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_01");	//Р”Р°Р¶Рµ С‚РІРѕСЏ РїРѕРјРѕС‰СЊ РЅРµ СЃРјРѕРіР»Р° РѕС‚РІСЂР°С‚РёС‚СЊ РѕС‚ РЅРµРіРѕ СЃРјРµСЂС‚СЊ!
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Р§С‚Рѕ Р¶Рµ С‚РµРїРµСЂСЊ Р±СѓРґРµС‚, РљРѕСЂ РђРЅРіР°СЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03");	//РЇ РІСЃРµРіРґР° РґРѕРІРµСЂСЏР» Р®Р±РµСЂРёРѕРЅСѓ. РџРµСЂРµРґ СЃРјРµСЂС‚СЊСЋ РѕРЅ СЃРєР°Р·Р°Р» РјРЅРµ, С‡С‚Рѕ С‚РµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РЅР° РјР°РіРѕРІ Р’РѕРґС‹.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Р—РЅР°С‡РёС‚, РЅР°Рј РЅСѓР¶РЅРѕ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Р”Р°, РёРј РЅСѓР¶РµРЅ Р±СѓРґРµС‚ СЋРЅРёС‚РѕСЂ Рё Р°Р»СЊРјР°РЅР°С…. Р С‚Рѕ, Рё РґСЂСѓРіРѕРµ РЅР°С…РѕРґРёС‚СЃСЏ Сѓ РљРѕСЂ Р“Р°Р»РѕРјР°.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//Рђ РіРґРµ СЃРµР№С‡Р°СЃ РљРѕСЂ Р“Р°Р»РѕРј?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07");	//РџРѕСЃР»Рµ СЃР»РѕРІ Р®Р±РµСЂРёРѕРЅР° РѕРЅ СѓР¶Р°СЃРЅРѕ СЂР°СЃСЃРµСЂРґРёР»СЃСЏ Рё РѕС‚РїСЂР°РІРёР»СЃСЏ СЃР°Рј РёСЃРєР°С‚СЊ РїСѓС‚СЊ Рє РЎРїСЏС‰РµРјСѓ, РІР·СЏРІ СЃ СЃРѕР±РѕР№ РЅРµСЃРєРѕР»СЊРєРёС… РЎС‚СЂР°Р¶РµР№.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//РљР°Рє Р¶Рµ РјС‹ С‚РµРїРµСЂСЊ СЃРјРѕР¶РµРј Р·Р°Р±СЂР°С‚СЊ СЋРЅРёС‚РѕСЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//РЇ РґСѓРјР°СЋ, РѕРЅ РѕСЃС‚Р°РІРёР» СЋРЅРёС‚РѕСЂ Рё РєРЅРёРіСѓ РІ СЃРІРѕРµР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё. Р’РѕС‚ С‚РµР±Рµ РєР»СЋС‡ РѕС‚ РµРіРѕ СЃСѓРЅРґСѓРєР°.
+	b_printtrademsg2("РџРѕР»СѓС‡РµРЅ РєР»СЋС‡ РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.");
 	CreateInvItem(self,itarrune_5_7_pyrokinesis);
 	CreateInvItem(self,Stab_des_Lichts);
 	if(YBERION_KEY_STOLEN == FALSE)
@@ -672,31 +678,64 @@ func void Info_CorAngar_FindHerb_Success_Info()
 	Log_SetTopicStatus(CH3_EscapePlanNC,LOG_RUNNING);
 	if(C_NpcBelongsToPsiCamp(hero))
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Умер Юберион, духовный отец Братства! Да упокоится он с миром! Перед смертью он выразил свою волю: братья должны помочь магам Воды осуществить их план. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара, эти предметы могут пригодиться магам Воды.");
+		B_LogEntry(CH3_EscapePlanNC,"РЈРјРµСЂ Р®Р±РµСЂРёРѕРЅ, РґСѓС…РѕРІРЅС‹Р№ РѕС‚РµС† Р‘СЂР°С‚СЃС‚РІР°! Р”Р° СѓРїРѕРєРѕРёС‚СЃСЏ РѕРЅ СЃ РјРёСЂРѕРј! РџРµСЂРµРґ СЃРјРµСЂС‚СЊСЋ РѕРЅ РІС‹СЂР°Р·РёР» СЃРІРѕСЋ РІРѕР»СЋ: Р±СЂР°С‚СЊСЏ РґРѕР»Р¶РЅС‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ РѕСЃСѓС‰РµСЃС‚РІРёС‚СЊ РёС… РїР»Р°РЅ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР°, СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹.");
 	}
 	else
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Я окончательно решил пойти в Новый лагерь, чтобы помочь магам Воды разрушить Барьер. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара эти предметы могут пригодиться магам Воды. ");
+		B_LogEntry(CH3_EscapePlanNC,"РЇ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ СЂРµС€РёР» РїРѕР№С‚Рё РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ, С‡С‚РѕР±С‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ СЂР°Р·СЂСѓС€РёС‚СЊ Р‘Р°СЂСЊРµСЂ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР° СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹. ");
 	};
 	if(BaalOrun_FetchWeed == LOG_RUNNING)
 	{
 		BaalOrun_FetchWeed = LOG_FAILED;
-		B_LogEntry(CH1_DeliverWeed,"Кор Галом покинул лагерь, я не успел отдать ему урожай болотника.");
+		B_LogEntry(CH1_DeliverWeed,"РљРѕСЂ Р“Р°Р»РѕРј РїРѕРєРёРЅСѓР» Р»Р°РіРµСЂСЊ, СЏ РЅРµ СѓСЃРїРµР» РѕС‚РґР°С‚СЊ РµРјСѓ СѓСЂРѕР¶Р°Р№ Р±РѕР»РѕС‚РЅРёРєР°.");
 		Log_SetTopicStatus(CH1_DeliverWeed,LOG_FAILED);
 	};
 	if(Kalom_Krautbote == LOG_RUNNING)
 	{
 		Kalom_Krautbote = LOG_FAILED;
-		B_LogEntry(CH1_KrautBote,"Кор Галом пропал, теперь я не смогу отдать ему руду за болотник.");
+		B_LogEntry(CH1_KrautBote,"РљРѕСЂ Р“Р°Р»РѕРј РїСЂРѕРїР°Р», С‚РµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РѕС‚РґР°С‚СЊ РµРјСѓ СЂСѓРґСѓ Р·Р° Р±РѕР»РѕС‚РЅРёРє.");
 		Log_SetTopicStatus(CH1_KrautBote,LOG_FAILED);
 	};
 	if(Kalom_DrugMonopol == LOG_RUNNING)
 	{
 		Kalom_DrugMonopol = LOG_FAILED;
-		B_LogEntry(CH1_DrugMonopol,"Я не смогу получить награду за устранение конкурентов, Кор Галом ушел из лагеря.");
+		B_LogEntry(CH1_DrugMonopol,"РЇ РЅРµ СЃРјРѕРіСѓ РїРѕР»СѓС‡РёС‚СЊ РЅР°РіСЂР°РґСѓ Р·Р° СѓСЃС‚СЂР°РЅРµРЅРёРµ РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ, РљРѕСЂ Р“Р°Р»РѕРј СѓС€РµР» РёР· Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_DrugMonopol,LOG_FAILED);
 	};
 	CorAngar_SendToNC = TRUE;
+};
+func void Info_CorAngar_FindHerb_Success_Info()
+{
+	var C_Npc YBerion;
+	var C_Npc angar;
+	YBerion = Hlp_GetNpc(GUR_1200_YBerion);
+	angar = Hlp_GetNpc(GUR_1202_CorAngar);
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_01");	//РЇ РґРѕР±С‹Р» С†РµР»РµР±РЅС‹Рµ С‚СЂР°РІС‹ РґР»СЏ Р®Р±РµСЂРёРѕРЅР°.
+	B_GiveInvItems(other,self,ItFo_Plants_Herb_03,5);
+	b_printtrademsg1("РћС‚РґР°РЅРѕ 5 С†РµР»РµР±РЅС‹С… РєРѕСЂРЅРµР№.");
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_02");	//РћС‚Р»РёС‡РЅРѕ. РљРѕРіРґР° С‚С‹ СѓС…РѕРґРёР», Р®Р±РµСЂРёРѕРЅ РѕС‡РЅСѓР»СЃСЏ РЅРµРЅР°РґРѕР»РіРѕ.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_03");	//РћРЅ С‡С‚Рѕ-РЅРёР±СѓРґСЊ СЃРєР°Р·Р°Р»?
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_04");	//Р”Р°, РѕРЅ СЃРєР°Р·Р°Р», С‡С‚Рѕ РЎРїСЏС‰РёР№ РЅР° СЃР°РјРѕРј РґРµР»Рµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ С‚РµРј, С‡С‚Рѕ РјС‹ Рѕ РЅРµРј РґСѓРјР°РµРј. РњС‹ РЅРµ РґРѕР»Р¶РЅС‹ РїС‹С‚Р°С‚СЊСЃСЏ СЂР°Р·Р±СѓРґРёС‚СЊ РµРіРѕ.
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_NULL_05");	//Р§С‚Рѕ? Р­С‚РѕРіРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ! Р®Р±РµСЂРёРѕРЅ РЅР°РІРµСЂРЅСЏРєР°, С‡С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє РїРѕРЅСЏР»! Рђ РєР°Рє-Р¶Рµ РјР°РіРёСЏ РЎРїСЏС‰РµРіРѕ? РњР°РіРёСЏ, С‡С‚Рѕ РѕРЅ РґР°РµС‚ СЃРѕРІРµСЂС€РµРЅРЅРѕ РЅРµ Р°РіСЂРµСЃСЃРёРІРЅР°, РѕРЅР° СѓРЅРёРєР°Р»СЊРЅР° - РјС‹ РѕР±СЏР·Р°РЅС‹ РёР·СѓС‡РёС‚СЊ РµРµ СЃРёР»СЊРЅРµРµ!
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_NULL_06");	//РњРѕР¶РµС‚ Рё С‚Р°Рє.
+	B_GiveXP(XP_FindHerbs);
+	B_LogEntry(CH3_FindHerbs,"РЇ РїРµСЂРµРґР°Р» РљРѕСЂ РђРЅРіР°СЂСѓ Р»РµС‡РµР±РЅС‹Рµ С‚СЂР°РІС‹, РЅРѕ РѕРЅРё РЅРµ РїРѕРјРѕРіР»Рё Р®Р±РµСЂРёРѕРЅСѓ... Р“Р»Р°РІР° Р‘СЂР°С‚СЃС‚РІР° СѓРјРµСЂ...");
+	CorAngar_FindHerb = LOG_SUCCESS;
+	Log_SetTopicStatus(CH3_FindHerbs,LOG_SUCCESS);
+	AI_Wait(self,0.5);
+	AI_GotoWP(self,"PSI_TEMPLE_ROOMS_IN_02");
+	AI_SetWalkMode(self,NPC_RUN);
+	AI_UseMob(self,"BOOK",-1);
+	AI_TurnToNPC(self,YBerion);
+	AI_UseItemToState(self,ItFo_Plants_Herb_03,0);
+	AI_PlayAni(self,"T_PLUNDER");
+	AI_UseItemToState(self,ItFo_Plants_Herb_03,-1);
+	AI_TurnToNPC(self,other);
+	AI_TurnToNPC(other,self);
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_05");	//РўРµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ РЅР° С‚Рѕ, С‡С‚Рѕ Р®Р±РµСЂРёРѕРЅР° РјРѕР¶РЅРѕ РІС‹Р»РµС‡РёС‚СЊ.
+	//AKH WORKING QUEST
+
+
 };
 
 
@@ -712,7 +751,7 @@ instance Info_CorAngar_TELEPORT(C_Info)
 
 func int Info_CorAngar_TELEPORT_Condition()
 {
-	if(Npc_KnowsInfo(hero,Info_CorAngar_FindHerb_Success) || Npc_KnowsInfo(hero,info_corangar_yberion_died) || Npc_KnowsInfo(hero,info_corangar_healthwater))
+	if(CorAngar_SendToNC)
 	{
 		return TRUE;
 	};
@@ -721,12 +760,12 @@ func int Info_CorAngar_TELEPORT_Condition()
 func void Info_CorAngar_TELEPORT_Info()
 {
 	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01");	//Подожди!
-	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_02");	//В чем дело?
-	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03");	//Возьми эту руну в знак нашей благодарности за твою помощь.
-	b_printtrademsg1("Получена руна телепортации в Болотный лагерь.");
-	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04");	//Она даст тебе возможность быстро перенестись на площадь перед нашим Храмом.
-	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05");	//Спасибо тебе!
+	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01");	//РџРѕРґРѕР¶РґРё!
+	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_02");	//Р’ С‡РµРј РґРµР»Рѕ?
+	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03");	//Р’РѕР·СЊРјРё СЌС‚Сѓ СЂСѓРЅСѓ РІ Р·РЅР°Рє РЅР°С€РµР№ Р±Р»Р°РіРѕРґР°СЂРЅРѕСЃС‚Рё Р·Р° С‚РІРѕСЋ РїРѕРјРѕС‰СЊ.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅР° СЂСѓРЅР° С‚РµР»РµРїРѕСЂС‚Р°С†РёРё РІ Р‘РѕР»РѕС‚РЅС‹Р№ Р»Р°РіРµСЂСЊ.");
+	AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_04");	//РћРЅР° РґР°СЃС‚ С‚РµР±Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ Р±С‹СЃС‚СЂРѕ РїРµСЂРµРЅРµСЃС‚РёСЃСЊ РЅР° РїР»РѕС‰Р°РґСЊ РїРµСЂРµРґ РЅР°С€РёРј РҐСЂР°РјРѕРј.
+	AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05");	//РЎРїР°СЃРёР±Рѕ С‚РµР±Рµ!
 	if(YBERION_DIED == TRUE)
 	{
 		Npc_ExchangeRoutine(self,"AFTER");
@@ -749,7 +788,7 @@ instance CORANGAR_STEALKEY(C_Info)
 	information = corangar_stealkey_info;
 	important = 0;
 	permanent = 0;
-	description = "(украсть ключ)";
+	description = "(СѓРєСЂР°СЃС‚СЊ РєР»СЋС‡)";
 };
 
 
@@ -764,14 +803,14 @@ func int corangar_stealkey_condition()
 func void corangar_stealkey_info()
 {
 	AI_GotoNpc(other,self);
-	AI_Output(other,self,"GUR_1201_CorKalom_CRAWLER_Info_15_01");	//Есть какие-нибудь верные приемы охоты на ползунов?
-	AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_07");	//Запомни, когда твой дух силен и тело закалено, ты можешь отразить любую угрозу.
+	AI_Output(other,self,"GUR_1201_CorKalom_CRAWLER_Info_15_01");	//Р•СЃС‚СЊ РєР°РєРёРµ-РЅРёР±СѓРґСЊ РІРµСЂРЅС‹Рµ РїСЂРёРµРјС‹ РѕС…РѕС‚С‹ РЅР° РїРѕР»Р·СѓРЅРѕРІ?
+	AI_Output(self,other,"GUR_1202_CorAngar_WANNABETPL_Info_08_07");	//Р—Р°РїРѕРјРЅРё, РєРѕРіРґР° С‚РІРѕР№ РґСѓС… СЃРёР»РµРЅ Рё С‚РµР»Рѕ Р·Р°РєР°Р»РµРЅРѕ, С‚С‹ РјРѕР¶РµС€СЊ РѕС‚СЂР°Р·РёС‚СЊ Р»СЋР±СѓСЋ СѓРіСЂРѕР·Сѓ.
 	AI_DrawWeapon(self);
 	AI_PlayAni(other,"T_STAND_2_IGET");
 	AI_PlayAni(other,"T_IGET_2_STAND");
 	AI_PlayAni(self,"T_1HSFREE");
 	AI_RemoveWeapon(self);
-	PrintScreen("Украден ключ.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
+	PrintScreen("РЈРєСЂР°РґРµРЅ РєР»СЋС‡.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
 	CreateInvItem(hero,itke_yberion);
 	Npc_RemoveInvItem(self,itke_yberion);
 	AI_StopProcessInfos(self);
@@ -811,42 +850,42 @@ func void info_corangar_yberion_died_info()
 	Log_SetTopicStatus(CH3_EscapePlanNC,LOG_RUNNING);
 	if(C_NpcBelongsToPsiCamp(hero))
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Умер Юберион, духовный отец Братства! Да упокоится он с миром! Перед смертью он выразил свою волю: братья должны помочь магам Воды осуществить их план. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара, эти предметы могут пригодиться магам Воды.");
+		B_LogEntry(CH3_EscapePlanNC,"РЈРјРµСЂ Р®Р±РµСЂРёРѕРЅ, РґСѓС…РѕРІРЅС‹Р№ РѕС‚РµС† Р‘СЂР°С‚СЃС‚РІР°! Р”Р° СѓРїРѕРєРѕРёС‚СЃСЏ РѕРЅ СЃ РјРёСЂРѕРј! РџРµСЂРµРґ СЃРјРµСЂС‚СЊСЋ РѕРЅ РІС‹СЂР°Р·РёР» СЃРІРѕСЋ РІРѕР»СЋ: Р±СЂР°С‚СЊСЏ РґРѕР»Р¶РЅС‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ РѕСЃСѓС‰РµСЃС‚РІРёС‚СЊ РёС… РїР»Р°РЅ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР°, СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹.");
 	}
 	else
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Я окончательно решил пойти в Новый лагерь, чтобы помочь магам Воды разрушить Барьер. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара эти предметы могут пригодиться магам Воды. ");
+		B_LogEntry(CH3_EscapePlanNC,"РЇ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ СЂРµС€РёР» РїРѕР№С‚Рё РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ, С‡С‚РѕР±С‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ СЂР°Р·СЂСѓС€РёС‚СЊ Р‘Р°СЂСЊРµСЂ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР° СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹. ");
 	};
 	if(BaalOrun_FetchWeed == LOG_RUNNING)
 	{
 		BaalOrun_FetchWeed = LOG_FAILED;
-		B_LogEntry(CH1_DeliverWeed,"Кор Галом покинул лагерь, я не успел отдать ему урожай болотника.");
+		B_LogEntry(CH1_DeliverWeed,"РљРѕСЂ Р“Р°Р»РѕРј РїРѕРєРёРЅСѓР» Р»Р°РіРµСЂСЊ, СЏ РЅРµ СѓСЃРїРµР» РѕС‚РґР°С‚СЊ РµРјСѓ СѓСЂРѕР¶Р°Р№ Р±РѕР»РѕС‚РЅРёРєР°.");
 		Log_SetTopicStatus(CH1_DeliverWeed,LOG_FAILED);
 	};
 	if(Kalom_Krautbote == LOG_RUNNING)
 	{
 		Kalom_Krautbote = LOG_FAILED;
-		B_LogEntry(CH1_KrautBote,"Кор Галом пропал, теперь я не смогу отдать ему руду за болотник.");
+		B_LogEntry(CH1_KrautBote,"РљРѕСЂ Р“Р°Р»РѕРј РїСЂРѕРїР°Р», С‚РµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РѕС‚РґР°С‚СЊ РµРјСѓ СЂСѓРґСѓ Р·Р° Р±РѕР»РѕС‚РЅРёРє.");
 		Log_SetTopicStatus(CH1_KrautBote,LOG_FAILED);
 	};
 	if(Kalom_DrugMonopol == LOG_RUNNING)
 	{
 		Kalom_DrugMonopol = LOG_FAILED;
-		B_LogEntry(CH1_DrugMonopol,"Я не смогу получить награду за устранение конкурентов, Кор Галом ушел из лагеря.");
+		B_LogEntry(CH1_DrugMonopol,"РЇ РЅРµ СЃРјРѕРіСѓ РїРѕР»СѓС‡РёС‚СЊ РЅР°РіСЂР°РґСѓ Р·Р° СѓСЃС‚СЂР°РЅРµРЅРёРµ РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ, РљРѕСЂ Р“Р°Р»РѕРј СѓС€РµР» РёР· Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_DrugMonopol,LOG_FAILED);
 	};
 	CorAngar_SendToNC = TRUE;
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_00");	//Юберион умер. Наш духовный учитель оставил нас!
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Что же теперь будет, Кор Ангар?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03");	//Я всегда доверял Юбериону. Перед смертью он сказал мне, что теперь нам остается надеяться только на магов Воды.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Значит, нам нужно помочь магам Воды.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Да, им нужен будет юнитор и альманах. И то, и другое находится у Кор Галома.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//А где сейчас Кор Галом?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07_New");	//Отправился сам искать путь к Спящему, взяв с собой нескольких Стражей.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//Как же мы теперь сможем забрать юнитор?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//Я думаю, он оставил юнитор и книгу в своей лаборатории. Вот тебе ключ от его сундука.
-	b_printtrademsg1("Получен ключ из лаборатории.");
-	B_LogEntry(CH3_FindHerbs,"Я не успел принести Юбериону лечебные травы... Глава Братства умер...");
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_00");	//Р®Р±РµСЂРёРѕРЅ СѓРјРµСЂ. РќР°С€ РґСѓС…РѕРІРЅС‹Р№ СѓС‡РёС‚РµР»СЊ РѕСЃС‚Р°РІРёР» РЅР°СЃ!
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Р§С‚Рѕ Р¶Рµ С‚РµРїРµСЂСЊ Р±СѓРґРµС‚, РљРѕСЂ РђРЅРіР°СЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03");	//РЇ РІСЃРµРіРґР° РґРѕРІРµСЂСЏР» Р®Р±РµСЂРёРѕРЅСѓ. РџРµСЂРµРґ СЃРјРµСЂС‚СЊСЋ РѕРЅ СЃРєР°Р·Р°Р» РјРЅРµ, С‡С‚Рѕ С‚РµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РЅР° РјР°РіРѕРІ Р’РѕРґС‹.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Р—РЅР°С‡РёС‚, РЅР°Рј РЅСѓР¶РЅРѕ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Р”Р°, РёРј РЅСѓР¶РµРЅ Р±СѓРґРµС‚ СЋРЅРёС‚РѕСЂ Рё Р°Р»СЊРјР°РЅР°С…. Р С‚Рѕ, Рё РґСЂСѓРіРѕРµ РЅР°С…РѕРґРёС‚СЃСЏ Сѓ РљРѕСЂ Р“Р°Р»РѕРјР°.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//Рђ РіРґРµ СЃРµР№С‡Р°СЃ РљРѕСЂ Р“Р°Р»РѕРј?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07_New");	//РћС‚РїСЂР°РІРёР»СЃСЏ СЃР°Рј РёСЃРєР°С‚СЊ РїСѓС‚СЊ Рє РЎРїСЏС‰РµРјСѓ, РІР·СЏРІ СЃ СЃРѕР±РѕР№ РЅРµСЃРєРѕР»СЊРєРёС… РЎС‚СЂР°Р¶РµР№.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//РљР°Рє Р¶Рµ РјС‹ С‚РµРїРµСЂСЊ СЃРјРѕР¶РµРј Р·Р°Р±СЂР°С‚СЊ СЋРЅРёС‚РѕСЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//РЇ РґСѓРјР°СЋ, РѕРЅ РѕСЃС‚Р°РІРёР» СЋРЅРёС‚РѕСЂ Рё РєРЅРёРіСѓ РІ СЃРІРѕРµР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё. Р’РѕС‚ С‚РµР±Рµ РєР»СЋС‡ РѕС‚ РµРіРѕ СЃСѓРЅРґСѓРєР°.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅ РєР»СЋС‡ РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.");
+	B_LogEntry(CH3_FindHerbs,"РЇ РЅРµ СѓСЃРїРµР» РїСЂРёРЅРµСЃС‚Рё Р®Р±РµСЂРёРѕРЅСѓ Р»РµС‡РµР±РЅС‹Рµ С‚СЂР°РІС‹... Р“Р»Р°РІР° Р‘СЂР°С‚СЃС‚РІР° СѓРјРµСЂ...");
 	CorAngar_FindHerb = LOG_FAILED;
 	Log_SetTopicStatus(CH3_FindHerbs,LOG_FAILED);
 	YBERION_DIED = TRUE;
@@ -862,7 +901,7 @@ instance INFO_CORANGAR_HEALTHWATER(C_Info)
 	information = info_corangar_healthwater_info;
 	permanent = 0;
 	important = 0;
-	description = "(отдать зелье Фортуно)";
+	description = "(РѕС‚РґР°С‚СЊ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ)";
 };
 
 
@@ -889,34 +928,34 @@ func void info_corangar_healthwater_info()
 	B_GiveXP(2000);
 	if(C_NpcBelongsToPsiCamp(hero))
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Юберион ненадолго очнулся и выразил свою волю: братья должны помочь магам Воды осуществить их план. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара, эти предметы могут пригодиться магам Воды.");
+		B_LogEntry(CH3_EscapePlanNC,"Р®Р±РµСЂРёРѕРЅ РЅРµРЅР°РґРѕР»РіРѕ РѕС‡РЅСѓР»СЃСЏ Рё РІС‹СЂР°Р·РёР» СЃРІРѕСЋ РІРѕР»СЋ: Р±СЂР°С‚СЊСЏ РґРѕР»Р¶РЅС‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ РѕСЃСѓС‰РµСЃС‚РІРёС‚СЊ РёС… РїР»Р°РЅ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР°, СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹.");
 	}
 	else
 	{
-		B_LogEntry(CH3_EscapePlanNC,"Я окончательно решил пойти в Новый лагерь, чтобы помочь магам Воды разрушить Барьер. Кор Ангар передал мне ключ от сундука из лаборатории Кор Галома. В нем находятся альманах и юнитор, которые я раздобыл для Братства. По мнению Кор Ангара, эти предметы могут пригодиться магам Воды.");
+		B_LogEntry(CH3_EscapePlanNC,"РЇ РѕРєРѕРЅС‡Р°С‚РµР»СЊРЅРѕ СЂРµС€РёР» РїРѕР№С‚Рё РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ, С‡С‚РѕР±С‹ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹ СЂР°Р·СЂСѓС€РёС‚СЊ Р‘Р°СЂСЊРµСЂ. РљРѕСЂ РђРЅРіР°СЂ РїРµСЂРµРґР°Р» РјРЅРµ РєР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР° РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’ РЅРµРј РЅР°С…РѕРґСЏС‚СЃСЏ Р°Р»СЊРјР°РЅР°С… Рё СЋРЅРёС‚РѕСЂ, РєРѕС‚РѕСЂС‹Рµ СЏ СЂР°Р·РґРѕР±С‹Р» РґР»СЏ Р‘СЂР°С‚СЃС‚РІР°. РџРѕ РјРЅРµРЅРёСЋ РљРѕСЂ РђРЅРіР°СЂР°, СЌС‚Рё РїСЂРµРґРјРµС‚С‹ РјРѕРіСѓС‚ РїСЂРёРіРѕРґРёС‚СЊСЃСЏ РјР°РіР°Рј Р’РѕРґС‹.");
 	};
 	if(BaalOrun_FetchWeed == LOG_RUNNING)
 	{
 		BaalOrun_FetchWeed = LOG_FAILED;
-		B_LogEntry(CH1_DeliverWeed,"Кор Галом покинул лагерь, я не успел отдать ему урожай болотника.");
+		B_LogEntry(CH1_DeliverWeed,"РљРѕСЂ Р“Р°Р»РѕРј РїРѕРєРёРЅСѓР» Р»Р°РіРµСЂСЊ, СЏ РЅРµ СѓСЃРїРµР» РѕС‚РґР°С‚СЊ РµРјСѓ СѓСЂРѕР¶Р°Р№ Р±РѕР»РѕС‚РЅРёРєР°.");
 		Log_SetTopicStatus(CH1_DeliverWeed,LOG_FAILED);
 	};
 	if(Kalom_Krautbote == LOG_RUNNING)
 	{
 		Kalom_Krautbote = LOG_FAILED;
-		B_LogEntry(CH1_KrautBote,"Кор Галом пропал, теперь я не смогу отдать ему руду за болотник.");
+		B_LogEntry(CH1_KrautBote,"РљРѕСЂ Р“Р°Р»РѕРј РїСЂРѕРїР°Р», С‚РµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РѕС‚РґР°С‚СЊ РµРјСѓ СЂСѓРґСѓ Р·Р° Р±РѕР»РѕС‚РЅРёРє.");
 		Log_SetTopicStatus(CH1_KrautBote,LOG_FAILED);
 	};
 	if(Kalom_DrugMonopol == LOG_RUNNING)
 	{
 		Kalom_DrugMonopol = LOG_FAILED;
-		B_LogEntry(CH1_DrugMonopol,"Я не смогу получить награду за устранение конкурентов, Кор Галом ушел из лагеря.");
+		B_LogEntry(CH1_DrugMonopol,"РЇ РЅРµ СЃРјРѕРіСѓ РїРѕР»СѓС‡РёС‚СЊ РЅР°РіСЂР°РґСѓ Р·Р° СѓСЃС‚СЂР°РЅРµРЅРёРµ РєРѕРЅРєСѓСЂРµРЅС‚РѕРІ, РљРѕСЂ Р“Р°Р»РѕРј СѓС€РµР» РёР· Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_DrugMonopol,LOG_FAILED);
 	};
 	CorAngar_SendToNC = TRUE;
-	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01_New");	//Вот, может быть, это поможет.
-	b_printtrademsg1("Отдано лечебное зелье Фортуно.");
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_05");	//Теперь нам остается надеяться на то, что Юбериона можно вылечить.
+	AI_Output(other,self,"Tpl_1433_GorNaVid_HEALTH_SUC_Info_15_01_New");	//Р’РѕС‚, РјРѕР¶РµС‚ Р±С‹С‚СЊ, СЌС‚Рѕ РїРѕРјРѕР¶РµС‚.
+	b_printtrademsg1("РћС‚РґР°РЅРѕ Р»РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ.");
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_05");	//РўРµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ РЅР° С‚Рѕ, С‡С‚Рѕ Р®Р±РµСЂРёРѕРЅР° РјРѕР¶РЅРѕ РІС‹Р»РµС‡РёС‚СЊ.
 	AI_Wait(self,0.5);
 	AI_GotoWP(self,"PSI_TEMPLE_ROOMS_IN_02");
 	AI_SetWalkMode(self,NPC_RUN);
@@ -927,20 +966,20 @@ func void info_corangar_healthwater_info()
 	AI_Wait(self,3);
 	AI_UseItemToState(self,HealthWater,-1);
 	AI_GotoNpc(self,hero);
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_02_New");	//Отлично. Юберион очнулся ненадолго.
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_02_New");	//РћС‚Р»РёС‡РЅРѕ. Р®Р±РµСЂРёРѕРЅ РѕС‡РЅСѓР»СЃСЏ РЅРµРЅР°РґРѕР»РіРѕ.
 	AI_TurnToNPC(other,self);
-	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_03");	//Он что-нибудь сказал?
-	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_04");	//Да, он сказал, что Спящий на самом деле не является тем, что мы о нем думаем. Мы не должны пытаться разбудить его.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Что же теперь будет, Кор Ангар?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03_New");	//Я всегда доверял Юбериону. Он сказал мне, что теперь нам остается надеяться только на магов Воды.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Значит, нам нужно помочь магам Воды.
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Да, им нужен будет юнитор и альманах. И то, и другое находится у Кор Галома.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//А где сейчас Кор Галом?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07_New");	//Отправился сам искать путь к Спящему, взяв с собой нескольких Стражей.
-	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//Как же мы теперь сможем забрать юнитор?
-	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//Я думаю, он оставил юнитор и книгу в своей лаборатории. Вот тебе ключ от его сундука.
-	b_printtrademsg2("Получен ключ из лаборатории.");
-	B_LogEntry(CH3_FindHerbs,"Зелье Фортуно сработало! Юберион пришел в себя и успел немного поговорить с Кор Ангаром, прежде чем потерял сознание. Он все еще слаб, но уже не при смерти. Надеюсь, он поправится.");
+	AI_Output(other,self,"Info_CorAngar_FindHerb_Success_15_03");	//РћРЅ С‡С‚Рѕ-РЅРёР±СѓРґСЊ СЃРєР°Р·Р°Р»?
+	AI_Output(self,other,"Info_CorAngar_FindHerb_Success_08_04");	//Р”Р°, РѕРЅ СЃРєР°Р·Р°Р», С‡С‚Рѕ РЎРїСЏС‰РёР№ РЅР° СЃР°РјРѕРј РґРµР»Рµ РЅРµ СЏРІР»СЏРµС‚СЃСЏ С‚РµРј, С‡С‚Рѕ РјС‹ Рѕ РЅРµРј РґСѓРјР°РµРј. РњС‹ РЅРµ РґРѕР»Р¶РЅС‹ РїС‹С‚Р°С‚СЊСЃСЏ СЂР°Р·Р±СѓРґРёС‚СЊ РµРіРѕ.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_02");	//Р§С‚Рѕ Р¶Рµ С‚РµРїРµСЂСЊ Р±СѓРґРµС‚, РљРѕСЂ РђРЅРіР°СЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_03_New");	//РЇ РІСЃРµРіРґР° РґРѕРІРµСЂСЏР» Р®Р±РµСЂРёРѕРЅСѓ. РћРЅ СЃРєР°Р·Р°Р» РјРЅРµ, С‡С‚Рѕ С‚РµРїРµСЂСЊ РЅР°Рј РѕСЃС‚Р°РµС‚СЃСЏ РЅР°РґРµСЏС‚СЊСЃСЏ С‚РѕР»СЊРєРѕ РЅР° РјР°РіРѕРІ Р’РѕРґС‹.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_04");	//Р—РЅР°С‡РёС‚, РЅР°Рј РЅСѓР¶РЅРѕ РїРѕРјРѕС‡СЊ РјР°РіР°Рј Р’РѕРґС‹.
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_05");	//Р”Р°, РёРј РЅСѓР¶РµРЅ Р±СѓРґРµС‚ СЋРЅРёС‚РѕСЂ Рё Р°Р»СЊРјР°РЅР°С…. Р С‚Рѕ, Рё РґСЂСѓРіРѕРµ РЅР°С…РѕРґРёС‚СЃСЏ Сѓ РљРѕСЂ Р“Р°Р»РѕРјР°.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_06");	//Рђ РіРґРµ СЃРµР№С‡Р°СЃ РљРѕСЂ Р“Р°Р»РѕРј?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_07_New");	//РћС‚РїСЂР°РІРёР»СЃСЏ СЃР°Рј РёСЃРєР°С‚СЊ РїСѓС‚СЊ Рє РЎРїСЏС‰РµРјСѓ, РІР·СЏРІ СЃ СЃРѕР±РѕР№ РЅРµСЃРєРѕР»СЊРєРёС… РЎС‚СЂР°Р¶РµР№.
+	AI_Output(other,self,"GUR_1202_CorAngar_DEATH_Info_15_08");	//РљР°Рє Р¶Рµ РјС‹ С‚РµРїРµСЂСЊ СЃРјРѕР¶РµРј Р·Р°Р±СЂР°С‚СЊ СЋРЅРёС‚РѕСЂ?
+	AI_Output(self,other,"GUR_1202_CorAngar_DEATH_Info_08_09");	//РЇ РґСѓРјР°СЋ, РѕРЅ РѕСЃС‚Р°РІРёР» СЋРЅРёС‚РѕСЂ Рё РєРЅРёРіСѓ РІ СЃРІРѕРµР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё. Р’РѕС‚ С‚РµР±Рµ РєР»СЋС‡ РѕС‚ РµРіРѕ СЃСѓРЅРґСѓРєР°.
+	b_printtrademsg2("РџРѕР»СѓС‡РµРЅ РєР»СЋС‡ РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.");
+	B_LogEntry(CH3_FindHerbs,"Р—РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ СЃСЂР°Р±РѕС‚Р°Р»Рѕ! Р®Р±РµСЂРёРѕРЅ РїСЂРёС€РµР» РІ СЃРµР±СЏ Рё СѓСЃРїРµР» РЅРµРјРЅРѕРіРѕ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РљРѕСЂ РђРЅРіР°СЂРѕРј, РїСЂРµР¶РґРµ С‡РµРј РїРѕС‚РµСЂСЏР» СЃРѕР·РЅР°РЅРёРµ. РћРЅ РІСЃРµ РµС‰Рµ СЃР»Р°Р±, РЅРѕ СѓР¶Рµ РЅРµ РїСЂРё СЃРјРµСЂС‚Рё. РќР°РґРµСЋСЃСЊ, РѕРЅ РїРѕРїСЂР°РІРёС‚СЃСЏ.");
 	CorAngar_FindHerb = LOG_SUCCESS;
 	Log_SetTopicStatus(CH3_FindHerbs,LOG_SUCCESS);
 	YBERION_HEALED = TRUE;

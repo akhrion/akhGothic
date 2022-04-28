@@ -21,6 +21,7 @@ func void b_gornatothlearn()
 		Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_5,5 * LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_5);
 		Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_LearnMana_1,LPCOST_ATTRIBUTE_MANA,0),TPL_1402_GorNaToth_Teach_MAN_1);
 	};
+	Npc_ChangeModelFatness(other);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_1H) < 1)
 	{
 		Info_AddChoice(TPL_1402_GorNaToth_Teach,B_BuildLearnString(NAME_Learn1h_1,LPCOST_TALENT_1H_1,0),tpl_1402_gornatoth_teach_1h_1);
@@ -61,7 +62,7 @@ instance DIA_GorNaToth_Abweisend(C_Info)
 	condition = DIA_GorNaToth_Abweisend_Condition;
 	information = DIA_GorNaToth_Abweisend_Info;
 	permanent = 1;
-	description = "Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?";
+	description = "Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?";
 };
 
 
@@ -75,8 +76,8 @@ func int DIA_GorNaToth_Abweisend_Condition()
 
 func void DIA_GorNaToth_Abweisend_Info()
 {
-	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_15_00");	//Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_11_01");	//Óéäè îò ìåíÿ, íåâåðíûé! ß òðåíèðóþ òîëüêî Ñòðàæåé Ñïÿùåãî!
+	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_15_00");	//Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_11_01");	//Ð£Ð¹Ð´Ð¸ Ð¾Ñ‚ Ð¼ÐµÐ½Ñ, Ð½ÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹! Ð¯ Ñ‚Ñ€ÐµÐ½Ð¸Ñ€ÑƒÑŽ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¡Ñ‚Ñ€Ð°Ð¶ÐµÐ¹ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾!
 	AI_StopProcessInfos(self);
 };
 
@@ -102,33 +103,33 @@ func int DIA_GorNaToth_AngarTalked_Condition()
 
 func void DIA_GorNaToth_AngarTalked_Info()
 {
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_11_00");	//Êîð Àíãàð ãîâîðèë ñ òîáîé? ×òî îí òåáå ñêàçàë?
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_11_00");	//ÐšÐ¾Ñ€ ÐÐ½Ð³Ð°Ñ€ Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ñ Ñ‚Ð¾Ð±Ð¾Ð¹? Ð§Ñ‚Ð¾ Ð¾Ð½ Ñ‚ÐµÐ±Ðµ ÑÐºÐ°Ð·Ð°Ð»?
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
-	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Òâîé ó÷èòåëü ñêàçàë, ÷òî òû íåäîñòîèí íîñèòü äîñïåõ Ñòðàæà.",DIA_GorNaToth_AngarTalked_Unworthy);
-	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Îí ñêàçàë, ÷òî åìó íå íðàâÿòñÿ áîëîòîæîðû.",DIA_GorNaToth_AngarTalked_Shark);
-	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Îí ñêàçàë, ÷òî ÿ äîëæåí ïðèéòè ê íåìó, êîãäà ñòàíó ñòðàæåì.",DIA_GorNaToth_AngarTalked_Normal);
+	Info_AddChoice(DIA_GorNaToth_AngarTalked,"Ð¢Ð²Ð¾Ð¹ ÑƒÑ‡Ð¸Ñ‚ÐµÐ»ÑŒ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð½ÐµÐ´Ð¾ÑÑ‚Ð¾Ð¸Ð½ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.",DIA_GorNaToth_AngarTalked_Unworthy);
+	Info_AddChoice(DIA_GorNaToth_AngarTalked,"ÐžÐ½ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ ÐµÐ¼Ñƒ Ð½Ðµ Ð½Ñ€Ð°Ð²ÑÑ‚ÑÑ Ð±Ð¾Ð»Ð¾Ñ‚Ð¾Ð¶Ð¾Ñ€Ñ‹.",DIA_GorNaToth_AngarTalked_Shark);
+	Info_AddChoice(DIA_GorNaToth_AngarTalked,"ÐžÐ½ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¿Ñ€Ð¸Ð¹Ñ‚Ð¸ Ðº Ð½ÐµÐ¼Ñƒ, ÐºÐ¾Ð³Ð´Ð° ÑÑ‚Ð°Ð½Ñƒ ÑÑ‚Ñ€Ð°Ð¶ÐµÐ¼.",DIA_GorNaToth_AngarTalked_Normal);
 };
 
 func void DIA_GorNaToth_AngarTalked_Normal()
 {
-	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Normal_15_00");	//Îí ñêàçàë, ÷òî ÿ äîëæåí ïðèéòè ê íåìó, êîãäà ñòàíó ñòðàæåì.
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Normal_11_01");	//Íàâåðíîå, òû åìó ïîíðàâèëñÿ. Îí ïî÷òè íèêîãäà íè ñ êåì íå ðàçãîâàðèâàåò.
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Normal_11_02");	//Îí îêàçàë òåáå áîëüøóþ ÷åñòü, çàãîâîðèâ ñ òîáîé. Ñî ìíîé îí â ïîñëåäíèé ðàç ãîâîðèë äâà ìåñÿöà íàçàä.
+	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Normal_15_00");	//ÐžÐ½ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¿Ñ€Ð¸Ð¹Ñ‚Ð¸ Ðº Ð½ÐµÐ¼Ñƒ, ÐºÐ¾Ð³Ð´Ð° ÑÑ‚Ð°Ð½Ñƒ ÑÑ‚Ñ€Ð°Ð¶ÐµÐ¼.
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Normal_11_01");	//ÐÐ°Ð²ÐµÑ€Ð½Ð¾Ðµ, Ñ‚Ñ‹ ÐµÐ¼Ñƒ Ð¿Ð¾Ð½Ñ€Ð°Ð²Ð¸Ð»ÑÑ. ÐžÐ½ Ð¿Ð¾Ñ‡Ñ‚Ð¸ Ð½Ð¸ÐºÐ¾Ð³Ð´Ð° Ð½Ð¸ Ñ ÐºÐµÐ¼ Ð½Ðµ Ñ€Ð°Ð·Ð³Ð¾Ð²Ð°Ñ€Ð¸Ð²Ð°ÐµÑ‚.
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Normal_11_02");	//ÐžÐ½ Ð¾ÐºÐ°Ð·Ð°Ð» Ñ‚ÐµÐ±Ðµ Ð±Ð¾Ð»ÑŒÑˆÑƒÑŽ Ñ‡ÐµÑÑ‚ÑŒ, Ð·Ð°Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð² Ñ Ñ‚Ð¾Ð±Ð¾Ð¹. Ð¡Ð¾ Ð¼Ð½Ð¾Ð¹ Ð¾Ð½ Ð² Ð¿Ð¾ÑÐ»ÐµÐ´Ð½Ð¸Ð¹ Ñ€Ð°Ð· Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ð´Ð²Ð° Ð¼ÐµÑÑÑ†Ð° Ð½Ð°Ð·Ð°Ð´.
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 };
 
 func void DIA_GorNaToth_AngarTalked_Shark()
 {
-	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Shark_15_00");	//Îí ñêàçàë, ÷òî åìó íå íðàâÿòñÿ áîëîòîæîðû.
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Shark_11_01");	//Îí òàê ñêàçàë?.. Ìíå ïðåäñòîèò èñïîëíèòü ñâÿùåííóþ ìèññèþ!
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Shark_11_02");	//Æåëàíèå ìîåãî Ó÷èòåëÿ äëÿ ìåíÿ çàêîí.
+	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Shark_15_00");	//ÐžÐ½ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ ÐµÐ¼Ñƒ Ð½Ðµ Ð½Ñ€Ð°Ð²ÑÑ‚ÑÑ Ð±Ð¾Ð»Ð¾Ñ‚Ð¾Ð¶Ð¾Ñ€Ñ‹.
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Shark_11_01");	//ÐžÐ½ Ñ‚Ð°Ðº ÑÐºÐ°Ð·Ð°Ð»?.. ÐœÐ½Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð¾Ð¸Ñ‚ Ð¸ÑÐ¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ ÑÐ²ÑÑ‰ÐµÐ½Ð½ÑƒÑŽ Ð¼Ð¸ÑÑÐ¸ÑŽ!
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Shark_11_02");	//Ð–ÐµÐ»Ð°Ð½Ð¸Ðµ Ð¼Ð¾ÐµÐ³Ð¾ Ð£Ñ‡Ð¸Ñ‚ÐµÐ»Ñ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ð·Ð°ÐºÐ¾Ð½.
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 };
 
 func void DIA_GorNaToth_AngarTalked_Unworthy()
 {
-	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Unworthy_15_00");	//Òâîé ó÷èòåëü ñêàçàë, ÷òî òû íåäîñòîèí íîñèòü äîñïåõè Ñòðàæà.
-	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01");	//Íåò! Îí íèêîãäà íå ñêàçàë áû ýòîãî! Òîëüêî íå îáî ìíå!
+	AI_Output(other,self,"DIA_GorNaToth_AngarTalked_Unworthy_15_00");	//Ð¢Ð²Ð¾Ð¹ ÑƒÑ‡Ð¸Ñ‚ÐµÐ»ÑŒ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð½ÐµÐ´Ð¾ÑÑ‚Ð¾Ð¸Ð½ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.
+	AI_Output(self,other,"DIA_GorNaToth_AngarTalked_Unworthy_11_01");	//ÐÐµÑ‚! ÐžÐ½ Ð½Ð¸ÐºÐ¾Ð³Ð´Ð° Ð½Ðµ ÑÐºÐ°Ð·Ð°Ð» Ð±Ñ‹ ÑÑ‚Ð¾Ð³Ð¾! Ð¢Ð¾Ð»ÑŒÐºÐ¾ Ð½Ðµ Ð¾Ð±Ð¾ Ð¼Ð½Ðµ!
 	Info_ClearChoices(DIA_GorNaToth_AngarTalked);
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
@@ -143,7 +144,7 @@ instance TPL_1402_GorNaToth_GETSTUFF(C_Info)
 	information = TPL_1402_GorNaToth_GETSTUFF_Info;
 	important = 0;
 	permanent = 0;
-	description = "ß ïðèøåë, ÷òîáû âçÿòü äîñïåõ Ñòðàæà.";
+	description = "Ð¯ Ð¿Ñ€Ð¸ÑˆÐµÐ», Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð²Ð·ÑÑ‚ÑŒ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.";
 };
 
 
@@ -157,13 +158,13 @@ func int TPL_1402_GorNaToth_GETSTUFF_Condition()
 
 func void TPL_1402_GorNaToth_GETSTUFF_Info()
 {
-	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01");	//ß ïðèøåë, ÷òîáû âçÿòü äîñïåõè Ñòðàæà.
-	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02");	//ß î÷åíü ðàä, ÷òî ìîãó ïåðåäàòü òåáå îäèí èç íàøèõ äîñïåõîâ. Òû çàñëóæèë èõ, âåäü ýòî òû îáíàðóæèë ÿéöà ïîëçóíîâ.
-	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03");	//Ïóñòü ýòîò äîñïåõ õðàíèò òåáÿ, êàê Ñïÿùèé õðàíèò íàøå Áðàòñòâî!
-	b_printtrademsg1("Ïîëó÷åí ëåãêèé äîñïåõ Ñòðàæà.");
-	B_LogEntry(GE_BecomeTemplar,"Ãîð Íà Òîô âðó÷èë ìíå ìîé ïåðâûé äîñïåõ Ñòðàæà. Òåïåðü ÿ ñòàë ÷àñòüþ ýòîãî îáùåñòâà âîèíîâ!");
+	AI_Output(other,self,"TPL_1402_GorNaToth_GETSTUFF_Info_15_01");	//Ð¯ Ð¿Ñ€Ð¸ÑˆÐµÐ», Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð²Ð·ÑÑ‚ÑŒ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.
+	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_02");	//Ð¯ Ð¾Ñ‡ÐµÐ½ÑŒ Ñ€Ð°Ð´, Ñ‡Ñ‚Ð¾ Ð¼Ð¾Ð³Ñƒ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‚ÑŒ Ñ‚ÐµÐ±Ðµ Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ð½Ð°ÑˆÐ¸Ñ… Ð´Ð¾ÑÐ¿ÐµÑ…Ð¾Ð². Ð¢Ñ‹ Ð·Ð°ÑÐ»ÑƒÐ¶Ð¸Ð» Ð¸Ñ…, Ð²ÐµÐ´ÑŒ ÑÑ‚Ð¾ Ñ‚Ñ‹ Ð¾Ð±Ð½Ð°Ñ€ÑƒÐ¶Ð¸Ð» ÑÐ¹Ñ†Ð° Ð¿Ð¾Ð»Ð·ÑƒÐ½Ð¾Ð².
+	AI_Output(self,other,"TPL_1402_GorNaToth_GETSTUFF_Info_11_03");	//ÐŸÑƒÑÑ‚ÑŒ ÑÑ‚Ð¾Ñ‚ Ð´Ð¾ÑÐ¿ÐµÑ… Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ Ñ‚ÐµÐ±Ñ, ÐºÐ°Ðº Ð¡Ð¿ÑÑ‰Ð¸Ð¹ Ñ…Ñ€Ð°Ð½Ð¸Ñ‚ Ð½Ð°ÑˆÐµ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð¾!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ð»ÐµÐ³ÐºÐ¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.");
+	B_LogEntry(GE_BecomeTemplar,"Ð“Ð¾Ñ€ ÐÐ° Ð¢Ð¾Ñ„ Ð²Ñ€ÑƒÑ‡Ð¸Ð» Ð¼Ð½Ðµ Ð¼Ð¾Ð¹ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°. Ð¢ÐµÐ¿ÐµÑ€ÑŒ Ñ ÑÑ‚Ð°Ð» Ñ‡Ð°ÑÑ‚ÑŒÑŽ ÑÑ‚Ð¾Ð³Ð¾ Ð¾Ð±Ñ‰ÐµÑÑ‚Ð²Ð° Ð²Ð¾Ð¸Ð½Ð¾Ð²!");
 	Log_CreateTopic(GE_TraderPSI,LOG_NOTE);
-	B_LogEntry(GE_TraderPSI,"Ó Ãîð Íà Òîôà åñòü õîðîøèå äîñïåõè Ñòðàæåé, íî ïîëó÷èòü èõ ìîæåò òîëüêî òîò, êòî âíåñ çíà÷èòåëüíîå ïîæåðòâîâàíèå íà íóæäû Áðàòñòâà. ß ìîãó íàéòè åãî íà òðåíèðîâî÷íîé ïëîùàäêå ëàãåðÿ Áðàòñòâà.");
+	B_LogEntry(GE_TraderPSI,"Ð£ Ð“Ð¾Ñ€ ÐÐ° Ð¢Ð¾Ñ„Ð° ÐµÑÑ‚ÑŒ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð¡Ñ‚Ñ€Ð°Ð¶ÐµÐ¹, Ð½Ð¾ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¸Ñ… Ð¼Ð¾Ð¶ÐµÑ‚ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ‚Ð¾Ñ‚, ÐºÑ‚Ð¾ Ð²Ð½ÐµÑ Ð·Ð½Ð°Ñ‡Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ð¾Ðµ Ð¿Ð¾Ð¶ÐµÑ€Ñ‚Ð²Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð° Ð½ÑƒÐ¶Ð´Ñ‹ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°. Ð¯ Ð¼Ð¾Ð³Ñƒ Ð½Ð°Ð¹Ñ‚Ð¸ ÐµÐ³Ð¾ Ð½Ð° Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²Ð¾Ñ‡Ð½Ð¾Ð¹ Ð¿Ð»Ð¾Ñ‰Ð°Ð´ÐºÐµ Ð»Ð°Ð³ÐµÑ€Ñ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°.");
 	CreateInvItem(self,tpl_armor_l);
 	B_GiveInvItems(self,hero,tpl_armor_l,1);
 };
@@ -179,7 +180,7 @@ instance TPL_1402_GorNaToth_ARMOR(C_Info)
 	information = TPL_1402_GorNaToth_ARMOR_Info;
 	important = 0;
 	permanent = 1;
-	description = "Ìíå íóæíû áîëåå ïðî÷íûå äîñïåõè.";
+	description = "ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ñ‹ Ð±Ð¾Ð»ÐµÐµ Ð¿Ñ€Ð¾Ñ‡Ð½Ñ‹Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸.";
 };
 
 
@@ -193,43 +194,43 @@ func int TPL_1402_GorNaToth_ARMOR_Condition()
 
 func void TPL_1402_GorNaToth_ARMOR_Info()
 {
-	AI_Output(other,self,"Info_GorNaToth_ARMOR_15_01");	//Ìíå íóæíû áîëåå ïðî÷íûå äîñïåõè.
+	AI_Output(other,self,"Info_GorNaToth_ARMOR_15_01");	//ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ñ‹ Ð±Ð¾Ð»ÐµÐµ Ð¿Ñ€Ð¾Ñ‡Ð½Ñ‹Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸.
 	if(hero.guild == GIL_NOV)
 	{
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02");	//Ñåé÷àñ òû íå ñìîæåøü íîñèòü åãî. Ñíà÷àëà òåáå ïðèäåòñÿ äîêàçàòü ñâîþ âåðíîñòü Áðàòñòâó è ñòàòü Ñòðàæåì. Òîëüêî ïîñëå ýòîãî ó òåáÿ áóäåò ïðàâî íà òàêîé äîñïåõ.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_02");	//Ð¡ÐµÐ¹Ñ‡Ð°Ñ Ñ‚Ñ‹ Ð½Ðµ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ ÐµÐ³Ð¾. Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ñ‚ÐµÐ±Ðµ Ð¿Ñ€Ð¸Ð´ÐµÑ‚ÑÑ Ð´Ð¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ ÑÐ²Ð¾ÑŽ Ð²ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ñƒ Ð¸ ÑÑ‚Ð°Ñ‚ÑŒ Ð¡Ñ‚Ñ€Ð°Ð¶ÐµÐ¼. Ð¢Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾ÑÐ»Ðµ ÑÑ‚Ð¾Ð³Ð¾ Ñƒ Ñ‚ÐµÐ±Ñ Ð±ÑƒÐ´ÐµÑ‚ Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð° Ñ‚Ð°ÐºÐ¾Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ….
 	}
 	else
 	{
-		AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02");	//ß ìîãó äàòü òåáå äîñïåõ ïîëó÷øå, íî çà ýòî òû âíåñåøü ïîæåðòâîâàíèå íà íóæäû íàøåãî Áðàòñòâà.
+		AI_Output(self,other,"Info_GorNaToth_ARMOR_11_02");	//Ð¯ Ð¼Ð¾Ð³Ñƒ Ð´Ð°Ñ‚ÑŒ Ñ‚ÐµÐ±Ðµ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¿Ð¾Ð»ÑƒÑ‡ÑˆÐµ, Ð½Ð¾ Ð·Ð° ÑÑ‚Ð¾ Ñ‚Ñ‹ Ð²Ð½ÐµÑÐµÑˆÑŒ Ð¿Ð¾Ð¶ÐµÑ€Ñ‚Ð²Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð° Ð½ÑƒÐ¶Ð´Ñ‹ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°.
 		Info_ClearChoices(TPL_1402_GorNaToth_ARMOR);
 		Info_AddChoice(TPL_1402_GorNaToth_ARMOR,DIALOG_BACK,TPL_1402_GorNaToth_ARMOR_BACK);
 		if(GORNATOTH_ARMOR_H_WAS_BOUGHT != 1)
 		{
-			Info_AddChoice(TPL_1402_GorNaToth_ARMOR,B_BuildBuyArmorString("Òÿæåëûé äîñïåõ ñòðàæà, çàùèòà: 70/10/35/0",VALUE_TPL_ARMOR_H),TPL_1402_GorNaToth_ARMOR_H);
+			Info_AddChoice(TPL_1402_GorNaToth_ARMOR,B_BuildBuyArmorString("Ð¢ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… ÑÑ‚Ñ€Ð°Ð¶Ð°, Ð·Ð°Ñ‰Ð¸Ñ‚Ð°: 70/10/35/0",VALUE_TPL_ARMOR_H),TPL_1402_GorNaToth_ARMOR_H);
 		};
 		if(GORNATOTH_ARMOR_M_WAS_BOUGHT != 1)
 		{
-			Info_AddChoice(TPL_1402_GorNaToth_ARMOR,B_BuildBuyArmorString("Ñðåäíèé äîñïåõ ñòðàæà, çàùèòà: 55/10/25/0",VALUE_TPL_ARMOR_M),TPL_1402_GorNaToth_ARMOR_M);
+			Info_AddChoice(TPL_1402_GorNaToth_ARMOR,B_BuildBuyArmorString("Ð¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… ÑÑ‚Ñ€Ð°Ð¶Ð°, Ð·Ð°Ñ‰Ð¸Ñ‚Ð°: 55/10/25/0",VALUE_TPL_ARMOR_M),TPL_1402_GorNaToth_ARMOR_M);
 		};
 	};
 };
 
 func void TPL_1402_GorNaToth_ARMOR_M()
 {
-	AI_Output(hero,self,"Info_GorNaToth_ARMOR_M_15_01");	//Ìíå íóæíû ñðåäíèå äîñïåõè Ñòðàæà.
+	AI_Output(hero,self,"Info_GorNaToth_ARMOR_M_15_01");	//ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ñ‹ ÑÑ€ÐµÐ´Ð½Ð¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.
 	if(Kapitel < 3)
 	{
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02");	//Òû äëÿ ýòîãî íåäîñòàòî÷íî îïûòåí. Äîêàæè, ÷òî òû âåðåí íàøåìó Áðàòñòâó, è òîëüêî ïîñëå ýòîãî òû áóäåøü äîñòîèí íîñèòü ñòîëü ñîâåðøåííûé äîñïåõ.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02");	//Ð¢Ñ‹ Ð´Ð»Ñ ÑÑ‚Ð¾Ð³Ð¾ Ð½ÐµÐ´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾ Ð¾Ð¿Ñ‹Ñ‚ÐµÐ½. Ð”Ð¾ÐºÐ°Ð¶Ð¸, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð²ÐµÑ€ÐµÐ½ Ð½Ð°ÑˆÐµÐ¼Ñƒ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ñƒ, Ð¸ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾ÑÐ»Ðµ ÑÑ‚Ð¾Ð³Ð¾ Ñ‚Ñ‹ Ð±ÑƒÐ´ÐµÑˆÑŒ Ð´Ð¾ÑÑ‚Ð¾Ð¸Ð½ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»ÑŒ ÑÐ¾Ð²ÐµÑ€ÑˆÐµÐ½Ð½Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ….
 	}
 	else if(Npc_HasItems(hero,ItMiNugget) < VALUE_TPL_ARMOR_M)
 	{
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03");	//Êàê òîëüêî òû ñìîæåøü âíåñòè ïîæåðòâîâàíèå íà íóæäû Áðàòñòâà, òû ïîëó÷èøü äîñïåõ ïîëó÷øå.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_03");	//ÐšÐ°Ðº Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ‚Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ Ð²Ð½ÐµÑÑ‚Ð¸ Ð¿Ð¾Ð¶ÐµÑ€Ñ‚Ð²Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð° Ð½ÑƒÐ¶Ð´Ñ‹ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°, Ñ‚Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸ÑˆÑŒ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¿Ð¾Ð»ÑƒÑ‡ÑˆÐµ.
 	}
 	else
 	{
-		b_printtrademsg1("Îòäàíî ðóäû: 1650");
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04");	//Òû ìîæåøü âíåñòè ïîæåðòâîâàíèå, ïîýòîìó ÿ äàì òåáå òàêîé äîñïåõ. Îí ñòàíåò òâîåé íàäåæíîé çàùèòîé.
-		b_printtrademsg2("Ïîëó÷åí ñðåäíèé äîñïåõ Ñòðàæà.");
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 1650");
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_M_11_04");	//Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð²Ð½ÐµÑÑ‚Ð¸ Ð¿Ð¾Ð¶ÐµÑ€Ñ‚Ð²Ð¾Ð²Ð°Ð½Ð¸Ðµ, Ð¿Ð¾ÑÑ‚Ð¾Ð¼Ñƒ Ñ Ð´Ð°Ð¼ Ñ‚ÐµÐ±Ðµ Ñ‚Ð°ÐºÐ¾Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ…. ÐžÐ½ ÑÑ‚Ð°Ð½ÐµÑ‚ Ñ‚Ð²Ð¾ÐµÐ¹ Ð½Ð°Ð´ÐµÐ¶Ð½Ð¾Ð¹ Ð·Ð°Ñ‰Ð¸Ñ‚Ð¾Ð¹.
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.");
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_TPL_ARMOR_M);
 		CreateInvItem(self,tpl_armor_m);
 		B_GiveInvItems(self,hero,tpl_armor_m,1);
@@ -240,20 +241,20 @@ func void TPL_1402_GorNaToth_ARMOR_M()
 
 func void TPL_1402_GorNaToth_ARMOR_H()
 {
-	AI_Output(hero,self,"Info_GorNaToth_ARMOR_H_15_01");	//ß õî÷ó âçÿòü òÿæåëûå äîñïåõè Ñòðàæà.
+	AI_Output(hero,self,"Info_GorNaToth_ARMOR_H_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð²Ð·ÑÑ‚ÑŒ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.
 	if(Kapitel < 4)
 	{
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02");	//Òû äëÿ ýòîãî íåäîñòàòî÷íî îïûòåí. Äîêàæè, ÷òî òû âåðåí íàøåìó Áðàòñòâó, è òîëüêî ïîñëå ýòîãî òû áóäåøü äîñòîèí íîñèòü ñòîëü ñîâåðøåííûé äîñïåõ.
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_02");	//Ð¢Ñ‹ Ð´Ð»Ñ ÑÑ‚Ð¾Ð³Ð¾ Ð½ÐµÐ´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾ Ð¾Ð¿Ñ‹Ñ‚ÐµÐ½. Ð”Ð¾ÐºÐ°Ð¶Ð¸, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð²ÐµÑ€ÐµÐ½ Ð½Ð°ÑˆÐµÐ¼Ñƒ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ñƒ, Ð¸ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾ÑÐ»Ðµ ÑÑ‚Ð¾Ð³Ð¾ Ñ‚Ñ‹ Ð±ÑƒÐ´ÐµÑˆÑŒ Ð´Ð¾ÑÑ‚Ð¾Ð¸Ð½ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð»ÑŒ ÑÐ¾Ð²ÐµÑ€ÑˆÐµÐ½Ð½Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ….
 	}
 	else if(Npc_HasItems(hero,ItMiNugget) < VALUE_TPL_ARMOR_H)
 	{
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03");	//Òû çàñëóæèë ïðàâî íîñèòü òàêîé äîñïåõ, íî ñåé÷àñ ó òåáÿ íåò âîçìîæíîñòè âíåñòè äîñòîéíîå ïîæåðòâîâàíèå íà íóæäû Áðàòñòâà!
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_03");	//Ð¢Ñ‹ Ð·Ð°ÑÐ»ÑƒÐ¶Ð¸Ð» Ð¿Ñ€Ð°Ð²Ð¾ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ñ‚Ð°ÐºÐ¾Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ…, Ð½Ð¾ ÑÐµÐ¹Ñ‡Ð°Ñ Ñƒ Ñ‚ÐµÐ±Ñ Ð½ÐµÑ‚ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚Ð¸ Ð²Ð½ÐµÑÑ‚Ð¸ Ð´Ð¾ÑÑ‚Ð¾Ð¹Ð½Ð¾Ðµ Ð¿Ð¾Ð¶ÐµÑ€Ñ‚Ð²Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð° Ð½ÑƒÐ¶Ð´Ñ‹ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð°!
 	}
 	else
 	{
-		b_printtrademsg1("Îòäàíî ðóäû: 2100");
-		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04");	//Íîñè ýòîò äîñïåõ â çíàê âûñî÷àéøåé ÷åñòè, îêàçàííîé òåáå Áðàòñòâîì.
-		b_printtrademsg2("Ïîëó÷åí òÿæåëûé äîñïåõ Ñòðàæà.");
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 2100");
+		AI_Output(self,hero,"Info_GorNaToth_ARMOR_H_11_04");	//ÐÐ¾ÑÐ¸ ÑÑ‚Ð¾Ñ‚ Ð´Ð¾ÑÐ¿ÐµÑ… Ð² Ð·Ð½Ð°Ðº Ð²Ñ‹ÑÐ¾Ñ‡Ð°Ð¹ÑˆÐµÐ¹ Ñ‡ÐµÑÑ‚Ð¸, Ð¾ÐºÐ°Ð·Ð°Ð½Ð½Ð¾Ð¹ Ñ‚ÐµÐ±Ðµ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ð¾Ð¼.
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð¡Ñ‚Ñ€Ð°Ð¶Ð°.");
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_TPL_ARMOR_H);
 		CreateInvItem(hero,tpl_armor_h);
 		GORNATOTH_ARMOR_H_WAS_BOUGHT = 1;
@@ -263,8 +264,8 @@ func void TPL_1402_GorNaToth_ARMOR_H()
 
 func void TPL_1402_GorNaToth_ARMOR_BACK()
 {
-	AI_Output(hero,self,"Info_GorNaToth_ARMOR_BACK_15_01");	//ß ïåðåäóìàë!
-	AI_Output(self,hero,"Info_GorNaToth_ARMOR_BACK_11_02");	//Êàê õî÷åøü. Òû çíàåøü, ãäå ìåíÿ ìîæíî íàéòè.
+	AI_Output(hero,self,"Info_GorNaToth_ARMOR_BACK_15_01");	//Ð¯ Ð¿ÐµÑ€ÐµÐ´ÑƒÐ¼Ð°Ð»!
+	AI_Output(self,hero,"Info_GorNaToth_ARMOR_BACK_11_02");	//ÐšÐ°Ðº Ñ…Ð¾Ñ‡ÐµÑˆÑŒ. Ð¢Ñ‹ Ð·Ð½Ð°ÐµÑˆÑŒ, Ð³Ð´Ðµ Ð¼ÐµÐ½Ñ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸.
 	Info_ClearChoices(TPL_1402_GorNaToth_ARMOR);
 };
 
@@ -276,7 +277,7 @@ instance TPL_1402_GORNATOTH_TEACH_PRE(C_Info)
 	condition = tpl_1402_gornatoth_teach_pre_condition;
 	information = tpl_1402_gornatoth_teach_pre_info;
 	permanent = 0;
-	description = "Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?";
+	description = "Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?";
 };
 
 
@@ -290,10 +291,10 @@ func int tpl_1402_gornatoth_teach_pre_condition()
 
 func void tpl_1402_gornatoth_teach_pre_info()
 {
-	AI_Output(other,self,"TPL_1402_GorNaToth_Teach_15_00");	//Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?
-	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01");	//Íàñòîÿùåìó âîèíó íåîáõîäèìà íå òîëüêî ñèëà äóõà, íî òàêæå ñèëà ìûøö è ëîâêîñòü äâèæåíèé.
+	AI_Output(other,self,"TPL_1402_GorNaToth_Teach_15_00");	//Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?
+	AI_Output(self,other,"TPL_1402_GorNaToth_Teach_11_01");	//ÐÐ°ÑÑ‚Ð¾ÑÑ‰ÐµÐ¼Ñƒ Ð²Ð¾Ð¸Ð½Ñƒ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð° Ð½Ðµ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ ÑÐ¸Ð»Ð° Ð´ÑƒÑ…Ð°, Ð½Ð¾ Ñ‚Ð°ÐºÐ¶Ðµ ÑÐ¸Ð»Ð° Ð¼Ñ‹ÑˆÑ† Ð¸ Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚ÑŒ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ð¹.
 	Log_CreateTopic(GE_TeacherPSI,LOG_NOTE);
-	B_LogEntry(GE_TeacherPSI,"Ñòðàæ Ãîð Íà Òîô ìîæåò ïîìî÷ü ìíå ïîâûñèòü ñèëó, ëîâêîñòü è ìàãè÷åñêóþ ñèëó, à òàêæå óëó÷øèòü ìîå âëàäåíèå îäíîðó÷íûì îðóæèåì.");
+	B_LogEntry(GE_TeacherPSI,"Ð¡Ñ‚Ñ€Ð°Ð¶ Ð“Ð¾Ñ€ ÐÐ° Ð¢Ð¾Ñ„ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ð¼Ð½Ðµ Ð¿Ð¾Ð²Ñ‹ÑÐ¸Ñ‚ÑŒ ÑÐ¸Ð»Ñƒ, Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚ÑŒ Ð¸ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ, Ð° Ñ‚Ð°ÐºÐ¶Ðµ ÑƒÐ»ÑƒÑ‡ÑˆÐ¸Ñ‚ÑŒ Ð¼Ð¾Ðµ Ð²Ð»Ð°Ð´ÐµÐ½Ð¸Ðµ Ð¾Ð´Ð½Ð¾Ñ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¾Ñ€ÑƒÐ¶Ð¸ÐµÐ¼.");
 };
 
 
@@ -318,7 +319,7 @@ func int TPL_1402_GorNaToth_Teach_Condition()
 
 func void TPL_1402_GorNaToth_Teach_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//ß õî÷ó óëó÷øèòü ñâîè íàâûêè.
+	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ»ÑƒÑ‡ÑˆÐ¸Ñ‚ÑŒ ÑÐ²Ð¾Ð¸ Ð½Ð°Ð²Ñ‹ÐºÐ¸.
 	b_gornatothlearn();
 };
 
@@ -337,15 +338,15 @@ func void TPL_1402_GorNaToth_Teach_STR_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_STRENGTH] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
@@ -360,15 +361,15 @@ func void TPL_1402_GorNaToth_Teach_STR_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_STRENGTH] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,5 * LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
@@ -383,15 +384,15 @@ func void TPL_1402_GorNaToth_Teach_DEX_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_DEXTERITY] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
@@ -406,15 +407,15 @@ func void TPL_1402_GorNaToth_Teach_DEX_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_DEXTERITY] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,5 * LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
@@ -429,15 +430,15 @@ func void TPL_1402_GorNaToth_Teach_MAN_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_MANA_MAX] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,LPCOST_ATTRIBUTE_MANA);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
@@ -452,44 +453,44 @@ func void TPL_1402_GorNaToth_Teach_MAN_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_MANA_MAX] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,5 * LPCOST_ATTRIBUTE_MANA);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Íå øóòè ñî ìíîé!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//ÐÐµ ÑˆÑƒÑ‚Ð¸ ÑÐ¾ Ð¼Ð½Ð¾Ð¹!
 	};
 	b_gornatothlearn();
 };
 
 func void tpl_1402_gornatoth_teach_1h_1()
 {
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00");	//ß õî÷ó óëó÷øèòü òåõíèêó âåäåíèÿ áîÿ ñ îäíîðó÷íûì ìå÷îì.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAIN_Info_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ»ÑƒÑ‡ÑˆÐ¸Ñ‚ÑŒ Ñ‚ÐµÑ…Ð½Ð¸ÐºÑƒ Ð²ÐµÐ´ÐµÐ½Ð¸Ñ Ð±Ð¾Ñ Ñ Ð¾Ð´Ð½Ð¾Ñ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼.
 	if(B_GiveSkill(hero,NPC_TALENT_1H,1,LPCOST_TALENT_1H_1))
 	{
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01");	//Ýòî õîðîøåå ðåøåíèå! ×òîáû óëó÷øèòü òåõíèêó âåäåíèÿ áîÿ, òû äîëæåí íàó÷èòüñÿ ïðàâèëüíî äåðæàòü îðóæèå.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02");	//Íà÷èíàÿ òðåíèðîâàòüñÿ, ìíîãèå íåîïûòíûå âîèíû ñòàðàþòñÿ äåðæàòü ðóêîÿòü ìå÷à äâóìÿ ðóêàìè. Ýòî íåíóæíàÿ ïðèâû÷êà, êîòîðàÿ ìîæåò ïîìåøàòü òåáå â äàëüíåéøåì.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03");	//Äåðæè ìå÷ îäíîé ðóêîé. Êëèíîê íàïðàâü ââåðõ è íå äåðæè åãî íåïîäâèæíî.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04");	//Òû äîëæåí íàó÷èòüñÿ âèäåòü ìå÷ êàê ÷àñòü ñàìîãî ñåáÿ, è òîãäà åãî äâèæåíèÿ áóäóò ñîãëàñîâàíû ñ äâèæåíèÿìè òâîåãî òåëà. Ýòî óâåëè÷èò ñêîðîñòü àòàêè.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05");	//Åñëè òû áóäåøü ñëåäîâàòü ìîèì ñîâåòàì, òû ñìîæåøü âåñòè áîé êðàñèâî. Íî ñàìîå ãëàâíîå, òâîè äâèæåíèÿ ñòàíóò áûñòðåå.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06");	//Äà, åñòü åùå êîå-÷òî: íåêîòîðûå óäàðû íàíîñÿò áîëüøåå ïîâðåæäåíèå ïðîòèâíèêó. Òû åùå íîâè÷îê, ïîýòîìó ó òåáÿ íå òàê ìíîãî øàíñîâ íà êðèòè÷åñêèé óäàð.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07");	//Íî ÷àñòûå òðåíèðîâêè ïîìîãóò òåáå ñîâåðøåíñòâîâàòüñÿ è íàíîñèòü âñå áîëüøå òàêèõ óäàðîâ.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_01");	//Ð­Ñ‚Ð¾ Ñ…Ð¾Ñ€Ð¾ÑˆÐµÐµ Ñ€ÐµÑˆÐµÐ½Ð¸Ðµ! Ð§Ñ‚Ð¾Ð±Ñ‹ ÑƒÐ»ÑƒÑ‡ÑˆÐ¸Ñ‚ÑŒ Ñ‚ÐµÑ…Ð½Ð¸ÐºÑƒ Ð²ÐµÐ´ÐµÐ½Ð¸Ñ Ð±Ð¾Ñ, Ñ‚Ñ‹ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒÑÑ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ð¾ Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒ Ð¾Ñ€ÑƒÐ¶Ð¸Ðµ.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_02");	//ÐÐ°Ñ‡Ð¸Ð½Ð°Ñ Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²Ð°Ñ‚ÑŒÑÑ, Ð¼Ð½Ð¾Ð³Ð¸Ðµ Ð½ÐµÐ¾Ð¿Ñ‹Ñ‚Ð½Ñ‹Ðµ Ð²Ð¾Ð¸Ð½Ñ‹ ÑÑ‚Ð°Ñ€Ð°ÑŽÑ‚ÑÑ Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒ Ñ€ÑƒÐºÐ¾ÑÑ‚ÑŒ Ð¼ÐµÑ‡Ð° Ð´Ð²ÑƒÐ¼Ñ Ñ€ÑƒÐºÐ°Ð¼Ð¸. Ð­Ñ‚Ð¾ Ð½ÐµÐ½ÑƒÐ¶Ð½Ð°Ñ Ð¿Ñ€Ð¸Ð²Ñ‹Ñ‡ÐºÐ°, ÐºÐ¾Ñ‚Ð¾Ñ€Ð°Ñ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð¼ÐµÑˆÐ°Ñ‚ÑŒ Ñ‚ÐµÐ±Ðµ Ð² Ð´Ð°Ð»ÑŒÐ½ÐµÐ¹ÑˆÐµÐ¼.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_03");	//Ð”ÐµÑ€Ð¶Ð¸ Ð¼ÐµÑ‡ Ð¾Ð´Ð½Ð¾Ð¹ Ñ€ÑƒÐºÐ¾Ð¹. ÐšÐ»Ð¸Ð½Ð¾Ðº Ð½Ð°Ð¿Ñ€Ð°Ð²ÑŒ Ð²Ð²ÐµÑ€Ñ… Ð¸ Ð½Ðµ Ð´ÐµÑ€Ð¶Ð¸ ÐµÐ³Ð¾ Ð½ÐµÐ¿Ð¾Ð´Ð²Ð¸Ð¶Ð½Ð¾.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_04");	//Ð¢Ñ‹ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒÑÑ Ð²Ð¸Ð´ÐµÑ‚ÑŒ Ð¼ÐµÑ‡ ÐºÐ°Ðº Ñ‡Ð°ÑÑ‚ÑŒ ÑÐ°Ð¼Ð¾Ð³Ð¾ ÑÐµÐ±Ñ, Ð¸ Ñ‚Ð¾Ð³Ð´Ð° ÐµÐ³Ð¾ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ Ð±ÑƒÐ´ÑƒÑ‚ ÑÐ¾Ð³Ð»Ð°ÑÐ¾Ð²Ð°Ð½Ñ‹ Ñ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸ÑÐ¼Ð¸ Ñ‚Ð²Ð¾ÐµÐ³Ð¾ Ñ‚ÐµÐ»Ð°. Ð­Ñ‚Ð¾ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚ÑŒ Ð°Ñ‚Ð°ÐºÐ¸.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_05");	//Ð•ÑÐ»Ð¸ Ñ‚Ñ‹ Ð±ÑƒÐ´ÐµÑˆÑŒ ÑÐ»ÐµÐ´Ð¾Ð²Ð°Ñ‚ÑŒ Ð¼Ð¾Ð¸Ð¼ ÑÐ¾Ð²ÐµÑ‚Ð°Ð¼, Ñ‚Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ Ð²ÐµÑÑ‚Ð¸ Ð±Ð¾Ð¹ ÐºÑ€Ð°ÑÐ¸Ð²Ð¾. ÐÐ¾ ÑÐ°Ð¼Ð¾Ðµ Ð³Ð»Ð°Ð²Ð½Ð¾Ðµ, Ñ‚Ð²Ð¾Ð¸ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ ÑÑ‚Ð°Ð½ÑƒÑ‚ Ð±Ñ‹ÑÑ‚Ñ€ÐµÐµ.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_06");	//Ð”Ð°, ÐµÑÑ‚ÑŒ ÐµÑ‰Ðµ ÐºÐ¾Ðµ-Ñ‡Ñ‚Ð¾: Ð½ÐµÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ ÑƒÐ´Ð°Ñ€Ñ‹ Ð½Ð°Ð½Ð¾ÑÑÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐµÐµ Ð¿Ð¾Ð²Ñ€ÐµÐ¶Ð´ÐµÐ½Ð¸Ðµ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÑƒ. Ð¢Ñ‹ ÐµÑ‰Ðµ Ð½Ð¾Ð²Ð¸Ñ‡Ð¾Ðº, Ð¿Ð¾ÑÑ‚Ð¾Ð¼Ñƒ Ñƒ Ñ‚ÐµÐ±Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ ÑˆÐ°Ð½ÑÐ¾Ð² Ð½Ð° ÐºÑ€Ð¸Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸Ð¹ ÑƒÐ´Ð°Ñ€.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAIN_11_07");	//ÐÐ¾ Ñ‡Ð°ÑÑ‚Ñ‹Ðµ Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²ÐºÐ¸ Ð¿Ð¾Ð¼Ð¾Ð³ÑƒÑ‚ Ñ‚ÐµÐ±Ðµ ÑÐ¾Ð²ÐµÑ€ÑˆÐµÐ½ÑÑ‚Ð²Ð¾Ð²Ð°Ñ‚ÑŒÑÑ Ð¸ Ð½Ð°Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ð²ÑÐµ Ð±Ð¾Ð»ÑŒÑˆÐµ Ñ‚Ð°ÐºÐ¸Ñ… ÑƒÐ´Ð°Ñ€Ð¾Ð².
 	};
 	b_gornatothlearn();
 };
 
 func void tpl_1402_gornatoth_teach_1h_2()
 {
-	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01");	//Íàó÷è ìåíÿ åùå ëó÷øå âëàäåòü îäíîðó÷íûì ìå÷îì.
+	AI_Output(other,self,"TPL_1402_GorNaToth_TRAINAGAIN_Info_15_01");	//ÐÐ°ÑƒÑ‡Ð¸ Ð¼ÐµÐ½Ñ ÐµÑ‰Ðµ Ð»ÑƒÑ‡ÑˆÐµ Ð²Ð»Ð°Ð´ÐµÑ‚ÑŒ Ð¾Ð´Ð½Ð¾Ñ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼.
 	if(B_GiveSkill(hero,NPC_TALENT_1H,2,LPCOST_TALENT_1H_2))
 	{
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02");	//Òû óæå ïîëó÷èë íà÷àëüíîå ïðåäñòàâëåíèå î âëàäåíèè ýòèì îðóæèåì. Åñëè òû áóäåøü äåðæàòü ìå÷ êëèíêîì âíèç, òû ñìîæåøü âëîæèòü áîëüøóþ ñèëó â ñâîé ïåðâûé óäàð.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03");	//Ïîìíèøü, ÷òî ÿ ãîâîðèë î õîðîøåì ðàçìàõå? Ñëåäóþùèé øàã íà ïóòè ê ìàñòåðñòâó - óìåíèå èñïîëüçîâàòü äâèæåíèÿ ñîáñòâåííîãî òåëà. Åñëè òû óñïåë íàíåñòè äâà óäàðà, ñäåëàé ðàçâîðîò. Ýòî îòâëå÷åò ïðîòèâíèêà è äàñò òåáå âîçìîæíîñòü âûáðàòü áîëåå óäà÷íóþ ïîçèöèþ.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04");	//Çàòåì ðàçìàõíèñü è íàíåñè óäàð ñïðàâà íàëåâî.
-		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05");	//Âåðíèñü â èñõîäíóþ ñòîéêó. Êàê òû çíàåøü, ìàñòåðñòâî ïðèõîäèò ñ îïûòîì. À òåïåðü èäè è íå çàáûâàé î òðåíèðîâêàõ.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_02");	//Ð¢Ñ‹ ÑƒÐ¶Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð½Ð°Ñ‡Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ð¾ Ð²Ð»Ð°Ð´ÐµÐ½Ð¸Ð¸ ÑÑ‚Ð¸Ð¼ Ð¾Ñ€ÑƒÐ¶Ð¸ÐµÐ¼. Ð•ÑÐ»Ð¸ Ñ‚Ñ‹ Ð±ÑƒÐ´ÐµÑˆÑŒ Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒ Ð¼ÐµÑ‡ ÐºÐ»Ð¸Ð½ÐºÐ¾Ð¼ Ð²Ð½Ð¸Ð·, Ñ‚Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ Ð²Ð»Ð¾Ð¶Ð¸Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÑƒÑŽ ÑÐ¸Ð»Ñƒ Ð² ÑÐ²Ð¾Ð¹ Ð¿ÐµÑ€Ð²Ñ‹Ð¹ ÑƒÐ´Ð°Ñ€.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_03");	//ÐŸÐ¾Ð¼Ð½Ð¸ÑˆÑŒ, Ñ‡Ñ‚Ð¾ Ñ Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ð¾ Ñ…Ð¾Ñ€Ð¾ÑˆÐµÐ¼ Ñ€Ð°Ð·Ð¼Ð°Ñ…Ðµ? Ð¡Ð»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ ÑˆÐ°Ð³ Ð½Ð° Ð¿ÑƒÑ‚Ð¸ Ðº Ð¼Ð°ÑÑ‚ÐµÑ€ÑÑ‚Ð²Ñƒ - ÑƒÐ¼ÐµÐ½Ð¸Ðµ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ ÑÐ¾Ð±ÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ð³Ð¾ Ñ‚ÐµÐ»Ð°. Ð•ÑÐ»Ð¸ Ñ‚Ñ‹ ÑƒÑÐ¿ÐµÐ» Ð½Ð°Ð½ÐµÑÑ‚Ð¸ Ð´Ð²Ð° ÑƒÐ´Ð°Ñ€Ð°, ÑÐ´ÐµÐ»Ð°Ð¹ Ñ€Ð°Ð·Ð²Ð¾Ñ€Ð¾Ñ‚. Ð­Ñ‚Ð¾ Ð¾Ñ‚Ð²Ð»ÐµÑ‡ÐµÑ‚ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÐ° Ð¸ Ð´Ð°ÑÑ‚ Ñ‚ÐµÐ±Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð±Ð¾Ð»ÐµÐµ ÑƒÐ´Ð°Ñ‡Ð½ÑƒÑŽ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸ÑŽ.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_04");	//Ð—Ð°Ñ‚ÐµÐ¼ Ñ€Ð°Ð·Ð¼Ð°Ñ…Ð½Ð¸ÑÑŒ Ð¸ Ð½Ð°Ð½ÐµÑÐ¸ ÑƒÐ´Ð°Ñ€ ÑÐ¿Ñ€Ð°Ð²Ð° Ð½Ð°Ð»ÐµÐ²Ð¾.
+		AI_Output(self,other,"TPL_1402_GorNaToth_TRAINAGAIN_Info_11_05");	//Ð’ÐµÑ€Ð½Ð¸ÑÑŒ Ð² Ð¸ÑÑ…Ð¾Ð´Ð½ÑƒÑŽ ÑÑ‚Ð¾Ð¹ÐºÑƒ. ÐšÐ°Ðº Ñ‚Ñ‹ Ð·Ð½Ð°ÐµÑˆÑŒ, Ð¼Ð°ÑÑ‚ÐµÑ€ÑÑ‚Ð²Ð¾ Ð¿Ñ€Ð¸Ñ…Ð¾Ð´Ð¸Ñ‚ Ñ Ð¾Ð¿Ñ‹Ñ‚Ð¾Ð¼. Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¸Ð´Ð¸ Ð¸ Ð½Ðµ Ð·Ð°Ð±Ñ‹Ð²Ð°Ð¹ Ð¾ Ñ‚Ñ€ÐµÐ½Ð¸Ñ€Ð¾Ð²ÐºÐ°Ñ….
 	};
 	b_gornatothlearn();
 };

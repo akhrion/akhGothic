@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Waran(C_Npc)
 {
-	name[0] = "�������";
+	name[0] = "Ящерица";
 	guild = GIL_WARAN;
 	aivar[AIV_IMPORTANT] = ID_WARAN;
 	level = 8;
@@ -45,4 +45,10 @@ instance Waran(Mst_Default_Waran)
 	Set_Waran_Visuals();
 	Npc_SetToFistMode(self);
 };
-
+instance Waran_Egg(Egg)
+{
+	name[0] = "Яйцо варана";
+	guild = GIL_WARAN;
+	spawnDelay = 240;
+	start_aistate = B_MM_Respawn;
+};

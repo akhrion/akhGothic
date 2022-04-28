@@ -17,7 +17,7 @@ func int C_WantItem()
 		PrintDebugString(PD_ZS_DETAIL,"...'item': ",item.name);
 		if(Npc_OwnedByNpc(item,self) || Npc_OwnedByGuild(item,selfGuild))
 		{
-			PrintDebugNpc(PD_ZS_DETAIL,"...'item' gehört NSC oder seiner Gilde -> JA!");
+			PrintDebugNpc(PD_ZS_DETAIL,"...'item' gehÑ†rt NSC oder seiner Gilde -> JA!");
 			return TRUE;
 		};
 		if(item.flags == ITEM_MISSION)
@@ -27,7 +27,7 @@ func int C_WantItem()
 		}
 		else if((item.mainflag == ITEM_KAT_ARMOR) && ((bodyGuild == itemGuild) || (selfGuild != itemGuild)))
 		{
-			PrintDebugNpc(PD_ZS_DETAIL,"...'item' ist Rüstung und geht micht nichts an -> NEIN!");
+			PrintDebugNpc(PD_ZS_DETAIL,"...'item' ist RÑŒstung und geht micht nichts an -> NEIN!");
 			return FALSE;
 		}
 		else if((item.mainflag == ITEM_KAT_RUNE) && !C_NpcIsMage(self))
@@ -58,7 +58,7 @@ func int C_WantItem()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_DETAIL,"...'item' ist ungültig -> NEIN!");
+		PrintDebugNpc(PD_ZS_DETAIL,"...'item' ist ungÑŒltig -> NEIN!");
 	};
 	return FALSE;
 };

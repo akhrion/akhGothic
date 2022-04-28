@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Lurker(C_Npc)
 {
-	name[0] = "Шныг";
+	name[0] = "РЁРЅС‹Рі";
 	guild = GIL_LURKER;
 	aivar[AIV_IMPORTANT] = ID_LURKER;
 	level = 17;
@@ -47,11 +47,22 @@ instance Lurker(Mst_Default_Lurker)
 
 instance DamLurker(Mst_Default_Lurker)
 {
-	name[0] = "Шныг с плотины";
-	id = mid_damlurker;
+	name[0] = "РЁРЅС‹Рі СЃ РїР»РѕС‚РёРЅС‹";
+	aivar[AIV_MM_REAL_ID] = ID_LURKER_DAM;
 	level = 20;
+	protection[PROT_BLUNT] = 100;
+	protection[PROT_EDGE] = 100;
+	protection[PROT_FIRE] = 70;
+	protection[PROT_POINT] = 50;
 	Set_Lurker_Visuals();
 	Npc_SetToFistMode(self);
 	CreateInvItem(self,ItAt_DamLurker_01);
+};
+instance Lurker_Egg(Egg)
+{
+	name[0] = "РЇР№С†Рѕ С€РЅС‹РіР°";
+	guild = GIL_LURKER;
+	spawnDelay = 360;
+	start_aistate = B_MM_Respawn;
 };
 

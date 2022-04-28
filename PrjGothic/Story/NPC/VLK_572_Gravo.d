@@ -1,7 +1,7 @@
 
 instance VLK_572_Gravo(Npc_Default)
 {
-	name[0] = "Граво";
+	name[0] = "Р“СЂР°РІРѕ";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 4;

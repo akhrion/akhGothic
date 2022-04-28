@@ -17,6 +17,7 @@ func void b_lareslearn()
 		Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5 * LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_5);
 		Info_AddChoice(ORG_801_Lares_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),ORG_801_Lares_Teach_DEX_1);
 	};
+	Npc_ChangeModelFatness(other);
 };
 
 
@@ -71,9 +72,9 @@ func void ORG_801_Lares_YouHere_Info()
 	Roscoe = Hlp_GetNpc(ORG_840_Roscoe);
 	if((Npc_IsInState(Roscoe,ZS_MagicSleep) || (Npc_GetTempAttitude(Roscoe,other) == ATT_FRIENDLY) || Npc_IsInState(Roscoe,ZS_Unconscious) || Npc_IsDead(Roscoe)) && (hero.guild != GIL_GRD) && (hero.guild != GIL_STT))
 	{
-		AI_Output(self,other,"ORG_801_Lares_YouHere_11_00");	//Как ты попал сюда, и что случилось с Роско?
-		AI_Output(other,self,"ORG_801_Lares_YouHere_15_01");	//Он не захотел меня останавливать.
-		AI_Output(self,other,"ORG_801_Lares_YouHere_11_02");	//Что тебе от меня нужно?
+		AI_Output(self,other,"ORG_801_Lares_YouHere_11_00");	//РљР°Рє С‚С‹ РїРѕРїР°Р» СЃСЋРґР°, Рё С‡С‚Рѕ СЃР»СѓС‡РёР»РѕСЃСЊ СЃ Р РѕСЃРєРѕ?
+		AI_Output(other,self,"ORG_801_Lares_YouHere_15_01");	//РћРЅ РЅРµ Р·Р°С…РѕС‚РµР» РјРµРЅСЏ РѕСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ.
+		AI_Output(self,other,"ORG_801_Lares_YouHere_11_02");	//Р§С‚Рѕ С‚РµР±Рµ РѕС‚ РјРµРЅСЏ РЅСѓР¶РЅРѕ?
 		Roscoe.aivar[AIV_PASSGATE] = TRUE;
 		Lares_vorbeigemogelt = TRUE;
 		B_GiveXP(XP_CheatedIntoLaresHut);
@@ -97,7 +98,7 @@ instance ORG_801_Lares_WannaJoin(C_Info)
 	condition = ORG_801_Lares_WannaJoin_Condition;
 	information = ORG_801_Lares_WannaJoin_Info;
 	permanent = 0;
-	description = "Я хочу стать одним из вас.";
+	description = "РЇ С…РѕС‡Сѓ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· РІР°СЃ.";
 };
 
 
@@ -111,8 +112,8 @@ func int ORG_801_Lares_WannaJoin_Condition()
 
 func void ORG_801_Lares_WannaJoin_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_WannaJoin_15_00");	//Я хочу стать одним из вас.
-	AI_Output(self,other,"ORG_801_Lares_WannaJoin_11_01");	//Да? А кто ты вообще такой?
+	AI_Output(other,self,"ORG_801_Lares_WannaJoin_15_00");	//РЇ С…РѕС‡Сѓ СЃС‚Р°С‚СЊ РѕРґРЅРёРј РёР· РІР°СЃ.
+	AI_Output(self,other,"ORG_801_Lares_WannaJoin_11_01");	//Р”Р°? Рђ РєС‚Рѕ С‚С‹ РІРѕРѕР±С‰Рµ С‚Р°РєРѕР№?
 };
 
 
@@ -123,7 +124,7 @@ instance ORG_801_Lares_BringList(C_Info)
 	condition = ORG_801_Lares_BringList_Condition;
 	information = ORG_801_Lares_BringList_Info;
 	permanent = 0;
-	description = "У меня есть список припасов для Старой шахты.";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.";
 };
 
 
@@ -137,17 +138,17 @@ func int ORG_801_Lares_BringList_Condition()
 
 func void ORG_801_Lares_BringList_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//У меня есть список припасов для Старой шахты.
-	AI_Output(self,other,"ORG_801_Lares_BringList_11_01");	//Да ты что? Невероятно! А ты смелый парень, как я погляжу.
-	AI_Output(self,other,"ORG_801_Lares_BringList_11_02");	//Покажи его мне!
-	AI_Output(other,self,"ORG_801_Lares_BringList_15_03");	//Вот он...
-	b_printtrademsg1("Отдан список.");
+	AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.
+	AI_Output(self,other,"ORG_801_Lares_BringList_11_01");	//Р”Р° С‚С‹ С‡С‚Рѕ? РќРµРІРµСЂРѕСЏС‚РЅРѕ! Рђ С‚С‹ СЃРјРµР»С‹Р№ РїР°СЂРµРЅСЊ, РєР°Рє СЏ РїРѕРіР»СЏР¶Сѓ.
+	AI_Output(self,other,"ORG_801_Lares_BringList_11_02");	//РџРѕРєР°Р¶Рё РµРіРѕ РјРЅРµ!
+	AI_Output(other,self,"ORG_801_Lares_BringList_15_03");	//Р’РѕС‚ РѕРЅ...
+	b_printtrademsg1("РћС‚РґР°РЅ СЃРїРёСЃРѕРє.");
 	B_UseFakeScroll();
-	AI_Output(self,other,"ORG_801_Lares_BringList_11_04");	//Так, так. Знаешь, что мы сейчас сделаем? Мы его немного подправим, а потом ты отнесешь его в Старый лагерь.
-	AI_Output(self,other,"ORG_801_Lares_BringList_11_05_01");	//А потом, когда они доставят товар в шахту, мы просто заберем его себе! Ну, вот, сейчас мы все сделаем...
+	AI_Output(self,other,"ORG_801_Lares_BringList_11_04");	//РўР°Рє, С‚Р°Рє. Р—РЅР°РµС€СЊ, С‡С‚Рѕ РјС‹ СЃРµР№С‡Р°СЃ СЃРґРµР»Р°РµРј? РњС‹ РµРіРѕ РЅРµРјРЅРѕРіРѕ РїРѕРґРїСЂР°РІРёРј, Р° РїРѕС‚РѕРј С‚С‹ РѕС‚РЅРµСЃРµС€СЊ РµРіРѕ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ.
+	AI_Output(self,other,"ORG_801_Lares_BringList_11_05_01");	//Рђ РїРѕС‚РѕРј, РєРѕРіРґР° РѕРЅРё РґРѕСЃС‚Р°РІСЏС‚ С‚РѕРІР°СЂ РІ С€Р°С…С‚Сѓ, РјС‹ РїСЂРѕСЃС‚Рѕ Р·Р°Р±РµСЂРµРј РµРіРѕ СЃРµР±Рµ! РќСѓ, РІРѕС‚, СЃРµР№С‡Р°СЃ РјС‹ РІСЃРµ СЃРґРµР»Р°РµРј...
 	B_UseFakeScroll();
-	AI_Output(self,other,"ORG_801_Lares_BringList_11_05_02");	//Есть! Вот и списочек. Ты знаешь, что делать.
-	b_printtrademsg2("Получен дополненный список.");
+	AI_Output(self,other,"ORG_801_Lares_BringList_11_05_02");	//Р•СЃС‚СЊ! Р’РѕС‚ Рё СЃРїРёСЃРѕС‡РµРє. РўС‹ Р·РЅР°РµС€СЊ, С‡С‚Рѕ РґРµР»Р°С‚СЊ.
+	b_printtrademsg2("РџРѕР»СѓС‡РµРЅ РґРѕРїРѕР»РЅРµРЅРЅС‹Р№ СЃРїРёСЃРѕРє.");
 	Points_NC = Points_NC + 10;
 	Lares_BringListBack = LOG_RUNNING;
 	Npc_RemoveInvItem(hero,TheList);
@@ -156,15 +157,15 @@ func void ORG_801_Lares_BringList_Info()
 	{
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
-		B_LogEntry(CH1_JoinNC,"Ларс, главарь шайки воров, был сильно удивлен, когда я принес ему список. Он дополнил его и велел отнести Диего.");
+		B_LogEntry(CH1_JoinNC,"Р›Р°СЂСЃ, РіР»Р°РІР°СЂСЊ С€Р°Р№РєРё РІРѕСЂРѕРІ, Р±С‹Р» СЃРёР»СЊРЅРѕ СѓРґРёРІР»РµРЅ, РєРѕРіРґР° СЏ РїСЂРёРЅРµСЃ РµРјСѓ СЃРїРёСЃРѕРє. РћРЅ РґРѕРїРѕР»РЅРёР» РµРіРѕ Рё РІРµР»РµР» РѕС‚РЅРµСЃС‚Рё Р”РёРµРіРѕ.");
 	};
 	if(Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 	{
-		B_LogEntry(CH1_BringList,"Я решил отдать список Ларсу, главарю воров. Он дополнил его и велел отнести Диего.");
+		B_LogEntry(CH1_BringList,"РЇ СЂРµС€РёР» РѕС‚РґР°С‚СЊ СЃРїРёСЃРѕРє Р›Р°СЂСЃСѓ, РіР»Р°РІР°СЂСЋ РІРѕСЂРѕРІ. РћРЅ РґРѕРїРѕР»РЅРёР» РµРіРѕ Рё РІРµР»РµР» РѕС‚РЅРµСЃС‚Рё Р”РёРµРіРѕ.");
 	}
 	else if(Npc_KnowsInfo(hero,org_801_lares_newlist) && !Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 	{
-		B_LogEntry(THELISTFORNC,"Ларс дополнил украденный мной список и велел отнести его Диего.");
+		B_LogEntry(THELISTFORNC,"Р›Р°СЂСЃ РґРѕРїРѕР»РЅРёР» СѓРєСЂР°РґРµРЅРЅС‹Р№ РјРЅРѕР№ СЃРїРёСЃРѕРє Рё РІРµР»РµР» РѕС‚РЅРµСЃС‚Рё РµРіРѕ Р”РёРµРіРѕ.");
 	};
 	B_GiveXP(XP_GiveListToLares);
 };
@@ -177,7 +178,7 @@ instance ORG_801_Lares_BringListBack(C_Info)
 	condition = ORG_801_Lares_BringListBack_Condition;
 	information = ORG_801_Lares_BringListBack_Info;
 	permanent = 0;
-	description = "Я передал список Диего.";
+	description = "РЇ РїРµСЂРµРґР°Р» СЃРїРёСЃРѕРє Р”РёРµРіРѕ.";
 };
 
 
@@ -191,18 +192,18 @@ func int ORG_801_Lares_BringListBack_Condition()
 
 func void ORG_801_Lares_BringListBack_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_BringListBack_15_00");	//Я передал список Диего.
-	AI_Output(self,other,"ORG_801_Lares_BringListBack_11_01");	//Хорошо! Я как раз направил своих людей к Старой шахте. Стражники Торуса должны сейчас лежать себе спокойно в лесу.
+	AI_Output(other,self,"ORG_801_Lares_BringListBack_15_00");	//РЇ РїРµСЂРµРґР°Р» СЃРїРёСЃРѕРє Р”РёРµРіРѕ.
+	AI_Output(self,other,"ORG_801_Lares_BringListBack_11_01");	//РҐРѕСЂРѕС€Рѕ! РЇ РєР°Рє СЂР°Р· РЅР°РїСЂР°РІРёР» СЃРІРѕРёС… Р»СЋРґРµР№ Рє РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ. РЎС‚СЂР°Р¶РЅРёРєРё РўРѕСЂСѓСЃР° РґРѕР»Р¶РЅС‹ СЃРµР№С‡Р°СЃ Р»РµР¶Р°С‚СЊ СЃРµР±Рµ СЃРїРѕРєРѕР№РЅРѕ РІ Р»РµСЃСѓ.
 	Points_NC = Points_NC + 10;
 	Lares_BringListBack = LOG_SUCCESS;
 	if(Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 	{
-		B_LogEntry(CH1_BringList,"Ларс со своей шайкой напал на конвой с грузом для Старой шахты. Конечно, он не захотел ждать моего возвращения.");
+		B_LogEntry(CH1_BringList,"Р›Р°СЂСЃ СЃРѕ СЃРІРѕРµР№ С€Р°Р№РєРѕР№ РЅР°РїР°Р» РЅР° РєРѕРЅРІРѕР№ СЃ РіСЂСѓР·РѕРј РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹. РљРѕРЅРµС‡РЅРѕ, РѕРЅ РЅРµ Р·Р°С…РѕС‚РµР» Р¶РґР°С‚СЊ РјРѕРµРіРѕ РІРѕР·РІСЂР°С‰РµРЅРёСЏ.");
 		Log_SetTopicStatus(CH1_BringList,LOG_SUCCESS);
 	}
 	else if(Npc_KnowsInfo(hero,org_801_lares_newlist) && !Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 	{
-		B_LogEntry(THELISTFORNC,"Ларс со своей шайкой напал на конвой с грузом для Старой шахты. Конечно, он не захотел ждать моего возвращения.");
+		B_LogEntry(THELISTFORNC,"Р›Р°СЂСЃ СЃРѕ СЃРІРѕРµР№ С€Р°Р№РєРѕР№ РЅР°РїР°Р» РЅР° РєРѕРЅРІРѕР№ СЃ РіСЂСѓР·РѕРј РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹. РљРѕРЅРµС‡РЅРѕ, РѕРЅ РЅРµ Р·Р°С…РѕС‚РµР» Р¶РґР°С‚СЊ РјРѕРµРіРѕ РІРѕР·РІСЂР°С‰РµРЅРёСЏ.");
 		Log_SetTopicStatus(THELISTFORNC,LOG_SUCCESS);
 	};
 	Log_SetTopicStatus(THELISTFORNC,LOG_SUCCESS);
@@ -255,7 +256,7 @@ instance ORG_801_Lares_BringListAnteil(C_Info)
 	condition = ORG_801_Lares_BringListAnteil_Condition;
 	information = ORG_801_Lares_BringListAnteil_Info;
 	permanent = 0;
-	description = "Так груз из Старого лагеря уже захвачен? А как же моя доля?";
+	description = "РўР°Рє РіСЂСѓР· РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ СѓР¶Рµ Р·Р°С…РІР°С‡РµРЅ? Рђ РєР°Рє Р¶Рµ РјРѕСЏ РґРѕР»СЏ?";
 };
 
 
@@ -270,17 +271,17 @@ func int ORG_801_Lares_BringListAnteil_Condition()
 func void ORG_801_Lares_BringListAnteil_Info()
 {
 	var C_Npc gorn;
-	AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_00");	//Так груз из Старого лагеря уже захвачен? А как же моя доля?
-	AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_01");	//Иди к Горну. Он отдаст тебе твою долю.
+	AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_00");	//РўР°Рє РіСЂСѓР· РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ СѓР¶Рµ Р·Р°С…РІР°С‡РµРЅ? Рђ РєР°Рє Р¶Рµ РјРѕСЏ РґРѕР»СЏ?
+	AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_01");	//РРґРё Рє Р“РѕСЂРЅСѓ. РћРЅ РѕС‚РґР°СЃС‚ С‚РµР±Рµ С‚РІРѕСЋ РґРѕР»СЋ.
 	gorn = Hlp_GetNpc(PC_Fighter);
 	if(gorn.aivar[AIV_FINDABLE] == TRUE)
 	{
-		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_02");	//Я знаю Горна. Он один из наемников, которые охраняют магов.
-		AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_03");	//Да, так и есть.
-		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_04");	//Так он тоже в этом участвовал?
-		AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_05");	//Ты слишком любопытен. Тебе это знать не положено. Просто иди к нему и возьми свою долю.
+		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_02");	//РЇ Р·РЅР°СЋ Р“РѕСЂРЅР°. РћРЅ РѕРґРёРЅ РёР· РЅР°РµРјРЅРёРєРѕРІ, РєРѕС‚РѕСЂС‹Рµ РѕС…СЂР°РЅСЏСЋС‚ РјР°РіРѕРІ.
+		AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_03");	//Р”Р°, С‚Р°Рє Рё РµСЃС‚СЊ.
+		AI_Output(other,self,"ORG_801_Lares_BringListAnteil_15_04");	//РўР°Рє РѕРЅ С‚РѕР¶Рµ РІ СЌС‚РѕРј СѓС‡Р°СЃС‚РІРѕРІР°Р»?
+		AI_Output(self,other,"ORG_801_Lares_BringListAnteil_11_05");	//РўС‹ СЃР»РёС€РєРѕРј Р»СЋР±РѕРїС‹С‚РµРЅ. РўРµР±Рµ СЌС‚Рѕ Р·РЅР°С‚СЊ РЅРµ РїРѕР»РѕР¶РµРЅРѕ. РџСЂРѕСЃС‚Рѕ РёРґРё Рє РЅРµРјСѓ Рё РІРѕР·СЊРјРё СЃРІРѕСЋ РґРѕР»СЋ.
 	};
-	B_LogEntry(CH1_JoinNC,"Наемник Горн каким-то образом участвовал в нападении на груз из Старого лагеря. Я могу взять свою долю у него.");
+	B_LogEntry(CH1_JoinNC,"РќР°РµРјРЅРёРє Р“РѕСЂРЅ РєР°РєРёРј-С‚Рѕ РѕР±СЂР°Р·РѕРј СѓС‡Р°СЃС‚РІРѕРІР°Р» РІ РЅР°РїР°РґРµРЅРёРё РЅР° РіСЂСѓР· РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ. РЇ РјРѕРіСѓ РІР·СЏС‚СЊ СЃРІРѕСЋ РґРѕР»СЋ Сѓ РЅРµРіРѕ.");
 	gorn.aivar[AIV_FINDABLE] = TRUE;
 };
 
@@ -292,7 +293,7 @@ instance ORG_801_Lares_MordragSentMe(C_Info)
 	condition = ORG_801_Lares_MordragSentMe_Condition;
 	information = ORG_801_Lares_MordragSentMe_Info;
 	permanent = 0;
-	description = "Меня прислал Мордраг. Он передал тебе это кольцо.";
+	description = "РњРµРЅСЏ РїСЂРёСЃР»Р°Р» РњРѕСЂРґСЂР°Рі. РћРЅ РїРµСЂРµРґР°Р» С‚РµР±Рµ СЌС‚Рѕ РєРѕР»СЊС†Рѕ.";
 };
 
 
@@ -307,18 +308,18 @@ func int ORG_801_Lares_MordragSentMe_Condition()
 func void ORG_801_Lares_MordragSentMe_Info()
 {
 	B_GiveInvItems(other,self,MordragsRing,1);
-	AI_Output(other,self,"ORG_801_Lares_MordragSentMe_15_00");	//Меня прислал Мордраг. Он передал тебе это кольцо.
-	b_printtrademsg1("Отдано кольцо Мордрага.");
-	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_01");	//Хорошая вещица! У нас так принято: взял что-то, поделись с главарем шайки.
-	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_02");	//Но то, что он доверил это кольцо тебе, говорит в твою пользу.
-	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_03");	//Я хочу, чтобы ты сходил к нему и передал ему кое-что от меня.
-	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_04");	//Скажи ему, что нам нужно заслать в Лагерь сектантов своего человека. Я хочу знать, что они там затевают.
+	AI_Output(other,self,"ORG_801_Lares_MordragSentMe_15_00");	//РњРµРЅСЏ РїСЂРёСЃР»Р°Р» РњРѕСЂРґСЂР°Рі. РћРЅ РїРµСЂРµРґР°Р» С‚РµР±Рµ СЌС‚Рѕ РєРѕР»СЊС†Рѕ.
+	b_printtrademsg1("РћС‚РґР°РЅРѕ РєРѕР»СЊС†Рѕ РњРѕСЂРґСЂР°РіР°.");
+	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_01");	//РҐРѕСЂРѕС€Р°СЏ РІРµС‰РёС†Р°! РЈ РЅР°СЃ С‚Р°Рє РїСЂРёРЅСЏС‚Рѕ: РІР·СЏР» С‡С‚Рѕ-С‚Рѕ, РїРѕРґРµР»РёСЃСЊ СЃ РіР»Р°РІР°СЂРµРј С€Р°Р№РєРё.
+	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_02");	//РќРѕ С‚Рѕ, С‡С‚Рѕ РѕРЅ РґРѕРІРµСЂРёР» СЌС‚Рѕ РєРѕР»СЊС†Рѕ С‚РµР±Рµ, РіРѕРІРѕСЂРёС‚ РІ С‚РІРѕСЋ РїРѕР»СЊР·Сѓ.
+	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_03");	//РЇ С…РѕС‡Сѓ, С‡С‚РѕР±С‹ С‚С‹ СЃС…РѕРґРёР» Рє РЅРµРјСѓ Рё РїРµСЂРµРґР°Р» РµРјСѓ РєРѕРµ-С‡С‚Рѕ РѕС‚ РјРµРЅСЏ.
+	AI_Output(self,other,"ORG_801_Lares_MordragSentMe_11_04");	//РЎРєР°Р¶Рё РµРјСѓ, С‡С‚Рѕ РЅР°Рј РЅСѓР¶РЅРѕ Р·Р°СЃР»Р°С‚СЊ РІ Р›Р°РіРµСЂСЊ СЃРµРєС‚Р°РЅС‚РѕРІ СЃРІРѕРµРіРѕ С‡РµР»РѕРІРµРєР°. РЇ С…РѕС‡Сѓ Р·РЅР°С‚СЊ, С‡С‚Рѕ РѕРЅРё С‚Р°Рј Р·Р°С‚РµРІР°СЋС‚.
 	Lares_InformMordrag = LOG_RUNNING;
 	if((Npc_GetTrueGuild(hero) == GIL_None) && (Kapitel < 2))
 	{
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
-		B_LogEntry(CH1_JoinNC,"Ларс послал меня к Мордрагу. Я должен сказать ему, что в Лагерь сектантов нужно послать шпиона. Необходимо разузнать, что готовят братья.");
+		B_LogEntry(CH1_JoinNC,"Р›Р°СЂСЃ РїРѕСЃР»Р°Р» РјРµРЅСЏ Рє РњРѕСЂРґСЂР°РіСѓ. РЇ РґРѕР»Р¶РµРЅ СЃРєР°Р·Р°С‚СЊ РµРјСѓ, С‡С‚Рѕ РІ Р›Р°РіРµСЂСЊ СЃРµРєС‚Р°РЅС‚РѕРІ РЅСѓР¶РЅРѕ РїРѕСЃР»Р°С‚СЊ С€РїРёРѕРЅР°. РќРµРѕР±С…РѕРґРёРјРѕ СЂР°Р·СѓР·РЅР°С‚СЊ, С‡С‚Рѕ РіРѕС‚РѕРІСЏС‚ Р±СЂР°С‚СЊСЏ.");
 	};
 	B_GiveXP(XP_GiveRingToLares);
 	Points_NC = Points_NC + 10;
@@ -332,7 +333,7 @@ instance ORG_801_Lares_Vorbeigemogelt(C_Info)
 	condition = ORG_801_Lares_Vorbeigemogelt_Condition;
 	information = ORG_801_Lares_Vorbeigemogelt_Info;
 	permanent = 0;
-	description = "Но я же смог пройти мимо твоих охранников.";
+	description = "РќРѕ СЏ Р¶Рµ СЃРјРѕРі РїСЂРѕР№С‚Рё РјРёРјРѕ С‚РІРѕРёС… РѕС…СЂР°РЅРЅРёРєРѕРІ.";
 };
 
 
@@ -346,8 +347,8 @@ func int ORG_801_Lares_Vorbeigemogelt_Condition()
 
 func void ORG_801_Lares_Vorbeigemogelt_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_Vorbeigemogelt_15_00");	//Но я же смог пройти мимо твоих охранников.
-	AI_Output(self,other,"ORG_801_Lares_Vorbeigemogelt_11_01");	//Ты прав. Но этого недостаточно.
+	AI_Output(other,self,"ORG_801_Lares_Vorbeigemogelt_15_00");	//РќРѕ СЏ Р¶Рµ СЃРјРѕРі РїСЂРѕР№С‚Рё РјРёРјРѕ С‚РІРѕРёС… РѕС…СЂР°РЅРЅРёРєРѕРІ.
+	AI_Output(self,other,"ORG_801_Lares_Vorbeigemogelt_11_01");	//РўС‹ РїСЂР°РІ. РќРѕ СЌС‚РѕРіРѕ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ.
 	Points_NC = Points_NC + 10;
 };
 
@@ -361,7 +362,7 @@ instance ORG_801_Lares_GetKraut(C_Info)
 	condition = ORG_801_Lares_GetKraut_Condition;
 	information = ORG_801_Lares_GetKraut_Info;
 	permanent = 0;
-	description = "А что еще нужно сделать?";
+	description = "Рђ С‡С‚Рѕ РµС‰Рµ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ?";
 };
 
 
@@ -375,21 +376,21 @@ func int ORG_801_Lares_GetKraut_Condition()
 
 func void ORG_801_Lares_GetKraut_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_GetKraut_15_00");	//А что еще нужно сделать?
-	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_01");	//У Идола Исидро из лагеря сектантов есть трава на четыреста кусков руды. Я хочу, чтобы ты забрал у него эту траву. Мне неважно, каким образом.
+	AI_Output(other,self,"ORG_801_Lares_GetKraut_15_00");	//Рђ С‡С‚Рѕ РµС‰Рµ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_01");	//РЈ РРґРѕР»Р° РСЃРёРґСЂРѕ РёР· Р»Р°РіРµСЂСЏ СЃРµРєС‚Р°РЅС‚РѕРІ РµСЃС‚СЊ С‚СЂР°РІР° РЅР° С‡РµС‚С‹СЂРµСЃС‚Р° РєСѓСЃРєРѕРІ СЂСѓРґС‹. РЇ С…РѕС‡Сѓ, С‡С‚РѕР±С‹ С‚С‹ Р·Р°Р±СЂР°Р» Сѓ РЅРµРіРѕ СЌС‚Сѓ С‚СЂР°РІСѓ. РњРЅРµ РЅРµРІР°Р¶РЅРѕ, РєР°РєРёРј РѕР±СЂР°Р·РѕРј.
 	if((BaalIsidro_DealerJob == LOG_RUNNING) || (BaalIsidro_DealerJob == LOG_SUCCESS))
 	{
-		AI_Output(other,self,"ORG_801_Lares_GetKraut_15_02");	//Вообще-то, у меня уже есть та куча болотника, о которой ты говоришь.
-		AI_Output(self,other,"ORG_801_Lares_GetKraut_11_03");	//Да, умный ты парень!
+		AI_Output(other,self,"ORG_801_Lares_GetKraut_15_02");	//Р’РѕРѕР±С‰Рµ-С‚Рѕ, Сѓ РјРµРЅСЏ СѓР¶Рµ РµСЃС‚СЊ С‚Р° РєСѓС‡Р° Р±РѕР»РѕС‚РЅРёРєР°, Рѕ РєРѕС‚РѕСЂРѕР№ С‚С‹ РіРѕРІРѕСЂРёС€СЊ.
+		AI_Output(self,other,"ORG_801_Lares_GetKraut_11_03");	//Р”Р°, СѓРјРЅС‹Р№ С‚С‹ РїР°СЂРµРЅСЊ!
 	};
-	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_04");	//Если так, то продай и принеси мне четыреста кусков руды.
+	AI_Output(self,other,"ORG_801_Lares_GetKraut_11_04");	//Р•СЃР»Рё С‚Р°Рє, С‚Рѕ РїСЂРѕРґР°Р№ Рё РїСЂРёРЅРµСЃРё РјРЅРµ С‡РµС‚С‹СЂРµСЃС‚Р° РєСѓСЃРєРѕРІ СЂСѓРґС‹.
 	Lares_Get400Ore = LOG_RUNNING;
 	if((Npc_GetTrueGuild(hero) == GIL_None) && (Kapitel < 2))
 	{
-		AI_Output(self,other,"ORG_801_Lares_GetKraut_11_05");	//Тогда можно будет поговорить о твоем приеме в нашу шайку.
+		AI_Output(self,other,"ORG_801_Lares_GetKraut_11_05");	//РўРѕРіРґР° РјРѕР¶РЅРѕ Р±СѓРґРµС‚ РїРѕРіРѕРІРѕСЂРёС‚СЊ Рѕ С‚РІРѕРµРј РїСЂРёРµРјРµ РІ РЅР°С€Сѓ С€Р°Р№РєСѓ.
 		Log_CreateTopic(CH1_JoinNC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinNC,LOG_RUNNING);
-		B_LogEntry(CH1_JoinNC,"Я должен взять болотник у Идола Исидро и продать его за 400 кусков руды, которые нужно принести Ларсу.");
+		B_LogEntry(CH1_JoinNC,"РЇ РґРѕР»Р¶РµРЅ РІР·СЏС‚СЊ Р±РѕР»РѕС‚РЅРёРє Сѓ РРґРѕР»Р° РСЃРёРґСЂРѕ Рё РїСЂРѕРґР°С‚СЊ РµРіРѕ Р·Р° 400 РєСѓСЃРєРѕРІ СЂСѓРґС‹, РєРѕС‚РѕСЂС‹Рµ РЅСѓР¶РЅРѕ РїСЂРёРЅРµСЃС‚Рё Р›Р°СЂСЃСѓ.");
 	};
 };
 
@@ -401,7 +402,7 @@ instance ORG_801_Lares_400Ore(C_Info)
 	condition = ORG_801_Lares_400Ore_Condition;
 	information = ORG_801_Lares_400Ore_Info;
 	permanent = 1;
-	description = "У меня есть четыреста кусков руды.";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ С‡РµС‚С‹СЂРµСЃС‚Р° РєСѓСЃРєРѕРІ СЂСѓРґС‹.";
 };
 
 
@@ -415,27 +416,27 @@ func int ORG_801_Lares_400Ore_Condition()
 
 func void ORG_801_Lares_400Ore_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_400Ore_15_00");	//У меня есть четыреста кусков руды.
+	AI_Output(other,self,"ORG_801_Lares_400Ore_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ С‡РµС‚С‹СЂРµСЃС‚Р° РєСѓСЃРєРѕРІ СЂСѓРґС‹.
 	if(Npc_HasItems(other,ItMiNugget) >= 400)
 	{
-		b_printtrademsg1("Отдано руды: 400");
-		AI_Output(self,other,"ORG_801_Lares_400Ore_11_01");	//Отлично! Конечно, это более чем достаточно.
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 400");
+		AI_Output(self,other,"ORG_801_Lares_400Ore_11_01");	//РћС‚Р»РёС‡РЅРѕ! РљРѕРЅРµС‡РЅРѕ, СЌС‚Рѕ Р±РѕР»РµРµ С‡РµРј РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ.
 		Lares_Get400Ore = LOG_SUCCESS;
 		Points_NC = Points_NC + 10;
 		B_GiveInvItems(other,self,ItMiNugget,400);
 		if(BaalIsidro_DealerJob == LOG_RUNNING)
 		{
-			B_LogEntry(CH1_JoinNC,"Ларс был очень доволен тем, что я принес ему 400 кусков руды, вырученные за болотник Идола Исидро.");
+			B_LogEntry(CH1_JoinNC,"Р›Р°СЂСЃ Р±С‹Р» РѕС‡РµРЅСЊ РґРѕРІРѕР»РµРЅ С‚РµРј, С‡С‚Рѕ СЏ РїСЂРёРЅРµСЃ РµРјСѓ 400 РєСѓСЃРєРѕРІ СЂСѓРґС‹, РІС‹СЂСѓС‡РµРЅРЅС‹Рµ Р·Р° Р±РѕР»РѕС‚РЅРёРє РРґРѕР»Р° РСЃРёРґСЂРѕ.");
 		}
 		else
 		{
-			B_LogEntry(CH1_JoinNC,"Ларс был очень доволен тем, что я принес ему 400 кусков руды.");
+			B_LogEntry(CH1_JoinNC,"Р›Р°СЂСЃ Р±С‹Р» РѕС‡РµРЅСЊ РґРѕРІРѕР»РµРЅ С‚РµРј, С‡С‚Рѕ СЏ РїСЂРёРЅРµСЃ РµРјСѓ 400 РєСѓСЃРєРѕРІ СЂСѓРґС‹.");
 		};
 		B_GiveXP(XP_BaalIsidroPayLares);
 	}
 	else
 	{
-		AI_Output(self,other,"ORG_801_Lares_400Ore_NOORE_11_00");	//Пересчитай-ка еще раз, вся ли руда не месте.
+		AI_Output(self,other,"ORG_801_Lares_400Ore_NOORE_11_00");	//РџРµСЂРµСЃС‡РёС‚Р°Р№-РєР° РµС‰Рµ СЂР°Р·, РІСЃСЏ Р»Рё СЂСѓРґР° РЅРµ РјРµСЃС‚Рµ.
 	};
 };
 
@@ -447,7 +448,7 @@ instance ORG_801_Lares_Reicht(C_Info)
 	condition = ORG_801_Lares_Reicht_Condition;
 	information = ORG_801_Lares_Reicht_Info;
 	permanent = 1;
-	description = "Этого достаточно, чтобы меня приняли в шайку?";
+	description = "Р­С‚РѕРіРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ РјРµРЅСЏ РїСЂРёРЅСЏР»Рё РІ С€Р°Р№РєСѓ?";
 };
 
 
@@ -461,33 +462,33 @@ func int ORG_801_Lares_Reicht_Condition()
 
 func void ORG_801_Lares_Reicht_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_Reicht_15_00");	//Этого достаточно, чтобы меня приняли в шайку?
+	AI_Output(other,self,"ORG_801_Lares_Reicht_15_00");	//Р­С‚РѕРіРѕ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ РјРµРЅСЏ РїСЂРёРЅСЏР»Рё РІ С€Р°Р№РєСѓ?
 	if((Points_NC >= 30) && (hero.level >= 5))
 	{
-		AI_Output(self,other,"ORG_801_Lares_Reicht_AUFNAHME_11_00");	//Думаю, да.
-		AI_Output(self,other,"ORG_801_Lares_Reicht_AUFNAHME_11_01");	//Я даже приготовил тебе подарок - доспех, если быть точным. Подарок, конечно, небольшой, но заслуженный.
-		b_printtrademsg1("Получен легкий доспех вора.");
+		AI_Output(self,other,"ORG_801_Lares_Reicht_AUFNAHME_11_00");	//Р”СѓРјР°СЋ, РґР°.
+		AI_Output(self,other,"ORG_801_Lares_Reicht_AUFNAHME_11_01");	//РЇ РґР°Р¶Рµ РїСЂРёРіРѕС‚РѕРІРёР» С‚РµР±Рµ РїРѕРґР°СЂРѕРє - РґРѕСЃРїРµС…, РµСЃР»Рё Р±С‹С‚СЊ С‚РѕС‡РЅС‹Рј. РџРѕРґР°СЂРѕРє, РєРѕРЅРµС‡РЅРѕ, РЅРµР±РѕР»СЊС€РѕР№, РЅРѕ Р·Р°СЃР»СѓР¶РµРЅРЅС‹Р№.
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅ Р»РµРіРєРёР№ РґРѕСЃРїРµС… РІРѕСЂР°.");
 		CreateInvItem(hero,org_armor_l);
 		Npc_SetTrueGuild(hero,GIL_ORG);
 		hero.guild = GIL_ORG;
 		B_GiveXP(XP_BecomeBandit);
-		B_LogEntry(CH1_JoinNC,"Ларс принял меня в свою шайку. Отныне Новый лагерь будет моим домом!");
+		B_LogEntry(CH1_JoinNC,"Р›Р°СЂСЃ РїСЂРёРЅСЏР» РјРµРЅСЏ РІ СЃРІРѕСЋ С€Р°Р№РєСѓ. РћС‚РЅС‹РЅРµ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ Р±СѓРґРµС‚ РјРѕРёРј РґРѕРјРѕРј!");
 		Log_SetTopicStatus(CH1_JoinNC,LOG_SUCCESS);
 		Log_CreateTopic(CH1_JoinOC,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinOC,LOG_FAILED);
-		B_LogEntry(CH1_JoinOC,"Как один из людей Ларса я не могу быть принят в Старый лагерь.");
+		B_LogEntry(CH1_JoinOC,"РљР°Рє РѕРґРёРЅ РёР· Р»СЋРґРµР№ Р›Р°СЂСЃР° СЏ РЅРµ РјРѕРіСѓ Р±С‹С‚СЊ РїСЂРёРЅСЏС‚ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ.");
 		Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 		Log_SetTopicStatus(CH1_JoinPsi,LOG_FAILED);
-		B_LogEntry(CH1_JoinPsi,"Братство не примет меня, так как я уже стал членом Нового лагеря.");
+		B_LogEntry(CH1_JoinPsi,"Р‘СЂР°С‚СЃС‚РІРѕ РЅРµ РїСЂРёРјРµС‚ РјРµРЅСЏ, С‚Р°Рє РєР°Рє СЏ СѓР¶Рµ СЃС‚Р°Р» С‡Р»РµРЅРѕРј РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		if(DIFF_HARD == FALSE)
 		{
 			Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-			B_LogEntry(GE_TeacherNC,"Я вступил в Новый лагерь и теперь некоторые учителя будут согласны учить меня бесплатно.");
+			B_LogEntry(GE_TeacherNC,"РЇ РІСЃС‚СѓРїРёР» РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ Рё С‚РµРїРµСЂСЊ РЅРµРєРѕС‚РѕСЂС‹Рµ СѓС‡РёС‚РµР»СЏ Р±СѓРґСѓС‚ СЃРѕРіР»Р°СЃРЅС‹ СѓС‡РёС‚СЊ РјРµРЅСЏ Р±РµСЃРїР»Р°С‚РЅРѕ.");
 			FREELEARN_NC = TRUE;
 		};
 		if(BaalOrun_FetchWeed == LOG_RUNNING)
 		{
-			B_LogEntry(CH1_DeliverWeed,"Члену шайки Ларса не пристало быть на побегушках у сектантов. Думаю, у них и без меня найдется, кому таскать тюки с травой.");
+			B_LogEntry(CH1_DeliverWeed,"Р§Р»РµРЅСѓ С€Р°Р№РєРё Р›Р°СЂСЃР° РЅРµ РїСЂРёСЃС‚Р°Р»Рѕ Р±С‹С‚СЊ РЅР° РїРѕР±РµРіСѓС€РєР°С… Сѓ СЃРµРєС‚Р°РЅС‚РѕРІ. Р”СѓРјР°СЋ, Сѓ РЅРёС… Рё Р±РµР· РјРµРЅСЏ РЅР°Р№РґРµС‚СЃСЏ, РєРѕРјСѓ С‚Р°СЃРєР°С‚СЊ С‚СЋРєРё СЃ С‚СЂР°РІРѕР№.");
 			Log_SetTopicStatus(CH1_DeliverWeed,LOG_FAILED);
 			BaalOrun_FetchWeed = LOG_FAILED;
 		};
@@ -495,7 +496,7 @@ func void ORG_801_Lares_Reicht_Info()
 		{
 			Thorus_MordragKo = LOG_FAILED;
 			Log_SetTopicStatus(CH1_MordragKO,LOG_FAILED);
-			B_LogEntry(CH1_MordragKO,"Теперь я с ворами, а наш Мордраг может делать в Старом лагере все, что захочет!");
+			B_LogEntry(CH1_MordragKO,"РўРµРїРµСЂСЊ СЏ СЃ РІРѕСЂР°РјРё, Р° РЅР°С€ РњРѕСЂРґСЂР°Рі РјРѕР¶РµС‚ РґРµР»Р°С‚СЊ РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ РІСЃРµ, С‡С‚Рѕ Р·Р°С…РѕС‡РµС‚!");
 		};
 		if((Kirgo_Charged == TRUE) && (KIRGO_CHARGED_END == FALSE))
 		{
@@ -513,17 +514,17 @@ func void ORG_801_Lares_Reicht_Info()
 	{
 		if(Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe))
 		{
-			AI_Output(self,other,"ORG_801_Lares_Reicht_11_02");	//Мордраг рассказал мне о тебе.
+			AI_Output(self,other,"ORG_801_Lares_Reicht_11_02");	//РњРѕСЂРґСЂР°Рі СЂР°СЃСЃРєР°Р·Р°Р» РјРЅРµ Рѕ С‚РµР±Рµ.
 		};
 		if(Npc_KnowsInfo(hero,ORG_801_Lares_BringList))
 		{
-			AI_Output(self,other,"ORG_801_Lares_Reicht_11_03");	//Ты доказал свою преданность нам, когда принес список.
+			AI_Output(self,other,"ORG_801_Lares_Reicht_11_03");	//РўС‹ РґРѕРєР°Р·Р°Р» СЃРІРѕСЋ РїСЂРµРґР°РЅРЅРѕСЃС‚СЊ РЅР°Рј, РєРѕРіРґР° РїСЂРёРЅРµСЃ СЃРїРёСЃРѕРє.
 		};
 		if(Lares_Get400Ore == LOG_SUCCESS)
 		{
-			AI_Output(self,other,"SVM_11_ITookYourOre");	//Как хорошо, что ты поделился со мной этой рудой!
+			AI_Output(self,other,"SVM_11_ITookYourOre");	//РљР°Рє С…РѕСЂРѕС€Рѕ, С‡С‚Рѕ С‚С‹ РїРѕРґРµР»РёР»СЃСЏ СЃРѕ РјРЅРѕР№ СЌС‚РѕР№ СЂСѓРґРѕР№!
 		};
-		AI_Output(self,other,"ORG_801_Lares_Reicht_11_04");	//Но ты еще не готов. Иди, выполняй другие поручения.
+		AI_Output(self,other,"ORG_801_Lares_Reicht_11_04");	//РќРѕ С‚С‹ РµС‰Рµ РЅРµ РіРѕС‚РѕРІ. РРґРё, РІС‹РїРѕР»РЅСЏР№ РґСЂСѓРіРёРµ РїРѕСЂСѓС‡РµРЅРёСЏ.
 		if(hero.level < 5)
 		{
 			B_PrintGuildCondition(5);
@@ -539,7 +540,7 @@ instance ORG_801_Lares_GotoKalom(C_Info)
 	condition = ORG_801_Lares_GotoKalom_Condition;
 	information = ORG_801_Lares_GotoKalom_Info;
 	permanent = 0;
-	description = "И что же мне теперь делать?";
+	description = "Р С‡С‚Рѕ Р¶Рµ РјРЅРµ С‚РµРїРµСЂСЊ РґРµР»Р°С‚СЊ?";
 };
 
 
@@ -554,31 +555,31 @@ func int ORG_801_Lares_GotoKalom_Condition()
 func void ORG_801_Lares_GotoKalom_Info()
 {
 	var C_Npc Mordrag;
-	AI_Output(other,self,"ORG_801_Lares_GotoKalom_15_00");	//И что же мне теперь делать?
-	AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_01");	//Теперь ты один из нас. При этом мы не посягаем на твою свободу. Делай все, что захочешь.
+	AI_Output(other,self,"ORG_801_Lares_GotoKalom_15_00");	//Р С‡С‚Рѕ Р¶Рµ РјРЅРµ С‚РµРїРµСЂСЊ РґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_01");	//РўРµРїРµСЂСЊ С‚С‹ РѕРґРёРЅ РёР· РЅР°СЃ. РџСЂРё СЌС‚РѕРј РјС‹ РЅРµ РїРѕСЃСЏРіР°РµРј РЅР° С‚РІРѕСЋ СЃРІРѕР±РѕРґСѓ. Р”РµР»Р°Р№ РІСЃРµ, С‡С‚Рѕ Р·Р°С…РѕС‡РµС€СЊ.
 	Log_CreateTopic(CH1_GotoPsiCamp,LOG_MISSION);
 	Log_SetTopicStatus(CH1_GotoPsiCamp,LOG_RUNNING);
-	B_LogEntry(CH1_GotoPsiCamp,"Братья из Болотного лагеря к чему-то готовятся. Ларс, главарь банды воров, хочет знать, к чему именно.");
+	B_LogEntry(CH1_GotoPsiCamp,"Р‘СЂР°С‚СЊСЏ РёР· Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ Рє С‡РµРјСѓ-С‚Рѕ РіРѕС‚РѕРІСЏС‚СЃСЏ. Р›Р°СЂСЃ, РіР»Р°РІР°СЂСЊ Р±Р°РЅРґС‹ РІРѕСЂРѕРІ, С…РѕС‡РµС‚ Р·РЅР°С‚СЊ, Рє С‡РµРјСѓ РёРјРµРЅРЅРѕ.");
 	if(Lares_InformMordrag == LOG_RUNNING)
 	{
-		AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_02");	//Если ты действительно хочешь быть нам полезен, иди к Мордрагу и помоги ему справиться с делом сектантов.
-		B_LogEntry(CH1_GotoPsiCamp,"Я должен помочь Мордрагу разузнать, что там происходит!");
+		AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_02");	//Р•СЃР»Рё С‚С‹ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С…РѕС‡РµС€СЊ Р±С‹С‚СЊ РЅР°Рј РїРѕР»РµР·РµРЅ, РёРґРё Рє РњРѕСЂРґСЂР°РіСѓ Рё РїРѕРјРѕРіРё РµРјСѓ СЃРїСЂР°РІРёС‚СЊСЃСЏ СЃ РґРµР»РѕРј СЃРµРєС‚Р°РЅС‚РѕРІ.
+		B_LogEntry(CH1_GotoPsiCamp,"РЇ РґРѕР»Р¶РµРЅ РїРѕРјРѕС‡СЊ РњРѕСЂРґСЂР°РіСѓ СЂР°Р·СѓР·РЅР°С‚СЊ, С‡С‚Рѕ С‚Р°Рј РїСЂРѕРёСЃС…РѕРґРёС‚!");
 	}
 	else
 	{
 		Mordrag = Hlp_GetNpc(ORG_826_Mordrag);
 		if(Npc_IsDead(Mordrag))
 		{
-			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_03");	//Один из наших людей из Старого лагеря, Мордраг, был убит. Перед смертью он направил нам послание. В Лагере сектантов затевается что-то серьезное.
-			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_04");	//Сходи в лагерь Братства и выясни, что они замышляют.
-			B_LogEntry(CH1_GotoPsiCamp,"Он направил меня прямо в лагерь Братства.");
+			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_03");	//РћРґРёРЅ РёР· РЅР°С€РёС… Р»СЋРґРµР№ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ, РњРѕСЂРґСЂР°Рі, Р±С‹Р» СѓР±РёС‚. РџРµСЂРµРґ СЃРјРµСЂС‚СЊСЋ РѕРЅ РЅР°РїСЂР°РІРёР» РЅР°Рј РїРѕСЃР»Р°РЅРёРµ. Р’ Р›Р°РіРµСЂРµ СЃРµРєС‚Р°РЅС‚РѕРІ Р·Р°С‚РµРІР°РµС‚СЃСЏ С‡С‚Рѕ-С‚Рѕ СЃРµСЂСЊРµР·РЅРѕРµ.
+			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_04");	//РЎС…РѕРґРё РІ Р»Р°РіРµСЂСЊ Р‘СЂР°С‚СЃС‚РІР° Рё РІС‹СЏСЃРЅРё, С‡С‚Рѕ РѕРЅРё Р·Р°РјС‹С€Р»СЏСЋС‚.
+			B_LogEntry(CH1_GotoPsiCamp,"РћРЅ РЅР°РїСЂР°РІРёР» РјРµРЅСЏ РїСЂСЏРјРѕ РІ Р»Р°РіРµСЂСЊ Р‘СЂР°С‚СЃС‚РІР°.");
 		}
 		else
 		{
-			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_05");	//Мордраг, один из наших людей в Старом лагере, вернулся недавно.
-			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_06");	//Иди и поговори с ним. Скажи ему, что у нас уже есть свой человек в Лагере сектантов. Братство затевает что-то серьезное. Я хочу знать, что именно.
-			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_07");	//Помоги ему.
-			B_LogEntry(CH1_GotoPsiCamp,"Это дело было возложено на вора по имени Мордраг. Я могу найти его в баре на озере, в Новом лагере.");
+			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_05");	//РњРѕСЂРґСЂР°Рі, РѕРґРёРЅ РёР· РЅР°С€РёС… Р»СЋРґРµР№ РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ, РІРµСЂРЅСѓР»СЃСЏ РЅРµРґР°РІРЅРѕ.
+			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_06");	//РРґРё Рё РїРѕРіРѕРІРѕСЂРё СЃ РЅРёРј. РЎРєР°Р¶Рё РµРјСѓ, С‡С‚Рѕ Сѓ РЅР°СЃ СѓР¶Рµ РµСЃС‚СЊ СЃРІРѕР№ С‡РµР»РѕРІРµРє РІ Р›Р°РіРµСЂРµ СЃРµРєС‚Р°РЅС‚РѕРІ. Р‘СЂР°С‚СЃС‚РІРѕ Р·Р°С‚РµРІР°РµС‚ С‡С‚Рѕ-С‚Рѕ СЃРµСЂСЊРµР·РЅРѕРµ. РЇ С…РѕС‡Сѓ Р·РЅР°С‚СЊ, С‡С‚Рѕ РёРјРµРЅРЅРѕ.
+			AI_Output(self,other,"ORG_801_Lares_GotoKalom_11_07");	//РџРѕРјРѕРіРё РµРјСѓ.
+			B_LogEntry(CH1_GotoPsiCamp,"Р­С‚Рѕ РґРµР»Рѕ Р±С‹Р»Рѕ РІРѕР·Р»РѕР¶РµРЅРѕ РЅР° РІРѕСЂР° РїРѕ РёРјРµРЅРё РњРѕСЂРґСЂР°Рі. РЇ РјРѕРіСѓ РЅР°Р№С‚Рё РµРіРѕ РІ Р±Р°СЂРµ РЅР° РѕР·РµСЂРµ, РІ РќРѕРІРѕРј Р»Р°РіРµСЂРµ.");
 			B_ExchangeRoutine(ORG_826_Mordrag,"START");
 			Lares_InformMordrag = LOG_RUNNING;
 		};
@@ -593,7 +594,7 @@ instance ORG_801_Lares_WhereLearn(C_Info)
 	condition = ORG_801_Lares_WhereLearn_Condition;
 	information = ORG_801_Lares_WhereLearn_Info;
 	permanent = 0;
-	description = "Кто здесь может меня чему-нибудь научить?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РјРѕР¶РµС‚ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ РЅР°СѓС‡РёС‚СЊ?";
 };
 
 
@@ -607,10 +608,10 @@ func int ORG_801_Lares_WhereLearn_Condition()
 
 func void ORG_801_Lares_WhereLearn_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_WhereLearn_Info_15_01");	//Кто здесь может меня чему-нибудь научить?
-	AI_Output(self,other,"ORG_801_Lares_WhereLearn_Info_11_02");	//Я могу научить тебя, как стать более сильным и ловким.
+	AI_Output(other,self,"ORG_801_Lares_WhereLearn_Info_15_01");	//РљС‚Рѕ Р·РґРµСЃСЊ РјРѕР¶РµС‚ РјРµРЅСЏ С‡РµРјСѓ-РЅРёР±СѓРґСЊ РЅР°СѓС‡РёС‚СЊ?
+	AI_Output(self,other,"ORG_801_Lares_WhereLearn_Info_11_02");	//РЇ РјРѕРіСѓ РЅР°СѓС‡РёС‚СЊ С‚РµР±СЏ, РєР°Рє СЃС‚Р°С‚СЊ Р±РѕР»РµРµ СЃРёР»СЊРЅС‹Рј Рё Р»РѕРІРєРёРј.
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-	B_LogEntry(GE_TeacherNC,"Ларс может помочь мне увеличить силу и ловкость.");
+	B_LogEntry(GE_TeacherNC,"Р›Р°СЂСЃ РјРѕР¶РµС‚ РїРѕРјРѕС‡СЊ РјРЅРµ СѓРІРµР»РёС‡РёС‚СЊ СЃРёР»Сѓ Рё Р»РѕРІРєРѕСЃС‚СЊ.");
 };
 
 
@@ -635,7 +636,7 @@ func int ORG_801_Lares_Teach_Condition()
 
 func void ORG_801_Lares_Teach_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//Я хочу улучшить свои навыки.
+	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//РЇ С…РѕС‡Сѓ СѓР»СѓС‡С€РёС‚СЊ СЃРІРѕРё РЅР°РІС‹РєРё.
 	b_lareslearn();
 };
 
@@ -654,15 +655,15 @@ func void ORG_801_Lares_Teach_STR_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_STRENGTH] < 100))
 		{
-			b_printtrademsg1("Отдано руды: 10");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Не шути со мной!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//РќРµ С€СѓС‚Рё СЃРѕ РјРЅРѕР№!
 	};
 	b_lareslearn();
 };
@@ -677,15 +678,15 @@ func void ORG_801_Lares_Teach_STR_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_STRENGTH] < 96))
 		{
-			b_printtrademsg1("Отдано руды: 50");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,5 * LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Не шути со мной!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//РќРµ С€СѓС‚Рё СЃРѕ РјРЅРѕР№!
 	};
 	b_lareslearn();
 };
@@ -700,15 +701,15 @@ func void ORG_801_Lares_Teach_DEX_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_DEXTERITY] < 100))
 		{
-			b_printtrademsg1("Отдано руды: 10");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Не шути со мной!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//РќРµ С€СѓС‚Рё СЃРѕ РјРЅРѕР№!
 	};
 	b_lareslearn();
 };
@@ -723,15 +724,15 @@ func void ORG_801_Lares_Teach_DEX_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_DEXTERITY] < 96))
 		{
-			b_printtrademsg1("Отдано руды: 50");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,5 * LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//У меня не так много руды.
-		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//Не шути со мной!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//РЈ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+		AI_Output(self,other,"SVM_11_YouWannaFoolMe");	//РќРµ С€СѓС‚Рё СЃРѕ РјРЅРѕР№!
 	};
 	b_lareslearn();
 };
@@ -744,7 +745,7 @@ instance ORG_801_LARES_NEWLIST(C_Info)
 	condition = org_801_lares_newlist_condition;
 	information = org_801_lares_newlist_info;
 	permanent = 0;
-	description = "У тебя есть для меня еще какое-нибудь задание?";
+	description = "РЈ С‚РµР±СЏ РµСЃС‚СЊ РґР»СЏ РјРµРЅСЏ РµС‰Рµ РєР°РєРѕРµ-РЅРёР±СѓРґСЊ Р·Р°РґР°РЅРёРµ?";
 };
 
 
@@ -758,18 +759,18 @@ func int org_801_lares_newlist_condition()
 
 func void org_801_lares_newlist_info()
 {
-	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_00");	//У тебя есть для меня еще какое-нибудь задание?
-	AI_Output(self,other,"ORG_801_Lares_NewList_01");	//В Старой шахте всем заправляет Призрак по имени Ян. Он отвечает за поставки и каждые несколько недель пишет список нужных припасов.
-	AI_Output(self,other,"ORG_801_Lares_NewList_02");	//Я хочу, чтобы ты отправился туда, выкрал у Яна этот список и принес его мне. Обратись к Веджу в нашем лагере, он бесплатно обучит тебя всему необходимому.
+	AI_Output(other,self,"Mis_1_Psi_Kalom_DrugMonopol_15_00");	//РЈ С‚РµР±СЏ РµСЃС‚СЊ РґР»СЏ РјРµРЅСЏ РµС‰Рµ РєР°РєРѕРµ-РЅРёР±СѓРґСЊ Р·Р°РґР°РЅРёРµ?
+	AI_Output(self,other,"ORG_801_Lares_NewList_01");	//Р’ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ РІСЃРµРј Р·Р°РїСЂР°РІР»СЏРµС‚ РџСЂРёР·СЂР°Рє РїРѕ РёРјРµРЅРё РЇРЅ. РћРЅ РѕС‚РІРµС‡Р°РµС‚ Р·Р° РїРѕСЃС‚Р°РІРєРё Рё РєР°Р¶РґС‹Рµ РЅРµСЃРєРѕР»СЊРєРѕ РЅРµРґРµР»СЊ РїРёС€РµС‚ СЃРїРёСЃРѕРє РЅСѓР¶РЅС‹С… РїСЂРёРїР°СЃРѕРІ.
+	AI_Output(self,other,"ORG_801_Lares_NewList_02");	//РЇ С…РѕС‡Сѓ, С‡С‚РѕР±С‹ С‚С‹ РѕС‚РїСЂР°РІРёР»СЃСЏ С‚СѓРґР°, РІС‹РєСЂР°Р» Сѓ РЇРЅР° СЌС‚РѕС‚ СЃРїРёСЃРѕРє Рё РїСЂРёРЅРµСЃ РµРіРѕ РјРЅРµ. РћР±СЂР°С‚РёСЃСЊ Рє Р’РµРґР¶Сѓ РІ РЅР°С€РµРј Р»Р°РіРµСЂРµ, РѕРЅ Р±РµСЃРїР»Р°С‚РЅРѕ РѕР±СѓС‡РёС‚ С‚РµР±СЏ РІСЃРµРјСѓ РЅРµРѕР±С…РѕРґРёРјРѕРјСѓ.
 	if(!Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 	{
 		Log_CreateTopic(THELISTFORNC,LOG_MISSION);
 		Log_SetTopicStatus(THELISTFORNC,LOG_RUNNING);
-		B_LogEntry(THELISTFORNC,"Ларсу нужен список припасов, который я выкраду у Яна в Старой шахте.");
+		B_LogEntry(THELISTFORNC,"Р›Р°СЂСЃСѓ РЅСѓР¶РµРЅ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ, РєРѕС‚РѕСЂС‹Р№ СЏ РІС‹РєСЂР°РґСѓ Сѓ РЇРЅР° РІ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ.");
 	}
 	else
 	{
-		B_LogEntry(CH1_BringList,"Ларс предложил перехитрить людей Гомеза и принести список из шахты не Диего, а ему.");
+		B_LogEntry(CH1_BringList,"Р›Р°СЂСЃ РїСЂРµРґР»РѕР¶РёР» РїРµСЂРµС…РёС‚СЂРёС‚СЊ Р»СЋРґРµР№ Р“РѕРјРµР·Р° Рё РїСЂРёРЅРµСЃС‚Рё СЃРїРёСЃРѕРє РёР· С€Р°С…С‚С‹ РЅРµ Р”РёРµРіРѕ, Р° РµРјСѓ.");
 	};
 };
 

@@ -25,7 +25,7 @@ func void ZS_ShortZapped()
 	};
 	if(!Npc_IsDead(self) && !Npc_IsInState(self,ZS_Unconscious) && !C_BodyStateContains(self,BS_SWIM) && !C_BodyStateContains(self,BS_DIVE))
 	{
-		PrintDebugNpc(PD_MAGIC,"...NSC ist nicht bewuﬂtlos / tot / schwimmend / tauchend");
+		PrintDebugNpc(PD_MAGIC,"...NSC ist nicht bewu–Øtlos / tot / schwimmend / tauchend");
 		AI_PlayAni(self,"T_STAND_2_LIGHTNING_VICTIM");
 	};
 };

@@ -28,10 +28,14 @@ func int Npc_HasBleeding(var C_NPC npc)
 	};
 	return false;
 };
+func void Npc_SetBleading(var C_NPC npc)
+{
+	npc.aivar[AIV_MM_VisualType] += VT_BLOODY;
+};
 func void Npc_HealBleading(var C_NPC npc)
 {
 	PrintDebug("Npc_HealBleading..");
-	if(isFlagsContainCategorie(npc.aivar[AIV_VisualType],VT_BLOODY))
+	if(Npc_HasBleeding(npc))
 	{
 		if(Npc_HasHealPotion(npc))
 		{
@@ -50,7 +54,13 @@ func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 	};
 	if(Npc_HasBleeding(npc))
 	{
-		if(C_NpcIsWorker(npc))
+		if(C_NpcIsMonster(npc))
+		{
+			return;
+		}
+		else
+		{
+			if(C_NpcIsWorker(npc))
 			{
 				if(Npc_GetHPPcnt(npc) < 50)
 				{
@@ -63,42 +73,52 @@ func void Npc_ReactToSelfSpecStates(var C_NPC npc)
 						Npc_HealBleading(npc);
 					};
 				};
-		}
-		else
-		{
-			if(Npc_InFight(npc))
-			{
-				if(Npc_GetHPPcnt(npc) < 20)
-				{
-					AI_StartState(npc,ZS_Flee,0,"");
-				};
 			}
 			else
 			{
-				Npc_HealBleading(npc);
+				if(Npc_InFight(npc))
+				{
+					if(Npc_GetHPPcnt(npc) < 20)
+					{
+						AI_StartState(npc,ZS_Flee,0,"");
+					};
+				}
+				else
+				{
+					Npc_HealBleading(npc);
+				};
 			};
 		};
 	};
 };
 func void B_SpecStateTriger_Bleeding(var C_NPC slf,var C_NPC oth)
 {
-	if(slf.aivar[AIV_MM_REAL_ID] == ID_WOLF)
+	if(C_NpcIsMonster(slf))
 	{
-		if(Hlp_Random(100) < NPC_BLEEDING_CHANCE_WOLF)
+		if(slf.aivar[AIV_MM_REAL_ID] == ID_WOLF)
 		{
-			PrintDebug("70% get Bleeding wound by Wolf");
-			if(!isFlagsContainCategorie(oth.aivar[AIV_MM_VisualType],VT_BLOODY))
+			if(Hlp_Random(100) < NPC_BLEEDING_CHANCE_WOLF)
 			{
-				oth.aivar[AIV_MM_VisualType] += VT_BLOODY;
+				PrintDebug("70% get Bleeding wound by Wolf");
+				if(!Npc_HasBleeding(oth))
+				{
+					Npc_SetBleading(oth);
+				};
 			};
 		};
+		return;
+	};
+	if(C_NpcIsHuman(slf))
+	{
+		
+		return;
 	};
 };
 
 func void B_SpecStateHandler_Bleeding(var C_NPC npc)
 {
 	PrintDebug("akh_test_bleeding_perception");
-	if(isFlagsContainCategorie(npc.aivar[AIV_MM_VisualType], VT_BLOODY))
+	if(Npc_HasBleeding(npc))
 	{
 		if(!(getTimestamp() % (NPC_BLEEDING_TIK_PER_GAME_MINS * 2)))
 		{
@@ -121,7 +141,7 @@ func void B_SpecStateHandler_Bleeding(var C_NPC npc)
 };
 func void B_SpecStateHandler_Bleeding_Old(var C_NPC npc)
 {
-	if(isFlagsContainCategorie(npc.aivar[AIV_MM_VisualType], VT_BLOODY))
+	if(Npc_HasBleeding(npc))
 	{
 		if(!Npc_GetStateTime(npc) % NPC_BLEEDING_TIK_PER_SECS)
 		{

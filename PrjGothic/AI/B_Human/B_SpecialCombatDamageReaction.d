@@ -23,17 +23,17 @@ func void B_SpecialCombatDamageReaction()
 		self.aivar[AIV_MISSION1] += 1;
 		if(self.aivar[AIV_MISSION1] < 2)
 		{
-			AI_Output(self,NULL,"Dichlophos_NULL_0"); //Òû ÷òî ñ óìà ñîøåë?!!
+			AI_Output(self,NULL,"Dichlophos_NULL_0"); //Ð¢Ñ‹ Ñ‡Ñ‚Ð¾ Ñ ÑƒÐ¼Ð° ÑÐ¾ÑˆÐµÐ»?!!
 			AI_ContinueRoutine(self);
 		}
 		else if(self.aivar[AIV_MISSION1] < 3)
 		{
-			AI_Output(self,NULL,"Dichlophos_NULL_1"); //Åùå ðàç ïøèêíåøü â ìåíÿ ýòîé ãàäîñòüþ è ÿ îòäåðó òâîé çàä!
+			AI_Output(self,NULL,"Dichlophos_NULL_1"); //Ð•Ñ‰Ðµ Ñ€Ð°Ð· Ð¿ÑˆÐ¸ÐºÐ½ÐµÑˆÑŒ Ð² Ð¼ÐµÐ½Ñ ÑÑ‚Ð¾Ð¹ Ð³Ð°Ð´Ð¾ÑÑ‚ÑŒÑŽ Ð¸ Ñ Ð¾Ñ‚Ð´ÐµÑ€Ñƒ Ñ‚Ð²Ð¾Ð¹ Ð·Ð°Ð´!
 		}
 		else
 		{
-			AI_Output(self,NULL,"Dichlophos_NULL_2"); //Ãîòîâü ñðàêó!!!
-			//Ïðåäûäóùóþ ñòðî÷êó õîðîøî-áû ïðîïèñàòü è äîïîëíèòü âîèíñòâåííûìè ôðàçàìè ÷åðåç AI_OutputSVM_Overlay íî.. ÿ õç êàê ýòà ÷åïóõà ðàáîòàåò..
+			AI_Output(self,NULL,"Dichlophos_NULL_2"); //Ð“Ð¾Ñ‚Ð¾Ð²ÑŒ ÑÑ€Ð°ÐºÑƒ!!!
+			//ÐŸÑ€ÐµÐ´Ñ‹Ð´ÑƒÑ‰ÑƒÑŽ ÑÑ‚Ñ€Ð¾Ñ‡ÐºÑƒ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾-Ð±Ñ‹ Ð¿Ñ€Ð¾Ð¿Ð¸ÑÐ°Ñ‚ÑŒ Ð¸ Ð´Ð¾Ð¿Ð¾Ð»Ð½Ð¸Ñ‚ÑŒ Ð²Ð¾Ð¸Ð½ÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ð¼Ð¸ Ñ„Ñ€Ð°Ð·Ð°Ð¼Ð¸ Ñ‡ÐµÑ€ÐµÐ· AI_OutputSVM_Overlay Ð½Ð¾.. Ñ Ñ…Ð· ÐºÐ°Ðº ÑÑ‚Ð° Ñ‡ÐµÐ¿ÑƒÑ…Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚..
 			Npc_SetTarget(self,other);
 			AI_StartState(self,ZS_Attack,1,"");
 		};

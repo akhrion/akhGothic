@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Molerat(C_Npc)
 {
-	name[0] = "���������";
+	name[0] = "Кротокрыс";
 	guild = GIL_MOLERAT;
 	aivar[AIV_IMPORTANT] = ID_MOLERAT;
 	level = 5;
@@ -13,7 +13,7 @@ prototype Mst_Default_Molerat(C_Npc)
 	attribute[ATR_MANA] = 0;
 	protection[PROT_BLUNT] = 8;
 	protection[PROT_EDGE] = 8;
-	protection[PROT_POINT] = 5;
+	protection[PROT_POINT] = 25;
 	protection[PROT_FIRE] = 5;
 	protection[PROT_FLY] = 0;
 	protection[PROT_MAGIC] = 0;
@@ -32,7 +32,6 @@ prototype Mst_Default_Molerat(C_Npc)
 	start_aistate = ZS_MM_AllScheduler;
 	aivar[AIV_Trigger3] = OnlyRoutine;
 };
-
 func void Set_Molerat_Visuals()
 {
 	Mdl_SetVisual(self,"Molerat.mds");
@@ -50,12 +49,12 @@ instance Molerat(Mst_Default_Molerat)
 {
 	Set_Molerat_Visuals();
 	Npc_SetToFistMode(self);
-	CreateInvItem(self,ItFoMuttonRaw);
+//	CreateInvItem(self,ItFoMuttonRaw);
 };
 
 instance YMolerat(Mst_Default_Molerat)
 {
-	name[0] = "������� ���������";
+	name[0] = "Молодой кротокрыс";
 	level = 4;
 	attribute[ATR_STRENGTH] = 5;
 	attribute[ATR_DEXTERITY] = 5;
@@ -67,6 +66,47 @@ instance YMolerat(Mst_Default_Molerat)
 	set_ymolerat_visuals();
 	Mdl_SetModelScale(self,0.8,0.8,0.8);
 	Npc_SetToFistMode(self);
-	CreateInvItems(self,ItFoMuttonRaw,1);
+//	CreateInvItems(self,ItFoMuttonRaw,1);
 };
-
+instance Molerat_Big(Mst_Default_Molerat)
+{
+	name[0] = "Пузатый кротокрыс";
+	level = 7;
+	Npc_SetHp_Mult(self,180);
+	Npc_SetHpMax_Mult(self,180);
+	Npc_SetStr_Mult(self,180);
+	Npc_SetProt_Blunt_Mult(self,180);
+	Npc_SetProt_Edge_Mult(self,180);
+	Npc_SetProt_Fire_Mult(self,180);
+	Npc_SetProt_Magic_Mult(self,180);
+	Npc_SetProt_Point_Mult(self,180);
+	fight_tactic = FAI_MOLERAT;
+	set_ymolerat_visuals();
+	Mdl_SetModelScale(self,1.1,1.1,1.1);
+	Npc_SetToFistMode(self);
+//	CreateInvItems(self,ItFoMuttonRaw,4);
+};
+instance Molerat_Egg(Egg)
+{
+	name[0] = "Яйцо кротокрыса";
+	guild = GIL_MOLERAT;
+	spawnDelay = 240;
+//	spawnDelay = 2;
+	start_aistate = B_MM_Respawn;
+};
+instance Molerat_Egg_Yang(Egg)
+{
+	name[0] = "Яйцо кротокрыса";
+	guild = GIL_MOLERAT;
+	spawnDelay = 120;
+//	spawnDelay = 1;
+	start_aistate = B_MM_Respawn;
+};
+instance Molerat_Egg_Big(Egg)
+{
+	name[0] = "Яйцо кротокрыса";
+	guild = GIL_MOLERAT;
+	spawnDelay = 480;
+//	spawnDelay = 4;
+	start_aistate = B_MM_Respawn;
+};

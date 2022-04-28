@@ -1,7 +1,7 @@
 
 instance Vlk_580_Grim(Npc_Default)
 {
-	name[0] = "Ãðèì";
+	name[0] = "Ð“Ñ€Ð¸Ð¼";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 5;

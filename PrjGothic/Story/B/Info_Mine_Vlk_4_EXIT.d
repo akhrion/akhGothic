@@ -26,7 +26,7 @@ instance Info_Mine_Vlk_4_Mine(C_Info)
 	condition = Info_Mine_Vlk_4_Mine_Condition;
 	information = Info_Mine_Vlk_4_Mine_Info;
 	permanent = 1;
-	description = "Расскажи мне о жизни в шахте.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ Р¶РёР·РЅРё РІ С€Р°С…С‚Рµ.";
 };
 
 
@@ -40,9 +40,9 @@ func int Info_Mine_Vlk_4_Mine_Condition()
 
 func void Info_Mine_Vlk_4_Mine_Info()
 {
-	AI_Output(other,self,"Info_Mine_Vlk_4_Mine_15_00");	//Расскажи мне о жизни в шахте.
-	AI_Output(self,other,"Info_Mine_Vlk_4_Mine_01_01");	//Рудокопы здесь работают как проклятые. Вот и весь рассказ. А ты пришел и скоро уйдешь, не зная, что это такое.
-	AI_Output(self,other,"Info_Mine_Vlk_4_Mine_01_02");	//...А когда ты будешь разгуливать по лагерю, я здесь все равно буду махать киркой, добывая руду. Такая уж у меня работа. И жизнь такая.
+	AI_Output(other,self,"Info_Mine_Vlk_4_Mine_15_00");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ Р¶РёР·РЅРё РІ С€Р°С…С‚Рµ.
+	AI_Output(self,other,"Info_Mine_Vlk_4_Mine_01_01");	//Р СѓРґРѕРєРѕРїС‹ Р·РґРµСЃСЊ СЂР°Р±РѕС‚Р°СЋС‚ РєР°Рє РїСЂРѕРєР»СЏС‚С‹Рµ. Р’РѕС‚ Рё РІРµСЃСЊ СЂР°СЃСЃРєР°Р·. Рђ С‚С‹ РїСЂРёС€РµР» Рё СЃРєРѕСЂРѕ СѓР№РґРµС€СЊ, РЅРµ Р·РЅР°СЏ, С‡С‚Рѕ СЌС‚Рѕ С‚Р°РєРѕРµ.
+	AI_Output(self,other,"Info_Mine_Vlk_4_Mine_01_02");	//...Рђ РєРѕРіРґР° С‚С‹ Р±СѓРґРµС€СЊ СЂР°Р·РіСѓР»РёРІР°С‚СЊ РїРѕ Р»Р°РіРµСЂСЋ, СЏ Р·РґРµСЃСЊ РІСЃРµ СЂР°РІРЅРѕ Р±СѓРґСѓ РјР°С…Р°С‚СЊ РєРёСЂРєРѕР№, РґРѕР±С‹РІР°СЏ СЂСѓРґСѓ. РўР°РєР°СЏ СѓР¶ Сѓ РјРµРЅСЏ СЂР°Р±РѕС‚Р°. Р Р¶РёР·РЅСЊ С‚Р°РєР°СЏ.
 };
 
 
@@ -52,7 +52,7 @@ instance Info_Mine_Vlk_4_WichtigePersonen(C_Info)
 	condition = Info_Mine_Vlk_4_WichtigePersonen_Condition;
 	information = Info_Mine_Vlk_4_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто здесь всем управляет?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РІСЃРµРј СѓРїСЂР°РІР»СЏРµС‚?";
 };
 
 
@@ -66,8 +66,8 @@ func int Info_Mine_Vlk_4_WichtigePersonen_Condition()
 
 func void Info_Mine_Vlk_4_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Mine_Vlk_4_WichtigePersonen_15_00");	//Кто здесь всем управляет?
-	AI_Output(self,other,"Info_Mine_Vlk_4_WichtigePersonen_01_01");	//Сантино и Альберто, можно сказать. Они меняют руду, которую мы добываем, на товары. Они же раздают нам дневной паек.
+	AI_Output(other,self,"Info_Mine_Vlk_4_WichtigePersonen_15_00");	//РљС‚Рѕ Р·РґРµСЃСЊ РІСЃРµРј СѓРїСЂР°РІР»СЏРµС‚?
+	AI_Output(self,other,"Info_Mine_Vlk_4_WichtigePersonen_01_01");	//РЎР°РЅС‚РёРЅРѕ Рё РђР»СЊР±РµСЂС‚Рѕ, РјРѕР¶РЅРѕ СЃРєР°Р·Р°С‚СЊ. РћРЅРё РјРµРЅСЏСЋС‚ СЂСѓРґСѓ, РєРѕС‚РѕСЂСѓСЋ РјС‹ РґРѕР±С‹РІР°РµРј, РЅР° С‚РѕРІР°СЂС‹. РћРЅРё Р¶Рµ СЂР°Р·РґР°СЋС‚ РЅР°Рј РґРЅРµРІРЅРѕР№ РїР°РµРє.
 };
 
 
@@ -77,7 +77,7 @@ instance Info_Mine_Vlk_4_Minecrawler(C_Info)
 	condition = Info_Mine_Vlk_4_Minecrawler_Condition;
 	information = Info_Mine_Vlk_4_Minecrawler_Info;
 	permanent = 1;
-	description = "Что ты знаешь о ползунах?";
+	description = "Р§С‚Рѕ С‚С‹ Р·РЅР°РµС€СЊ Рѕ РїРѕР»Р·СѓРЅР°С…?";
 };
 
 
@@ -91,8 +91,8 @@ func int Info_Mine_Vlk_4_Minecrawler_Condition()
 
 func void Info_Mine_Vlk_4_Minecrawler_Info()
 {
-	AI_Output(other,self,"Info_Mine_Vlk_4_Minecrawler_15_00");	//Что ты знаешь о ползунах?
-	AI_Output(self,other,"Info_Mine_Vlk_4_Minecrawler_01_01");	//Если ты встретишь одного из них, врежь ему как следует киркой по голове. Но если не попадешь с первого раза, второго шанса он тебе не даст.
+	AI_Output(other,self,"Info_Mine_Vlk_4_Minecrawler_15_00");	//Р§С‚Рѕ С‚С‹ Р·РЅР°РµС€СЊ Рѕ РїРѕР»Р·СѓРЅР°С…?
+	AI_Output(self,other,"Info_Mine_Vlk_4_Minecrawler_01_01");	//Р•СЃР»Рё С‚С‹ РІСЃС‚СЂРµС‚РёС€СЊ РѕРґРЅРѕРіРѕ РёР· РЅРёС…, РІСЂРµР¶СЊ РµРјСѓ РєР°Рє СЃР»РµРґСѓРµС‚ РєРёСЂРєРѕР№ РїРѕ РіРѕР»РѕРІРµ. РќРѕ РµСЃР»Рё РЅРµ РїРѕРїР°РґРµС€СЊ СЃ РїРµСЂРІРѕРіРѕ СЂР°Р·Р°, РІС‚РѕСЂРѕРіРѕ С€Р°РЅСЃР° РѕРЅ С‚РµР±Рµ РЅРµ РґР°СЃС‚.
 };
 
 
@@ -102,7 +102,7 @@ instance Info_Mine_Vlk_4_DieLage(C_Info)
 	condition = Info_Mine_Vlk_4_DieLage_Condition;
 	information = Info_Mine_Vlk_4_DieLage_Info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -116,8 +116,8 @@ func int Info_Mine_Vlk_4_DieLage_Condition()
 
 func void Info_Mine_Vlk_4_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Mine_Vlk_4_DieLage_15_00");	//Как дела?
-	AI_Output(self,other,"Info_Mine_Vlk_4_DieLage_01_01");	//Бывало и лучше.
+	AI_Output(other,self,"Info_Mine_Vlk_4_DieLage_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Info_Mine_Vlk_4_DieLage_01_01");	//Р‘С‹РІР°Р»Рѕ Рё Р»СѓС‡С€Рµ.
 };
 
 func void B_AssignAmbientInfos_Mine_Vlk_4(var C_Npc slf)

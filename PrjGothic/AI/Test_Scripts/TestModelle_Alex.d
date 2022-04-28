@@ -37,7 +37,7 @@ instance OverlayHuman(C_Npc)
 
 instance OverlayOrc(C_Npc)
 {
-	name[0] = "Орк-рокфеллер";
+	name[0] = "РћСЂРє-СЂРѕРєС„РµР»Р»РµСЂ";
 	guild = GIL_ORCWARRIOR;
 	level = 4;
 	attribute[ATR_STRENGTH] = 15;
@@ -57,7 +57,7 @@ instance OverlayOrc(C_Npc)
 
 instance Babe_Rockefeller(Npc_Default)
 {
-	name[0] = "Леди-Рокфеллер";
+	name[0] = "Р›РµРґРё-Р РѕРєС„РµР»Р»РµСЂ";
 	guild = GIL_BAB;
 	level = 1;
 	voice = 16;
@@ -325,7 +325,7 @@ instance L25(Npc_Default)
 
 instance Testratte(Mst_Default_Molerat)
 {
-	name[0] = "Молодой кротокрыс";
+	name[0] = "РњРѕР»РѕРґРѕР№ РєСЂРѕС‚РѕРєСЂС‹СЃ";
 	attribute[ATR_STRENGTH] = 5;
 	attribute[ATR_DEXTERITY] = 5;
 	attribute[ATR_HITPOINTS_MAX] = 400;

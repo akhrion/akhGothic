@@ -2,7 +2,14 @@ func void ZS_Dead()
 {
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_Dead");
 	PrintGlobals(PD_ZS_Check);
+	if(!Npc_IsCompletelyDead(self)){return;};
+	if(Npc_WasConvertedIntoDeadMan(other)){return;};
+	Npc_SetDeadTime(self);
 	C_ZSInit();
+	if(Hlp_GetInstanceID(other) == -1)
+	{
+		other = Hlp_GetNpc(hero);
+	};
 	self.aivar[AIV_PLUNDERED] = FALSE;
 	if(Npc_HasReadiedRangedWeapon(other))
 	{
@@ -38,17 +45,18 @@ func void ZS_Dead()
 		B_ExchangeRoutine(Sld_729_Kharim,"START");
 	};
 	if(
-		Npc_IsPlayer(other) ||
-		(
+		Npc_IsPlayer(other)
+	||	(
 			C_NpcIsHuman(other) &&
 			other.aivar[AIV_PARTYMEMBER]
-		) ||
-		(
+		)
+	||	(
 			C_NpcIsMonster(other) &&
 			other.aivar[AIV_MM_PARTYMEMBER]
 		)
 	)
 	{
+		Game_CheckOneShotCounters(self);
 		B_DeathXP();
 		if(
 			Hlp_GetInstanceID(self) == Hlp_GetInstanceID(MineCrawler) ||
@@ -58,10 +66,7 @@ func void ZS_Dead()
 			isSCKillOMCrawler = true;
 		};
 	};
-//	PrintSI("zs_dead isBurned: ",Npc_IsBurned(self));
-//	PrintSI("zs_dead dmgReciv: ",C_Npc_GetDamageRecieved(self,DAM_INDEX_FIRE));
-//	msgSI("zs_dead isBurned: ",Npc_IsBurned(self),70,60);
-//	msgSI("zs_dead dmgReciv: ",C_Npc_GetDamageRecieved(self,DAM_INDEX_FIRE),70,62);
+	Achieve_Savior(self);
 	if(C_NpcIsMonster(self))
 	{
 		SaveReceivedDamage_Monster();
@@ -83,19 +88,19 @@ func void ZS_Dead()
 };
 func int ZS_Dead_Loop()
 {
-	//Цикл отрабатывает некорректно
-	//Спустя пару секунд он завершается. Видимо ссылка на Объект удаляется
-	//Но если воскресить персонажа, то выполняется ZS_Dead_End что намекает на
-	//то, что ссылка не удаляется, однако в цикл ZS_Dead_Loop мы находимся только секунду
-	// после чего всякая активность пропадает; таким образом мы приходим к выводу, что ZS_Dead_Loop
-	//отрабатывает только в движке, а из скриптов не подлавливается.
+	//Р¦РёРєР» РѕС‚СЂР°Р±Р°С‚С‹РІР°РµС‚ РЅРµРєРѕСЂСЂРµРєС‚РЅРѕ
+	//РЎРїСѓСЃС‚СЏ РїР°СЂСѓ СЃРµРєСѓРЅРґ РѕРЅ Р·Р°РІРµСЂС€Р°РµС‚СЃСЏ. Р’РёРґРёРјРѕ СЃСЃС‹Р»РєР° РЅР° РћР±СЉРµРєС‚ СѓРґР°Р»СЏРµС‚СЃСЏ
+	//РќРѕ РµСЃР»Рё РІРѕСЃРєСЂРµСЃРёС‚СЊ РїРµСЂСЃРѕРЅР°Р¶Р°, С‚Рѕ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ ZS_Dead_End С‡С‚Рѕ РЅР°РјРµРєР°РµС‚ РЅР°
+	//С‚Рѕ, С‡С‚Рѕ СЃСЃС‹Р»РєР° РЅРµ СѓРґР°Р»СЏРµС‚СЃСЏ, РѕРґРЅР°РєРѕ РІ С†РёРєР» ZS_Dead_Loop РјС‹ РЅР°С…РѕРґРёРјСЃСЏ С‚РѕР»СЊРєРѕ СЃРµРєСѓРЅРґСѓ
+	// РїРѕСЃР»Рµ С‡РµРіРѕ РІСЃСЏРєР°СЏ Р°РєС‚РёРІРЅРѕСЃС‚СЊ РїСЂРѕРїР°РґР°РµС‚; С‚Р°РєРёРј РѕР±СЂР°Р·РѕРј РјС‹ РїСЂРёС…РѕРґРёРј Рє РІС‹РІРѕРґСѓ, С‡С‚Рѕ ZS_Dead_Loop
+	//РѕС‚СЂР°Р±Р°С‚С‹РІР°РµС‚ С‚РѕР»СЊРєРѕ РІ РґРІРёР¶РєРµ, Р° РёР· СЃРєСЂРёРїС‚РѕРІ РЅРµ РїРѕРґР»Р°РІР»РёРІР°РµС‚СЃСЏ.
 /*
-	if(self.attribute[ATR_HITPOINTS] == 0)//Можно реализовать воскрешение.. очевидно ;(  ;)) хотя хз: рот будет открыт.. пофиксите кто-нить рот! Заглотусу этому.
+	if(self.attribute[ATR_HITPOINTS] == 0)//РњРѕР¶РЅРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РІРѕСЃРєСЂРµС€РµРЅРёРµ.. РѕС‡РµРІРёРґРЅРѕ ;(  ;)) С…РѕС‚СЏ С…Р·: СЂРѕС‚ Р±СѓРґРµС‚ РѕС‚РєСЂС‹С‚.. РїРѕС„РёРєСЃРёС‚Рµ РєС‚Рѕ-РЅРёС‚СЊ СЂРѕС‚! Р—Р°РіР»РѕС‚СѓСЃСѓ СЌС‚РѕРјСѓ.
 	{
-		msg("Мертв",90,70);
+		msg("РњРµСЂС‚РІ",90,70);
 		return LOOP_CONTINUE;
 	};
-	msg("Воскрешен",90,70);
+	msg("Р’РѕСЃРєСЂРµС€РµРЅ",90,70);
 */
 //	if(C_NpcIsMonster(self))
 //	{

@@ -1,7 +1,7 @@
 
 instance Lukor_Bugfixbook(C_Item)
 {
-	name = "Убедить Идола Люкора в режиме сопровождения.";
+	name = "РЈР±РµРґРёС‚СЊ РРґРѕР»Р° Р›СЋРєРѕСЂР° РІ СЂРµР¶РёРјРµ СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёСЏ.";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 100;
@@ -22,8 +22,8 @@ func void UseLukor_Bugfixbook()
 	Doc_SetPage(nDocID,1,"Book_Mage_R.tga",0);
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
-	Doc_PrintLine(nDocID,0,"Убедить Идола Люкора.");
-	Doc_PrintLine(nDocID,0,"В режиме сопровождения.");
+	Doc_PrintLine(nDocID,0,"РЈР±РµРґРёС‚СЊ РРґРѕР»Р° Р›СЋРєРѕСЂР°.");
+	Doc_PrintLine(nDocID,0,"Р’ СЂРµР¶РёРјРµ СЃРѕРїСЂРѕРІРѕР¶РґРµРЅРёСЏ.");
 	Doc_PrintLines(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLines(nDocID,0,"");
@@ -44,7 +44,7 @@ func void UseLukor_Bugfixbook()
 
 instance Lester_Bugfixbook(C_Item)
 {
-	name = "Отправить Лестера домой.";
+	name = "РћС‚РїСЂР°РІРёС‚СЊ Р›РµСЃС‚РµСЂР° РґРѕРјРѕР№.";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 100;

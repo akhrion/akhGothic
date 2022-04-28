@@ -1,7 +1,7 @@
 
 instance Orc_Rockefeller(Mst_Default_OrcWarrior)
 {
-	name[0] = "Орк-рокфеллер";
+	name[0] = "РћСЂРє-СЂРѕРєС„РµР»Р»РµСЂ";
 	Set_OrcWarrior_Visuals();
 	CreateInvItems(self,ItFo_mutton_01,20);
 	CreateInvItems(self,ItFoApple,5);
@@ -80,7 +80,7 @@ instance Orc_Rockefeller(Mst_Default_OrcWarrior)
 
 instance Shaman_Rockefeller(Mst_Default_OrcWarrior)
 {
-	name[0] = "Шаман-рокфеллер";
+	name[0] = "РЁР°РјР°РЅ-СЂРѕРєС„РµР»Р»РµСЂ";
 	attribute[ATR_MANA_MAX] = 50;
 	attribute[ATR_MANA] = 50;
 	fight_tactic = FAI_HUMAN_MAGE;
@@ -162,7 +162,7 @@ instance Shaman_Rockefeller(Mst_Default_OrcWarrior)
 
 instance UdShaman_Rockefeller(Mst_Default_OrcWarrior)
 {
-	name[0] = "Бессмертный шаман-рокфеллер";
+	name[0] = "Р‘РµСЃСЃРјРµСЂС‚РЅС‹Р№ С€Р°РјР°РЅ-СЂРѕРєС„РµР»Р»РµСЂ";
 	attribute[ATR_MANA_MAX] = 50;
 	attribute[ATR_MANA] = 50;
 	fight_tactic = FAI_HUMAN_MAGE;

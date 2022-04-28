@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Harpie(C_Npc)
 {
-	name[0] = "Гарпия";
+	name[0] = "Р“Р°СЂРїРёСЏ";
 	guild = GIL_DEMON;
 	aivar[AIV_IMPORTANT] = ID_HARPIE;
 	level = 20;

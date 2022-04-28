@@ -3,8 +3,8 @@ prototype Npc_Default(C_Npc)
 {
 	attribute[ATR_STRENGTH] = 5;
 	attribute[ATR_DEXTERITY] = 5;
-	attribute[ATR_MANA_MAX] = 0;
-	attribute[ATR_MANA] = 0;
+	attribute[ATR_MANA_MAX] = 5;
+	attribute[ATR_MANA] = 5;
 	protection[PROT_EDGE] = 0;
 	protection[PROT_BLUNT] = 0;
 	protection[PROT_POINT] = 0;

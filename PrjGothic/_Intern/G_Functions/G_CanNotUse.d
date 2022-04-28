@@ -54,7 +54,7 @@ func void G_CanNotUse(var int bIsPlayer,var int nAttribute,var int nValue)
 	strMessage = ConcatStrings(strMessage,strDifference);
 	strMessage = ConcatStrings(strMessage," ");
 	strMessage = ConcatStrings(strMessage,strAttribute);
-	strMessage = ConcatStrings(strMessage,"для использования.");
+	strMessage = ConcatStrings(strMessage,"РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ.");
 	if(bIsPlayer)
 	{
 		G_PrintScreen(strMessage);

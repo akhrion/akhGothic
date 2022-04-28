@@ -26,7 +26,7 @@ func void B_RemoveWeapon(var C_Npc slf)
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_DETAIL,"...nur Fäuste 'gezogen'!");
+		PrintDebugNpc(PD_ZS_DETAIL,"...nur FÐ´uste 'gezogen'!");
 		AI_RemoveWeapon(slf);
 	};
 };

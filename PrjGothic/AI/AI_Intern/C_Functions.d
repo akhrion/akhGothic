@@ -237,11 +237,13 @@ func int C_NpcIsMonster(var C_Npc slf)
 func int C_NpcIsDangerousMonster(var C_Npc slf,var C_Npc oth)
 {
 	PrintDebugNpc(PD_ZS_DETAIL,"C_NpcIsDangerousMonster");
+	if(oth.fight_tactic == FAI_NONE){return false;};
 	if(
-		C_NpcIsMonster(oth) &&
-		(Wld_GetGuildAttitude(oth.guild,slf.guild) == ATT_HOSTILE) &&
-		!oth.aivar[AIV_MOVINGMOB] &&
-		!C_NpcIsDown(oth)
+		C_NpcIsMonster(oth)
+	&&	!(oth.guild == GIL_MEATBUG)
+	&&	(Wld_GetGuildAttitude(oth.guild,slf.guild) == ATT_HOSTILE)
+	&&	!oth.aivar[AIV_MOVINGMOB]
+	&&	!C_NpcIsDown(oth)
 	)
 	{
 		PrintDebugNpc(PD_ZS_DETAIL,"...true");
@@ -291,7 +293,15 @@ func int C_NpcIsOrc(var C_Npc slf)
 func int C_NpcIsMonsterMage(var C_Npc slf)
 {
 	PrintDebugNpc(PD_ZS_DETAIL,"C_NpcIsMonsterMage");
-	if((slf.fight_tactic == FAI_HUMAN_MAGE) && ((slf.guild == GIL_DEMON) || (slf.guild == GIL_ORCSHAMAN) || (slf.guild == GIL_UNDEADORC) || (slf.guild == GIL_GOLEM)))
+	if(
+		(slf.fight_tactic == FAI_HUMAN_MAGE)
+		&& (
+			(slf.guild == GIL_DEMON)
+			|| (slf.guild == GIL_ORCSHAMAN)
+			|| (slf.guild == GIL_UNDEADORC)
+			|| (slf.guild == GIL_GOLEM)
+		)
+	)
 	{
 		PrintDebugNpc(PD_ZS_DETAIL,"...true");
 		return TRUE;
@@ -531,7 +541,7 @@ func int C_NpcHasAmmo(var C_Npc slf,var int category)
 	PrintDebugNpc(PD_ZS_DETAIL,"C_NpcHasAmmo");
 	if((category != ItAmArrow) && (category != ItAmBolt))
 	{
-		PrintDebugNpc(PD_ZS_DETAIL,"...ungültige Kategorie !!!");
+		PrintDebugNpc(PD_ZS_DETAIL,"...ungÑŒltige Kategorie !!!");
 		return 0;
 	};
 	count = Npc_GetInvItemBySlot(slf,INV_WEAPON,1);
@@ -602,7 +612,7 @@ func int C_NpcHasWeapon(var C_Npc slf,var int category)
 	PrintDebugNpc(PD_ZS_FRAME,"C_NpcHasWeapon");
 	if((category != ITEM_KAT_NF) && (category != ITEM_KAT_FF))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...ungültige Kategorie !!!");
+		PrintDebugNpc(PD_ZS_Check,"...ungÑŒltige Kategorie !!!");
 		return FALSE;
 	};
 	Npc_GetInvItemBySlot(slf,INV_WEAPON,1);
@@ -1046,5 +1056,12 @@ func void C_Npc_SetAttentioned(var C_Npc slf)
 	if(!C_Npc_isAttentioned(slf))
 	{
 		slf.aivar[AIV_Memory] += AIV_M_Attentioned;
+	};
+};
+func void Effects_RemoveBloody()
+{
+	if(isFlagsContainCategorie(self.aivar[AIV_VisualType],VT_BLOODY))
+	{
+		self.aivar[AIV_MM_VisualType] -= VT_BLOODY;
 	};
 };

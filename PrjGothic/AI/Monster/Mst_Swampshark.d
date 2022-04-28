@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Swampshark(C_Npc)
 {
-	name[0] = "Болотожор";
+	name[0] = "Р‘РѕР»РѕС‚РѕР¶РѕСЂ";
 	guild = GIL_SWAMPSHARK;
 	aivar[AIV_IMPORTANT] = ID_SWAMPSHARK;
 	level = 40;
@@ -47,7 +47,7 @@ instance Swampshark(Mst_Default_Swampshark)
 
 instance HurtSwampshark(Mst_Default_Swampshark)
 {
-	name[0] = "Раненый болотожор";
+	name[0] = "Р Р°РЅРµРЅС‹Р№ Р±РѕР»РѕС‚РѕР¶РѕСЂ";
 	attribute[ATR_HITPOINTS] = 20;
 	Set_Swampshark_Visuals();
 	Npc_SetToFistMode(self);

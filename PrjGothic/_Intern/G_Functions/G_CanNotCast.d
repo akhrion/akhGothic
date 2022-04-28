@@ -6,13 +6,13 @@ func void G_CanNotCast(var int bIsPlayer,var int nCircleNeeded,var int nCirclePo
 	var string strMessage;
 	if((nCircleNeeded == 7) && bIsPlayer)
 	{
-		strMessage = "Клинок сломан, я не могу использовать его в бою.";
+		strMessage = "РљР»РёРЅРѕРє СЃР»РѕРјР°РЅ, СЏ РЅРµ РјРѕРіСѓ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РµРіРѕ РІ Р±РѕСЋ.";
 		G_PrintScreen(strMessage);
 		return;
 	};
 	if((nCircleNeeded == 8) && bIsPlayer)
 	{
-		strMessage = "Только шаманы орков знают, как пользоваться этим посохом.";
+		strMessage = "РўРѕР»СЊРєРѕ С€Р°РјР°РЅС‹ РѕСЂРєРѕРІ Р·РЅР°СЋС‚, РєР°Рє РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ СЌС‚РёРј РїРѕСЃРѕС…РѕРј.";
 		G_PrintScreen(strMessage);
 		return;
 	};

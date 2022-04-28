@@ -55,7 +55,7 @@ instance DIA_Torrez_Hello(C_Info)
 	condition = DIA_Torrez_Hello_Condition;
 	information = DIA_Torrez_Hello_Info;
 	permanent = 0;
-	description = "ß èùó Âåðõîâíîãî Ìàãà Êðóãà Îãíÿ.";
+	description = "Ð¯ Ð¸Ñ‰Ñƒ Ð’ÐµÑ€Ñ…Ð¾Ð²Ð½Ð¾Ð³Ð¾ ÐœÐ°Ð³Ð° ÐšÑ€ÑƒÐ³Ð° ÐžÐ³Ð½Ñ.";
 };
 
 
@@ -69,8 +69,8 @@ func int DIA_Torrez_Hello_Condition()
 
 func void DIA_Torrez_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Torrez_Hello_15_00");	//ß èùó Âåðõîâíîãî Ìàãà Êðóãà Îãíÿ.
-	AI_Output(self,other,"DIA_Torrez_Hello_04_01");	//Ïîãîâîðè îá ýòîì ñ Ìèëüòåíîì! È íå ìåøàé ìíå!
+	AI_Output(other,self,"DIA_Torrez_Hello_15_00");	//Ð¯ Ð¸Ñ‰Ñƒ Ð’ÐµÑ€Ñ…Ð¾Ð²Ð½Ð¾Ð³Ð¾ ÐœÐ°Ð³Ð° ÐšÑ€ÑƒÐ³Ð° ÐžÐ³Ð½Ñ.
+	AI_Output(self,other,"DIA_Torrez_Hello_04_01");	//ÐŸÐ¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸ Ð¾Ð± ÑÑ‚Ð¾Ð¼ Ñ ÐœÐ¸Ð»ÑŒÑ‚ÐµÐ½Ð¾Ð¼! Ð˜ Ð½Ðµ Ð¼ÐµÑˆÐ°Ð¹ Ð¼Ð½Ðµ!
 	if(Npc_HasItems(other,alchemybook))
 	{
 		Npc_RemoveInvItem(other,alchemybook);
@@ -87,7 +87,7 @@ instance DIA_Torrez_Belohnung(C_Info)
 	condition = DIA_Torrez_Belohnung_Condition;
 	information = DIA_Torrez_Belohnung_Info;
 	permanent = 0;
-	description = "Ìåíÿ ïðèñëàë Êîððèñòî. ß ïåðåäàë åìó ïèñüìî, è ìîãó âûáðàòü íàãðàäó.";
+	description = "ÐœÐµÐ½Ñ Ð¿Ñ€Ð¸ÑÐ»Ð°Ð» ÐšÐ¾Ñ€Ñ€Ð¸ÑÑ‚Ð¾. Ð¯ Ð¿ÐµÑ€ÐµÐ´Ð°Ð» ÐµÐ¼Ñƒ Ð¿Ð¸ÑÑŒÐ¼Ð¾, Ð¸ Ð¼Ð¾Ð³Ñƒ Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ.";
 };
 
 
@@ -101,44 +101,44 @@ func int DIA_Torrez_Belohnung_Condition()
 
 func void DIA_Torrez_Belohnung_Info()
 {
-	AI_Output(other,self,"DIA_Torrez_Belohnung_15_00");	//Ìåíÿ ïðèñëàë Êîððèñòî. ß ïåðåäàë åìó ïèñüìî è òåïåðü ìîãó âûáðàòü ñåáå íàãðàäó.
-	AI_Output(self,other,"DIA_Torrez_Belohnung_04_01");	//Òû îêàçàë íàì íåîöåíèìóþ óñëóãó, è, êîíå÷íî, ìîæåøü ïîëó÷èòü çà íåå íàãðàäó. Âûáèðàé.
+	AI_Output(other,self,"DIA_Torrez_Belohnung_15_00");	//ÐœÐµÐ½Ñ Ð¿Ñ€Ð¸ÑÐ»Ð°Ð» ÐšÐ¾Ñ€Ñ€Ð¸ÑÑ‚Ð¾. Ð¯ Ð¿ÐµÑ€ÐµÐ´Ð°Ð» ÐµÐ¼Ñƒ Ð¿Ð¸ÑÑŒÐ¼Ð¾ Ð¸ Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¼Ð¾Ð³Ñƒ Ð²Ñ‹Ð±Ñ€Ð°Ñ‚ÑŒ ÑÐµÐ±Ðµ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ.
+	AI_Output(self,other,"DIA_Torrez_Belohnung_04_01");	//Ð¢Ñ‹ Ð¾ÐºÐ°Ð·Ð°Ð» Ð½Ð°Ð¼ Ð½ÐµÐ¾Ñ†ÐµÐ½Ð¸Ð¼ÑƒÑŽ ÑƒÑÐ»ÑƒÐ³Ñƒ, Ð¸, ÐºÐ¾Ð½ÐµÑ‡Ð½Ð¾, Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð·Ð° Ð½ÐµÐµ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ. Ð’Ñ‹Ð±Ð¸Ñ€Ð°Ð¹.
 	if(PYROCAR_MESSENGER == LOG_RUNNING)
 	{
-		B_LogEntry(KDFLETTER,"ß ïîëó÷èë íàãðàäó ó Òîððåçà. Ìîå çàäàíèå âûïîëíåíî.");
+		B_LogEntry(KDFLETTER,"Ð¯ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ Ñƒ Ð¢Ð¾Ñ€Ñ€ÐµÐ·Ð°. ÐœÐ¾Ðµ Ð·Ð°Ð´Ð°Ð½Ð¸Ðµ Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÐµÐ½Ð¾.");
 		Log_SetTopicStatus(KDFLETTER,LOG_SUCCESS);
 		PYROCAR_MESSENGER = LOG_SUCCESS;
 	};
 	Info_ClearChoices(DIA_Torrez_Belohnung);
-	Info_AddChoice(DIA_Torrez_Belohnung,"Ýññåíöèÿ ñèëû äóõà (Ìàêñ. ìàã. ñèëà +5)",DIA_Torrez_Belohnung_ManaMax);
-	Info_AddChoice(DIA_Torrez_Belohnung,"3 ñâèòêà (Îãíåííûé øàð, Ìîëíèÿ è Ïðåâðàùåíèå â ïàäàëüùèêà)",DIA_Torrez_Belohnung_Scrolls);
-	Info_AddChoice(DIA_Torrez_Belohnung,"Êîëüöî ëîâêîñòè (+5)",DIA_Torrez_Belohnung_Dex);
-	Info_AddChoice(DIA_Torrez_Belohnung,"Êîëüöî ñèëû (+5)",DIA_Torrez_Belohnung_Str);
+	Info_AddChoice(DIA_Torrez_Belohnung,"Ð­ÑÑÐµÐ½Ñ†Ð¸Ñ ÑÐ¸Ð»Ñ‹ Ð´ÑƒÑ…Ð° (ÐœÐ°ÐºÑ. Ð¼Ð°Ð³. ÑÐ¸Ð»Ð° +5)",DIA_Torrez_Belohnung_ManaMax);
+	Info_AddChoice(DIA_Torrez_Belohnung,"3 ÑÐ²Ð¸Ñ‚ÐºÐ° (ÐžÐ³Ð½ÐµÐ½Ð½Ñ‹Ð¹ ÑˆÐ°Ñ€, ÐœÐ¾Ð»Ð½Ð¸Ñ Ð¸ ÐŸÑ€ÐµÐ²Ñ€Ð°Ñ‰ÐµÐ½Ð¸Ðµ Ð² Ð¿Ð°Ð´Ð°Ð»ÑŒÑ‰Ð¸ÐºÐ°)",DIA_Torrez_Belohnung_Scrolls);
+	Info_AddChoice(DIA_Torrez_Belohnung,"ÐšÐ¾Ð»ÑŒÑ†Ð¾ Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚Ð¸ (+5)",DIA_Torrez_Belohnung_Dex);
+	Info_AddChoice(DIA_Torrez_Belohnung,"ÐšÐ¾Ð»ÑŒÑ†Ð¾ ÑÐ¸Ð»Ñ‹ (+5)",DIA_Torrez_Belohnung_Str);
 };
 
 func void DIA_Torrez_Belohnung_Str()
 {
-	AI_Output(other,self,"DIA_Torrez_Belohnung_Str_15_00");	//ß âîçüìó Êîëüöî ñèëû.
-	AI_Output(self,other,"DIA_Torrez_Belohnung_Str_04_01");	//Òâîé âûáîð íå áûë íåîæèäàííûì. Âîò, âîçüìè êîëüöî.
-	b_printtrademsg1("Ïîëó÷åíî êîëüöî ñèëû.");
+	AI_Output(other,self,"DIA_Torrez_Belohnung_Str_15_00");	//Ð¯ Ð²Ð¾Ð·ÑŒÐ¼Ñƒ ÐšÐ¾Ð»ÑŒÑ†Ð¾ ÑÐ¸Ð»Ñ‹.
+	AI_Output(self,other,"DIA_Torrez_Belohnung_Str_04_01");	//Ð¢Ð²Ð¾Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€ Ð½Ðµ Ð±Ñ‹Ð» Ð½ÐµÐ¾Ð¶Ð¸Ð´Ð°Ð½Ð½Ñ‹Ð¼. Ð’Ð¾Ñ‚, Ð²Ð¾Ð·ÑŒÐ¼Ð¸ ÐºÐ¾Ð»ÑŒÑ†Ð¾.
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ ÐºÐ¾Ð»ÑŒÑ†Ð¾ ÑÐ¸Ð»Ñ‹.");
 	CreateInvItem(hero,Staerkering);
 	Info_ClearChoices(DIA_Torrez_Belohnung);
 };
 
 func void DIA_Torrez_Belohnung_Dex()
 {
-	AI_Output(other,self,"DIA_Torrez_Belohnung_Dex_15_00");	//ß âîçüìó Êîëüöî ëîâêîñòè.
-	AI_Output(self,other,"DIA_Torrez_Belohnung_Dex_04_01");	//Ëîâêîñòü ïîáåæäàåò ñèëó. ß îäîáðÿþ òâîé âûáîð.
-	b_printtrademsg1("Ïîëó÷åíî êîëüöî ëîâêîñòè.");
+	AI_Output(other,self,"DIA_Torrez_Belohnung_Dex_15_00");	//Ð¯ Ð²Ð¾Ð·ÑŒÐ¼Ñƒ ÐšÐ¾Ð»ÑŒÑ†Ð¾ Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚Ð¸.
+	AI_Output(self,other,"DIA_Torrez_Belohnung_Dex_04_01");	//Ð›Ð¾Ð²ÐºÐ¾ÑÑ‚ÑŒ Ð¿Ð¾Ð±ÐµÐ¶Ð´Ð°ÐµÑ‚ ÑÐ¸Ð»Ñƒ. Ð¯ Ð¾Ð´Ð¾Ð±Ñ€ÑÑŽ Ñ‚Ð²Ð¾Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€.
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ ÐºÐ¾Ð»ÑŒÑ†Ð¾ Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚Ð¸.");
 	CreateInvItem(hero,Ring_des_Geschicks);
 	Info_ClearChoices(DIA_Torrez_Belohnung);
 };
 
 func void DIA_Torrez_Belohnung_Scrolls()
 {
-	AI_Output(other,self,"DIA_Torrez_Belohnung_Scrolls_15_00");	//Äàé ìíå ìàãè÷åñêèå ñâèòêè.
-	AI_Output(self,other,"DIA_Torrez_Belohnung_Scrolls_04_01");	//Èñïîëüçóé èõ ñ óìîì è ïîìíè, ÷òî òû ìîæåøü ïðî÷èòàòü çàêëèíàíèå èç ñâèòêà òîëüêî îäèí ðàç!
-	b_printtrademsg1("Ïîëó÷åíû ñâèòêè: îãíåííûé øàð, ìîëíèÿ è ïðåâðàùåíèå â ïàäàëüùèêà.");
+	AI_Output(other,self,"DIA_Torrez_Belohnung_Scrolls_15_00");	//Ð”Ð°Ð¹ Ð¼Ð½Ðµ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ²Ð¸Ñ‚ÐºÐ¸.
+	AI_Output(self,other,"DIA_Torrez_Belohnung_Scrolls_04_01");	//Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹ Ð¸Ñ… Ñ ÑƒÐ¼Ð¾Ð¼ Ð¸ Ð¿Ð¾Ð¼Ð½Ð¸, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð¿Ñ€Ð¾Ñ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ð·Ð°ÐºÐ»Ð¸Ð½Ð°Ð½Ð¸Ðµ Ð¸Ð· ÑÐ²Ð¸Ñ‚ÐºÐ° Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¾Ð´Ð¸Ð½ Ñ€Ð°Ð·!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ñ‹ ÑÐ²Ð¸Ñ‚ÐºÐ¸: Ð¾Ð³Ð½ÐµÐ½Ð½Ñ‹Ð¹ ÑˆÐ°Ñ€, Ð¼Ð¾Ð»Ð½Ð¸Ñ Ð¸ Ð¿Ñ€ÐµÐ²Ñ€Ð°Ñ‰ÐµÐ½Ð¸Ðµ Ð² Ð¿Ð°Ð´Ð°Ð»ÑŒÑ‰Ð¸ÐºÐ°.");
 	CreateInvItem(other,ItArScrollFireball);
 	CreateInvItem(other,ItArScrollTrfScavenger);
 	CreateInvItem(other,ItArScrollChainLightning);
@@ -147,9 +147,9 @@ func void DIA_Torrez_Belohnung_Scrolls()
 
 func void DIA_Torrez_Belohnung_ManaMax()
 {
-	AI_Output(other,self,"DIA_Torrez_Belohnung_ManaMax_15_00");	//ß âîçüìó çåëüå!
-	AI_Output(self,other,"DIA_Torrez_Belohnung_ManaMax_04_01");	//Òâîé âûáîð ãîâîðèò î òâîåé ìóäðîñòè. Ýòî ñàìîå öåííîå èç òîãî, ÷òî òû ìîã âçÿòü ó ìåíÿ. Âûïåé ýòî çåëüå, è îíî óâåëè÷èò òâîþ ñèëó!
-	b_printtrademsg1("Ïîëó÷åíà ýññåíöèÿ ñèëû äóõà.");
+	AI_Output(other,self,"DIA_Torrez_Belohnung_ManaMax_15_00");	//Ð¯ Ð²Ð¾Ð·ÑŒÐ¼Ñƒ Ð·ÐµÐ»ÑŒÐµ!
+	AI_Output(self,other,"DIA_Torrez_Belohnung_ManaMax_04_01");	//Ð¢Ð²Ð¾Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€ Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ñ‚ Ð¾ Ñ‚Ð²Ð¾ÐµÐ¹ Ð¼ÑƒÐ´Ñ€Ð¾ÑÑ‚Ð¸. Ð­Ñ‚Ð¾ ÑÐ°Ð¼Ð¾Ðµ Ñ†ÐµÐ½Ð½Ð¾Ðµ Ð¸Ð· Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð¼Ð¾Ð³ Ð²Ð·ÑÑ‚ÑŒ Ñƒ Ð¼ÐµÐ½Ñ. Ð’Ñ‹Ð¿ÐµÐ¹ ÑÑ‚Ð¾ Ð·ÐµÐ»ÑŒÐµ, Ð¸ Ð¾Ð½Ð¾ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ Ñ‚Ð²Ð¾ÑŽ ÑÐ¸Ð»Ñƒ!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð° ÑÑÑÐµÐ½Ñ†Ð¸Ñ ÑÐ¸Ð»Ñ‹ Ð´ÑƒÑ…Ð°.");
 	CreateInvItem(hero,ItFo_Potion_Mana_Perma_01);
 	Info_ClearChoices(DIA_Torrez_Belohnung);
 };
@@ -162,7 +162,7 @@ instance DIA_Torrez_BriefTausch(C_Info)
 	condition = DIA_Torrez_BriefTausch_Condition;
 	information = DIA_Torrez_BriefTausch_Info;
 	permanent = 0;
-	description = "Ó ìåíÿ åñòü äëÿ òåáÿ ïèñüìî. Íî ñíà÷àëà ÿ õî÷ó ïîëó÷èòü íàãðàäó!";
+	description = "Ð£ Ð¼ÐµÐ½Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ñ‚ÐµÐ±Ñ Ð¿Ð¸ÑÑŒÐ¼Ð¾. ÐÐ¾ ÑÐ½Ð°Ñ‡Ð°Ð»Ð° Ñ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ!";
 };
 
 
@@ -181,31 +181,31 @@ func int DIA_Torrez_BriefTausch_Condition()
 func void DIA_Torrez_BriefTausch_Info()
 {
 	var C_Npc Corristo;
-	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_00");	//Ó ìåíÿ åñòü äëÿ òåáÿ ïèñüìî. Íî ñíà÷àëà ÿ õî÷ó ïîëó÷èòü çà íåãî íàãðàäó!
+	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_00");	//Ð£ Ð¼ÐµÐ½Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ñ‚ÐµÐ±Ñ Ð¿Ð¸ÑÑŒÐ¼Ð¾. ÐÐ¾ ÑÐ½Ð°Ñ‡Ð°Ð»Ð° Ñ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð·Ð° Ð½ÐµÐ³Ð¾ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ!
 	if(Saturas_BringFoci == FALSE)
 	{
-		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_01");	//Ïî÷åìó áû òåáå íå ïîãîâîðèòü ñ Ìèëüòåíîì?
-		AI_Output(other,self,"DIA_Torrez_BriefTausch_15_02");	//ß óæå ïîãîâîðèë ñ íèì.
+		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_01");	//ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ Ð±Ñ‹ Ñ‚ÐµÐ±Ðµ Ð½Ðµ Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ñ‚ÑŒ Ñ ÐœÐ¸Ð»ÑŒÑ‚ÐµÐ½Ð¾Ð¼?
+		AI_Output(other,self,"DIA_Torrez_BriefTausch_15_02");	//Ð¯ ÑƒÐ¶Ðµ Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ñ Ð½Ð¸Ð¼.
 	};
-	AI_Output(self,other,"DIA_Torrez_BriefTausch_04_03");	//Ïîíÿòíî. Ó ìåíÿ åñòü äëÿ òåáÿ íàãðàäà. À òåïåðü ïîêàæè ìíå ïèñüìî!
-	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_04");	//Âîò îíî.
+	AI_Output(self,other,"DIA_Torrez_BriefTausch_04_03");	//ÐŸÐ¾Ð½ÑÑ‚Ð½Ð¾. Ð£ Ð¼ÐµÐ½Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ñ‚ÐµÐ±Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð°. Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¿Ð¾ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ Ð¿Ð¸ÑÑŒÐ¼Ð¾!
+	AI_Output(other,self,"DIA_Torrez_BriefTausch_15_04");	//Ð’Ð¾Ñ‚ Ð¾Ð½Ð¾.
 	if(Npc_HasItems(other,ItWr_Fire_Letter_01) >= 1)
 	{
-		b_printtrademsg1("Îòäàíî çàïå÷àòàííîå ïèñüìî.");
-		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_05");	//Âîò òâîÿ íàãðàäà - Êîëüöî ñèëû. Ðåäêèé àðòåôàêò, ê òîìó æå î÷åíü ïîëåçíûé.
-		b_printtrademsg2("Ïîëó÷åíî êîëüöî ñèëû.");
-		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_06");	//À òåïåðü èäè!
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ð·Ð°Ð¿ÐµÑ‡Ð°Ñ‚Ð°Ð½Ð½Ð¾Ðµ Ð¿Ð¸ÑÑŒÐ¼Ð¾.");
+		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_05");	//Ð’Ð¾Ñ‚ Ñ‚Ð²Ð¾Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð° - ÐšÐ¾Ð»ÑŒÑ†Ð¾ ÑÐ¸Ð»Ñ‹. Ð ÐµÐ´ÐºÐ¸Ð¹ Ð°Ñ€Ñ‚ÐµÑ„Ð°ÐºÑ‚, Ðº Ñ‚Ð¾Ð¼Ñƒ Ð¶Ðµ Ð¾Ñ‡ÐµÐ½ÑŒ Ð¿Ð¾Ð»ÐµÐ·Ð½Ñ‹Ð¹.
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ ÐºÐ¾Ð»ÑŒÑ†Ð¾ ÑÐ¸Ð»Ñ‹.");
+		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_06");	//Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¸Ð´Ð¸!
 		Npc_RemoveInvItems(hero,ItWr_Fire_Letter_01,1);
 		CreateInvItems(hero,Staerkering,1);
 		B_GiveXP(XP_XardasLetter);
 	}
 	else if(Npc_HasItems(other,ItWr_Fire_Letter_02) >= 1)
 	{
-		b_printtrademsg1("Îòäàíî âñêðûòîå ïèñüìî.");
-		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_07");	//Ïå÷àòü ñëîìàíà.
-		AI_Output(other,self,"DIA_Torrez_BriefTausch_15_08");	//Íó, ýòî áûëà ïðîñòàÿ ñëó÷àéíîñòü.
-		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_09");	//×òî æ, âîò òâîÿ íàãðàäà - öåëåáíîå çåëüå. Ýòî òîæå íåïëîõî. Îáû÷íî ãîíåö, ïðèíåñøèé ïèñüìî áåç ïå÷àòè, íå ïîëó÷àåò íè÷åãî.
-		b_printtrademsg2("Ïîëó÷åíî çåëüå èñöåëåíèÿ.");
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ð²ÑÐºÑ€Ñ‹Ñ‚Ð¾Ðµ Ð¿Ð¸ÑÑŒÐ¼Ð¾.");
+		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_07");	//ÐŸÐµÑ‡Ð°Ñ‚ÑŒ ÑÐ»Ð¾Ð¼Ð°Ð½Ð°.
+		AI_Output(other,self,"DIA_Torrez_BriefTausch_15_08");	//ÐÑƒ, ÑÑ‚Ð¾ Ð±Ñ‹Ð»Ð° Ð¿Ñ€Ð¾ÑÑ‚Ð°Ñ ÑÐ»ÑƒÑ‡Ð°Ð¹Ð½Ð¾ÑÑ‚ÑŒ.
+		AI_Output(self,other,"DIA_Torrez_BriefTausch_04_09");	//Ð§Ñ‚Ð¾ Ð¶, Ð²Ð¾Ñ‚ Ñ‚Ð²Ð¾Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð° - Ñ†ÐµÐ»ÐµÐ±Ð½Ð¾Ðµ Ð·ÐµÐ»ÑŒÐµ. Ð­Ñ‚Ð¾ Ñ‚Ð¾Ð¶Ðµ Ð½ÐµÐ¿Ð»Ð¾Ñ…Ð¾. ÐžÐ±Ñ‹Ñ‡Ð½Ð¾ Ð³Ð¾Ð½ÐµÑ†, Ð¿Ñ€Ð¸Ð½ÐµÑÑˆÐ¸Ð¹ Ð¿Ð¸ÑÑŒÐ¼Ð¾ Ð±ÐµÐ· Ð¿ÐµÑ‡Ð°Ñ‚Ð¸, Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÑ‚ Ð½Ð¸Ñ‡ÐµÐ³Ð¾.
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ Ð·ÐµÐ»ÑŒÐµ Ð¸ÑÑ†ÐµÐ»ÐµÐ½Ð¸Ñ.");
 		Npc_RemoveInvItems(hero,ItWr_Fire_Letter_02,1);
 		CreateInvItems(hero,ItFo_Potion_Health_03,1);
 		B_GiveXP(XP_XardasLetterOPEN);
@@ -214,7 +214,7 @@ func void DIA_Torrez_BriefTausch_Info()
 	CreateInvItems(Corristo,ItWr_Fire_Letter_02,1);
 	if(PYROCAR_MESSENGER == LOG_RUNNING)
 	{
-		B_LogEntry(KDFLETTER,"ß äîñòàâèë ïèñüìî ìàãàì è ïîëó÷èë íàãðàäó ó Òîððåçà.");
+		B_LogEntry(KDFLETTER,"Ð¯ Ð´Ð¾ÑÑ‚Ð°Ð²Ð¸Ð» Ð¿Ð¸ÑÑŒÐ¼Ð¾ Ð¼Ð°Ð³Ð°Ð¼ Ð¸ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð» Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ Ñƒ Ð¢Ð¾Ñ€Ñ€ÐµÐ·Ð°.");
 		Log_SetTopicStatus(KDFLETTER,LOG_SUCCESS);
 		PYROCAR_MESSENGER = LOG_SUCCESS;
 	};
@@ -234,7 +234,7 @@ instance DIA_Torrez_PERM(C_Info)
 	condition = DIA_Torrez_PERM_Condition;
 	information = DIA_Torrez_PERM_Info;
 	permanent = 1;
-	description = "Êàê èäåò èçó÷åíèå ìàãèè?";
+	description = "ÐšÐ°Ðº Ð¸Ð´ÐµÑ‚ Ð¸Ð·ÑƒÑ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°Ð³Ð¸Ð¸?";
 };
 
 
@@ -248,8 +248,8 @@ func int DIA_Torrez_PERM_Condition()
 
 func void DIA_Torrez_PERM_Info()
 {
-	AI_Output(other,self,"DIA_Torrez_PERM_15_00");	//Êàê èäåò èçó÷åíèå ìàãèè?
-	AI_Output(self,other,"DIA_Torrez_PERM_04_01");	//Òåáÿ íàøè äåëà íå êàñàþòñÿ!
+	AI_Output(other,self,"DIA_Torrez_PERM_15_00");	//ÐšÐ°Ðº Ð¸Ð´ÐµÑ‚ Ð¸Ð·ÑƒÑ‡ÐµÐ½Ð¸Ðµ Ð¼Ð°Ð³Ð¸Ð¸?
+	AI_Output(self,other,"DIA_Torrez_PERM_04_01");	//Ð¢ÐµÐ±Ñ Ð½Ð°ÑˆÐ¸ Ð´ÐµÐ»Ð° Ð½Ðµ ÐºÐ°ÑÐ°ÑŽÑ‚ÑÑ!
 	AI_StopProcessInfos(self);
 };
 
@@ -274,9 +274,9 @@ func int KDF_405_Torrez_BOOK_Condition()
 
 func void KDF_405_Torrez_BOOK_Info()
 {
-	AI_Output(self,other,"KDF_405_Torrez_BOOK_Info_04_01");	//Êàæäûé Êðóã ìàãèè îïèñàí â ñïåöèàëüíîé êíèãå. ×èòàé èõ è òû ïðèîáðåòåøü çíàíèå. À â çíàíèè - ñèëà!
-	AI_Output(self,other,"KDF_405_Torrez_BOOK_Info_04_02");	//Âîò, âîçüìè êíèãó Ïåðâîãî Êðóãà. Îíà íàó÷èò òåáÿ ïîíèìàòü Îãîíü.
-	b_printtrademsg1("Ïîëó÷åíà êíèãà 'Ïåðâûé êðóã ìàãèè'.");
+	AI_Output(self,other,"KDF_405_Torrez_BOOK_Info_04_01");	//ÐšÐ°Ð¶Ð´Ñ‹Ð¹ ÐšÑ€ÑƒÐ³ Ð¼Ð°Ð³Ð¸Ð¸ Ð¾Ð¿Ð¸ÑÐ°Ð½ Ð² ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾Ð¹ ÐºÐ½Ð¸Ð³Ðµ. Ð§Ð¸Ñ‚Ð°Ð¹ Ð¸Ñ… Ð¸ Ñ‚Ñ‹ Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑ‚ÐµÑˆÑŒ Ð·Ð½Ð°Ð½Ð¸Ðµ. Ð Ð² Ð·Ð½Ð°Ð½Ð¸Ð¸ - ÑÐ¸Ð»Ð°!
+	AI_Output(self,other,"KDF_405_Torrez_BOOK_Info_04_02");	//Ð’Ð¾Ñ‚, Ð²Ð¾Ð·ÑŒÐ¼Ð¸ ÐºÐ½Ð¸Ð³Ñƒ ÐŸÐµÑ€Ð²Ð¾Ð³Ð¾ ÐšÑ€ÑƒÐ³Ð°. ÐžÐ½Ð° Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ Ñ‚ÐµÐ±Ñ Ð¿Ð¾Ð½Ð¸Ð¼Ð°Ñ‚ÑŒ ÐžÐ³Ð¾Ð½ÑŒ.
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð° ÐºÐ½Ð¸Ð³Ð° 'ÐŸÐµÑ€Ð²Ñ‹Ð¹ ÐºÑ€ÑƒÐ³ Ð¼Ð°Ð³Ð¸Ð¸'.");
 	B_GiveInvItems(self,hero,ItWr_Book_Circle_01,1);
 	if(Npc_HasItems(other,alchemybook))
 	{
@@ -294,7 +294,7 @@ instance KDF_405_Torrez_SELLBOOKS(C_Info)
 	information = KDF_405_Torrez_SELLBOOKS_Info;
 	important = 0;
 	permanent = 1;
-	description = "ß õî÷ó ïðèîáðåñòè ìàãè÷åñêèå ñâèòêè.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑÑ‚Ð¸ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ²Ð¸Ñ‚ÐºÐ¸.";
 	trade = 1;
 };
 
@@ -309,7 +309,7 @@ func int KDF_405_Torrez_SELLBOOKS_Condition()
 
 func void KDF_405_Torrez_SELLBOOKS_Info()
 {
-	AI_Output(other,self,"KDF_405_Torrez_SELLBOOKS_Info_15_01");	//ß õî÷ó ïðèîáðåñòè ìàãè÷åñêèå ñâèòêè.
+	AI_Output(other,self,"KDF_405_Torrez_SELLBOOKS_Info_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ Ð¿Ñ€Ð¸Ð¾Ð±Ñ€ÐµÑÑ‚Ð¸ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ²Ð¸Ñ‚ÐºÐ¸.
 };
 
 
@@ -320,7 +320,7 @@ instance KDF_405_Torrez_GREET(C_Info)
 	information = KDF_405_Torrez_GREET_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ïðèâåòñòâóþ òåáÿ, ìàã!";
+	description = "ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!";
 };
 
 
@@ -331,12 +331,12 @@ func int KDF_405_Torrez_GREET_Condition()
 
 func void KDF_405_Torrez_GREET_Info()
 {
-	AI_Output(other,self,"KDF_405_Torrez_GREET_Info_15_01");	//Ïðèâåòñòâóþ òåáÿ, ìàã!
-	AI_Output(self,other,"KDF_405_Torrez_GREET_Info_04_02");	//Äà ïðåáóäåò ñ òîáîé Èííîñ! ß äåëþñü ñâîèìè çíàíèÿìè ìèðà ìàãèè è ìîãó ó÷èòü ìàãîâ óâåëè÷èâàòü èõ ìàãè÷åñêóþ ñèëó!
+	AI_Output(other,self,"KDF_405_Torrez_GREET_Info_15_01");	//ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!
+	AI_Output(self,other,"KDF_405_Torrez_GREET_Info_04_02");	//Ð”Ð° Ð¿Ñ€ÐµÐ±ÑƒÐ´ÐµÑ‚ Ñ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð˜Ð½Ð½Ð¾Ñ! Ð¯ Ð´ÐµÐ»ÑŽÑÑŒ ÑÐ²Ð¾Ð¸Ð¼Ð¸ Ð·Ð½Ð°Ð½Ð¸ÑÐ¼Ð¸ Ð¼Ð¸Ñ€Ð° Ð¼Ð°Ð³Ð¸Ð¸ Ð¸ Ð¼Ð¾Ð³Ñƒ ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð² ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ð²Ð°Ñ‚ÑŒ Ð¸Ñ… Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ!
 	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
-	B_LogEntry(GE_TraderOC,"Òîððåç ïðîäàåò ìàãè÷åñêèå ñâèòêè è ðóíû. Îí íàõîäèòñÿ âî äâîðå çàìêà.");
+	B_LogEntry(GE_TraderOC,"Ð¢Ð¾Ñ€Ñ€ÐµÐ· Ð¿Ñ€Ð¾Ð´Ð°ÐµÑ‚ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ ÑÐ²Ð¸Ñ‚ÐºÐ¸ Ð¸ Ñ€ÑƒÐ½Ñ‹. ÐžÐ½ Ð½Ð°Ñ…Ð¾Ð´Ð¸Ñ‚ÑÑ Ð²Ð¾ Ð´Ð²Ð¾Ñ€Ðµ Ð·Ð°Ð¼ÐºÐ°.");
 	Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
-	B_LogEntry(GE_TeacherOC,"Òîððåç ìîæåò ïîìî÷ü ìíå óâåëè÷èòü ìîþ ìàãè÷åñêóþ ñèëó. Îí âñå âðåìÿ ïðîâîäèò âî äâîðå çàìêà.");
+	B_LogEntry(GE_TeacherOC,"Ð¢Ð¾Ñ€Ñ€ÐµÐ· Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ð¼Ð½Ðµ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ Ð¼Ð¾ÑŽ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ. ÐžÐ½ Ð²ÑÐµ Ð²Ñ€ÐµÐ¼Ñ Ð¿Ñ€Ð¾Ð²Ð¾Ð´Ð¸Ñ‚ Ð²Ð¾ Ð´Ð²Ð¾Ñ€Ðµ Ð·Ð°Ð¼ÐºÐ°.");
 };
 
 
@@ -347,7 +347,7 @@ instance KDF_405_Torrez_MANA(C_Info)
 	information = KDF_405_Torrez_MANA_Info;
 	important = 0;
 	permanent = 1;
-	description = "Ìíå íóæíî óâåëè÷èòü ìàãè÷åñêóþ ñèëó.";
+	description = "ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ.";
 };
 
 
@@ -361,8 +361,8 @@ func int KDF_405_Torrez_MANA_Condition()
 
 func void KDF_405_Torrez_MANA_Info()
 {
-	AI_Output(other,self,"KDF_405_Torrez_MANA_Info_15_01");	//Ìíå íóæíî óâåëè÷èòü ìàãè÷åñêóþ ñèëó.
-	AI_Output(self,other,"KDF_405_Torrez_MANA_Info_04_02");	//ß ìîãó ïîìî÷ü òåáå. Êàê òû áóäåøü åå èñïîëüçîâàòü, çàâèñèò òîëüêî îò òåáÿ.
+	AI_Output(other,self,"KDF_405_Torrez_MANA_Info_15_01");	//ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÑƒÑŽ ÑÐ¸Ð»Ñƒ.
+	AI_Output(self,other,"KDF_405_Torrez_MANA_Info_04_02");	//Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ñ‚ÐµÐ±Ðµ. ÐšÐ°Ðº Ñ‚Ñ‹ Ð±ÑƒÐ´ÐµÑˆÑŒ ÐµÐµ Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÑŒ, Ð·Ð°Ð²Ð¸ÑÐ¸Ñ‚ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¾Ñ‚ Ñ‚ÐµÐ±Ñ.
 	b_torrezlearn();
 };
 
@@ -381,15 +381,15 @@ func void KDF_405_Torrez_MANA_MAN_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_MANA_MAX] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,1);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02");	//×òî æ, òîãäà íè÷åãî íå ïîëó÷èòñÿ. Î÷åíü æàëü, íî ÿ íè÷åãî íå ìîãó ñäåëàòü.
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02");	//Ð§Ñ‚Ð¾ Ð¶, Ñ‚Ð¾Ð³Ð´Ð° Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑÑ. ÐžÑ‡ÐµÐ½ÑŒ Ð¶Ð°Ð»ÑŒ, Ð½Ð¾ Ñ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð¼Ð¾Ð³Ñƒ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ.
 	};
 	b_torrezlearn();
 };
@@ -404,15 +404,15 @@ func void KDF_405_Torrez_MANA_MAN_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_MANA_MAX] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_MANA_MAX,5);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02");	//×òî æ, òîãäà íè÷åãî íå ïîëó÷èòñÿ. Î÷åíü æàëü, íî ÿ íè÷åãî íå ìîãó ñäåëàòü.
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"B_Gravo_HelpAttitude_NoOre_04_02");	//Ð§Ñ‚Ð¾ Ð¶, Ñ‚Ð¾Ð³Ð´Ð° Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑÑ. ÐžÑ‡ÐµÐ½ÑŒ Ð¶Ð°Ð»ÑŒ, Ð½Ð¾ Ñ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ Ð¼Ð¾Ð³Ñƒ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ.
 	};
 	b_torrezlearn();
 };
@@ -425,7 +425,7 @@ instance KDF_405_Torrez_WANNABEMAGE(C_Info)
 	information = KDF_405_Torrez_WANNABEMAGE_Info;
 	important = 0;
 	permanent = 0;
-	description = "×òî íóæíî ñäåëàòü, ÷òîáû ñòàòü ìàãîì?";
+	description = "Ð§Ñ‚Ð¾ Ð½ÑƒÐ¶Ð½Ð¾ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ ÑÑ‚Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð¼?";
 };
 
 
@@ -439,7 +439,7 @@ func int KDF_405_Torrez_WANNABEMAGE_Condition()
 
 func void KDF_405_Torrez_WANNABEMAGE_Info()
 {
-	AI_Output(other,self,"KDF_405_Torrez_WANNABEMAGE_Info_15_01");	//×òî íóæíî ñäåëàòü, ÷òîáû ñòàòü ìàãîì?
-	AI_Output(self,other,"KDF_405_Torrez_WANNABEMAGE_Info_04_02");	//Ïîãîâîðè îá ýòîì ñ Ìàñòåðîì Êîððèñòî, åñëè ó íåãî íàéäåòñÿ äëÿ òåáÿ ñâîáîäíàÿ ìèíóòà.
+	AI_Output(other,self,"KDF_405_Torrez_WANNABEMAGE_Info_15_01");	//Ð§Ñ‚Ð¾ Ð½ÑƒÐ¶Ð½Ð¾ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ ÑÑ‚Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð¼?
+	AI_Output(self,other,"KDF_405_Torrez_WANNABEMAGE_Info_04_02");	//ÐŸÐ¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸ Ð¾Ð± ÑÑ‚Ð¾Ð¼ Ñ ÐœÐ°ÑÑ‚ÐµÑ€Ð¾Ð¼ ÐšÐ¾Ñ€Ñ€Ð¸ÑÑ‚Ð¾, ÐµÑÐ»Ð¸ Ñƒ Ð½ÐµÐ³Ð¾ Ð½Ð°Ð¹Ð´ÐµÑ‚ÑÑ Ð´Ð»Ñ Ñ‚ÐµÐ±Ñ ÑÐ²Ð¾Ð±Ð¾Ð´Ð½Ð°Ñ Ð¼Ð¸Ð½ÑƒÑ‚Ð°.
 };
 

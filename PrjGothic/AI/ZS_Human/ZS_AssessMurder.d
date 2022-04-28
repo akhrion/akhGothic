@@ -30,14 +30,14 @@ func void ZS_AssessMurder()
 		B_AssessAndMemorize(NEWS_MURDER,NEWS_SOURCE_WITNESS,self,other,victim);
 		if(C_ChargeWasAttacked(self,victim,other))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein Schützling wurde gemordet!");
+			PrintDebugNpc(PD_ZS_Check,"...NSC ist Wache und ein SchÑŒtzling wurde gemordet!");
 			B_DrawWeapon(self,other);
 			AI_StartState(self,ZS_ProclaimAndPunish,0,"");
 			return;
 		};
 		if(Npc_GetAttitude(self,other) == ATT_HOSTILE)
 		{
-			PrintDebugNpc(PD_ZS_Check,"...hostile zum Mörder!");
+			PrintDebugNpc(PD_ZS_Check,"...hostile zum MÑ†rder!");
 			B_Say(self,other,"$HEKILLEDHIM");
 			B_AssessEnemy();
 		}

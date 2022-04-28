@@ -26,7 +26,7 @@ instance Info_Mine_Grd_13_Mine(C_Info)
 	condition = Info_Mine_Grd_13_Mine_Condition;
 	information = Info_Mine_Grd_13_Mine_Info;
 	permanent = 1;
-	description = "Что происходит на шахте?";
+	description = "Р§С‚Рѕ РїСЂРѕРёСЃС…РѕРґРёС‚ РЅР° С€Р°С…С‚Рµ?";
 };
 
 
@@ -40,8 +40,8 @@ func int Info_Mine_Grd_13_Mine_Condition()
 
 func void Info_Mine_Grd_13_Mine_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_13_Mine_15_00");	//Что происходит на шахте?
-	AI_Output(self,other,"Info_Mine_Grd_13_Mine_13_01");	//Шахта - сердце Старого лагеря. Без нее у нас не будет руды, а без руды не будет и товаров. Понятно?
+	AI_Output(other,self,"Info_Mine_Grd_13_Mine_15_00");	//Р§С‚Рѕ РїСЂРѕРёСЃС…РѕРґРёС‚ РЅР° С€Р°С…С‚Рµ?
+	AI_Output(self,other,"Info_Mine_Grd_13_Mine_13_01");	//РЁР°С…С‚Р° - СЃРµСЂРґС†Рµ РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ. Р‘РµР· РЅРµРµ Сѓ РЅР°СЃ РЅРµ Р±СѓРґРµС‚ СЂСѓРґС‹, Р° Р±РµР· СЂСѓРґС‹ РЅРµ Р±СѓРґРµС‚ Рё С‚РѕРІР°СЂРѕРІ. РџРѕРЅСЏС‚РЅРѕ?
 };
 
 
@@ -51,7 +51,7 @@ instance Info_Mine_Grd_13_WichtigePersonen(C_Info)
 	condition = Info_Mine_Grd_13_WichtigePersonen_Condition;
 	information = Info_Mine_Grd_13_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто здесь командует?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РєРѕРјР°РЅРґСѓРµС‚?";
 };
 
 
@@ -65,8 +65,8 @@ func int Info_Mine_Grd_13_WichtigePersonen_Condition()
 
 func void Info_Mine_Grd_13_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_13_WichtigePersonen_15_00");	//Кто здесь командует?
-	AI_Output(self,other,"Info_Mine_Grd_13_WichtigePersonen_13_01");	//Главный здесь Асгхан. Но к нему лучше не подходить. Тебе стоит сначала поговорить с Яном.
+	AI_Output(other,self,"Info_Mine_Grd_13_WichtigePersonen_15_00");	//РљС‚Рѕ Р·РґРµСЃСЊ РєРѕРјР°РЅРґСѓРµС‚?
+	AI_Output(self,other,"Info_Mine_Grd_13_WichtigePersonen_13_01");	//Р“Р»Р°РІРЅС‹Р№ Р·РґРµСЃСЊ РђСЃРіС…Р°РЅ. РќРѕ Рє РЅРµРјСѓ Р»СѓС‡С€Рµ РЅРµ РїРѕРґС…РѕРґРёС‚СЊ. РўРµР±Рµ СЃС‚РѕРёС‚ СЃРЅР°С‡Р°Р»Р° РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РЇРЅРѕРј.
 };
 
 
@@ -76,7 +76,7 @@ instance Info_Mine_Grd_13_DasLager(C_Info)
 	condition = Info_Mine_Grd_13_DasLager_Condition;
 	information = Info_Mine_Grd_13_DasLager_Info;
 	permanent = 1;
-	description = "Расскажи мне о ползунах.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ РїРѕР»Р·СѓРЅР°С….";
 };
 
 
@@ -90,8 +90,8 @@ func int Info_Mine_Grd_13_DasLager_Condition()
 
 func void Info_Mine_Grd_13_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_13_DasLager_15_00");	//Расскажи мне о ползунах.
-	AI_Output(self,other,"Info_Mine_Grd_13_DasLager_13_01");	//Здесь на ползунов охотятся члены Братства. За это они отдают Старому лагерю часть своего урожая болотника.
+	AI_Output(other,self,"Info_Mine_Grd_13_DasLager_15_00");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ РїРѕР»Р·СѓРЅР°С….
+	AI_Output(self,other,"Info_Mine_Grd_13_DasLager_13_01");	//Р—РґРµСЃСЊ РЅР° РїРѕР»Р·СѓРЅРѕРІ РѕС…РѕС‚СЏС‚СЃСЏ С‡Р»РµРЅС‹ Р‘СЂР°С‚СЃС‚РІР°. Р—Р° СЌС‚Рѕ РѕРЅРё РѕС‚РґР°СЋС‚ РЎС‚Р°СЂРѕРјСѓ Р»Р°РіРµСЂСЋ С‡Р°СЃС‚СЊ СЃРІРѕРµРіРѕ СѓСЂРѕР¶Р°СЏ Р±РѕР»РѕС‚РЅРёРєР°.
 };
 
 
@@ -101,7 +101,7 @@ instance Info_Mine_Grd_13_DieLage(C_Info)
 	condition = Info_Mine_Grd_13_DieLage_Condition;
 	information = Info_Mine_Grd_13_DieLage_Info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -115,8 +115,8 @@ func int Info_Mine_Grd_13_DieLage_Condition()
 
 func void Info_Mine_Grd_13_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Mine_Grd_13_DieLage_15_00");	//Как дела?
-	AI_Output(self,other,"Info_Mine_Grd_13_DieLage_13_01");	//Я так давно не участвовал ни в одной битве!
+	AI_Output(other,self,"Info_Mine_Grd_13_DieLage_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Info_Mine_Grd_13_DieLage_13_01");	//РЇ С‚Р°Рє РґР°РІРЅРѕ РЅРµ СѓС‡Р°СЃС‚РІРѕРІР°Р» РЅРё РІ РѕРґРЅРѕР№ Р±РёС‚РІРµ!
 };
 
 func void B_AssignAmbientInfos_Mine_grd_13(var C_Npc slf)

@@ -37,8 +37,7 @@ func void B_ObserveIntruder()
 		)
 		{
 			PrintDebugNpc(PD_ZS_Check,"...SC ist Mensch und nicht FRIENDLY!");
-			AI_StartState(self,ZS_ObserveIntruder,1,"");
-			return;
+//			AI_StartState(self,ZS_ObserveIntruder,1,"");
 		};
 	}
 	else

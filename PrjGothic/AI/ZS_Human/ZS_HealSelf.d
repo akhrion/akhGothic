@@ -157,7 +157,7 @@ func int ZS_HealSelf_Loop()
 			else if(self.aivar[AIV_ITEMSTATUS] == 10)
 			{
 				Npc_RemoveInvItem(self,ItFoCheese);
-				Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_Käse);
+				Npc_ChangeAttribute(self,ATR_HITPOINTS,HP_KÐ´se);
 			}
 			else if(self.aivar[AIV_ITEMSTATUS] == 11)
 			{

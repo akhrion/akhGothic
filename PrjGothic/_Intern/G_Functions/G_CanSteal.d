@@ -14,7 +14,7 @@ func int G_CanSteal()
 	}
 	else
 	{
-		PrintScreen("Я не умею обшаривать чужие карманы.",-1,10,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РЇ РЅРµ СѓРјРµСЋ РѕР±С€Р°СЂРёРІР°С‚СЊ С‡СѓР¶РёРµ РєР°СЂРјР°РЅС‹.",-1,10,"FONT_OLD_10_WHITE.TGA",3);
 	};
 	return FALSE;
 };

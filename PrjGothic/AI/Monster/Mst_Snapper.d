@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Snapper(C_Npc)
 {
-	name[0] = "�����";
+	name[0] = "Глорх";
 	guild = GIL_SNAPPER;
 	aivar[AIV_IMPORTANT] = ID_SNAPPER;
 	level = 22;
@@ -44,4 +44,10 @@ instance Snapper(Mst_Default_Snapper)
 	Set_Snapper_Visuals();
 	Npc_SetToFistMode(self);
 };
-
+instance Snapper_Egg(Egg)
+{
+	name[0] = "Яйцо снеппера";
+	guild = GIL_SNAPPER;
+	spawnDelay = 600;
+	start_aistate = B_MM_Respawn;
+};

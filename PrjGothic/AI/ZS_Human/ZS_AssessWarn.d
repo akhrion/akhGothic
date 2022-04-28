@@ -39,7 +39,7 @@ func void ZS_AssessWarn()
 	)
 	{
 		Print("111111111111111");
-		PrintDebugNpc(PD_ZS_Check,"...verlassener Portalraum gehört Schützling-Gilde!");
+		PrintDebugNpc(PD_ZS_Check,"...verlassener Portalraum gehÑ†rt SchÑŒtzling-Gilde!");
 		Npc_PercEnable(self,PERC_ASSESSENTERROOM,B_ClearRoomEnterRoom);
 		B_WhirlAround(self,other);
 		AI_PointAtNpc(self,other);
@@ -57,7 +57,7 @@ func void ZS_AssessWarn()
 	)
 	{
 		Print("22222222222222222");
-		PrintDebugNpc(PD_ZS_Check,"...Warnung von Schützling, dessen Raum betreten/verlassen wurde!");
+		PrintDebugNpc(PD_ZS_Check,"...Warnung von SchÑŒtzling, dessen Raum betreten/verlassen wurde!");
 		if(other.aivar[AIV_HASBEENDEFEATEDINPORTALROOM] == FALSE)
 		{
 			B_WhirlAround(self,hero);
@@ -135,7 +135,7 @@ func void ZS_AssessWarn_End()
 		}
 		else if(Npc_HasNews(self,NEWS_MURDER,other,victim) && (Npc_GetGuildAttitude(self,victim) == ATT_FRIENDLY))
 		{
-			PrintDebugNpc(PD_ZS_Check,"ZS_AssessWarn End // Free Los //Not HOSTILE Kumpel getötet");
+			PrintDebugNpc(PD_ZS_Check,"ZS_AssessWarn End // Free Los //Not HOSTILE Kumpel getÑ†tet");
 			Npc_GetTarget(self);
 			AI_StartState(self,ZS_AssessEnemy,0,"");
 		}
@@ -149,7 +149,7 @@ func void ZS_AssessWarn_End()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"ZS_AssessWarn  End// Can´T See");
+		PrintDebugNpc(PD_ZS_Check,"ZS_AssessWarn  End// CanÒ‘T See");
 		return;
 	};
 };

@@ -19,7 +19,7 @@ func int ZS_Orc_Attack_Loop()
 {
 	if(!Hlp_IsValidNpc(other))
 	{
-		PrintDebugNpc(PD_ORC_CHECK,"Orc_Attack_Loop: ...Ziel ungültig!");
+		PrintDebugNpc(PD_ORC_CHECK,"Orc_Attack_Loop: ...Ziel ungÑŒltig!");
 		return LOOP_END;
 	};
 	if(C_NpcIsDown(other))
@@ -32,7 +32,7 @@ func int ZS_Orc_Attack_Loop()
 		PrintDebugNpc(PD_ORC_LOOP,"...Ziel vorhanden!");
 		if(C_BodyStateContains(other,BS_RUN))
 		{
-			PrintDebugNpc(PD_ORC_LOOP,"...Ziel läuft!");
+			PrintDebugNpc(PD_ORC_LOOP,"...Ziel lÐ´uft!");
 			if(Npc_GetStateTime(self) > 10)
 			{
 				PrintDebugNpc(PD_ORC_CHECK,"...Ziel schon zu lange verfolgt!");

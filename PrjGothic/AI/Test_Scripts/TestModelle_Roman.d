@@ -1,7 +1,7 @@
 
 instance ItWrLevelMap(C_Item)
 {
-	name = "Карта тестового уровня";
+	name = "РљР°СЂС‚Р° С‚РµСЃС‚РѕРІРѕРіРѕ СѓСЂРѕРІРЅСЏ";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 15;
@@ -20,14 +20,14 @@ func void UseLevelMap()
 	Doc_SetPage(nDocID,0,"Map_X.TGA",1);
 	Doc_SetFont(nDocID,-1,"FONT_OLD_20_WHITE.TGA");
 	Doc_SetMargins(nDocID,-1,10,10,10,10,1);
-	Doc_PrintLine(nDocID,-1,"Карта уровня");
+	Doc_PrintLine(nDocID,-1,"РљР°СЂС‚Р° СѓСЂРѕРІРЅСЏ");
 	Doc_Show(nDocID);
 };
 
 
 instance ItWrBookOfTales(C_Item)
 {
-	name = "Книга сказаний";
+	name = "РљРЅРёРіР° СЃРєР°Р·Р°РЅРёР№";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 15;
@@ -47,17 +47,17 @@ func void UseBookOfTales()
 	Doc_SetPage(nDocID,1,"BOOK_RIGHT.TGA",0);
 	Doc_SetFont(nDocID,-1,"FONT_OLD_10_WHITE.TGA");
 	Doc_SetMargins(nDocID,-1,10,10,10,10,1);
-	Doc_PrintLine(nDocID,-1,"ЗАГОЛОВОК");
+	Doc_PrintLine(nDocID,-1,"Р—РђР“РћР›РћР’РћРљ");
 	Doc_PrintLine(nDocID,-1,"");
-	Doc_PrintLines(nDocID,0,"Одна строка слева");
-	Doc_PrintLines(nDocID,1,"Одна строка справа");
+	Doc_PrintLines(nDocID,0,"РћРґРЅР° СЃС‚СЂРѕРєР° СЃР»РµРІР°");
+	Doc_PrintLines(nDocID,1,"РћРґРЅР° СЃС‚СЂРѕРєР° СЃРїСЂР°РІР°");
 	Doc_Show(nDocID);
 };
 
 
 instance ItMw1hSwordBurning(C_Item)
 {
-	name = "Легендарный короткий меч прижигания";
+	name = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ РєРѕСЂРѕС‚РєРёР№ РјРµС‡ РїСЂРёР¶РёРіР°РЅРёСЏ";
 	visual = "ItMw1hSword01.3DS";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
@@ -68,16 +68,16 @@ instance ItMw1hSwordBurning(C_Item)
 	damage[DAM_INDEX_EDGE] = 1;
 	damage[DAM_INDEX_FIRE] = 120;
 	damage[DAM_INDEX_MAGIC] = 70;
-	description = "Легендарный короткий меч прижигания";
-	text[1] = "Это отличный меч, убивающий всех,";
-	text[2] = "кто пытается убить тебя.";
+	description = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ РєРѕСЂРѕС‚РєРёР№ РјРµС‡ РїСЂРёР¶РёРіР°РЅРёСЏ";
+	text[1] = "Р­С‚Рѕ РѕС‚Р»РёС‡РЅС‹Р№ РјРµС‡, СѓР±РёРІР°СЋС‰РёР№ РІСЃРµС…,";
+	text[2] = "РєС‚Рѕ РїС‹С‚Р°РµС‚СЃСЏ СѓР±РёС‚СЊ С‚РµР±СЏ.";
 	text[5] = NAME_Damage;
 	count[5] = damageTotal;
 };
 
 instance ItMw2hSwordBurning(C_Item)
 {
-	name = "Легендарный тяжелый меч прижигания";
+	name = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ С‚СЏР¶РµР»С‹Р№ РјРµС‡ РїСЂРёР¶РёРіР°РЅРёСЏ";
 	visual = "ItMw2hSword01.3DS";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
@@ -85,17 +85,17 @@ instance ItMw2hSwordBurning(C_Item)
 	damagetype = DAM_FIRE;
 	damageTotal = 250;
 	value = 30000;
-	description = "Легендарный тяжелый меч прижигания";
-	text[1] = "Ничто не может устоять перед";
-	text[2] = "его огненным прикосновением.";
-	text[3] = "Этот меч считался давно утерянным.";
+	description = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ С‚СЏР¶РµР»С‹Р№ РјРµС‡ РїСЂРёР¶РёРіР°РЅРёСЏ";
+	text[1] = "РќРёС‡С‚Рѕ РЅРµ РјРѕР¶РµС‚ СѓСЃС‚РѕСЏС‚СЊ РїРµСЂРµРґ";
+	text[2] = "РµРіРѕ РѕРіРЅРµРЅРЅС‹Рј РїСЂРёРєРѕСЃРЅРѕРІРµРЅРёРµРј.";
+	text[3] = "Р­С‚РѕС‚ РјРµС‡ СЃС‡РёС‚Р°Р»СЃСЏ РґР°РІРЅРѕ СѓС‚РµСЂСЏРЅРЅС‹Рј.";
 	text[5] = NAME_Damage;
 	count[5] = damageTotal;
 };
 
 instance ItRwWarBowBurning(C_Item)
 {
-	name = "Легендарный лук прижигания";
+	name = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ Р»СѓРє РїСЂРёР¶РёРіР°РЅРёСЏ";
 	visual = "ItRw_Bow_War_01.mms";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
@@ -107,17 +107,17 @@ instance ItRwWarBowBurning(C_Item)
 	damage[DAM_INDEX_POINT] = 75;
 	damage[DAM_INDEX_FIRE] = 75;
 	damage[DAM_INDEX_FLY] = 50;
-	description = "Легендарный лук прижигания";
-	text[1] = "Лук, сделанный в давние времена,";
-	text[2] = "является самым лучшим оружием,";
-	text[3] = "которое когда-либо появлялось в мире.";
+	description = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ Р»СѓРє РїСЂРёР¶РёРіР°РЅРёСЏ";
+	text[1] = "Р›СѓРє, СЃРґРµР»Р°РЅРЅС‹Р№ РІ РґР°РІРЅРёРµ РІСЂРµРјРµРЅР°,";
+	text[2] = "СЏРІР»СЏРµС‚СЃСЏ СЃР°РјС‹Рј Р»СѓС‡С€РёРј РѕСЂСѓР¶РёРµРј,";
+	text[3] = "РєРѕС‚РѕСЂРѕРµ РєРѕРіРґР°-Р»РёР±Рѕ РїРѕСЏРІР»СЏР»РѕСЃСЊ РІ РјРёСЂРµ.";
 	text[5] = NAME_Damage;
 	count[5] = damageTotal;
 };
 
 instance ItArRobeMithril(C_Item)
 {
-	name = "Легендарный доспех из мифрила";
+	name = "Р›РµРіРµРЅРґР°СЂРЅС‹Р№ РґРѕСЃРїРµС… РёР· РјРёС„СЂРёР»Р°";
 	mainflag = ITEM_KAT_ARMOR;
 	flags = 0;
 	value = 1098;
@@ -137,7 +137,7 @@ instance ItArRobeMithril(C_Item)
 
 instance PC_Roman(Npc_Default)
 {
-	name[0] = "Роман Ромулан";
+	name[0] = "Р РѕРјР°РЅ Р РѕРјСѓР»Р°РЅ";
 	id = 9995;
 	guild = GIL_None;
 	voice = 11;
@@ -158,7 +158,7 @@ instance PC_Roman(Npc_Default)
 
 instance Allround_Testmodell(Npc_Default)
 {
-	name[0] = "Странник";
+	name[0] = "РЎС‚СЂР°РЅРЅРёРє";
 	id = 9999;
 	guild = GIL_None;
 	voice = 11;
@@ -560,7 +560,7 @@ func int Mis_Con_Obs_TE()
 
 func void Mis_Off_TE()
 {
-	AI_AskText(self,NOFUNC,NOFUNC,"Да.","Нет.");
+	AI_AskText(self,NOFUNC,NOFUNC,"Р”Р°.","РќРµС‚.");
 };
 
 func void Mis_Suc_TE()
@@ -623,7 +623,7 @@ func int Mis_Con_Obs_TD()
 
 func void Mis_Off_TD()
 {
-	AI_AskText(self,NOFUNC,NOFUNC,"Да.","Нет.");
+	AI_AskText(self,NOFUNC,NOFUNC,"Р”Р°.","РќРµС‚.");
 };
 
 func void Mis_Suc_TD()
@@ -664,13 +664,13 @@ func int Trade_Test_Check()
 	var string strTradeItem;
 	var string strRequestedAmount;
 	var string strRequestedItem;
-	strTradeAmount = "Количество товара:";
+	strTradeAmount = "РљРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕРІР°СЂР°:";
 	strTradeAmount = ConcatStrings(strTradeAmount,IntToString(Trade_Test.trade_amount));
-	strTradeItem = "Вид товара:";
+	strTradeItem = "Р’РёРґ С‚РѕРІР°СЂР°:";
 	strTradeItem = ConcatStrings(strTradeItem,IntToString(Trade_Test.trade_item));
-	strRequestedAmount = "Необходимое количество:";
+	strRequestedAmount = "РќРµРѕР±С…РѕРґРёРјРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ:";
 	strRequestedAmount = ConcatStrings(strRequestedAmount,IntToString(Trade_Test.requested_amount));
-	strRequestedItem = "Необходимый товар:";
+	strRequestedItem = "РќРµРѕР±С…РѕРґРёРјС‹Р№ С‚РѕРІР°СЂ:";
 	strRequestedItem = ConcatStrings(strRequestedItem,IntToString(Trade_Test.requested_item));
 	PrintScreen(strTradeAmount,10,20,"FONT_OLD_20_WHITE.TGA",3);
 	PrintScreen(strTradeItem,10,30,"FONT_OLD_20_WHITE.TGA",3);
@@ -843,10 +843,10 @@ func void Info_Test_Procedure_Choice()
 {
 	PrintScreen("Info_Test_Procedure_Choice()",-1,50,"FONT_OLD_20_WHITE.TGA",10);
 	Info_ClearChoices(Info_Test_Choice);
-	Info_AddChoice(Info_Test_Choice,"Да.",Info_Test_Procedure_Choice_Yes);
-	Info_AddChoice(Info_Test_Choice,"Нет.",Info_Test_Procedure_Choice_No);
-	Info_AddChoice(Info_Test_Choice,"Не знаю.",Info_Test_Procedure_Choice_Unsure);
-	Info_AddChoice(Info_Test_Choice,"Выйти.",Info_Test_Procedure_Choice_Exit);
+	Info_AddChoice(Info_Test_Choice,"Р”Р°.",Info_Test_Procedure_Choice_Yes);
+	Info_AddChoice(Info_Test_Choice,"РќРµС‚.",Info_Test_Procedure_Choice_No);
+	Info_AddChoice(Info_Test_Choice,"РќРµ Р·РЅР°СЋ.",Info_Test_Procedure_Choice_Unsure);
+	Info_AddChoice(Info_Test_Choice,"Р’С‹Р№С‚Рё.",Info_Test_Procedure_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Choice_Yes()
@@ -862,9 +862,9 @@ func void Info_Test_Procedure_Choice_No()
 func void Info_Test_Procedure_Choice_Unsure()
 {
 	Info_ClearChoices(Info_Test_Choice);
-	Info_AddChoice(Info_Test_Choice,"Да.",Info_Test_Procedure_Choice_Yes);
-	Info_AddChoice(Info_Test_Choice,"Нет.",Info_Test_Procedure_Choice_No);
-	Info_AddChoice(Info_Test_Choice,"Выйти.",Info_Test_Procedure_Choice_Exit);
+	Info_AddChoice(Info_Test_Choice,"Р”Р°.",Info_Test_Procedure_Choice_Yes);
+	Info_AddChoice(Info_Test_Choice,"РќРµС‚.",Info_Test_Procedure_Choice_No);
+	Info_AddChoice(Info_Test_Choice,"Р’С‹Р№С‚Рё.",Info_Test_Procedure_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Choice_Exit()
@@ -894,10 +894,10 @@ func void Info_Test_Procedure_Permanent_Choice()
 {
 	PrintScreen("Info_Test_Procedure_Permanent_Choice()",-1,50,"FONT_OLD_20_WHITE.TGA",10);
 	Info_ClearChoices(Info_Test_Permanent_Choice);
-	Info_AddChoice(Info_Test_Permanent_Choice,"Ладно.",Info_Test_Procedure_Permanent_Choice_Yes);
-	Info_AddChoice(Info_Test_Permanent_Choice,"А не пошел бы ты...",Info_Test_Procedure_Permanent_Choice_No);
-	Info_AddChoice(Info_Test_Permanent_Choice,"Хм...",Info_Test_Procedure_Permanent_Choice_Unsure);
-	Info_AddChoice(Info_Test_Permanent_Choice,"(уйти)",Info_Test_Procedure_Permanent_Choice_Exit);
+	Info_AddChoice(Info_Test_Permanent_Choice,"Р›Р°РґРЅРѕ.",Info_Test_Procedure_Permanent_Choice_Yes);
+	Info_AddChoice(Info_Test_Permanent_Choice,"Рђ РЅРµ РїРѕС€РµР» Р±С‹ С‚С‹...",Info_Test_Procedure_Permanent_Choice_No);
+	Info_AddChoice(Info_Test_Permanent_Choice,"РҐРј...",Info_Test_Procedure_Permanent_Choice_Unsure);
+	Info_AddChoice(Info_Test_Permanent_Choice,"(СѓР№С‚Рё)",Info_Test_Procedure_Permanent_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Permanent_Choice_Yes()
@@ -942,10 +942,10 @@ func void Info_Test_Procedure_Permanent_Important_Choice()
 {
 	PrintScreen("Info_Test_Procedure_Permanent_Important_Choice()",-1,50,"FONT_OLD_20_WHITE.TGA",10);
 	Info_ClearChoices(Info_Test_Permanent_Important_Choice);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice,"Да.",Info_Test_Procedure_Permanent_Important_Choice_Yes);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice,"Нет.",Info_Test_Procedure_Permanent_Important_Choice_No);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice,"Не знаю.",Info_Test_Procedure_Permanent_Important_Choice_Unsure);
-	Info_AddChoice(Info_Test_Permanent_Important_Choice,"Пока.",Info_Test_Procedure_Permanent_Important_Choice_Exit);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice,"Р”Р°.",Info_Test_Procedure_Permanent_Important_Choice_Yes);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice,"РќРµС‚.",Info_Test_Procedure_Permanent_Important_Choice_No);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice,"РќРµ Р·РЅР°СЋ.",Info_Test_Procedure_Permanent_Important_Choice_Unsure);
+	Info_AddChoice(Info_Test_Permanent_Important_Choice,"РџРѕРєР°.",Info_Test_Procedure_Permanent_Important_Choice_Exit);
 };
 
 func void Info_Test_Procedure_Permanent_Important_Choice_Yes()

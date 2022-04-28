@@ -25,31 +25,31 @@ func void B_BuyAttributePoints(var C_Npc typ,var int atr,var int AtrPlus)
 			if(atr == ATR_STRENGTH)
 			{
 				typ.attribute[ATR_STRENGTH] = typ.attribute[ATR_STRENGTH] + AtrPlus;
-				PrintSTRING = ConcatStrings("Сила +",AtrPlusSTRING);
+				PrintSTRING = ConcatStrings("РЎРёР»Р° +",AtrPlusSTRING);
 				PrintScreen(PrintSTRING,-1,-1,"FONT_OLD_20_WHITE.TGA",1);
 			}
 			else if(atr == ATR_DEXTERITY)
 			{
 				typ.attribute[ATR_DEXTERITY] = typ.attribute[ATR_DEXTERITY] + AtrPlus;
-				PrintSTRING = ConcatStrings("Ловкость +",AtrPlusSTRING);
+				PrintSTRING = ConcatStrings("Р›РѕРІРєРѕСЃС‚СЊ +",AtrPlusSTRING);
 				PrintScreen(PrintSTRING,-1,-1,"FONT_OLD_20_WHITE.TGA",1);
 			}
 			else if(atr == ATR_MANA_MAX)
 			{
 				typ.attribute[ATR_MANA_MAX] = typ.attribute[ATR_MANA_MAX] + AtrPlus;
-				PrintSTRING = ConcatStrings("Маг. сила +",AtrPlusSTRING);
+				PrintSTRING = ConcatStrings("РњР°Рі. СЃРёР»Р° +",AtrPlusSTRING);
 				PrintScreen(PrintSTRING,-1,-1,"FONT_OLD_20_WHITE.TGA",1);
 			};
 		}
 		else
 		{
-			PrintScreen("Дальнейшее улучшение невозможно!",-1,-1,"FONT_OLD_20_WHITE.TGA",1);
+			PrintScreen("Р”Р°Р»СЊРЅРµР№С€РµРµ СѓР»СѓС‡С€РµРЅРёРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ!",-1,-1,"FONT_OLD_20_WHITE.TGA",1);
 			B_Say(self,other,"$NOLEARNOVERMAX");
 		};
 	}
 	else
 	{
-		PrintScreen("Недостаточно очков обучения!",-1,-1,"FONT_OLD_20_WHITE.TGA",1);
+		PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ!",-1,-1,"FONT_OLD_20_WHITE.TGA",1);
 		B_Say(self,other,"$NOLEARNNOPOINTS");
 	};
 };

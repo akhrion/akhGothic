@@ -63,6 +63,7 @@ func int Spell_ProcessMana_Release(var int manaInvested)
 	};
 	if(Npc_GetActiveSpell(self) == SPL_FIRERAININV)
 	{
+		return SPL_SENDCAST;
 		return SPL_SENDSTOP;
 	};
 	if(Npc_GetActiveSpell(self) == SPL_THUNDERBOLT)

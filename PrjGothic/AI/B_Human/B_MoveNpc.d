@@ -12,7 +12,7 @@ func void B_MoveNpc()
 		};
 		if(C_NpcIsDown(other))
 		{
-			PrintDebugNpc(PD_ZS_DETAIL,"...Blockierender ist kampfunf‰hig!");
+			PrintDebugNpc(PD_ZS_DETAIL,"...Blockierender ist kampfunf–¥hig!");
 			return;
 		};
 		if(C_NpcTypeIsFriend(self,other))

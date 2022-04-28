@@ -34,7 +34,7 @@ func int ZS_GotoFight_Loop()
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_GotoFight_Loop");
 	if(!Hlp_IsValidNpc(other) || !Hlp_IsValidNpc(victim))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Angreifer oder Opfer ung¸ltig!");
+		PrintDebugNpc(PD_ZS_Check,"...Angreifer oder Opfer ung—åltig!");
 		return 1;
 	};
 	if(Npc_IsDead(other) || Npc_IsDead(victim))
@@ -44,7 +44,7 @@ func int ZS_GotoFight_Loop()
 	};
 	if(Npc_IsInState(other,ZS_Unconscious) || Npc_IsInState(victim,ZS_Unconscious))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Angreifer oder Opfer bewuﬂtlos!");
+		PrintDebugNpc(PD_ZS_Check,"...Angreifer oder Opfer bewu–Øtlos!");
 		return 1;
 	};
 	if(Npc_IsInState(other,ZS_Flee) || Npc_IsInState(victim,ZS_Flee))

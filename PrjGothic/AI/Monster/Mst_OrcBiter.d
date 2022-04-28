@@ -1,7 +1,7 @@
 
 prototype Mst_Default_OrcBiter(C_Npc)
 {
-	name[0] = "����";
+	name[0] = "Жерх";
 	guild = GIL_ORCDOG;
 	aivar[AIV_IMPORTANT] = ID_ORCBITER;
 	level = 12;
@@ -46,4 +46,10 @@ instance OrcBiter(Mst_Default_OrcBiter)
 	Npc_SetToFistMode(self);
 	CreateInvItems(self,ItFoMuttonRaw,2);
 };
-
+instance OrcBiter_Egg(Egg)
+{
+	name[0] = "Яйцо жерха";
+	guild = GIL_ORCDOG;
+	spawnDelay = 1500;
+	start_aistate = B_MM_Respawn;
+};

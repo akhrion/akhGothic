@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Minecrawler(C_Npc)
 {
-	name[0] = "Ползун";
+	name[0] = "РџРѕР»Р·СѓРЅ";
 	guild = GIL_MINECRAWLER;
 	aivar[AIV_MM_REAL_ID] = ID_MINECRAWLER;
 	level = 13;
@@ -47,7 +47,7 @@ instance MineCrawler(Mst_Default_Minecrawler)
 
 instance YMINECRAWLER(Mst_Default_Minecrawler)
 {
-	name[0] = "Молодой ползун";
+	name[0] = "РњРѕР»РѕРґРѕР№ РїРѕР»Р·СѓРЅ";
 	level = 4;
 	attribute[ATR_STRENGTH] = 6;
 	attribute[ATR_DEXTERITY] = 6;

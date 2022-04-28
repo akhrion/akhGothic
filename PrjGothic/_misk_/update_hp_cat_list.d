@@ -7,44 +7,44 @@ func void update_hp_cat_list()
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Herb_03) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Зелье исцеления.",pc_potionalchemy_hp3_info);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р—РµР»СЊРµ РёСЃС†РµР»РµРЅРёСЏ.",pc_potionalchemy_hp3_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Зелье исцеления (недостаточно ингредиентов).",pc_potionalchemy_nocomp_hp);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р—РµР»СЊРµ РёСЃС†РµР»РµРЅРёСЏ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_hp);
 		};
 	};
 	if(HP2RECIPE == TRUE)
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Herb_02) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Экстракт исцеления.",pc_potionalchemy_hp2_info);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р­РєСЃС‚СЂР°РєС‚ РёСЃС†РµР»РµРЅРёСЏ.",pc_potionalchemy_hp2_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Экстракт исцеления (недостаточно ингредиентов).",pc_potionalchemy_nocomp_hp);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р­РєСЃС‚СЂР°РєС‚ РёСЃС†РµР»РµРЅРёСЏ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_hp);
 		};
 	};
 	if(HP1RECIPE == TRUE)
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Herb_01) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Эссенция исцеления.",pc_potionalchemy_hp1_info);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р­СЃСЃРµРЅС†РёСЏ РёСЃС†РµР»РµРЅРёСЏ.",pc_potionalchemy_hp1_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Эссенция исцеления (недостаточно ингредиентов).",pc_potionalchemy_nocomp_hp);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р­СЃСЃРµРЅС†РёСЏ РёСЃС†РµР»РµРЅРёСЏ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_hp);
 		};
 	};
 	if(HP0RECIPE == TRUE)
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Nightshadow_01) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Зелье быстрого лечения.",pc_potionalchemy_hp0_info);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р—РµР»СЊРµ Р±С‹СЃС‚СЂРѕРіРѕ Р»РµС‡РµРЅРёСЏ.",pc_potionalchemy_hp0_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_hp,"Зелье быстрого лечения (недостаточно ингредиентов).",pc_potionalchemy_nocomp_hp);
+			Info_AddChoice(pc_alchemy_cat_hp,"Р—РµР»СЊРµ Р±С‹СЃС‚СЂРѕРіРѕ Р»РµС‡РµРЅРёСЏ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_hp);
 		};
 	};
 };
@@ -57,33 +57,33 @@ func void update_mp_cat_list()
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Stoneroot_01) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Зелье магической энергии.",pc_potionalchemy_mp3_info);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р—РµР»СЊРµ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",pc_potionalchemy_mp3_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Зелье магической энергии (недостаточно ингредиентов).",pc_potionalchemy_nocomp_mp);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р—РµР»СЊРµ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_mp);
 		};
 	};
 	if(MP2RECIPE == TRUE)
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_RavenHerb_01) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Экстракт магической энергии.",pc_potionalchemy_mp2_info);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р­РєСЃС‚СЂР°РєС‚ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",pc_potionalchemy_mp2_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Экстракт магической энергии (недостаточно ингредиентов).",pc_potionalchemy_nocomp_mp);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р­РєСЃС‚СЂР°РєС‚ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_mp);
 		};
 	};
 	if(MP1RECIPE == TRUE)
 	{
 		if(Npc_HasItems(hero,ItFo_Plants_Seraphis_01) >= 1)
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Эссенция магической энергии.",pc_potionalchemy_mp1_info);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р­СЃСЃРµРЅС†РёСЏ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",pc_potionalchemy_mp1_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_mp,"Эссенция магической энергии (недостаточно ингредиентов).",pc_potionalchemy_nocomp_mp);
+			Info_AddChoice(pc_alchemy_cat_mp,"Р­СЃСЃРµРЅС†РёСЏ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_mp);
 		};
 	};
 };
@@ -96,55 +96,55 @@ func void update_perm_cat_list()
 	{
 		if((Npc_HasItems(hero,ItFo_Potion_Dex_01) >= 1) && (Npc_HasItems(hero,ItFo_Potion_Strength_01) >= 1))
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Зелье мощи.",pc_potionalchemy_master_info);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р—РµР»СЊРµ РјРѕС‰Рё.",pc_potionalchemy_master_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Зелье мощи (недостаточно ингредиентов).",pc_potionalchemy_nocomp_perm);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р—РµР»СЊРµ РјРѕС‰Рё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_perm);
 		};
 	};
 	if(STRRECIPE == TRUE)
 	{
 		if((Npc_HasItems(hero,ItFo_Plants_mountainmoos_02) >= 1) && (Npc_HasItems(hero,ItFo_Plants_Stoneroot_02) >= 1) && (Npc_HasItems(hero,ItFo_Plants_Flameberry_01) >= 1))
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция силы.",pc_potionalchemy_str_info);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ СЃРёР»С‹.",pc_potionalchemy_str_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция силы (недостаточно ингредиентов).",pc_potionalchemy_nocomp_perm);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ СЃРёР»С‹ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_perm);
 		};
 	};
 	if(DEXRECIPE == TRUE)
 	{
 		if((Npc_HasItems(hero,ItFo_Plants_mountainmoos_02) >= 1) && (Npc_HasItems(hero,ItFo_Plants_Trollberrys_01) >= 1) && (Npc_HasItems(hero,ItFo_Plants_RavenHerb_02) >= 1))
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция ловкости.",pc_potionalchemy_dex_info);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ Р»РѕРІРєРѕСЃС‚Рё.",pc_potionalchemy_dex_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция ловкости (недостаточно ингредиентов).",pc_potionalchemy_nocomp_perm);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ Р»РѕРІРєРѕСЃС‚Рё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_perm);
 		};
 	};
 	if(MPMAXRECIPE == TRUE)
 	{
 		if((Npc_HasItems(hero,ItFo_Plants_mountainmoos_01) >= 1) && (Npc_HasItems(hero,ItFo_Plants_Nightshadow_02) >= 1))
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция силы духа.",pc_potionalchemy_mpmax_info);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ СЃРёР»С‹ РґСѓС…Р°.",pc_potionalchemy_mpmax_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция силы духа (недостаточно ингредиентов).",pc_potionalchemy_nocomp_perm);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ СЃРёР»С‹ РґСѓС…Р° (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_perm);
 		};
 	};
 	if(HPMAXRECIPE == TRUE)
 	{
 		if((Npc_HasItems(hero,ItFo_Plants_mountainmoos_01) >= 1) && (Npc_HasItems(hero,ItFo_Plants_OrcHerb_02) >= 1))
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция жизни.",pc_potionalchemy_hpmax_info);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ Р¶РёР·РЅРё.",pc_potionalchemy_hpmax_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_perm,"Эссенция жизни (недостаточно ингредиентов).",pc_potionalchemy_nocomp_perm);
+			Info_AddChoice(pc_alchemy_cat_perm,"Р­СЃСЃРµРЅС†РёСЏ Р¶РёР·РЅРё (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_perm);
 		};
 	};
 };
@@ -157,22 +157,22 @@ func void update_special_cat_list()
 	{
 		if((Npc_HasItems(hero,itfo_plants_deadleaf) >= 1) && ((Npc_HasItems(hero,SpecialWater) >= 1) || ((Npc_HasItems(hero,ItFo_Plants_Bloodwood_01) >= 1) && (Npc_HasItems(hero,ItMi_Alchemy_Alcohol_01) >= 1))))
 		{
-			Info_AddChoice(pc_alchemy_cat_special,"Лечебное зелье Фортуно.",pc_potionalchemy_yberion_info);
+			Info_AddChoice(pc_alchemy_cat_special,"Р›РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ.",pc_potionalchemy_yberion_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_special,"Лечебное зелье Фортуно (недостаточно ингредиентов).",pc_potionalchemy_nocomp_special);
+			Info_AddChoice(pc_alchemy_cat_special,"Р›РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_special);
 		};
 	};
 	if(EGGRECIPE == TRUE)
 	{
 		if((Npc_HasItems(hero,ItAt_Crawlerqueen) >= 3) && (Npc_HasItems(hero,ItMi_Plants_Swampherb_01) >= 6))
 		{
-			Info_AddChoice(pc_alchemy_cat_special,"Зелье из яиц Королевы ползунов.",pc_potionalchemy_egg_info);
+			Info_AddChoice(pc_alchemy_cat_special,"Р—РµР»СЊРµ РёР· СЏРёС† РљРѕСЂРѕР»РµРІС‹ РїРѕР»Р·СѓРЅРѕРІ.",pc_potionalchemy_egg_info);
 		}
 		else
 		{
-			Info_AddChoice(pc_alchemy_cat_special,"Зелье из яиц Королевы ползунов (недостаточно ингредиентов).",pc_potionalchemy_nocomp_special);
+			Info_AddChoice(pc_alchemy_cat_special,"Р—РµР»СЊРµ РёР· СЏРёС† РљРѕСЂРѕР»РµРІС‹ РїРѕР»Р·СѓРЅРѕРІ (РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ).",pc_potionalchemy_nocomp_special);
 		};
 	};
 };
@@ -185,11 +185,11 @@ func void update_alco_cat_list()
 	{
 		if(Npc_HasItems(hero,ItFo_wineberrys_01))
 		{
-			Info_AddChoice(pc_alchemy_cat_alco,"Вино",pc_potionalchemy_wine_info);
+			Info_AddChoice(pc_alchemy_cat_alco,"Р’РёРЅРѕ",pc_potionalchemy_wine_info);
 		};
 		if(Npc_HasItems(hero,ItFoRice))
 		{
-			Info_AddChoice(pc_alchemy_cat_alco,"Рисовый шнапс",pc_potionalchemy_booze_info);
+			Info_AddChoice(pc_alchemy_cat_alco,"Р РёСЃРѕРІС‹Р№ С€РЅР°РїСЃ",pc_potionalchemy_booze_info);
 		};
 	};
 };
@@ -241,7 +241,7 @@ instance PC_ALCHEMY_CAT_HP(C_Info)
 	information = pc_alchemy_cat_hp_info;
 	important = 0;
 	permanent = 1;
-	description = "Лечебные зелья";
+	description = "Р›РµС‡РµР±РЅС‹Рµ Р·РµР»СЊСЏ";
 };
 
 
@@ -265,7 +265,7 @@ func void pc_alchemy_cat_hp_back()
 
 func void pc_potionalchemy_nocomp_hp()
 {
-	PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+	PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	update_hp_cat_list();
 };
 
@@ -278,7 +278,7 @@ instance PC_ALCHEMY_CAT_MP(C_Info)
 	information = pc_alchemy_cat_mp_info;
 	important = 0;
 	permanent = 1;
-	description = "Магические зелья";
+	description = "РњР°РіРёС‡РµСЃРєРёРµ Р·РµР»СЊСЏ";
 };
 
 
@@ -302,7 +302,7 @@ func void pc_alchemy_cat_mp_back()
 
 func void pc_potionalchemy_nocomp_mp()
 {
-	PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+	PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	update_mp_cat_list();
 };
 
@@ -315,7 +315,7 @@ instance PC_ALCHEMY_CAT_PERM(C_Info)
 	information = pc_alchemy_cat_perm_info;
 	important = 0;
 	permanent = 1;
-	description = "Перманентные зелья";
+	description = "РџРµСЂРјР°РЅРµРЅС‚РЅС‹Рµ Р·РµР»СЊСЏ";
 };
 
 
@@ -339,7 +339,7 @@ func void pc_alchemy_cat_perm_back()
 
 func void pc_potionalchemy_nocomp_perm()
 {
-	PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+	PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	update_perm_cat_list();
 };
 
@@ -352,7 +352,7 @@ instance PC_ALCHEMY_CAT_SPECIAL(C_Info)
 	information = pc_alchemy_cat_special_info;
 	important = 0;
 	permanent = 1;
-	description = "Особые зелья";
+	description = "РћСЃРѕР±С‹Рµ Р·РµР»СЊСЏ";
 };
 
 
@@ -376,7 +376,7 @@ func void pc_alchemy_cat_special_back()
 
 func void pc_potionalchemy_nocomp_special()
 {
-	PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+	PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	update_special_cat_list();
 };
 
@@ -389,7 +389,7 @@ instance PC_ALCHEMY_CAT_ALCO(C_Info)
 	information = pc_alchemy_cat_alco_info;
 	important = 0;
 	permanent = 1;
-	description = "Перегнать алкоголь";
+	description = "РџРµСЂРµРіРЅР°С‚СЊ Р°Р»РєРѕРіРѕР»СЊ";
 };
 
 
@@ -419,13 +419,13 @@ func void pc_potionalchemy_hp0_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Nightshadow_01,1);
 	CreateInvItem(self,Heiltrank);
 	AI_Wait(self,2);
-	PrintScreen("Получено зелье быстрого лечения.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р·РµР»СЊРµ Р±С‹СЃС‚СЂРѕРіРѕ Р»РµС‡РµРЅРёСЏ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_hp_cat_list();
 };
@@ -438,13 +438,13 @@ func void pc_potionalchemy_hp1_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Herb_01,1);
 	CreateInvItem(self,ItFo_Potion_Health_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция исцеления.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ РёСЃС†РµР»РµРЅРёСЏ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_hp_cat_list();
 };
@@ -457,13 +457,13 @@ func void pc_potionalchemy_hp2_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Herb_02,1);
 	CreateInvItem(self,ItFo_Potion_Health_02);
 	AI_Wait(self,2);
-	PrintScreen("Получен экстракт исцеления.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅ СЌРєСЃС‚СЂР°РєС‚ РёСЃС†РµР»РµРЅРёСЏ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_hp_cat_list();
 };
@@ -476,13 +476,13 @@ func void pc_potionalchemy_hp3_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Herb_03,1);
 	CreateInvItem(self,ItFo_Potion_Health_03);
 	AI_Wait(self,2);
-	PrintScreen("Получено зелье исцеления.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р·РµР»СЊРµ РёСЃС†РµР»РµРЅРёСЏ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_hp_cat_list();
 };
@@ -495,13 +495,13 @@ func void pc_potionalchemy_mp1_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Seraphis_01,1);
 	CreateInvItem(self,ItFo_Potion_Mana_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция магической энергии.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_mp_cat_list();
 };
@@ -514,13 +514,13 @@ func void pc_potionalchemy_mp2_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_RavenHerb_01,1);
 	CreateInvItem(self,ItFo_Potion_Mana_02);
 	AI_Wait(self,2);
-	PrintScreen("Получен экстракт магической энергии.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅ СЌРєСЃС‚СЂР°РєС‚ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_mp_cat_list();
 };
@@ -533,13 +533,13 @@ func void pc_potionalchemy_mp3_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_Stoneroot_01,1);
 	CreateInvItem(self,ItFo_Potion_Mana_03);
 	AI_Wait(self,2);
-	PrintScreen("Получено зелье магической энергии.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р·РµР»СЊРµ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_mp_cat_list();
 };
@@ -552,14 +552,14 @@ func void pc_potionalchemy_mpmax_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_mountainmoos_01,1);
 	Npc_RemoveInvItems(self,ItFo_Plants_Nightshadow_02,1);
 	CreateInvItem(self,ItFo_Potion_Mana_Perma_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция силы духа.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ СЃРёР»С‹ РґСѓС…Р°.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_perm_cat_list();
 };
@@ -572,14 +572,14 @@ func void pc_potionalchemy_hpmax_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_mountainmoos_01,1);
 	Npc_RemoveInvItems(self,ItFo_Plants_OrcHerb_02,1);
 	CreateInvItem(self,ItFo_Potion_Health_Perma_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция жизни.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ Р¶РёР·РЅРё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_perm_cat_list();
 };
@@ -592,7 +592,7 @@ func void pc_potionalchemy_dex_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_mountainmoos_02,1);
@@ -600,7 +600,7 @@ func void pc_potionalchemy_dex_info()
 	Npc_RemoveInvItems(self,ItFo_Plants_RavenHerb_02,1);
 	CreateInvItem(self,ItFo_Potion_Dex_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция ловкости.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ Р»РѕРІРєРѕСЃС‚Рё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_perm_cat_list();
 };
@@ -613,7 +613,7 @@ func void pc_potionalchemy_str_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Plants_mountainmoos_02,1);
@@ -621,7 +621,7 @@ func void pc_potionalchemy_str_info()
 	Npc_RemoveInvItems(self,ItFo_Plants_Flameberry_01,1);
 	CreateInvItem(self,ItFo_Potion_Strength_01);
 	AI_Wait(self,2);
-	PrintScreen("Получена эссенция силы.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅР° СЌСЃСЃРµРЅС†РёСЏ СЃРёР»С‹.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_perm_cat_list();
 };
@@ -634,14 +634,14 @@ func void pc_potionalchemy_master_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Potion_Strength_01,1);
 	Npc_RemoveInvItems(self,ItFo_Potion_Dex_01,1);
 	CreateInvItem(self,ItFo_Potion_Master_01);
 	AI_Wait(self,2);
-	PrintScreen("Получено зелье мощи.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р·РµР»СЊРµ РјРѕС‰Рё.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_perm_cat_list();
 };
@@ -656,19 +656,19 @@ func void pc_potionalchemy_egg_info()
 		}
 		else
 		{
-			PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+			PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 			AI_StopProcessInfos(self);
 		};
 		Npc_RemoveInvItems(self,ItAt_Crawlerqueen,3);
 		Npc_RemoveInvItems(self,ItMi_Plants_Swampherb_01,6);
 		CreateInvItem(self,ItFo_Potion_Elixier_Egg);
 		AI_Wait(self,2);
-		PrintScreen("Получено зелье из яиц Королевы ползунов.",-1,-1,"font_old_10_white.tga",2);
+		PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р·РµР»СЊРµ РёР· СЏРёС† РљРѕСЂРѕР»РµРІС‹ РїРѕР»Р·СѓРЅРѕРІ.",-1,-1,"font_old_10_white.tga",2);
 		Snd_Play("PSILAB_GETRESULT");
 	}
 	else
 	{
-		PrintScreen("Думаю, это мне еще пригодится...",-1,45,"font_old_10_white.tga",3);
+		PrintScreen("Р”СѓРјР°СЋ, СЌС‚Рѕ РјРЅРµ РµС‰Рµ РїСЂРёРіРѕРґРёС‚СЃСЏ...",-1,45,"font_old_10_white.tga",3);
 		AI_OutputSVM_Overlay(hero,NULL,"INFO_HIGHPRIEST4_15_03");
 		AI_Wait(self,3);
 	};
@@ -683,14 +683,14 @@ func void pc_potionalchemy_wine_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Potion_Water_01,1);
 	Npc_RemoveInvItems(self,ItFo_wineberrys_01,1);
 	CreateInvItem(self,ItFoWine);
 	AI_Wait(self,2);
-	PrintScreen("Получено вино.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ РІРёРЅРѕ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_alco_cat_list();
 };
@@ -703,14 +703,14 @@ func void pc_potionalchemy_booze_info()
 	}
 	else
 	{
-		PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+		PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 		AI_StopProcessInfos(self);
 	};
 	Npc_RemoveInvItems(self,ItFo_Potion_Water_01,1);
 	Npc_RemoveInvItems(self,ItFoRice,1);
 	CreateInvItem(self,ItFoBooze);
 	AI_Wait(self,2);
-	PrintScreen("Получен рисовый шнапс.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅ СЂРёСЃРѕРІС‹Р№ С€РЅР°РїСЃ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_alco_cat_list();
 };
@@ -730,7 +730,7 @@ func void pc_potionalchemy_yberion_info()
 		}
 		else
 		{
-			PrintScreen("Закончились чистые флаконы.",-1,45,"font_old_10_white.tga",5);
+			PrintScreen("Р—Р°РєРѕРЅС‡РёР»РёСЃСЊ С‡РёСЃС‚С‹Рµ С„Р»Р°РєРѕРЅС‹.",-1,45,"font_old_10_white.tga",5);
 			AI_StopProcessInfos(self);
 		};
 		Npc_RemoveInvItems(self,ItMi_Alchemy_Alcohol_01,1);
@@ -738,7 +738,7 @@ func void pc_potionalchemy_yberion_info()
 	};
 	CreateInvItem(self,HealthWater);
 	AI_Wait(self,2);
-	PrintScreen("Получено лечебное зелье Фортуно.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ Р»РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ.",-1,-1,"font_old_10_white.tga",2);
 	Snd_Play("PSILAB_GETRESULT");
 	update_special_cat_list();
 };
@@ -751,13 +751,13 @@ func void update_stomp_list()
 	{
 		if(JOINT3RECIPE == TRUE)
 		{
-			Info_AddChoice(pc_stomp_cat1,"'Зов мечты'",pc_stomp_cat1_3);
+			Info_AddChoice(pc_stomp_cat1,"'Р—РѕРІ РјРµС‡С‚С‹'",pc_stomp_cat1_3);
 		};
 		if(JOINT2RECIPE == TRUE)
 		{
-			Info_AddChoice(pc_stomp_cat1,"'Северный темный'",pc_stomp_cat1_2);
+			Info_AddChoice(pc_stomp_cat1,"'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'",pc_stomp_cat1_2);
 		};
-		Info_AddChoice(pc_stomp_cat1,"'Новичок'",pc_stomp_cat1_1);
+		Info_AddChoice(pc_stomp_cat1,"'РќРѕРІРёС‡РѕРє'",pc_stomp_cat1_1);
 	};
 };
 
@@ -807,7 +807,7 @@ instance PC_STOMP_CAT1(C_Info)
 	information = pc_stomp_cat1_info;
 	important = 0;
 	permanent = 1;
-	description = "Обработать болотник";
+	description = "РћР±СЂР°Р±РѕС‚Р°С‚СЊ Р±РѕР»РѕС‚РЅРёРє";
 };
 
 
@@ -834,7 +834,7 @@ func void pc_stomp_cat1_1()
 	Npc_RemoveInvItems(self,ItMi_Plants_Swampherb_01,1);
 	CreateInvItem(self,ItMiJoint_1);
 	AI_Wait(self,2);
-	PrintScreen("Получен 'Новичок'.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅ 'РќРѕРІРёС‡РѕРє'.",-1,-1,"font_old_10_white.tga",2);
 	update_stomp_list();
 };
 
@@ -842,7 +842,7 @@ func void pc_stomp_cat1_2()
 {
 	if(!Npc_HasItems(hero,ItFo_Plants_Berrys_01))
 	{
-		PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+		PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	}
 	else
 	{
@@ -850,7 +850,7 @@ func void pc_stomp_cat1_2()
 		Npc_RemoveInvItems(self,ItFo_Plants_Berrys_01,1);
 		CreateInvItem(self,ItMiJoint_2);
 		AI_Wait(self,2);
-		PrintScreen("Получен 'Северный темный'.",-1,-1,"font_old_10_white.tga",2);
+		PrintScreen("РџРѕР»СѓС‡РµРЅ 'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'.",-1,-1,"font_old_10_white.tga",2);
 	};
 	update_stomp_list();
 };
@@ -859,7 +859,7 @@ func void pc_stomp_cat1_3()
 {
 	if(!Npc_HasItems(hero,ItFo_Plants_mushroom_01))
 	{
-		PrintScreen("Недостаточно ингредиентов.",-1,45,"font_old_10_white.tga",2);
+		PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РёРЅРіСЂРµРґРёРµРЅС‚РѕРІ.",-1,45,"font_old_10_white.tga",2);
 	}
 	else
 	{
@@ -867,7 +867,7 @@ func void pc_stomp_cat1_3()
 		Npc_RemoveInvItems(self,ItFo_Plants_mushroom_01,1);
 		CreateInvItem(self,ItMiJoint_3);
 		AI_Wait(self,2);
-		PrintScreen("Получен 'Зов мечты'.",-1,-1,"font_old_10_white.tga",2);
+		PrintScreen("РџРѕР»СѓС‡РµРЅ 'Р—РѕРІ РјРµС‡С‚С‹'.",-1,-1,"font_old_10_white.tga",2);
 	};
 	update_stomp_list();
 };

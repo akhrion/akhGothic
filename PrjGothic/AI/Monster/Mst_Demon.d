@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Demon(C_Npc)
 {
-	name[0] = "Пламенный демон";
+	name[0] = "РџР»Р°РјРµРЅРЅС‹Р№ РґРµРјРѕРЅ";
 	guild = GIL_DEMON;
 	aivar[AIV_IMPORTANT] = ID_DEMON;
 	level = 50;
@@ -46,7 +46,7 @@ instance Demon(Mst_Default_Demon)
 
 instance SummonedByPC_Demon(Mst_Default_Demon)
 {
-	name[0] = "Призванный демон";
+	name[0] = "РџСЂРёР·РІР°РЅРЅС‹Р№ РґРµРјРѕРЅ";
 	Set_Demon_Visuals();
 	level = 0;
 	Npc_SetToFistMode(self);
@@ -78,7 +78,7 @@ instance XardasDemon(Mst_Default_Demon)
 
 instance OTDemon(Mst_Default_Demon)
 {
-	name[0] = "Низший демон";
+	name[0] = "РќРёР·С€РёР№ РґРµРјРѕРЅ";
 	guild = GIL_DEMON;
 	level = 0;
 	attribute[ATR_STRENGTH] = 130;

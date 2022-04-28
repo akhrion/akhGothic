@@ -19,7 +19,7 @@ func void B_AssessAndMemorize(var int newsid,var int source,var C_Npc witness,va
 	PrintDebugNpc(PD_ZS_Check,"B_AssessAndMemorize");
 	if(!C_NpcIsHuman(witness) || !C_NpcIsHuman(vict) || !C_NpcIsHuman(offender))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Täter, Zeuge oder Opfer KEIN Mensch!");
+		PrintDebugNpc(PD_ZS_Check,"...TÐ´ter, Zeuge oder Opfer KEIN Mensch!");
 		PrintGlobals(PD_ZS_Check);
 		return;
 	};

@@ -35,7 +35,7 @@ func int bsanvil_cf()
 		}
 		else
 		{
-			PrintScreen("Для этого мне нужен кузнечный молот.",-1,-1,"FONT_OLD_10_WHITE.TGA",3);
+			PrintScreen("Р”Р»СЏ СЌС‚РѕРіРѕ РјРЅРµ РЅСѓР¶РµРЅ РєСѓР·РЅРµС‡РЅС‹Р№ РјРѕР»РѕС‚.",-1,-1,"FONT_OLD_10_WHITE.TGA",3);
 			if(!Npc_HasItems(self,ItMiSwordrawhot))
 			{
 				CreateInvItems(self,ItMiSwordrawhot,1);
@@ -103,7 +103,7 @@ func void bssharp_s0()
 {
 	if(Npc_IsPlayer(self))
 	{
-		PrintScreen("Меч готов!",-1,-1,"FONT_OLD_10_WHITE.TGA",2);
+		PrintScreen("РњРµС‡ РіРѕС‚РѕРІ!",-1,-1,"FONT_OLD_10_WHITE.TGA",2);
 		self.aivar[AIV_INVINCIBLE] = FALSE;
 	};
 };

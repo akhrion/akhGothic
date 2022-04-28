@@ -3,43 +3,43 @@ func void b_failch4quests()
 {
 	if(GETNEWGUY_STARTED == TRUE)
 	{
-		B_LogEntry(CH1_RecruitDusty,"Теперь я не смогу вывести кого-либо из Старого лагеря.");
+		B_LogEntry(CH1_RecruitDusty,"РўРµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РІС‹РІРµСЃС‚Рё РєРѕРіРѕ-Р»РёР±Рѕ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_RecruitDusty,LOG_FAILED);
 		GETNEWGUY_STARTED = LOG_FAILED;
 	};
 	if(Npc_KnowsInfo(hero,grd_271_ulbert_trick) && !Npc_KnowsInfo(hero,grd_271_ulbert_angry))
 	{
-		B_LogEntry(CH2_StorageShed,"В Старой шахте произошел обвал, теперь туда не попасть!");
+		B_LogEntry(CH2_StorageShed,"Р’ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ РїСЂРѕРёР·РѕС€РµР» РѕР±РІР°Р», С‚РµРїРµСЂСЊ С‚СѓРґР° РЅРµ РїРѕРїР°СЃС‚СЊ!");
 		Log_SetTopicStatus(CH2_StorageShed,LOG_FAILED);
 	};
 	if(Npc_KnowsInfo(hero,VLK_584_Snipes_DEAL) && !Npc_KnowsInfo(hero,GRD_262_Aaron_SELLNOW))
 	{
-		B_LogEntry(CH2_SnipesDeal,"Старая шахта обрушилась! Я не смогу выполнить просьбу Снайпса...");
+		B_LogEntry(CH2_SnipesDeal,"РЎС‚Р°СЂР°СЏ С€Р°С…С‚Р° РѕР±СЂСѓС€РёР»Р°СЃСЊ! РЇ РЅРµ СЃРјРѕРіСѓ РІС‹РїРѕР»РЅРёС‚СЊ РїСЂРѕСЃСЊР±Сѓ РЎРЅР°Р№РїСЃР°...");
 		Log_SetTopicStatus(CH2_SnipesDeal,LOG_FAILED);
 	};
 	if(Npc_KnowsInfo(hero,org_801_lares_newlist) && !Npc_KnowsInfo(hero,ORG_801_Lares_BringListBack))
 	{
-		B_LogEntry(THELISTFORNC,"Список припасов для Старой шахты и план Ларса больше не имеют никакого смысла.");
+		B_LogEntry(THELISTFORNC,"РЎРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹ Рё РїР»Р°РЅ Р›Р°СЂСЃР° Р±РѕР»СЊС€Рµ РЅРµ РёРјРµСЋС‚ РЅРёРєР°РєРѕРіРѕ СЃРјС‹СЃР»Р°.");
 		Log_SetTopicStatus(THELISTFORNC,LOG_FAILED);
 		Lares_BringListBack = LOG_FAILED;
 		Diego_BringList = LOG_FAILED;
 	};
 	if(Npc_KnowsInfo(hero,Info_Diego_BringList_Offer) && !Npc_KnowsInfo(hero,Info_Diego_BringList_Success))
 	{
-		B_LogEntry(CH1_BringList,"Список припасов для Старой шахты больше не имеет никакого смысла.");
+		B_LogEntry(CH1_BringList,"РЎРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹ Р±РѕР»СЊС€Рµ РЅРµ РёРјРµРµС‚ РЅРёРєР°РєРѕРіРѕ СЃРјС‹СЃР»Р°.");
 		Log_SetTopicStatus(CH1_BringList,LOG_FAILED);
 		Lares_BringListBack = LOG_FAILED;
 		Diego_BringList = LOG_FAILED;
 	};
 	if((Cronos_Messenger == LOG_RUNNING) && !Npc_KnowsInfo(hero,DIA_Milten_NochEinBrief))
 	{
-		B_LogEntry(KDWLETTER,"Все маги Огня мертвы, я не успел передать им письмо...");
+		B_LogEntry(KDWLETTER,"Р’СЃРµ РјР°РіРё РћРіРЅСЏ РјРµСЂС‚РІС‹, СЏ РЅРµ СѓСЃРїРµР» РїРµСЂРµРґР°С‚СЊ РёРј РїРёСЃСЊРјРѕ...");
 		Log_SetTopicStatus(KDWLETTER,LOG_FAILED);
 		Cronos_Messenger = LOG_FAILED;
 	};
 	if(PYROCAR_MESSENGER == LOG_RUNNING)
 	{
-		B_LogEntry(KDFLETTER,"Все маги Огня мертвы, я не успел передать им письмо...");
+		B_LogEntry(KDFLETTER,"Р’СЃРµ РјР°РіРё РћРіРЅСЏ РјРµСЂС‚РІС‹, СЏ РЅРµ СѓСЃРїРµР» РїРµСЂРµРґР°С‚СЊ РёРј РїРёСЃСЊРјРѕ...");
 		Log_SetTopicStatus(KDFLETTER,LOG_FAILED);
 		PYROCAR_MESSENGER = LOG_FAILED;
 	};
@@ -47,25 +47,25 @@ func void b_failch4quests()
 	{
 		Dexter_GetKalomsRecipe = LOG_FAILED;
 		Log_SetTopicStatus(CH1_KalomsRecipe,LOG_FAILED);
-		B_LogEntry(CH1_KalomsRecipe,"Не думаю, что теперь Декстеру это нужно.");
+		B_LogEntry(CH1_KalomsRecipe,"РќРµ РґСѓРјР°СЋ, С‡С‚Рѕ С‚РµРїРµСЂСЊ Р”РµРєСЃС‚РµСЂСѓ СЌС‚Рѕ РЅСѓР¶РЅРѕ.");
 	};
 	if(Fisk_GetNewHehler == LOG_RUNNING)
 	{
 		Fisk_GetNewHehler = LOG_FAILED;
 		Log_SetTopicStatus(CH1_FiskNewDealer,LOG_FAILED);
-		B_LogEntry(CH1_FiskNewDealer,"Теперь между лагерями открытая война, никто не согласится на такое!");
+		B_LogEntry(CH1_FiskNewDealer,"РўРµРїРµСЂСЊ РјРµР¶РґСѓ Р»Р°РіРµСЂСЏРјРё РѕС‚РєСЂС‹С‚Р°СЏ РІРѕР№РЅР°, РЅРёРєС‚Рѕ РЅРµ СЃРѕРіР»Р°СЃРёС‚СЃСЏ РЅР° С‚Р°РєРѕРµ!");
 	};
 	if(Snaf_Zutaten == LOG_RUNNING)
 	{
 		Snaf_Zutaten = LOG_FAILED;
 		Log_SetTopicStatus(CH1_SnafsRecipe,LOG_FAILED);
-		B_LogEntry(CH1_SnafsRecipe,"Теперь лучше не появляться в Старом лагере...");
+		B_LogEntry(CH1_SnafsRecipe,"РўРµРїРµСЂСЊ Р»СѓС‡С€Рµ РЅРµ РїРѕСЏРІР»СЏС‚СЊСЃСЏ РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ...");
 	};
 	if(Thorus_MordragKo == LOG_RUNNING)
 	{
 		Thorus_MordragKo = LOG_FAILED;
 		Log_SetTopicStatus(CH1_MordragKO,LOG_FAILED);
-		B_LogEntry(CH1_MordragKO,"Теперь лучше не появляться в Старом лагере...");
+		B_LogEntry(CH1_MordragKO,"РўРµРїРµСЂСЊ Р»СѓС‡С€Рµ РЅРµ РїРѕСЏРІР»СЏС‚СЊСЃСЏ РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ...");
 	};
 };
 

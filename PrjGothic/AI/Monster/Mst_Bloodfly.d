@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Bloodfly(C_Npc)
 {
-	name[0] = "Ψεπψενό";
+	name[0] = "Π¨ΠµΡ€ΡΠµΠ½Ρ";
 	guild = GIL_BLOODFLY;
 	aivar[AIV_IMPORTANT] = ID_BLOODFLY;
 	level = 7;
@@ -51,6 +51,13 @@ instance HelpBrothers_Bloodfly(Mst_Default_Bloodfly)
 	Set_Bloodfly_Visuals();
 	Npc_SetToFistMode(self);
 	CreateInvItems(self,ItAt_Bloodfly_01,2);
-	name[0] = "Ηλξανϋι ψεπψενό";
+	name[0] = "Π—Π»ΠΎΠ±Π½Ρ‹ΠΉ ΡΠµΡ€ΡΠµΠ½Ρ";
+};
+instance Bloodfly_Egg(Egg)
+{
+	name[0] = "Π―ΠΉΡ†ΠΎ ΡΠµΡ€ΡΠ½Ρ";
+	guild = GIL_BLOODFLY;
+	spawnDelay = 480;
+	start_aistate = B_MM_Respawn;
 };
 

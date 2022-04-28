@@ -30,7 +30,7 @@ func void ZS_ReactToDamage()
 		{
 			QUENTIN_GANG_QUEST_STARTED = LOG_FAILED;
 			Log_SetTopicStatus(QUENTIN_GANG,LOG_FAILED);
-			B_LogEntry(QUENTIN_GANG,"Теперь можно забыть о связях с преступным миром!");
+			B_LogEntry(QUENTIN_GANG,"РўРµРїРµСЂСЊ РјРѕР¶РЅРѕ Р·Р°Р±С‹С‚СЊ Рѕ СЃРІСЏР·СЏС… СЃ РїСЂРµСЃС‚СѓРїРЅС‹Рј РјРёСЂРѕРј!");
 		};
 	};
 	var C_ITEM itm;

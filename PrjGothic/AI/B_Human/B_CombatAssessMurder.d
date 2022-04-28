@@ -15,7 +15,7 @@ func void B_CombatAssessMurder()
 				PrintDebugNpc(PD_ZS_Check,"...NSC ist in ZS_ProclaimAndPunish!");
 				if(Hlp_GetInstanceID(victim) == Hlp_GetInstanceID(hero))
 				{
-					PrintDebugNpc(PD_ZS_Check,"...Getöteter ist auch eigenes Ziel!");
+					PrintDebugNpc(PD_ZS_Check,"...GetÑ†teter ist auch eigenes Ziel!");
 					B_FullStop(self);
 					AI_ContinueRoutine(self);
 				};

@@ -36,7 +36,7 @@ func int ZS_Attack_Loop()
 		!Hlp_IsValidNpc(other)
 	)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Ziel ist kampf-unf‰hig oder ung¸ltig!");
+		PrintDebugNpc(PD_ZS_Check,"...Ziel ist kampf-unf–¥hig oder ung—åltig!");
 		Npc_PerceiveAll(self);
 		self.aivar[AIV_LASTTARGET] = Hlp_GetInstanceID(other);
 		if(Npc_GetNextTarget(self))
@@ -68,12 +68,12 @@ func int ZS_Attack_Loop()
 			)
 		)
 		{
-			PrintDebugNpc(PD_ZS_Check,"...WEDER NSC noch Gegner f¸hren Fernkampfwaffen!");
+			PrintDebugNpc(PD_ZS_Check,"...WEDER NSC noch Gegner f—åhren Fernkampfwaffen!");
 			if(
 				(Npc_GetDistToNpc(self,other) > HAI_DIST_ABORT_MELEE) &&
 				(self.aivar[AIV_LASTHITBYRANGEDWEAPON] == FALSE))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...Gegner auﬂerhalb Nahkampfreichweite & letzter Treffer nicht durch Fernkampfwaffe!");
+				PrintDebugNpc(PD_ZS_Check,"...Gegner au–Øerhalb Nahkampfreichweite & letzter Treffer nicht durch Fernkampfwaffe!");
 				B_FullStop(self);
 				PrintGlobals(PD_ZS_Check);
 				if(C_NpcIsHuman(other))
@@ -91,10 +91,10 @@ func int ZS_Attack_Loop()
 		}
 		else
 		{
-			PrintDebugNpc(PD_ZS_Check,"...entweder NSC oder Gegner F‹HREN Fernkampfwaffen!");
+			PrintDebugNpc(PD_ZS_Check,"...entweder NSC oder Gegner F–¨HREN Fernkampfwaffen!");
 			if(Npc_GetDistToNpc(self,other) > HAI_DIST_ABORT_RANGED)
 			{
-				PrintDebugNpc(PD_ZS_Check,"...Gegner auﬂerhalb Fernkampfreichweite!");
+				PrintDebugNpc(PD_ZS_Check,"...Gegner au–Øerhalb Fernkampfreichweite!");
 				B_FullStop(self);
 				return LOOP_END;
 			};
@@ -139,12 +139,19 @@ func int ZS_Attack_Loop()
 		AI_SetWalkMode(self,NPC_RUN);
 		Npc_SetStateTime(self,0);
 	};
+	if(!other.fight_tactic)
+	{
+		PrintDebugNpc(PD_ZS_Check,"...Target havn't fight tactic!");
+		return LOOP_END;
+	};
 	if(other.aivar[AIV_INVINCIBLE] == FALSE)
 	{
+		PrintDebugNpc(PD_ZS_Check,"...Target not talking!");
 		AI_Attack(self);
 	}
 	else
 	{
+		PrintDebugNpc(PD_ZS_Check,"...Target talking!");
 		AI_Wait(self,0.5);
 	};
 	if(
@@ -191,7 +198,7 @@ func void ZS_Attack_End()
 	PrintGlobals(PD_ZS_Check);
 	if(Npc_IsInState(other,ZS_Unconscious) && (self.fight_tactic != FAI_HUMAN_RANGED))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Ziel bewuﬂtlos/magisch schlafend und NSC kein purer Fernk‰mpfer!");
+		PrintDebugNpc(PD_ZS_Check,"...Ziel bewu–Øtlos/magisch schlafend und NSC kein purer Fernk–¥mpfer!");
 		if(Npc_GetAttitude(self,other) == ATT_FRIENDLY)
 		{
 			B_RemoveWeapon(self);
@@ -225,7 +232,7 @@ func void ZS_Attack_End()
 	{
 		if(self.fight_tactic != FAI_HUMAN_RANGED)
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Pl¸nderbedingungen er¸llt!");
+			PrintDebugNpc(PD_ZS_Check,"...Pl—ånderbedingungen er—ållt!");
 			AI_StartState(self,ZS_AssessBody,1,"");
 			return;
 		};
@@ -282,7 +289,12 @@ func void B_CombatFightTogether()
 	Print("...........................FIGHT TOGETHER doesn't work");
 	var C_NPC her;
 	her = Hlp_GetNpc(PC_Hero);
-	if(Npc_GetDistToPlayer(self) < 3000 && Hlp_IsValidNpc(hero) && (Hlp_GetInstanceID(her) != Hlp_GetInstanceID(hero)) && Npc_HasReadiedWeapon(hero))
+	if(
+		Npc_GetDistToPlayer(self) < 3000
+	&&	Hlp_IsValidNpc(hero)
+	&& (Hlp_GetInstanceID(her) != Hlp_GetInstanceID(hero))
+	&&	Npc_HasReadiedWeapon(hero)
+	)
 	{
 		if(hero.aivar[AIV_LASTTARGET] == self.aivar[AIV_LASTTARGET])
 		{

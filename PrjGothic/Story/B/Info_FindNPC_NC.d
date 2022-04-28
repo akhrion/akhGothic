@@ -5,7 +5,7 @@ instance Info_FindNPC_NC(C_Info)
 	condition = Info_FindNPC_NC_Condition;
 	information = Info_FindNPC_NC_Info;
 	permanent = 1;
-	description = "Где находится...";
+	description = "Р“РґРµ РЅР°С…РѕРґРёС‚СЃСЏ...";
 };
 
 
@@ -25,22 +25,22 @@ func void Info_FindNPC_NC_Info()
 	Cronos = Hlp_GetNpc(KDW_604_Cronos);
 	if(Cronos.aivar[AIV_FINDABLE] == TRUE)
 	{
-		Info_AddChoice(Info_FindNPC_NC,"...один из магов?",Info_FindNPC_NC_Mage);
+		Info_AddChoice(Info_FindNPC_NC,"...РѕРґРёРЅ РёР· РјР°РіРѕРІ?",Info_FindNPC_NC_Mage);
 	};
 	gorn = Hlp_GetNpc(PC_Fighter);
 	if(gorn.aivar[AIV_FINDABLE] == TRUE)
 	{
-		Info_AddChoice(Info_FindNPC_NC,"...Горн?",Info_FindNPC_NC_Gorn);
+		Info_AddChoice(Info_FindNPC_NC,"...Р“РѕСЂРЅ?",Info_FindNPC_NC_Gorn);
 	};
 	Lares = Hlp_GetNpc(Org_801_Lares);
 	if(Lares.aivar[AIV_FINDABLE] == TRUE)
 	{
-		Info_AddChoice(Info_FindNPC_NC,"...Ларс?",Info_FindNPC_NC_Lares);
+		Info_AddChoice(Info_FindNPC_NC,"...Р›Р°СЂСЃ?",Info_FindNPC_NC_Lares);
 	};
 	Lee = Hlp_GetNpc(Sld_700_Lee);
 	if(Lee.aivar[AIV_FINDABLE] == TRUE)
 	{
-		Info_AddChoice(Info_FindNPC_NC,"...Ли?",Info_FindNPC_NC_Lee);
+		Info_AddChoice(Info_FindNPC_NC,"...Р›Рё?",Info_FindNPC_NC_Lee);
 	};
 };
 
@@ -52,7 +52,7 @@ func void Info_FindNPC_NC_BACK()
 func void Info_FindNPC_NC_Gorn()
 {
 	var C_Npc gorn;
-	AI_Output(other,self,"Info_FindNPC_NC_Gorn_15_00");	//Где я могу найти Горна?
+	AI_Output(other,self,"Info_FindNPC_NC_Gorn_15_00");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё Р“РѕСЂРЅР°?
 	gorn = Hlp_GetNpc(PC_Fighter);
 	if(Npc_GetDistToNpc(self,gorn) < PERC_DIST_INTERMEDIAT)
 	{
@@ -62,26 +62,26 @@ func void Info_FindNPC_NC_Gorn()
 	{
 		if(self.voice == 6)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Gorn_06_01");	//Когда зайдешь в пещеру, сверни направо. Прямо перед собой ты увидишь несколько домов. Он живет в одном из них.
+			AI_Output(self,other,"Info_FindNPC_NC_Gorn_06_01");	//РљРѕРіРґР° Р·Р°Р№РґРµС€СЊ РІ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ. РџСЂСЏРјРѕ РїРµСЂРµРґ СЃРѕР±РѕР№ С‚С‹ СѓРІРёРґРёС€СЊ РЅРµСЃРєРѕР»СЊРєРѕ РґРѕРјРѕРІ. РћРЅ Р¶РёРІРµС‚ РІ РѕРґРЅРѕРј РёР· РЅРёС….
 		}
 		else if(self.voice == 7)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Gorn_07_01");	//От входа в пещеру сверни направо. Ты сразу же увидишь несколько домиков. Он живет в одном из них.
+			AI_Output(self,other,"Info_FindNPC_NC_Gorn_07_01");	//РћС‚ РІС…РѕРґР° РІ РїРµС‰РµСЂСѓ СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ. РўС‹ СЃСЂР°Р·Сѓ Р¶Рµ СѓРІРёРґРёС€СЊ РЅРµСЃРєРѕР»СЊРєРѕ РґРѕРјРёРєРѕРІ. РћРЅ Р¶РёРІРµС‚ РІ РѕРґРЅРѕРј РёР· РЅРёС….
 		}
 		else if(self.voice == 13)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Gorn_13_01");	//Когда зайдешь в пещеру, сверни направо. Прямо перед собой ты увидишь несколько домов. Он живет в одном из них.
+			AI_Output(self,other,"Info_FindNPC_NC_Gorn_13_01");	//РљРѕРіРґР° Р·Р°Р№РґРµС€СЊ РІ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ. РџСЂСЏРјРѕ РїРµСЂРµРґ СЃРѕР±РѕР№ С‚С‹ СѓРІРёРґРёС€СЊ РЅРµСЃРєРѕР»СЊРєРѕ РґРѕРјРѕРІ. РћРЅ Р¶РёРІРµС‚ РІ РѕРґРЅРѕРј РёР· РЅРёС….
 		};
 	}
 	else if(self.guild == GIL_SLD)
 	{
 		if(self.voice == 8)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Gorn_08_01");	//Когда зайдешь в пещеру, сверни направо. Прямо перед собой ты увидишь несколько домов. Он живет в одном из них.
+			AI_Output(self,other,"Info_FindNPC_NC_Gorn_08_01");	//РљРѕРіРґР° Р·Р°Р№РґРµС€СЊ РІ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ. РџСЂСЏРјРѕ РїРµСЂРµРґ СЃРѕР±РѕР№ С‚С‹ СѓРІРёРґРёС€СЊ РЅРµСЃРєРѕР»СЊРєРѕ РґРѕРјРѕРІ. РћРЅ Р¶РёРІРµС‚ РІ РѕРґРЅРѕРј РёР· РЅРёС….
 		}
 		else if(self.voice == 11)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Gorn_11_01");	//Когда зайдешь в пещеру, сверни направо. Прямо перед собой ты увидишь несколько домов. Он живет в одном из них.
+			AI_Output(self,other,"Info_FindNPC_NC_Gorn_11_01");	//РљРѕРіРґР° Р·Р°Р№РґРµС€СЊ РІ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ. РџСЂСЏРјРѕ РїРµСЂРµРґ СЃРѕР±РѕР№ С‚С‹ СѓРІРёРґРёС€СЊ РЅРµСЃРєРѕР»СЊРєРѕ РґРѕРјРѕРІ. РћРЅ Р¶РёРІРµС‚ РІ РѕРґРЅРѕРј РёР· РЅРёС….
 		};
 	};
 	Info_ClearChoices(Info_FindNPC_NC);
@@ -90,7 +90,7 @@ func void Info_FindNPC_NC_Gorn()
 func void Info_FindNPC_NC_Lares()
 {
 	var C_Npc Lares;
-	AI_Output(other,self,"Info_FindNPC_NC_Lares_15_00");	//Где я могу найти Ларса?
+	AI_Output(other,self,"Info_FindNPC_NC_Lares_15_00");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё Р›Р°СЂСЃР°?
 	Lares = Hlp_GetNpc(Org_801_Lares);
 	if(Npc_GetDistToNpc(self,Lares) < PERC_DIST_INTERMEDIAT)
 	{
@@ -100,26 +100,26 @@ func void Info_FindNPC_NC_Lares()
 	{
 		if(self.voice == 6)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lares_06_01");	//В дальнем конце пещеры, слева. Его невозможно пропустить, ведь его люди сразу тебя остановят.
+			AI_Output(self,other,"Info_FindNPC_NC_Lares_06_01");	//Р’ РґР°Р»СЊРЅРµРј РєРѕРЅС†Рµ РїРµС‰РµСЂС‹, СЃР»РµРІР°. Р•РіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ, РІРµРґСЊ РµРіРѕ Р»СЋРґРё СЃСЂР°Р·Сѓ С‚РµР±СЏ РѕСЃС‚Р°РЅРѕРІСЏС‚.
 		}
 		else if(self.voice == 7)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lares_07_01");	//От входа в пещеру поверни налево и иди прямо. Ты его не пропустишь. Когда тебя остановят, считай, что ты нашел его.
+			AI_Output(self,other,"Info_FindNPC_NC_Lares_07_01");	//РћС‚ РІС…РѕРґР° РІ РїРµС‰РµСЂСѓ РїРѕРІРµСЂРЅРё РЅР°Р»РµРІРѕ Рё РёРґРё РїСЂСЏРјРѕ. РўС‹ РµРіРѕ РЅРµ РїСЂРѕРїСѓСЃС‚РёС€СЊ. РљРѕРіРґР° С‚РµР±СЏ РѕСЃС‚Р°РЅРѕРІСЏС‚, СЃС‡РёС‚Р°Р№, С‡С‚Рѕ С‚С‹ РЅР°С€РµР» РµРіРѕ.
 		}
 		else if(self.voice == 13)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lares_13_01");	//В дальнем конце пещеры, слева. Его невозможно пропустить, ведь его люди сразу тебя остановят.
+			AI_Output(self,other,"Info_FindNPC_NC_Lares_13_01");	//Р’ РґР°Р»СЊРЅРµРј РєРѕРЅС†Рµ РїРµС‰РµСЂС‹, СЃР»РµРІР°. Р•РіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ, РІРµРґСЊ РµРіРѕ Р»СЋРґРё СЃСЂР°Р·Сѓ С‚РµР±СЏ РѕСЃС‚Р°РЅРѕРІСЏС‚.
 		};
 	}
 	else if(self.guild == GIL_SLD)
 	{
 		if(self.voice == 8)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lares_08_01");	//В дальнем конце пещеры, слева. Его невозможно пропустить, ведь его люди сразу тебя остановят.
+			AI_Output(self,other,"Info_FindNPC_NC_Lares_08_01");	//Р’ РґР°Р»СЊРЅРµРј РєРѕРЅС†Рµ РїРµС‰РµСЂС‹, СЃР»РµРІР°. Р•РіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ, РІРµРґСЊ РµРіРѕ Р»СЋРґРё СЃСЂР°Р·Сѓ С‚РµР±СЏ РѕСЃС‚Р°РЅРѕРІСЏС‚.
 		}
 		else if(self.voice == 11)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lares_11_01");	//В дальнем конце пещеры, слева. Его невозможно пропустить, ведь его люди сразу тебя остановят.
+			AI_Output(self,other,"Info_FindNPC_NC_Lares_11_01");	//Р’ РґР°Р»СЊРЅРµРј РєРѕРЅС†Рµ РїРµС‰РµСЂС‹, СЃР»РµРІР°. Р•РіРѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ, РІРµРґСЊ РµРіРѕ Р»СЋРґРё СЃСЂР°Р·Сѓ С‚РµР±СЏ РѕСЃС‚Р°РЅРѕРІСЏС‚.
 		};
 	};
 	Info_ClearChoices(Info_FindNPC_NC);
@@ -128,7 +128,7 @@ func void Info_FindNPC_NC_Lares()
 func void Info_FindNPC_NC_Lee()
 {
 	var C_Npc Lee;
-	AI_Output(other,self,"Info_FindNPC_NC_Lee_15_00");	//Где я могу найти Ли?
+	AI_Output(other,self,"Info_FindNPC_NC_Lee_15_00");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё Р›Рё?
 	Lee = Hlp_GetNpc(Sld_700_Lee);
 	if(Npc_GetDistToNpc(self,Lee) < PERC_DIST_INTERMEDIAT)
 	{
@@ -138,26 +138,26 @@ func void Info_FindNPC_NC_Lee()
 	{
 		if(self.voice == 6)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lee_06_01");	//Зайди в большую пещеру, сверни направо и поднимись наверх. Он будет там.
+			AI_Output(self,other,"Info_FindNPC_NC_Lee_06_01");	//Р—Р°Р№РґРё РІ Р±РѕР»СЊС€СѓСЋ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ Рё РїРѕРґРЅРёРјРёСЃСЊ РЅР°РІРµСЂС…. РћРЅ Р±СѓРґРµС‚ С‚Р°Рј.
 		}
 		else if(self.voice == 7)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lee_07_01");	//Поверни направо от входа в большую пещеру и поднимись наверх.
+			AI_Output(self,other,"Info_FindNPC_NC_Lee_07_01");	//РџРѕРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ РѕС‚ РІС…РѕРґР° РІ Р±РѕР»СЊС€СѓСЋ РїРµС‰РµСЂСѓ Рё РїРѕРґРЅРёРјРёСЃСЊ РЅР°РІРµСЂС….
 		}
 		else if(self.voice == 13)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lee_13_01");	//Зайди в большую пещеру, сверни направо и поднимись наверх. Он будет там.
+			AI_Output(self,other,"Info_FindNPC_NC_Lee_13_01");	//Р—Р°Р№РґРё РІ Р±РѕР»СЊС€СѓСЋ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ Рё РїРѕРґРЅРёРјРёСЃСЊ РЅР°РІРµСЂС…. РћРЅ Р±СѓРґРµС‚ С‚Р°Рј.
 		};
 	}
 	else if(self.guild == GIL_SLD)
 	{
 		if(self.voice == 8)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lee_08_01");	//Зайди в большую пещеру, сверни направо и поднимись наверх. Он будет там.
+			AI_Output(self,other,"Info_FindNPC_NC_Lee_08_01");	//Р—Р°Р№РґРё РІ Р±РѕР»СЊС€СѓСЋ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ Рё РїРѕРґРЅРёРјРёСЃСЊ РЅР°РІРµСЂС…. РћРЅ Р±СѓРґРµС‚ С‚Р°Рј.
 		}
 		else if(self.voice == 11)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Lee_11_01");	//Зайди в большую пещеру, сверни направо и поднимись наверх. Он будет там.
+			AI_Output(self,other,"Info_FindNPC_NC_Lee_11_01");	//Р—Р°Р№РґРё РІ Р±РѕР»СЊС€СѓСЋ РїРµС‰РµСЂСѓ, СЃРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ Рё РїРѕРґРЅРёРјРёСЃСЊ РЅР°РІРµСЂС…. РћРЅ Р±СѓРґРµС‚ С‚Р°Рј.
 		};
 	};
 	Info_ClearChoices(Info_FindNPC_NC);
@@ -166,7 +166,7 @@ func void Info_FindNPC_NC_Lee()
 func void Info_FindNPC_NC_Mage()
 {
 	var C_Npc Cronos;
-	AI_Output(other,self,"Info_FindNPC_NC_Cronos_15_00");	//Где я могу найти мага?
+	AI_Output(other,self,"Info_FindNPC_NC_Cronos_15_00");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё РјР°РіР°?
 	Cronos = Hlp_GetNpc(KDW_604_Cronos);
 	if(Npc_GetDistToNpc(self,Cronos) < PERC_DIST_INTERMEDIAT)
 	{
@@ -176,26 +176,26 @@ func void Info_FindNPC_NC_Mage()
 	{
 		if(self.voice == 6)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Cronos_06_01");	//Маги живут в верхней части нашей пещеры. Они никогда не покидают это место, но иногда один из них приходит в центр пещеры. Там ты и сможешь его встретить.
+			AI_Output(self,other,"Info_FindNPC_NC_Cronos_06_01");	//РњР°РіРё Р¶РёРІСѓС‚ РІ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё РЅР°С€РµР№ РїРµС‰РµСЂС‹. РћРЅРё РЅРёРєРѕРіРґР° РЅРµ РїРѕРєРёРґР°СЋС‚ СЌС‚Рѕ РјРµСЃС‚Рѕ, РЅРѕ РёРЅРѕРіРґР° РѕРґРёРЅ РёР· РЅРёС… РїСЂРёС…РѕРґРёС‚ РІ С†РµРЅС‚СЂ РїРµС‰РµСЂС‹. РўР°Рј С‚С‹ Рё СЃРјРѕР¶РµС€СЊ РµРіРѕ РІСЃС‚СЂРµС‚РёС‚СЊ.
 		}
 		else if(self.voice == 7)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Cronos_07_01");	//Маги живут в верхней части пещеры, справа. Но иногда один из них стоит возле горы руды внизу.
+			AI_Output(self,other,"Info_FindNPC_NC_Cronos_07_01");	//РњР°РіРё Р¶РёРІСѓС‚ РІ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё РїРµС‰РµСЂС‹, СЃРїСЂР°РІР°. РќРѕ РёРЅРѕРіРґР° РѕРґРёРЅ РёР· РЅРёС… СЃС‚РѕРёС‚ РІРѕР·Р»Рµ РіРѕСЂС‹ СЂСѓРґС‹ РІРЅРёР·Сѓ.
 		}
 		else if(self.voice == 13)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Cronos_13_01");	//Маги живут в верхней части нашей пещеры. Они никогда не покидают это место, но иногда один из них приходит в центр пещеры. Там ты и сможешь его встретить.
+			AI_Output(self,other,"Info_FindNPC_NC_Cronos_13_01");	//РњР°РіРё Р¶РёРІСѓС‚ РІ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё РЅР°С€РµР№ РїРµС‰РµСЂС‹. РћРЅРё РЅРёРєРѕРіРґР° РЅРµ РїРѕРєРёРґР°СЋС‚ СЌС‚Рѕ РјРµСЃС‚Рѕ, РЅРѕ РёРЅРѕРіРґР° РѕРґРёРЅ РёР· РЅРёС… РїСЂРёС…РѕРґРёС‚ РІ С†РµРЅС‚СЂ РїРµС‰РµСЂС‹. РўР°Рј С‚С‹ Рё СЃРјРѕР¶РµС€СЊ РµРіРѕ РІСЃС‚СЂРµС‚РёС‚СЊ.
 		};
 	}
 	else if(self.guild == GIL_SLD)
 	{
 		if(self.voice == 8)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Cronos_08_01");	//Маги живут в верхней части нашей пещеры. Они никогда не покидают это место, но иногда один из них приходит в центр пещеры. Там ты и сможешь его встретить.
+			AI_Output(self,other,"Info_FindNPC_NC_Cronos_08_01");	//РњР°РіРё Р¶РёРІСѓС‚ РІ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё РЅР°С€РµР№ РїРµС‰РµСЂС‹. РћРЅРё РЅРёРєРѕРіРґР° РЅРµ РїРѕРєРёРґР°СЋС‚ СЌС‚Рѕ РјРµСЃС‚Рѕ, РЅРѕ РёРЅРѕРіРґР° РѕРґРёРЅ РёР· РЅРёС… РїСЂРёС…РѕРґРёС‚ РІ С†РµРЅС‚СЂ РїРµС‰РµСЂС‹. РўР°Рј С‚С‹ Рё СЃРјРѕР¶РµС€СЊ РµРіРѕ РІСЃС‚СЂРµС‚РёС‚СЊ.
 		}
 		else if(self.voice == 11)
 		{
-			AI_Output(self,other,"Info_FindNPC_NC_Cronos_11_01");	//Маги живут в верхней части нашей пещеры. Они никогда не покидают это место, но иногда один из них приходит в центр пещеры. Там ты и сможешь его встретить.
+			AI_Output(self,other,"Info_FindNPC_NC_Cronos_11_01");	//РњР°РіРё Р¶РёРІСѓС‚ РІ РІРµСЂС…РЅРµР№ С‡Р°СЃС‚Рё РЅР°С€РµР№ РїРµС‰РµСЂС‹. РћРЅРё РЅРёРєРѕРіРґР° РЅРµ РїРѕРєРёРґР°СЋС‚ СЌС‚Рѕ РјРµСЃС‚Рѕ, РЅРѕ РёРЅРѕРіРґР° РѕРґРёРЅ РёР· РЅРёС… РїСЂРёС…РѕРґРёС‚ РІ С†РµРЅС‚СЂ РїРµС‰РµСЂС‹. РўР°Рј С‚С‹ Рё СЃРјРѕР¶РµС€СЊ РµРіРѕ РІСЃС‚СЂРµС‚РёС‚СЊ.
 		};
 	};
 	Info_ClearChoices(Info_FindNPC_NC);

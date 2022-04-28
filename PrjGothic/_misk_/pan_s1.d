@@ -51,7 +51,7 @@ instance PC_PAN1(C_Info)
 	information = pc_pan1_info;
 	important = 0;
 	permanent = 1;
-	description = "Пожарить 1 кусок мяса.";
+	description = "РџРѕР¶Р°СЂРёС‚СЊ 1 РєСѓСЃРѕРє РјСЏСЃР°.";
 };
 
 
@@ -68,7 +68,7 @@ func void pc_pan1_info()
 	CreateInvItems(self,ItFoMutton,1);
 	Npc_RemoveInvItems(self,ItFoMuttonRaw,1);
 	AI_Wait(self,1);
-	PrintScreen("Получен 1 кусок жареного мяса.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅ 1 РєСѓСЃРѕРє Р¶Р°СЂРµРЅРѕРіРѕ РјСЏСЃР°.",-1,-1,"font_old_10_white.tga",2);
 };
 
 
@@ -80,7 +80,7 @@ instance PC_PAN5(C_Info)
 	information = pc_pan5_info;
 	important = 0;
 	permanent = 1;
-	description = "Пожарить 5 кусков мяса.";
+	description = "РџРѕР¶Р°СЂРёС‚СЊ 5 РєСѓСЃРєРѕРІ РјСЏСЃР°.";
 };
 
 
@@ -97,7 +97,7 @@ func void pc_pan5_info()
 	CreateInvItems(self,ItFoMutton,5);
 	Npc_RemoveInvItems(self,ItFoMuttonRaw,5);
 	AI_Wait(self,2);
-	PrintScreen("Получено 5 кусков жареного мяса.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ 5 РєСѓСЃРєРѕРІ Р¶Р°СЂРµРЅРѕРіРѕ РјСЏСЃР°.",-1,-1,"font_old_10_white.tga",2);
 };
 
 
@@ -109,7 +109,7 @@ instance PC_PAN10(C_Info)
 	information = pc_pan10_info;
 	important = 0;
 	permanent = 1;
-	description = "Пожарить 10 кусков мяса.";
+	description = "РџРѕР¶Р°СЂРёС‚СЊ 10 РєСѓСЃРєРѕРІ РјСЏСЃР°.";
 };
 
 
@@ -126,25 +126,25 @@ func void pc_pan10_info()
 	CreateInvItems(self,ItFoMutton,10);
 	Npc_RemoveInvItems(self,ItFoMuttonRaw,10);
 	AI_Wait(self,3);
-	PrintScreen("Получено 10 кусков жареного мяса.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РџРѕР»СѓС‡РµРЅРѕ 10 РєСѓСЃРєРѕРІ Р¶Р°СЂРµРЅРѕРіРѕ РјСЏСЃР°.",-1,-1,"font_old_10_white.tga",2);
 };
 
 
 instance PC_PANALL(C_Info)
 {
 	npc = PC_Hero;
-	nr = 9;
+	nr = 11;
 	condition = pc_panall_condition;
 	information = pc_panall_info;
 	important = 0;
 	permanent = 1;
-	description = "Пожарить все куски мяса.";
+	description = "РџРѕР¶Р°СЂРёС‚СЊ РІСЃРµ РєСѓСЃРєРё РјСЏСЃР°.";
 };
 
 
 func int pc_panall_condition()
 {
-	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PAN) && (Npc_HasItems(hero,ItFoMuttonRaw) < 10) && (Npc_HasItems(hero,ItFoMuttonRaw) > 1) && (Npc_HasItems(hero,ItFoMuttonRaw) != 5))
+	if((PLAYER_MOBSI_PRODUCTION == MOBSI_PAN) && (Npc_HasItems(hero,ItFoMuttonRaw) != 10) && (Npc_HasItems(hero,ItFoMuttonRaw) > 1) && (Npc_HasItems(hero,ItFoMuttonRaw) != 5))
 	{
 		return TRUE;
 	};
@@ -155,6 +155,6 @@ func void pc_panall_info()
 	CreateInvItems(self,ItFoMutton,Npc_HasItems(self,ItFoMuttonRaw));
 	Npc_RemoveInvItems(self,ItFoMuttonRaw,Npc_HasItems(self,ItFoMuttonRaw));
 	AI_Wait(self,3);
-	PrintScreen("Обжарены все куски сырого мяса.",-1,-1,"font_old_10_white.tga",2);
+	PrintScreen("РћР±Р¶Р°СЂРµРЅС‹ РІСЃРµ РєСѓСЃРєРё СЃС‹СЂРѕРіРѕ РјСЏСЃР°.",-1,-1,"font_old_10_white.tga",2);
 };
 

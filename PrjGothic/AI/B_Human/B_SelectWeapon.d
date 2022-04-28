@@ -10,18 +10,18 @@ func void B_FillQuiver(var C_Npc slf)
 		PrintDebugNpc(PD_ZS_DETAIL,"...aktive Waffe benutzt Pfeile!");
 		addedAmmo = 20 - C_NpcHasAmmo(slf,ItAmArrow);
 		CreateInvItems(slf,ItAmArrow,addedAmmo);
-		PrintDebugInt(PD_ZS_DETAIL,"...hinzugefьgte Pfeile: ",addedAmmo);
+		PrintDebugInt(PD_ZS_DETAIL,"...hinzugefСЊgte Pfeile: ",addedAmmo);
 	}
 	else if(readiedWeapon.munition == ItAmBolt)
 	{
 		PrintDebugNpc(PD_ZS_DETAIL,"...aktive Waffe benutzt Bolzen!");
 		addedAmmo = 20 - C_NpcHasAmmo(slf,ItAmBolt);
 		CreateInvItems(slf,ItAmBolt,addedAmmo);
-		PrintDebugInt(PD_ZS_DETAIL,"...hinzugefьgte Bolzen: ",addedAmmo);
+		PrintDebugInt(PD_ZS_DETAIL,"...hinzugefСЊgte Bolzen: ",addedAmmo);
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_DETAIL,"...ERROR: aktive Waffe hat KEINE gьltige Munitionsart!!!");
+		PrintDebugNpc(PD_ZS_DETAIL,"...ERROR: aktive Waffe hat KEINE gСЊltige Munitionsart!!!");
 	};
 };
 
@@ -118,10 +118,10 @@ func void B_DrawSpell(var C_Npc slf,var int spell,var int mana)
 		manaMax = slf.attribute[ATR_MANA_MAX];
 		if(manaLeft < (manaMax / 2))
 		{
-			PrintDebugInt(PD_ZS_Check,"...Mana ьbrig: ",manaLeft);
+			PrintDebugInt(PD_ZS_Check,"...Mana СЊbrig: ",manaLeft);
 			manaRefill = (manaMax / 2) - manaLeft;
 			Npc_ChangeAttribute(slf,ATR_MANA,manaRefill);
-			PrintDebugInt(PD_ZS_Check,"...Mana hinzugefьgt: ",manaRefill);
+			PrintDebugInt(PD_ZS_Check,"...Mana hinzugefСЊgt: ",manaRefill);
 		};
 	};
 };
@@ -205,7 +205,7 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 			PrintDebugNpc(PD_ZS_Check,"...Windfist!");
 			if((Npc_GetDistToNpc(slf,oth) > SPL_RANGE_WINDFIST) && (slf.attribute[ATR_MANA] >= SPL_SENDCAST_WINDFIST))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...groЯer!");
+				PrintDebugNpc(PD_ZS_Check,"...groРЇer!");
 				B_DrawSpell(slf,SPL_WINDFIST,SPL_SENDCAST_WINDFIST);
 			}
 			else if((Npc_GetDistToNpc(slf,oth) > (SPL_RANGE_WINDFIST / 2)) && (slf.attribute[ATR_MANA] >= (SPL_SENDCAST_WINDFIST / 2)))
@@ -225,7 +225,7 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 			PrintDebugNpc(PD_ZS_Check,"...Fireball!");
 			if((Npc_GetDistToNpc(slf,oth) > 1500) && (slf.attribute[ATR_MANA] >= SPL_SENDCAST_FIREBALL))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...groЯer!");
+				PrintDebugNpc(PD_ZS_Check,"...groРЇer!");
 				B_DrawSpell(slf,SPL_FIREBALL,SPL_SENDCAST_FIREBALL);
 			}
 			else if((Npc_GetDistToNpc(slf,oth) > 800) && (slf.attribute[ATR_MANA] >= (SPL_SENDCAST_FIREBALL / 2)))
@@ -245,7 +245,7 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 			PrintDebugNpc(PD_ZS_Check,"...Fireball!");
 			if((Npc_GetDistToNpc(slf,oth) > 1500) && (slf.attribute[ATR_MANA] >= SPL_SENDCAST_FIRESTORM))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...groЯer!");
+				PrintDebugNpc(PD_ZS_Check,"...groРЇer!");
 				B_DrawSpell(slf,SPL_FIRESTORM,SPL_SENDCAST_FIREBALL);
 			}
 			else if((Npc_GetDistToNpc(slf,oth) > 800) && (slf.attribute[ATR_MANA] >= (SPL_SENDCAST_FIRESTORM / 2)))
@@ -271,7 +271,7 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 			PrintDebugNpc(PD_ZS_Check,"...Thunderball!");
 			if((Npc_GetDistToNpc(slf,oth) > 1500) && (slf.attribute[ATR_MANA] >= SPL_SENDCAST_THUNDERBALL))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...groЯer!");
+				PrintDebugNpc(PD_ZS_Check,"...groРЇer!");
 				B_DrawSpell(slf,SPL_THUNDERBALL,SPL_SENDCAST_THUNDERBALL);
 			}
 			else if((Npc_GetDistToNpc(slf,oth) > 800) && (slf.attribute[ATR_MANA] >= (SPL_SENDCAST_THUNDERBALL / 2)))
@@ -307,13 +307,13 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 	};
 	PrintDebugNpc(PD_ZS_Check,"...Waffenbasierte Kampftaktik!");
 	if(
-		//Запрет на стрельбу по нехостильным юнитам. Потенциально это надо изменить, но что-бы
-		//нехостильные не умирали.
+		//Р—Р°РїСЂРµС‚ РЅР° СЃС‚СЂРµР»СЊР±Сѓ РїРѕ РЅРµС…РѕСЃС‚РёР»СЊРЅС‹Рј СЋРЅРёС‚Р°Рј. РџРѕС‚РµРЅС†РёР°Р»СЊРЅРѕ СЌС‚Рѕ РЅР°РґРѕ РёР·РјРµРЅРёС‚СЊ, РЅРѕ С‡С‚Рѕ-Р±С‹
+		//РЅРµС…РѕСЃС‚РёР»СЊРЅС‹Рµ РЅРµ СѓРјРёСЂР°Р»Рё.
 		Npc_GetPermAttitude(slf,oth) != ATT_HOSTILE
 	||	(Npc_GetDistToNpc(slf,oth) < HAI_DIST_MELEE)
 	)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Gegner in Nahkampfreichweite & kein purer Fernkдmpfer!");
+		PrintDebugNpc(PD_ZS_Check,"...Gegner in Nahkampfreichweite & kein purer FernkРґmpfer!");
 		if(B_EquipAndDrawBestMeleeWeapon(slf))
 		{
 			return;
@@ -324,7 +324,7 @@ func void B_SelectWeapon(var C_Npc slf,var C_Npc oth)
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Gegner in Fernkampfreichweite oder NSC ist ein purer Fernkдmpfer!");
+		PrintDebugNpc(PD_ZS_Check,"...Gegner in Fernkampfreichweite oder NSC ist ein purer FernkРґmpfer!");
 		if(B_EquipAndDrawBestRangedWeapon(slf))
 		{
 			return;

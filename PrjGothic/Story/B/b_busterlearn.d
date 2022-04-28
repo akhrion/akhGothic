@@ -7,42 +7,42 @@ func void b_busterlearn()
 	{
 		if(hero.attribute[ATR_DEXTERITY] >= 20)
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (10 очков обучения, 100 руды)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ, 100 СЂСѓРґС‹)",DIA_ORG_833_Buster_Train1);
 		}
 		else
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (20 ловкости, 10 очков обучения, 100 руды)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (20 Р»РѕРІРєРѕСЃС‚Рё, 10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ, 100 СЂСѓРґС‹)",DIA_ORG_833_Buster_Train1);
 		};
 	}
 	else if(FREELEARN_NC == FALSE)
 	{
 		if(hero.attribute[ATR_DEXTERITY] >= 20)
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (10 очков обучения, 100 руды)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ, 100 СЂСѓРґС‹)",DIA_ORG_833_Buster_Train1);
 		}
 		else
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (20 ловкости, 10 очков обучения, 100 руды)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (20 Р»РѕРІРєРѕСЃС‚Рё, 10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ, 100 СЂСѓРґС‹)",DIA_ORG_833_Buster_Train1);
 		};
 	}
 	else if(hero.guild == GIL_ORG)
 	{
 		if(hero.attribute[ATR_DEXTERITY] >= 20)
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (5 очков обучения)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (5 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",DIA_ORG_833_Buster_Train1);
 		}
 		else
 		{
-			Info_AddChoice(dia_org_833_buster4,"Акробатика (20 ловкости, 5 очков обучения)",DIA_ORG_833_Buster_Train1);
+			Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (20 Р»РѕРІРєРѕСЃС‚Рё, 5 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",DIA_ORG_833_Buster_Train1);
 		};
 	}
 	else if(hero.attribute[ATR_DEXTERITY] >= 20)
 	{
-		Info_AddChoice(dia_org_833_buster4,"Акробатика (10 очков обучения)",DIA_ORG_833_Buster_Train1);
+		Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",DIA_ORG_833_Buster_Train1);
 	}
 	else
 	{
-		Info_AddChoice(dia_org_833_buster4,"Акробатика (20 ловкости, 10 очков обучения)",DIA_ORG_833_Buster_Train1);
+		Info_AddChoice(dia_org_833_buster4,"РђРєСЂРѕР±Р°С‚РёРєР° (20 Р»РѕРІРєРѕСЃС‚Рё, 10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",DIA_ORG_833_Buster_Train1);
 	};
 };
 
@@ -67,7 +67,7 @@ func int DIA_ORG_833_Buster_Condition()
 
 func void DIA_ORG_833_Buster_Info()
 {
-	AI_Output(self,other,"DIA_ORG_833_Buster_02_01");	//Похоже, ты не слишком проворен. Я могу помочь тебе.
+	AI_Output(self,other,"DIA_ORG_833_Buster_02_01");	//РџРѕС…РѕР¶Рµ, С‚С‹ РЅРµ СЃР»РёС€РєРѕРј РїСЂРѕРІРѕСЂРµРЅ. РЇ РјРѕРіСѓ РїРѕРјРѕС‡СЊ С‚РµР±Рµ.
 };
 
 
@@ -101,7 +101,7 @@ instance DIA_ORG_833_Buster3(C_Info)
 	information = DIA_ORG_833_Buster3_Info;
 	important = 0;
 	permanent = 0;
-	description = "А чем ты сможешь мне помочь?";
+	description = "Рђ С‡РµРј С‚С‹ СЃРјРѕР¶РµС€СЊ РјРЅРµ РїРѕРјРѕС‡СЊ?";
 };
 
 
@@ -115,10 +115,10 @@ func int DIA_ORG_833_Buster3_Condition()
 
 func void DIA_ORG_833_Buster3_Info()
 {
-	AI_Output(other,self,"DIA_SLD_753_Baloro_Worumgehts_Info_15_01");	//А чем ты сможешь мне помочь?
-	AI_Output(self,other,"DIA_ORG_833_Buster3_02_01");	//Я могу обучить тебя контролю над телом. Это искусство называется акробатика.
+	AI_Output(other,self,"DIA_SLD_753_Baloro_Worumgehts_Info_15_01");	//Рђ С‡РµРј С‚С‹ СЃРјРѕР¶РµС€СЊ РјРЅРµ РїРѕРјРѕС‡СЊ?
+	AI_Output(self,other,"DIA_ORG_833_Buster3_02_01");	//РЇ РјРѕРіСѓ РѕР±СѓС‡РёС‚СЊ С‚РµР±СЏ РєРѕРЅС‚СЂРѕР»СЋ РЅР°Рґ С‚РµР»РѕРј. Р­С‚Рѕ РёСЃРєСѓСЃСЃС‚РІРѕ РЅР°Р·С‹РІР°РµС‚СЃСЏ Р°РєСЂРѕР±Р°С‚РёРєР°.
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-	B_LogEntry(GE_TeacherNC,"Вор Бастер может научить меня акробатике.");
+	B_LogEntry(GE_TeacherNC,"Р’РѕСЂ Р‘Р°СЃС‚РµСЂ РјРѕР¶РµС‚ РЅР°СѓС‡РёС‚СЊ РјРµРЅСЏ Р°РєСЂРѕР±Р°С‚РёРєРµ.");
 };
 
 
@@ -148,11 +148,11 @@ func void dia_org_833_buster4_info()
 
 func void DIA_ORG_833_Buster_Train1()
 {
-	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01");	//Начнем прямо сейчас.
+	AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01");	//РќР°С‡РЅРµРј РїСЂСЏРјРѕ СЃРµР№С‡Р°СЃ.
 	if(hero.attribute[ATR_DEXTERITY] < 20)
 	{
-		PrintScreen("Условие: 20 ловкости.",-1,_YPOS_MESSAGE_Joincamp,"font_old_10_white.tga",_TIME_MESSAGE_Joincamp);
-		AI_Output(self,other,"SVM_2_NoLearnNoPoints");	//Я не смогу стать твоим учителем. У тебя недостаточно практических навыков.
+		PrintScreen("РЈСЃР»РѕРІРёРµ: 20 Р»РѕРІРєРѕСЃС‚Рё.",-1,_YPOS_MESSAGE_Joincamp,"font_old_10_white.tga",_TIME_MESSAGE_Joincamp);
+		AI_Output(self,other,"SVM_2_NoLearnNoPoints");	//РЇ РЅРµ СЃРјРѕРіСѓ СЃС‚Р°С‚СЊ С‚РІРѕРёРј СѓС‡РёС‚РµР»РµРј. РЈ С‚РµР±СЏ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РїСЂР°РєС‚РёС‡РµСЃРєРёС… РЅР°РІС‹РєРѕРІ.
 		b_busterlearn();
 	}
 	else if(DIFF_HARD == TRUE)
@@ -161,14 +161,14 @@ func void DIA_ORG_833_Buster_Train1()
 		{
 			if(hero.lp >= LPCOST_TALENT_ACROBAT)
 			{
-				b_printtrademsg1("Отдано руды: 100");
+				b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 100");
 				B_GiveInvItems(other,self,ItMiNugget,100);
 			};
 			if(B_GiveSkill(other,NPC_TALENT_ACROBAT,1,LPCOST_TALENT_ACROBAT))
 			{
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//Когда ты контролируешь свое тело, ты можешь прыгать гораздо дальше.
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//Я научу тебя откатываться в сторону, покажу, как приземляться после падения. Но не стоит забывать, что ты все-таки не бессмертный!
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//Акробатика также очень полезна в бою. Ты сможешь быстро менять дистанцию между собой и противником. Ну, с богом!
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//РљРѕРіРґР° С‚С‹ РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС€СЊ СЃРІРѕРµ С‚РµР»Рѕ, С‚С‹ РјРѕР¶РµС€СЊ РїСЂС‹РіР°С‚СЊ РіРѕСЂР°Р·РґРѕ РґР°Р»СЊС€Рµ.
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//РЇ РЅР°СѓС‡Сѓ С‚РµР±СЏ РѕС‚РєР°С‚С‹РІР°С‚СЊСЃСЏ РІ СЃС‚РѕСЂРѕРЅСѓ, РїРѕРєР°Р¶Сѓ, РєР°Рє РїСЂРёР·РµРјР»СЏС‚СЊСЃСЏ РїРѕСЃР»Рµ РїР°РґРµРЅРёСЏ. РќРѕ РЅРµ СЃС‚РѕРёС‚ Р·Р°Р±С‹РІР°С‚СЊ, С‡С‚Рѕ С‚С‹ РІСЃРµ-С‚Р°РєРё РЅРµ Р±РµСЃСЃРјРµСЂС‚РЅС‹Р№!
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//РђРєСЂРѕР±Р°С‚РёРєР° С‚Р°РєР¶Рµ РѕС‡РµРЅСЊ РїРѕР»РµР·РЅР° РІ Р±РѕСЋ. РўС‹ СЃРјРѕР¶РµС€СЊ Р±С‹СЃС‚СЂРѕ РјРµРЅСЏС‚СЊ РґРёСЃС‚Р°РЅС†РёСЋ РјРµР¶РґСѓ СЃРѕР±РѕР№ Рё РїСЂРѕС‚РёРІРЅРёРєРѕРј. РќСѓ, СЃ Р±РѕРіРѕРј!
 				Info_ClearChoices(dia_org_833_buster4);
 			}
 			else
@@ -178,7 +178,7 @@ func void DIA_ORG_833_Buster_Train1()
 		}
 		else
 		{
-			AI_Output(self,other,"SVM_2_ShitNoOre");	//Что, преследуют неудачи, приятель? Совсем нет руды?
+			AI_Output(self,other,"SVM_2_ShitNoOre");	//Р§С‚Рѕ, РїСЂРµСЃР»РµРґСѓСЋС‚ РЅРµСѓРґР°С‡Рё, РїСЂРёСЏС‚РµР»СЊ? РЎРѕРІСЃРµРј РЅРµС‚ СЂСѓРґС‹?
 			b_busterlearn();
 		};
 	}
@@ -188,14 +188,14 @@ func void DIA_ORG_833_Buster_Train1()
 		{
 			if(hero.lp >= LPCOST_TALENT_ACROBAT)
 			{
-				b_printtrademsg1("Отдано руды: 100");
+				b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 100");
 				B_GiveInvItems(other,self,ItMiNugget,100);
 			};
 			if(B_GiveSkill(other,NPC_TALENT_ACROBAT,1,LPCOST_TALENT_ACROBAT))
 			{
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//Когда ты контролируешь свое тело, ты можешь прыгать гораздо дальше.
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//Я научу тебя откатываться в сторону, покажу, как приземляться после падения. Но не стоит забывать, что ты все-таки не бессмертный!
-				AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//Акробатика также очень полезна в бою. Ты сможешь быстро менять дистанцию между собой и противником. Ну, с богом!
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//РљРѕРіРґР° С‚С‹ РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС€СЊ СЃРІРѕРµ С‚РµР»Рѕ, С‚С‹ РјРѕР¶РµС€СЊ РїСЂС‹РіР°С‚СЊ РіРѕСЂР°Р·РґРѕ РґР°Р»СЊС€Рµ.
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//РЇ РЅР°СѓС‡Сѓ С‚РµР±СЏ РѕС‚РєР°С‚С‹РІР°С‚СЊСЃСЏ РІ СЃС‚РѕСЂРѕРЅСѓ, РїРѕРєР°Р¶Сѓ, РєР°Рє РїСЂРёР·РµРјР»СЏС‚СЊСЃСЏ РїРѕСЃР»Рµ РїР°РґРµРЅРёСЏ. РќРѕ РЅРµ СЃС‚РѕРёС‚ Р·Р°Р±С‹РІР°С‚СЊ, С‡С‚Рѕ С‚С‹ РІСЃРµ-С‚Р°РєРё РЅРµ Р±РµСЃСЃРјРµСЂС‚РЅС‹Р№!
+				AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//РђРєСЂРѕР±Р°С‚РёРєР° С‚Р°РєР¶Рµ РѕС‡РµРЅСЊ РїРѕР»РµР·РЅР° РІ Р±РѕСЋ. РўС‹ СЃРјРѕР¶РµС€СЊ Р±С‹СЃС‚СЂРѕ РјРµРЅСЏС‚СЊ РґРёСЃС‚Р°РЅС†РёСЋ РјРµР¶РґСѓ СЃРѕР±РѕР№ Рё РїСЂРѕС‚РёРІРЅРёРєРѕРј. РќСѓ, СЃ Р±РѕРіРѕРј!
 				Info_ClearChoices(dia_org_833_buster4);
 			}
 			else
@@ -205,7 +205,7 @@ func void DIA_ORG_833_Buster_Train1()
 		}
 		else
 		{
-			AI_Output(self,other,"SVM_2_ShitNoOre");	//Что, преследуют неудачи, приятель? Совсем нет руды?
+			AI_Output(self,other,"SVM_2_ShitNoOre");	//Р§С‚Рѕ, РїСЂРµСЃР»РµРґСѓСЋС‚ РЅРµСѓРґР°С‡Рё, РїСЂРёСЏС‚РµР»СЊ? РЎРѕРІСЃРµРј РЅРµС‚ СЂСѓРґС‹?
 			b_busterlearn();
 		};
 	}
@@ -213,9 +213,9 @@ func void DIA_ORG_833_Buster_Train1()
 	{
 		if(B_GiveSkill(other,NPC_TALENT_ACROBAT,1,5))
 		{
-			AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//Когда ты контролируешь свое тело, ты можешь прыгать гораздо дальше.
-			AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//Я научу тебя откатываться в сторону, покажу, как приземляться после падения. Но не стоит забывать, что ты все-таки не бессмертный!
-			AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//Акробатика также очень полезна в бою. Ты сможешь быстро менять дистанцию между собой и противником. Ну, с богом!
+			AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//РљРѕРіРґР° С‚С‹ РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС€СЊ СЃРІРѕРµ С‚РµР»Рѕ, С‚С‹ РјРѕР¶РµС€СЊ РїСЂС‹РіР°С‚СЊ РіРѕСЂР°Р·РґРѕ РґР°Р»СЊС€Рµ.
+			AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//РЇ РЅР°СѓС‡Сѓ С‚РµР±СЏ РѕС‚РєР°С‚С‹РІР°С‚СЊСЃСЏ РІ СЃС‚РѕСЂРѕРЅСѓ, РїРѕРєР°Р¶Сѓ, РєР°Рє РїСЂРёР·РµРјР»СЏС‚СЊСЃСЏ РїРѕСЃР»Рµ РїР°РґРµРЅРёСЏ. РќРѕ РЅРµ СЃС‚РѕРёС‚ Р·Р°Р±С‹РІР°С‚СЊ, С‡С‚Рѕ С‚С‹ РІСЃРµ-С‚Р°РєРё РЅРµ Р±РµСЃСЃРјРµСЂС‚РЅС‹Р№!
+			AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//РђРєСЂРѕР±Р°С‚РёРєР° С‚Р°РєР¶Рµ РѕС‡РµРЅСЊ РїРѕР»РµР·РЅР° РІ Р±РѕСЋ. РўС‹ СЃРјРѕР¶РµС€СЊ Р±С‹СЃС‚СЂРѕ РјРµРЅСЏС‚СЊ РґРёСЃС‚Р°РЅС†РёСЋ РјРµР¶РґСѓ СЃРѕР±РѕР№ Рё РїСЂРѕС‚РёРІРЅРёРєРѕРј. РќСѓ, СЃ Р±РѕРіРѕРј!
 			Info_ClearChoices(dia_org_833_buster4);
 		}
 		else
@@ -225,9 +225,9 @@ func void DIA_ORG_833_Buster_Train1()
 	}
 	else if(B_GiveSkill(other,NPC_TALENT_ACROBAT,1,LPCOST_TALENT_ACROBAT))
 	{
-		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//Когда ты контролируешь свое тело, ты можешь прыгать гораздо дальше.
-		AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//Я научу тебя откатываться в сторону, покажу, как приземляться после падения. Но не стоит забывать, что ты все-таки не бессмертный!
-		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//Акробатика также очень полезна в бою. Ты сможешь быстро менять дистанцию между собой и противником. Ну, с богом!
+		AI_Output(self,other,"DIA_ORG_833_Buster3_02_02");	//РљРѕРіРґР° С‚С‹ РєРѕРЅС‚СЂРѕР»РёСЂСѓРµС€СЊ СЃРІРѕРµ С‚РµР»Рѕ, С‚С‹ РјРѕР¶РµС€СЊ РїСЂС‹РіР°С‚СЊ РіРѕСЂР°Р·РґРѕ РґР°Р»СЊС€Рµ.
+		AI_Output(self,other,"DIA_ORG_833_Buster3_02_03");	//РЇ РЅР°СѓС‡Сѓ С‚РµР±СЏ РѕС‚РєР°С‚С‹РІР°С‚СЊСЃСЏ РІ СЃС‚РѕСЂРѕРЅСѓ, РїРѕРєР°Р¶Сѓ, РєР°Рє РїСЂРёР·РµРјР»СЏС‚СЊСЃСЏ РїРѕСЃР»Рµ РїР°РґРµРЅРёСЏ. РќРѕ РЅРµ СЃС‚РѕРёС‚ Р·Р°Р±С‹РІР°С‚СЊ, С‡С‚Рѕ С‚С‹ РІСЃРµ-С‚Р°РєРё РЅРµ Р±РµСЃСЃРјРµСЂС‚РЅС‹Р№!
+		AI_Output(self,other,"DIA_ORG_833_Buster3_02_04");	//РђРєСЂРѕР±Р°С‚РёРєР° С‚Р°РєР¶Рµ РѕС‡РµРЅСЊ РїРѕР»РµР·РЅР° РІ Р±РѕСЋ. РўС‹ СЃРјРѕР¶РµС€СЊ Р±С‹СЃС‚СЂРѕ РјРµРЅСЏС‚СЊ РґРёСЃС‚Р°РЅС†РёСЋ РјРµР¶РґСѓ СЃРѕР±РѕР№ Рё РїСЂРѕС‚РёРІРЅРёРєРѕРј. РќСѓ, СЃ Р±РѕРіРѕРј!
 		Info_ClearChoices(dia_org_833_buster4);
 	}
 	else

@@ -56,7 +56,7 @@ func void ZS_WaitForRescue_End()
 
 instance FreemineOrc(C_Npc)
 {
-	name[0] = "Таррок";
+	name[0] = "РўР°СЂСЂРѕРє";
 	guild = GIL_None;
 	level = 3;
 	flags = NPC_FLAG_IMMORTAL;

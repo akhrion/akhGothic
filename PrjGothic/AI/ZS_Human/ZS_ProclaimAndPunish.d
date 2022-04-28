@@ -72,7 +72,7 @@ func void ZS_ProclaimAndPunish_End()
 		murder_news = Npc_HasNews(self,NEWS_MURDER,hero,NULL);
 		if(murder_news)
 		{
-			PrintDebugNpc(PD_ZS_Check,"...SC hat getötet...");
+			PrintDebugNpc(PD_ZS_Check,"...SC hat getÑ†tet...");
 			murder_victim = Npc_GetNewsVictim(self,murder_news);
 			if(Npc_GetAttitude(self,murder_victim) == ATT_FRIENDLY)
 			{
@@ -108,7 +108,7 @@ func void ZS_ProclaimAndPunish_End()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...SC greift Schützling einer Wache an !");
+		PrintDebugNpc(PD_ZS_Check,"...SC greift SchÑŒtzling einer Wache an !");
 		db_say(self,hero,"YouAttackedMyCharge");
 	};
 	Npc_SetTarget(self,hero);

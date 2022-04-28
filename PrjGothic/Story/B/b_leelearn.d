@@ -17,6 +17,7 @@ func void b_leelearn()
 		Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_5,5 * LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_5);
 		Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_LearnDexterity_1,LPCOST_ATTRIBUTE_DEXTERITY,0),Sld_700_Lee_Teach_DEX_1);
 	};
+	Npc_ChangeModelFatness(other);
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_2H) < 1)
 	{
 		Info_AddChoice(Sld_700_Lee_Teach,B_BuildLearnString(NAME_Learn2h_1,LPCOST_TALENT_2H_1,0),Sld_700_Lee_ZWEIHAND1);
@@ -58,7 +59,7 @@ instance Sld_700_Lee_Greet(C_Info)
 	condition = Sld_700_Lee_Greet_Condition;
 	information = Sld_700_Lee_Greet_Info;
 	permanent = 0;
-	description = "Òû ãëàâà íàåìíèêîâ, äà?";
+	description = "Ð¢Ñ‹ Ð³Ð»Ð°Ð²Ð° Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð², Ð´Ð°?";
 };
 
 
@@ -69,8 +70,8 @@ func int Sld_700_Lee_Greet_Condition()
 
 func void Sld_700_Lee_Greet_Info()
 {
-	AI_Output(other,self,"DIA_Lee_Greet_15_00");	//Òû ãëàâà íàåìíèêîâ, äà?
-	AI_Output(self,other,"DIA_Lee_Greet_08_01");	//Äà, òû ñîâåðøåííî ïðàâ!
+	AI_Output(other,self,"DIA_Lee_Greet_15_00");	//Ð¢Ñ‹ Ð³Ð»Ð°Ð²Ð° Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð², Ð´Ð°?
+	AI_Output(self,other,"DIA_Lee_Greet_08_01");	//Ð”Ð°, Ñ‚Ñ‹ ÑÐ¾Ð²ÐµÑ€ÑˆÐµÐ½Ð½Ð¾ Ð¿Ñ€Ð°Ð²!
 };
 
 
@@ -81,7 +82,7 @@ instance Sld_700_Lee_Define(C_Info)
 	condition = Sld_700_Lee_Define_Condition;
 	information = Sld_700_Lee_Define_Info;
 	permanent = 0;
-	description = "×òî äåëàþò íàåìíèêè íà ñëóæáå ó ìàãîâ?";
+	description = "Ð§Ñ‚Ð¾ Ð´ÐµÐ»Ð°ÑŽÑ‚ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¸ Ð½Ð° ÑÐ»ÑƒÐ¶Ð±Ðµ Ñƒ Ð¼Ð°Ð³Ð¾Ð²?";
 };
 
 
@@ -95,9 +96,9 @@ func int Sld_700_Lee_Define_Condition()
 
 func void Sld_700_Lee_Define_Info()
 {
-	AI_Output(other,self,"DIA_Lee_Define_15_00");	//×òî äåëàþò íàåìíèêè íà ñëóæáå ó ìàãîâ?
-	AI_Output(self,other,"DIA_Lee_Define_08_01");	//Ó íàñ íå òàêàÿ óæ ñëîæíàÿ ðàáîòà. Ìû äîëæíû îõðàíÿòü ðóäó è çàùèùàòü ìàãîâ.
-	AI_Output(self,other,"DIA_Lee_Define_08_02");	//Èíîãäà ìàãè äàþò êîìó-íèáóäü èç íàñ îñîáûå çàäàíèÿ.
+	AI_Output(other,self,"DIA_Lee_Define_15_00");	//Ð§Ñ‚Ð¾ Ð´ÐµÐ»Ð°ÑŽÑ‚ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¸ Ð½Ð° ÑÐ»ÑƒÐ¶Ð±Ðµ Ñƒ Ð¼Ð°Ð³Ð¾Ð²?
+	AI_Output(self,other,"DIA_Lee_Define_08_01");	//Ð£ Ð½Ð°Ñ Ð½Ðµ Ñ‚Ð°ÐºÐ°Ñ ÑƒÐ¶ ÑÐ»Ð¾Ð¶Ð½Ð°Ñ Ñ€Ð°Ð±Ð¾Ñ‚Ð°. ÐœÑ‹ Ð´Ð¾Ð»Ð¶Ð½Ñ‹ Ð¾Ñ…Ñ€Ð°Ð½ÑÑ‚ÑŒ Ñ€ÑƒÐ´Ñƒ Ð¸ Ð·Ð°Ñ‰Ð¸Ñ‰Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð².
+	AI_Output(self,other,"DIA_Lee_Define_08_02");	//Ð˜Ð½Ð¾Ð³Ð´Ð° Ð¼Ð°Ð³Ð¸ Ð´Ð°ÑŽÑ‚ ÐºÐ¾Ð¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ð¸Ð· Ð½Ð°Ñ Ð¾ÑÐ¾Ð±Ñ‹Ðµ Ð·Ð°Ð´Ð°Ð½Ð¸Ñ.
 };
 
 
@@ -108,7 +109,7 @@ instance Sld_700_Lee_Mitmachen(C_Info)
 	condition = Sld_700_Lee_Mitmachen_Condition;
 	information = Sld_700_Lee_Mitmachen_Info;
 	permanent = 0;
-	description = "ß õî÷ó ñòàòü îäíèì èç âàñ.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð²Ð°Ñ.";
 };
 
 
@@ -122,9 +123,9 @@ func int Sld_700_Lee_Mitmachen_Condition()
 
 func void Sld_700_Lee_Mitmachen_Info()
 {
-	AI_Output(other,self,"DIA_Lee_Mitmachen_15_00");	//ß õî÷ó ñòàòü îäíèì èç âàñ.
-	AI_Output(self,other,"DIA_Lee_Mitmachen_08_01");	//À òû õðàáð! Äóìàåøü, ÿ òàê ïðîñòî ïðèíèìàþ êàæäîãî, êòî êî ìíå ïðèõîäèò?
-	AI_Output(self,other,"DIA_Lee_Mitmachen_08_02");	//Ñíà÷àëà ïîçíàêîìüñÿ ñ æèçíüþ íàøåãî ëàãåðÿ, à ÿ áóäó çà òîáîé ïðèãëÿäûâàòü!
+	AI_Output(other,self,"DIA_Lee_Mitmachen_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð²Ð°Ñ.
+	AI_Output(self,other,"DIA_Lee_Mitmachen_08_01");	//Ð Ñ‚Ñ‹ Ñ…Ñ€Ð°Ð±Ñ€! Ð”ÑƒÐ¼Ð°ÐµÑˆÑŒ, Ñ Ñ‚Ð°Ðº Ð¿Ñ€Ð¾ÑÑ‚Ð¾ Ð¿Ñ€Ð¸Ð½Ð¸Ð¼Ð°ÑŽ ÐºÐ°Ð¶Ð´Ð¾Ð³Ð¾, ÐºÑ‚Ð¾ ÐºÐ¾ Ð¼Ð½Ðµ Ð¿Ñ€Ð¸Ñ…Ð¾Ð´Ð¸Ñ‚?
+	AI_Output(self,other,"DIA_Lee_Mitmachen_08_02");	//Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð¿Ð¾Ð·Ð½Ð°ÐºÐ¾Ð¼ÑŒÑÑ Ñ Ð¶Ð¸Ð·Ð½ÑŒÑŽ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ, Ð° Ñ Ð±ÑƒÐ´Ñƒ Ð·Ð° Ñ‚Ð¾Ð±Ð¾Ð¹ Ð¿Ñ€Ð¸Ð³Ð»ÑÐ´Ñ‹Ð²Ð°Ñ‚ÑŒ!
 };
 
 
@@ -137,7 +138,7 @@ instance Sld_700_Lee_NowReady(C_Info)
 	condition = Sld_700_Lee_NowReady_Condition;
 	information = Sld_700_Lee_NowReady_Info;
 	permanent = 1;
-	description = "ß õî÷ó ñòàòü íàåìíèêîì è çàùèùàòü ìàãîâ. Òû ïðèìåøü ìåíÿ?";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð¼ Ð¸ Ð·Ð°Ñ‰Ð¸Ñ‰Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð². Ð¢Ñ‹ Ð¿Ñ€Ð¸Ð¼ÐµÑˆÑŒ Ð¼ÐµÐ½Ñ?";
 };
 
 
@@ -151,23 +152,23 @@ func int Sld_700_Lee_NowReady_Condition()
 
 func void Sld_700_Lee_NowReady_Info()
 {
-	AI_Output(other,self,"DIA_Lee_NowReady_15_00");	//ß õî÷ó ñòàòü íàåìíèêîì è çàùèùàòü ìàãîâ. Òû ïðèìåøü ìåíÿ?
+	AI_Output(other,self,"DIA_Lee_NowReady_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð¼ Ð¸ Ð·Ð°Ñ‰Ð¸Ñ‰Ð°Ñ‚ÑŒ Ð¼Ð°Ð³Ð¾Ð². Ð¢Ñ‹ Ð¿Ñ€Ð¸Ð¼ÐµÑˆÑŒ Ð¼ÐµÐ½Ñ?
 	if(hero.level < 10)
 	{
-		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_03");	//Íî òû åùå íå ãîòîâ ñòàòü îäíèì èç íàñ. Íàáåðèñü ñíà÷àëà îïûòà, à òàì ïîñìîòðèì.
+		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_03");	//ÐÐ¾ Ñ‚Ñ‹ ÐµÑ‰Ðµ Ð½Ðµ Ð³Ð¾Ñ‚Ð¾Ð² ÑÑ‚Ð°Ñ‚ÑŒ Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð½Ð°Ñ. ÐÐ°Ð±ÐµÑ€Ð¸ÑÑŒ ÑÐ½Ð°Ñ‡Ð°Ð»Ð° Ð¾Ð¿Ñ‹Ñ‚Ð°, Ð° Ñ‚Ð°Ð¼ Ð¿Ð¾ÑÐ¼Ð¾Ñ‚Ñ€Ð¸Ð¼.
 		AI_StopProcessInfos(self);
 		B_PrintGuildCondition(10);
 	}
 	else if(CorKalom_BringMCQBalls == LOG_SUCCESS)
 	{
-		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01");	//Òû ïîìîã Áðàòñòâó, à òâîè äåëà â Ñòàðîé øàõòå ãîâîðÿò ñàìè çà ñåáÿ.
-		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_02");	//ß ñîãëàñåí ïðèíÿòü òåáÿ â íàåìíèêè.
+		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_01");	//Ð¢Ñ‹ Ð¿Ð¾Ð¼Ð¾Ð³ Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ñƒ, Ð° Ñ‚Ð²Ð¾Ð¸ Ð´ÐµÐ»Ð° Ð² Ð¡Ñ‚Ð°Ñ€Ð¾Ð¹ ÑˆÐ°Ñ…Ñ‚Ðµ Ð³Ð¾Ð²Ð¾Ñ€ÑÑ‚ ÑÐ°Ð¼Ð¸ Ð·Ð° ÑÐµÐ±Ñ.
+		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_02");	//Ð¯ ÑÐ¾Ð³Ð»Ð°ÑÐµÐ½ Ð¿Ñ€Ð¸Ð½ÑÑ‚ÑŒ Ñ‚ÐµÐ±Ñ Ð² Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¸.
 		Lee_SldPossible = TRUE;
 	}
 	else
 	{
-		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_04");	//ß äàì òåáå âîçìîæíîñòü ïðîÿâèòü ñåáÿ.
-		AI_Output(self,other,"DIA_Lee_Mitmachen_08_02");	//Ñíà÷àëà ïîçíàêîìüñÿ ñ æèçíüþ íàøåãî ëàãåðÿ, à ÿ áóäó çà òîáîé ïðèãëÿäûâàòü!
+		AI_Output(self,other,"Sld_700_Lee_BECOMESLD_Info_08_04");	//Ð¯ Ð´Ð°Ð¼ Ñ‚ÐµÐ±Ðµ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð¿Ñ€Ð¾ÑÐ²Ð¸Ñ‚ÑŒ ÑÐµÐ±Ñ.
+		AI_Output(self,other,"DIA_Lee_Mitmachen_08_02");	//Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ð¿Ð¾Ð·Ð½Ð°ÐºÐ¾Ð¼ÑŒÑÑ Ñ Ð¶Ð¸Ð·Ð½ÑŒÑŽ Ð½Ð°ÑˆÐµÐ³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ, Ð° Ñ Ð±ÑƒÐ´Ñƒ Ð·Ð° Ñ‚Ð¾Ð±Ð¾Ð¹ Ð¿Ñ€Ð¸Ð³Ð»ÑÐ´Ñ‹Ð²Ð°Ñ‚ÑŒ!
 	};
 };
 
@@ -179,7 +180,7 @@ instance Sld_700_Lee_BECOMESLDNOW(C_Info)
 	information = Sld_700_Lee_BECOMESLDNOW_Info;
 	important = 0;
 	permanent = 0;
-	description = "ß õî÷ó ñòàòü íàåìíèêîì.";
+	description = "Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð¼.";
 };
 
 
@@ -193,22 +194,22 @@ func int Sld_700_Lee_BECOMESLDNOW_Condition()
 
 func void Sld_700_Lee_BECOMESLDNOW_Info()
 {
-	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_Info_15_01");	//ß õî÷ó ñòàòü íàåìíèêîì.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_Info_08_02");	//Ýòî õîðîøèé âûáîð. Òû î íåì íå ïîæàëååøü.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_Info_08_03");	//Ñêàæè ìíå òîëüêî, ïî÷åìó? Ïî÷åìó òû ðåøèë ïðèñîåäèíèòüñÿ ê íàøåìó ëàãåðþ, à íå ê Ãîìåçó èëè ê Áðàòñòâó?
+	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_Info_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑÑ‚Ð°Ñ‚ÑŒ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð¼.
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_Info_08_02");	//Ð­Ñ‚Ð¾ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¸Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€. Ð¢Ñ‹ Ð¾ Ð½ÐµÐ¼ Ð½Ðµ Ð¿Ð¾Ð¶Ð°Ð»ÐµÐµÑˆÑŒ.
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_Info_08_03");	//Ð¡ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ Ñ‚Ð¾Ð»ÑŒÐºÐ¾, Ð¿Ð¾Ñ‡ÐµÐ¼Ñƒ? ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ Ñ‚Ñ‹ Ñ€ÐµÑˆÐ¸Ð» Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº Ð½Ð°ÑˆÐµÐ¼Ñƒ Ð»Ð°Ð³ÐµÑ€ÑŽ, Ð° Ð½Ðµ Ðº Ð“Ð¾Ð¼ÐµÐ·Ñƒ Ð¸Ð»Ð¸ Ðº Ð‘Ñ€Ð°Ñ‚ÑÑ‚Ð²Ñƒ?
 	Log_CreateTopic(GE_BecomeMercenary,LOG_NOTE);
-	B_LogEntry(GE_BecomeMercenary,"Ëè ïðèíÿë ìåíÿ â ðÿäû íàåìíèêîâ.");
+	B_LogEntry(GE_BecomeMercenary,"Ð›Ð¸ Ð¿Ñ€Ð¸Ð½ÑÐ» Ð¼ÐµÐ½Ñ Ð² Ñ€ÑÐ´Ñ‹ Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¾Ð².");
 	Info_ClearChoices(Sld_700_Lee_BECOMESLDNOW);
-	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"Äðóãèå ëàãåðÿ òîãî íå ñòîÿò.",Sld_700_Lee_BECOMESLDNOW_NOOTHER);
-	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"ß õîòåë ñâîáîäû ñ òåõ ïîð êàê ïîïàë ñþäà.",Sld_700_Lee_BECOMESLDNOW_FREEDOM);
-	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"Òàê óæ âûøëî.",Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE);
+	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"Ð”Ñ€ÑƒÐ³Ð¸Ðµ Ð»Ð°Ð³ÐµÑ€Ñ Ñ‚Ð¾Ð³Ð¾ Ð½Ðµ ÑÑ‚Ð¾ÑÑ‚.",Sld_700_Lee_BECOMESLDNOW_NOOTHER);
+	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"Ð¯ Ñ…Ð¾Ñ‚ÐµÐ» ÑÐ²Ð¾Ð±Ð¾Ð´Ñ‹ Ñ Ñ‚ÐµÑ… Ð¿Ð¾Ñ€ ÐºÐ°Ðº Ð¿Ð¾Ð¿Ð°Ð» ÑÑŽÐ´Ð°.",Sld_700_Lee_BECOMESLDNOW_FREEDOM);
+	Info_AddChoice(Sld_700_Lee_BECOMESLDNOW,"Ð¢Ð°Ðº ÑƒÐ¶ Ð²Ñ‹ÑˆÐ»Ð¾.",Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE);
 };
 
 func void Sld_700_Lee_BECOMESLDNOW_NOOTHER()
 {
-	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_NOOTHER_15_01");	//Äðóãèå ëàãåðÿ òîãî íå ñòîÿò.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_NOOTHER_08_02");	//Äà, åäèíñòâåííîå, ÷òî õîòü ÷åãî-òî ñòîèò â ýòîé êîëîíèè - ýòî íàäåæäà íà îñâîáîæäåíèå. Äîáðî ïîæàëîâàòü, íàåìíèê!
-	b_printtrademsg1("Ïîëó÷åí ëåãêèé äîñïåõ íàåìíèêà.");
+	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_NOOTHER_15_01");	//Ð”Ñ€ÑƒÐ³Ð¸Ðµ Ð»Ð°Ð³ÐµÑ€Ñ Ñ‚Ð¾Ð³Ð¾ Ð½Ðµ ÑÑ‚Ð¾ÑÑ‚.
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_NOOTHER_08_02");	//Ð”Ð°, ÐµÐ´Ð¸Ð½ÑÑ‚Ð²ÐµÐ½Ð½Ð¾Ðµ, Ñ‡Ñ‚Ð¾ Ñ…Ð¾Ñ‚ÑŒ Ñ‡ÐµÐ³Ð¾-Ñ‚Ð¾ ÑÑ‚Ð¾Ð¸Ñ‚ Ð² ÑÑ‚Ð¾Ð¹ ÐºÐ¾Ð»Ð¾Ð½Ð¸Ð¸ - ÑÑ‚Ð¾ Ð½Ð°Ð´ÐµÐ¶Ð´Ð° Ð½Ð° Ð¾ÑÐ²Ð¾Ð±Ð¾Ð¶Ð´ÐµÐ½Ð¸Ðµ. Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ, Ð½Ð°ÐµÐ¼Ð½Ð¸Ðº!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ð»ÐµÐ³ÐºÐ¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 	CreateInvItem(self,sld_armor_l);
 	B_GiveInvItems(self,hero,sld_armor_l,1);
 	Npc_SetTrueGuild(hero,GIL_SLD);
@@ -218,9 +219,9 @@ func void Sld_700_Lee_BECOMESLDNOW_NOOTHER()
 
 func void Sld_700_Lee_BECOMESLDNOW_FREEDOM()
 {
-	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_FREEDOM_15_01");	//ß õîòåë ñâîáîäû ñ òåõ ïîð êàê ïîïàë ñþäà.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_FREEDOM_08_02");	//È ìû âåðíåì åå ñåáå. Äîáðî ïîæàëîâàòü, íàåìíèê!
-	b_printtrademsg1("Ïîëó÷åí ëåãêèé äîñïåõ íàåìíèêà.");
+	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_FREEDOM_15_01");	//Ð¯ Ñ…Ð¾Ñ‚ÐµÐ» ÑÐ²Ð¾Ð±Ð¾Ð´Ñ‹ Ñ Ñ‚ÐµÑ… Ð¿Ð¾Ñ€ ÐºÐ°Ðº Ð¿Ð¾Ð¿Ð°Ð» ÑÑŽÐ´Ð°.
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_FREEDOM_08_02");	//Ð˜ Ð¼Ñ‹ Ð²ÐµÑ€Ð½ÐµÐ¼ ÐµÐµ ÑÐµÐ±Ðµ. Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ, Ð½Ð°ÐµÐ¼Ð½Ð¸Ðº!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ð»ÐµÐ³ÐºÐ¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 	CreateInvItem(self,sld_armor_l);
 	B_GiveInvItems(self,hero,sld_armor_l,1);
 	Npc_SetTrueGuild(hero,GIL_SLD);
@@ -230,9 +231,9 @@ func void Sld_700_Lee_BECOMESLDNOW_FREEDOM()
 
 func void Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE()
 {
-	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_15_01");	//Òàê óæ âûøëî.
-	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02");	//Ãëàâíîå, ÷òîáû ìû íå îñòàëèñü â ïëåíó ýòîãî Áàðüåðà íàâå÷íî. Äîáðî ïîæàëîâàòü, íàåìíèê!
-	b_printtrademsg1("Ïîëó÷åí ëåãêèé äîñïåõ íàåìíèêà.");
+	AI_Output(other,self,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_15_01");	//Ð¢Ð°Ðº ÑƒÐ¶ Ð²Ñ‹ÑˆÐ»Ð¾.
+	AI_Output(self,other,"Sld_700_Lee_BECOMESLDNOW_JUSTBECAUSE_08_02");	//Ð“Ð»Ð°Ð²Ð½Ð¾Ðµ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¼Ñ‹ Ð½Ðµ Ð¾ÑÑ‚Ð°Ð»Ð¸ÑÑŒ Ð² Ð¿Ð»ÐµÐ½Ñƒ ÑÑ‚Ð¾Ð³Ð¾ Ð‘Ð°Ñ€ÑŒÐµÑ€Ð° Ð½Ð°Ð²ÐµÑ‡Ð½Ð¾. Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ, Ð½Ð°ÐµÐ¼Ð½Ð¸Ðº!
+	b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ð»ÐµÐ³ÐºÐ¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 	CreateInvItem(self,sld_armor_l);
 	B_GiveInvItems(self,hero,sld_armor_l,1);
 	Npc_SetTrueGuild(hero,GIL_SLD);
@@ -261,16 +262,16 @@ func int Sld_700_Lee_DAMNPAST_Condition()
 
 func void Sld_700_Lee_DAMNPAST_Info()
 {
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01");	//À âåäü êîãäà-òî ÿ âåë ñîâñåì äðóãóþ æèçíü.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_02");	//ß áûë îäíèì èç ëó÷øèõ ãåíåðàëîâ êîðîëåâñòâà.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_03");	//Âñþ ñâîþ æèçíü ÿ áîðîëñÿ çà åãî ñâîáîäó.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04");	//Çíàòü íå ïðèíèìàëà ìåíÿ, íî êîðîëü ïðèñëóøèâàëñÿ ê ìîèì ñîâåòàì. Âåëüìîæè ñ÷èòàëè, ÷òî ÿ ïðåäñòàâëÿþ óãðîçó èõ ãðÿçíûì èíòðèãàì.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_05");	//ß íåäîîöåíèâàë èõ êîâàðñòâà. Îíè íå ïîáîÿëèñü óáèòü êîðîëåâó ðàäè ïîáåäû íàäî ìíîé.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06");	//Â ýòîì áåññìûñëåííîì óáèéñòâå îáâèíèëè ìåíÿ. Ó êîðîëÿ Ðîáàðà íå îñòàëîñü èíîãî âûáîðà.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_07");	//Ìîè çàñëóãè ïåðåä êîðîëåâñòâîì ñïàñëè ìåíÿ îò ñìåðòè. Íî ó ìåíÿ çàáðàëè ñâîáîäó.
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_08");	//Êîãäà-íèáóäü ÿ âûðâóñü îòñþäà. Âîò òîãäà îíè çà âñå ïîïëàòÿòñÿ.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_01");	//Ð Ð²ÐµÐ´ÑŒ ÐºÐ¾Ð³Ð´Ð°-Ñ‚Ð¾ Ñ Ð²ÐµÐ» ÑÐ¾Ð²ÑÐµÐ¼ Ð´Ñ€ÑƒÐ³ÑƒÑŽ Ð¶Ð¸Ð·Ð½ÑŒ.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_02");	//Ð¯ Ð±Ñ‹Ð» Ð¾Ð´Ð½Ð¸Ð¼ Ð¸Ð· Ð»ÑƒÑ‡ÑˆÐ¸Ñ… Ð³ÐµÐ½ÐµÑ€Ð°Ð»Ð¾Ð² ÐºÐ¾Ñ€Ð¾Ð»ÐµÐ²ÑÑ‚Ð²Ð°.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_03");	//Ð’ÑÑŽ ÑÐ²Ð¾ÑŽ Ð¶Ð¸Ð·Ð½ÑŒ Ñ Ð±Ð¾Ñ€Ð¾Ð»ÑÑ Ð·Ð° ÐµÐ³Ð¾ ÑÐ²Ð¾Ð±Ð¾Ð´Ñƒ.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_04");	//Ð—Ð½Ð°Ñ‚ÑŒ Ð½Ðµ Ð¿Ñ€Ð¸Ð½Ð¸Ð¼Ð°Ð»Ð° Ð¼ÐµÐ½Ñ, Ð½Ð¾ ÐºÐ¾Ñ€Ð¾Ð»ÑŒ Ð¿Ñ€Ð¸ÑÐ»ÑƒÑˆÐ¸Ð²Ð°Ð»ÑÑ Ðº Ð¼Ð¾Ð¸Ð¼ ÑÐ¾Ð²ÐµÑ‚Ð°Ð¼. Ð’ÐµÐ»ÑŒÐ¼Ð¾Ð¶Ð¸ ÑÑ‡Ð¸Ñ‚Ð°Ð»Ð¸, Ñ‡Ñ‚Ð¾ Ñ Ð¿Ñ€ÐµÐ´ÑÑ‚Ð°Ð²Ð»ÑÑŽ ÑƒÐ³Ñ€Ð¾Ð·Ñƒ Ð¸Ñ… Ð³Ñ€ÑÐ·Ð½Ñ‹Ð¼ Ð¸Ð½Ñ‚Ñ€Ð¸Ð³Ð°Ð¼.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_05");	//Ð¯ Ð½ÐµÐ´Ð¾Ð¾Ñ†ÐµÐ½Ð¸Ð²Ð°Ð» Ð¸Ñ… ÐºÐ¾Ð²Ð°Ñ€ÑÑ‚Ð²Ð°. ÐžÐ½Ð¸ Ð½Ðµ Ð¿Ð¾Ð±Ð¾ÑÐ»Ð¸ÑÑŒ ÑƒÐ±Ð¸Ñ‚ÑŒ ÐºÐ¾Ñ€Ð¾Ð»ÐµÐ²Ñƒ Ñ€Ð°Ð´Ð¸ Ð¿Ð¾Ð±ÐµÐ´Ñ‹ Ð½Ð°Ð´Ð¾ Ð¼Ð½Ð¾Ð¹.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_06");	//Ð’ ÑÑ‚Ð¾Ð¼ Ð±ÐµÑÑÐ¼Ñ‹ÑÐ»ÐµÐ½Ð½Ð¾Ð¼ ÑƒÐ±Ð¸Ð¹ÑÑ‚Ð²Ðµ Ð¾Ð±Ð²Ð¸Ð½Ð¸Ð»Ð¸ Ð¼ÐµÐ½Ñ. Ð£ ÐºÐ¾Ñ€Ð¾Ð»Ñ Ð Ð¾Ð±Ð°Ñ€Ð° Ð½Ðµ Ð¾ÑÑ‚Ð°Ð»Ð¾ÑÑŒ Ð¸Ð½Ð¾Ð³Ð¾ Ð²Ñ‹Ð±Ð¾Ñ€Ð°.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_07");	//ÐœÐ¾Ð¸ Ð·Ð°ÑÐ»ÑƒÐ³Ð¸ Ð¿ÐµÑ€ÐµÐ´ ÐºÐ¾Ñ€Ð¾Ð»ÐµÐ²ÑÑ‚Ð²Ð¾Ð¼ ÑÐ¿Ð°ÑÐ»Ð¸ Ð¼ÐµÐ½Ñ Ð¾Ñ‚ ÑÐ¼ÐµÑ€Ñ‚Ð¸. ÐÐ¾ Ñƒ Ð¼ÐµÐ½Ñ Ð·Ð°Ð±Ñ€Ð°Ð»Ð¸ ÑÐ²Ð¾Ð±Ð¾Ð´Ñƒ.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_08");	//ÐšÐ¾Ð³Ð´Ð°-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ñ Ð²Ñ‹Ñ€Ð²ÑƒÑÑŒ Ð¾Ñ‚ÑÑŽÐ´Ð°. Ð’Ð¾Ñ‚ Ñ‚Ð¾Ð³Ð´Ð° Ð¾Ð½Ð¸ Ð·Ð° Ð²ÑÐµ Ð¿Ð¾Ð¿Ð»Ð°Ñ‚ÑÑ‚ÑÑ.
 	AI_AlignToWP(self);
-	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_09");	//ß äîëæåí èì îòîìñòèòü.
+	AI_Output(self,other,"Sld_700_Lee_DAMNPAST_Info_08_09");	//Ð¯ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¸Ð¼ Ð¾Ñ‚Ð¾Ð¼ÑÑ‚Ð¸Ñ‚ÑŒ.
 	Npc_ExchangeRoutine(self,"START");
 	if(Homer_DamLurker == LOG_SUCCESS)
 	{
@@ -290,7 +291,7 @@ instance Sld_700_Lee_FMTaken(C_Info)
 	condition = Sld_700_Lee_FMTaken_Condition;
 	information = Sld_700_Lee_FMTaken_Info;
 	permanent = 1;
-	description = "×òî òû äóìàåøü î íàïàäåíèè íà øàõòó?";
+	description = "Ð§Ñ‚Ð¾ Ñ‚Ñ‹ Ð´ÑƒÐ¼Ð°ÐµÑˆÑŒ Ð¾ Ð½Ð°Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¸ Ð½Ð° ÑˆÐ°Ñ…Ñ‚Ñƒ?";
 };
 
 
@@ -304,22 +305,22 @@ func int Sld_700_Lee_FMTaken_Condition()
 
 func void Sld_700_Lee_FMTaken_Info()
 {
-	AI_Output(other,self,"DIA_Lee_FMTaken_15_00");	//×òî òû äóìàåøü î íàïàäåíèè íà øàõòó?
+	AI_Output(other,self,"DIA_Lee_FMTaken_15_00");	//Ð§Ñ‚Ð¾ Ñ‚Ñ‹ Ð´ÑƒÐ¼Ð°ÐµÑˆÑŒ Ð¾ Ð½Ð°Ð¿Ð°Ð´ÐµÐ½Ð¸Ð¸ Ð½Ð° ÑˆÐ°Ñ…Ñ‚Ñƒ?
 	if(Lee_freeminereport == 0)
 	{
-		AI_Output(self,other,"DIA_Lee_FMTaken_08_01");	//Ãîìåç çàøåë ñëèøêîì äàëåêî. Îí åùå ïîæàëååò îá ýòîì.
+		AI_Output(self,other,"DIA_Lee_FMTaken_08_01");	//Ð“Ð¾Ð¼ÐµÐ· Ð·Ð°ÑˆÐµÐ» ÑÐ»Ð¸ÑˆÐºÐ¾Ð¼ Ð´Ð°Ð»ÐµÐºÐ¾. ÐžÐ½ ÐµÑ‰Ðµ Ð¿Ð¾Ð¶Ð°Ð»ÐµÐµÑ‚ Ð¾Ð± ÑÑ‚Ð¾Ð¼.
 	}
 	else
 	{
-		AI_Output(hero,self,"Info_Lee_now_freeminefree_15_01");	//Ëþäè Ãîìåçà áîëüøå íå îïàñíû!
-		AI_Output(self,hero,"Sld_700_Lee_CHANGESIDE_Info_08_02");	//Òû ìíîãî ñäåëàë äëÿ íàñ. Íàì íóæíû òàêèå ëþäè, êàê òû.
-		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03");	//Ñïàñèáî. À òåïåðü ìíå íóæíî óõîäèòü.
-		AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01");	//Ïîäîæäè!
-		AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03");	//Âîçüìè ýòó ðóíó â çíàê íàøåé áëàãîäàðíîñòè çà òâîþ ïîìîùü.
-		b_printtrademsg1("Ïîëó÷åíà ðóíà îãíåííîãî øòîðìà.");
-		AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05");	//Ñïàñèáî òåáå!
-		AI_Output(hero,self,"Info_Exit_Info_15_01");	//Äî âñòðå÷è!
-		B_LogEntry(CH4_BannedFromOC,"ß ðàññêàçàë Ëè î òîì, ÷òî ìû ñ Ãîðíîì î÷èñòèëè Ñâîáîäíóþ øàõòó. Îí áûë î÷åíü äîâîëåí.");
+		AI_Output(hero,self,"Info_Lee_now_freeminefree_15_01");	//Ð›ÑŽÐ´Ð¸ Ð“Ð¾Ð¼ÐµÐ·Ð° Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½Ðµ Ð¾Ð¿Ð°ÑÐ½Ñ‹!
+		AI_Output(self,hero,"Sld_700_Lee_CHANGESIDE_Info_08_02");	//Ð¢Ñ‹ Ð¼Ð½Ð¾Ð³Ð¾ ÑÐ´ÐµÐ»Ð°Ð» Ð´Ð»Ñ Ð½Ð°Ñ. ÐÐ°Ð¼ Ð½ÑƒÐ¶Ð½Ñ‹ Ñ‚Ð°ÐºÐ¸Ðµ Ð»ÑŽÐ´Ð¸, ÐºÐ°Ðº Ñ‚Ñ‹.
+		AI_Output(hero,self,"Info_FreemineOrc_EXIT_15_03");	//Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾. Ð Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ð¼Ð½Ðµ Ð½ÑƒÐ¶Ð½Ð¾ ÑƒÑ…Ð¾Ð´Ð¸Ñ‚ÑŒ.
+		AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_01");	//ÐŸÐ¾Ð´Ð¾Ð¶Ð´Ð¸!
+		AI_Output(self,hero,"Info_CorAngar_TELEPORT_08_03");	//Ð’Ð¾Ð·ÑŒÐ¼Ð¸ ÑÑ‚Ñƒ Ñ€ÑƒÐ½Ñƒ Ð² Ð·Ð½Ð°Ðº Ð½Ð°ÑˆÐµÐ¹ Ð±Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ð½Ð¾ÑÑ‚Ð¸ Ð·Ð° Ñ‚Ð²Ð¾ÑŽ Ð¿Ð¾Ð¼Ð¾Ñ‰ÑŒ.
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð° Ñ€ÑƒÐ½Ð° Ð¾Ð³Ð½ÐµÐ½Ð½Ð¾Ð³Ð¾ ÑˆÑ‚Ð¾Ñ€Ð¼Ð°.");
+		AI_Output(hero,self,"Info_CorAngar_TELEPORT_15_05");	//Ð¡Ð¿Ð°ÑÐ¸Ð±Ð¾ Ñ‚ÐµÐ±Ðµ!
+		AI_Output(hero,self,"Info_Exit_Info_15_01");	//Ð”Ð¾ Ð²ÑÑ‚Ñ€ÐµÑ‡Ð¸!
+		B_LogEntry(CH4_BannedFromOC,"Ð¯ Ñ€Ð°ÑÑÐºÐ°Ð·Ð°Ð» Ð›Ð¸ Ð¾ Ñ‚Ð¾Ð¼, Ñ‡Ñ‚Ð¾ Ð¼Ñ‹ Ñ Ð“Ð¾Ñ€Ð½Ð¾Ð¼ Ð¾Ñ‡Ð¸ÑÑ‚Ð¸Ð»Ð¸ Ð¡Ð²Ð¾Ð±Ð¾Ð´Ð½ÑƒÑŽ ÑˆÐ°Ñ…Ñ‚Ñƒ. ÐžÐ½ Ð±Ñ‹Ð» Ð¾Ñ‡ÐµÐ½ÑŒ Ð´Ð¾Ð²Ð¾Ð»ÐµÐ½.");
 		B_GiveInvItems(self,other,itarrune_2_3_firestorm,1);
 		B_GiveXP(500);
 		Lee_freeminereport = 0;
@@ -337,7 +338,7 @@ instance Sld_700_Lee_CHANGESIDE(C_Info)
 	information = Sld_700_Lee_CHANGESIDE_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ìåíÿ ïðîãíàëè èç Ñòàðîãî ëàãåðÿ. ß ìîãó ïðèñîåäèíèòüñÿ ê âàì?";
+	description = "ÐœÐµÐ½Ñ Ð¿Ñ€Ð¾Ð³Ð½Ð°Ð»Ð¸ Ð¸Ð· Ð¡Ñ‚Ð°Ñ€Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ. Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº Ð²Ð°Ð¼?";
 };
 
 
@@ -353,25 +354,25 @@ func void Sld_700_Lee_CHANGESIDE_Info()
 {
 	var C_Item eqarmor;
 	eqarmor = Npc_GetEquippedArmor(hero);
-	AI_Output(other,self,"Sld_700_Lee_CHANGESIDE_Info_15_01");	//Ìåíÿ ïðîãíàëè èç Ñòàðîãî ëàãåðÿ. ß ìîãó ïðèñîåäèíèòüñÿ ê âàì?
-	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_02");	//Òû ìíîãî ñäåëàë äëÿ íàñ. Íàì íóæíû òàêèå ëþäè, êàê òû.
-	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_03");	//×òî æ, äîáðî ïîæàëîâàòü â Íîâûé ëàãåðü, íàåìíèê!
-	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_04");	//Âîçüìè ýòè äîñïåõè. ß ðàä, ÷òî òû ïðèøåë ê íàì.
+	AI_Output(other,self,"Sld_700_Lee_CHANGESIDE_Info_15_01");	//ÐœÐµÐ½Ñ Ð¿Ñ€Ð¾Ð³Ð½Ð°Ð»Ð¸ Ð¸Ð· Ð¡Ñ‚Ð°Ñ€Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ. Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ñ‚ÑŒÑÑ Ðº Ð²Ð°Ð¼?
+	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_02");	//Ð¢Ñ‹ Ð¼Ð½Ð¾Ð³Ð¾ ÑÐ´ÐµÐ»Ð°Ð» Ð´Ð»Ñ Ð½Ð°Ñ. ÐÐ°Ð¼ Ð½ÑƒÐ¶Ð½Ñ‹ Ñ‚Ð°ÐºÐ¸Ðµ Ð»ÑŽÐ´Ð¸, ÐºÐ°Ðº Ñ‚Ñ‹.
+	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_03");	//Ð§Ñ‚Ð¾ Ð¶, Ð´Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² ÐÐ¾Ð²Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ, Ð½Ð°ÐµÐ¼Ð½Ð¸Ðº!
+	AI_Output(self,other,"Sld_700_Lee_CHANGESIDE_Info_08_04");	//Ð’Ð¾Ð·ÑŒÐ¼Ð¸ ÑÑ‚Ð¸ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸. Ð¯ Ñ€Ð°Ð´, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð¿Ñ€Ð¸ÑˆÐµÐ» Ðº Ð½Ð°Ð¼.
 	if(Hlp_IsItem(eqarmor,grd_armor_h))
 	{
-		b_printtrademsg1("Ïîëó÷åí òÿæåëûé äîñïåõ íàåìíèêà.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 		CreateInvItem(hero,sld_armor_h);
 		LEE_ARMOR_H_WAS_BOUGHT = 1;
 	}
 	else
 	{
-		b_printtrademsg1("Ïîëó÷åí ñðåäíèé äîñïåõ íàåìíèêà.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 		CreateInvItem(hero,sld_armor_m);
 		LEE_ARMOR_M_WAS_BOUGHT = 1;
 	};
 	Npc_SetTrueGuild(hero,GIL_SLD);
 	hero.guild = GIL_SLD;
-	B_LogEntry(CH4_BannedFromOC,"ß ïåðåøåë â äðóãîé ëàãåðü. Ïîñëå òîãî êàê ìåíÿ èçãíàëè èç Ñòàðîãî ëàãåðÿ, Ëè ïðèíÿë ìåíÿ â íàåìíèêè. Ìíå íóæíî ïîïàñòü ê Ñàòóðàñó!");
+	B_LogEntry(CH4_BannedFromOC,"Ð¯ Ð¿ÐµÑ€ÐµÑˆÐµÐ» Ð² Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ. ÐŸÐ¾ÑÐ»Ðµ Ñ‚Ð¾Ð³Ð¾ ÐºÐ°Ðº Ð¼ÐµÐ½Ñ Ð¸Ð·Ð³Ð½Ð°Ð»Ð¸ Ð¸Ð· Ð¡Ñ‚Ð°Ñ€Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ, Ð›Ð¸ Ð¿Ñ€Ð¸Ð½ÑÐ» Ð¼ÐµÐ½Ñ Ð² Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ¸. ÐœÐ½Ðµ Ð½ÑƒÐ¶Ð½Ð¾ Ð¿Ð¾Ð¿Ð°ÑÑ‚ÑŒ Ðº Ð¡Ð°Ñ‚ÑƒÑ€Ð°ÑÑƒ!");
 	if(DIFF_HARD == FALSE)
 	{
 		FREELEARN_NC = TRUE;
@@ -386,7 +387,7 @@ instance Sld_700_Lee_ARMOR(C_Info)
 	information = Sld_700_Lee_ARMOR_Info;
 	important = 0;
 	permanent = 1;
-	description = "Ó òåáÿ åñòü õîðîøèå äîñïåõè?";
+	description = "Ð£ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸?";
 };
 
 
@@ -400,17 +401,17 @@ func int Sld_700_Lee_ARMOR_Condition()
 
 func void Sld_700_Lee_ARMOR_Info()
 {
-	AI_Output(other,self,"Sld_700_Lee_ARMOR_Info_15_01");	//Ó òåáÿ åñòü õîðîøèå äîñïåõè?
-	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02");	//Äîñïåõè íóæíî çàñëóæèòü. Ê òîìó æå, õîðîøèå äîñïåõè öåíÿòñÿ î÷åíü âûñîêî.
+	AI_Output(other,self,"Sld_700_Lee_ARMOR_Info_15_01");	//Ð£ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸?
+	AI_Output(self,other,"Sld_700_Lee_ARMOR_Info_08_02");	//Ð”Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð½ÑƒÐ¶Ð½Ð¾ Ð·Ð°ÑÐ»ÑƒÐ¶Ð¸Ñ‚ÑŒ. Ðš Ñ‚Ð¾Ð¼Ñƒ Ð¶Ðµ, Ñ…Ð¾Ñ€Ð¾ÑˆÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ñ†ÐµÐ½ÑÑ‚ÑÑ Ð¾Ñ‡ÐµÐ½ÑŒ Ð²Ñ‹ÑÐ¾ÐºÐ¾.
 	Info_ClearChoices(Sld_700_Lee_ARMOR);
 	Info_AddChoice(Sld_700_Lee_ARMOR,DIALOG_BACK,Sld_700_Lee_ARMOR_BACK);
 	if(LEE_ARMOR_H_WAS_BOUGHT != 1)
 	{
-		Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString("Òÿæåëûé äîñïåõ íàåìíèêà, çàùèòà: 70/10/35/0",VALUE_SLD_ARMOR_H),Sld_700_Lee_ARMOR_H);
+		Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString("Ð¢ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°, Ð·Ð°Ñ‰Ð¸Ñ‚Ð°: 70/10/35/0",VALUE_SLD_ARMOR_H),Sld_700_Lee_ARMOR_H);
 	};
 	if(LEE_ARMOR_M_WAS_BOUGHT != 1)
 	{
-		Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString("Ñðåäíèé äîñïåõ íàåìíèêà, çàùèòà: 55/10/25/0",VALUE_SLD_ARMOR_M),Sld_700_Lee_ARMOR_M);
+		Info_AddChoice(Sld_700_Lee_ARMOR,B_BuildBuyArmorString("Ð¡Ñ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°, Ð·Ð°Ñ‰Ð¸Ñ‚Ð°: 55/10/25/0",VALUE_SLD_ARMOR_M),Sld_700_Lee_ARMOR_M);
 	};
 };
 
@@ -421,21 +422,21 @@ func void Sld_700_Lee_ARMOR_BACK()
 
 func void Sld_700_Lee_ARMOR_M()
 {
-	AI_Output(other,self,"Sld_700_Lee_ARMOR_M_Info_08_01");	//Äàé ìíå ñðåäíèé äîñïåõ.
+	AI_Output(other,self,"Sld_700_Lee_ARMOR_M_Info_08_01");	//Ð”Ð°Ð¹ Ð¼Ð½Ðµ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ….
 	if(Kapitel < 3)
 	{
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_02");	//Òû åùå íå ìîæåøü íîñèòü òàêèå äîñïåõè. Ïðèõîäè, êîãäà ó òåáÿ áóäåò áîëüøå îïûòà.
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_02");	//Ð¢Ñ‹ ÐµÑ‰Ðµ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ñ‚Ð°ÐºÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸. ÐŸÑ€Ð¸Ñ…Ð¾Ð´Ð¸, ÐºÐ¾Ð³Ð´Ð° Ñƒ Ñ‚ÐµÐ±Ñ Ð±ÑƒÐ´ÐµÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¾Ð¿Ñ‹Ñ‚Ð°.
 	}
 	else if(Npc_HasItems(hero,ItMiNugget) < VALUE_SLD_ARMOR_M)
 	{
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_03");	//ß íå ðàçäàþ äîñïåõè áåñïëàòíî.
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_03");	//Ð¯ Ð½Ðµ Ñ€Ð°Ð·Ð´Ð°ÑŽ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð±ÐµÑÐ¿Ð»Ð°Ñ‚Ð½Ð¾.
 	}
 	else
 	{
-		b_printtrademsg1("Îòäàíî ðóäû: 1650");
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_04");	//Ýòî äîáðîòíî ñäåëàííûå äîñïåõè. Îíè íàäåæíî çàùèòÿò òåáÿ.
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 1650");
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_M_Info_08_04");	//Ð­Ñ‚Ð¾ Ð´Ð¾Ð±Ñ€Ð¾Ñ‚Ð½Ð¾ ÑÐ´ÐµÐ»Ð°Ð½Ð½Ñ‹Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸. ÐžÐ½Ð¸ Ð½Ð°Ð´ÐµÐ¶Ð½Ð¾ Ð·Ð°Ñ‰Ð¸Ñ‚ÑÑ‚ Ñ‚ÐµÐ±Ñ.
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_SLD_ARMOR_M);
-		b_printtrademsg2("Ïîëó÷åí ñðåäíèé äîñïåõ íàåìíèêà.");
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ ÑÑ€ÐµÐ´Ð½Ð¸Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 		CreateInvItem(self,sld_armor_m);
 		B_GiveInvItems(self,hero,sld_armor_m,1);
 		LEE_ARMOR_M_WAS_BOUGHT = 1;
@@ -444,20 +445,20 @@ func void Sld_700_Lee_ARMOR_M()
 
 func void Sld_700_Lee_ARMOR_H()
 {
-	AI_Output(other,self,"Sld_700_Lee_ARMOR_H_Info_08_01");	//Äàé ìíå òÿæåëûé äîñïåõ.
+	AI_Output(other,self,"Sld_700_Lee_ARMOR_H_Info_08_01");	//Ð”Ð°Ð¹ Ð¼Ð½Ðµ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ….
 	if(Kapitel < 4)
 	{
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_02");	//Òû åùå íå ìîæåøü íîñèòü òàêèå äîñïåõè. Ïðèõîäè, êîãäà ó òåáÿ áóäåò áîëüøå îïûòà.
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_02");	//Ð¢Ñ‹ ÐµÑ‰Ðµ Ð½Ðµ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ñ‚Ð°ÐºÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸. ÐŸÑ€Ð¸Ñ…Ð¾Ð´Ð¸, ÐºÐ¾Ð³Ð´Ð° Ñƒ Ñ‚ÐµÐ±Ñ Ð±ÑƒÐ´ÐµÑ‚ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¾Ð¿Ñ‹Ñ‚Ð°.
 	}
 	else if(Npc_HasItems(hero,ItMiNugget) < VALUE_SLD_ARMOR_H)
 	{
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_03");	//ß íå ðàçäàþ äîñïåõè áåñïëàòíî.
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_03");	//Ð¯ Ð½Ðµ Ñ€Ð°Ð·Ð´Ð°ÑŽ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸ Ð±ÐµÑÐ¿Ð»Ð°Ñ‚Ð½Ð¾.
 	}
 	else
 	{
-		b_printtrademsg1("Îòäàíî ðóäû: 2600");
-		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_04");	//Ýòî ëó÷øèå äîñïåõè, êîòîðûå ìîæíî äîñòàòü â êîëîíèè, ïîâåðü ìíå. Îíè ñòîÿò òîé ðóäû, êîòîðóþ ÿ çà íèõ áåðó.
-		b_printtrademsg2("Ïîëó÷åí òÿæåëûé äîñïåõ íàåìíèêà.");
+		b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 2600");
+		AI_Output(self,other,"Sld_700_Lee_ARMOR_H_Info_08_04");	//Ð­Ñ‚Ð¾ Ð»ÑƒÑ‡ÑˆÐ¸Ðµ Ð´Ð¾ÑÐ¿ÐµÑ…Ð¸, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¼Ð¾Ð¶Ð½Ð¾ Ð´Ð¾ÑÑ‚Ð°Ñ‚ÑŒ Ð² ÐºÐ¾Ð»Ð¾Ð½Ð¸Ð¸, Ð¿Ð¾Ð²ÐµÑ€ÑŒ Ð¼Ð½Ðµ. ÐžÐ½Ð¸ ÑÑ‚Ð¾ÑÑ‚ Ñ‚Ð¾Ð¹ Ñ€ÑƒÐ´Ñ‹, ÐºÐ¾Ñ‚Ð¾Ñ€ÑƒÑŽ Ñ Ð·Ð° Ð½Ð¸Ñ… Ð±ÐµÑ€Ñƒ.
+		b_printtrademsg2("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¹ Ð´Ð¾ÑÐ¿ÐµÑ… Ð½Ð°ÐµÐ¼Ð½Ð¸ÐºÐ°.");
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_SLD_ARMOR_H);
 		CreateInvItem(hero,sld_armor_h);
 		LEE_ARMOR_H_WAS_BOUGHT = 1;
@@ -472,7 +473,7 @@ instance SLD_700_LEE_TEACH_PRE(C_Info)
 	condition = sld_700_lee_teach_pre_condition;
 	information = sld_700_lee_teach_pre_info;
 	permanent = 0;
-	description = "Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?";
+	description = "Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?";
 };
 
 
@@ -486,11 +487,11 @@ func int sld_700_lee_teach_pre_condition()
 
 func void sld_700_lee_teach_pre_info()
 {
-	AI_Output(other,self,"Sld_700_Lee_Teach_15_00");	//Òû ìîæåøü íàó÷èòü ìåíÿ ÷åìó-íèáóäü?
-	AI_Output(self,other,"Sld_700_Lee_Teach_08_01");	//ß ìîãó ïîìî÷ü òåáå ñòàòü áîëåå ëîâêèì è ñèëüíûì.
-	AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_06");	//Äâóðó÷íûì ìå÷îì ìîæíî íàíîñèòü î÷åíü ñèëüíûå áîêîâûå óäàðû. Ïðè ýòîì ïðîòèâíèê íå ñìîæåò ê òåáå ïðèáëèçèòüñÿ.
+	AI_Output(other,self,"Sld_700_Lee_Teach_15_00");	//Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ñ‡ÐµÐ¼Ñƒ-Ð½Ð¸Ð±ÑƒÐ´ÑŒ?
+	AI_Output(self,other,"Sld_700_Lee_Teach_08_01");	//Ð¯ Ð¼Ð¾Ð³Ñƒ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ñ‚ÐµÐ±Ðµ ÑÑ‚Ð°Ñ‚ÑŒ Ð±Ð¾Ð»ÐµÐµ Ð»Ð¾Ð²ÐºÐ¸Ð¼ Ð¸ ÑÐ¸Ð»ÑŒÐ½Ñ‹Ð¼.
+	AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_06");	//Ð”Ð²ÑƒÑ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð½Ð¾ÑÐ¸Ñ‚ÑŒ Ð¾Ñ‡ÐµÐ½ÑŒ ÑÐ¸Ð»ÑŒÐ½Ñ‹Ðµ Ð±Ð¾ÐºÐ¾Ð²Ñ‹Ðµ ÑƒÐ´Ð°Ñ€Ñ‹. ÐŸÑ€Ð¸ ÑÑ‚Ð¾Ð¼ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸Ðº Ð½Ðµ ÑÐ¼Ð¾Ð¶ÐµÑ‚ Ðº Ñ‚ÐµÐ±Ðµ Ð¿Ñ€Ð¸Ð±Ð»Ð¸Ð·Ð¸Ñ‚ÑŒÑÑ.
 	Log_CreateTopic(GE_TeacherNC,LOG_NOTE);
-	B_LogEntry(GE_TeacherNC,"Ëè ìîæåò íàó÷èòü ìåíÿ âåñòè áîé äâóðó÷íûì ìå÷îì. Åùå îí ìîæåò ïîìî÷ü ìíå óâåëè÷èòü ñèëó è ëîâêîñòü.");
+	B_LogEntry(GE_TeacherNC,"Ð›Ð¸ Ð¼Ð¾Ð¶ÐµÑ‚ Ð½Ð°ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ Ð²ÐµÑÑ‚Ð¸ Ð±Ð¾Ð¹ Ð´Ð²ÑƒÑ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼. Ð•Ñ‰Ðµ Ð¾Ð½ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð¼Ð¾Ñ‡ÑŒ Ð¼Ð½Ðµ ÑƒÐ²ÐµÐ»Ð¸Ñ‡Ð¸Ñ‚ÑŒ ÑÐ¸Ð»Ñƒ Ð¸ Ð»Ð¾Ð²ÐºÐ¾ÑÑ‚ÑŒ.");
 };
 
 
@@ -515,7 +516,7 @@ func int Sld_700_Lee_Teach_Condition()
 
 func void Sld_700_Lee_Teach_Info()
 {
-	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//ß õî÷ó óëó÷øèòü ñâîè íàâûêè.
+	AI_Output(other,self,"ORG_801_Lares_Teach_15_00");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ»ÑƒÑ‡ÑˆÐ¸Ñ‚ÑŒ ÑÐ²Ð¾Ð¸ Ð½Ð°Ð²Ñ‹ÐºÐ¸.
 	b_leelearn();
 };
 
@@ -534,15 +535,15 @@ func void Sld_700_Lee_Teach_STR_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_STRENGTH] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Ìû åùå âñòðåòèìñÿ!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//ÐœÑ‹ ÐµÑ‰Ðµ Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð¼ÑÑ!
 	};
 	b_leelearn();
 };
@@ -557,15 +558,15 @@ func void Sld_700_Lee_Teach_STR_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_STRENGTH] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_STRENGTH,5 * LPCOST_ATTRIBUTE_STRENGTH);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Ìû åùå âñòðåòèìñÿ!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//ÐœÑ‹ ÐµÑ‰Ðµ Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð¼ÑÑ!
 	};
 	b_leelearn();
 };
@@ -580,15 +581,15 @@ func void Sld_700_Lee_Teach_DEX_1()
 	{
 		if((hero.lp >= 1) && (hero.attribute[ATR_DEXTERITY] < 100))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 10");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 10");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Ìû åùå âñòðåòèìñÿ!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//ÐœÑ‹ ÐµÑ‰Ðµ Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð¼ÑÑ!
 	};
 	b_leelearn();
 };
@@ -603,51 +604,51 @@ func void Sld_700_Lee_Teach_DEX_5()
 	{
 		if((hero.lp >= 5) && (hero.attribute[ATR_DEXTERITY] < 96))
 		{
-			b_printtrademsg1("Îòäàíî ðóäû: 50");
+			b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½Ð¾ Ñ€ÑƒÐ´Ñ‹: 50");
 			B_GiveInvItems(other,self,ItMiNugget,OTHERCAMPLEARNPAY * 5);
 		};
 		B_BuyAttributePoints(other,ATR_DEXTERITY,5 * LPCOST_ATTRIBUTE_DEXTERITY);
 	}
 	else
 	{
-		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ó ìåíÿ íå òàê ìíîãî ðóäû.
-		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//Ìû åùå âñòðåòèìñÿ!
+		AI_Output(other,self,"B_Gravo_HelpAttitude_NoOre_15_01");	//Ð£ Ð¼ÐµÐ½Ñ Ð½Ðµ Ñ‚Ð°Ðº Ð¼Ð½Ð¾Ð³Ð¾ Ñ€ÑƒÐ´Ñ‹.
+		AI_Output(self,other,"SVM_8_WeWillMeetAgain");	//ÐœÑ‹ ÐµÑ‰Ðµ Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð¼ÑÑ!
 	};
 	b_leelearn();
 };
 
 func void Sld_700_Lee_ZWEIHAND1()
 {
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01");	//Íàó÷è ìåíÿ âëàäåòü äâóðó÷íûì ìå÷îì.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND1_Info_15_01");	//ÐÐ°ÑƒÑ‡Ð¸ Ð¼ÐµÐ½Ñ Ð²Ð»Ð°Ð´ÐµÑ‚ÑŒ Ð´Ð²ÑƒÑ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼.
 	if(Npc_GetTalentSkill(hero,NPC_TALENT_1H) < 2)
 	{
-		AI_Output(self,other,"SVM_8_NoLearnYouAlreadyKnow");	//Ñíà÷àëà òû äîëæåí èçó÷èòü îñíîâû è òîëüêî ïîòîì ïåðåõîäèòü ê áîëåå ñëîæíûì âåùàì.
-		PrintScreen("Òðåáóåòñÿ ìàñòåðñòâî îäíîðó÷íîãî îðóæèÿ!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+		AI_Output(self,other,"SVM_8_NoLearnYouAlreadyKnow");	//Ð¡Ð½Ð°Ñ‡Ð°Ð»Ð° Ñ‚Ñ‹ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð¸Ð·ÑƒÑ‡Ð¸Ñ‚ÑŒ Ð¾ÑÐ½Ð¾Ð²Ñ‹ Ð¸ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ð¿Ð¾Ñ‚Ð¾Ð¼ Ð¿ÐµÑ€ÐµÑ…Ð¾Ð´Ð¸Ñ‚ÑŒ Ðº Ð±Ð¾Ð»ÐµÐµ ÑÐ»Ð¾Ð¶Ð½Ñ‹Ð¼ Ð²ÐµÑ‰Ð°Ð¼.
+		PrintScreen("Ð¢Ñ€ÐµÐ±ÑƒÐµÑ‚ÑÑ Ð¼Ð°ÑÑ‚ÐµÑ€ÑÑ‚Ð²Ð¾ Ð¾Ð´Ð½Ð¾Ñ€ÑƒÑ‡Ð½Ð¾Ð³Ð¾ Ð¾Ñ€ÑƒÐ¶Ð¸Ñ!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	}
 	else if(B_GiveSkill(other,NPC_TALENT_2H,1,LPCOST_TALENT_2H_1))
 	{
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_02");	//Õîðîøî, íà÷íåì ñ ñàìûõ àçîâ.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_03");	//Äåðæè êëèíîê ãîðèçîíòàëüíî. ×òîáû íàíåñòè óäàð òàêèì òÿæåëûì îðóæèåì, íåîáõîäèìî õîðîøî ðàçìàõíóòüñÿ.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_04");	//Ïîäíèìè ìå÷ è íàíåñè óäàð ñâåðõó. Îáû÷íî òàêîé óäàð ìîæåò ïîâåðãíóòü ïðîòèâíèêà.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_05");	//Èñïîëüçóé èíåðöèþ äâèæåíèÿ, ÷òîáû íàíåñòè óäàð ñíèçó.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_07");	//×òî æ, äëÿ ïåðâîãî óðîêà äîñòàòî÷íî. Èäè, òðåíèðóéñÿ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_02");	//Ð¥Ð¾Ñ€Ð¾ÑˆÐ¾, Ð½Ð°Ñ‡Ð½ÐµÐ¼ Ñ ÑÐ°Ð¼Ñ‹Ñ… Ð°Ð·Ð¾Ð².
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_03");	//Ð”ÐµÑ€Ð¶Ð¸ ÐºÐ»Ð¸Ð½Ð¾Ðº Ð³Ð¾Ñ€Ð¸Ð·Ð¾Ð½Ñ‚Ð°Ð»ÑŒÐ½Ð¾. Ð§Ñ‚Ð¾Ð±Ñ‹ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ ÑƒÐ´Ð°Ñ€ Ñ‚Ð°ÐºÐ¸Ð¼ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¼ Ð¾Ñ€ÑƒÐ¶Ð¸ÐµÐ¼, Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ Ñ…Ð¾Ñ€Ð¾ÑˆÐ¾ Ñ€Ð°Ð·Ð¼Ð°Ñ…Ð½ÑƒÑ‚ÑŒÑÑ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_04");	//ÐŸÐ¾Ð´Ð½Ð¸Ð¼Ð¸ Ð¼ÐµÑ‡ Ð¸ Ð½Ð°Ð½ÐµÑÐ¸ ÑƒÐ´Ð°Ñ€ ÑÐ²ÐµÑ€Ñ…Ñƒ. ÐžÐ±Ñ‹Ñ‡Ð½Ð¾ Ñ‚Ð°ÐºÐ¾Ð¹ ÑƒÐ´Ð°Ñ€ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ð¾Ð²ÐµÑ€Ð³Ð½ÑƒÑ‚ÑŒ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÐ°.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_05");	//Ð˜ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹ Ð¸Ð½ÐµÑ€Ñ†Ð¸ÑŽ Ð´Ð²Ð¸Ð¶ÐµÐ½Ð¸Ñ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ ÑƒÐ´Ð°Ñ€ ÑÐ½Ð¸Ð·Ñƒ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND1_Info_08_07");	//Ð§Ñ‚Ð¾ Ð¶, Ð´Ð»Ñ Ð¿ÐµÑ€Ð²Ð¾Ð³Ð¾ ÑƒÑ€Ð¾ÐºÐ° Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾. Ð˜Ð´Ð¸, Ñ‚Ñ€ÐµÐ½Ð¸Ñ€ÑƒÐ¹ÑÑ.
 	};
 	b_leelearn();
 };
 
 func void Sld_700_Lee_ZWEIHAND2()
 {
-	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01");	//ß õî÷ó óçíàòü áîëüøå î âëàäåíèè äâóðó÷íûì ìå÷îì.
+	AI_Output(other,self,"Sld_700_Lee_ZWEIHAND2_Info_15_01");	//Ð¯ Ñ…Ð¾Ñ‡Ñƒ ÑƒÐ·Ð½Ð°Ñ‚ÑŒ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð¾ Ð²Ð»Ð°Ð´ÐµÐ½Ð¸Ð¸ Ð´Ð²ÑƒÑ€ÑƒÑ‡Ð½Ñ‹Ð¼ Ð¼ÐµÑ‡Ð¾Ð¼.
 	if(B_GiveSkill(other,NPC_TALENT_2H,2,LPCOST_TALENT_2H_2))
 	{
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_02");	//Äëÿ íà÷àëà òåáå íóæíî èçìåíèòü ñòîéêó. Äåðæè êëèíîê âåðòèêàëüíî, âîçüìèñü çà ðóêîÿòü îáåèìè ðóêàìè è îòâåäè ìå÷ íåìíîãî â ñòîðîíó.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_03");	//Íàíåñè áûñòðûé óäàð ñâåðõó, íàïðàâëÿÿ êëèíîê íàä ïëå÷îì. Ó òåáÿ ïîÿâèòñÿ âîçìîæíîñòü ïåðåéòè ê áûñòðîìó óäàðó ñëåâà.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_04");	//Ïðè ýòîì ó ïðîòèâíèêà íå áóäåò íèêàêèõ øàíñîâ ïðèáëèçèòüñÿ ê òåáå.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_05");	//Òû ìîæåøü åùå íàíåñòè óäàð ñëåâà ñâåðõó, ÷òîáû îòòîëêíóòü ïðîòèâíèêà.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_06");	//Ñäåëàé áûñòðûé ðàçâîðîò, è òû ñìîæåøü óäàðèòü ïðîòèâíèêà ñ ñèëîé, äîñòàòî÷íîé äëÿ òîãî, ÷òîáû ïîâåðãíóòü âðàãà.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_07");	//Åñëè ïðîòèâíèê ñìîã èçáåæàòü ýòîãî óäàðà, èñïîëüçóé èíåðöèþ ìå÷à, ÷òîáû íàíåñòè ñëåäóþùèé óäàð.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_08");	//Ïîñëå àòàêè ïðèìè îáîðîíèòåëüíóþ ñòîéêó è æäè ïîäõîäÿùåãî ìîìåíòà äëÿ ñëåäóþùåãî óäàðà.
-		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09");	//Ñìåíà óäàðîâ è ïðàâèëüíûé âûáîð ïîçèöèè ÿâëÿþòñÿ îñíîâîé óñïåøíîãî âåäåíèÿ áîÿ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_02");	//Ð”Ð»Ñ Ð½Ð°Ñ‡Ð°Ð»Ð° Ñ‚ÐµÐ±Ðµ Ð½ÑƒÐ¶Ð½Ð¾ Ð¸Ð·Ð¼ÐµÐ½Ð¸Ñ‚ÑŒ ÑÑ‚Ð¾Ð¹ÐºÑƒ. Ð”ÐµÑ€Ð¶Ð¸ ÐºÐ»Ð¸Ð½Ð¾Ðº Ð²ÐµÑ€Ñ‚Ð¸ÐºÐ°Ð»ÑŒÐ½Ð¾, Ð²Ð¾Ð·ÑŒÐ¼Ð¸ÑÑŒ Ð·Ð° Ñ€ÑƒÐºÐ¾ÑÑ‚ÑŒ Ð¾Ð±ÐµÐ¸Ð¼Ð¸ Ñ€ÑƒÐºÐ°Ð¼Ð¸ Ð¸ Ð¾Ñ‚Ð²ÐµÐ´Ð¸ Ð¼ÐµÑ‡ Ð½ÐµÐ¼Ð½Ð¾Ð³Ð¾ Ð² ÑÑ‚Ð¾Ñ€Ð¾Ð½Ñƒ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_03");	//ÐÐ°Ð½ÐµÑÐ¸ Ð±Ñ‹ÑÑ‚Ñ€Ñ‹Ð¹ ÑƒÐ´Ð°Ñ€ ÑÐ²ÐµÑ€Ñ…Ñƒ, Ð½Ð°Ð¿Ñ€Ð°Ð²Ð»ÑÑ ÐºÐ»Ð¸Ð½Ð¾Ðº Ð½Ð°Ð´ Ð¿Ð»ÐµÑ‡Ð¾Ð¼. Ð£ Ñ‚ÐµÐ±Ñ Ð¿Ð¾ÑÐ²Ð¸Ñ‚ÑÑ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð¿ÐµÑ€ÐµÐ¹Ñ‚Ð¸ Ðº Ð±Ñ‹ÑÑ‚Ñ€Ð¾Ð¼Ñƒ ÑƒÐ´Ð°Ñ€Ñƒ ÑÐ»ÐµÐ²Ð°.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_04");	//ÐŸÑ€Ð¸ ÑÑ‚Ð¾Ð¼ Ñƒ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÐ° Ð½Ðµ Ð±ÑƒÐ´ÐµÑ‚ Ð½Ð¸ÐºÐ°ÐºÐ¸Ñ… ÑˆÐ°Ð½ÑÐ¾Ð² Ð¿Ñ€Ð¸Ð±Ð»Ð¸Ð·Ð¸Ñ‚ÑŒÑÑ Ðº Ñ‚ÐµÐ±Ðµ.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_05");	//Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ ÐµÑ‰Ðµ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ ÑƒÐ´Ð°Ñ€ ÑÐ»ÐµÐ²Ð° ÑÐ²ÐµÑ€Ñ…Ñƒ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¾Ñ‚Ñ‚Ð¾Ð»ÐºÐ½ÑƒÑ‚ÑŒ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÐ°.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_06");	//Ð¡Ð´ÐµÐ»Ð°Ð¹ Ð±Ñ‹ÑÑ‚Ñ€Ñ‹Ð¹ Ñ€Ð°Ð·Ð²Ð¾Ñ€Ð¾Ñ‚, Ð¸ Ñ‚Ñ‹ ÑÐ¼Ð¾Ð¶ÐµÑˆÑŒ ÑƒÐ´Ð°Ñ€Ð¸Ñ‚ÑŒ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸ÐºÐ° Ñ ÑÐ¸Ð»Ð¾Ð¹, Ð´Ð¾ÑÑ‚Ð°Ñ‚Ð¾Ñ‡Ð½Ð¾Ð¹ Ð´Ð»Ñ Ñ‚Ð¾Ð³Ð¾, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ð¾Ð²ÐµÑ€Ð³Ð½ÑƒÑ‚ÑŒ Ð²Ñ€Ð°Ð³Ð°.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_07");	//Ð•ÑÐ»Ð¸ Ð¿Ñ€Ð¾Ñ‚Ð¸Ð²Ð½Ð¸Ðº ÑÐ¼Ð¾Ð³ Ð¸Ð·Ð±ÐµÐ¶Ð°Ñ‚ÑŒ ÑÑ‚Ð¾Ð³Ð¾ ÑƒÐ´Ð°Ñ€Ð°, Ð¸ÑÐ¿Ð¾Ð»ÑŒÐ·ÑƒÐ¹ Ð¸Ð½ÐµÑ€Ñ†Ð¸ÑŽ Ð¼ÐµÑ‡Ð°, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰Ð¸Ð¹ ÑƒÐ´Ð°Ñ€.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_08");	//ÐŸÐ¾ÑÐ»Ðµ Ð°Ñ‚Ð°ÐºÐ¸ Ð¿Ñ€Ð¸Ð¼Ð¸ Ð¾Ð±Ð¾Ñ€Ð¾Ð½Ð¸Ñ‚ÐµÐ»ÑŒÐ½ÑƒÑŽ ÑÑ‚Ð¾Ð¹ÐºÑƒ Ð¸ Ð¶Ð´Ð¸ Ð¿Ð¾Ð´Ñ…Ð¾Ð´ÑÑ‰ÐµÐ³Ð¾ Ð¼Ð¾Ð¼ÐµÐ½Ñ‚Ð° Ð´Ð»Ñ ÑÐ»ÐµÐ´ÑƒÑŽÑ‰ÐµÐ³Ð¾ ÑƒÐ´Ð°Ñ€Ð°.
+		AI_Output(self,other,"Sld_700_Lee_ZWEIHAND2_Info_08_09");	//Ð¡Ð¼ÐµÐ½Ð° ÑƒÐ´Ð°Ñ€Ð¾Ð² Ð¸ Ð¿Ñ€Ð°Ð²Ð¸Ð»ÑŒÐ½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€ Ð¿Ð¾Ð·Ð¸Ñ†Ð¸Ð¸ ÑÐ²Ð»ÑÑŽÑ‚ÑÑ Ð¾ÑÐ½Ð¾Ð²Ð¾Ð¹ ÑƒÑÐ¿ÐµÑˆÐ½Ð¾Ð³Ð¾ Ð²ÐµÐ´ÐµÐ½Ð¸Ñ Ð±Ð¾Ñ.
 	};
 	b_leelearn();
 };

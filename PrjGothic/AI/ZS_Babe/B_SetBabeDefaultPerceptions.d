@@ -13,7 +13,7 @@ func void b_babe_assessfighter()
 {
 	if(Npc_IsInFightMode(other,FMODE_FIST) && Npc_CanSeeNpcFreeLOS(self,other))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Fighter hat nur Fäuste 'gezogen'!");
+		PrintDebugNpc(PD_ZS_Check,"...Fighter hat nur FÐ´uste 'gezogen'!");
 		return;
 	}
 	else if(Npc_CanSeeNpcFreeLOS(self,other))

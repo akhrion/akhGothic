@@ -3,7 +3,7 @@ func void ZS_Bleeding()
 };
 func int ZS_Bleeding_Loop()
 {
-//Ìäà óæ..
+//ÐœÐ´Ð° ÑƒÐ¶..
 	if(Npc_GetStateTime(self) > 5)
 	{
 		self.attribute[ATR_HITPOINTS] -=1;

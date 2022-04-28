@@ -4,7 +4,7 @@ func void B_AssessQuietSound()
 	//work with SC and Items only
 	//NPC won't processing
 	PrintDebugNpc(PD_ZS_FRAME,"B_AssessQuietSound");
-	PrintDebugNpc(PD_ZS_FRAME,"¬ ˝ÚÓÈ ‡ÒÂÒÍÂ ÌÂ ı‚‡Ú‡ÂÚ Ó·‡·ÓÚÍË ÒÚÂÈÙ‡, ·˝Í-ÒÚÂÔ‡ Ë Ô˚ÊÍÓ‚.. ‡·ÛÁ");	
+	PrintDebugNpc(PD_ZS_FRAME,"–í —ç—Ç–æ–π –∞—Å–µ—Å–∫–µ –Ω–µ —Ö–≤–∞—Ç–∞–µ—Ç –æ–±—Ä–∞–±–æ—Ç–∫–∏ —Å—Ç—Ä–µ–π—Ñ–∞, –±—ç–∫-—Å—Ç–µ–ø–∞ –∏ –ø—Ä—ã–∂–∫–æ–≤.. –∞–±—É–∑");	
 	PrintGlobals(PD_ZS_FRAME);
 //	if(Npc_GetDistToItem(self,item) > PERC_DIST_DIALOG)
 //	{
@@ -13,10 +13,10 @@ func void B_AssessQuietSound()
 //	};
 	if(Npc_CanSeeSource(self))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...kann Ger‰uschquelle sehen!");
+		PrintDebugNpc(PD_ZS_Check,"...kann Ger–¥uschquelle sehen!");
 		if(Snd_IsSourceNpc(self))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...Ger‰uschquelle ist SC!");
+			PrintDebugNpc(PD_ZS_Check,"...Ger–¥uschquelle ist SC!");
 			if(Npc_GetTempAttitude(self,other) == ATT_HOSTILE)
 			{
 				PrintDebugNpc(PD_ZS_Check,"...SC ist HOSTILE!");
@@ -27,7 +27,7 @@ func void B_AssessQuietSound()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...kann NICHT Ger‰uschquelle sehen!");
+		PrintDebugNpc(PD_ZS_Check,"...kann NICHT Ger–¥uschquelle sehen!");
 //		Npc_ClearAIQueue(self);
 		AI_StartState(self,ZS_AssessQuietSound,0,"");
 	};

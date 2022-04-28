@@ -1,7 +1,7 @@
 
 prototype Mst_Default_OrcShaman(C_Npc)
 {
-	name[0] = "Орк-шаман";
+	name[0] = "РћСЂРє-С€Р°РјР°РЅ";
 	guild = GIL_ORCSHAMAN;
 	npcType = npctype_guard;
 	level = 50;

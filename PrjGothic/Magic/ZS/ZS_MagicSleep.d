@@ -8,7 +8,7 @@ func void B_StopMagicSleep()
 	B_SayOverlay(self,other,"$WHATSTHAT");
 	if(Hlp_IsValidNpc(other))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...'other' gültig!");
+		PrintDebugNpc(PD_ZS_Check,"...'other' gÑŒltig!");
 		if(Npc_GetAttitude(self,other) == ATT_HOSTILE)
 		{
 			PrintDebugNpc(PD_ZS_Check,"...'other' hostile!");

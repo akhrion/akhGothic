@@ -1,7 +1,7 @@
 
 prototype Mst_Default_MinecrawlerWarrior(C_Npc)
 {
-	name[0] = "Ползун-воин";
+	name[0] = "РџРѕР»Р·СѓРЅ-РІРѕРёРЅ";
 	guild = GIL_MINECRAWLER;
 	aivar[AIV_IMPORTANT] = ID_MINECRAWLERWARRIOR;
 	level = 22;
@@ -53,7 +53,7 @@ instance MinecrawlerWarrior(Mst_Default_MinecrawlerWarrior)
 
 instance OTMinecrawler(Mst_Default_MinecrawlerWarrior)
 {
-	name[0] = "Храмовый ползун";
+	name[0] = "РҐСЂР°РјРѕРІС‹Р№ РїРѕР»Р·СѓРЅ";
 	guild = GIL_MINECRAWLER;
 	level = 25;
 	set_otminecrawlerwarrior_visuals();

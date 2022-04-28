@@ -1,7 +1,7 @@
 
 prototype Mst_Default_GreenGobbo(C_Npc)
 {
-	name[0] = "Гоблин";
+	name[0] = "Р“РѕР±Р»РёРЅ";
 	guild = GIL_GOBBO;
 	aivar[AIV_IMPORTANT] = ID_GOBBO;
 	level = 6;

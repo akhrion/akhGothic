@@ -26,7 +26,7 @@ instance Info_Mine_Org_6_Mine(C_Info)
 	condition = Info_Mine_Org_6_Mine_Condition;
 	information = Info_Mine_Org_6_Mine_Info;
 	permanent = 1;
-	description = "Как там дела на шахте?";
+	description = "РљР°Рє С‚Р°Рј РґРµР»Р° РЅР° С€Р°С…С‚Рµ?";
 };
 
 
@@ -37,9 +37,9 @@ func int Info_Mine_Org_6_Mine_Condition()
 
 func void Info_Mine_Org_6_Mine_Info()
 {
-	AI_Output(other,self,"Info_Mine_Org_6_Mine_15_00");	//Как там дела на шахте?
-	AI_Output(self,other,"Info_Mine_Org_6_Mine_06_01");	//В шахте? Сейчас к нам не присылают новых людей. Все, кто там есть, не могут ни выйти, ни зайти.
-	AI_Output(self,other,"Info_Mine_Org_6_Mine_06_02");	//Радуйся, что ты здесь не работаешь.
+	AI_Output(other,self,"Info_Mine_Org_6_Mine_15_00");	//РљР°Рє С‚Р°Рј РґРµР»Р° РЅР° С€Р°С…С‚Рµ?
+	AI_Output(self,other,"Info_Mine_Org_6_Mine_06_01");	//Р’ С€Р°С…С‚Рµ? РЎРµР№С‡Р°СЃ Рє РЅР°Рј РЅРµ РїСЂРёСЃС‹Р»Р°СЋС‚ РЅРѕРІС‹С… Р»СЋРґРµР№. Р’СЃРµ, РєС‚Рѕ С‚Р°Рј РµСЃС‚СЊ, РЅРµ РјРѕРіСѓС‚ РЅРё РІС‹Р№С‚Рё, РЅРё Р·Р°Р№С‚Рё.
+	AI_Output(self,other,"Info_Mine_Org_6_Mine_06_02");	//Р Р°РґСѓР№СЃСЏ, С‡С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РЅРµ СЂР°Р±РѕС‚Р°РµС€СЊ.
 };
 
 
@@ -49,7 +49,7 @@ instance Info_Mine_Org_6_WichtigePersonen(C_Info)
 	condition = Info_Mine_Org_6_WichtigePersonen_Condition;
 	information = Info_Mine_Org_6_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кому ты подчиняешься?";
+	description = "РљРѕРјСѓ С‚С‹ РїРѕРґС‡РёРЅСЏРµС€СЊСЃСЏ?";
 };
 
 
@@ -60,10 +60,10 @@ func int Info_Mine_Org_6_WichtigePersonen_Condition()
 
 func void Info_Mine_Org_6_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Mine_Org_6_WichtigePersonen_15_00");	//Кому ты подчиняешься?
-	AI_Output(self,other,"Info_Mine_Org_6_WichtigePersonen_06_01");	//Я не подчиняюсь никому. Но как я это устроил, не скажу.
-	AI_Output(other,self,"Info_Mine_Org_6_WichtigePersonen_15_01");	//Как же ты попал на это место?
-	AI_Output(self,other,"Info_Mine_Org_6_WichtigePersonen_06_02");	//Я же сказал, это секрет. А вообще-то это не слишком сложно, если ты вор.
+	AI_Output(other,self,"Info_Mine_Org_6_WichtigePersonen_15_00");	//РљРѕРјСѓ С‚С‹ РїРѕРґС‡РёРЅСЏРµС€СЊСЃСЏ?
+	AI_Output(self,other,"Info_Mine_Org_6_WichtigePersonen_06_01");	//РЇ РЅРµ РїРѕРґС‡РёРЅСЏСЋСЃСЊ РЅРёРєРѕРјСѓ. РќРѕ РєР°Рє СЏ СЌС‚Рѕ СѓСЃС‚СЂРѕРёР», РЅРµ СЃРєР°Р¶Сѓ.
+	AI_Output(other,self,"Info_Mine_Org_6_WichtigePersonen_15_01");	//РљР°Рє Р¶Рµ С‚С‹ РїРѕРїР°Р» РЅР° СЌС‚Рѕ РјРµСЃС‚Рѕ?
+	AI_Output(self,other,"Info_Mine_Org_6_WichtigePersonen_06_02");	//РЇ Р¶Рµ СЃРєР°Р·Р°Р», СЌС‚Рѕ СЃРµРєСЂРµС‚. Рђ РІРѕРѕР±С‰Рµ-С‚Рѕ СЌС‚Рѕ РЅРµ СЃР»РёС€РєРѕРј СЃР»РѕР¶РЅРѕ, РµСЃР»Рё С‚С‹ РІРѕСЂ.
 };
 
 
@@ -73,7 +73,7 @@ instance Info_Mine_Org_6_DieLage(C_Info)
 	condition = Info_Mine_Org_6_DieLage_Condition;
 	information = Info_Mine_Org_6_DieLage_Info;
 	permanent = 1;
-	description = "Вижу, ты не перерабатываешь.";
+	description = "Р’РёР¶Сѓ, С‚С‹ РЅРµ РїРµСЂРµСЂР°Р±Р°С‚С‹РІР°РµС€СЊ.";
 };
 
 
@@ -84,8 +84,8 @@ func int Info_Mine_Org_6_DieLage_Condition()
 
 func void Info_Mine_Org_6_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Mine_Org_6_DieLage_15_00");	//Вижу, ты не перерабатываешь.
-	AI_Output(self,other,"Info_Mine_Org_6_DieLage_06_01");	//Чтобы я? Работал? Если бы я работал как все, меня бы сюда не посадили, если ты понимаешь, о чем я говорю.
+	AI_Output(other,self,"Info_Mine_Org_6_DieLage_15_00");	//Р’РёР¶Сѓ, С‚С‹ РЅРµ РїРµСЂРµСЂР°Р±Р°С‚С‹РІР°РµС€СЊ.
+	AI_Output(self,other,"Info_Mine_Org_6_DieLage_06_01");	//Р§С‚РѕР±С‹ СЏ? Р Р°Р±РѕС‚Р°Р»? Р•СЃР»Рё Р±С‹ СЏ СЂР°Р±РѕС‚Р°Р» РєР°Рє РІСЃРµ, РјРµРЅСЏ Р±С‹ СЃСЋРґР° РЅРµ РїРѕСЃР°РґРёР»Рё, РµСЃР»Рё С‚С‹ РїРѕРЅРёРјР°РµС€СЊ, Рѕ С‡РµРј СЏ РіРѕРІРѕСЂСЋ.
 };
 
 func void B_AssignAmbientInfos_Mine_Org_6(var C_Npc slf)

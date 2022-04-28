@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Scavenger(C_Npc)
 {
-	name[0] = "���������";
+	name[0] = "Падальщик";
 	guild = GIL_SCAVENGER;
 	aivar[AIV_IMPORTANT] = ID_SCAVENGER;
 	level = 5;
@@ -55,13 +55,7 @@ instance Scavenger(Mst_Default_Scavenger)
 	spawnDelay = 10;
 	Set_Scavenger_Visuals();
 	Npc_SetToFistMode(self);
-	CreateInvItems(self,ItFoMuttonRaw,2);
-};
-
-instance Rspn_Scavenger(Mst_Default_Scavenger)
-{
-	Set_Scavenger_Visuals();
-	start_aistate = ZS_WaitRespawn;
+//	CreateInvItems(self,ItFoMuttonRaw,2);
 };
 
 func void Set_rspndoll_Visuals()
@@ -79,7 +73,7 @@ instance rspndoll(Mst_Default_Scavenger)
 
 instance YScavenger(Mst_Default_Scavenger)
 {
-	name[0] = "������� ���������";
+	name[0] = "Молодой падальщик";
 	level = 4;
 	attribute[ATR_STRENGTH] = 6;
 	attribute[ATR_DEXTERITY] = 6;
@@ -93,4 +87,17 @@ instance YScavenger(Mst_Default_Scavenger)
 	Npc_SetToFistMode(self);
 	CreateInvItems(self,ItFoMuttonRaw,1);
 };
-
+instance Scavenger_Egg(Egg)
+{
+	name[0] = "Яйцо падальщика";
+	guild = GIL_SCAVENGER;
+	spawnDelay = 240;
+	start_aistate = B_MM_Respawn;
+};
+instance Scavenger_Egg_Yang(Egg)
+{
+	name[0] = "Яйцо падальщика";
+	guild = GIL_SCAVENGER;
+	spawnDelay = 120;
+	start_aistate = B_MM_Respawn;
+};

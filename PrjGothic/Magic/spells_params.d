@@ -11,7 +11,7 @@ const int SPL_SENDCAST_LIGHT = 1;
 const int SPL_SENDCAST_FIREBOLT = 1;
 const int SPL_SENDCAST_FIREBALL = 5;
 const int SPL_SENDCAST_FIRESTORM = 10;
-const int SPL_SENDCAST_FIRERAIN = 45;
+const int SPL_SENDCAST_FIRERAIN = 50;
 const int SPL_SENDCAST_TELEPORT = 5;
 const int SPL_SENDCAST_TRF_MEATBUG = 5;
 const int SPL_SENDCAST_TRF_MOLERAT = 5;
@@ -46,7 +46,7 @@ const int SPL_SENDCAST_SHRINK = 5;
 const int SPL_DAMAGE_FIREBOLT = 30;
 const int SPL_DAMAGE_FIREBALL = 30;
 const int SPL_DAMAGE_FIRESTORM = 50;
-const int SPL_DAMAGE_FIRERAIN = 100;
+const int SPL_DAMAGE_FIRERAIN = 500;
 const int SPL_DAMAGE_THUNDERBOLT = 20;
 const int SPL_DAMAGE_THUNDERBALL = 20;
 const int SPL_DAMAGE_MASSDEATH = 200;
@@ -246,7 +246,7 @@ instance Spell_Firestorm(C_Spell_Proto)
 
 instance Spell_FireRain(C_Spell_Proto)
 {
-	time_per_mana = 250;
+	time_per_mana = 100;
 	damage_per_level = SPL_DAMAGE_FIRERAIN;
 	spellType = SPELL_BAD;
 	damagetype = DAM_FIRE;
@@ -259,7 +259,7 @@ instance Spell_FireRain(C_Spell_Proto)
 instance Spell_FireRainInv(C_Spell_Proto)
 {
 	time_per_mana = 250;
-	damage_per_level = 50;
+	damage_per_level = SPL_DAMAGE_FIRERAIN;
 	spellType = SPELL_BAD;
 	damagetype = DAM_FIRE;
 	targetCollectAlgo = TARGET_COLLECT_ALL_FALLBACK_NONE;

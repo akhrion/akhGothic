@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Wolf(C_Npc)
 {
-	name[0] = "����";
+	name[0] = "Волк";
 	guild = GIL_WOLF;
 	aivar[AIV_MM_REAL_ID] = ID_WOLF;
 	level = 9;
@@ -56,4 +56,10 @@ instance Dead_Wolf(Mst_Default_Wolf)
 	Set_Wolf_Visuals();
 	Npc_SetToFistMode(self);
 };
-
+instance Wolf_Egg(Egg)
+{
+	name[0] = "Волченок";
+	guild = GIL_WOLF;
+	spawnDelay = 480;
+	start_aistate = B_MM_Respawn;
+};

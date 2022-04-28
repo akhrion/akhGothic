@@ -193,7 +193,7 @@ func void B_RegainDroppedArmor(var C_Npc slf)
 	{
 		if(!Npc_IsPlayer(slf))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...NSC hebt seine Rьstung wieder auf!");
+			PrintDebugNpc(PD_ZS_Check,"...NSC hebt seine RСЊstung wieder auf!");
 			AI_TakeItem(slf,item);
 			AI_EquipBestArmor(slf);
 		};
@@ -242,7 +242,8 @@ func void B_KillNpc(var int npcInstance)
 	{
 		npc.flags = 0;
 		CreateInvItem(npc,ItMi_Stuff_OldCoin_01);
-		Npc_ChangeAttribute(npc,ATR_HITPOINTS,-npc.attribute[ATR_HITPOINTS_MAX]);
+//		Npc_ChangeAttribute(npc,ATR_HITPOINTS,-npc.attribute[ATR_HITPOINTS_MAX]);
+		Npc_SetHP(npc,0);
 		if(Npc_GetInvItemBySlot(npc,INV_WEAPON,1))
 		{
 			PrintDebugNpc(PD_ZS_DETAIL,"...Waffe in Slot 1 gefunden!");
@@ -421,7 +422,7 @@ func int B_CheckForImportantInfo(var C_Npc slf,var C_Npc oth)
 			PrintDebugNpc(PD_ZS_Check,"...SC springt nicht oder NSC ist Durchgangswache!");
 			if(!C_BodyStateContains(oth,BS_FALL))
 			{
-				PrintDebugNpc(PD_ZS_Check,"...fдllt nicht!");
+				PrintDebugNpc(PD_ZS_Check,"...fРґllt nicht!");
 				if(!C_BodyStateContains(oth,BS_SWIM))
 				{
 					PrintDebugNpc(PD_ZS_Check,"...schwimmt nicht!");
@@ -503,7 +504,12 @@ func void B_PrintGuildCondition(var int level)
 func void B_Print(var string msg)
 {
 	PrintDebugNpc(PD_ZS_FRAME,"B_Print");
-	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,"font_old_10_white.tga",_TIME_MESSAGE_Joincamp);
+	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,FONT_GS10,_TIME_MESSAGE_Joincamp);
+};
+func void B_PrintB(var string msg)
+{
+	PrintDebugNpc(PD_ZS_FRAME,"B_Print");
+	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,FONT_GS20,_TIME_MESSAGE_Joincamp);
 };
 
 
@@ -518,80 +524,80 @@ var int Knows_GetUluMulu;
 
 func void b_learn_trophies_teeth()
 {
-	PrintScreen("Навык: добыча клыков",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° РєР»С‹РєРѕРІ",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetTeeth = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи клыков: волк, орочья собака, глорх, жерх, ищейка, мракорис.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё РєР»С‹РєРѕРІ: РІРѕР»Рє, РѕСЂРѕС‡СЊСЏ СЃРѕР±Р°РєР°, РіР»РѕСЂС…, Р¶РµСЂС…, РёС‰РµР№РєР°, РјСЂР°РєРѕСЂРёСЃ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+2);
 };
 
 func void b_learn_trophies_fur()
 {
-	PrintScreen("Навык: добыча шкур",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° С€РєСѓСЂ",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetFur = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи шкур: волк, орочья собака, мракорис, тролль.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё С€РєСѓСЂ: РІРѕР»Рє, РѕСЂРѕС‡СЊСЏ СЃРѕР±Р°РєР°, РјСЂР°РєРѕСЂРёСЃ, С‚СЂРѕР»Р»СЊ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+2);
 };
 
 func void b_learn_trophies_claws()
 {
-	PrintScreen("Навык: добыча когтей",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° РєРѕРіС‚РµР№",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetClaws = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи когтей: ящерица, глорх, шныг, жерх, штек.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё РєРѕРіС‚РµР№: СЏС‰РµСЂРёС†Р°, РіР»РѕСЂС…, С€РЅС‹Рі, Р¶РµСЂС…, С€С‚РµРє.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+2);
 };
 
 func void b_learn_trophies_reptilefur()
 {
-	PrintScreen("Навык: добыча шкур рептилий",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° С€РєСѓСЂ СЂРµРїС‚РёР»РёР№",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetHide = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи шкур рептилий: шныг, болотожор.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё С€РєСѓСЂ СЂРµРїС‚РёР»РёР№: С€РЅС‹Рі, Р±РѕР»РѕС‚РѕР¶РѕСЂ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+2);
 };
 
 func void b_learn_trophies_sting()
 {
-	PrintScreen("Навык: добыча жала шершня",-1,-1,"FONT_OLD_20_WHITE.TGA",10);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° Р¶Р°Р»Р° С€РµСЂС€РЅСЏ",-1,-1,"FONT_OLD_20_WHITE.TGA",10);
 	Knows_GetBFSting = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи жала шершня.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё Р¶Р°Р»Р° С€РµСЂС€РЅСЏ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+1);
 };
 
 func void b_learn_trophies_plates()
 {
-	PrintScreen("Навык: добыча панцирных пластин",-1,-1,"FONT_OLD_20_WHITE.TGA",3);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° РїР°РЅС†РёСЂРЅС‹С… РїР»Р°СЃС‚РёРЅ",-1,-1,"FONT_OLD_20_WHITE.TGA",3);
 	Knows_GetMCPlates = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи панцирных пластин ползунов-воинов.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё РїР°РЅС†РёСЂРЅС‹С… РїР»Р°СЃС‚РёРЅ РїРѕР»Р·СѓРЅРѕРІ-РІРѕРёРЅРѕРІ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+2);
 };
 
 func void b_learn_trophies_mandibles()
 {
-	PrintScreen("Навык: добыча челюстей ползунов",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° С‡РµР»СЋСЃС‚РµР№ РїРѕР»Р·СѓРЅРѕРІ",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetMCMandibles = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи челюстей ползунов.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё С‡РµР»СЋСЃС‚РµР№ РїРѕР»Р·СѓРЅРѕРІ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+1);
 };
 
 func void b_learn_trophies_ulumulu()
 {
-	PrintScreen("Навык: добыча особых трофеев",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+	PrintScreen("РќР°РІС‹Рє: РґРѕР±С‹С‡Р° РѕСЃРѕР±С‹С… С‚СЂРѕС„РµРµРІ",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	Knows_GetUluMulu = TRUE;
 	Log_CreateTopic(GE_AnimalTrophies,LOG_NOTE);
-	B_LogEntry(GE_AnimalTrophies,"Навык добычи особых трофеев: язык огненной ящерицы, рог мракориса, клык болотожора и клык тролля.");
+	B_LogEntry(GE_AnimalTrophies,"РќР°РІС‹Рє РґРѕР±С‹С‡Рё РѕСЃРѕР±С‹С… С‚СЂРѕС„РµРµРІ: СЏР·С‹Рє РѕРіРЅРµРЅРЅРѕР№ СЏС‰РµСЂРёС†С‹, СЂРѕРі РјСЂР°РєРѕСЂРёСЃР°, РєР»С‹Рє Р±РѕР»РѕС‚РѕР¶РѕСЂР° Рё РєР»С‹Рє С‚СЂРѕР»Р»СЏ.");
 //	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,1);
 	Npc_SetTalentSkill(hero,NPC_TALENT_FIREMASTER,Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER)+4);
 };
@@ -617,4 +623,12 @@ func int B_isGoingExit(var C_NPC slf, var C_NPC oth, var string guardedArea)
 		return true;
 	};
 	return false;
+};
+func void B_Npc_SetLastTargetByID(var C_NPC slf, var int instanceID)
+{
+	slf.aivar[AIV_LASTTARGET] = instanceID;
+};
+func int B_Npc_GetLastTargetID(var C_NPC npc)
+{
+	return npc.aivar[AIV_LASTTARGET];
 };

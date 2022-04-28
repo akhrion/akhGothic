@@ -32,7 +32,7 @@ func int ZS_Berzerk_Loop()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...kein gültiges Ziel mehr!");
+		PrintDebugNpc(PD_ZS_Check,"...kein gÑŒltiges Ziel mehr!");
 		Npc_PerceiveAll(self);
 		if(Wld_DetectNpcEx(self,-1,NOFUNC,-1,FALSE))
 		{

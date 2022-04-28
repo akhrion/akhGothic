@@ -1,23 +1,23 @@
 
 prototype Mst_Default_Zombie(C_Npc)
 {
-	name[0] = "«ÓÏ·Ë";
+	name[0] = "–ó–æ–º–±–∏";
 	guild = GIL_ZOMBIE;
 	aivar[AIV_IMPORTANT] = ID_ZOMBIE;
 	level = 20;
 	attribute[ATR_STRENGTH] = 140;
-	attribute[ATR_DEXTERITY] = 140;
-	attribute[ATR_HITPOINTS_MAX] = 250;
-	attribute[ATR_HITPOINTS] = 250;
-	attribute[ATR_MANA_MAX] = 0;
-	attribute[ATR_MANA] = 0;
-	protection[PROT_BLUNT] = 130;
-	protection[PROT_EDGE] = 130;
+	attribute[ATR_DEXTERITY] = 0;
+	attribute[ATR_HITPOINTS_MAX] = 150;
+	attribute[ATR_HITPOINTS] = 150;
+	attribute[ATR_MANA_MAX] = 100;
+	attribute[ATR_MANA] = 100;
+	protection[PROT_BLUNT] = 250;
+	protection[PROT_EDGE] = 200;
 	protection[PROT_POINT] = 9999;
 	protection[PROT_FIRE] = 100;
-	protection[PROT_FLY] = 30;
+	protection[PROT_FLY] = 1000;
 	protection[PROT_MAGIC] = 100;
-	damagetype = DAM_EDGE;
+	damagetype = DAM_BLUNT;
 	fight_tactic = FAI_ZOMBIE;
 	senses = SENSE_HEAR | SENSE_SEE | SENSE_SMELL;
 //	senses_range = 3000;
@@ -90,13 +90,11 @@ instance Zombie4(Mst_Default_Zombie)
 
 instance ZombieTheKeeper(Mst_Default_Zombie)
 {
-	name[0] = "—Ú‡Ê ÒÍÎÂÔ‡";
+	name[0] = "–°—Ç—Ä–∞–∂ —Å–∫–ª–µ–ø–∞";
 	level = 150;
 	id = MID_THEKEEPER;
 	set_zombie5_visuals();
 	Npc_SetToFistMode(self);
-	protection[PROT_BLUNT] = 150;
-	protection[PROT_EDGE] = 150;
 	protection[PROT_FIRE] = 9999;
 	senses_range = 1000;
 	aivar[AIV_FINDABLE] = HUNTER;
@@ -110,3 +108,17 @@ instance ZombieTheKeeper(Mst_Default_Zombie)
 	CreateInvItem(self,ItKe_Focus5);
 };
 
+instance Zombie_Revive(Revive)
+{
+	name[0] = "–ó–æ–º–±–∏";
+	guild = GIL_ZOMBIE;
+	flags = NPC_FLAG_IMMORTAL;
+//	Set_Zombie_Visuals();
+//	Mdl_SetModelScale(self,1.0,1.0,1.0);
+	spawnDelay = 2;
+	start_aistate = AISTART_ZS_Revive;
+};
+func void AISTART_ZS_Revive()
+{
+	AI_StartState(self,ZS_Revive,0,"");
+};

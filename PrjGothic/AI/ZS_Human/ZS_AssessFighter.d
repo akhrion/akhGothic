@@ -1,9 +1,9 @@
 
 func void ZS_AssessFighter()
 {
-	//Ãäå-òî çäåñü äîëæíà áûòü ðåãóëÿðíàÿ ïðîâåðêà íà àêòèâíîå îðóæèå ó ÃÃ
-	//Íåðåäêè ñëó÷àè, êîãäà ÍÏÑ àãðèòñÿ íà ÃÃ, êîãäà òîò áûñòðî ñïðÿòàë îðóæèå è
-	// ÷òî-áû ñíÿòü àãðî òðåáóåòñÿ åãî ñíîâà ïåðåäîñòàâàòü è ïðÿòàòü
+	//Ð“Ð´Ðµ-Ñ‚Ð¾ Ð·Ð´ÐµÑÑŒ Ð´Ð¾Ð»Ð¶Ð½Ð° Ð±Ñ‹Ñ‚ÑŒ Ñ€ÐµÐ³ÑƒÐ»ÑÑ€Ð½Ð°Ñ Ð¿Ñ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾Ðµ Ð¾Ñ€ÑƒÐ¶Ð¸Ðµ Ñƒ Ð“Ð“
+	//ÐÐµÑ€ÐµÐ´ÐºÐ¸ ÑÐ»ÑƒÑ‡Ð°Ð¸, ÐºÐ¾Ð³Ð´Ð° ÐÐŸÐ¡ Ð°Ð³Ñ€Ð¸Ñ‚ÑÑ Ð½Ð° Ð“Ð“, ÐºÐ¾Ð³Ð´Ð° Ñ‚Ð¾Ñ‚ Ð±Ñ‹ÑÑ‚Ñ€Ð¾ ÑÐ¿Ñ€ÑÑ‚Ð°Ð» Ð¾Ñ€ÑƒÐ¶Ð¸Ðµ Ð¸
+	// Ñ‡Ñ‚Ð¾-Ð±Ñ‹ ÑÐ½ÑÑ‚ÑŒ Ð°Ð³Ñ€Ð¾ Ñ‚Ñ€ÐµÐ±ÑƒÐµÑ‚ÑÑ ÐµÐ³Ð¾ ÑÐ½Ð¾Ð²Ð° Ð¿ÐµÑ€ÐµÐ´Ð¾ÑÑ‚Ð°Ð²Ð°Ñ‚ÑŒ Ð¸ Ð¿Ñ€ÑÑ‚Ð°Ñ‚ÑŒ
 	PrintDebugNpc(PD_ZS_FRAME,"ZS_AssessFighter");
 	PrintGlobals(PD_ZS_Check);
 	Npc_PercEnable(self,PERC_ASSESSENEMY,B_AssessEnemy);
@@ -30,7 +30,7 @@ func void ZS_AssessFighter()
 		) && Npc_CanSeeNpcFreeLOS(self,other)
 	)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC wird zurückweichen!");
+		PrintDebugNpc(PD_ZS_Check,"...NSC wird zurÑŒckweichen!");
 		if(Npc_GetPermAttitude(self,other) != ATT_HOSTILE)
 		{
 			B_SayOverlay(self,other,"$YESYES");
@@ -94,7 +94,7 @@ func int ZS_AssessFighter_Loop()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...SC ist außerhalb Fernkampfdistanz!");
+		PrintDebugNpc(PD_ZS_Check,"...SC ist auÐ¯erhalb Fernkampfdistanz!");
 		return LOOP_END;
 	};
 	B_SmartTurnToNpc(self,other);
@@ -137,7 +137,7 @@ Print("can't stop now -> BUG");
 	PrintDebugNpc(PD_ZS_LOOP,"ZS_AssessFighterWait_Loop");
 	if(Npc_GetDistToNpc(self,other) > HAI_DIST_ABORT_MELEE)
 	{
-		PrintDebugNpc(PD_ZS_Check,"...SC ist außerhalb Nahkampfreichweite!");
+		PrintDebugNpc(PD_ZS_Check,"...SC ist auÐ¯erhalb Nahkampfreichweite!");
 		B_AssessRemoveWeapon();
 	};
 	if(Npc_GetStateTime(self) > 5)

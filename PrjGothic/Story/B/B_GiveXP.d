@@ -1,6 +1,6 @@
 
 const int LP_PER_LEVEL = 10;
-const int HP_PER_LEVEL = 12;
+const int HP_PER_LEVEL = 6;
 const int XP_PER_LEVEL_UNCONSCIOUS = 5;
 const int XP_PER_LEVEL_DEAD = 10;
 
@@ -53,11 +53,11 @@ func void B_DeathXP()
 	PrintGlobals(PD_ZS_Check);
 	if((C_NpcIsHuman(self) && (Npc_WasInState(self,ZS_Unconscious) || self.aivar[AIV_WASDEFEATEDBYSC])) || (self.level == 0) || (self.npcType == npctype_friend))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Opfer ist bewuﬂtloser Mensch!");
+		PrintDebugNpc(PD_ZS_Check,"...Opfer ist bewu–Øtloser Mensch!");
 	}
 	else
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Opfer ist entweder nicht bewuﬂtlos oder kein Mensch!");
+		PrintDebugNpc(PD_ZS_Check,"...Opfer ist entweder nicht bewu–Øtlos oder kein Mensch!");
 		if(C_NpcIsHuman(self) && ((self.npcType == Npctype_MINE_Ambient) || (self.npcType == npctype_ambient) || (self.id == 899) || (self.id == 898)))
 		{
 			if((self.npcType == npctype_ambient) && ((self.id == 336) || (self.id == 337) || (self.id == 338) || (self.id == 889) || (self.id == 239) || (self.id == 701) || (self.id == 704) || (self.id == 828)))

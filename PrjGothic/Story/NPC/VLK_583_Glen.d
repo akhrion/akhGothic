@@ -1,7 +1,7 @@
 
 instance VLK_583_Glen(Npc_Default)
 {
-	name[0] = "Γλεν";
+	name[0] = "Π“Π»ΠµΠ½";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 5;

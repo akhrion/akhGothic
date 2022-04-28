@@ -1,7 +1,7 @@
 
 prototype Mst_Default_Golem(C_Npc)
 {
-	name[0] = "Голем";
+	name[0] = "Р“РѕР»РµРј";
 	guild = GIL_GOLEM;
 	level = 100;
 	attribute[ATR_STRENGTH] = 200;
@@ -33,6 +33,7 @@ prototype Mst_Default_Golem(C_Npc)
 
 func void Set_StoneGolem_Visuals()
 {
+	Mdl_SetModelScale(self,1.2,1.2,1.2);
 	Mdl_SetVisual(self,"Golem.mds");
 	Mdl_SetVisualBody(self,"Gol_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
 };
@@ -54,7 +55,7 @@ func void Set_IceGolem_Visuals()
 
 instance StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_stonegolem;
 	protection[PROT_BLUNT] = 75;
 	Set_StoneGolem_Visuals();
@@ -64,7 +65,7 @@ instance StoneGolem(Mst_Default_Golem)
 
 instance SummonedByPC_StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Призванный голем";
+	name[0] = "РџСЂРёР·РІР°РЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	level = 0;
 	Set_StoneGolem_Visuals();
@@ -80,7 +81,7 @@ instance SummonedByPC_StoneGolem(Mst_Default_Golem)
 
 instance SummonedByNPC_StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	Set_StoneGolem_Visuals();
 	Npc_SetToFistMode(self);
@@ -90,7 +91,7 @@ instance SummonedByNPC_StoneGolem(Mst_Default_Golem)
 
 instance FireGolem(Mst_Default_Golem)
 {
-	name[0] = "Огненный голем";
+	name[0] = "РћРіРЅРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_firegolem;
 	Set_FireGolem_Visuals();
 	Npc_SetToFistMode(self);
@@ -102,9 +103,23 @@ instance FireGolem(Mst_Default_Golem)
 	CreateInvItem(self,ItAt_FireGolem_01);
 };
 
+instance FireGolem_Part(Mst_Default_Golem)
+{
+	name[0] = "РСЃРєСЂР°";
+	aivar[AIV_IMPORTANT] = id_firegolem_part;
+	Set_FireGolem_Visuals();
+	Mdl_SetModelScale(self,0.6,0.7,0.6);
+	Npc_SetToFistMode(self);
+	attribute[ATR_STRENGTH] = 10;
+	protection[PROT_MAGIC] = 0;
+	attribute[ATR_HITPOINTS_MAX] = 50;
+	attribute[ATR_HITPOINTS] = 50;
+	damagetype = DAM_FIRE;
+};
+
 instance IceGolem(Mst_Default_Golem)
 {
-	name[0] = "Ледяной голем";
+	name[0] = "Р›РµРґСЏРЅРѕР№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_icegolem;
 	Set_IceGolem_Visuals();
 	attribute[ATR_MANA_MAX] = 500;
@@ -120,7 +135,7 @@ instance IceGolem(Mst_Default_Golem)
 
 instance Bridgegolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	level = 50;
 	Set_StoneGolem_Visuals();

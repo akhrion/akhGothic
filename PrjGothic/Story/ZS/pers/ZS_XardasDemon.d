@@ -10,7 +10,7 @@ func void ZS_XardasDemon()
 	if(Npc_KnowsInfo(hero,Info_XardasDemon_INTRO))
 	{
 		Mdl_SetVisualBody(self,"Dem_Body",DEFAULT,DEFAULT,"",DEFAULT,DEFAULT,-1);
-		self.name[0] = "Пламенный демон";
+		self.name[0] = "РџР»Р°РјРµРЅРЅС‹Р№ РґРµРјРѕРЅ";
 	}
 	else
 	{
