@@ -3,11 +3,15 @@
 
 commiters\akhrion\Math.d
 _Intern\constants.d
+AI\AI_Intern\AI_Constants.d
+AI\AI_Intern\AI_MM_Constants.d
+Story\Story_Globals.d
 Story\Text.d
 Story\guilds.d
 Story\svm.d
 commiters\akhrion\G_Const.d
 _Intern\classes.d
+_Intern\Prototypes.d
 commiters\akhrion\_Intern\classes.d
 commiters\akhrion\_Intern\Prototypes.d
 _Intern\magic_intern.d
@@ -17,13 +21,10 @@ commiters\akhrion\Items\Prototypes_akh.d
 commiters\akhrion\Items\Ranged_weapons.d
 AI\AI_Intern\BodyStates.d
 AI\AI_Intern\PrintDebug.d
-AI\AI_Intern\AI_Constants.d
-AI\AI_Intern\AI_MM_Constants.d
 AI\AI_Intern\perception.d
 AI\AI_Intern\C_Functions.d
 AI\AI_Intern\B_Functions.d
 AI\AI_Intern\Balancing.d
-Story\Story_Globals.d
 Story\Log_Constants.d
 Story\B\B_ClearFMC.d
 Story\B\B_CheckDeadMissionNPCs.d
@@ -145,6 +146,7 @@ Story\B\B_SetDayTolerance.d
 commiters\akhrion\Story\Monster\Instances.d
 commiters\akhrion\Tests\akh_Respawn.d
 Story\B\B_Respawn.d
+Story\B\B_Revive.d
 Story\B\B_SpecStates.d
 Story\B\B_SetRoguesToHostile.d
 Story\B\b_failch4quests.d
@@ -188,6 +190,7 @@ AI\B_Human\B_SetFaceExpression.d
 AI\B_Human\B_AssessEnemy.d
 AI\B_Human\B_AssessFighter.d
 AI\B_Human\B_AssessCaster.d
+AI\B_Human\B_AssessMonster.d
 AI\B_Human\B_AssessOthersDamage.d
 AI\B_Human\B_ReactToOthersDamage.d
 AI\B_Human\B_AssessThreat.d
@@ -228,10 +231,9 @@ AI\Prototypes\Npc_Default.d
 commiters\akhrion\Story\NPC\Prototypes_akh.d
 commiters\akhrion\AI\ZS_RespawnWait.d
 commiters\akhrion\AI\ZS_Respawn.d
-AI\ZS_Monster\ZS_MM_AttackMage.d
-AI\ZS_Monster\ZS_MM_Master.d
-AI\ZS_Monster\ZS_MM_SummonedByPC.d
 Story\B\B_GiveDeathInv.d
+Story\B\B_Achieves.d
+_Intern\G_Functions\Game_Functions.d
 AI\ZS_Human\ZS_AssessDefeat.d
 AI\ZS_Human\ZS_AssessDisgusting.d
 AI\ZS_Human\ZS_AssessEnemy.d
@@ -410,6 +412,7 @@ Story\ZS\ZS_StandAround.d
 Story\ZS\ZS_Stay.d
 Story\ZS\ZS_StayNeutral.d
 Story\ZS\ZS_Teaching.d
+Story\ZS\ZS_Test.d
 Story\ZS\ZS_Walk.d
 Story\ZS\ZS_WalkAround.d
 Story\ZS\ZS_WashSelf.d
@@ -429,7 +432,6 @@ Story\ZS\pers\ZS_ReadBook_Xardas.d
 Story\ZS\pers\ZS_Sleeper.d
 Story\ZS\pers\ZS_TestBully.d
 Story\ZS\pers\ZS_XardasDemon.d
-Story\ZS\ZS_Steuerung\ZS_Erpresser.d
 AI\Monster\Mst_BlackGobbo.d
 AI\Monster\Mst_Bloodfly.d
 AI\Monster\Mst_Bloodhound.d
@@ -464,6 +466,10 @@ AI\Monster\Mst_UndeadOrcWarrior.d
 AI\Monster\Mst_Waran.d
 AI\Monster\Mst_Wolf.d
 AI\Monster\Mst_Zombie.d
+AI\ZS_Monster\ZS_MM_AttackMage.d
+AI\ZS_Monster\ZS_MM_Master.d
+AI\ZS_Monster\ZS_MM_SummonedByPC.d
+Story\ZS\ZS_Steuerung\ZS_Erpresser.d
 AI\Orc\Orc_Perc.d
 AI\Orc\B_Orc_SmartTurn.d
 AI\Orc\B_Orc_DrawWeapon.d
@@ -535,6 +541,7 @@ Story\NPC\GRD_205_Scorpio.d
 Story\NPC\GRD_206_Gardist.d
 Story\NPC\GRD_208_Cutter.d
 Story\NPC\GRD_209_Gardist.d
+Story\NPC\Non_1640_Killer.d
 Story\NPC\GRD_210_Scatty.d
 Story\NPC\Grd_211_Skip.d
 Story\NPC\Grd_212_Torwache.d
@@ -1042,6 +1049,7 @@ Story\NPC\VLK_593_Buddler.d
 Story\NPC\vlk_595_buddler.d
 Story\NPC\stt_594_grim.d
 commiters\akhrion\Story\NPC\PC_Thief_akh.d
+commiters\akhrion\Story\NPC\Test_npc_1641.d
 Story\MISSIONS\DIA_Bau_900_Ricelord.d
 Story\MISSIONS\DIA_BAU_901_Horatio.d
 Story\MISSIONS\DIA_BAU_902_Pock.d
