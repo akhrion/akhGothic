@@ -1,7 +1,7 @@
 
 instance STT_331_Fingers(Npc_Default)
 {
-	name[0] = "Фингерс";
+	name[0] = "Р¤РёРЅРіРµСЂСЃ";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 7;

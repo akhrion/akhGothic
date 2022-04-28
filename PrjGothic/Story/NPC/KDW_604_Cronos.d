@@ -1,7 +1,7 @@
 
 instance KDW_604_Cronos(Npc_Default)
 {
-	name[0] = "Кронос";
+	name[0] = "РљСЂРѕРЅРѕСЃ";
 	npcType = npctype_main;
 	flags = NPC_FLAG_IMMORTAL | NPC_FLAG_FRIEND;
 	guild = GIL_KDW;

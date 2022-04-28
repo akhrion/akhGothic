@@ -1,7 +1,7 @@
 
 instance Gur_1207_Natalia(Npc_Default)
 {
-	name[0] = "Наталия";
+	name[0] = "РќР°С‚Р°Р»РёСЏ";
 	npcType = npctype_main;
 	guild = GIL_BAB;
 	level = 1;

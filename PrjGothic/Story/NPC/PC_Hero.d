@@ -1,7 +1,7 @@
 
 instance PC_Hero(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 0;
@@ -10,22 +10,32 @@ instance PC_Hero(Npc_Default)
 	exp = 0;
 	exp_next = 500;
 	lp = 0;
-	attribute[ATR_STRENGTH] = 10;
-	attribute[ATR_DEXTERITY] = 10;
-	attribute[ATR_MANA_MAX] = 5;
-	attribute[ATR_MANA] = 5;
-	attribute[ATR_HITPOINTS_MAX] = 40;
-	attribute[ATR_HITPOINTS] = 40;
+	attribute[ATR_STRENGTH] = 5;
+	attribute[ATR_DEXTERITY] = 5;
+	attribute[ATR_MANA_MAX] = 1;
+	attribute[ATR_MANA] = 1;
+	attribute[ATR_HITPOINTS_MAX] = 10;
+	attribute[ATR_HITPOINTS] = 10;
+	fight_tactic = FAI_HUMAN_COWARD;
 	Mdl_SetVisual(self,"HUMANS.MDS");
 	Mdl_SetVisualBody(self,"hum_body_Naked0",4,1,"Hum_Head_Pony",9,0,-1);
 	CreateInvItem(self,ItWr_Fire_Letter_01);
-	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
-	Npc_SetTalentValue(self,NPC_TALENT_1H,50);
+	SC_Stamina = 100;
+//	CreateInvItems(self,ItFo_Plants_mushroom_01,106);
+//	CreateInvItems(self,ItFoMuttonRaw,106);
+//	CreateInvItems(self,ItAmArrow,999);
+//	CreateInvItems(self,test_SatietyUp,100);
+//	CreateInvItems(self,test_SatietyDown,100);
+//	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
+//	Npc_SetTalentValue(self,NPC_TALENT_1H,100);
+//	Npc_SetTalentValue(self,NPC_TALENT_2H,100);
+//	Npc_SetTalentValue(self,NPC_TALENT_BOW,100);
+//	Npc_SetTalentValue(self,NPC_TALENT_CROSSBOW,100);
 };
 
 instance PC_Hero_L2(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 2;
@@ -50,7 +60,7 @@ instance PC_Hero_L2(Npc_Default)
 
 instance PC_Hero_L5(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 5;
@@ -74,7 +84,7 @@ instance PC_Hero_L5(Npc_Default)
 
 instance PC_Hero_L7(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 7;
@@ -107,7 +117,7 @@ instance PC_Hero_L7(Npc_Default)
 
 instance PC_Hero_L11(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_SLD;
 	level = 11;
@@ -138,7 +148,7 @@ instance PC_Hero_L11(Npc_Default)
 
 instance PC_Hero_L13(Npc_Default)
 {
-	name[0] = "Я";
+	name[0] = "РЇ";
 	npcType = npctype_main;
 	guild = GIL_SLD;
 	level = 13;
@@ -172,7 +182,7 @@ instance PC_Hero_L13(Npc_Default)
 
 instance HeroSword13(C_Item)
 {
-	name = "Изношенный меч";
+	name = "РР·РЅРѕС€РµРЅРЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -185,7 +195,7 @@ instance HeroSword13(C_Item)
 
 instance HeroSword20(C_Item)
 {
-	name = "Меч";
+	name = "РњРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -198,7 +208,7 @@ instance HeroSword20(C_Item)
 
 instance HeroSword25(C_Item)
 {
-	name = "Меч";
+	name = "РњРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -211,7 +221,7 @@ instance HeroSword25(C_Item)
 
 instance HeroBow13(C_Item)
 {
-	name = "Длинный лук";
+	name = "Р”Р»РёРЅРЅС‹Р№ Р»СѓРє";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -224,16 +234,16 @@ instance HeroBow13(C_Item)
 
 instance XP_Map(C_Item)
 {
-	name = "Карта опыта";
+	name = "РљР°СЂС‚Р° РѕРїС‹С‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 1000;
 	visual = "ItWr_Map_01.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	text[1] = "Бонус к руде:";
+	text[1] = "Р‘РѕРЅСѓСЃ Рє СЂСѓРґРµ:";
 	count[1] = 1000;
-	text[2] = "Бонус к очкам обучения:";
+	text[2] = "Р‘РѕРЅСѓСЃ Рє РѕС‡РєР°Рј РѕР±СѓС‡РµРЅРёСЏ:";
 	count[2] = 10;
 	text[5] = NAME_Value;
 	count[5] = value;
@@ -245,13 +255,13 @@ func void Use_XP_Map()
 {
 	CreateInvItems(self,ItMiNugget,1000);
 	hero.lp = hero.lp + 10;
-	PrintScreen("+1000 кусков руды, +10 очков обучения",-1,-1,"font_old_20_white.tga",3);
+	PrintScreen("+1000 РєСѓСЃРєРѕРІ СЂСѓРґС‹, +10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ",-1,-1,"font_old_20_white.tga",3);
 };
 
 
 instance D36TESTBOOK(C_Item)
 {
-	name = "Книга тестов";
+	name = "РљРЅРёРіР° С‚РµСЃС‚РѕРІ";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 36;
@@ -259,8 +269,8 @@ instance D36TESTBOOK(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	text[0] = "Gothic Russobit-M Fix";
-	text[1] = ConcatStrings(IntToString(FIX_VERSION_START)," версия от 19/02/2021");
-	text[2] = ConcatStrings(IntToString(FIX_VERSION_SAVE)," версия в сохранении");
+	text[1] = ConcatStrings(IntToString(FIX_VERSION_START)," РІРµСЂСЃРёСЏ РѕС‚ 19/02/2021");
+	text[2] = ConcatStrings(IntToString(FIX_VERSION_SAVE)," РІРµСЂСЃРёСЏ РІ СЃРѕС…СЂР°РЅРµРЅРёРё");
 	on_state[0] = use_d36testbook;
 };
 
@@ -272,7 +282,7 @@ func void use_d36testbook()
 
 instance ALCHEMYKIT(C_Item)
 {
-	name = "Набор юного алхимика";
+	name = "РќР°Р±РѕСЂ СЋРЅРѕРіРѕ Р°Р»С…РёРјРёРєР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = 0;
 	value = 36;
@@ -331,7 +341,7 @@ func void use_alchemykit()
 
 instance FIX(C_Item)
 {
-	name = "Лекарство от бага";
+	name = "Р›РµРєР°СЂСЃС‚РІРѕ РѕС‚ Р±Р°РіР°";
 	mainflag = ITEM_KAT_POTIONS;
 	flags = 0;
 	value = 36;

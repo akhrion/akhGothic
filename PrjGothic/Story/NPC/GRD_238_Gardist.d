@@ -67,64 +67,64 @@ func void info_grd238_die_info()
 	{
 		if(oldHeroGuild == GIL_GRD)
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01");	//Среди нас появился предатель! И мы еще называли тебя стражником!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01");	//РЎСЂРµРґРё РЅР°СЃ РїРѕСЏРІРёР»СЃСЏ РїСЂРµРґР°С‚РµР»СЊ! Р РјС‹ РµС‰Рµ РЅР°Р·С‹РІР°Р»Рё С‚РµР±СЏ СЃС‚СЂР°Р¶РЅРёРєРѕРј!
 		}
 		else if(oldHeroGuild == GIL_KDF)
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02");	//Похоже, одного их мятежных магов Огня мы пропустили!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02");	//РџРѕС…РѕР¶Рµ, РѕРґРЅРѕРіРѕ РёС… РјСЏС‚РµР¶РЅС‹С… РјР°РіРѕРІ РћРіРЅСЏ РјС‹ РїСЂРѕРїСѓСЃС‚РёР»Рё!
 		}
 		else
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//Один из Призраков оказался предателем!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//РћРґРёРЅ РёР· РџСЂРёР·СЂР°РєРѕРІ РѕРєР°Р·Р°Р»СЃСЏ РїСЂРµРґР°С‚РµР»РµРј!
 		};
-		AI_Output(hero,self,"VLK_585_Aleph_GUARDS_Info_15_01");	//О чем ты говоришь?
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05");	//Ты ведешь какие-то дела с Новым лагерем, да?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06");	//Постой, но я все еще...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07");	//А ты думал, что так будет продолжаться вечно?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08");	//Прекрати нести весь этот вздор...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09");	//Предателей обычно убивают.
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10");	//Так умри, предатель!
+		AI_Output(hero,self,"VLK_585_Aleph_GUARDS_Info_15_01");	//Рћ С‡РµРј С‚С‹ РіРѕРІРѕСЂРёС€СЊ?
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05");	//РўС‹ РІРµРґРµС€СЊ РєР°РєРёРµ-С‚Рѕ РґРµР»Р° СЃ РќРѕРІС‹Рј Р»Р°РіРµСЂРµРј, РґР°?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06");	//РџРѕСЃС‚РѕР№, РЅРѕ СЏ РІСЃРµ РµС‰Рµ...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07");	//Рђ С‚С‹ РґСѓРјР°Р», С‡С‚Рѕ С‚Р°Рє Р±СѓРґРµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊСЃСЏ РІРµС‡РЅРѕ?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08");	//РџСЂРµРєСЂР°С‚Рё РЅРµСЃС‚Рё РІРµСЃСЊ СЌС‚РѕС‚ РІР·РґРѕСЂ...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09");	//РџСЂРµРґР°С‚РµР»РµР№ РѕР±С‹С‡РЅРѕ СѓР±РёРІР°СЋС‚.
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10");	//РўР°Рє СѓРјСЂРё, РїСЂРµРґР°С‚РµР»СЊ!
 		if(Npc_KnowsInfo(hero,Info_Fletcher_DIE))
 		{
-			B_LogEntry(CH4_BannedFromOC,"Стражники у земель орков повели себя точно так же, как и Флетчер. Они что-то знают о том, что я ищу юниторы для Нового лагеря.");
+			B_LogEntry(CH4_BannedFromOC,"РЎС‚СЂР°Р¶РЅРёРєРё Сѓ Р·РµРјРµР»СЊ РѕСЂРєРѕРІ РїРѕРІРµР»Рё СЃРµР±СЏ С‚РѕС‡РЅРѕ С‚Р°Рє Р¶Рµ, РєР°Рє Рё Р¤Р»РµС‚С‡РµСЂ. РћРЅРё С‡С‚Рѕ-С‚Рѕ Р·РЅР°СЋС‚ Рѕ С‚РѕРј, С‡С‚Рѕ СЏ РёС‰Сѓ СЋРЅРёС‚РѕСЂС‹ РґР»СЏ РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		}
 		else if(!Npc_KnowsInfo(hero,Info_Jackal_PAYDAY) && !Npc_KnowsInfo(hero,info_cutter_die) && !Npc_KnowsInfo(hero,Info_Fletcher_DIE))
 		{
 			Log_CreateTopic(CH4_BannedFromOC,LOG_MISSION);
 			Log_SetTopicStatus(CH4_BannedFromOC,LOG_RUNNING);
-			B_LogEntry(CH4_BannedFromOC,"Стражник у земель орков назвал меня предателем и перебежчиком. Без дальнейших разговоров он и его напарник напали на меня!");
-			B_LogEntry(CH4_BannedFromOC,"Кажется, меня прогнали из Старого лагеря!");
+			B_LogEntry(CH4_BannedFromOC,"РЎС‚СЂР°Р¶РЅРёРє Сѓ Р·РµРјРµР»СЊ РѕСЂРєРѕРІ РЅР°Р·РІР°Р» РјРµРЅСЏ РїСЂРµРґР°С‚РµР»РµРј Рё РїРµСЂРµР±РµР¶С‡РёРєРѕРј. Р‘РµР· РґР°Р»СЊРЅРµР№С€РёС… СЂР°Р·РіРѕРІРѕСЂРѕРІ РѕРЅ Рё РµРіРѕ РЅР°РїР°СЂРЅРёРє РЅР°РїР°Р»Рё РЅР° РјРµРЅСЏ!");
+			B_LogEntry(CH4_BannedFromOC,"РљР°Р¶РµС‚СЃСЏ, РјРµРЅСЏ РїСЂРѕРіРЅР°Р»Рё РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ!");
 		};
 	}
 	else
 	{
 		if(C_NpcBelongsToNewCamp(hero))
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11");	//И как это ты осмелился выйти из Нового лагеря? Неразумный поступок!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11");	//Р РєР°Рє СЌС‚Рѕ С‚С‹ РѕСЃРјРµР»РёР»СЃСЏ РІС‹Р№С‚Рё РёР· РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ? РќРµСЂР°Р·СѓРјРЅС‹Р№ РїРѕСЃС‚СѓРїРѕРє!
 		}
 		else
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12");	//И ты решился выйти из своего Болотного лагеря? Как глупо с твоей стороны!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12");	//Р С‚С‹ СЂРµС€РёР»СЃСЏ РІС‹Р№С‚Рё РёР· СЃРІРѕРµРіРѕ Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ? РљР°Рє РіР»СѓРїРѕ СЃ С‚РІРѕРµР№ СЃС‚РѕСЂРѕРЅС‹!
 		};
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Что такое? О чем ты говоришь?
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//Так ты ничего не слышал о нападении на Новую шахту, да?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//О чем ты...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//Прости, но мы не можем позволить тебе разгуливать здесь. Ты знаешь слишком много!
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17");	//Эй, я не хочу драться с тобой...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_18");	//Об этом раньше нужно было думать!
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19");	//Все, с меня хватит...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20");	//И правда, хватит! Убить его!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Р§С‚Рѕ С‚Р°РєРѕРµ? Рћ С‡РµРј С‚С‹ РіРѕРІРѕСЂРёС€СЊ?
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//РўР°Рє С‚С‹ РЅРёС‡РµРіРѕ РЅРµ СЃР»С‹С€Р°Р» Рѕ РЅР°РїР°РґРµРЅРёРё РЅР° РќРѕРІСѓСЋ С€Р°С…С‚Сѓ, РґР°?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//Рћ С‡РµРј С‚С‹...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//РџСЂРѕСЃС‚Рё, РЅРѕ РјС‹ РЅРµ РјРѕР¶РµРј РїРѕР·РІРѕР»РёС‚СЊ С‚РµР±Рµ СЂР°Р·РіСѓР»РёРІР°С‚СЊ Р·РґРµСЃСЊ. РўС‹ Р·РЅР°РµС€СЊ СЃР»РёС€РєРѕРј РјРЅРѕРіРѕ!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17");	//Р­Р№, СЏ РЅРµ С…РѕС‡Сѓ РґСЂР°С‚СЊСЃСЏ СЃ С‚РѕР±РѕР№...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_18");	//РћР± СЌС‚РѕРј СЂР°РЅСЊС€Рµ РЅСѓР¶РЅРѕ Р±С‹Р»Рѕ РґСѓРјР°С‚СЊ!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19");	//Р’СЃРµ, СЃ РјРµРЅСЏ С…РІР°С‚РёС‚...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20");	//Р РїСЂР°РІРґР°, С…РІР°С‚РёС‚! РЈР±РёС‚СЊ РµРіРѕ!
 	};
 	if(GETNEWGUY_STARTED == TRUE)
 	{
-		B_LogEntry(CH1_RecruitDusty,"Теперь я не смогу вывести кого-либо из Старого лагеря.");
+		B_LogEntry(CH1_RecruitDusty,"РўРµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РІС‹РІРµСЃС‚Рё РєРѕРіРѕ-Р»РёР±Рѕ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_RecruitDusty,LOG_FAILED);
 		GETNEWGUY_STARTED = LOG_FAILED;
 	};
 	Wld_ExchangeGuildAttitudes("GIL_ATTITUDES_FMTAKEN");
 	if(!Npc_KnowsInfo(hero,Info_Fletcher_DIE) && !Npc_KnowsInfo(hero,info_cutter_die))
 	{
-		B_LogEntry(CH4_Firemages,"Стражники Старого лагеря нападают на любого, кто окажется слишком неосторожен, чтобы подойти к ним.");
+		B_LogEntry(CH4_Firemages,"РЎС‚СЂР°Р¶РЅРёРєРё РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ РЅР°РїР°РґР°СЋС‚ РЅР° Р»СЋР±РѕРіРѕ, РєС‚Рѕ РѕРєР°Р¶РµС‚СЃСЏ СЃР»РёС€РєРѕРј РЅРµРѕСЃС‚РѕСЂРѕР¶РµРЅ, С‡С‚РѕР±С‹ РїРѕРґРѕР№С‚Рё Рє РЅРёРј.");
 	};
 	AI_StopProcessInfos(self);
 	OC_BANNED = TRUE;
@@ -173,28 +173,28 @@ func void INFO_GRD238_OrcDogsNotHelp_info()
 	Josef_OrcDogsFight_TimeOfTalk = getTimestamp();
 	if(hero.attribute[ATR_STRENGTH] > 90)
 	{
-		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_0"); //Даа парень.. эта гора мышц пропадает впустую.
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_0"); //Р”Р°Р° РїР°СЂРµРЅСЊ.. СЌС‚Р° РіРѕСЂР° РјС‹С€С† РїСЂРѕРїР°РґР°РµС‚ РІРїСѓСЃС‚СѓСЋ.
 	}
 	else if(hero.attribute[ATR_STRENGTH] > 60)
 	{
-		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_1"); //Пхах.. ну ты и падлец! Выглядишь сложенно, а стоишь в стороне!
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_1"); //РџС…Р°С….. РЅСѓ С‚С‹ Рё РїР°РґР»РµС†! Р’С‹РіР»СЏРґРёС€СЊ СЃР»РѕР¶РµРЅРЅРѕ, Р° СЃС‚РѕРёС€СЊ РІ СЃС‚РѕСЂРѕРЅРµ!
 	}
 	else if(Josef_iOrcDogs_WaitPlayer_Counter > 10)
 	{
-		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_2"); //Ну как, насмотрелся? Ты конечно тип.
+		AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_2"); //РќСѓ РєР°Рє, РЅР°СЃРјРѕС‚СЂРµР»СЃСЏ? РўС‹ РєРѕРЅРµС‡РЅРѕ С‚РёРї.
 	};
-	AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_3"); //Хоть-бы на помощь позвал.
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_3"); //РҐРѕС‚СЊ-Р±С‹ РЅР° РїРѕРјРѕС‰СЊ РїРѕР·РІР°Р».
 	if(C_Npc_IsBelongToCamp(hero,OLDCAMP))
 	{
 		if(hero.guild == GIL_VLK)
 		{
-			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_4"); //Похоже, что работа на шахте, это твое. Инносом данный тебе талант..
-			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_5"); //Долби себе жилу и ни о чем не думай.
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_4"); //РџРѕС…РѕР¶Рµ, С‡С‚Рѕ СЂР°Р±РѕС‚Р° РЅР° С€Р°С…С‚Рµ, СЌС‚Рѕ С‚РІРѕРµ. РРЅРЅРѕСЃРѕРј РґР°РЅРЅС‹Р№ С‚РµР±Рµ С‚Р°Р»Р°РЅС‚..
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_5"); //Р”РѕР»Р±Рё СЃРµР±Рµ Р¶РёР»Сѓ Рё РЅРё Рѕ С‡РµРј РЅРµ РґСѓРјР°Р№.
 		}
 		else
 		{
-			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_6"); //Зачем только Гомез тебя принял. Тьфу.
-			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_7"); //Не то что-бы он.. а! ладно (отмахивается рукой и отворачивается)
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_6"); //Р—Р°С‡РµРј С‚РѕР»СЊРєРѕ Р“РѕРјРµР· С‚РµР±СЏ РїСЂРёРЅСЏР». РўСЊС„Сѓ.
+			AI_Output(self,hero,"INFO_GRD238_OrcDogsNotHelp_NULL_7"); //РќРµ С‚Рѕ С‡С‚Рѕ-Р±С‹ РѕРЅ.. Р°! Р»Р°РґРЅРѕ (РѕС‚РјР°С…РёРІР°РµС‚СЃСЏ СЂСѓРєРѕР№ Рё РѕС‚РІРѕСЂР°С‡РёРІР°РµС‚СЃСЏ)
 		};
 	};
 	AI_StopProcessInfos(self);
@@ -224,8 +224,8 @@ func int INFO_GRD238_OrcDogsHelp_condition()
 func void INFO_GRD238_OrcDogsHelp_info()
 {
 	Josef_OrcDogsFight_TimeOfTalk = getTimestamp();
-	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_0"); //Даа.. ух.. Молодые варги - не такие уж и сильные, но живучие.
-	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_1"); //Спасибо что помог!
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_0"); //Р”Р°Р°.. СѓС….. РњРѕР»РѕРґС‹Рµ РІР°СЂРіРё - РЅРµ С‚Р°РєРёРµ СѓР¶ Рё СЃРёР»СЊРЅС‹Рµ, РЅРѕ Р¶РёРІСѓС‡РёРµ.
+	AI_Output(self,hero,"INFO_GRD238_OrcDogsHelp_NULL_1"); //РЎРїР°СЃРёР±Рѕ С‡С‚Рѕ РїРѕРјРѕРі!
 	AI_StopProcessInfos(self);
 };
 
@@ -236,7 +236,7 @@ instance INFO_GRD238_NAME(C_Info)
 	condition = info_grd238_name_condition;
 	information = info_grd238_name_info;
 	permanent = 0;
-	description = "Как хоть тебя зовут?";
+	description = "РљР°Рє С…РѕС‚СЊ С‚РµР±СЏ Р·РѕРІСѓС‚?";
 };
 
 func int info_grd238_name_condition()
@@ -250,9 +250,9 @@ func int info_grd238_name_condition()
 
 func void info_grd238_name_info()
 {
-	AI_Output(hero,self,"Info_GRD238_NAME_NULL_0");  //Как хоть тебя зовут?
-	AI_Output(self,hero,"Info_GRD238_NAME_NULL_1");  //Меня зовут Йосиф
-	self.name[0] = "Йосиф";
+	AI_Output(hero,self,"Info_GRD238_NAME_NULL_0");  //РљР°Рє С…РѕС‚СЊ С‚РµР±СЏ Р·РѕРІСѓС‚?
+	AI_Output(self,hero,"Info_GRD238_NAME_NULL_1");  //РњРµРЅСЏ Р·РѕРІСѓС‚ Р™РѕСЃРёС„
+	self.name[0] = "Р™РѕСЃРёС„";
 	AI_StopProcessInfos(self);
 };
 
@@ -263,7 +263,7 @@ instance INFO_GRD238_OrcDogHowOften(C_Info)
 	condition = INFO_GRD238_OrcDogHowOften_condition;
 	information = INFO_GRD238_OrcDogHowOften_info;
 	permanent = 0;
-	description = "Как часто тут происходит такое?";
+	description = "РљР°Рє С‡Р°СЃС‚Рѕ С‚СѓС‚ РїСЂРѕРёСЃС…РѕРґРёС‚ С‚Р°РєРѕРµ?";
 };
 func int INFO_GRD238_OrcDogHowOften_condition()
 {
@@ -291,7 +291,7 @@ instance INFO_GRD238_OrcDogHowOftenL(C_Info)
 	condition = INFO_GRD238_OrcDogHowOftenL_condition;
 	information = INFO_GRD238_OrcDogHowOftenL_info;
 	permanent = 0;
-	description = "А как часто, тут, нападают эти варги?";
+	description = "Рђ РєР°Рє С‡Р°СЃС‚Рѕ, С‚СѓС‚, РЅР°РїР°РґР°СЋС‚ СЌС‚Рё РІР°СЂРіРё?";
 };
 func int INFO_GRD238_OrcDogHowOftenL_condition()
 {
@@ -334,7 +334,7 @@ func void info_grd238_exit_info()
 	AI_StopProcessInfos(self);
 };
 //akh working
-//AI_Output(self,hero,""); //Какой-же ты криворукий!
-//AI_Output(self,hero,""); //Ты больше помог этим псам, чем нам. И как только Гомез принял тебя..
-//AI_Output(self,hero,""); //Пшел вон, криворукая скотина! (Тьфу)
-//AI_Output(self,hero,""); //И кстати да, ты можешь прямо сейчас идти в земли орков - мы не будем тебя останавливать.
+//AI_Output(self,hero,""); //РљР°РєРѕР№-Р¶Рµ С‚С‹ РєСЂРёРІРѕСЂСѓРєРёР№!
+//AI_Output(self,hero,""); //РўС‹ Р±РѕР»СЊС€Рµ РїРѕРјРѕРі СЌС‚РёРј РїСЃР°Рј, С‡РµРј РЅР°Рј. Р РєР°Рє С‚РѕР»СЊРєРѕ Р“РѕРјРµР· РїСЂРёРЅСЏР» С‚РµР±СЏ..
+//AI_Output(self,hero,""); //РџС€РµР» РІРѕРЅ, РєСЂРёРІРѕСЂСѓРєР°СЏ СЃРєРѕС‚РёРЅР°! (РўСЊС„Сѓ)
+//AI_Output(self,hero,""); //Р РєСЃС‚Р°С‚Рё РґР°, С‚С‹ РјРѕР¶РµС€СЊ РїСЂСЏРјРѕ СЃРµР№С‡Р°СЃ РёРґС‚Рё РІ Р·РµРјР»Рё РѕСЂРєРѕРІ - РјС‹ РЅРµ Р±СѓРґРµРј С‚РµР±СЏ РѕСЃС‚Р°РЅР°РІР»РёРІР°С‚СЊ.

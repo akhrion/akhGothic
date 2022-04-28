@@ -1,7 +1,7 @@
 
 instance EBR_102_Arto(Npc_Default)
 {
-	name[0] = "Арто";
+	name[0] = "РђСЂС‚Рѕ";
 	npcType = npctype_main;
 	guild = GIL_EBR;
 	level = 80;

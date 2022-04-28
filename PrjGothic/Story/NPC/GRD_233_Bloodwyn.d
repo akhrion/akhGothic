@@ -1,7 +1,7 @@
 
 instance GRD_233_Bloodwyn(Npc_Default)
 {
-	name[0] = "Бладвин";
+	name[0] = "Р‘Р»Р°РґРІРёРЅ";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;

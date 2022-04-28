@@ -1,7 +1,7 @@
 
 instance GRD_208_Cutter(Npc_Default)
 {
-	name[0] = "Палач";
+	name[0] = "РџР°Р»Р°С‡";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 20;
@@ -38,6 +38,13 @@ func void Rtn_start_208()
 {
 	TA_Sleep(23,35,8,35,"OCC_MERCS_UPPER_RIGHT_ROOM_BED2");
 	TA_Smalltalk(8,35,23,35,"OCC_MERCS_ENTRANCE");
+};
+
+func void Rtn_Snaff_208()
+{
+	TA_Sleep(23,35,8,35,"OCC_MERCS_UPPER_RIGHT_ROOM_BED2");
+	TA_StandAround(8,35,10,35,"OCR_CAULDRON_2");
+	TA_Smalltalk(10,35,23,35,"OCC_MERCS_ENTRANCE");
 };
 
 func void Rtn_OT_208()

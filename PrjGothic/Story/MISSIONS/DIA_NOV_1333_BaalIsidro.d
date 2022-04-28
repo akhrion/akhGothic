@@ -28,7 +28,7 @@ instance DIA_BaalIsidro_Hello(C_Info)
 	condition = DIA_BaalIsidro_Hello_Condition;
 	information = DIA_BaalIsidro_Hello_Info;
 	permanent = 0;
-	description = "Какой-то у тебя слишком грустный вид.";
+	description = "РљР°РєРѕР№-С‚Рѕ Сѓ С‚РµР±СЏ СЃР»РёС€РєРѕРј РіСЂСѓСЃС‚РЅС‹Р№ РІРёРґ.";
 };
 
 
@@ -42,11 +42,11 @@ func int DIA_BaalIsidro_Hello_Condition()
 
 func void DIA_BaalIsidro_Hello_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00");	//Какой-то у тебя слишком грустный вид.
-	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_01");	//Какой проницательный!
-	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_02");	//Мне срочно нужно избавиться от целой горы болотника.
-	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_03");	//Ты продаешь товары из Лагеря сектантов?
-	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_04");	//Да.
+	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00");	//РљР°РєРѕР№-С‚Рѕ Сѓ С‚РµР±СЏ СЃР»РёС€РєРѕРј РіСЂСѓСЃС‚РЅС‹Р№ РІРёРґ.
+	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_01");	//РљР°РєРѕР№ РїСЂРѕРЅРёС†Р°С‚РµР»СЊРЅС‹Р№!
+	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_02");	//РњРЅРµ СЃСЂРѕС‡РЅРѕ РЅСѓР¶РЅРѕ РёР·Р±Р°РІРёС‚СЊСЃСЏ РѕС‚ С†РµР»РѕР№ РіРѕСЂС‹ Р±РѕР»РѕС‚РЅРёРєР°.
+	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_03");	//РўС‹ РїСЂРѕРґР°РµС€СЊ С‚РѕРІР°СЂС‹ РёР· Р›Р°РіРµСЂСЏ СЃРµРєС‚Р°РЅС‚РѕРІ?
+	AI_Output(self,other,"DIA_BaalIsidro_Hello_03_04");	//Р”Р°.
 };
 
 
@@ -57,7 +57,7 @@ instance DIA_BaalIsidro_TRADE(C_Info)
 	condition = DIA_BaalIsidro_TRADE_Condition;
 	information = DIA_BaalIsidro_TRADE_Info;
 	permanent = 1;
-	description = "Покажи, что ты там продаешь.";
+	description = "РџРѕРєР°Р¶Рё, С‡С‚Рѕ С‚С‹ С‚Р°Рј РїСЂРѕРґР°РµС€СЊ.";
 	trade = 1;
 };
 
@@ -72,8 +72,8 @@ func int DIA_BaalIsidro_TRADE_Condition()
 
 func void DIA_BaalIsidro_TRADE_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00");	//Покажи, что ты там продаешь.
-	AI_Output(self,other,"DIA_BaalIsidro_TRADE_03_01");	//Вот...
+	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00");	//РџРѕРєР°Р¶Рё, С‡С‚Рѕ С‚С‹ С‚Р°Рј РїСЂРѕРґР°РµС€СЊ.
+	AI_Output(self,other,"DIA_BaalIsidro_TRADE_03_01");	//Р’РѕС‚...
 };
 
 
@@ -84,7 +84,7 @@ instance DIA_BaalIsidro_GimmeKraut(C_Info)
 	condition = DIA_BaalIsidro_GimmeKraut_Condition;
 	information = DIA_BaalIsidro_GimmeKraut_Info;
 	permanent = 0;
-	description = "Я могу помочь продавать болотник. Но тебе придется поделиться.";
+	description = "РЇ РјРѕРіСѓ РїРѕРјРѕС‡СЊ РїСЂРѕРґР°РІР°С‚СЊ Р±РѕР»РѕС‚РЅРёРє. РќРѕ С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ РїРѕРґРµР»РёС‚СЊСЃСЏ.";
 };
 
 
@@ -98,12 +98,12 @@ func int DIA_BaalIsidro_GimmeKraut_Condition()
 
 func void DIA_BaalIsidro_GimmeKraut_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_GimmeKraut_15_00");	//Я могу помочь тебе продавать болотник. Но тебе придется поделиться.
-	AI_Output(self,other,"DIA_BaalIsidro_GimmeKraut_03_01");	//Даже не думай меня обмануть, я еще не слишком пьян, чтобы отдать весь мой болотник первому встречному.
+	AI_Output(other,self,"DIA_BaalIsidro_GimmeKraut_15_00");	//РЇ РјРѕРіСѓ РїРѕРјРѕС‡СЊ С‚РµР±Рµ РїСЂРѕРґР°РІР°С‚СЊ Р±РѕР»РѕС‚РЅРёРє. РќРѕ С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ РїРѕРґРµР»РёС‚СЊСЃСЏ.
+	AI_Output(self,other,"DIA_BaalIsidro_GimmeKraut_03_01");	//Р”Р°Р¶Рµ РЅРµ РґСѓРјР°Р№ РјРµРЅСЏ РѕР±РјР°РЅСѓС‚СЊ, СЏ РµС‰Рµ РЅРµ СЃР»РёС€РєРѕРј РїСЊСЏРЅ, С‡С‚РѕР±С‹ РѕС‚РґР°С‚СЊ РІРµСЃСЊ РјРѕР№ Р±РѕР»РѕС‚РЅРёРє РїРµСЂРІРѕРјСѓ РІСЃС‚СЂРµС‡РЅРѕРјСѓ.
 	BAALISIDRO_JOINTS_STARTED = TRUE;
 	Log_CreateTopic(CH1_DealerJob,LOG_MISSION);
 	Log_SetTopicStatus(CH1_DealerJob,LOG_RUNNING);
-	B_LogEntry(CH1_DealerJob,"Послушник Идол Исидро целыми днями пьянствует в баре на озере. Ему нужно продать свой болотник, но он ничего не может с собой поделать. Может быть, я смогу уговорить его поручить это дело мне...");
+	B_LogEntry(CH1_DealerJob,"РџРѕСЃР»СѓС€РЅРёРє РРґРѕР» РСЃРёРґСЂРѕ С†РµР»С‹РјРё РґРЅСЏРјРё РїСЊСЏРЅСЃС‚РІСѓРµС‚ РІ Р±Р°СЂРµ РЅР° РѕР·РµСЂРµ. Р•РјСѓ РЅСѓР¶РЅРѕ РїСЂРѕРґР°С‚СЊ СЃРІРѕР№ Р±РѕР»РѕС‚РЅРёРє, РЅРѕ РѕРЅ РЅРёС‡РµРіРѕ РЅРµ РјРѕР¶РµС‚ СЃ СЃРѕР±РѕР№ РїРѕРґРµР»Р°С‚СЊ. РњРѕР¶РµС‚ Р±С‹С‚СЊ, СЏ СЃРјРѕРіСѓ СѓРіРѕРІРѕСЂРёС‚СЊ РµРіРѕ РїРѕСЂСѓС‡РёС‚СЊ СЌС‚Рѕ РґРµР»Рѕ РјРЅРµ...");
 };
 
 
@@ -114,7 +114,7 @@ instance DIA_BaalIsidro_Problem(C_Info)
 	condition = DIA_BaalIsidro_Problem_Condition;
 	information = DIA_BaalIsidro_Problem_Info;
 	permanent = 0;
-	description = "Идол Каган хочет найти себе другого помощника...";
+	description = "РРґРѕР» РљР°РіР°РЅ С…РѕС‡РµС‚ РЅР°Р№С‚Рё СЃРµР±Рµ РґСЂСѓРіРѕРіРѕ РїРѕРјРѕС‰РЅРёРєР°...";
 };
 
 
@@ -128,15 +128,15 @@ func int DIA_BaalIsidro_Problem_Condition()
 
 func void DIA_BaalIsidro_Problem_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_Problem_15_00");	//Послушай меня: Идол Каган хочет найти себе другого помощника. Кажется, скоро тебе придется несладко.
-	AI_Output(self,other,"DIA_BaalIsidro_Problem_03_01");	//Что? О великий Спящий! Как же мне избавиться от этой травы...
+	AI_Output(other,self,"DIA_BaalIsidro_Problem_15_00");	//РџРѕСЃР»СѓС€Р°Р№ РјРµРЅСЏ: РРґРѕР» РљР°РіР°РЅ С…РѕС‡РµС‚ РЅР°Р№С‚Рё СЃРµР±Рµ РґСЂСѓРіРѕРіРѕ РїРѕРјРѕС‰РЅРёРєР°. РљР°Р¶РµС‚СЃСЏ, СЃРєРѕСЂРѕ С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ РЅРµСЃР»Р°РґРєРѕ.
+	AI_Output(self,other,"DIA_BaalIsidro_Problem_03_01");	//Р§С‚Рѕ? Рћ РІРµР»РёРєРёР№ РЎРїСЏС‰РёР№! РљР°Рє Р¶Рµ РјРЅРµ РёР·Р±Р°РІРёС‚СЊСЃСЏ РѕС‚ СЌС‚РѕР№ С‚СЂР°РІС‹...
 	if(BaalIsidro_GotDrink == FALSE)
 	{
-		B_LogEntry(CH1_DealerJob,"Идол Исидро был сильно напуган, когда я рассказал ему о планах Идола Кагана найти ему замену. Но этого было недостаточно, чтобы уговорить его.");
+		B_LogEntry(CH1_DealerJob,"РРґРѕР» РСЃРёРґСЂРѕ Р±С‹Р» СЃРёР»СЊРЅРѕ РЅР°РїСѓРіР°РЅ, РєРѕРіРґР° СЏ СЂР°СЃСЃРєР°Р·Р°Р» РµРјСѓ Рѕ РїР»Р°РЅР°С… РРґРѕР»Р° РљР°РіР°РЅР° РЅР°Р№С‚Рё РµРјСѓ Р·Р°РјРµРЅСѓ. РќРѕ СЌС‚РѕРіРѕ Р±С‹Р»Рѕ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ СѓРіРѕРІРѕСЂРёС‚СЊ РµРіРѕ.");
 	}
 	else
 	{
-		B_LogEntry(CH1_DealerJob,"Идол Исидро был сильно напуган, когда я рассказал ему о планах Идола Кагана найти ему замену.");
+		B_LogEntry(CH1_DealerJob,"РРґРѕР» РСЃРёРґСЂРѕ Р±С‹Р» СЃРёР»СЊРЅРѕ РЅР°РїСѓРіР°РЅ, РєРѕРіРґР° СЏ СЂР°СЃСЃРєР°Р·Р°Р» РµРјСѓ Рѕ РїР»Р°РЅР°С… РРґРѕР»Р° РљР°РіР°РЅР° РЅР°Р№С‚Рё РµРјСѓ Р·Р°РјРµРЅСѓ.");
 	};
 };
 
@@ -150,7 +150,7 @@ instance DIA_BaalIsidro_Drink(C_Info)
 	condition = DIA_BaalIsidro_Drink_Condition;
 	information = DIA_BaalIsidro_Drink_Info;
 	permanent = 1;
-	description = "Я тоже так думаю. Вот, выпей.";
+	description = "РЇ С‚РѕР¶Рµ С‚Р°Рє РґСѓРјР°СЋ. Р’РѕС‚, РІС‹РїРµР№.";
 };
 
 
@@ -164,13 +164,13 @@ func int DIA_BaalIsidro_Drink_Condition()
 
 func void DIA_BaalIsidro_Drink_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00");	//Я тоже так думаю. Вот, выпей.
+	AI_Output(other,self,"DIA_BaalIsidro_Drink_15_00");	//РЇ С‚РѕР¶Рµ С‚Р°Рє РґСѓРјР°СЋ. Р’РѕС‚, РІС‹РїРµР№.
 	if((Npc_HasItems(other,ItFoBooze) > 0) || (Npc_HasItems(other,ItFoBeer) > 0) || (Npc_HasItems(other,ItFoWine) > 0))
 	{
-		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01");	//Спасибо тебе! Я выпью за твое здоровье!
+		AI_Output(self,other,"DIA_BaalIsidro_Drink_03_01");	//РЎРїР°СЃРёР±Рѕ С‚РµР±Рµ! РЇ РІС‹РїСЊСЋ Р·Р° С‚РІРѕРµ Р·РґРѕСЂРѕРІСЊРµ!
 		if(Npc_HasItems(other,ItFoBooze))
 		{
-			b_printtrademsg1("Отдан шнапс.");
+			b_printtrademsg1("РћС‚РґР°РЅ С€РЅР°РїСЃ.");
 			B_GiveInvItems(other,self,ItFoBooze,1);
 			if(C_BodyStateContains(self,BS_SIT))
 			{
@@ -182,7 +182,7 @@ func void DIA_BaalIsidro_Drink_Info()
 		}
 		else if(Npc_HasItems(other,ItFoBeer))
 		{
-			b_printtrademsg1("Отдано пиво.");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ РїРёРІРѕ.");
 			B_GiveInvItems(other,self,ItFoBeer,1);
 			if(C_BodyStateContains(self,BS_SIT))
 			{
@@ -194,7 +194,7 @@ func void DIA_BaalIsidro_Drink_Info()
 		}
 		else if(Npc_HasItems(other,ItFoWine))
 		{
-			b_printtrademsg1("Отдано вино.");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ РІРёРЅРѕ.");
 			B_GiveInvItems(other,self,ItFoWine,1);
 			if(C_BodyStateContains(self,BS_SIT))
 			{
@@ -207,16 +207,16 @@ func void DIA_BaalIsidro_Drink_Info()
 		BaalIsidro_GotDrink = TRUE;
 		if(Npc_KnowsInfo(hero,DIA_BaalIsidro_Problem))
 		{
-			B_LogEntry(CH1_DealerJob,"Мое угощение подействовало как нужно. Думаю, теперь Идол Исидро примет мое предложение.");
+			B_LogEntry(CH1_DealerJob,"РњРѕРµ СѓРіРѕС‰РµРЅРёРµ РїРѕРґРµР№СЃС‚РІРѕРІР°Р»Рѕ РєР°Рє РЅСѓР¶РЅРѕ. Р”СѓРјР°СЋ, С‚РµРїРµСЂСЊ РРґРѕР» РСЃРёРґСЂРѕ РїСЂРёРјРµС‚ РјРѕРµ РїСЂРµРґР»РѕР¶РµРЅРёРµ.");
 		}
 		else
 		{
-			B_LogEntry(CH1_DealerJob,"Идол Исидро с радостью выпил за мое здоровье. Но, кажется, он все еще не согласен отдать мне свой болотник.");
+			B_LogEntry(CH1_DealerJob,"РРґРѕР» РСЃРёРґСЂРѕ СЃ СЂР°РґРѕСЃС‚СЊСЋ РІС‹РїРёР» Р·Р° РјРѕРµ Р·РґРѕСЂРѕРІСЊРµ. РќРѕ, РєР°Р¶РµС‚СЃСЏ, РѕРЅ РІСЃРµ РµС‰Рµ РЅРµ СЃРѕРіР»Р°СЃРµРЅ РѕС‚РґР°С‚СЊ РјРЅРµ СЃРІРѕР№ Р±РѕР»РѕС‚РЅРёРє.");
 		};
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_BaalIsidro_NO_Drink_03_00");	//Что? Где?
+		AI_Output(self,other,"DIA_BaalIsidro_NO_Drink_03_00");	//Р§С‚Рѕ? Р“РґРµ?
 	};
 };
 
@@ -228,7 +228,7 @@ instance DIA_BaalIsidro_ThinkAgain(C_Info)
 	condition = DIA_BaalIsidro_ThinkAgain_Condition;
 	information = DIA_BaalIsidro_ThinkAgain_Info;
 	permanent = 1;
-	description = "Подумай, я продам твой болотник, а прибыль мы поделим пополам!";
+	description = "РџРѕРґСѓРјР°Р№, СЏ РїСЂРѕРґР°Рј С‚РІРѕР№ Р±РѕР»РѕС‚РЅРёРє, Р° РїСЂРёР±С‹Р»СЊ РјС‹ РїРѕРґРµР»РёРј РїРѕРїРѕР»Р°Рј!";
 };
 
 
@@ -242,18 +242,18 @@ func int DIA_BaalIsidro_ThinkAgain_Condition()
 
 func void DIA_BaalIsidro_ThinkAgain_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_00");	//Подумай, я продам твой болотник, а прибыль мы поделим пополам!
+	AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_00");	//РџРѕРґСѓРјР°Р№, СЏ РїСЂРѕРґР°Рј С‚РІРѕР№ Р±РѕР»РѕС‚РЅРёРє, Р° РїСЂРёР±С‹Р»СЊ РјС‹ РїРѕРґРµР»РёРј РїРѕРїРѕР»Р°Рј!
 	if((BaalIsidro_GotDrink == TRUE) && Npc_KnowsInfo(hero,DIA_BaalIsidro_Problem))
 	{
-		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_01");	//О Спящий! Как же я замучился с этим болотником. Ты же не хочешь обвести меня вокруг пальца, да?
-		AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_02");	//Честное слово.
-		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_03");	//Хорошо, вот тебе весь болотник... Ты должен получить за него не меньше 400 кусков руды. Мы поделим их пополам. Как справишься со всем, приходи ко мне. Я все время буду здесь.
-		b_printtrademsg1("Получено 50 сигарет.");
-		AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_04");	//Не знаешь, кто здесь может купить большую партию болотника?
-		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_05");	//Если бы я знал, я бы и сам сходил к нему.
-		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_06");	//Да, без этой проклятой травы я чувствую себя гораздо лучше.
+		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_01");	//Рћ РЎРїСЏС‰РёР№! РљР°Рє Р¶Рµ СЏ Р·Р°РјСѓС‡РёР»СЃСЏ СЃ СЌС‚РёРј Р±РѕР»РѕС‚РЅРёРєРѕРј. РўС‹ Р¶Рµ РЅРµ С…РѕС‡РµС€СЊ РѕР±РІРµСЃС‚Рё РјРµРЅСЏ РІРѕРєСЂСѓРі РїР°Р»СЊС†Р°, РґР°?
+		AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_02");	//Р§РµСЃС‚РЅРѕРµ СЃР»РѕРІРѕ.
+		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_03");	//РҐРѕСЂРѕС€Рѕ, РІРѕС‚ С‚РµР±Рµ РІРµСЃСЊ Р±РѕР»РѕС‚РЅРёРє... РўС‹ РґРѕР»Р¶РµРЅ РїРѕР»СѓС‡РёС‚СЊ Р·Р° РЅРµРіРѕ РЅРµ РјРµРЅСЊС€Рµ 400 РєСѓСЃРєРѕРІ СЂСѓРґС‹. РњС‹ РїРѕРґРµР»РёРј РёС… РїРѕРїРѕР»Р°Рј. РљР°Рє СЃРїСЂР°РІРёС€СЊСЃСЏ СЃРѕ РІСЃРµРј, РїСЂРёС…РѕРґРё РєРѕ РјРЅРµ. РЇ РІСЃРµ РІСЂРµРјСЏ Р±СѓРґСѓ Р·РґРµСЃСЊ.
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ 50 СЃРёРіР°СЂРµС‚.");
+		AI_Output(other,self,"DIA_BaalIsidro_ThinkAgain_15_04");	//РќРµ Р·РЅР°РµС€СЊ, РєС‚Рѕ Р·РґРµСЃСЊ РјРѕР¶РµС‚ РєСѓРїРёС‚СЊ Р±РѕР»СЊС€СѓСЋ РїР°СЂС‚РёСЋ Р±РѕР»РѕС‚РЅРёРєР°?
+		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_05");	//Р•СЃР»Рё Р±С‹ СЏ Р·РЅР°Р», СЏ Р±С‹ Рё СЃР°Рј СЃС…РѕРґРёР» Рє РЅРµРјСѓ.
+		AI_Output(self,other,"DIA_BaalIsidro_ThinkAgain_03_06");	//Р”Р°, Р±РµР· СЌС‚РѕР№ РїСЂРѕРєР»СЏС‚РѕР№ С‚СЂР°РІС‹ СЏ С‡СѓРІСЃС‚РІСѓСЋ СЃРµР±СЏ РіРѕСЂР°Р·РґРѕ Р»СѓС‡С€Рµ.
 		BaalIsidro_DealerJob = LOG_RUNNING;
-		B_LogEntry(CH1_DealerJob,"Идол Исидро передал мне свой болотник. Я должен его продать и половину выручки принести ему.");
+		B_LogEntry(CH1_DealerJob,"РРґРѕР» РСЃРёРґСЂРѕ РїРµСЂРµРґР°Р» РјРЅРµ СЃРІРѕР№ Р±РѕР»РѕС‚РЅРёРє. РЇ РґРѕР»Р¶РµРЅ РµРіРѕ РїСЂРѕРґР°С‚СЊ Рё РїРѕР»РѕРІРёРЅСѓ РІС‹СЂСѓС‡РєРё РїСЂРёРЅРµСЃС‚Рё РµРјСѓ.");
 		Npc_RemoveInvItems(self,ItMiJoint_1,10);
 		CreateInvItems(other,ItMiJoint_1,10);
 		Npc_RemoveInvItems(self,ItMiJoint_2,20);
@@ -264,7 +264,7 @@ func void DIA_BaalIsidro_ThinkAgain_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_BaalIsidro_REFUSE_ThinkAgain_03_00");	//Нет, ни за что. Я и сам смогу с этим справиться...
+		AI_Output(self,other,"DIA_BaalIsidro_REFUSE_ThinkAgain_03_00");	//РќРµС‚, РЅРё Р·Р° С‡С‚Рѕ. РЇ Рё СЃР°Рј СЃРјРѕРіСѓ СЃ СЌС‚РёРј СЃРїСЂР°РІРёС‚СЊСЃСЏ...
 	};
 };
 
@@ -276,7 +276,7 @@ instance DIA_BaalIsidro_RUNNING(C_Info)
 	condition = DIA_BaalIsidro_RUNNING_Condition;
 	information = DIA_BaalIsidro_RUNNING_Info;
 	permanent = 1;
-	description = "Я продал весь болотник.";
+	description = "РЇ РїСЂРѕРґР°Р» РІРµСЃСЊ Р±РѕР»РѕС‚РЅРёРє.";
 };
 
 
@@ -290,24 +290,24 @@ func int DIA_BaalIsidro_RUNNING_Condition()
 
 func void DIA_BaalIsidro_RUNNING_Info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_00");	//Я продал весь болотник.
-	AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_01");	//А где мои 200 кусков?
+	AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_00");	//РЇ РїСЂРѕРґР°Р» РІРµСЃСЊ Р±РѕР»РѕС‚РЅРёРє.
+	AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_01");	//Рђ РіРґРµ РјРѕРё 200 РєСѓСЃРєРѕРІ?
 	if(Npc_HasItems(other,ItMiNugget) >= 200)
 	{
-		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_02");	//Вот они.
-		b_printtrademsg1("Отдано руды: 200");
-		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_03");	//Хорошо... А этот Идол Каган пусть делает что хочет!
-		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_04");	//Приятно иметь с тобой дело, брат.
+		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_15_02");	//Р’РѕС‚ РѕРЅРё.
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 200");
+		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_03");	//РҐРѕСЂРѕС€Рѕ... Рђ СЌС‚РѕС‚ РРґРѕР» РљР°РіР°РЅ РїСѓСЃС‚СЊ РґРµР»Р°РµС‚ С‡С‚Рѕ С…РѕС‡РµС‚!
+		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_03_04");	//РџСЂРёСЏС‚РЅРѕ РёРјРµС‚СЊ СЃ С‚РѕР±РѕР№ РґРµР»Рѕ, Р±СЂР°С‚.
 		B_GiveInvItems(hero,self,ItMiNugget,200);
 		BaalIsidro_DealerJob = LOG_SUCCESS;
 		Log_SetTopicStatus(CH1_DealerJob,LOG_SUCCESS);
-		B_LogEntry(CH1_DealerJob,"Идол Исидро был очень рад, что я избавил его от горы болотника и принес 200 кусков руды.");
+		B_LogEntry(CH1_DealerJob,"РРґРѕР» РСЃРёРґСЂРѕ Р±С‹Р» РѕС‡РµРЅСЊ СЂР°Рґ, С‡С‚Рѕ СЏ РёР·Р±Р°РІРёР» РµРіРѕ РѕС‚ РіРѕСЂС‹ Р±РѕР»РѕС‚РЅРёРєР° Рё РїСЂРёРЅРµСЃ 200 РєСѓСЃРєРѕРІ СЂСѓРґС‹.");
 		B_GiveXP(XP_BaalIsidroPayShare);
 	}
 	else
 	{
-		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_NoOre_15_05");	//Я забыл взять твою долю.
-		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_NoOre_03_06");	//Так принеси их!
+		AI_Output(other,self,"DIA_BaalIsidro_RUNNING_NoOre_15_05");	//РЇ Р·Р°Р±С‹Р» РІР·СЏС‚СЊ С‚РІРѕСЋ РґРѕР»СЋ.
+		AI_Output(self,other,"DIA_BaalIsidro_RUNNING_NoOre_03_06");	//РўР°Рє РїСЂРёРЅРµСЃРё РёС…!
 		AI_StopProcessInfos(self);
 	};
 };
@@ -336,34 +336,34 @@ func void dia_baalisidro_revenge_info()
 {
 	if(C_NpcBelongsToPsiCamp(hero))
 	{
-		AI_Output(self,other,"SVM_3_HeyYou");	//Эй, ты!
+		AI_Output(self,other,"SVM_3_HeyYou");	//Р­Р№, С‚С‹!
 	}
 	else
 	{
-		AI_Output(self,other,"SVM_3_YouViolatedForbiddenTerritory");	//Эй! Откуда ты здесь взялся?
+		AI_Output(self,other,"SVM_3_YouViolatedForbiddenTerritory");	//Р­Р№! РћС‚РєСѓРґР° С‚С‹ Р·РґРµСЃСЊ РІР·СЏР»СЃСЏ?
 	};
 	AI_DrawWeapon(self);
-	AI_Output(self,other,"SVM_3_YouStoleFromMe");	//Ты обокрал меня, мерзкий вор!
+	AI_Output(self,other,"SVM_3_YouStoleFromMe");	//РўС‹ РѕР±РѕРєСЂР°Р» РјРµРЅСЏ, РјРµСЂР·РєРёР№ РІРѕСЂ!
 	BaalIsidro_DealerJob = LOG_FAILED;
 	Log_SetTopicStatus(CH1_DealerJob,LOG_FAILED);
-	B_LogEntry(CH1_DealerJob,"Из-за меня Идола Исидро с позором вернули в Болотный лагерь.");
+	B_LogEntry(CH1_DealerJob,"РР·-Р·Р° РјРµРЅСЏ РРґРѕР»Р° РСЃРёРґСЂРѕ СЃ РїРѕР·РѕСЂРѕРј РІРµСЂРЅСѓР»Рё РІ Р‘РѕР»РѕС‚РЅС‹Р№ Р»Р°РіРµСЂСЊ.");
 	Info_ClearChoices(dia_baalisidro_revenge);
 	if(Npc_HasItems(hero,ItMiNugget) >= 200)
 	{
-		Info_AddChoice(dia_baalisidro_revenge,"Ладно, вот тебе руда!",dia_baalisidro_revenge_giveore);
+		Info_AddChoice(dia_baalisidro_revenge,"Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!",dia_baalisidro_revenge_giveore);
 	}
 	else
 	{
-		Info_AddChoice(dia_baalisidro_revenge,"Но у меня не так много руды.",dia_baalisidro_revenge_noore);
+		Info_AddChoice(dia_baalisidro_revenge,"РќРѕ Сѓ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.",dia_baalisidro_revenge_noore);
 	};
-	Info_AddChoice(dia_baalisidro_revenge,"Уйди от меня!",dia_baalisidro_revenge_fuckoff);
+	Info_AddChoice(dia_baalisidro_revenge,"РЈР№РґРё РѕС‚ РјРµРЅСЏ!",dia_baalisidro_revenge_fuckoff);
 };
 
 func void dia_baalisidro_revenge_giveore()
 {
-	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Ладно, вот тебе руда!
-	b_printtrademsg1("Отдано руды: 200");
-	AI_Output(self,other,"SVM_3_HeDeservedIt");	//Давно надо было это сделать!
+	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!
+	b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 200");
+	AI_Output(self,other,"SVM_3_HeDeservedIt");	//Р”Р°РІРЅРѕ РЅР°РґРѕ Р±С‹Р»Рѕ СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ!
 	B_GiveInvItems(other,self,ItMiNugget,200);
 	AI_RemoveWeapon(self);
 	AI_StopProcessInfos(self);
@@ -371,8 +371,8 @@ func void dia_baalisidro_revenge_giveore()
 
 func void dia_baalisidro_revenge_noore()
 {
-	AI_Output(other,self,"DIA_Grd_215_Torwache_First_Pay_NoOre_15_00");	//Но у меня не так много руды.
-	AI_Output(self,other,"SVM_3_ShitNoOre");	//У тебя нет руды? Ты огорчил меня. Как ты мог?
+	AI_Output(other,self,"DIA_Grd_215_Torwache_First_Pay_NoOre_15_00");	//РќРѕ Сѓ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+	AI_Output(self,other,"SVM_3_ShitNoOre");	//РЈ С‚РµР±СЏ РЅРµС‚ СЂСѓРґС‹? РўС‹ РѕРіРѕСЂС‡РёР» РјРµРЅСЏ. РљР°Рє С‚С‹ РјРѕРі?
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack,1,"");
@@ -380,8 +380,8 @@ func void dia_baalisidro_revenge_noore()
 
 func void dia_baalisidro_revenge_fuckoff()
 {
-	AI_Output(other,self,"DIA_Mud_GetLost_15_00");	//Уйди от меня!
-	AI_Output(self,other,"SVM_3_DieMonster");	//Как же ты мне надоел, сейчас я с тобой покончу!
+	AI_Output(other,self,"DIA_Mud_GetLost_15_00");	//РЈР№РґРё РѕС‚ РјРµРЅСЏ!
+	AI_Output(self,other,"SVM_3_DieMonster");	//РљР°Рє Р¶Рµ С‚С‹ РјРЅРµ РЅР°РґРѕРµР», СЃРµР№С‡Р°СЃ СЏ СЃ С‚РѕР±РѕР№ РїРѕРєРѕРЅС‡Сѓ!
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack,1,"");
@@ -395,7 +395,7 @@ instance DIA_BAALISIDRO_HELLO_CH5(C_Info)
 	condition = dia_baalisidro_hello_ch5_condition;
 	information = dia_baalisidro_hello_ch5_info;
 	permanent = 0;
-	description = "Какой-то у тебя слишком грустный вид.";
+	description = "РљР°РєРѕР№-С‚Рѕ Сѓ С‚РµР±СЏ СЃР»РёС€РєРѕРј РіСЂСѓСЃС‚РЅС‹Р№ РІРёРґ.";
 };
 
 
@@ -409,11 +409,11 @@ func int dia_baalisidro_hello_ch5_condition()
 
 func void dia_baalisidro_hello_ch5_info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00");	//Какой-то у тебя слишком грустный вид.
-	AI_Output(self,other,"SVM_3_NotNow");	//Я занят.
+	AI_Output(other,self,"DIA_BaalIsidro_Hello_15_00");	//РљР°РєРѕР№-С‚Рѕ Сѓ С‚РµР±СЏ СЃР»РёС€РєРѕРј РіСЂСѓСЃС‚РЅС‹Р№ РІРёРґ.
+	AI_Output(self,other,"SVM_3_NotNow");	//РЇ Р·Р°РЅСЏС‚.
 	BaalIsidro_DealerJob = LOG_FAILED;
 	Log_SetTopicStatus(CH1_DealerJob,LOG_FAILED);
-	B_LogEntry(CH1_DealerJob,"Идола Исидро с позором вернули в Болотный лагерь.");
+	B_LogEntry(CH1_DealerJob,"РРґРѕР»Р° РСЃРёРґСЂРѕ СЃ РїРѕР·РѕСЂРѕРј РІРµСЂРЅСѓР»Рё РІ Р‘РѕР»РѕС‚РЅС‹Р№ Р»Р°РіРµСЂСЊ.");
 	AI_StopProcessInfos(self);
 };
 

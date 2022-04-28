@@ -20,7 +20,7 @@ func int Info_GRD_275_PreExit_Condition()
 
 func void Info_GRD_275_PreExit_Info()
 {
-	AI_Output(self,other,"Info_GRD_275_PreExit_06_01");	//Не забудь заглянуть в Старый лагерь, у них уже есть для тебя кирка, ха-ха-ха!
+	AI_Output(self,other,"Info_GRD_275_PreExit_06_01");	//РќРµ Р·Р°Р±СѓРґСЊ Р·Р°РіР»СЏРЅСѓС‚СЊ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ, Сѓ РЅРёС… СѓР¶Рµ РµСЃС‚СЊ РґР»СЏ С‚РµР±СЏ РєРёСЂРєР°, С…Р°-С…Р°-С…Р°!
 	AI_StopProcessInfos(self);
 };
 
@@ -57,7 +57,7 @@ instance Info_GRD_275_WasMachtIhrHier(C_Info)
 	condition = Info_GRD_275_WasMachtIhrHier_Condition;
 	information = Info_GRD_275_WasMachtIhrHier_Info;
 	permanent = 1;
-	description = "Что вы здесь делаете?";
+	description = "Р§С‚Рѕ РІС‹ Р·РґРµСЃСЊ РґРµР»Р°РµС‚Рµ?";
 };
 
 
@@ -68,9 +68,9 @@ func int Info_GRD_275_WasMachtIhrHier_Condition()
 
 func void Info_GRD_275_WasMachtIhrHier_Info()
 {
-	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00");	//Что вы здесь делаете?
-	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01");	//А как по-твоему? Охраняем мост, конечно.
-	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02");	//Мы следим за тем, чтобы ни одна хищная тварь не перебралась на другую сторону реки.
+	AI_Output(other,self,"Info_GRD_275_WasMachtIhrHier_15_00");	//Р§С‚Рѕ РІС‹ Р·РґРµСЃСЊ РґРµР»Р°РµС‚Рµ?
+	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_01");	//Рђ РєР°Рє РїРѕ-С‚РІРѕРµРјСѓ? РћС…СЂР°РЅСЏРµРј РјРѕСЃС‚, РєРѕРЅРµС‡РЅРѕ.
+	AI_Output(self,other,"Info_GRD_275_WasMachtIhrHier_06_02");	//РњС‹ СЃР»РµРґРёРј Р·Р° С‚РµРј, С‡С‚РѕР±С‹ РЅРё РѕРґРЅР° С…РёС‰РЅР°СЏ С‚РІР°СЂСЊ РЅРµ РїРµСЂРµР±СЂР°Р»Р°СЃСЊ РЅР° РґСЂСѓРіСѓСЋ СЃС‚РѕСЂРѕРЅСѓ СЂРµРєРё.
 };
 
 
@@ -81,7 +81,7 @@ instance Info_GRD_275_Tips(C_Info)
 	condition = Info_GRD_275_Tips_Condition;
 	information = Info_GRD_275_Tips_Info;
 	permanent = 1;
-	description = "У тебя есть для меня какой-нибудь совет?";
+	description = "РЈ С‚РµР±СЏ РµСЃС‚СЊ РґР»СЏ РјРµРЅСЏ РєР°РєРѕР№-РЅРёР±СѓРґСЊ СЃРѕРІРµС‚?";
 };
 
 
@@ -92,8 +92,8 @@ func int Info_GRD_275_Tips_Condition()
 
 func void Info_GRD_275_Tips_Info()
 {
-	AI_Output(other,self,"Info_GRD_275_Tips_15_00");	//У тебя есть для меня какой-нибудь совет?
-	AI_Output(self,other,"Info_GRD_275_Tips_06_01");	//Ага. Никогда не ходи в лес в одиночку...
-	AI_Output(self,other,"Info_GRD_275_Tips_06_02");	//...если, конечно, не собираешься перебить всех тварей, которые там обитают.
+	AI_Output(other,self,"Info_GRD_275_Tips_15_00");	//РЈ С‚РµР±СЏ РµСЃС‚СЊ РґР»СЏ РјРµРЅСЏ РєР°РєРѕР№-РЅРёР±СѓРґСЊ СЃРѕРІРµС‚?
+	AI_Output(self,other,"Info_GRD_275_Tips_06_01");	//РђРіР°. РќРёРєРѕРіРґР° РЅРµ С…РѕРґРё РІ Р»РµСЃ РІ РѕРґРёРЅРѕС‡РєСѓ...
+	AI_Output(self,other,"Info_GRD_275_Tips_06_02");	//...РµСЃР»Рё, РєРѕРЅРµС‡РЅРѕ, РЅРµ СЃРѕР±РёСЂР°РµС€СЊСЃСЏ РїРµСЂРµР±РёС‚СЊ РІСЃРµС… С‚РІР°СЂРµР№, РєРѕС‚РѕСЂС‹Рµ С‚Р°Рј РѕР±РёС‚Р°СЋС‚.
 };
 

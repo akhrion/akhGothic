@@ -1,7 +1,7 @@
 
 instance PC_Mage(Npc_Default)
 {
-	name[0] = "Мильтен";
+	name[0] = "РњРёР»СЊС‚РµРЅ";
 	npcType = npctype_friend;
 	guild = GIL_KDF;
 	level = 999;

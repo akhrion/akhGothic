@@ -29,7 +29,7 @@ instance Tpl_1437_Templer_NERV(C_Info)
 	information = Tpl_1437_Templer_NERV_Info;
 	important = 0;
 	permanent = 0;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -40,8 +40,8 @@ func int Tpl_1437_Templer_NERV_Condition()
 
 func void Tpl_1437_Templer_NERV_Info()
 {
-	AI_Output(other,self,"Tpl_1437_Templer_NERV_Info_15_01");	//Как дела?
-	AI_Output(self,other,"Tpl_1437_Templer_NERV_Info_13_02");	//Слушай, ты что, намерен всех здесь достать?
+	AI_Output(other,self,"Tpl_1437_Templer_NERV_Info_15_01");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Tpl_1437_Templer_NERV_Info_13_02");	//РЎР»СѓС€Р°Р№, С‚С‹ С‡С‚Рѕ, РЅР°РјРµСЂРµРЅ РІСЃРµС… Р·РґРµСЃСЊ РґРѕСЃС‚Р°С‚СЊ?
 	AI_StopProcessInfos(self);
 };
 
@@ -53,7 +53,7 @@ instance Tpl_1437_Templer_LEAVE(C_Info)
 	information = Tpl_1437_Templer_LEAVE_Info;
 	important = 0;
 	permanent = 0;
-	description = "У тебя все в порядке?";
+	description = "РЈ С‚РµР±СЏ РІСЃРµ РІ РїРѕСЂСЏРґРєРµ?";
 };
 
 
@@ -67,8 +67,8 @@ func int Tpl_1437_Templer_LEAVE_Condition()
 
 func void Tpl_1437_Templer_LEAVE_Info()
 {
-	AI_Output(other,self,"Tpl_1437_Templer_LEAVE_Info_15_01");	//У тебя все в порядке?
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02");	//Я хочу остаться один, ясно? Иди, займись чем-нибудь!
+	AI_Output(other,self,"Tpl_1437_Templer_LEAVE_Info_15_01");	//РЈ С‚РµР±СЏ РІСЃРµ РІ РїРѕСЂСЏРґРєРµ?
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVE_Info_13_02");	//РЇ С…РѕС‡Сѓ РѕСЃС‚Р°С‚СЊСЃСЏ РѕРґРёРЅ, СЏСЃРЅРѕ? РРґРё, Р·Р°Р№РјРёСЃСЊ С‡РµРј-РЅРёР±СѓРґСЊ!
 	AI_StopProcessInfos(self);
 };
 
@@ -80,7 +80,7 @@ instance Tpl_1437_Templer_LEAVENOW(C_Info)
 	information = Tpl_1437_Templer_LEAVENOW_Info;
 	important = 0;
 	permanent = 0;
-	description = "Но я не понимаю тебя!";
+	description = "РќРѕ СЏ РЅРµ РїРѕРЅРёРјР°СЋ С‚РµР±СЏ!";
 };
 
 
@@ -94,13 +94,13 @@ func int Tpl_1437_Templer_LEAVENOW_Condition()
 
 func void Tpl_1437_Templer_LEAVENOW_Info()
 {
-	AI_Output(other,self,"Tpl_1437_Templer_LEAVENOW_Info_15_01");	//Но я не понимаю тебя!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_02");	//Ну, хорошо. Я тебе объясню!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_03");	//Вали отсюда!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_04");	//Убирайся из этой шахты!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05");	//Никогда больше ко мне не подходи!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06");	//Сделай так, чтобы я тебя больше не видел!
-	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_07");	//Пошел вон!
+	AI_Output(other,self,"Tpl_1437_Templer_LEAVENOW_Info_15_01");	//РќРѕ СЏ РЅРµ РїРѕРЅРёРјР°СЋ С‚РµР±СЏ!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_02");	//РќСѓ, С…РѕСЂРѕС€Рѕ. РЇ С‚РµР±Рµ РѕР±СЉСЏСЃРЅСЋ!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_03");	//Р’Р°Р»Рё РѕС‚СЃСЋРґР°!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_04");	//РЈР±РёСЂР°Р№СЃСЏ РёР· СЌС‚РѕР№ С€Р°С…С‚С‹!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_05");	//РќРёРєРѕРіРґР° Р±РѕР»СЊС€Рµ РєРѕ РјРЅРµ РЅРµ РїРѕРґС…РѕРґРё!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_06");	//РЎРґРµР»Р°Р№ С‚Р°Рє, С‡С‚РѕР±С‹ СЏ С‚РµР±СЏ Р±РѕР»СЊС€Рµ РЅРµ РІРёРґРµР»!
+	AI_Output(self,other,"Tpl_1437_Templer_LEAVENOW_Info_13_07");	//РџРѕС€РµР» РІРѕРЅ!
 	AI_StopProcessInfos(self);
 };
 

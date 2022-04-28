@@ -29,7 +29,7 @@ instance STT_300_Alberto_BUY(C_Info)
 	information = STT_300_Alberto_BUY_Info;
 	important = 0;
 	permanent = 0;
-	description = "Я могу что-нибудь купить у тебя?";
+	description = "РЇ РјРѕРіСѓ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РєСѓРїРёС‚СЊ Сѓ С‚РµР±СЏ?";
 };
 
 
@@ -40,10 +40,10 @@ func int STT_300_Alberto_BUY_Condition()
 
 func void STT_300_Alberto_BUY_Info()
 {
-	AI_Output(other,self,"STT_300_Alberto_BUY_Info_15_01");	//Я могу что-нибудь купить у тебя?
-	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02");	//Еще бы. Все, что захочешь. Если сможешь заплатить.
+	AI_Output(other,self,"STT_300_Alberto_BUY_Info_15_01");	//РЇ РјРѕРіСѓ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РєСѓРїРёС‚СЊ Сѓ С‚РµР±СЏ?
+	AI_Output(self,other,"STT_300_Alberto_BUY_Info_12_02");	//Р•С‰Рµ Р±С‹. Р’СЃРµ, С‡С‚Рѕ Р·Р°С…РѕС‡РµС€СЊ. Р•СЃР»Рё СЃРјРѕР¶РµС€СЊ Р·Р°РїР»Р°С‚РёС‚СЊ.
 	Log_CreateTopic(GE_TRADEROM,LOG_NOTE);
-	B_LogEntry(GE_TRADEROM,"Альберто продает стрелы, зелья и прочие припасы.");
+	B_LogEntry(GE_TRADEROM,"РђР»СЊР±РµСЂС‚Рѕ РїСЂРѕРґР°РµС‚ СЃС‚СЂРµР»С‹, Р·РµР»СЊСЏ Рё РїСЂРѕС‡РёРµ РїСЂРёРїР°СЃС‹.");
 };
 
 
@@ -69,6 +69,6 @@ func int stt_300_alberto_buy2_condition()
 
 func void stt_300_alberto_buy2_info()
 {
-	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//Покажи мне свои товары.
+	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//РџРѕРєР°Р¶Рё РјРЅРµ СЃРІРѕРё С‚РѕРІР°СЂС‹.
 };
 

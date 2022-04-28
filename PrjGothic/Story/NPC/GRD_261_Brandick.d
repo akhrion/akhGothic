@@ -1,7 +1,7 @@
 
 instance GRD_261_Brandick(Npc_Default)
 {
-	name[0] = "Брендик";
+	name[0] = "Р‘СЂРµРЅРґРёРє";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;

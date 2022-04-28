@@ -1,7 +1,7 @@
 
 instance VLK_536_Kyle(Npc_Default)
 {
-	name[0] = "Κΰιλ";
+	name[0] = "ΠΠ°ΠΉΠ»";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 3;

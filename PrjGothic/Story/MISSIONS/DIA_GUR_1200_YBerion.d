@@ -42,7 +42,7 @@ func int DIA_YBerion_Wache_Condition()
 
 func void DIA_YBerion_Wache_Info()
 {
-	AI_Output(self,other,"DIA_YBerion_Wache_12_00");	//Как ты здесь оказался? Кто тебя впустил? Стража!
+	AI_Output(self,other,"DIA_YBerion_Wache_12_00");	//РљР°Рє С‚С‹ Р·РґРµСЃСЊ РѕРєР°Р·Р°Р»СЃСЏ? РљС‚Рѕ С‚РµР±СЏ РІРїСѓСЃС‚РёР»? РЎС‚СЂР°Р¶Р°!
 	Npc_SendPassivePerc(self,PERC_ASSESSWARN,self,other);
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
@@ -59,7 +59,7 @@ instance DIA_YBerion_Kennen(C_Info)
 	condition = DIA_YBerion_Kennen_Condition;
 	information = DIA_YBerion_Kennen_Info;
 	permanent = 0;
-	description = "Приветствую тебя, Учитель Юберион!";
+	description = "РџСЂРёРІРµС‚СЃС‚РІСѓСЋ С‚РµР±СЏ, РЈС‡РёС‚РµР»СЊ Р®Р±РµСЂРёРѕРЅ!";
 };
 
 
@@ -73,10 +73,10 @@ func int DIA_YBerion_Kennen_Condition()
 
 func void DIA_YBerion_Kennen_Info()
 {
-	AI_Output(other,self,"DIA_YBerion_Kennen_15_00");	//Приветствую тебя, Учитель Юберион!
-	AI_Output(self,other,"DIA_YBerion_Kennen_12_01");	//А! Я тебя знаю!
-	AI_Output(other,self,"DIA_YBerion_Kennen_15_02");	//Это невозможно. Мы еще ни разу не встречались.
-	AI_Output(self,other,"DIA_YBerion_Kennen_12_03");	//Я думал ты... Хорошо. Что тебе нужно?
+	AI_Output(other,self,"DIA_YBerion_Kennen_15_00");	//РџСЂРёРІРµС‚СЃС‚РІСѓСЋ С‚РµР±СЏ, РЈС‡РёС‚РµР»СЊ Р®Р±РµСЂРёРѕРЅ!
+	AI_Output(self,other,"DIA_YBerion_Kennen_12_01");	//Рђ! РЇ С‚РµР±СЏ Р·РЅР°СЋ!
+	AI_Output(other,self,"DIA_YBerion_Kennen_15_02");	//Р­С‚Рѕ РЅРµРІРѕР·РјРѕР¶РЅРѕ. РњС‹ РµС‰Рµ РЅРё СЂР°Р·Сѓ РЅРµ РІСЃС‚СЂРµС‡Р°Р»РёСЃСЊ.
+	AI_Output(self,other,"DIA_YBerion_Kennen_12_03");	//РЇ РґСѓРјР°Р» С‚С‹... РҐРѕСЂРѕС€Рѕ. Р§С‚Рѕ С‚РµР±Рµ РЅСѓР¶РЅРѕ?
 };
 
 
@@ -86,7 +86,7 @@ instance Info_YBerion_BringFocus(C_Info)
 	condition = Info_YBerion_BringFocus_Condition;
 	information = Info_YBerion_BringFocus_Info;
 	permanent = 1;
-	description = "Я слышал, что ты хочешь что-то найти.";
+	description = "РЇ СЃР»С‹С€Р°Р», С‡С‚Рѕ С‚С‹ С…РѕС‡РµС€СЊ С‡С‚Рѕ-С‚Рѕ РЅР°Р№С‚Рё.";
 };
 
 
@@ -100,15 +100,15 @@ func int Info_YBerion_BringFocus_Condition()
 
 func void Info_YBerion_BringFocus_Info()
 {
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_Info_15_01");	//Я слышал, что ты хочешь что-то найти.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_02");	//Так и есть. Нам нужен магический юнитор.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_03");	//Мы уже отправили за ним новенького, Нираса, но он все еще не вернулся.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_04");	//Может, ты сможешь выяснить, что с ним случилось?
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_Info_15_01");	//РЇ СЃР»С‹С€Р°Р», С‡С‚Рѕ С‚С‹ С…РѕС‡РµС€СЊ С‡С‚Рѕ-С‚Рѕ РЅР°Р№С‚Рё.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_02");	//РўР°Рє Рё РµСЃС‚СЊ. РќР°Рј РЅСѓР¶РµРЅ РјР°РіРёС‡РµСЃРєРёР№ СЋРЅРёС‚РѕСЂ.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_03");	//РњС‹ СѓР¶Рµ РѕС‚РїСЂР°РІРёР»Рё Р·Р° РЅРёРј РЅРѕРІРµРЅСЊРєРѕРіРѕ, РќРёСЂР°СЃР°, РЅРѕ РѕРЅ РІСЃРµ РµС‰Рµ РЅРµ РІРµСЂРЅСѓР»СЃСЏ.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_Info_12_04");	//РњРѕР¶РµС‚, С‚С‹ СЃРјРѕР¶РµС€СЊ РІС‹СЏСЃРЅРёС‚СЊ, С‡С‚Рѕ СЃ РЅРёРј СЃР»СѓС‡РёР»РѕСЃСЊ?
 	Info_ClearChoices(Info_YBerion_BringFocus);
 	Info_AddChoice(Info_YBerion_BringFocus,DIALOG_BACK,Info_YBerion_BringFocus_BACK);
-	Info_AddChoice(Info_YBerion_BringFocus,"Я верну вам юнитор!",Info_YBerion_BringFocus_OK);
-	Info_AddChoice(Info_YBerion_BringFocus,"Где я должен его искать?",Info_YBerion_BringFocus_WO);
-	Info_AddChoice(Info_YBerion_BringFocus,"Почему этот юнитор так важен?",Info_YBerion_BringFocus_FOKUS);
+	Info_AddChoice(Info_YBerion_BringFocus,"РЇ РІРµСЂРЅСѓ РІР°Рј СЋРЅРёС‚РѕСЂ!",Info_YBerion_BringFocus_OK);
+	Info_AddChoice(Info_YBerion_BringFocus,"Р“РґРµ СЏ РґРѕР»Р¶РµРЅ РµРіРѕ РёСЃРєР°С‚СЊ?",Info_YBerion_BringFocus_WO);
+	Info_AddChoice(Info_YBerion_BringFocus,"РџРѕС‡РµРјСѓ СЌС‚РѕС‚ СЋРЅРёС‚РѕСЂ С‚Р°Рє РІР°Р¶РµРЅ?",Info_YBerion_BringFocus_FOKUS);
 };
 
 func void Info_YBerion_BringFocus_BACK()
@@ -118,27 +118,27 @@ func void Info_YBerion_BringFocus_BACK()
 
 func void Info_YBerion_BringFocus_OK()
 {
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_OK_15_01");	//Я верну вам юнитор!
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_OK_12_02");	//Вот карта. На ней отмечено, где должен быть юнитор.
-	b_printtrademsg1("Получена карта Юбериона.");
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_OK_15_01");	//РЇ РІРµСЂРЅСѓ РІР°Рј СЋРЅРёС‚РѕСЂ!
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_OK_12_02");	//Р’РѕС‚ РєР°СЂС‚Р°. РќР° РЅРµР№ РѕС‚РјРµС‡РµРЅРѕ, РіРґРµ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЋРЅРёС‚РѕСЂ.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅР° РєР°СЂС‚Р° Р®Р±РµСЂРёРѕРЅР°.");
 	B_Story_BringFirstFocus();
-	B_LogEntry(CH2_Focus,"Юберион послал послушника Нираса за юнитором. Но он до сих пор не вернулся. Гуру дал мне карту, на которой отмечен путь к юнитору.");
+	B_LogEntry(CH2_Focus,"Р®Р±РµСЂРёРѕРЅ РїРѕСЃР»Р°Р» РїРѕСЃР»СѓС€РЅРёРєР° РќРёСЂР°СЃР° Р·Р° СЋРЅРёС‚РѕСЂРѕРј. РќРѕ РѕРЅ РґРѕ СЃРёС… РїРѕСЂ РЅРµ РІРµСЂРЅСѓР»СЃСЏ. Р“СѓСЂСѓ РґР°Р» РјРЅРµ РєР°СЂС‚Сѓ, РЅР° РєРѕС‚РѕСЂРѕР№ РѕС‚РјРµС‡РµРЅ РїСѓС‚СЊ Рє СЋРЅРёС‚РѕСЂСѓ.");
 };
 
 func void Info_YBerion_BringFocus_WO()
 {
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_WO_15_01");	//Где я должен его искать?
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_WO_12_02");	//Будешь выходить из лагеря, поверни направо и дальше вдоль скалы. Дальше будет лес, за ним море. Там и должен быть юнитор.
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_WO_15_01");	//Р“РґРµ СЏ РґРѕР»Р¶РµРЅ РµРіРѕ РёСЃРєР°С‚СЊ?
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_WO_12_02");	//Р‘СѓРґРµС€СЊ РІС‹С…РѕРґРёС‚СЊ РёР· Р»Р°РіРµСЂСЏ, РїРѕРІРµСЂРЅРё РЅР°РїСЂР°РІРѕ Рё РґР°Р»СЊС€Рµ РІРґРѕР»СЊ СЃРєР°Р»С‹. Р”Р°Р»СЊС€Рµ Р±СѓРґРµС‚ Р»РµСЃ, Р·Р° РЅРёРј РјРѕСЂРµ. РўР°Рј Рё РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ СЋРЅРёС‚РѕСЂ.
 };
 
 func void Info_YBerion_BringFocus_FOKUS()
 {
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_FOKUS_15_01");	//Почему этот юнитор так важен?
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_02");	//В нем сокрыта магия, способная концентрировать нашу силу.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_03");	//Он один из пяти камней, участвоваших в сотворении Барьера.
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_04");	//Мое видение сказало, что сила этого камня поможет нам.
-	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_FOKUS_15_05");	//Интересное видение!
-	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_06");	//Мое видение - это послание Спящего. И с помощью юнитора мы сможем призвать его!
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_FOKUS_15_01");	//РџРѕС‡РµРјСѓ СЌС‚РѕС‚ СЋРЅРёС‚РѕСЂ С‚Р°Рє РІР°Р¶РµРЅ?
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_02");	//Р’ РЅРµРј СЃРѕРєСЂС‹С‚Р° РјР°РіРёСЏ, СЃРїРѕСЃРѕР±РЅР°СЏ РєРѕРЅС†РµРЅС‚СЂРёСЂРѕРІР°С‚СЊ РЅР°С€Сѓ СЃРёР»Сѓ.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_03");	//РћРЅ РѕРґРёРЅ РёР· РїСЏС‚Рё РєР°РјРЅРµР№, СѓС‡Р°СЃС‚РІРѕРІР°С€РёС… РІ СЃРѕС‚РІРѕСЂРµРЅРёРё Р‘Р°СЂСЊРµСЂР°.
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_04");	//РњРѕРµ РІРёРґРµРЅРёРµ СЃРєР°Р·Р°Р»Рѕ, С‡С‚Рѕ СЃРёР»Р° СЌС‚РѕРіРѕ РєР°РјРЅСЏ РїРѕРјРѕР¶РµС‚ РЅР°Рј.
+	AI_Output(other,self,"Sit_2_PSI_Yberion_BringFocus_FOKUS_15_05");	//РРЅС‚РµСЂРµСЃРЅРѕРµ РІРёРґРµРЅРёРµ!
+	AI_Output(self,other,"Sit_2_PSI_Yberion_BringFocus_FOKUS_12_06");	//РњРѕРµ РІРёРґРµРЅРёРµ - СЌС‚Рѕ РїРѕСЃР»Р°РЅРёРµ РЎРїСЏС‰РµРіРѕ. Р СЃ РїРѕРјРѕС‰СЊСЋ СЋРЅРёС‚РѕСЂР° РјС‹ СЃРјРѕР¶РµРј РїСЂРёР·РІР°С‚СЊ РµРіРѕ!
 };
 
 
@@ -149,7 +149,7 @@ instance Info_YBerion_BringFocus_RUNNING(C_Info)
 	condition = Info_YBerion_BringFocus_RUNNING_Condition;
 	information = Info_YBerion_BringFocus_RUNNING_Info;
 	permanent = 1;
-	description = "Я все еще не нашел юнитор.";
+	description = "РЇ РІСЃРµ РµС‰Рµ РЅРµ РЅР°С€РµР» СЋРЅРёС‚РѕСЂ.";
 };
 
 
@@ -163,8 +163,8 @@ func int Info_YBerion_BringFocus_RUNNING_Condition()
 
 func void Info_YBerion_BringFocus_RUNNING_Info()
 {
-	AI_Output(other,self,"Info_YBerion_BringFocus_RUNNING_15_01");	//Я все еще не нашел юнитор.
-	AI_Output(self,other,"Info_YBerion_BringFocus_RUNNING_12_02");	//Продолжай поиски! Спящий поможет тебе.
+	AI_Output(other,self,"Info_YBerion_BringFocus_RUNNING_15_01");	//РЇ РІСЃРµ РµС‰Рµ РЅРµ РЅР°С€РµР» СЋРЅРёС‚РѕСЂ.
+	AI_Output(self,other,"Info_YBerion_BringFocus_RUNNING_12_02");	//РџСЂРѕРґРѕР»Р¶Р°Р№ РїРѕРёСЃРєРё! РЎРїСЏС‰РёР№ РїРѕРјРѕР¶РµС‚ С‚РµР±Рµ.
 };
 
 
@@ -175,7 +175,7 @@ instance Info_YBerion_BringFocus_Success(C_Info)
 	condition = Info_YBerion_BringFocus_Success_Condition;
 	information = Info_YBerion_BringFocus_Success_Info;
 	permanent = 0;
-	description = "Я нашел юнитор.";
+	description = "РЇ РЅР°С€РµР» СЋРЅРёС‚РѕСЂ.";
 };
 
 
@@ -190,19 +190,19 @@ func int Info_YBerion_BringFocus_Success_Condition()
 func void Info_YBerion_BringFocus_Success_Info()
 {
 	var C_Npc nyras;
-	AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_01");	//Я нашел юнитор.
-	AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_02");	//Замечательно! Ты очень сильно помог нам.
-	AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_03");	//Отнеси его теперь Кор Галому. Он знает, что с ним делать.
+	AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_01");	//РЇ РЅР°С€РµР» СЋРЅРёС‚РѕСЂ.
+	AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_02");	//Р—Р°РјРµС‡Р°С‚РµР»СЊРЅРѕ! РўС‹ РѕС‡РµРЅСЊ СЃРёР»СЊРЅРѕ РїРѕРјРѕРі РЅР°Рј.
+	AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_03");	//РћС‚РЅРµСЃРё РµРіРѕ С‚РµРїРµСЂСЊ РљРѕСЂ Р“Р°Р»РѕРјСѓ. РћРЅ Р·РЅР°РµС‚, С‡С‚Рѕ СЃ РЅРёРј РґРµР»Р°С‚СЊ.
 	if(Kalom_TalkedTo == FALSE)
 	{
-		AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_04");	//Где я могу найти этого Кор Галома?
-		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_05");	//Он почти все время работает в своей лаборатории на втором уровне.
-		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_06");	//У входа в лагерь должен быть Лестер. Обычно он помогает новичкам не заблудиться здесь.
-		B_LogEntry(CH2_Focus,"Юберион поручил мне отнести юнитор Кор Галому, одному из Гуру. Он постоянно работает в своей лаборатории.");
+		AI_Output(other,self,"Info_YBerion_BringFocus_Success_15_04");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё СЌС‚РѕРіРѕ РљРѕСЂ Р“Р°Р»РѕРјР°?
+		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_05");	//РћРЅ РїРѕС‡С‚Рё РІСЃРµ РІСЂРµРјСЏ СЂР°Р±РѕС‚Р°РµС‚ РІ СЃРІРѕРµР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РЅР° РІС‚РѕСЂРѕРј СѓСЂРѕРІРЅРµ.
+		AI_Output(self,other,"Info_YBerion_BringFocus_Success_12_06");	//РЈ РІС…РѕРґР° РІ Р»Р°РіРµСЂСЊ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р›РµСЃС‚РµСЂ. РћР±С‹С‡РЅРѕ РѕРЅ РїРѕРјРѕРіР°РµС‚ РЅРѕРІРёС‡РєР°Рј РЅРµ Р·Р°Р±Р»СѓРґРёС‚СЊСЃСЏ Р·РґРµСЃСЊ.
+		B_LogEntry(CH2_Focus,"Р®Р±РµСЂРёРѕРЅ РїРѕСЂСѓС‡РёР» РјРЅРµ РѕС‚РЅРµСЃС‚Рё СЋРЅРёС‚РѕСЂ РљРѕСЂ Р“Р°Р»РѕРјСѓ, РѕРґРЅРѕРјСѓ РёР· Р“СѓСЂСѓ. РћРЅ РїРѕСЃС‚РѕСЏРЅРЅРѕ СЂР°Р±РѕС‚Р°РµС‚ РІ СЃРІРѕРµР№ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.");
 	}
 	else
 	{
-		B_LogEntry(CH2_Focus,"Юберион поручил мне отнести юнитор Кор Галому. Как 'приятно' снова встретить этого всенародно любимого человека.");
+		B_LogEntry(CH2_Focus,"Р®Р±РµСЂРёРѕРЅ РїРѕСЂСѓС‡РёР» РјРЅРµ РѕС‚РЅРµСЃС‚Рё СЋРЅРёС‚РѕСЂ РљРѕСЂ Р“Р°Р»РѕРјСѓ. РљР°Рє 'РїСЂРёСЏС‚РЅРѕ' СЃРЅРѕРІР° РІСЃС‚СЂРµС‚РёС‚СЊ СЌС‚РѕРіРѕ РІСЃРµРЅР°СЂРѕРґРЅРѕ Р»СЋР±РёРјРѕРіРѕ С‡РµР»РѕРІРµРєР°.");
 	};
 	TPL_1406_Templer.aivar[AIV_PASSGATE] = TRUE;
 	YBerion_BringFocus = LOG_SUCCESS;
@@ -223,7 +223,7 @@ instance Info_YBerion_NYRAS(C_Info)
 	condition = Info_YBerion_NYRAS_Condition;
 	information = Info_YBerion_NYRAS_Info;
 	permanent = 0;
-	description = "Послушник Нирас сошел с ума!";
+	description = "РџРѕСЃР»СѓС€РЅРёРє РќРёСЂР°СЃ СЃРѕС€РµР» СЃ СѓРјР°!";
 };
 
 
@@ -237,11 +237,11 @@ func int Info_YBerion_NYRAS_Condition()
 
 func void Info_YBerion_NYRAS_Info()
 {
-	AI_Output(other,self,"Info_YBerion_NYRAS_15_01");	//Послушник Нирас сошел с ума!
-	AI_Output(other,self,"Info_YBerion_NYRAS_15_02");	//Он сказал, будто Спящий явился ему и избрал его своим единственным слугой!
-	AI_Output(other,self,"Info_YBerion_NYRAS_15_03");	//Потом он напал на меня и захотел убить!
-	AI_Output(self,other,"Info_YBerion_NYRAS_12_04");	//Могущество Спящего слишком велико для разума послушника.
-	AI_Output(self,other,"Info_YBerion_NYRAS_12_05");	//Лишь мы, Гуру, после долгих лет медитации смогли достичь той силы духа, что позволяет нам выносить голос всемогущего Спящего.
+	AI_Output(other,self,"Info_YBerion_NYRAS_15_01");	//РџРѕСЃР»СѓС€РЅРёРє РќРёСЂР°СЃ СЃРѕС€РµР» СЃ СѓРјР°!
+	AI_Output(other,self,"Info_YBerion_NYRAS_15_02");	//РћРЅ СЃРєР°Р·Р°Р», Р±СѓРґС‚Рѕ РЎРїСЏС‰РёР№ СЏРІРёР»СЃСЏ РµРјСѓ Рё РёР·Р±СЂР°Р» РµРіРѕ СЃРІРѕРёРј РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј СЃР»СѓРіРѕР№!
+	AI_Output(other,self,"Info_YBerion_NYRAS_15_03");	//РџРѕС‚РѕРј РѕРЅ РЅР°РїР°Р» РЅР° РјРµРЅСЏ Рё Р·Р°С…РѕС‚РµР» СѓР±РёС‚СЊ!
+	AI_Output(self,other,"Info_YBerion_NYRAS_12_04");	//РњРѕРіСѓС‰РµСЃС‚РІРѕ РЎРїСЏС‰РµРіРѕ СЃР»РёС€РєРѕРј РІРµР»РёРєРѕ РґР»СЏ СЂР°Р·СѓРјР° РїРѕСЃР»СѓС€РЅРёРєР°.
+	AI_Output(self,other,"Info_YBerion_NYRAS_12_05");	//Р›РёС€СЊ РјС‹, Р“СѓСЂСѓ, РїРѕСЃР»Рµ РґРѕР»РіРёС… Р»РµС‚ РјРµРґРёС‚Р°С†РёРё СЃРјРѕРіР»Рё РґРѕСЃС‚РёС‡СЊ С‚РѕР№ СЃРёР»С‹ РґСѓС…Р°, С‡С‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РЅР°Рј РІС‹РЅРѕСЃРёС‚СЊ РіРѕР»РѕСЃ РІСЃРµРјРѕРіСѓС‰РµРіРѕ РЎРїСЏС‰РµРіРѕ.
 };
 
 
@@ -252,7 +252,7 @@ instance GUR_1200_Yberion_EARN(C_Info)
 	information = GUR_1200_Yberion_EARN_Info;
 	important = 0;
 	permanent = 0;
-	description = "А я не заслужил награды?";
+	description = "Рђ СЏ РЅРµ Р·Р°СЃР»СѓР¶РёР» РЅР°РіСЂР°РґС‹?";
 };
 
 
@@ -266,10 +266,10 @@ func int GUR_1200_Yberion_EARN_Condition()
 
 func void GUR_1200_Yberion_EARN_Info()
 {
-	AI_Output(other,self,"GUR_1200_Yberion_EARN_Info_15_01");	//А я не заслужил награды?
-	AI_Output(self,other,"GUR_1200_Yberion_EARN_Info_12_02");	//Так и быть, ты не из нашего Братства, но я награжу тебя.
-	AI_Output(self,other,"GUR_1200_Yberion_EARN_Info_12_03");	//Возьми этот амулет в благодарность за твою помощь.
-	b_printtrademsg1("Получен амулет пламени.");
+	AI_Output(other,self,"GUR_1200_Yberion_EARN_Info_15_01");	//Рђ СЏ РЅРµ Р·Р°СЃР»СѓР¶РёР» РЅР°РіСЂР°РґС‹?
+	AI_Output(self,other,"GUR_1200_Yberion_EARN_Info_12_02");	//РўР°Рє Рё Р±С‹С‚СЊ, С‚С‹ РЅРµ РёР· РЅР°С€РµРіРѕ Р‘СЂР°С‚СЃС‚РІР°, РЅРѕ СЏ РЅР°РіСЂР°Р¶Сѓ С‚РµР±СЏ.
+	AI_Output(self,other,"GUR_1200_Yberion_EARN_Info_12_03");	//Р’РѕР·СЊРјРё СЌС‚РѕС‚ Р°РјСѓР»РµС‚ РІ Р±Р»Р°РіРѕРґР°СЂРЅРѕСЃС‚СЊ Р·Р° С‚РІРѕСЋ РїРѕРјРѕС‰СЊ.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅ Р°РјСѓР»РµС‚ РїР»Р°РјРµРЅРё.");
 	CreateInvItem(self,Schutzamulett_Feuer);
 	B_GiveInvItems(self,hero,Schutzamulett_Feuer,1);
 };
@@ -283,7 +283,7 @@ instance YBERION_STEALKEY(C_Info)
 	information = yberion_stealkey_info;
 	important = 0;
 	permanent = 0;
-	description = "(украсть ключ)";
+	description = "(СѓРєСЂР°СЃС‚СЊ РєР»СЋС‡)";
 };
 
 
@@ -298,9 +298,9 @@ func int yberion_stealkey_condition()
 func void yberion_stealkey_info()
 {
 	AI_GotoNpc(other,self);
-	AI_Output(other,self,"Info_GorHanis_Sleeper_15_00");	//Кто он, этот Спящий?
-	AI_Output(self,other,"DIA_Skip_First_Gomez_12_02");	//Убирайся отсюда, пока я не разозлился!
-	PrintScreen("Украден ключ.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
+	AI_Output(other,self,"Info_GorHanis_Sleeper_15_00");	//РљС‚Рѕ РѕРЅ, СЌС‚РѕС‚ РЎРїСЏС‰РёР№?
+	AI_Output(self,other,"DIA_Skip_First_Gomez_12_02");	//РЈР±РёСЂР°Р№СЃСЏ РѕС‚СЃСЋРґР°, РїРѕРєР° СЏ РЅРµ СЂР°Р·РѕР·Р»РёР»СЃСЏ!
+	PrintScreen("РЈРєСЂР°РґРµРЅ РєР»СЋС‡.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
 	YBERION_KEY_STOLEN = TRUE;
 	CreateInvItem(hero,itke_yberion);
 	Npc_RemoveInvItem(self,itke_yberion);

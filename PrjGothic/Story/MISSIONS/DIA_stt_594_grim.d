@@ -29,7 +29,7 @@ instance DIA_Grim_INEXTREMOAWAY(C_Info)
 	information = DIA_Grim_INEXTREMOAWAY_Info;
 	permanent = 0;
 	important = 0;
-	description = "А где In Extremo?";
+	description = "Рђ РіРґРµ In Extremo?";
 };
 
 
@@ -43,8 +43,8 @@ func int DIA_Grim_INEXTREMOAWAY_Condition()
 
 func void DIA_Grim_INEXTREMOAWAY_Info()
 {
-	AI_Output(hero,self,"DIA_Grim_INEXTREMOAWAY_15_01");	//А где In Extremo?
-	AI_Output(self,hero,"DIA_Grim_INEXTREMOAWAY_06_02");	//Они уже уехали. А я уже так привык сидеть по вечерам перед сценой.
+	AI_Output(hero,self,"DIA_Grim_INEXTREMOAWAY_15_01");	//Рђ РіРґРµ In Extremo?
+	AI_Output(self,hero,"DIA_Grim_INEXTREMOAWAY_06_02");	//РћРЅРё СѓР¶Рµ СѓРµС…Р°Р»Рё. Рђ СЏ СѓР¶Рµ С‚Р°Рє РїСЂРёРІС‹Рє СЃРёРґРµС‚СЊ РїРѕ РІРµС‡РµСЂР°Рј РїРµСЂРµРґ СЃС†РµРЅРѕР№.
 	AI_StopProcessInfos(self);
 };
 

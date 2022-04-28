@@ -16,7 +16,7 @@ func int Info_SFB_5_Pre_Condition()
 
 func void Info_SFB_5_Pre_Info()
 {
-	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_00");	//Привет!
+	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_00");	//РџСЂРёРІРµС‚!
 };
 
 
@@ -47,7 +47,7 @@ instance Info_SFB_5_EinerVonEuchWerden(C_Info)
 	condition = Info_SFB_5_EinerVonEuchWerden_Condition;
 	information = Info_SFB_5_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Я думаю присоединиться к вам.";
+	description = "РЇ РґСѓРјР°СЋ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.";
 };
 
 
@@ -61,11 +61,11 @@ func int Info_SFB_5_EinerVonEuchWerden_Condition()
 
 func void Info_SFB_5_EinerVonEuchWerden_Info()
 {
-	AI_Output(other,self,"Info_SFB_5_EinerVonEuchWerden_15_00");	//Я думаю присоединиться к вам.
-	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_01");	//Хочешь присоединиться, да? Водоносом хочешь стать, что ли?
-	AI_Output(other,self,"Info_SFB_5_EinerVonEuchWerden_15_02");	//Нет, рудокопом.
-	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_03");	//Лучше послушай меня: никто в этой проклятой шахте не работает добровольно.
-	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_04");	//Но раз ты так хочешь... Иди и найди Суини. Уж он-то снабдит тебя старой киркой, которая может еще пойти в дело.
+	AI_Output(other,self,"Info_SFB_5_EinerVonEuchWerden_15_00");	//РЇ РґСѓРјР°СЋ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.
+	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_01");	//РҐРѕС‡РµС€СЊ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ, РґР°? Р’РѕРґРѕРЅРѕСЃРѕРј С…РѕС‡РµС€СЊ СЃС‚Р°С‚СЊ, С‡С‚Рѕ Р»Рё?
+	AI_Output(other,self,"Info_SFB_5_EinerVonEuchWerden_15_02");	//РќРµС‚, СЂСѓРґРѕРєРѕРїРѕРј.
+	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_03");	//Р›СѓС‡С€Рµ РїРѕСЃР»СѓС€Р°Р№ РјРµРЅСЏ: РЅРёРєС‚Рѕ РІ СЌС‚РѕР№ РїСЂРѕРєР»СЏС‚РѕР№ С€Р°С…С‚Рµ РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РґРѕР±СЂРѕРІРѕР»СЊРЅРѕ.
+	AI_Output(self,other,"Info_SFB_5_EinerVonEuchWerden_02_04");	//РќРѕ СЂР°Р· С‚С‹ С‚Р°Рє С…РѕС‡РµС€СЊ... РРґРё Рё РЅР°Р№РґРё РЎСѓРёРЅРё. РЈР¶ РѕРЅ-С‚Рѕ СЃРЅР°Р±РґРёС‚ С‚РµР±СЏ СЃС‚Р°СЂРѕР№ РєРёСЂРєРѕР№, РєРѕС‚РѕСЂР°СЏ РјРѕР¶РµС‚ РµС‰Рµ РїРѕР№С‚Рё РІ РґРµР»Рѕ.
 };
 
 
@@ -75,7 +75,7 @@ instance Info_SFB_5_WichtigePersonen(C_Info)
 	condition = Info_SFB_5_WichtigePersonen_Condition;
 	information = Info_SFB_5_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кого здесь можно считать важным человеком?";
+	description = "РљРѕРіРѕ Р·РґРµСЃСЊ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ РІР°Р¶РЅС‹Рј С‡РµР»РѕРІРµРєРѕРј?";
 };
 
 
@@ -89,11 +89,11 @@ func int Info_SFB_5_WichtigePersonen_Condition()
 
 func void Info_SFB_5_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_SFB_5_WichtigePersonen_15_00");	//Кого здесь можно считать важным человеком?
-	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_01");	//Важные? Конечно. Я один из них.
-	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_02");	//Думаю, ты хотел узнать, кому здесь принадлежит власть.
-	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_03");	//Что ж, по-моему, тебе следует поговорить с наемниками или ворами. А вот к магам Круга Воды подходить не стоит.
-	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_04");	//Суини не самый лучший тип, но сам он считает себя большой шишкой. А ведь он просто раздает кирки и подчиняется приказам Окила.
+	AI_Output(other,self,"Info_SFB_5_WichtigePersonen_15_00");	//РљРѕРіРѕ Р·РґРµСЃСЊ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ РІР°Р¶РЅС‹Рј С‡РµР»РѕРІРµРєРѕРј?
+	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_01");	//Р’Р°Р¶РЅС‹Рµ? РљРѕРЅРµС‡РЅРѕ. РЇ РѕРґРёРЅ РёР· РЅРёС….
+	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_02");	//Р”СѓРјР°СЋ, С‚С‹ С…РѕС‚РµР» СѓР·РЅР°С‚СЊ, РєРѕРјСѓ Р·РґРµСЃСЊ РїСЂРёРЅР°РґР»РµР¶РёС‚ РІР»Р°СЃС‚СЊ.
+	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_03");	//Р§С‚Рѕ Р¶, РїРѕ-РјРѕРµРјСѓ, С‚РµР±Рµ СЃР»РµРґСѓРµС‚ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РЅР°РµРјРЅРёРєР°РјРё РёР»Рё РІРѕСЂР°РјРё. Рђ РІРѕС‚ Рє РјР°РіР°Рј РљСЂСѓРіР° Р’РѕРґС‹ РїРѕРґС…РѕРґРёС‚СЊ РЅРµ СЃС‚РѕРёС‚.
+	AI_Output(self,other,"Info_SFB_5_WichtigePersonen_02_04");	//РЎСѓРёРЅРё РЅРµ СЃР°РјС‹Р№ Р»СѓС‡С€РёР№ С‚РёРї, РЅРѕ СЃР°Рј РѕРЅ СЃС‡РёС‚Р°РµС‚ СЃРµР±СЏ Р±РѕР»СЊС€РѕР№ С€РёС€РєРѕР№. Рђ РІРµРґСЊ РѕРЅ РїСЂРѕСЃС‚Рѕ СЂР°Р·РґР°РµС‚ РєРёСЂРєРё Рё РїРѕРґС‡РёРЅСЏРµС‚СЃСЏ РїСЂРёРєР°Р·Р°Рј РћРєРёР»Р°.
 };
 
 
@@ -103,7 +103,7 @@ instance Info_SFB_5_DasLager(C_Info)
 	condition = Info_SFB_5_DasLager_Condition;
 	information = Info_SFB_5_DasLager_Info;
 	permanent = 1;
-	description = "Что может дать мне этот лагерь?";
+	description = "Р§С‚Рѕ РјРѕР¶РµС‚ РґР°С‚СЊ РјРЅРµ СЌС‚РѕС‚ Р»Р°РіРµСЂСЊ?";
 };
 
 
@@ -117,8 +117,8 @@ func int Info_SFB_5_DasLager_Condition()
 
 func void Info_SFB_5_DasLager_Info()
 {
-	AI_Output(other,self,"Info_SFB_5_DasLager_15_00");	//Что может дать мне этот лагерь?
-	AI_Output(self,other,"Info_SFB_5_DasLager_02_01");	//Все зависит от того, кем ты здесь будешь. Некоторые работают в поте лица, а некоторые пользуются их трудом.
+	AI_Output(other,self,"Info_SFB_5_DasLager_15_00");	//Р§С‚Рѕ РјРѕР¶РµС‚ РґР°С‚СЊ РјРЅРµ СЌС‚РѕС‚ Р»Р°РіРµСЂСЊ?
+	AI_Output(self,other,"Info_SFB_5_DasLager_02_01");	//Р’СЃРµ Р·Р°РІРёСЃРёС‚ РѕС‚ С‚РѕРіРѕ, РєРµРј С‚С‹ Р·РґРµСЃСЊ Р±СѓРґРµС€СЊ. РќРµРєРѕС‚РѕСЂС‹Рµ СЂР°Р±РѕС‚Р°СЋС‚ РІ РїРѕС‚Рµ Р»РёС†Р°, Р° РЅРµРєРѕС‚РѕСЂС‹Рµ РїРѕР»СЊР·СѓСЋС‚СЃСЏ РёС… С‚СЂСѓРґРѕРј.
 };
 
 
@@ -128,7 +128,7 @@ instance Info_SFB_5_DieLage(C_Info)
 	condition = Info_SFB_5_DieLage_Condition;
 	information = Info_SFB_5_DieLage_Info;
 	permanent = 1;
-	description = "Как здесь живется?";
+	description = "РљР°Рє Р·РґРµСЃСЊ Р¶РёРІРµС‚СЃСЏ?";
 };
 
 
@@ -142,10 +142,10 @@ func int Info_SFB_5_DieLage_Condition()
 
 func void Info_SFB_5_DieLage_Info()
 {
-	AI_Output(other,self,"Info_SFB_5_DieLage_15_00");	//Как здесь живется?
-	AI_Output(self,other,"Info_SFB_5_DieLage_02_01");	//Хорошо!
-	AI_Output(self,other,"Info_SFB_5_DieLage_02_02");	//Да, нам здесь так нравится, что мы изо всех сил пытаемся сбежать отсюда.
-	AI_Output(self,other,"Info_SFB_5_DieLage_02_03");	//Где мы, по-твоему, находимся? Мы в тюрьме, а кто может наслаждаться жизнью заключенного?
+	AI_Output(other,self,"Info_SFB_5_DieLage_15_00");	//РљР°Рє Р·РґРµСЃСЊ Р¶РёРІРµС‚СЃСЏ?
+	AI_Output(self,other,"Info_SFB_5_DieLage_02_01");	//РҐРѕСЂРѕС€Рѕ!
+	AI_Output(self,other,"Info_SFB_5_DieLage_02_02");	//Р”Р°, РЅР°Рј Р·РґРµСЃСЊ С‚Р°Рє РЅСЂР°РІРёС‚СЃСЏ, С‡С‚Рѕ РјС‹ РёР·Рѕ РІСЃРµС… СЃРёР» РїС‹С‚Р°РµРјСЃСЏ СЃР±РµР¶Р°С‚СЊ РѕС‚СЃСЋРґР°.
+	AI_Output(self,other,"Info_SFB_5_DieLage_02_03");	//Р“РґРµ РјС‹, РїРѕ-С‚РІРѕРµРјСѓ, РЅР°С…РѕРґРёРјСЃСЏ? РњС‹ РІ С‚СЋСЂСЊРјРµ, Р° РєС‚Рѕ РјРѕР¶РµС‚ РЅР°СЃР»Р°Р¶РґР°С‚СЊСЃСЏ Р¶РёР·РЅСЊСЋ Р·Р°РєР»СЋС‡РµРЅРЅРѕРіРѕ?
 };
 
 func void B_AssignAmbientInfos_SFB_5(var C_Npc slf)

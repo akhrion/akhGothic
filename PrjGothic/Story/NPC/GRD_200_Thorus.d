@@ -1,7 +1,7 @@
 
 instance GRD_200_Thorus(Npc_Default)
 {
-	name[0] = "Торус";
+	name[0] = "РўРѕСЂСѓСЃ";
 	npcType = npctype_friend;
 	guild = GIL_GRD;
 	exp = 637500;
@@ -22,7 +22,7 @@ instance GRD_200_Thorus(Npc_Default)
 	Mdl_ApplyOverlayMds(self,"Humans_Militia.mds");
 	Mdl_SetVisualBody(self,"hum_body_Naked0",0,3,"Hum_Head_Fighter",12,0,grd_armor_h);
 //	B_Scale(self);
-	Mdl_SetModelScale(self,1.3,1.15,1.1);
+	Mdl_SetModelScale(self,1.2,1.10,1.05);
 	Mdl_SetModelFatness(self,1.5);
 	aivar[AIV_IMPORTANT] = true;
 	fight_tactic = FAI_HUMAN_Strong;

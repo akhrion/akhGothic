@@ -1,12 +1,12 @@
 
-instance Non_1504_Wegelagerer(Npc_Default)
+instance Non_1640_Killer(Npc_Default)
 {
-	name[0] = "Бандит";
+	name[0] = "Убийца";
 	npcType = Npctype_ROGUE;
 	guild = GIL_None;
 	level = 9;
 	voice = 14;
-	id = 1504;
+	id = 1640;
 	attribute[ATR_STRENGTH] = 30;
 	attribute[ATR_DEXTERITY] = 15;
 	attribute[ATR_MANA_MAX] = 0;
@@ -23,13 +23,22 @@ instance Non_1504_Wegelagerer(Npc_Default)
 	CreateInvItems(self,ItMiNugget,54);
 	CreateInvItems(self,ItFo_Potion_Health_01,2);
 	CreateInvItem(self,ItFoBeer);
-	daily_routine = Rtn_start_1504;
+	daily_routine = Rtn_start_0040;
 };
 
 
-func void Rtn_start_1504()
+func void Rtn_start_0040()
 {
-	TA_SitCampfire(22,0,6,0,"OW_PATH_BANDITOS01");
-	TA_Smalltalk(6,0,22,0,"OW_PATH_BANDITOS01");
+	TA_FindAndKill(22,0,6,0,"OC1");
+	TA_FindAndKill(6,0,22,0,"OC1");
 };
 
+func void ZS_FindAndKill()
+{
+	B_SetPerception(self);
+	Npc_SetPercTime(self,3);
+	AI_TurnToNpc(self,hero);
+	Npc_SetTarget(self,hero);
+	Npc_SetPermAttitude(self,ATT_HOSTILE);
+	AI_SetWalkMode(self,NPC_RUN);
+};

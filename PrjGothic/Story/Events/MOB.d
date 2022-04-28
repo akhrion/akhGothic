@@ -20,14 +20,14 @@ func int mc_oldmine_entrance()
 	PrintGlobals(PD_ITEM_MOBSI);
 	if((Kapitel >= 4) && Hlp_IsValidNpc(self))
 	{
-		PrintDebugNpc(PD_ITEM_MOBSI,"...заблокировано.");
+		PrintDebugNpc(PD_ITEM_MOBSI,"...Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅРѕ.");
 		G_PrintScreen(_STR_MESSAGE_WHEEL_STUCKS);
 		AI_OutputSVM_Overlay(hero,NULL,"$PICKBROKE");
 		return FALSE;
 	}
 	else
 	{
-		PrintDebugNpc(PD_ITEM_MOBSI,"...готово к работе.");
+		PrintDebugNpc(PD_ITEM_MOBSI,"...РіРѕС‚РѕРІРѕ Рє СЂР°Р±РѕС‚Рµ.");
 	};
 	return TRUE;
 };
@@ -37,7 +37,7 @@ func int mc_monasteryruin_gate()
 	PrintDebugNpc(PD_ITEM_MOBSI,"MC_MONASTERYRUIN_GATE");
 	if(MonasteryRuin_GateOpen == FALSE)
 	{
-		PrintDebugNpc(PD_ITEM_MOBSI,"...еще не открыто.");
+		PrintDebugNpc(PD_ITEM_MOBSI,"...РµС‰Рµ РЅРµ РѕС‚РєСЂС‹С‚Рѕ.");
 		AI_UseMob(hero,"VWHEEL",1);
 		AI_UseMob(hero,"VWHEEL",-1);
 		MonasteryRuin_GateOpen = TRUE;
@@ -45,7 +45,7 @@ func int mc_monasteryruin_gate()
 	}
 	else
 	{
-		PrintDebugNpc(PD_ITEM_MOBSI,"...уже открыто.");
+		PrintDebugNpc(PD_ITEM_MOBSI,"...СѓР¶Рµ РѕС‚РєСЂС‹С‚Рѕ.");
 	};
 	return TRUE;
 };
@@ -807,7 +807,7 @@ func int ll2_itke_gomez_01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Гомеза.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р“РѕРјРµР·Р°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		return TRUE;
 	}
 	else if(Npc_GetTalentSkill(hero,NPC_TALENT_PICKLOCK) < 1)
@@ -840,7 +840,7 @@ func int itke_gomez_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Гомеза.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р“РѕРјРµР·Р°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_GOMEZ_01_USED = TRUE;
 		return TRUE;
 	}
@@ -863,7 +863,7 @@ func int itke_gomez_02_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Гомеза.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р“РѕРјРµР·Р°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_GOMEZ_02_USED = TRUE;
 		return TRUE;
 	}
@@ -886,7 +886,7 @@ func int itke_gomez_03_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Гомеза.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р“РѕРјРµР·Р°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_GOMEZ_03_USED = TRUE;
 		return TRUE;
 	}
@@ -909,7 +909,7 @@ func int itke_quentin_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Квентина.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РљРІРµРЅС‚РёРЅР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_QUENTIN_USED = TRUE;
 		return TRUE;
 	}
@@ -932,7 +932,7 @@ func int itke_weaponry_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от оружейной.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_WEAPONRY_01_USED = TRUE;
 		return TRUE;
 	}
@@ -955,7 +955,7 @@ func int itke_weaponry_02_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от оружейной.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_WEAPONRY_02_USED = TRUE;
 		return TRUE;
 	}
@@ -978,7 +978,7 @@ func int itke_weaponry_03_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от оружейной.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_WEAPONRY_03_USED = TRUE;
 		return TRUE;
 	}
@@ -1001,7 +1001,7 @@ func int itke_weaponry_04_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от оружейной.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_WEAPONRY_04_USED = TRUE;
 		return TRUE;
 	}
@@ -1024,7 +1024,7 @@ func int itke_berg_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ржавый ключ.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ СЂР¶Р°РІС‹Р№ РєР»СЋС‡.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_BERG_USED = TRUE;
 		return TRUE;
 	}
@@ -1047,7 +1047,7 @@ func int itke_focus5_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ из склепа.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РёР· СЃРєР»РµРїР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_FOCUS5_USED = TRUE;
 		return TRUE;
 	}
@@ -1070,7 +1070,7 @@ func int itke_sunkentower_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTSMALL_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Ксардаса.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РљСЃР°СЂРґР°СЃР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_SUNKENTOWER_01_USED = TRUE;
 		return TRUE;
 	}
@@ -1093,7 +1093,7 @@ func int itke_sunkentower_02_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTSMALL_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Ксардаса.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РљСЃР°СЂРґР°СЃР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_SUNKENTOWER_02_USED = TRUE;
 		return TRUE;
 	}
@@ -1115,7 +1115,7 @@ func int itke_focus4_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ из пещеры.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РёР· РїРµС‰РµСЂС‹.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_FOCUS4_USED = TRUE;
 		return TRUE;
 	}
@@ -1137,7 +1137,7 @@ func int itkecavalorn01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Кавалорна.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РљР°РІР°Р»РѕСЂРЅР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		CAVALORN_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1159,7 +1159,7 @@ func int itke_freemine_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от Свободной шахты.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РЎРІРѕР±РѕРґРЅРѕР№ С€Р°С…С‚С‹.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		FREEMINE_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1182,7 +1182,7 @@ func int itke_yberion_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Юбериона.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р®Р±РµСЂРёРѕРЅР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_YBERION_USED = TRUE;
 		return TRUE;
 	}
@@ -1205,7 +1205,7 @@ func int itke_psi_kalom_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ из лаборатории.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РёР· Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		PSILABKEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1227,7 +1227,7 @@ func int dungeonkey_01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от подземелья.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РїРѕРґР·РµРјРµР»СЊСЏ.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		DUNGEONKEY_01_USED = TRUE;
 		return TRUE;
 	}
@@ -1249,7 +1249,7 @@ func int dungeonkey_02_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от подземелья.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РїРѕРґР·РµРјРµР»СЊСЏ.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		DUNGEONKEY_02_USED = TRUE;
 		return TRUE;
 	}
@@ -1271,7 +1271,7 @@ func int dungeonkey_03_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от подземелья.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ РїРѕРґР·РµРјРµР»СЊСЏ.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		DUNGEONKEY_03_USED = TRUE;
 		return TRUE;
 	}
@@ -1293,7 +1293,7 @@ func int itke_gilbert_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован дубликат ключа.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РґСѓР±Р»РёРєР°С‚ РєР»СЋС‡Р°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		GILBERT_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1315,7 +1315,7 @@ func int itkey_ob_smith_01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован железный ключ.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ Р¶РµР»РµР·РЅС‹Р№ РєР»СЋС‡.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		OB_SMITH_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1340,7 +1340,7 @@ func int itke_storage_01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от склада.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_STORAGE_01_USED = TRUE;
 		return TRUE;
 	}
@@ -1365,7 +1365,7 @@ func int itke_storage_02_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от склада.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_STORAGE_02_USED = TRUE;
 		return TRUE;
 	}
@@ -1387,7 +1387,7 @@ func int itke_storage_03_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от склада.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_STORAGE_03_USED = TRUE;
 		return TRUE;
 	}
@@ -1410,7 +1410,7 @@ func int ll2_itkey_rb_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Лорда.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ Р›РѕСЂРґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		LORD_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1444,7 +1444,7 @@ func int ll2_orik_key_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Орика.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РћСЂРёРєР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ORIK_KEY_USED = TRUE;
 		return TRUE;
 	}
@@ -1477,7 +1477,7 @@ func int ll2_itke_tower_01_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от башни.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ Р±Р°С€РЅРё.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_TOWER_01_USED = TRUE;
 		return TRUE;
 	}
@@ -1510,7 +1510,7 @@ func int ll2_itke_tower_02_cf()
 	{
 		AI_Wait(self,0.7);
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от башни.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ Р±Р°С€РЅРё.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_TOWER_02_USED = TRUE;
 		return TRUE;
 	}
@@ -1544,7 +1544,7 @@ func int itke_om_02_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ Аарона.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РђР°СЂРѕРЅР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_OM_02_USED = TRUE;
 		return TRUE;
 	}
@@ -1567,7 +1567,7 @@ func int itke_om_03_01_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от склада.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_OM_03_01_USED = TRUE;
 		return TRUE;
 	}
@@ -1590,7 +1590,7 @@ func int itke_om_03_02_cf()
 		AI_Wait(self,0.7);
 		AI_PlayAni(self,"T_CHESTBIG_S0_PICKRIGHT");
 		Snd_Play3d(self,"DOOR_LOCK");
-		PrintScreen("Использован ключ от склада.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
+		PrintScreen("РСЃРїРѕР»СЊР·РѕРІР°РЅ РєР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°.",-1,37,"FONT_OLD_10_WHITE.TGA",3);
 		ITKE_OM_03_02_USED = TRUE;
 		return TRUE;
 	}

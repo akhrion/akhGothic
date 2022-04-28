@@ -1,7 +1,7 @@
 
 instance NOV_1301_Caine(Npc_Default)
 {
-	name[0] = "Каин";
+	name[0] = "РљР°РёРЅ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

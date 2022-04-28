@@ -1,7 +1,7 @@
 
 instance GRD_210_Scatty(Npc_Default)
 {
-	name[0] = "—Í‡ÚÚË";
+	name[0] = "–°–∫–∞—Ç—Ç–∏";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 15;

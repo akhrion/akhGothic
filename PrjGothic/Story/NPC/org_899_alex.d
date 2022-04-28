@@ -1,7 +1,7 @@
 
 instance ORG_899_ALEX(Npc_Default)
 {
-	name[0] = "Алекс";
+	name[0] = "РђР»РµРєСЃ";
 	npcType = npctype_friend;
 	guild = GIL_None;
 	level = 999;
@@ -75,7 +75,7 @@ instance INFO_ALEX_LETSGO(C_Info)
 	information = info_alex_letsgo_info;
 	important = 0;
 	permanent = 0;
-	description = "Пойдем со мной, мне нужна твоя помощь.";
+	description = "РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.";
 };
 
 
@@ -89,17 +89,17 @@ func int info_alex_letsgo_condition()
 
 func void info_alex_letsgo_info()
 {
-	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//Пойдем со мной, мне нужна твоя помощь.
-	AI_Output(self,hero,"Alex_01_01");	//А ты заставь меня!
-	AI_Output(hero,self,"Stt_311_Fisk_MordragKO_Relax_15_00");	//Успокойся! Быть может, я помогу тебе?
-	AI_Output(self,hero,"Alex_01_02");	//Так ты от Квентина? Надеюсь, ты разобрался с надзирателем?
-	AI_Output(hero,self,"Info_Thorus_MordragKo_MordragGone_15_00");	//Больше он не сунет сюда свой нос!
-	AI_Output(self,hero,"Alex_01_03");	//Отлично, показывай дорогу!
+	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.
+	AI_Output(self,hero,"Alex_01_01");	//Рђ С‚С‹ Р·Р°СЃС‚Р°РІСЊ РјРµРЅСЏ!
+	AI_Output(hero,self,"Stt_311_Fisk_MordragKO_Relax_15_00");	//РЈСЃРїРѕРєРѕР№СЃСЏ! Р‘С‹С‚СЊ РјРѕР¶РµС‚, СЏ РїРѕРјРѕРіСѓ С‚РµР±Рµ?
+	AI_Output(self,hero,"Alex_01_02");	//РўР°Рє С‚С‹ РѕС‚ РљРІРµРЅС‚РёРЅР°? РќР°РґРµСЋСЃСЊ, С‚С‹ СЂР°Р·РѕР±СЂР°Р»СЃСЏ СЃ РЅР°РґР·РёСЂР°С‚РµР»РµРј?
+	AI_Output(hero,self,"Info_Thorus_MordragKo_MordragGone_15_00");	//Р‘РѕР»СЊС€Рµ РѕРЅ РЅРµ СЃСѓРЅРµС‚ СЃСЋРґР° СЃРІРѕР№ РЅРѕСЃ!
+	AI_Output(self,hero,"Alex_01_03");	//РћС‚Р»РёС‡РЅРѕ, РїРѕРєР°Р·С‹РІР°Р№ РґРѕСЂРѕРіСѓ!
 	AI_Standup(self);
 	B_GiveXP(300);
 	if(FMTaken == FALSE)
 	{
-		b_printtrademsg1("Отдана маскировка и карта.");
+		b_printtrademsg1("РћС‚РґР°РЅР° РјР°СЃРєРёСЂРѕРІРєР° Рё РєР°СЂС‚Р°.");
 		B_GiveInvItems(hero,self,alexstuff,1);
 		B_GiveInvItems(hero,self,ItWrOCmap,1);
 		Npc_RemoveInvItem(self,alexstuff);
@@ -142,8 +142,8 @@ func int info_alex_bye_condition()
 func void info_alex_bye_info()
 {
 	AI_GotoNpc(self,hero);
-	AI_Output(self,hero,"Alex_02_01");	//Здесь мы разделимся, дальше я пойду один. Я знаю как выбраться из замка, не переживай за меня. Встретимся в лагере, и спасибо тебе за помощь!
-	B_LogEntry(QUENTIN_GANG,"Алекс убедил меня, что сможет выбраться из замка сам. Надеюсь, он дойдет до нашего лагеря без проблем.");
+	AI_Output(self,hero,"Alex_02_01");	//Р—РґРµСЃСЊ РјС‹ СЂР°Р·РґРµР»РёРјСЃСЏ, РґР°Р»СЊС€Рµ СЏ РїРѕР№РґСѓ РѕРґРёРЅ. РЇ Р·РЅР°СЋ РєР°Рє РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· Р·Р°РјРєР°, РЅРµ РїРµСЂРµР¶РёРІР°Р№ Р·Р° РјРµРЅСЏ. Р’СЃС‚СЂРµС‚РёРјСЃСЏ РІ Р»Р°РіРµСЂРµ, Рё СЃРїР°СЃРёР±Рѕ С‚РµР±Рµ Р·Р° РїРѕРјРѕС‰СЊ!
+	B_LogEntry(QUENTIN_GANG,"РђР»РµРєСЃ СѓР±РµРґРёР» РјРµРЅСЏ, С‡С‚Рѕ СЃРјРѕР¶РµС‚ РІС‹Р±СЂР°С‚СЊСЃСЏ РёР· Р·Р°РјРєР° СЃР°Рј. РќР°РґРµСЋСЃСЊ, РѕРЅ РґРѕР№РґРµС‚ РґРѕ РЅР°С€РµРіРѕ Р»Р°РіРµСЂСЏ Р±РµР· РїСЂРѕР±Р»РµРј.");
 	AI_StopProcessInfos(self);
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	AI_GotoWP(self,"OCC_MERCS_HALLWAY_MIDDLE");
@@ -160,7 +160,7 @@ instance INFO_ALEX1_LETSGO(C_Info)
 	information = info_alex1_letsgo_info;
 	important = 0;
 	permanent = 1;
-	description = "Пойдем со мной, мне нужна твоя помощь.";
+	description = "РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.";
 };
 
 
@@ -174,8 +174,8 @@ func int info_alex1_letsgo_condition()
 
 func void info_alex1_letsgo_info()
 {
-	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//Пойдем со мной, мне нужна твоя помощь.
-	AI_Output(self,hero,"Alex_03_01");	//Без проблем, дружище!
+	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.
+	AI_Output(self,hero,"Alex_03_01");	//Р‘РµР· РїСЂРѕР±Р»РµРј, РґСЂСѓР¶РёС‰Рµ!
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"follow");
 	if(FMTaken == TRUE)
@@ -207,7 +207,7 @@ func int alex1_ot_condition()
 
 func void alex1_ot_info()
 {
-	AI_Output(self,hero,"Alex_OT");	//Я вернусь в наше логово, ты сможешь найти меня там.
+	AI_Output(self,hero,"Alex_OT");	//РЇ РІРµСЂРЅСѓСЃСЊ РІ РЅР°С€Рµ Р»РѕРіРѕРІРѕ, С‚С‹ СЃРјРѕР¶РµС€СЊ РЅР°Р№С‚Рё РјРµРЅСЏ С‚Р°Рј.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);

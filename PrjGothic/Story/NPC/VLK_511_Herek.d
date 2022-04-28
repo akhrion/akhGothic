@@ -1,7 +1,7 @@
 
 instance VLK_511_Herek(Npc_Default)
 {
-	name[0] = "Υεπεκ";
+	name[0] = "Π¥ΠµΡ€ΠµΠΊ";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 2;

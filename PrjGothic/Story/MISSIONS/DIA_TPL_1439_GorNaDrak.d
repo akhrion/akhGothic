@@ -28,7 +28,7 @@ instance DIA_GorNaDrak_Greet(C_Info)
 	condition = DIA_GorNaDrak_Greet_Condition;
 	information = DIA_GorNaDrak_Greet_Info;
 	permanent = 0;
-	description = "Привет! Куда вы идете?";
+	description = "РџСЂРёРІРµС‚! РљСѓРґР° РІС‹ РёРґРµС‚Рµ?";
 };
 
 
@@ -42,9 +42,9 @@ func int DIA_GorNaDrak_Greet_Condition()
 
 func void DIA_GorNaDrak_Greet_Info()
 {
-	AI_Output(other,self,"DIA_GorNaDrak_Greet_15_00");	//Привет! Куда вы идете?
-	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01");	//Мы несем Кор Галому слюну ползунов, убитых нашими братьями в Старой шахте.
-	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_02");	//Раз в день мы приходим к ним и забираем их добычу.
+	AI_Output(other,self,"DIA_GorNaDrak_Greet_15_00");	//РџСЂРёРІРµС‚! РљСѓРґР° РІС‹ РёРґРµС‚Рµ?
+	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_01");	//РњС‹ РЅРµСЃРµРј РљРѕСЂ Р“Р°Р»РѕРјСѓ СЃР»СЋРЅСѓ РїРѕР»Р·СѓРЅРѕРІ, СѓР±РёС‚С‹С… РЅР°С€РёРјРё Р±СЂР°С‚СЊСЏРјРё РІ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ.
+	AI_Output(self,other,"DIA_GorNaDrak_Greet_09_02");	//Р Р°Р· РІ РґРµРЅСЊ РјС‹ РїСЂРёС…РѕРґРёРј Рє РЅРёРј Рё Р·Р°Р±РёСЂР°РµРј РёС… РґРѕР±С‹С‡Сѓ.
 };
 
 
@@ -55,7 +55,7 @@ instance DIA_GorNaDrak_WasSekret(C_Info)
 	condition = DIA_GorNaDrak_WasSekret_Condition;
 	information = DIA_GorNaDrak_WasSekret_Info;
 	permanent = 0;
-	description = "О какой слюне ты говоришь?";
+	description = "Рћ РєР°РєРѕР№ СЃР»СЋРЅРµ С‚С‹ РіРѕРІРѕСЂРёС€СЊ?";
 };
 
 
@@ -69,8 +69,8 @@ func int DIA_GorNaDrak_WasSekret_Condition()
 
 func void DIA_GorNaDrak_WasSekret_Info()
 {
-	AI_Output(other,self,"DIA_GorNaDrak_WasSekret_15_00");	//О какой слюне ты говоришь?
-	AI_Output(self,other,"DIA_GorNaDrak_WasSekret_09_01");	//Ее производят особые железы в пасти ползунов. Но чтобы ее добыть, нужно знать несколько особых приемов.
+	AI_Output(other,self,"DIA_GorNaDrak_WasSekret_15_00");	//Рћ РєР°РєРѕР№ СЃР»СЋРЅРµ С‚С‹ РіРѕРІРѕСЂРёС€СЊ?
+	AI_Output(self,other,"DIA_GorNaDrak_WasSekret_09_01");	//Р•Рµ РїСЂРѕРёР·РІРѕРґСЏС‚ РѕСЃРѕР±С‹Рµ Р¶РµР»РµР·С‹ РІ РїР°СЃС‚Рё РїРѕР»Р·СѓРЅРѕРІ. РќРѕ С‡С‚РѕР±С‹ РµРµ РґРѕР±С‹С‚СЊ, РЅСѓР¶РЅРѕ Р·РЅР°С‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ РѕСЃРѕР±С‹С… РїСЂРёРµРјРѕРІ.
 };
 
 
@@ -81,7 +81,7 @@ instance DIA_GorNaDrak_TeachMandibles(C_Info)
 	condition = DIA_GorNaDrak_TeachMandibles_Condition;
 	information = DIA_GorNaDrak_TeachMandibles_Info;
 	permanent = 0;
-	description = "Ты можешь рассказать мне, как добывать слюну?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ, РєР°Рє РґРѕР±С‹РІР°С‚СЊ СЃР»СЋРЅСѓ?";
 };
 
 
@@ -95,8 +95,8 @@ func int DIA_GorNaDrak_TeachMandibles_Condition()
 
 func void DIA_GorNaDrak_TeachMandibles_Info()
 {
-	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00");	//Ты можешь рассказать мне, как добывать слюну?
-	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01");	//Конечно. Убив ползуна, ухватись покрепче за клыки и дергай их на себя. Так ты вырвешь челюсти вместе с железами, которые при этом останутся целыми.
+	AI_Output(other,self,"DIA_GorNaDrak_TeachMandibles_15_00");	//РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ, РєР°Рє РґРѕР±С‹РІР°С‚СЊ СЃР»СЋРЅСѓ?
+	AI_Output(self,other,"DIA_GorNaDrak_TeachMandibles_09_01");	//РљРѕРЅРµС‡РЅРѕ. РЈР±РёРІ РїРѕР»Р·СѓРЅР°, СѓС…РІР°С‚РёСЃСЊ РїРѕРєСЂРµРїС‡Рµ Р·Р° РєР»С‹РєРё Рё РґРµСЂРіР°Р№ РёС… РЅР° СЃРµР±СЏ. РўР°Рє С‚С‹ РІС‹СЂРІРµС€СЊ С‡РµР»СЋСЃС‚Рё РІРјРµСЃС‚Рµ СЃ Р¶РµР»РµР·Р°РјРё, РєРѕС‚РѕСЂС‹Рµ РїСЂРё СЌС‚РѕРј РѕСЃС‚Р°РЅСѓС‚СЃСЏ С†РµР»С‹РјРё.
 	b_learn_trophies_mandibles();
 };
 
@@ -108,7 +108,7 @@ instance DIA_GorNaDrak_WhatFor(C_Info)
 	condition = DIA_GorNaDrak_WhatFor_Condition;
 	information = DIA_GorNaDrak_WhatFor_Info;
 	permanent = 0;
-	description = "А зачем Кор Галому нужна эта слюна?";
+	description = "Рђ Р·Р°С‡РµРј РљРѕСЂ Р“Р°Р»РѕРјСѓ РЅСѓР¶РЅР° СЌС‚Р° СЃР»СЋРЅР°?";
 };
 
 
@@ -122,10 +122,10 @@ func int DIA_GorNaDrak_WhatFor_Condition()
 
 func void DIA_GorNaDrak_WhatFor_Info()
 {
-	AI_Output(other,self,"DIA_GorNaDrak_WhatFor_15_00");	//А зачем Кор Галому нужна эта слюна?
-	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_01");	//Насколько я знаю, он готовит из нее зелья, повышающие магическую силу наших послушников.
-	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_02");	//Мы ведь готовимся к великой Церемонии, и к тому времени у нас должно быть столько зелья, чтобы его хватило на всех.
-	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_03");	//С его помощью Кор Галом сможет подготовить всех послушников к этому великому дню.
+	AI_Output(other,self,"DIA_GorNaDrak_WhatFor_15_00");	//Рђ Р·Р°С‡РµРј РљРѕСЂ Р“Р°Р»РѕРјСѓ РЅСѓР¶РЅР° СЌС‚Р° СЃР»СЋРЅР°?
+	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_01");	//РќР°СЃРєРѕР»СЊРєРѕ СЏ Р·РЅР°СЋ, РѕРЅ РіРѕС‚РѕРІРёС‚ РёР· РЅРµРµ Р·РµР»СЊСЏ, РїРѕРІС‹С€Р°СЋС‰РёРµ РјР°РіРёС‡РµСЃРєСѓСЋ СЃРёР»Сѓ РЅР°С€РёС… РїРѕСЃР»СѓС€РЅРёРєРѕРІ.
+	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_02");	//РњС‹ РІРµРґСЊ РіРѕС‚РѕРІРёРјСЃСЏ Рє РІРµР»РёРєРѕР№ Р¦РµСЂРµРјРѕРЅРёРё, Рё Рє С‚РѕРјСѓ РІСЂРµРјРµРЅРё Сѓ РЅР°СЃ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ СЃС‚РѕР»СЊРєРѕ Р·РµР»СЊСЏ, С‡С‚РѕР±С‹ РµРіРѕ С…РІР°С‚РёР»Рѕ РЅР° РІСЃРµС….
+	AI_Output(self,other,"DIA_GorNaDrak_WhatFor_09_03");	//РЎ РµРіРѕ РїРѕРјРѕС‰СЊСЋ РљРѕСЂ Р“Р°Р»РѕРј СЃРјРѕР¶РµС‚ РїРѕРґРіРѕС‚РѕРІРёС‚СЊ РІСЃРµС… РїРѕСЃР»СѓС€РЅРёРєРѕРІ Рє СЌС‚РѕРјСѓ РІРµР»РёРєРѕРјСѓ РґРЅСЋ.
 };
 
 
@@ -136,7 +136,7 @@ instance DIA_GorNaDrak_Permanent(C_Info)
 	condition = DIA_GorNaDrak_Permanent_Condition;
 	information = DIA_GorNaDrak_Permanent_Info;
 	permanent = 1;
-	description = "У вас уже достаточно зелья для великой Церемонии?";
+	description = "РЈ РІР°СЃ СѓР¶Рµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ Р·РµР»СЊСЏ РґР»СЏ РІРµР»РёРєРѕР№ Р¦РµСЂРµРјРѕРЅРёРё?";
 };
 
 
@@ -150,14 +150,14 @@ func int DIA_GorNaDrak_Permanent_Condition()
 
 func void DIA_GorNaDrak_Permanent_Info()
 {
-	AI_Output(other,self,"DIA_GorNaDrak_Permanent_15_00");	//У вас уже достаточно зелья для великой Церемонии?
+	AI_Output(other,self,"DIA_GorNaDrak_Permanent_15_00");	//РЈ РІР°СЃ СѓР¶Рµ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ Р·РµР»СЊСЏ РґР»СЏ РІРµР»РёРєРѕР№ Р¦РµСЂРµРјРѕРЅРёРё?
 	if(CorKalom_BringMCQBalls == LOG_SUCCESS)
 	{
-		AI_Output(self,other,"SVM_9_LookAway");	//Да! Погода сегодня отличная!
+		AI_Output(self,other,"SVM_9_LookAway");	//Р”Р°! РџРѕРіРѕРґР° СЃРµРіРѕРґРЅСЏ РѕС‚Р»РёС‡РЅР°СЏ!
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_GorNaDrak_Permanent_09_01");	//Нет. Нам нужно еще очень много слюны. Нашим Стражам приходится охотиться на ползунов в Старой шахте и днем, и ночью.
+		AI_Output(self,other,"DIA_GorNaDrak_Permanent_09_01");	//РќРµС‚. РќР°Рј РЅСѓР¶РЅРѕ РµС‰Рµ РѕС‡РµРЅСЊ РјРЅРѕРіРѕ СЃР»СЋРЅС‹. РќР°С€РёРј РЎС‚СЂР°Р¶Р°Рј РїСЂРёС…РѕРґРёС‚СЃСЏ РѕС…РѕС‚РёС‚СЊСЃСЏ РЅР° РїРѕР»Р·СѓРЅРѕРІ РІ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ Рё РґРЅРµРј, Рё РЅРѕС‡СЊСЋ.
 	};
 };
 

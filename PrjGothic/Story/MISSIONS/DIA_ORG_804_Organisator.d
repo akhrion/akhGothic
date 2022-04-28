@@ -28,7 +28,7 @@ instance ORG_804_ORGANISATOR_HELLO(C_Info)
 	condition = org_804_organisator_hello_condition;
 	information = org_804_organisator_hello_info;
 	permanent = 1;
-	description = "Привет. Кто ты?";
+	description = "РџСЂРёРІРµС‚. РљС‚Рѕ С‚С‹?";
 };
 
 
@@ -39,8 +39,8 @@ func int org_804_organisator_hello_condition()
 
 func void org_804_organisator_hello_info()
 {
-	AI_Output(other,self,"DIA_Butch_Hello_15_00");	//Привет. Кто ты?
-	AI_Output(self,other,"DIA_Butch_Hello_13_01");	//Это тебя не касается! Что-то ты мне совсем не нравишься!
+	AI_Output(other,self,"DIA_Butch_Hello_15_00");	//РџСЂРёРІРµС‚. РљС‚Рѕ С‚С‹?
+	AI_Output(self,other,"DIA_Butch_Hello_13_01");	//Р­С‚Рѕ С‚РµР±СЏ РЅРµ РєР°СЃР°РµС‚СЃСЏ! Р§С‚Рѕ-С‚Рѕ С‚С‹ РјРЅРµ СЃРѕРІСЃРµРј РЅРµ РЅСЂР°РІРёС€СЊСЃСЏ!
 	AI_StopProcessInfos(self);
 };
 
@@ -67,21 +67,21 @@ func int Org_804_Organisator_Greet_Condition()
 func void Org_804_Organisator_Greet_Info()
 {
 	var C_Npc Lares;
-	AI_Output(self,other,"Org_804_Organisator_Greet_06_00");	//А ты куда собрался?
+	AI_Output(self,other,"Org_804_Organisator_Greet_06_00");	//Рђ С‚С‹ РєСѓРґР° СЃРѕР±СЂР°Р»СЃСЏ?
 	if(Npc_HasItems(hero,TheList))
 	{
-		AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//У меня есть список припасов для Старой шахты.
-		AI_Output(other,self,"Org_804_Organisator_PERM_15_00");	//Могу я увидеть Ларса?
-		AI_Output(self,other,"Org_804_Organisator_PERM_06_01");	//Спроси об этом у Роско.
+		AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.
+		AI_Output(other,self,"Org_804_Organisator_PERM_15_00");	//РњРѕРіСѓ СЏ СѓРІРёРґРµС‚СЊ Р›Р°СЂСЃР°?
+		AI_Output(self,other,"Org_804_Organisator_PERM_06_01");	//РЎРїСЂРѕСЃРё РѕР± СЌС‚РѕРј Сѓ Р РѕСЃРєРѕ.
 	}
 	else
 	{
-		AI_Output(other,self,"Org_804_Organisator_WayTo_15_00");	//А куда еще здесь можно идти?
-		AI_Output(self,other,"Org_804_Organisator_WayTo_06_01");	//К Ларсу.
-		AI_Output(other,self,"Org_804_Organisator_ToLares_15_00");	//Мне нужно к Ларсу.
-		AI_Output(self,other,"Org_804_Organisator_ToLares_06_01");	//Мне кажется, он не захочет с тобой разговаривать.
-		AI_Output(other,self,"Org_804_Organisator_ToLares_15_02");	//Я сам с этим разберусь.
-		AI_Output(self,other,"Org_804_Organisator_ToLares_06_03");	//Ну, не буду тебя задерживать.
+		AI_Output(other,self,"Org_804_Organisator_WayTo_15_00");	//Рђ РєСѓРґР° РµС‰Рµ Р·РґРµСЃСЊ РјРѕР¶РЅРѕ РёРґС‚Рё?
+		AI_Output(self,other,"Org_804_Organisator_WayTo_06_01");	//Рљ Р›Р°СЂСЃСѓ.
+		AI_Output(other,self,"Org_804_Organisator_ToLares_15_00");	//РњРЅРµ РЅСѓР¶РЅРѕ Рє Р›Р°СЂСЃСѓ.
+		AI_Output(self,other,"Org_804_Organisator_ToLares_06_01");	//РњРЅРµ РєР°Р¶РµС‚СЃСЏ, РѕРЅ РЅРµ Р·Р°С…РѕС‡РµС‚ СЃ С‚РѕР±РѕР№ СЂР°Р·РіРѕРІР°СЂРёРІР°С‚СЊ.
+		AI_Output(other,self,"Org_804_Organisator_ToLares_15_02");	//РЇ СЃР°Рј СЃ СЌС‚РёРј СЂР°Р·Р±РµСЂСѓСЃСЊ.
+		AI_Output(self,other,"Org_804_Organisator_ToLares_06_03");	//РќСѓ, РЅРµ Р±СѓРґСѓ С‚РµР±СЏ Р·Р°РґРµСЂР¶РёРІР°С‚СЊ.
 	};
 	AI_StopProcessInfos(self);
 	Lares = Hlp_GetNpc(Org_801_Lares);
@@ -116,12 +116,12 @@ func int Info_Org_804_FirstWarn_Condition()
 func void Info_Org_804_FirstWarn_Info()
 {
 	PrintGlobals(PD_MISSION);
-	AI_Output(self,hero,"Info_Org_804_FirstWarn_Info_06_00");	//Прислужникам Гомеза вход воспрещен! Уходи!
+	AI_Output(self,hero,"Info_Org_804_FirstWarn_Info_06_00");	//РџСЂРёСЃР»СѓР¶РЅРёРєР°Рј Р“РѕРјРµР·Р° РІС…РѕРґ РІРѕСЃРїСЂРµС‰РµРЅ! РЈС…РѕРґРё!
 	if(Npc_HasItems(hero,TheList))
 	{
-		AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//У меня есть список припасов для Старой шахты.
-		AI_Output(other,self,"Org_804_Organisator_PERM_15_00");	//Могу я увидеть Ларса?
-		AI_Output(self,other,"Org_804_Organisator_PERM_06_01");	//Спроси об этом у Роско.
+		AI_Output(other,self,"ORG_801_Lares_BringList_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.
+		AI_Output(other,self,"Org_804_Organisator_PERM_15_00");	//РњРѕРіСѓ СЏ СѓРІРёРґРµС‚СЊ Р›Р°СЂСЃР°?
+		AI_Output(self,other,"Org_804_Organisator_PERM_06_01");	//РЎРїСЂРѕСЃРё РѕР± СЌС‚РѕРј Сѓ Р РѕСЃРєРѕ.
 		self.aivar[AIV_PASSGATE] = TRUE;
 	}
 	else
@@ -155,7 +155,7 @@ func int Info_Org_804_LastWarn_Condition()
 
 func void Info_Org_804_LastWarn_Info()
 {
-	AI_Output(self,hero,"Info_Org_804_LastWarn_06_00");	//Убирайся, пока цел!
+	AI_Output(self,hero,"Info_Org_804_LastWarn_06_00");	//РЈР±РёСЂР°Р№СЃСЏ, РїРѕРєР° С†РµР»!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Org_804_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);

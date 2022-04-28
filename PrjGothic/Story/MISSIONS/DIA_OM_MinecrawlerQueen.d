@@ -28,7 +28,7 @@ instance DIA_MinecrawlerQueen_HELLO(C_Info)
 	information = DIA_MinecrawlerQueen_HELLO_Info;
 	permanent = 0;
 	important = 1;
-	description = "Здравствуй. Кто ты?";
+	description = "Р—РґСЂР°РІСЃС‚РІСѓР№. РљС‚Рѕ С‚С‹?";
 };
 
 func int DIA_MinecrawlerQueen_HELLO_Condition()
@@ -38,7 +38,7 @@ func int DIA_MinecrawlerQueen_HELLO_Condition()
 
 func void DIA_MinecrawlerQueen_HELLO_Info()
 {
-	AI_Output(other,self,"DIA_MinecrawlerQueen_Hello_NULL_01");//Здравствуй. Кто ты?
-	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_02");//Я та, чьих детей ты видел ранее.
-	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_03");//Я та, чьих детей ты не убил. Скажи.. почему?
+	AI_Output(other,self,"DIA_MinecrawlerQueen_Hello_NULL_01");//Р—РґСЂР°РІСЃС‚РІСѓР№. РљС‚Рѕ С‚С‹?
+	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_02");//РЇ С‚Р°, С‡СЊРёС… РґРµС‚РµР№ С‚С‹ РІРёРґРµР» СЂР°РЅРµРµ.
+	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_03");//РЇ С‚Р°, С‡СЊРёС… РґРµС‚РµР№ С‚С‹ РЅРµ СѓР±РёР». РЎРєР°Р¶Рё.. РїРѕС‡РµРјСѓ?
 };

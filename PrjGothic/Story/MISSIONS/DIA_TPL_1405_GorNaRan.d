@@ -28,7 +28,7 @@ instance DIA_GorNaRan_Wache(C_Info)
 	condition = DIA_GorNaRan_Wache_Condition;
 	information = DIA_GorNaRan_Wache_Info;
 	permanent = 0;
-	description = "Что ты здесь делаешь?";
+	description = "Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?";
 };
 
 
@@ -42,10 +42,10 @@ func int DIA_GorNaRan_Wache_Condition()
 
 func void DIA_GorNaRan_Wache_Info()
 {
-	AI_Output(other,self,"DIA_GorNaRan_Wache_15_00");	//Что ты здесь делаешь?
-	AI_Output(self,other,"DIA_GorNaRan_Wache_13_01");	//Я сторожу лагерь, убиваю болотожоров, которые пытаются напасть на нас.
-	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02");	//На твоем месте я бы и близко не подходит к этим зверюгам. Они с удовольствием позавтракают тобой.
-	AI_Output(self,other,"DIA_GorNaRan_Wache_13_03");	//Но знаешь, не отвлекай меня, эта работа очень важна для лагеря.
+	AI_Output(other,self,"DIA_GorNaRan_Wache_15_00");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?
+	AI_Output(self,other,"DIA_GorNaRan_Wache_13_01");	//РЇ СЃС‚РѕСЂРѕР¶Сѓ Р»Р°РіРµСЂСЊ, СѓР±РёРІР°СЋ Р±РѕР»РѕС‚РѕР¶РѕСЂРѕРІ, РєРѕС‚РѕСЂС‹Рµ РїС‹С‚Р°СЋС‚СЃСЏ РЅР°РїР°СЃС‚СЊ РЅР° РЅР°СЃ.
+	AI_Output(self,other,"DIA_GorNaRan_Wache_13_02");	//РќР° С‚РІРѕРµРј РјРµСЃС‚Рµ СЏ Р±С‹ Рё Р±Р»РёР·РєРѕ РЅРµ РїРѕРґС…РѕРґРёС‚ Рє СЌС‚РёРј Р·РІРµСЂСЋРіР°Рј. РћРЅРё СЃ СѓРґРѕРІРѕР»СЊСЃС‚РІРёРµРј РїРѕР·Р°РІС‚СЂР°РєР°СЋС‚ С‚РѕР±РѕР№.
+	AI_Output(self,other,"DIA_GorNaRan_Wache_13_03");	//РќРѕ Р·РЅР°РµС€СЊ, РЅРµ РѕС‚РІР»РµРєР°Р№ РјРµРЅСЏ, СЌС‚Р° СЂР°Р±РѕС‚Р° РѕС‡РµРЅСЊ РІР°Р¶РЅР° РґР»СЏ Р»Р°РіРµСЂСЏ.
 	AI_StopProcessInfos(self);
 };
 
@@ -67,14 +67,14 @@ func int Info_TPL_1405_GorNaRan_Condition()
 
 func void Info_TPL_1405_GorNaRan_Info()
 {
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_01");	//Куда ты собрался? Здесь проход запрещен.
-	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_02");	//Что здесь происходит?
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03");	//И ты еще спрашиваешь? Встань на колени и моли Спящего о прощении, настал миг его пробуждения и час расплаты для всех неверных. Будут они стерты с лица земли.
-	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04");	//Я же просто хотел посмотреть.
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_01");	//РљСѓРґР° С‚С‹ СЃРѕР±СЂР°Р»СЃСЏ? Р—РґРµСЃСЊ РїСЂРѕС…РѕРґ Р·Р°РїСЂРµС‰РµРЅ.
+	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_02");	//Р§С‚Рѕ Р·РґРµСЃСЊ РїСЂРѕРёСЃС…РѕРґРёС‚?
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_03");	//Р С‚С‹ РµС‰Рµ СЃРїСЂР°С€РёРІР°РµС€СЊ? Р’СЃС‚Р°РЅСЊ РЅР° РєРѕР»РµРЅРё Рё РјРѕР»Рё РЎРїСЏС‰РµРіРѕ Рѕ РїСЂРѕС‰РµРЅРёРё, РЅР°СЃС‚Р°Р» РјРёРі РµРіРѕ РїСЂРѕР±СѓР¶РґРµРЅРёСЏ Рё С‡Р°СЃ СЂР°СЃРїР»Р°С‚С‹ РґР»СЏ РІСЃРµС… РЅРµРІРµСЂРЅС‹С…. Р‘СѓРґСѓС‚ РѕРЅРё СЃС‚РµСЂС‚С‹ СЃ Р»РёС†Р° Р·РµРјР»Рё.
+	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_04");	//РЇ Р¶Рµ РїСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РїРѕСЃРјРѕС‚СЂРµС‚СЊ.
 	AI_DrawWeapon(self);
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05");	//Ты, жалкий червь! Ты не можешь осквернять это место, ибо момент пробуждения Спящего близок! Я должен буду избавить его от твоего присутствия.
-	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_06");	//Ты не сможешь остановить меня!
-	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_07");	//И это все, парень! За Спящего!
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_05");	//РўС‹, Р¶Р°Р»РєРёР№ С‡РµСЂРІСЊ! РўС‹ РЅРµ РјРѕР¶РµС€СЊ РѕСЃРєРІРµСЂРЅСЏС‚СЊ СЌС‚Рѕ РјРµСЃС‚Рѕ, РёР±Рѕ РјРѕРјРµРЅС‚ РїСЂРѕР±СѓР¶РґРµРЅРёСЏ РЎРїСЏС‰РµРіРѕ Р±Р»РёР·РѕРє! РЇ РґРѕР»Р¶РµРЅ Р±СѓРґСѓ РёР·Р±Р°РІРёС‚СЊ РµРіРѕ РѕС‚ С‚РІРѕРµРіРѕ РїСЂРёСЃСѓС‚СЃС‚РІРёСЏ.
+	AI_Output(other,self,"Info_TPL_1405_GorNaRan_Info_15_06");	//РўС‹ РЅРµ СЃРјРѕР¶РµС€СЊ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ РјРµРЅСЏ!
+	AI_Output(self,other,"Info_TPL_1405_GorNaRan_Info_13_07");	//Р СЌС‚Рѕ РІСЃРµ, РїР°СЂРµРЅСЊ! Р—Р° РЎРїСЏС‰РµРіРѕ!
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,hero);
 	AI_StartState(self,ZS_Attack,1,"");

@@ -50,30 +50,30 @@ func void DIA_BaalTyon_NoTalk_Info()
 	Info_AddChoice(DIA_BaalTyon_NoTalk,DIALOG_ENDE,DIA_BaalTyon_NoTalk_ENDE);
 	if((Npc_HasItems(other,SpecialJoint) >= 1) && (Npc_GetTrueGuild(hero) == GIL_None) && (Kapitel < 2))
 	{
-		Info_AddChoice(DIA_BaalTyon_NoTalk,"(ïðåäëîæèòü óëó÷øåííûé 'Çîâ ìå÷òû')",DIA_BaalTyon_SpecialJoint);
+		Info_AddChoice(DIA_BaalTyon_NoTalk,"(Ð¿Ñ€ÐµÐ´Ð»Ð¾Ð¶Ð¸Ñ‚ÑŒ ÑƒÐ»ÑƒÑ‡ÑˆÐµÐ½Ð½Ñ‹Ð¹ 'Ð—Ð¾Ð² Ð¼ÐµÑ‡Ñ‚Ñ‹')",DIA_BaalTyon_SpecialJoint);
 	};
-	Info_AddChoice(DIA_BaalTyon_NoTalk,"Ñ òîáîé âñå íîðìàëüíî, ïðèÿòåëü?",DIA_BaalTyon_NoTalk_Imp);
-	Info_AddChoice(DIA_BaalTyon_NoTalk,"Äà ïðåáóäåò ñ òîáîé Ñïÿùèé!",DIA_BaalTyon_NoTalk_Sleeper);
-	Info_AddChoice(DIA_BaalTyon_NoTalk,"Ïðèâåò! ß çäåñü íîâåíüêèé!",DIA_BaalTyon_NoTalk_Hi);
+	Info_AddChoice(DIA_BaalTyon_NoTalk,"Ð¡ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð²ÑÐµ Ð½Ð¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ð¾, Ð¿Ñ€Ð¸ÑÑ‚ÐµÐ»ÑŒ?",DIA_BaalTyon_NoTalk_Imp);
+	Info_AddChoice(DIA_BaalTyon_NoTalk,"Ð”Ð° Ð¿Ñ€ÐµÐ±ÑƒÐ´ÐµÑ‚ Ñ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð¡Ð¿ÑÑ‰Ð¸Ð¹!",DIA_BaalTyon_NoTalk_Sleeper);
+	Info_AddChoice(DIA_BaalTyon_NoTalk,"ÐŸÑ€Ð¸Ð²ÐµÑ‚! Ð¯ Ð·Ð´ÐµÑÑŒ Ð½Ð¾Ð²ÐµÐ½ÑŒÐºÐ¸Ð¹!",DIA_BaalTyon_NoTalk_Hi);
 };
 
 func void DIA_BaalTyon_NoTalk_Hi()
 {
-	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Hi_15_00");	//Ïðèâåò! ß çäåñü íîâåíüêèé!
+	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Hi_15_00");	//ÐŸÑ€Ð¸Ð²ÐµÑ‚! Ð¯ Ð·Ð´ÐµÑÑŒ Ð½Ð¾Ð²ÐµÐ½ÑŒÐºÐ¸Ð¹!
 	AI_Output(self,other,"DIA_BaalTyon_NoTalk_Hi_11_01");	//
 	BaalTyon_Sakrileg = TRUE;
 };
 
 func void DIA_BaalTyon_NoTalk_Sleeper()
 {
-	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Sleeper_15_00");	//Äà ïðåáóäåò ñ òîáîé Ñïÿùèé!
+	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Sleeper_15_00");	//Ð”Ð° Ð¿Ñ€ÐµÐ±ÑƒÐ´ÐµÑ‚ Ñ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð¡Ð¿ÑÑ‰Ð¸Ð¹!
 	AI_Output(self,other,"DIA_BaalTyon_NoTalk_Sleeper_11_01");	//
 	BaalTyon_Sakrileg = TRUE;
 };
 
 func void DIA_BaalTyon_NoTalk_Imp()
 {
-	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00");	//Ñ òîáîé âñå íîðìàëüíî, ïðèÿòåëü?
+	AI_Output(other,self,"DIA_BaalTyon_NoTalk_Imp_15_00");	//Ð¡ Ñ‚Ð¾Ð±Ð¾Ð¹ Ð²ÑÐµ Ð½Ð¾Ñ€Ð¼Ð°Ð»ÑŒÐ½Ð¾, Ð¿Ñ€Ð¸ÑÑ‚ÐµÐ»ÑŒ?
 	AI_Output(self,other,"DIA_BaalTyon_NoTalk_Imp_11_01");	//
 	BaalTyon_Sakrileg = TRUE;
 };
@@ -85,8 +85,8 @@ func void DIA_BaalTyon_NoTalk_ENDE()
 
 func void DIA_BaalTyon_SpecialJoint()
 {
-	b_printtrademsg1("Îòäàí óëó÷øåííûé 'Çîâ ìå÷òû'.");
-	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00");	//Âîò, Ó÷èòåëü! Ñêðîìíûé ïîäàðîê îò âåðíîãî ó÷åíèêà...
+	b_printtrademsg1("ÐžÑ‚Ð´Ð°Ð½ ÑƒÐ»ÑƒÑ‡ÑˆÐµÐ½Ð½Ñ‹Ð¹ 'Ð—Ð¾Ð² Ð¼ÐµÑ‡Ñ‚Ñ‹'.");
+	AI_Output(other,self,"DIA_BaalTyon_SpecialJoint_15_00");	//Ð’Ð¾Ñ‚, Ð£Ñ‡Ð¸Ñ‚ÐµÐ»ÑŒ! Ð¡ÐºÑ€Ð¾Ð¼Ð½Ñ‹Ð¹ Ð¿Ð¾Ð´Ð°Ñ€Ð¾Ðº Ð¾Ñ‚ Ð²ÐµÑ€Ð½Ð¾Ð³Ð¾ ÑƒÑ‡ÐµÐ½Ð¸ÐºÐ°...
 	AI_StopProcessInfos(self);
 	B_GiveInvItems(hero,self,SpecialJoint,1);
 	if(C_BodyStateContains(self,BS_SIT))
@@ -123,18 +123,18 @@ func int DIA_BaalTyon_Vision_Condition()
 
 func void DIA_BaalTyon_Vision_Info()
 {
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_00");	//Âî èìÿ Ñïÿùåãî! Ó ìåíÿ áûëî âèäåíèå!
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_01");	//Íåâåðîÿòíî! ß âèäåë, êàê ê íàì ïðèñîåäèíèëñÿ íîâûé áðàò. Îí íå áûë ïîõîæ íà òåõ, êòî ïðèõîäèë ê íàì äî ýòîãî.
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02");	//Îí ÷òî-òî äåëàë ñ íàìè... â ðóêå åãî áûë ìå÷, è îí ñïóñêàëñÿ ïî øèðîêîé ëåñòíèöå. Ïîñëå ýòîãî ÿ áîëüøå íè÷åãî íå óâèäåë.
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_03");	//È åùå îí áûë ïîõîæ íà òåáÿ. Êòî òû? ×òî òåáå çäåñü íóæíî?
-	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04");	//ß âñåãî ëèøü ñêðîìíûé ñëóãà Ñïÿùåãî...
-	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05");	//Èäè ê Êîð Ãàëîìó. Îí çíàåò, ÷òî äåëàòü.
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_00");	//Ð’Ð¾ Ð¸Ð¼Ñ Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾! Ð£ Ð¼ÐµÐ½Ñ Ð±Ñ‹Ð»Ð¾ Ð²Ð¸Ð´ÐµÐ½Ð¸Ðµ!
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_01");	//ÐÐµÐ²ÐµÑ€Ð¾ÑÑ‚Ð½Ð¾! Ð¯ Ð²Ð¸Ð´ÐµÐ», ÐºÐ°Ðº Ðº Ð½Ð°Ð¼ Ð¿Ñ€Ð¸ÑÐ¾ÐµÐ´Ð¸Ð½Ð¸Ð»ÑÑ Ð½Ð¾Ð²Ñ‹Ð¹ Ð±Ñ€Ð°Ñ‚. ÐžÐ½ Ð½Ðµ Ð±Ñ‹Ð» Ð¿Ð¾Ñ…Ð¾Ð¶ Ð½Ð° Ñ‚ÐµÑ…, ÐºÑ‚Ð¾ Ð¿Ñ€Ð¸Ñ…Ð¾Ð´Ð¸Ð» Ðº Ð½Ð°Ð¼ Ð´Ð¾ ÑÑ‚Ð¾Ð³Ð¾.
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_02");	//ÐžÐ½ Ñ‡Ñ‚Ð¾-Ñ‚Ð¾ Ð´ÐµÐ»Ð°Ð» Ñ Ð½Ð°Ð¼Ð¸... Ð² Ñ€ÑƒÐºÐµ ÐµÐ³Ð¾ Ð±Ñ‹Ð» Ð¼ÐµÑ‡, Ð¸ Ð¾Ð½ ÑÐ¿ÑƒÑÐºÐ°Ð»ÑÑ Ð¿Ð¾ ÑˆÐ¸Ñ€Ð¾ÐºÐ¾Ð¹ Ð»ÐµÑÑ‚Ð½Ð¸Ñ†Ðµ. ÐŸÐ¾ÑÐ»Ðµ ÑÑ‚Ð¾Ð³Ð¾ Ñ Ð±Ð¾Ð»ÑŒÑˆÐµ Ð½Ð¸Ñ‡ÐµÐ³Ð¾ Ð½Ðµ ÑƒÐ²Ð¸Ð´ÐµÐ».
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_03");	//Ð˜ ÐµÑ‰Ðµ Ð¾Ð½ Ð±Ñ‹Ð» Ð¿Ð¾Ñ…Ð¾Ð¶ Ð½Ð° Ñ‚ÐµÐ±Ñ. ÐšÑ‚Ð¾ Ñ‚Ñ‹? Ð§Ñ‚Ð¾ Ñ‚ÐµÐ±Ðµ Ð·Ð´ÐµÑÑŒ Ð½ÑƒÐ¶Ð½Ð¾?
+	AI_Output(other,self,"DIA_BaalTyon_Vision_15_04");	//Ð¯ Ð²ÑÐµÐ³Ð¾ Ð»Ð¸ÑˆÑŒ ÑÐºÑ€Ð¾Ð¼Ð½Ñ‹Ð¹ ÑÐ»ÑƒÐ³Ð° Ð¡Ð¿ÑÑ‰ÐµÐ³Ð¾...
+	AI_Output(self,other,"DIA_BaalTyon_Vision_11_05");	//Ð˜Ð´Ð¸ Ðº ÐšÐ¾Ñ€ Ð“Ð°Ð»Ð¾Ð¼Ñƒ. ÐžÐ½ Ð·Ð½Ð°ÐµÑ‚, Ñ‡Ñ‚Ð¾ Ð´ÐµÐ»Ð°Ñ‚ÑŒ.
 	self.npcType = npctype_main;
 	self.flags = 0;
 	BaalTyon_Ansprechbar = FALSE;
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinPsi,LOG_RUNNING);
-	B_LogEntry(CH1_JoinPsi,"Áëàãîäàðÿ ìîåìó îñîáîìó ïîäàðêó Èäîëà Òèîíà ïîñåòèëî âèäåíèå! Îí õî÷åò, ÷òîáû ÿ ïîãîâîðèë ñ Êîð Ãàëîìîì!");
+	B_LogEntry(CH1_JoinPsi,"Ð‘Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ñ Ð¼Ð¾ÐµÐ¼Ñƒ Ð¾ÑÐ¾Ð±Ð¾Ð¼Ñƒ Ð¿Ð¾Ð´Ð°Ñ€ÐºÑƒ Ð˜Ð´Ð¾Ð»Ð° Ð¢Ð¸Ð¾Ð½Ð° Ð¿Ð¾ÑÐµÑ‚Ð¸Ð»Ð¾ Ð²Ð¸Ð´ÐµÐ½Ð¸Ðµ! ÐžÐ½ Ñ…Ð¾Ñ‡ÐµÑ‚, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ñ Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ñ ÐšÐ¾Ñ€ Ð“Ð°Ð»Ð¾Ð¼Ð¾Ð¼!");
 	B_GiveXP(XP_ImpressedBaalTyon);
 	AI_StopProcessInfos(self);
 };

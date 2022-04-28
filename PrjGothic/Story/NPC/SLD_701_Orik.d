@@ -1,7 +1,7 @@
 
 instance SLD_701_Orik(Npc_Default)
 {
-	name[0] = "Îðèê";
+	name[0] = "ÐžÑ€Ð¸Ðº";
 	npcType = npctype_ambient;
 	guild = GIL_SLD;
 	level = 18;

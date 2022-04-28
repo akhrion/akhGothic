@@ -10,7 +10,7 @@ instance Schutzring_Feuer1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Feuer1;
 	on_unequip = UnEquip_Schutzring_Feuer1;
-	description = "Кольцо защиты от огня";
+	description = "РљРѕР»СЊС†Рѕ Р·Р°С‰РёС‚С‹ РѕС‚ РѕРіРЅСЏ";
 	text[2] = NAME_Prot_Fire;
 	count[2] = 3;
 	text[5] = NAME_Value;
@@ -40,7 +40,7 @@ instance Schutzring_Feuer2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Feuer2;
 	on_unequip = UnEquip_Schutzring_Feuer2;
-	description = "Защита от огня";
+	description = "Р—Р°С‰РёС‚Р° РѕС‚ РѕРіРЅСЏ";
 	text[2] = NAME_Prot_Fire;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -70,7 +70,7 @@ instance Schutzring_Geschosse1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Geschosse1;
 	on_unequip = UnEquip_Schutzring_Geschosse1;
-	description = "Кольцо деревянной кожи";
+	description = "РљРѕР»СЊС†Рѕ РґРµСЂРµРІСЏРЅРЅРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Point;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -100,7 +100,7 @@ instance Schutzring_Geschosse2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Geschosse2;
 	on_unequip = UnEquip_Schutzring_Geschosse2;
-	description = "Кольцо каменной кожи";
+	description = "РљРѕР»СЊС†Рѕ РєР°РјРµРЅРЅРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Point;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -130,7 +130,7 @@ instance Schutzring_Waffen1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Waffen1;
 	on_unequip = UnEquip_Schutzring_Waffen1;
-	description = "Кольцо железной кожи";
+	description = "РљРѕР»СЊС†Рѕ Р¶РµР»РµР·РЅРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -162,7 +162,7 @@ instance Schutzring_Waffen2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Waffen2;
 	on_unequip = UnEquip_Schutzring_Waffen2;
-	description = "Кольцо бронированной кожи";
+	description = "РљРѕР»СЊС†Рѕ Р±СЂРѕРЅРёСЂРѕРІР°РЅРЅРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -194,7 +194,7 @@ instance Schutzring_Magie1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Magie1;
 	on_unequip = UnEquip_Schutzring_Magie1;
-	description = "Кольцо силы духа";
+	description = "РљРѕР»СЊС†Рѕ СЃРёР»С‹ РґСѓС…Р°";
 	text[2] = NAME_Prot_Magic;
 	count[2] = 1;
 	text[5] = NAME_Value;
@@ -224,7 +224,7 @@ instance Schutzring_Magie2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Magie2;
 	on_unequip = UnEquip_Schutzring_Magie2;
-	description = "Кольцо защиты";
+	description = "РљРѕР»СЊС†Рѕ Р·Р°С‰РёС‚С‹";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 3;
 	text[5] = NAME_Value;
@@ -256,7 +256,7 @@ instance Schutzring_Magie1_Fire1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Magie1_Fire1;
 	on_unequip = UnEquip_Schutzring_Magie1_Fire1;
-	description = "Кольцо очищения";
+	description = "РљРѕР»СЊС†Рѕ РѕС‡РёС‰РµРЅРёСЏ";
 	text[2] = NAME_Prot_Magic;
 	count[2] = 1;
 	text[3] = NAME_Prot_Fire;
@@ -290,7 +290,7 @@ instance Schutzring_Magie2_Fire2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Magie2_Fire2;
 	on_unequip = UnEquip_Schutzring_Magie2_Fire2;
-	description = "Кольцо неуязвимости";
+	description = "РљРѕР»СЊС†Рѕ РЅРµСѓСЏР·РІРёРјРѕСЃС‚Рё";
 	text[2] = NAME_Prot_Magic;
 	count[2] = 3;
 	text[3] = NAME_Prot_Fire;
@@ -324,7 +324,7 @@ instance Schutzring_Geschosse1_Waffen1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Geschosse1_Waffen1;
 	on_unequip = UnEquip_Schutzring_Geschosse1_Waffen1;
-	description = "Кольцо стойкости";
+	description = "РљРѕР»СЊС†Рѕ СЃС‚РѕР№РєРѕСЃС‚Рё";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 5;
 	text[3] = NAME_Prot_Point;
@@ -360,7 +360,7 @@ instance Schutzring_Geschosse2_Waffen2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Geschosse2_Waffen2;
 	on_unequip = UnEquip_Schutzring_Geschosse2_Waffen2;
-	description = "Кольцо неприкосновенности";
+	description = "РљРѕР»СЊС†Рѕ РЅРµРїСЂРёРєРѕСЃРЅРѕРІРµРЅРЅРѕСЃС‚Рё";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 10;
 	text[3] = NAME_Prot_Point;
@@ -396,7 +396,7 @@ instance Schutzring_Total1(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Total1;
 	on_unequip = UnEquip_Schutzring_Total1;
-	description = "Кольцо неприкосновенности";
+	description = "РљРѕР»СЊС†Рѕ РЅРµРїСЂРёРєРѕСЃРЅРѕРІРµРЅРЅРѕСЃС‚Рё";
 	text[1] = NAME_Prot_Magic;
 	count[1] = 1;
 	text[2] = NAME_Prot_Fire;
@@ -440,7 +440,7 @@ instance Schutzring_Total2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzring_Total2;
 	on_unequip = UnEquip_Schutzring_Total2;
-	description = "Кольцо защиты";
+	description = "РљРѕР»СЊС†Рѕ Р·Р°С‰РёС‚С‹";
 	text[1] = NAME_Prot_Magic;
 	count[1] = 3;
 	text[2] = NAME_Prot_Fire;
@@ -484,7 +484,7 @@ instance Ring_des_Geschicks(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_des_Geschicks;
 	on_unequip = UnEquip_Ring_des_Geschicks;
-	description = "Кольцо ловкости";
+	description = "РљРѕР»СЊС†Рѕ Р»РѕРІРєРѕСЃС‚Рё";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -514,7 +514,7 @@ instance Ring_des_Geschicks2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_des_Geschicks2;
 	on_unequip = UnEquip_Ring_des_Geschicks2;
-	description = "Кольцо ловкости";
+	description = "РљРѕР»СЊС†Рѕ Р»РѕРІРєРѕСЃС‚Рё";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -544,7 +544,7 @@ instance Ring_des_Lebens(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_des_Lebens;
 	on_unequip = UnEquip_Ring_des_Lebens;
-	description = "Кольцо жизненной силы";
+	description = "РљРѕР»СЊС†Рѕ Р¶РёР·РЅРµРЅРЅРѕР№ СЃРёР»С‹";
 	text[2] = NAME_Bonus_HpMax;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -583,7 +583,7 @@ instance Ring_des_Lebens2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_des_Lebens2;
 	on_unequip = UnEquip_Ring_des_Lebens2;
-	description = "Кольцо здоровья";
+	description = "РљРѕР»СЊС†Рѕ Р·РґРѕСЂРѕРІСЊСЏ";
 	text[2] = NAME_Bonus_HpMax;
 	count[2] = 20;
 	text[5] = NAME_Value;
@@ -622,7 +622,7 @@ instance Staerkering(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Staerkering;
 	on_unequip = UnEquip_Staerkering;
-	description = "Кольцо силы";
+	description = "РљРѕР»СЊС†Рѕ СЃРёР»С‹";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -652,7 +652,7 @@ instance Staerkering2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Staerkering2;
 	on_unequip = UnEquip_Staerkering2;
-	description = "Кольцо силы";
+	description = "РљРѕР»СЊС†Рѕ СЃРёР»С‹";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -682,7 +682,7 @@ instance Ring_der_Magie(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_der_Magie;
 	on_unequip = UnEquip_Ring_der_Magie;
-	description = "Кольцо магической энергии";
+	description = "РљРѕР»СЊС†Рѕ РјР°РіРёС‡РµСЃРєРѕР№ СЌРЅРµСЂРіРёРё";
 	text[2] = NAME_Bonus_ManaMax;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -721,7 +721,7 @@ instance Ring_der_Erleuchtung(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Ring_der_Erleuchtung;
 	on_unequip = UnEquip_Ring_der_Erleuchtung;
-	description = "Кольцо просвещения";
+	description = "РљРѕР»СЊС†Рѕ РїСЂРѕСЃРІРµС‰РµРЅРёСЏ";
 	text[2] = NAME_Bonus_ManaMax;
 	count[2] = 15;
 	text[3] = NAME_Bonus_HpMax;
@@ -773,7 +773,7 @@ instance Machtring(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Machtring;
 	on_unequip = UnEquip_Machtring;
-	description = "Кольцо силы";
+	description = "РљРѕР»СЊС†Рѕ СЃРёР»С‹";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 4;
 	text[3] = NAME_Bonus_Dex;
@@ -808,8 +808,8 @@ instance RingOfTemporalisPower(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_RingOfTemporalisPower;
 	on_unequip = UnEquip_RingOfTemporalisPower;
-	description = "Кольцо временной мощи";
-	text[2] = "Безграничная сила";
+	description = "РљРѕР»СЊС†Рѕ РІСЂРµРјРµРЅРЅРѕР№ РјРѕС‰Рё";
+	text[2] = "Р‘РµР·РіСЂР°РЅРёС‡РЅР°СЏ СЃРёР»Р°";
 	count[2] = -1;
 	text[5] = NAME_Value;
 	count[5] = value;
@@ -827,7 +827,7 @@ func void Equip_RingOfTemporalisPower()
 	}
 	else
 	{
-		B_Print("Кажется кольцо утратило свою силу..");
+		B_Print("РљР°Р¶РµС‚СЃСЏ РєРѕР»СЊС†Рѕ СѓС‚СЂР°С‚РёР»Рѕ СЃРІРѕСЋ СЃРёР»Сѓ..");
 	};
 };
 

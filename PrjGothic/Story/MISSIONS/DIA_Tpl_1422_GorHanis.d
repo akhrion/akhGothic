@@ -28,7 +28,7 @@ instance Info_GorHanis_What(C_Info)
 	condition = Info_GorHanis_What_Condition;
 	information = Info_GorHanis_What_Info;
 	permanent = 0;
-	description = "Что ты здесь делаешь?";
+	description = "Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?";
 };
 
 
@@ -39,8 +39,8 @@ func int Info_GorHanis_What_Condition()
 
 func void Info_GorHanis_What_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_What_15_00");	//Что ты здесь делаешь?
-	AI_Output(self,other,"Info_GorHanis_What_08_01");	//Я? Я сражаюсь во славу Спящего!
+	AI_Output(other,self,"Info_GorHanis_What_15_00");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?
+	AI_Output(self,other,"Info_GorHanis_What_08_01");	//РЇ? РЇ СЃСЂР°Р¶Р°СЋСЃСЊ РІРѕ СЃР»Р°РІСѓ РЎРїСЏС‰РµРіРѕ!
 };
 
 
@@ -51,7 +51,7 @@ instance Info_GorHanis_Arena(C_Info)
 	condition = Info_GorHanis_Arena_Condition;
 	information = Info_GorHanis_Arena_Info;
 	permanent = 0;
-	description = "Ты сражаешься на арене?";
+	description = "РўС‹ СЃСЂР°Р¶Р°РµС€СЊСЃСЏ РЅР° Р°СЂРµРЅРµ?";
 };
 
 
@@ -65,9 +65,9 @@ func int Info_GorHanis_Arena_Condition()
 
 func void Info_GorHanis_Arena_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_Arena_15_00");	//Ты сражаешься на арене?
-	AI_Output(self,other,"Info_GorHanis_Arena_08_01");	//Мои учителя из Братства прислали меня сюда сражаться во славу Спящего.
-	AI_Output(self,other,"Info_GorHanis_Arena_08_02");	//Я удостоился этой чести, чтобы показать неверным, какой силой меня наделил Спящий!
+	AI_Output(other,self,"Info_GorHanis_Arena_15_00");	//РўС‹ СЃСЂР°Р¶Р°РµС€СЊСЃСЏ РЅР° Р°СЂРµРЅРµ?
+	AI_Output(self,other,"Info_GorHanis_Arena_08_01");	//РњРѕРё СѓС‡РёС‚РµР»СЏ РёР· Р‘СЂР°С‚СЃС‚РІР° РїСЂРёСЃР»Р°Р»Рё РјРµРЅСЏ СЃСЋРґР° СЃСЂР°Р¶Р°С‚СЊСЃСЏ РІРѕ СЃР»Р°РІСѓ РЎРїСЏС‰РµРіРѕ.
+	AI_Output(self,other,"Info_GorHanis_Arena_08_02");	//РЇ СѓРґРѕСЃС‚РѕРёР»СЃСЏ СЌС‚РѕР№ С‡РµСЃС‚Рё, С‡С‚РѕР±С‹ РїРѕРєР°Р·Р°С‚СЊ РЅРµРІРµСЂРЅС‹Рј, РєР°РєРѕР№ СЃРёР»РѕР№ РјРµРЅСЏ РЅР°РґРµР»РёР» РЎРїСЏС‰РёР№!
 };
 
 
@@ -78,7 +78,7 @@ instance Info_GorHanis_Sleeper(C_Info)
 	condition = Info_GorHanis_Sleeper_Condition;
 	information = Info_GorHanis_Sleeper_Info;
 	permanent = 0;
-	description = "Кто он, этот Спящий?";
+	description = "РљС‚Рѕ РѕРЅ, СЌС‚РѕС‚ РЎРїСЏС‰РёР№?";
 };
 
 
@@ -92,11 +92,11 @@ func int Info_GorHanis_Sleeper_Condition()
 
 func void Info_GorHanis_Sleeper_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_Sleeper_15_00");	//Кто он, этот Спящий?
-	AI_Output(self,other,"Info_GorHanis_Sleeper_08_01");	//В нашем лагере ты найдешь жрецов, которые смогут рассказать тебе больше, чем я.
-	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02");	//Могу сказать тебе только, что Спящий станет нашим спасителем. Он привел нас сюда и он же выведет нас отсюда.
-	AI_Output(other,self,"Info_GorHanis_Sleeper_15_03");	//Ты хочешь сказать, что этот бог освободит вас отсюда?
-	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04");	//Да! И скоро наше ожидание закончится. Уже идут приготовления к великой Церемонии.
+	AI_Output(other,self,"Info_GorHanis_Sleeper_15_00");	//РљС‚Рѕ РѕРЅ, СЌС‚РѕС‚ РЎРїСЏС‰РёР№?
+	AI_Output(self,other,"Info_GorHanis_Sleeper_08_01");	//Р’ РЅР°С€РµРј Р»Р°РіРµСЂРµ С‚С‹ РЅР°Р№РґРµС€СЊ Р¶СЂРµС†РѕРІ, РєРѕС‚РѕСЂС‹Рµ СЃРјРѕРіСѓС‚ СЂР°СЃСЃРєР°Р·Р°С‚СЊ С‚РµР±Рµ Р±РѕР»СЊС€Рµ, С‡РµРј СЏ.
+	AI_Output(self,other,"Info_GorHanis_Sleeper_08_02");	//РњРѕРіСѓ СЃРєР°Р·Р°С‚СЊ С‚РµР±Рµ С‚РѕР»СЊРєРѕ, С‡С‚Рѕ РЎРїСЏС‰РёР№ СЃС‚Р°РЅРµС‚ РЅР°С€РёРј СЃРїР°СЃРёС‚РµР»РµРј. РћРЅ РїСЂРёРІРµР» РЅР°СЃ СЃСЋРґР° Рё РѕРЅ Р¶Рµ РІС‹РІРµРґРµС‚ РЅР°СЃ РѕС‚СЃСЋРґР°.
+	AI_Output(other,self,"Info_GorHanis_Sleeper_15_03");	//РўС‹ С…РѕС‡РµС€СЊ СЃРєР°Р·Р°С‚СЊ, С‡С‚Рѕ СЌС‚РѕС‚ Р±РѕРі РѕСЃРІРѕР±РѕРґРёС‚ РІР°СЃ РѕС‚СЃСЋРґР°?
+	AI_Output(self,other,"Info_GorHanis_Sleeper_08_04");	//Р”Р°! Р СЃРєРѕСЂРѕ РЅР°С€Рµ РѕР¶РёРґР°РЅРёРµ Р·Р°РєРѕРЅС‡РёС‚СЃСЏ. РЈР¶Рµ РёРґСѓС‚ РїСЂРёРіРѕС‚РѕРІР»РµРЅРёСЏ Рє РІРµР»РёРєРѕР№ Р¦РµСЂРµРјРѕРЅРёРё.
 };
 
 
@@ -107,7 +107,7 @@ instance Info_GorHanis_Summoning(C_Info)
 	condition = Info_GorHanis_Summoning_Condition;
 	information = Info_GorHanis_Summoning_Info;
 	permanent = 0;
-	description = "Ты можешь рассказать о Церемонии?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ Рѕ Р¦РµСЂРµРјРѕРЅРёРё?";
 };
 
 
@@ -121,9 +121,9 @@ func int Info_GorHanis_Summoning_Condition()
 
 func void Info_GorHanis_Summoning_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_Summoning_15_00");	//Ты можешь рассказать о Церемонии?
-	AI_Output(self,other,"Info_GorHanis_Summoning_08_01");	//Наши пророки говорят, что на великой Церемонии мы сможем разбудить Спящего, и он нам даст ключ к свободе!
-	AI_Output(self,other,"Info_GorHanis_Summoning_08_02");	//Если ты хочешь узнать больше, иди в наш лагерь.
+	AI_Output(other,self,"Info_GorHanis_Summoning_15_00");	//РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ Рѕ Р¦РµСЂРµРјРѕРЅРёРё?
+	AI_Output(self,other,"Info_GorHanis_Summoning_08_01");	//РќР°С€Рё РїСЂРѕСЂРѕРєРё РіРѕРІРѕСЂСЏС‚, С‡С‚Рѕ РЅР° РІРµР»РёРєРѕР№ Р¦РµСЂРµРјРѕРЅРёРё РјС‹ СЃРјРѕР¶РµРј СЂР°Р·Р±СѓРґРёС‚СЊ РЎРїСЏС‰РµРіРѕ, Рё РѕРЅ РЅР°Рј РґР°СЃС‚ РєР»СЋС‡ Рє СЃРІРѕР±РѕРґРµ!
+	AI_Output(self,other,"Info_GorHanis_Summoning_08_02");	//Р•СЃР»Рё С‚С‹ С…РѕС‡РµС€СЊ СѓР·РЅР°С‚СЊ Р±РѕР»СЊС€Рµ, РёРґРё РІ РЅР°С€ Р»Р°РіРµСЂСЊ.
 };
 
 
@@ -134,7 +134,7 @@ instance Info_GorHanis_WayToST(C_Info)
 	condition = Info_GorHanis_WayToST_Condition;
 	information = Info_GorHanis_WayToST_Info;
 	permanent = 0;
-	description = "Как я найду дорогу к вашему лагерю?";
+	description = "РљР°Рє СЏ РЅР°Р№РґСѓ РґРѕСЂРѕРіСѓ Рє РІР°С€РµРјСѓ Р»Р°РіРµСЂСЋ?";
 };
 
 
@@ -148,8 +148,8 @@ func int Info_GorHanis_WayToST_Condition()
 
 func void Info_GorHanis_WayToST_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_WayToST_15_00");	//Как я найду дорогу к вашему лагерю?
-	AI_Output(self,other,"Info_GorHanis_WayToST_08_01");	//В Старом лагере всегда можно найти несколько наших послушников, которые провожают новообращенных в наш лагерь. Найди кого-нибудь из них!
+	AI_Output(other,self,"Info_GorHanis_WayToST_15_00");	//РљР°Рє СЏ РЅР°Р№РґСѓ РґРѕСЂРѕРіСѓ Рє РІР°С€РµРјСѓ Р»Р°РіРµСЂСЋ?
+	AI_Output(self,other,"Info_GorHanis_WayToST_08_01");	//Р’ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ РІСЃРµРіРґР° РјРѕР¶РЅРѕ РЅР°Р№С‚Рё РЅРµСЃРєРѕР»СЊРєРѕ РЅР°С€РёС… РїРѕСЃР»СѓС€РЅРёРєРѕРІ, РєРѕС‚РѕСЂС‹Рµ РїСЂРѕРІРѕР¶Р°СЋС‚ РЅРѕРІРѕРѕР±СЂР°С‰РµРЅРЅС‹С… РІ РЅР°С€ Р»Р°РіРµСЂСЊ. РќР°Р№РґРё РєРѕРіРѕ-РЅРёР±СѓРґСЊ РёР· РЅРёС…!
 };
 
 
@@ -160,7 +160,7 @@ instance Info_GorHanis_Charge(C_Info)
 	condition = Info_GorHanis_Charge_Condition;
 	information = Info_GorHanis_Charge_Info;
 	permanent = 0;
-	description = "Я хочу сразиться с тобой на арене!";
+	description = "РЇ С…РѕС‡Сѓ СЃСЂР°Р·РёС‚СЊСЃСЏ СЃ С‚РѕР±РѕР№ РЅР° Р°СЂРµРЅРµ!";
 };
 
 
@@ -174,21 +174,21 @@ func int Info_GorHanis_Charge_Condition()
 
 func void Info_GorHanis_Charge_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_Charge_15_00");	//Я хочу сразиться с тобой на арене!
+	AI_Output(other,self,"Info_GorHanis_Charge_15_00");	//РЇ С…РѕС‡Сѓ СЃСЂР°Р·РёС‚СЊСЃСЏ СЃ С‚РѕР±РѕР№ РЅР° Р°СЂРµРЅРµ!
 	if(Npc_GetTrueGuild(hero) == GIL_None)
 	{
-		AI_Output(self,other,"Info_GorHanis_Charge_08_01");	//Убийство таких новичков перед толпой зрителей не прибавит славы Спящего.
-		AI_Output(self,other,"Info_GorHanis_Charge_08_02");	//Я смогу сразиться с тобой только тогда, когда ты будешь достойным противником.
-		AI_Output(self,other,"Info_GorHanis_Charge_08_03");	//Но я уверен, что бойцы из Старого или Нового лагерей не откажутся от твоего предложения. Они не отличаются высокими моральными принципами.
+		AI_Output(self,other,"Info_GorHanis_Charge_08_01");	//РЈР±РёР№СЃС‚РІРѕ С‚Р°РєРёС… РЅРѕРІРёС‡РєРѕРІ РїРµСЂРµРґ С‚РѕР»РїРѕР№ Р·СЂРёС‚РµР»РµР№ РЅРµ РїСЂРёР±Р°РІРёС‚ СЃР»Р°РІС‹ РЎРїСЏС‰РµРіРѕ.
+		AI_Output(self,other,"Info_GorHanis_Charge_08_02");	//РЇ СЃРјРѕРіСѓ СЃСЂР°Р·РёС‚СЊСЃСЏ СЃ С‚РѕР±РѕР№ С‚РѕР»СЊРєРѕ С‚РѕРіРґР°, РєРѕРіРґР° С‚С‹ Р±СѓРґРµС€СЊ РґРѕСЃС‚РѕР№РЅС‹Рј РїСЂРѕС‚РёРІРЅРёРєРѕРј.
+		AI_Output(self,other,"Info_GorHanis_Charge_08_03");	//РќРѕ СЏ СѓРІРµСЂРµРЅ, С‡С‚Рѕ Р±РѕР№С†С‹ РёР· РЎС‚Р°СЂРѕРіРѕ РёР»Рё РќРѕРІРѕРіРѕ Р»Р°РіРµСЂРµР№ РЅРµ РѕС‚РєР°Р¶СѓС‚СЃСЏ РѕС‚ С‚РІРѕРµРіРѕ РїСЂРµРґР»РѕР¶РµРЅРёСЏ. РћРЅРё РЅРµ РѕС‚Р»РёС‡Р°СЋС‚СЃСЏ РІС‹СЃРѕРєРёРјРё РјРѕСЂР°Р»СЊРЅС‹РјРё РїСЂРёРЅС†РёРїР°РјРё.
 	}
 	else if(Wld_IsTime(18,30,23,10))
 	{
-		AI_Output(self,other,"SVM_8_NotNow");	//Сейчас не время.
+		AI_Output(self,other,"SVM_8_NotNow");	//РЎРµР№С‡Р°СЃ РЅРµ РІСЂРµРјСЏ.
 		AI_StopProcessInfos(self);
 	}
 	else
 	{
-		AI_Output(self,other,"SVM_8_NoLearnYoureBetter");	//Теперь ты готов!
+		AI_Output(self,other,"SVM_8_NoLearnYoureBetter");	//РўРµРїРµСЂСЊ С‚С‹ РіРѕС‚РѕРІ!
 		AI_StopProcessInfos(self);
 		HANIS_CHARGED = TRUE;
 		self.attribute[ATR_HITPOINTS] = 280;
@@ -209,7 +209,7 @@ instance Info_GorHanis_ChargeGood(C_Info)
 	condition = Info_GorHanis_ChargeGood_Condition;
 	information = Info_GorHanis_ChargeGood_Info;
 	permanent = 1;
-	description = "А теперь моей силы достаточно, чтобы сразиться с тобой?";
+	description = "Рђ С‚РµРїРµСЂСЊ РјРѕРµР№ СЃРёР»С‹ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ СЃСЂР°Р·РёС‚СЊСЃСЏ СЃ С‚РѕР±РѕР№?";
 };
 
 
@@ -223,19 +223,19 @@ func int Info_GorHanis_ChargeGood_Condition()
 
 func void Info_GorHanis_ChargeGood_Info()
 {
-	AI_Output(other,self,"Info_GorHanis_ChargeGood_15_00");	//А теперь моей силы достаточно, чтобы сразиться с тобой?
+	AI_Output(other,self,"Info_GorHanis_ChargeGood_15_00");	//Рђ С‚РµРїРµСЂСЊ РјРѕРµР№ СЃРёР»С‹ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‡С‚РѕР±С‹ СЃСЂР°Р·РёС‚СЊСЃСЏ СЃ С‚РѕР±РѕР№?
 	if(Wld_IsTime(18,30,23,10))
 	{
-		AI_Output(self,other,"SVM_8_NotNow");	//Сейчас не время.
+		AI_Output(self,other,"SVM_8_NotNow");	//РЎРµР№С‡Р°СЃ РЅРµ РІСЂРµРјСЏ.
 		AI_StopProcessInfos(self);
 	}
 	else if(Npc_GetTrueGuild(hero) == GIL_None)
 	{
-		AI_Output(self,other,"Info_GorHanis_ChargeGood_08_01");	//Нет! Ты еще недостаточно силен. Ты не можешь быть моим противником!
+		AI_Output(self,other,"Info_GorHanis_ChargeGood_08_01");	//РќРµС‚! РўС‹ РµС‰Рµ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃРёР»РµРЅ. РўС‹ РЅРµ РјРѕР¶РµС€СЊ Р±С‹С‚СЊ РјРѕРёРј РїСЂРѕС‚РёРІРЅРёРєРѕРј!
 	}
 	else
 	{
-		AI_Output(self,other,"SVM_8_NoLearnYoureBetter");	//Теперь ты готов!
+		AI_Output(self,other,"SVM_8_NoLearnYoureBetter");	//РўРµРїРµСЂСЊ С‚С‹ РіРѕС‚РѕРІ!
 		if(self.attribute[ATR_HITPOINTS] < self.attribute[ATR_HITPOINTS_MAX])
 		{
 			self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS_MAX];
@@ -285,7 +285,7 @@ func void info_gorhanis_inarena_info()
 		CreateInvItem(self,ItMw_1H_Sword_01);
 		AI_EquipBestMeleeWeapon(self);
 	};
-	AI_Output(self,other,"Info_TPL_1455_GorBoba1_08_05");	//Приготовься к встрече с Создателем!
+	AI_Output(self,other,"Info_TPL_1455_GorBoba1_08_05");	//РџСЂРёРіРѕС‚РѕРІСЊСЃСЏ Рє РІСЃС‚СЂРµС‡Рµ СЃ РЎРѕР·РґР°С‚РµР»РµРј!
 	B_ClearImmortal(self);
 	Wld_SendUntrigger("OC_ARENA_GATE");
 	AI_StopProcessInfos(self);

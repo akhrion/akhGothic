@@ -1,7 +1,7 @@
 
 instance TPL_1455_GorBoba(Npc_Default)
 {
-	name[0] = "Гор Боба";
+	name[0] = "Р“РѕСЂ Р‘РѕР±Р°";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 50;

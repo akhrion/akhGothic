@@ -23,14 +23,14 @@ func int Info_TPL_1441_FirstWarn_Condition()
 func void Info_TPL_1441_FirstWarn_Info()
 {
 	PrintGlobals(PD_MISSION);
-	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_13_01");	//Стой! Только с разрешения одного из Гуру ты можешь зайти в храм.
+	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_13_01");	//РЎС‚РѕР№! РўРѕР»СЊРєРѕ СЃ СЂР°Р·СЂРµС€РµРЅРёСЏ РѕРґРЅРѕРіРѕ РёР· Р“СѓСЂСѓ С‚С‹ РјРѕР¶РµС€СЊ Р·Р°Р№С‚Рё РІ С…СЂР°Рј.
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,TPL_1441_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 	if(Npc_KnowsInfo(hero,PC_Psionic_SEND))
 	{
 		Info_ClearChoices(Info_TPL_1441_FirstWarn);
-		Info_AddChoice(Info_TPL_1441_FirstWarn,"Сам Юберион дал мне свое высочайшее разрешение.",Info_TPL_1441_FirstWarn_Condition_YBERION);
-		Info_AddChoice(Info_TPL_1441_FirstWarn,"Послушник Лестер прислал меня. Я хочу предложить Юбериону свою помощь.",Info_TPL_1441_FirstWarn_Condition_LESTER);
+		Info_AddChoice(Info_TPL_1441_FirstWarn,"РЎР°Рј Р®Р±РµСЂРёРѕРЅ РґР°Р» РјРЅРµ СЃРІРѕРµ РІС‹СЃРѕС‡Р°Р№С€РµРµ СЂР°Р·СЂРµС€РµРЅРёРµ.",Info_TPL_1441_FirstWarn_Condition_YBERION);
+		Info_AddChoice(Info_TPL_1441_FirstWarn,"РџРѕСЃР»СѓС€РЅРёРє Р›РµСЃС‚РµСЂ РїСЂРёСЃР»Р°Р» РјРµРЅСЏ. РЇ С…РѕС‡Сѓ РїСЂРµРґР»РѕР¶РёС‚СЊ Р®Р±РµСЂРёРѕРЅСѓ СЃРІРѕСЋ РїРѕРјРѕС‰СЊ.",Info_TPL_1441_FirstWarn_Condition_LESTER);
 	}
 	else
 	{
@@ -40,15 +40,15 @@ func void Info_TPL_1441_FirstWarn_Info()
 
 func void Info_TPL_1441_FirstWarn_Condition_YBERION()
 {
-	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_YBERION_15_01");	//Сам Юберион дал мне свое высочайшее разрешение.
-	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02");	//Ты знаешь, что мы делаем с теми, кто лжет? Хорошенько подумай, если тебе дорог твой язык.
+	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_YBERION_15_01");	//РЎР°Рј Р®Р±РµСЂРёРѕРЅ РґР°Р» РјРЅРµ СЃРІРѕРµ РІС‹СЃРѕС‡Р°Р№С€РµРµ СЂР°Р·СЂРµС€РµРЅРёРµ.
+	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_YBERION_13_02");	//РўС‹ Р·РЅР°РµС€СЊ, С‡С‚Рѕ РјС‹ РґРµР»Р°РµРј СЃ С‚РµРјРё, РєС‚Рѕ Р»Р¶РµС‚? РҐРѕСЂРѕС€РµРЅСЊРєРѕ РїРѕРґСѓРјР°Р№, РµСЃР»Рё С‚РµР±Рµ РґРѕСЂРѕРі С‚РІРѕР№ СЏР·С‹Рє.
 };
 
 func void Info_TPL_1441_FirstWarn_Condition_LESTER()
 {
 	var C_Npc Templer;
-	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_LESTER_15_01");	//Послушник Лестер прислал меня. Я хочу предложить Юбериону свою помощь.
-	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02");	//Лестер? Я знаю его, ему можно доверять. Проходи.
+	AI_Output(hero,self,"Info_TPL_1441_FirstWarn_Condition_LESTER_15_01");	//РџРѕСЃР»СѓС€РЅРёРє Р›РµСЃС‚РµСЂ РїСЂРёСЃР»Р°Р» РјРµРЅСЏ. РЇ С…РѕС‡Сѓ РїСЂРµРґР»РѕР¶РёС‚СЊ Р®Р±РµСЂРёРѕРЅСѓ СЃРІРѕСЋ РїРѕРјРѕС‰СЊ.
+	AI_Output(self,hero,"Info_TPL_1441_FirstWarn_Condition_LESTER_13_02");	//Р›РµСЃС‚РµСЂ? РЇ Р·РЅР°СЋ РµРіРѕ, РµРјСѓ РјРѕР¶РЅРѕ РґРѕРІРµСЂСЏС‚СЊ. РџСЂРѕС…РѕРґРё.
 	Info_ClearChoices(Info_TPL_1441_FirstWarn);
 	Templer = Hlp_GetNpc(TPL_1442_Templer);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_BEGIN;
@@ -78,7 +78,7 @@ func int Info_TPL_1441_LastWarn_Condition()
 
 func void Info_TPL_1441_LastWarn_Info()
 {
-	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01");	//Еще шаг, и пеняй на себя!
+	AI_Output(self,hero,"Info_TPL_1441_LastWarn_13_01");	//Р•С‰Рµ С€Р°Рі, Рё РїРµРЅСЏР№ РЅР° СЃРµР±СЏ!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,TPL_1441_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);

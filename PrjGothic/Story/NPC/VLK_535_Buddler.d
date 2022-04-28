@@ -2,7 +2,7 @@
 instance VLK_535_Buddler(Npc_Default)
 {
 	name[0] = NAME_Buddler;
-	npcType = npctype_ambient;
+	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 3;
 	voice = 3;
@@ -36,5 +36,59 @@ func void Rtn_start_535()
 	TA_WashSelf(11,0,11,30,"OCR_WASH_2");
 	TA_SitAround(11,30,16,30,"OCR_OUTSIDE_HUT_71");
 	TA_SitCampfire(16,30,22,30,"OCR_OUTSIDE_HUT_71");
+};
+
+
+
+instance DIA_Vlk_535_Exit(C_Info)
+{
+	npc = VLK_535_Buddler;
+	nr = 999;
+	condition = DIA_Vlk_535_Exit_Condition;
+	information = DIA_Vlk_535_Exit_Info;
+	permanent = 1;
+	description = DIALOG_ENDE;
+};
+
+
+func int DIA_Vlk_535_Exit_Condition()
+{
+	return 1;
+};
+
+func void DIA_Vlk_535_Exit_Info()
+{
+	AI_StopProcessInfos(self);
+};
+
+instance DIA_Vlk_535_SomeFood(C_Info)
+{
+	npc = VLK_535_Buddler;
+	nr = 1;
+	condition = DIA_Vlk_535_SomeFood_Condition;
+	information = DIA_Vlk_535_SomeFood_Info;
+	important = true;
+	permanent = 1;
+	description = "У тебя не найдётся немного еды?";
+};
+
+
+func int DIA_Vlk_535_SomeFood_Condition()
+{
+	if(
+		getTimestamp() - q_someFood535 > 300
+	&&	!Hlp_Random(20)
+	)
+	{
+		q_someFood535 = getTimestamp();
+		return true;
+	};
+	return false;
+};
+
+func void DIA_Vlk_535_SomeFood_Info()
+{
+	AI_Output(self,hero,"DIA_Vlk_535_SomeFood_NULL_01"); //У тебя не найдётся немного еды?
+	AI_StopProcessInfos(self);
 };
 

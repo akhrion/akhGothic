@@ -1,7 +1,7 @@
 
 instance TPL_1433_GORNAVID_PSI(Npc_Default)
 {
-	name[0] = "Гор На Вид";
+	name[0] = "Р“РѕСЂ РќР° Р’РёРґ";
 	npcType = npctype_main;
 	guild = GIL_TPL;
 	level = 17;

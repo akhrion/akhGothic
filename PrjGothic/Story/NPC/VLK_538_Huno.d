@@ -1,7 +1,7 @@
 
 instance VLK_538_Huno(Npc_Default)
 {
-	name[0] = "Хуно";
+	name[0] = "РҐСѓРЅРѕ";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 12;

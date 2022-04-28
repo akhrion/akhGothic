@@ -1,7 +1,7 @@
 
 instance GRD_271_Ulbert(Npc_Default)
 {
-	name[0] = "Ульберт";
+	name[0] = "РЈР»СЊР±РµСЂС‚";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 10;

@@ -19,7 +19,7 @@ func void DIA_Orry_PreExit_Info()
 {
 	if(Kapitel <= 1)
 	{
-		AI_Output(self,other,"DIA_Orry_PreExit_06_00");	//Ïîñòàðàéñÿ äîáðàòüñÿ äî Ñòàðîãî ëàãåðÿ æèâûì!
+		AI_Output(self,other,"DIA_Orry_PreExit_06_00");	//ÐŸÐ¾ÑÑ‚Ð°Ñ€Ð°Ð¹ÑÑ Ð´Ð¾Ð±Ñ€Ð°Ñ‚ÑŒÑÑ Ð´Ð¾ Ð¡Ñ‚Ð°Ñ€Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ Ð¶Ð¸Ð²Ñ‹Ð¼!
 	};
 	AI_StopProcessInfos(self);
 };
@@ -57,7 +57,7 @@ instance DIA_Orry_GuardGate(C_Info)
 	condition = DIA_Orry_GuardGate_Condition;
 	information = DIA_Orry_GuardGate_Info;
 	permanent = 0;
-	description = "×òî òû çäåñü äåëàåøü?";
+	description = "Ð§Ñ‚Ð¾ Ñ‚Ñ‹ Ð·Ð´ÐµÑÑŒ Ð´ÐµÐ»Ð°ÐµÑˆÑŒ?";
 };
 
 
@@ -68,33 +68,33 @@ func int DIA_Orry_GuardGate_Condition()
 
 func void DIA_Orry_GuardGate_Info()
 {
-	AI_Output(other,self,"DIA_Orry_GuardGate_15_00");	//×òî òû çäåñü äåëàåøü?
-	AI_Output(self,other,"DIA_Orry_GuardGate_06_01");	//Êîíòðîëèðóþ, ÷òîáû íèêòî íå ïîäîøåë ê ìåñòó îáìåíà. Â îñîáåííîñòè ýòè ãîëîâîðåçû èç Íîâîãî ëàãåðÿ.
+	AI_Output(other,self,"DIA_Orry_GuardGate_15_00");	//Ð§Ñ‚Ð¾ Ñ‚Ñ‹ Ð·Ð´ÐµÑÑŒ Ð´ÐµÐ»Ð°ÐµÑˆÑŒ?
+	AI_Output(self,other,"DIA_Orry_GuardGate_06_01");	//ÐšÐ¾Ð½Ñ‚Ñ€Ð¾Ð»Ð¸Ñ€ÑƒÑŽ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð½Ð¸ÐºÑ‚Ð¾ Ð½Ðµ Ð¿Ð¾Ð´Ð¾ÑˆÐµÐ» Ðº Ð¼ÐµÑÑ‚Ñƒ Ð¾Ð±Ð¼ÐµÐ½Ð°. Ð’ Ð¾ÑÐ¾Ð±ÐµÐ½Ð½Ð¾ÑÑ‚Ð¸ ÑÑ‚Ð¸ Ð³Ð¾Ð»Ð¾Ð²Ð¾Ñ€ÐµÐ·Ñ‹ Ð¸Ð· ÐÐ¾Ð²Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ.
 	if(Kapitel <= 1)
 	{
-		AI_Output(self,other,"DIA_Orry_GuardGate_06_02");	//Òû íîâåíüêèé, íå òàê ëè? Òåáÿ âåäü òîëüêî ñåãîäíÿ çàáðîñèëè ê íàì?
-		AI_Output(other,self,"DIA_Orry_GuardGate_15_03");	//Äà, âñå òàê è åñòü.
-		AI_Output(self,other,"DIA_Orry_GuardGate_06_04");	//Äåðæèñü ïîäàëüøå îò ïàðíåé èç Íîâîãî ëàãåðÿ!
-		AI_Output(self,other,"DIA_Orry_GuardGate_06_05");	//ß, äà è âñå îñòàëüíûå, êîãî òû âèäåë â ìåñòå îáìåíà, ðàáîòàåì íà Ñòàðûé ëàãåðü.
-		AI_Output(self,other,"DIA_Orry_GuardGate_06_06");	//Ñ Äèåãî... òû óæå ãîâîðèë ñ íèì?
+		AI_Output(self,other,"DIA_Orry_GuardGate_06_02");	//Ð¢Ñ‹ Ð½Ð¾Ð²ÐµÐ½ÑŒÐºÐ¸Ð¹, Ð½Ðµ Ñ‚Ð°Ðº Ð»Ð¸? Ð¢ÐµÐ±Ñ Ð²ÐµÐ´ÑŒ Ñ‚Ð¾Ð»ÑŒÐºÐ¾ ÑÐµÐ³Ð¾Ð´Ð½Ñ Ð·Ð°Ð±Ñ€Ð¾ÑÐ¸Ð»Ð¸ Ðº Ð½Ð°Ð¼?
+		AI_Output(other,self,"DIA_Orry_GuardGate_15_03");	//Ð”Ð°, Ð²ÑÐµ Ñ‚Ð°Ðº Ð¸ ÐµÑÑ‚ÑŒ.
+		AI_Output(self,other,"DIA_Orry_GuardGate_06_04");	//Ð”ÐµÑ€Ð¶Ð¸ÑÑŒ Ð¿Ð¾Ð´Ð°Ð»ÑŒÑˆÐµ Ð¾Ñ‚ Ð¿Ð°Ñ€Ð½ÐµÐ¹ Ð¸Ð· ÐÐ¾Ð²Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ!
+		AI_Output(self,other,"DIA_Orry_GuardGate_06_05");	//Ð¯, Ð´Ð° Ð¸ Ð²ÑÐµ Ð¾ÑÑ‚Ð°Ð»ÑŒÐ½Ñ‹Ðµ, ÐºÐ¾Ð³Ð¾ Ñ‚Ñ‹ Ð²Ð¸Ð´ÐµÐ» Ð² Ð¼ÐµÑÑ‚Ðµ Ð¾Ð±Ð¼ÐµÐ½Ð°, Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÐ¼ Ð½Ð° Ð¡Ñ‚Ð°Ñ€Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ.
+		AI_Output(self,other,"DIA_Orry_GuardGate_06_06");	//Ð¡ Ð”Ð¸ÐµÐ³Ð¾... Ñ‚Ñ‹ ÑƒÐ¶Ðµ Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð» Ñ Ð½Ð¸Ð¼?
 		Info_ClearChoices(DIA_Orry_GuardGate);
-		Info_AddChoice(DIA_Orry_GuardGate,"Åùå íåò.",DIA_Orry_GuardGate_No);
-		Info_AddChoice(DIA_Orry_GuardGate,"Äà, ïîãîâîðèë.",DIA_Orry_GuardGate_Yes);
+		Info_AddChoice(DIA_Orry_GuardGate,"Ð•Ñ‰Ðµ Ð½ÐµÑ‚.",DIA_Orry_GuardGate_No);
+		Info_AddChoice(DIA_Orry_GuardGate,"Ð”Ð°, Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð».",DIA_Orry_GuardGate_Yes);
 	};
 };
 
 func void DIA_Orry_GuardGate_No()
 {
-	AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Åùå íåò.
-	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01");	//Òîãäà ñäåëàé ýòî! Îí ó íàñ åäèíñòâåííûé, êòî çàíèìàåòñÿ íîâè÷êàìè.
-	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02");	//Ìíîãî çíàåò î êîëîíèè, à ýòî ïîëåçíûå çíàíèÿ äëÿ òàêîãî íîâè÷êà, êàê òû.
+	AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Ð•Ñ‰Ðµ Ð½ÐµÑ‚.
+	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_01");	//Ð¢Ð¾Ð³Ð´Ð° ÑÐ´ÐµÐ»Ð°Ð¹ ÑÑ‚Ð¾! ÐžÐ½ Ñƒ Ð½Ð°Ñ ÐµÐ´Ð¸Ð½ÑÑ‚Ð²ÐµÐ½Ð½Ñ‹Ð¹, ÐºÑ‚Ð¾ Ð·Ð°Ð½Ð¸Ð¼Ð°ÐµÑ‚ÑÑ Ð½Ð¾Ð²Ð¸Ñ‡ÐºÐ°Ð¼Ð¸.
+	AI_Output(self,other,"DIA_Orry_GuardGate_No_06_02");	//ÐœÐ½Ð¾Ð³Ð¾ Ð·Ð½Ð°ÐµÑ‚ Ð¾ ÐºÐ¾Ð»Ð¾Ð½Ð¸Ð¸, Ð° ÑÑ‚Ð¾ Ð¿Ð¾Ð»ÐµÐ·Ð½Ñ‹Ðµ Ð·Ð½Ð°Ð½Ð¸Ñ Ð´Ð»Ñ Ñ‚Ð°ÐºÐ¾Ð³Ð¾ Ð½Ð¾Ð²Ð¸Ñ‡ÐºÐ°, ÐºÐ°Ðº Ñ‚Ñ‹.
 	Info_ClearChoices(DIA_Orry_GuardGate);
 };
 
 func void DIA_Orry_GuardGate_Yes()
 {
-	AI_Output(other,self,"DIA_Orry_GuardGate_Yes_15_00");	//Äà, ïîãîâîðèë.
-	AI_Output(self,other,"DIA_Orry_GuardGate_Yes_06_01");	//Õîðîøî. Òîãäà òû óæå çíàåøü, ÷òî çäåñü ê ÷åìó.
+	AI_Output(other,self,"DIA_Orry_GuardGate_Yes_15_00");	//Ð”Ð°, Ð¿Ð¾Ð³Ð¾Ð²Ð¾Ñ€Ð¸Ð».
+	AI_Output(self,other,"DIA_Orry_GuardGate_Yes_06_01");	//Ð¥Ð¾Ñ€Ð¾ÑˆÐ¾. Ð¢Ð¾Ð³Ð´Ð° Ñ‚Ñ‹ ÑƒÐ¶Ðµ Ð·Ð½Ð°ÐµÑˆÑŒ, Ñ‡Ñ‚Ð¾ Ð·Ð´ÐµÑÑŒ Ðº Ñ‡ÐµÐ¼Ñƒ.
 	Info_ClearChoices(DIA_Orry_GuardGate);
 };
 
@@ -106,7 +106,7 @@ instance DIA_Orry_NewCamp(C_Info)
 	condition = DIA_Orry_NewCamp_Condition;
 	information = DIA_Orry_NewCamp_Info;
 	permanent = 0;
-	description = "Ïî÷åìó òû ñîâåòóåøü äåðæàòüñÿ ïîäàëüøå îò ëþäåé èç Íîâîãî ëàãåðÿ?";
+	description = "ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ Ñ‚Ñ‹ ÑÐ¾Ð²ÐµÑ‚ÑƒÐµÑˆÑŒ Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒÑÑ Ð¿Ð¾Ð´Ð°Ð»ÑŒÑˆÐµ Ð¾Ñ‚ Ð»ÑŽÐ´ÐµÐ¹ Ð¸Ð· ÐÐ¾Ð²Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ?";
 };
 
 
@@ -120,9 +120,9 @@ func int DIA_Orry_NewCamp_Condition()
 
 func void DIA_Orry_NewCamp_Info()
 {
-	AI_Output(other,self,"DIA_Orry_NewCamp_15_00");	//Ïî÷åìó òû ñîâåòóåøü ìíå äåðæàòüñÿ ïîäàëüøå îò ëþäåé èç Íîâîãî ëàãåðÿ?
-	AI_Output(self,other,"DIA_Orry_NewCamp_06_01");	//Íîâûé ëàãåðü - ýòî òåáå íå Ñòàðûé, ãäå òèõî è áåçîïàñíî.
-	AI_Output(self,other,"DIA_Orry_NewCamp_06_02");	//Íîâûé ëàãåðü íå ïîëó÷àåò òîâàðû èç âíåøíåãî ìèðà, ïîýòîìó âñå ÷òî èì íóæíî, îíè ïðîñòî êðàäóò.
+	AI_Output(other,self,"DIA_Orry_NewCamp_15_00");	//ÐŸÐ¾Ñ‡ÐµÐ¼Ñƒ Ñ‚Ñ‹ ÑÐ¾Ð²ÐµÑ‚ÑƒÐµÑˆÑŒ Ð¼Ð½Ðµ Ð´ÐµÑ€Ð¶Ð°Ñ‚ÑŒÑÑ Ð¿Ð¾Ð´Ð°Ð»ÑŒÑˆÐµ Ð¾Ñ‚ Ð»ÑŽÐ´ÐµÐ¹ Ð¸Ð· ÐÐ¾Ð²Ð¾Ð³Ð¾ Ð»Ð°Ð³ÐµÑ€Ñ?
+	AI_Output(self,other,"DIA_Orry_NewCamp_06_01");	//ÐÐ¾Ð²Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ - ÑÑ‚Ð¾ Ñ‚ÐµÐ±Ðµ Ð½Ðµ Ð¡Ñ‚Ð°Ñ€Ñ‹Ð¹, Ð³Ð´Ðµ Ñ‚Ð¸Ñ…Ð¾ Ð¸ Ð±ÐµÐ·Ð¾Ð¿Ð°ÑÐ½Ð¾.
+	AI_Output(self,other,"DIA_Orry_NewCamp_06_02");	//ÐÐ¾Ð²Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ Ð½Ðµ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÐµÑ‚ Ñ‚Ð¾Ð²Ð°Ñ€Ñ‹ Ð¸Ð· Ð²Ð½ÐµÑˆÐ½ÐµÐ³Ð¾ Ð¼Ð¸Ñ€Ð°, Ð¿Ð¾ÑÑ‚Ð¾Ð¼Ñƒ Ð²ÑÐµ Ñ‡Ñ‚Ð¾ Ð¸Ð¼ Ð½ÑƒÐ¶Ð½Ð¾, Ð¾Ð½Ð¸ Ð¿Ñ€Ð¾ÑÑ‚Ð¾ ÐºÑ€Ð°Ð´ÑƒÑ‚.
 };
 
 
@@ -133,7 +133,7 @@ instance DIA_Orry_OldCamp(C_Info)
 	condition = DIA_Orry_OldCamp_Condition;
 	information = DIA_Orry_OldCamp_Info;
 	permanent = 0;
-	description = "À Ñòàðûé ëàãåðü?";
+	description = "Ð Ð¡Ñ‚Ð°Ñ€Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ?";
 };
 
 
@@ -147,9 +147,9 @@ func int DIA_Orry_OldCamp_Condition()
 
 func void DIA_Orry_OldCamp_Info()
 {
-	AI_Output(other,self,"DIA_Orry_OldCamp_15_00");	//À Ñòàðûé ëàãåðü?
-	AI_Output(self,other,"DIA_Orry_OldCamp_06_01");	//Çäåñü âñåì çàïðàâëÿþò Áàðîíû. Ñëåäîì çà íèìè èäåò Ñòðàæà è Ïðèçðàêè. Íó, à ðóäîêîïû â ñàìîì íèçó ýòîé öåïî÷êè.
-	AI_Output(self,other,"DIA_Orry_OldCamp_06_02");	//Êàæäûé, êòî ïðèáûâàåò ñþäà, ñíà÷àëà ðàáîòàåò ðóäîêîïîì. Åñëè õî÷åò ÷åãî-òî áîëüøå, òî åìó ïðèäåòñÿ ïîòðóäèòüñÿ, ÷òîáû ïîòîì ñòàòü Ïðèçðàêîì.
+	AI_Output(other,self,"DIA_Orry_OldCamp_15_00");	//Ð Ð¡Ñ‚Ð°Ñ€Ñ‹Ð¹ Ð»Ð°Ð³ÐµÑ€ÑŒ?
+	AI_Output(self,other,"DIA_Orry_OldCamp_06_01");	//Ð—Ð´ÐµÑÑŒ Ð²ÑÐµÐ¼ Ð·Ð°Ð¿Ñ€Ð°Ð²Ð»ÑÑŽÑ‚ Ð‘Ð°Ñ€Ð¾Ð½Ñ‹. Ð¡Ð»ÐµÐ´Ð¾Ð¼ Ð·Ð° Ð½Ð¸Ð¼Ð¸ Ð¸Ð´ÐµÑ‚ Ð¡Ñ‚Ñ€Ð°Ð¶Ð° Ð¸ ÐŸÑ€Ð¸Ð·Ñ€Ð°ÐºÐ¸. ÐÑƒ, Ð° Ñ€ÑƒÐ´Ð¾ÐºÐ¾Ð¿Ñ‹ Ð² ÑÐ°Ð¼Ð¾Ð¼ Ð½Ð¸Ð·Ñƒ ÑÑ‚Ð¾Ð¹ Ñ†ÐµÐ¿Ð¾Ñ‡ÐºÐ¸.
+	AI_Output(self,other,"DIA_Orry_OldCamp_06_02");	//ÐšÐ°Ð¶Ð´Ñ‹Ð¹, ÐºÑ‚Ð¾ Ð¿Ñ€Ð¸Ð±Ñ‹Ð²Ð°ÐµÑ‚ ÑÑŽÐ´Ð°, ÑÐ½Ð°Ñ‡Ð°Ð»Ð° Ñ€Ð°Ð±Ð¾Ñ‚Ð°ÐµÑ‚ Ñ€ÑƒÐ´Ð¾ÐºÐ¾Ð¿Ð¾Ð¼. Ð•ÑÐ»Ð¸ Ñ…Ð¾Ñ‡ÐµÑ‚ Ñ‡ÐµÐ³Ð¾-Ñ‚Ð¾ Ð±Ð¾Ð»ÑŒÑˆÐµ, Ñ‚Ð¾ ÐµÐ¼Ñƒ Ð¿Ñ€Ð¸Ð´ÐµÑ‚ÑÑ Ð¿Ð¾Ñ‚Ñ€ÑƒÐ´Ð¸Ñ‚ÑŒÑÑ, Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ð¾Ñ‚Ð¾Ð¼ ÑÑ‚Ð°Ñ‚ÑŒ ÐŸÑ€Ð¸Ð·Ñ€Ð°ÐºÐ¾Ð¼.
 };
 
 
@@ -160,7 +160,7 @@ instance DIA_Orry_Shore(C_Info)
 	condition = DIA_Orry_Shore_Condition;
 	information = DIA_Orry_Shore_Info;
 	permanent = 0;
-	description = "Êîãäà ÿ âûøåë íà áåðåã, îäèí èç òèïîâ âñòðåòèë ìåíÿ êóëàêîì...";
+	description = "ÐšÐ¾Ð³Ð´Ð° Ñ Ð²Ñ‹ÑˆÐµÐ» Ð½Ð° Ð±ÐµÑ€ÐµÐ³, Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ñ‚Ð¸Ð¿Ð¾Ð² Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð» Ð¼ÐµÐ½Ñ ÐºÑƒÐ»Ð°ÐºÐ¾Ð¼...";
 };
 
 
@@ -174,10 +174,10 @@ func int DIA_Orry_Shore_Condition()
 
 func void DIA_Orry_Shore_Info()
 {
-	AI_Output(other,self,"DIA_Orry_Shore_15_00");	//Êîãäà ÿ âûøåë íà áåðåã, îäèí èç òèïîâ âñòðåòèë ìåíÿ êóëàêîì...
-	AI_Output(self,other,"DIA_Orry_Shore_06_01");	//Òàê ñî âñåìè íîâåíüêèìè, ñâîåãî ðîäà 'áîåâîå êðåùåíèå'.
-	AI_Output(other,self,"DIA_Orry_Shore_15_02");	//À â Ñòàðîì ëàãåðå ìíîãî åùå òàêèõ ëþäåé?
-	AI_Output(self,other,"DIA_Orry_Shore_06_03");	//Êîíå÷íî, âñåãäà ìîæíî âñòðåòèòü êàêîãî-íèáóäü íåãîäÿÿ, íî åñëè òû ïëàòèøü çà ñâîþ çàùèòó, òåáÿ íå òðîíóò.
+	AI_Output(other,self,"DIA_Orry_Shore_15_00");	//ÐšÐ¾Ð³Ð´Ð° Ñ Ð²Ñ‹ÑˆÐµÐ» Ð½Ð° Ð±ÐµÑ€ÐµÐ³, Ð¾Ð´Ð¸Ð½ Ð¸Ð· Ñ‚Ð¸Ð¿Ð¾Ð² Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ð» Ð¼ÐµÐ½Ñ ÐºÑƒÐ»Ð°ÐºÐ¾Ð¼...
+	AI_Output(self,other,"DIA_Orry_Shore_06_01");	//Ð¢Ð°Ðº ÑÐ¾ Ð²ÑÐµÐ¼Ð¸ Ð½Ð¾Ð²ÐµÐ½ÑŒÐºÐ¸Ð¼Ð¸, ÑÐ²Ð¾ÐµÐ³Ð¾ Ñ€Ð¾Ð´Ð° 'Ð±Ð¾ÐµÐ²Ð¾Ðµ ÐºÑ€ÐµÑ‰ÐµÐ½Ð¸Ðµ'.
+	AI_Output(other,self,"DIA_Orry_Shore_15_02");	//Ð Ð² Ð¡Ñ‚Ð°Ñ€Ð¾Ð¼ Ð»Ð°Ð³ÐµÑ€Ðµ Ð¼Ð½Ð¾Ð³Ð¾ ÐµÑ‰Ðµ Ñ‚Ð°ÐºÐ¸Ñ… Ð»ÑŽÐ´ÐµÐ¹?
+	AI_Output(self,other,"DIA_Orry_Shore_06_03");	//ÐšÐ¾Ð½ÐµÑ‡Ð½Ð¾, Ð²ÑÐµÐ³Ð´Ð° Ð¼Ð¾Ð¶Ð½Ð¾ Ð²ÑÑ‚Ñ€ÐµÑ‚Ð¸Ñ‚ÑŒ ÐºÐ°ÐºÐ¾Ð³Ð¾-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ð½ÐµÐ³Ð¾Ð´ÑÑ, Ð½Ð¾ ÐµÑÐ»Ð¸ Ñ‚Ñ‹ Ð¿Ð»Ð°Ñ‚Ð¸ÑˆÑŒ Ð·Ð° ÑÐ²Ð¾ÑŽ Ð·Ð°Ñ‰Ð¸Ñ‚Ñƒ, Ñ‚ÐµÐ±Ñ Ð½Ðµ Ñ‚Ñ€Ð¾Ð½ÑƒÑ‚.
 };
 
 
@@ -188,7 +188,7 @@ instance DIA_Orry_Woman(C_Info)
 	condition = DIA_Orry_Woman_Condition;
 	information = DIA_Orry_Woman_Info;
 	permanent = 0;
-	description = "ß âèäåë, êàê ñþäà âìåñòå ñ òîâàðàìè îòïðàâèëè êàêóþ-òî æåíùèíó.";
+	description = "Ð¯ Ð²Ð¸Ð´ÐµÐ», ÐºÐ°Ðº ÑÑŽÐ´Ð° Ð²Ð¼ÐµÑÑ‚Ðµ Ñ Ñ‚Ð¾Ð²Ð°Ñ€Ð°Ð¼Ð¸ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ð»Ð¸ ÐºÐ°ÐºÑƒÑŽ-Ñ‚Ð¾ Ð¶ÐµÐ½Ñ‰Ð¸Ð½Ñƒ.";
 };
 
 
@@ -202,11 +202,11 @@ func int DIA_Orry_Woman_Condition()
 
 func void DIA_Orry_Woman_Info()
 {
-	AI_Output(other,self,"DIA_Orry_Woman_15_00");	//ß âèäåë, êàê ñþäà âìåñòå ñ òîâàðàìè îòïðàâèëè êàêóþ-òî æåíùèíó.
-	AI_Output(self,other,"DIA_Orry_Woman_06_01");	//Äà, Áàðîíû ïîëó÷àþò âñå, ÷òî õîòÿò.
-	AI_Output(other,self,"DIA_Orry_Woman_15_02");	//Òû õî÷åøü ñêàçàòü, ÷òî çà ðóäó êîðîëü ïðèñûëàåò ñþäà æåíùèí?
-	AI_Output(self,other,"DIA_Orry_Woman_06_03");	//Îíè òàêèå æå ïðåñòóïíèöû, êàê è âñå ìû çäåñü. Îíè íóæíû Ãîìåçó, à ïîòîìó íå ñèäÿò â òþðåìíûõ ñòåíàõ òàì.
-	AI_Output(self,other,"DIA_Orry_Woman_06_04");	//Õîòÿ, íå çíàþ, ÷òî õóæå...
+	AI_Output(other,self,"DIA_Orry_Woman_15_00");	//Ð¯ Ð²Ð¸Ð´ÐµÐ», ÐºÐ°Ðº ÑÑŽÐ´Ð° Ð²Ð¼ÐµÑÑ‚Ðµ Ñ Ñ‚Ð¾Ð²Ð°Ñ€Ð°Ð¼Ð¸ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ð»Ð¸ ÐºÐ°ÐºÑƒÑŽ-Ñ‚Ð¾ Ð¶ÐµÐ½Ñ‰Ð¸Ð½Ñƒ.
+	AI_Output(self,other,"DIA_Orry_Woman_06_01");	//Ð”Ð°, Ð‘Ð°Ñ€Ð¾Ð½Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð°ÑŽÑ‚ Ð²ÑÐµ, Ñ‡Ñ‚Ð¾ Ñ…Ð¾Ñ‚ÑÑ‚.
+	AI_Output(other,self,"DIA_Orry_Woman_15_02");	//Ð¢Ñ‹ Ñ…Ð¾Ñ‡ÐµÑˆÑŒ ÑÐºÐ°Ð·Ð°Ñ‚ÑŒ, Ñ‡Ñ‚Ð¾ Ð·Ð° Ñ€ÑƒÐ´Ñƒ ÐºÐ¾Ñ€Ð¾Ð»ÑŒ Ð¿Ñ€Ð¸ÑÑ‹Ð»Ð°ÐµÑ‚ ÑÑŽÐ´Ð° Ð¶ÐµÐ½Ñ‰Ð¸Ð½?
+	AI_Output(self,other,"DIA_Orry_Woman_06_03");	//ÐžÐ½Ð¸ Ñ‚Ð°ÐºÐ¸Ðµ Ð¶Ðµ Ð¿Ñ€ÐµÑÑ‚ÑƒÐ¿Ð½Ð¸Ñ†Ñ‹, ÐºÐ°Ðº Ð¸ Ð²ÑÐµ Ð¼Ñ‹ Ð·Ð´ÐµÑÑŒ. ÐžÐ½Ð¸ Ð½ÑƒÐ¶Ð½Ñ‹ Ð“Ð¾Ð¼ÐµÐ·Ñƒ, Ð° Ð¿Ð¾Ñ‚Ð¾Ð¼Ñƒ Ð½Ðµ ÑÐ¸Ð´ÑÑ‚ Ð² Ñ‚ÑŽÑ€ÐµÐ¼Ð½Ñ‹Ñ… ÑÑ‚ÐµÐ½Ð°Ñ… Ñ‚Ð°Ð¼.
+	AI_Output(self,other,"DIA_Orry_Woman_06_04");	//Ð¥Ð¾Ñ‚Ñ, Ð½Ðµ Ð·Ð½Ð°ÑŽ, Ñ‡Ñ‚Ð¾ Ñ…ÑƒÐ¶Ðµ...
 };
 
 
@@ -217,7 +217,7 @@ instance DIA_Orry_Waffe(C_Info)
 	condition = DIA_Orry_Waffe_Condition;
 	information = DIA_Orry_Waffe_Info;
 	permanent = 0;
-	description = "Ãäå çäåñü ìîæíî íàéòè îðóæèå?";
+	description = "Ð“Ð´Ðµ Ð·Ð´ÐµÑÑŒ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸ Ð¾Ñ€ÑƒÐ¶Ð¸Ðµ?";
 };
 
 
@@ -231,9 +231,9 @@ func int DIA_Orry_Waffe_Condition()
 
 func void DIA_Orry_Waffe_Info()
 {
-	AI_Output(other,self,"DIA_Orry_Waffe_15_00");	//Ãäå çäåñü ìîæíî íàéòè îðóæèå?
-	AI_Output(self,other,"DIA_Orry_Waffe_06_01");	//Âîçëå Çàáðîøåííîé øàõòû, ìîæåò, ÷òî-íèáóäü íàéäåøü, ýòî íåìíîãî äàëüøå âíèç ïî òðîïå.
-	AI_Output(self,other,"DIA_Orry_Waffe_06_02");	//Íî ëó÷øå â äðàêó íå ëåçòü ñ êàêîé-íèáóäü ðæàâîé êèðêîé â ðóêàõ. Òàêèå âåùè òÿæåëûå è íåóäîáíûå, äà è îðóæèåì íå íàçîâåøü.
-	AI_Output(self,other,"DIA_Orry_Waffe_06_03");	//Íåîïûòíîìó áîéöó ëó÷øå òàêèì îðóæèåì íå äðàòüñÿ, íó ðàçâå ÷òî â êðàéíåé íåîáõîäèìîñòè.
+	AI_Output(other,self,"DIA_Orry_Waffe_15_00");	//Ð“Ð´Ðµ Ð·Ð´ÐµÑÑŒ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð¹Ñ‚Ð¸ Ð¾Ñ€ÑƒÐ¶Ð¸Ðµ?
+	AI_Output(self,other,"DIA_Orry_Waffe_06_01");	//Ð’Ð¾Ð·Ð»Ðµ Ð—Ð°Ð±Ñ€Ð¾ÑˆÐµÐ½Ð½Ð¾Ð¹ ÑˆÐ°Ñ…Ñ‚Ñ‹, Ð¼Ð¾Ð¶ÐµÑ‚, Ñ‡Ñ‚Ð¾-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ð½Ð°Ð¹Ð´ÐµÑˆÑŒ, ÑÑ‚Ð¾ Ð½ÐµÐ¼Ð½Ð¾Ð³Ð¾ Ð´Ð°Ð»ÑŒÑˆÐµ Ð²Ð½Ð¸Ð· Ð¿Ð¾ Ñ‚Ñ€Ð¾Ð¿Ðµ.
+	AI_Output(self,other,"DIA_Orry_Waffe_06_02");	//ÐÐ¾ Ð»ÑƒÑ‡ÑˆÐµ Ð² Ð´Ñ€Ð°ÐºÑƒ Ð½Ðµ Ð»ÐµÐ·Ñ‚ÑŒ Ñ ÐºÐ°ÐºÐ¾Ð¹-Ð½Ð¸Ð±ÑƒÐ´ÑŒ Ñ€Ð¶Ð°Ð²Ð¾Ð¹ ÐºÐ¸Ñ€ÐºÐ¾Ð¹ Ð² Ñ€ÑƒÐºÐ°Ñ…. Ð¢Ð°ÐºÐ¸Ðµ Ð²ÐµÑ‰Ð¸ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ðµ Ð¸ Ð½ÐµÑƒÐ´Ð¾Ð±Ð½Ñ‹Ðµ, Ð´Ð° Ð¸ Ð¾Ñ€ÑƒÐ¶Ð¸ÐµÐ¼ Ð½Ðµ Ð½Ð°Ð·Ð¾Ð²ÐµÑˆÑŒ.
+	AI_Output(self,other,"DIA_Orry_Waffe_06_03");	//ÐÐµÐ¾Ð¿Ñ‹Ñ‚Ð½Ð¾Ð¼Ñƒ Ð±Ð¾Ð¹Ñ†Ñƒ Ð»ÑƒÑ‡ÑˆÐµ Ñ‚Ð°ÐºÐ¸Ð¼ Ð¾Ñ€ÑƒÐ¶Ð¸ÐµÐ¼ Ð½Ðµ Ð´Ñ€Ð°Ñ‚ÑŒÑÑ, Ð½Ñƒ Ñ€Ð°Ð·Ð²Ðµ Ñ‡Ñ‚Ð¾ Ð² ÐºÑ€Ð°Ð¹Ð½ÐµÐ¹ Ð½ÐµÐ¾Ð±Ñ…Ð¾Ð´Ð¸Ð¼Ð¾ÑÑ‚Ð¸.
 };
 

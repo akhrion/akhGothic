@@ -29,7 +29,7 @@ instance Nov_1371_BaalNetbek_CRAZY(C_Info)
 	information = Nov_1371_BaalNetbek_CRAZY_Info;
 	important = 0;
 	permanent = 0;
-	description = "Кто ты?";
+	description = "РљС‚Рѕ С‚С‹?";
 };
 
 
@@ -40,15 +40,15 @@ func int Nov_1371_BaalNetbek_CRAZY_Condition()
 
 func void Nov_1371_BaalNetbek_CRAZY_Info()
 {
-	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_01");	//Кто ты?
-	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_02");	//Я Гуру этого Болотного лагеря. Мои слуги зовут меня Идол Нетбек.
-	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_03");	//Здесь же никого нет! О ком ты?
-	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04");	//Ты можешь и сам их увидеть. Деревья! Они ходят вокруг, танцуют для меня...
-	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_05");	//... понятно, ну, я, пожалуй, пойду...
-	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_06");	//Подожди, ты можешь помочь мне превратить это болото в большой цветущий сад!
-	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_07");	//Ладно, ты начни без меня, а я... я приду потом, как-нибудь.
+	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_01");	//РљС‚Рѕ С‚С‹?
+	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_02");	//РЇ Р“СѓСЂСѓ СЌС‚РѕРіРѕ Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ. РњРѕРё СЃР»СѓРіРё Р·РѕРІСѓС‚ РјРµРЅСЏ РРґРѕР» РќРµС‚Р±РµРє.
+	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_03");	//Р—РґРµСЃСЊ Р¶Рµ РЅРёРєРѕРіРѕ РЅРµС‚! Рћ РєРѕРј С‚С‹?
+	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_04");	//РўС‹ РјРѕР¶РµС€СЊ Рё СЃР°Рј РёС… СѓРІРёРґРµС‚СЊ. Р”РµСЂРµРІСЊСЏ! РћРЅРё С…РѕРґСЏС‚ РІРѕРєСЂСѓРі, С‚Р°РЅС†СѓСЋС‚ РґР»СЏ РјРµРЅСЏ...
+	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_05");	//... РїРѕРЅСЏС‚РЅРѕ, РЅСѓ, СЏ, РїРѕР¶Р°Р»СѓР№, РїРѕР№РґСѓ...
+	AI_Output(self,other,"Nov_1371_BaalNetbek_CRAZY_Info_03_06");	//РџРѕРґРѕР¶РґРё, С‚С‹ РјРѕР¶РµС€СЊ РїРѕРјРѕС‡СЊ РјРЅРµ РїСЂРµРІСЂР°С‚РёС‚СЊ СЌС‚Рѕ Р±РѕР»РѕС‚Рѕ РІ Р±РѕР»СЊС€РѕР№ С†РІРµС‚СѓС‰РёР№ СЃР°Рґ!
+	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_07");	//Р›Р°РґРЅРѕ, С‚С‹ РЅР°С‡РЅРё Р±РµР· РјРµРЅСЏ, Р° СЏ... СЏ РїСЂРёРґСѓ РїРѕС‚РѕРј, РєР°Рє-РЅРёР±СѓРґСЊ.
 	AI_TurnAway(hero,self);
-	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_08");	//Надеюсь, он никуда меня не заведет...
+	AI_Output(other,self,"Nov_1371_BaalNetbek_CRAZY_Info_15_08");	//РќР°РґРµСЋСЃСЊ, РѕРЅ РЅРёРєСѓРґР° РјРµРЅСЏ РЅРµ Р·Р°РІРµРґРµС‚...
 	AI_StopProcessInfos(self);
 };
 
@@ -60,7 +60,7 @@ instance Nov_1371_BaalNetbek_AGAIN(C_Info)
 	information = Nov_1371_BaalNetbek_AGAIN_Info;
 	important = 0;
 	permanent = 1;
-	description = "Эй, как дела?";
+	description = "Р­Р№, РєР°Рє РґРµР»Р°?";
 };
 
 
@@ -74,7 +74,7 @@ func int Nov_1371_BaalNetbek_AGAIN_Condition()
 
 func void Nov_1371_BaalNetbek_AGAIN_Info()
 {
-	AI_Output(other,self,"Nov_1371_BaalNetbek_AGAIN_Info_15_01");	//Эй, как дела?
-	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02");	//Смотри, не обижай мои деревья!
+	AI_Output(other,self,"Nov_1371_BaalNetbek_AGAIN_Info_15_01");	//Р­Р№, РєР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Nov_1371_BaalNetbek_AGAIN_Info_03_02");	//РЎРјРѕС‚СЂРё, РЅРµ РѕР±РёР¶Р°Р№ РјРѕРё РґРµСЂРµРІСЊСЏ!
 };
 

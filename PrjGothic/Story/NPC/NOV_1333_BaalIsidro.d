@@ -1,7 +1,7 @@
 
 instance NOV_1333_BaalIsidro(Npc_Default)
 {
-	name[0] = "Идол Исидро";
+	name[0] = "РРґРѕР» РСЃРёРґСЂРѕ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

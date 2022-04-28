@@ -29,7 +29,7 @@ instance DIA_Shrike_Hello(C_Info)
 	condition = DIA_Shrike_Hello_Condition;
 	information = DIA_Shrike_Hello_Info;
 	important = 0;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -40,8 +40,8 @@ func int DIA_Shrike_Hello_Condition()
 
 func void DIA_Shrike_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Shrike_Hello_15_00");	//Как дела?
-	AI_Output(self,other,"DIA_Shrike_Hello_07_01");	//Уйди от меня!
+	AI_Output(other,self,"DIA_Shrike_Hello_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"DIA_Shrike_Hello_07_01");	//РЈР№РґРё РѕС‚ РјРµРЅСЏ!
 	AI_StopProcessInfos(self);
 };
 
@@ -53,7 +53,7 @@ instance DIA_Shrike_GetLost(C_Info)
 	condition = DIA_Shrike_GetLost_Condition;
 	information = DIA_Shrike_GetLost_Info;
 	important = 0;
-	description = "Убирайся.";
+	description = "РЈР±РёСЂР°Р№СЃСЏ.";
 };
 
 
@@ -67,12 +67,12 @@ func int DIA_Shrike_GetLost_Condition()
 
 func void DIA_Shrike_GetLost_Info()
 {
-	AI_Output(other,self,"DIA_Shrike_GetLost_15_00");	//Убирайся.
-	AI_Output(self,other,"DIA_Shrike_GetLost_07_01");	//Мы еще поговорим об этом!
+	AI_Output(other,self,"DIA_Shrike_GetLost_15_00");	//РЈР±РёСЂР°Р№СЃСЏ.
+	AI_Output(self,other,"DIA_Shrike_GetLost_07_01");	//РњС‹ РµС‰Рµ РїРѕРіРѕРІРѕСЂРёРј РѕР± СЌС‚РѕРј!
 	self.guild = GIL_None;
 	Log_CreateTopic(CH1_ShrikesHut,LOG_MISSION);
 	Log_SetTopicStatus(CH1_ShrikesHut,LOG_RUNNING);
-	B_LogEntry(CH1_ShrikesHut,"Я 'убедил' Шрайка найти другой дом. Интересно, что на это скажет Горн.");
+	B_LogEntry(CH1_ShrikesHut,"РЇ 'СѓР±РµРґРёР»' РЁСЂР°Р№РєР° РЅР°Р№С‚Рё РґСЂСѓРіРѕР№ РґРѕРј. РРЅС‚РµСЂРµСЃРЅРѕ, С‡С‚Рѕ РЅР° СЌС‚Рѕ СЃРєР°Р¶РµС‚ Р“РѕСЂРЅ.");
 	B_GiveXP(XP_KickedShrike);
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"start");

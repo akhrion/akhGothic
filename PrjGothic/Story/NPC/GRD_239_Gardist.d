@@ -1,7 +1,7 @@
 
 instance GRD_239_Gardist(Npc_Default)
 {
-	name[0] = "Надзиратель";
+	name[0] = "РќР°РґР·РёСЂР°С‚РµР»СЊ";
 	npcType = npctype_ambient;
 	guild = GIL_GRD;
 	level = 15;
@@ -72,7 +72,7 @@ func int info_grd_239_firstwarn_condition()
 
 func void info_grd_239_firstwarn_info()
 {
-	AI_Output(self,hero,"SVM_7_GetOutOfHere");	//Убирайся! Пошел отсюда!
+	AI_Output(self,hero,"SVM_7_GetOutOfHere");	//РЈР±РёСЂР°Р№СЃСЏ! РџРѕС€РµР» РѕС‚СЃСЋРґР°!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,GRD_239_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 	AI_StopProcessInfos(self);
@@ -102,7 +102,7 @@ func int info_grd_239_lastwarn_condition()
 
 func void info_grd_239_lastwarn_info()
 {
-	AI_Output(self,hero,"Info_Grd_237_LastWarn_07_01");	//Ты оглох, а? Еще шаг, и ты станешь кормом для червей!
+	AI_Output(self,hero,"Info_Grd_237_LastWarn_07_01");	//РўС‹ РѕРіР»РѕС…, Р°? Р•С‰Рµ С€Р°Рі, Рё С‚С‹ СЃС‚Р°РЅРµС€СЊ РєРѕСЂРјРѕРј РґР»СЏ С‡РµСЂРІРµР№!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,GRD_239_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);
@@ -167,8 +167,8 @@ func void info_grd_239_alert_info()
 {
 	var C_Npc alex;
 	alex = Hlp_GetNpc(org_899_alex);
-	AI_Output(self,hero,"SVM_7_Strange");	//Куда же он ушел? Невозможно! Как такое может быть?!
-	AI_Output(self,hero,"SVM_7_Alarm");	//Стража, сюда!
+	AI_Output(self,hero,"SVM_7_Strange");	//РљСѓРґР° Р¶Рµ РѕРЅ СѓС€РµР»? РќРµРІРѕР·РјРѕР¶РЅРѕ! РљР°Рє С‚Р°РєРѕРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ?!
+	AI_Output(self,hero,"SVM_7_Alarm");	//РЎС‚СЂР°Р¶Р°, СЃСЋРґР°!
 	AI_StopProcessInfos(self);
 	B_SetAttackReason(self,AIV_AR_INTRUDER);
 	Npc_SetTarget(self,hero);

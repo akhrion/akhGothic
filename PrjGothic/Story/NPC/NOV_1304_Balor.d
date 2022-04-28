@@ -1,7 +1,7 @@
 
 instance NOV_1304_Balor(Npc_Default)
 {
-	name[0] = "Бэлор";
+	name[0] = "Р‘СЌР»РѕСЂ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 15;
@@ -97,7 +97,7 @@ func int dia_balor_tpl_condition()
 
 func void dia_balor_tpl_info()
 {
-	AI_Output(self,other,"SVM_13_YouStoleFromGur");	//Ты обокрал Гуру! Они уже знают, что это был ты.
+	AI_Output(self,other,"SVM_13_YouStoleFromGur");	//РўС‹ РѕР±РѕРєСЂР°Р» Р“СѓСЂСѓ! РћРЅРё СѓР¶Рµ Р·РЅР°СЋС‚, С‡С‚Рѕ СЌС‚Рѕ Р±С‹Р» С‚С‹.
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
 	if((Npc_GetTrueGuild(hero) == GIL_NOV) || (Npc_GetTrueGuild(hero) == GIL_TPL) || (Npc_GetTrueGuild(hero) == GIL_GUR))

@@ -1,7 +1,7 @@
 
 instance TPL_1401_GORNAKOSH_PSI(Npc_Default)
 {
-	name[0] = "Гор На Кош";
+	name[0] = "Р“РѕСЂ РќР° РљРѕС€";
 	npcType = npctype_main;
 	guild = GIL_TPL;
 	level = 17;

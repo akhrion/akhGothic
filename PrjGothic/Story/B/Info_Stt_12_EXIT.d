@@ -26,7 +26,7 @@ instance Info_Stt_12_EinerVonEuchWerden(C_Info)
 	condition = Info_Stt_12_EinerVonEuchWerden_Condition;
 	information = Info_Stt_12_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Я хочу быть Призраком.";
+	description = "РЇ С…РѕС‡Сѓ Р±С‹С‚СЊ РџСЂРёР·СЂР°РєРѕРј.";
 };
 
 
@@ -40,11 +40,11 @@ func int Info_Stt_12_EinerVonEuchWerden_Condition()
 
 func void Info_Stt_12_EinerVonEuchWerden_Info()
 {
-	AI_Output(other,self,"Info_Stt_12_EinerVonEuchWerden_15_00");	//Я хочу быть Призраком.
-	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_01");	//А... Тогда тебе надо знать, что Гомез не выносит неудачников. Если хочешь быть среди нас, то будь готов жизнь за него отдать.
-	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_02");	//Он принимает, в лучшем случае, половину из всех желающих.
-	AI_Output(other,self,"Info_Stt_12_EinerVonEuchWerden_15_03");	//А остальные? Что с ними?
-	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_04");	//Вероятно жуют рис в Новом лагере.
+	AI_Output(other,self,"Info_Stt_12_EinerVonEuchWerden_15_00");	//РЇ С…РѕС‡Сѓ Р±С‹С‚СЊ РџСЂРёР·СЂР°РєРѕРј.
+	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_01");	//Рђ... РўРѕРіРґР° С‚РµР±Рµ РЅР°РґРѕ Р·РЅР°С‚СЊ, С‡С‚Рѕ Р“РѕРјРµР· РЅРµ РІС‹РЅРѕСЃРёС‚ РЅРµСѓРґР°С‡РЅРёРєРѕРІ. Р•СЃР»Рё С…РѕС‡РµС€СЊ Р±С‹С‚СЊ СЃСЂРµРґРё РЅР°СЃ, С‚Рѕ Р±СѓРґСЊ РіРѕС‚РѕРІ Р¶РёР·РЅСЊ Р·Р° РЅРµРіРѕ РѕС‚РґР°С‚СЊ.
+	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_02");	//РћРЅ РїСЂРёРЅРёРјР°РµС‚, РІ Р»СѓС‡С€РµРј СЃР»СѓС‡Р°Рµ, РїРѕР»РѕРІРёРЅСѓ РёР· РІСЃРµС… Р¶РµР»Р°СЋС‰РёС….
+	AI_Output(other,self,"Info_Stt_12_EinerVonEuchWerden_15_03");	//Рђ РѕСЃС‚Р°Р»СЊРЅС‹Рµ? Р§С‚Рѕ СЃ РЅРёРјРё?
+	AI_Output(self,other,"Info_Stt_12_EinerVonEuchWerden_12_04");	//Р’РµСЂРѕСЏС‚РЅРѕ Р¶СѓСЋС‚ СЂРёСЃ РІ РќРѕРІРѕРј Р»Р°РіРµСЂРµ.
 };
 
 
@@ -54,7 +54,7 @@ instance Info_Stt_12_WichtigePersonen(C_Info)
 	condition = Info_Stt_12_WichtigePersonen_Condition;
 	information = Info_Stt_12_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто здесь главный?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РіР»Р°РІРЅС‹Р№?";
 };
 
 
@@ -67,8 +67,8 @@ func void Info_Stt_12_WichtigePersonen_Info()
 {
 	var C_Npc diego;
 	var C_Npc Thorus;
-	AI_Output(other,self,"Info_Stt_12_WichtigePersonen_15_00");	//Кто здесь главный?
-	AI_Output(self,other,"Info_Stt_12_WichtigePersonen_12_01");	//Диего заправляет Призраками. А если надо поговорить с Гомезом, то это к Торусу.
+	AI_Output(other,self,"Info_Stt_12_WichtigePersonen_15_00");	//РљС‚Рѕ Р·РґРµСЃСЊ РіР»Р°РІРЅС‹Р№?
+	AI_Output(self,other,"Info_Stt_12_WichtigePersonen_12_01");	//Р”РёРµРіРѕ Р·Р°РїСЂР°РІР»СЏРµС‚ РџСЂРёР·СЂР°РєР°РјРё. Рђ РµСЃР»Рё РЅР°РґРѕ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р“РѕРјРµР·РѕРј, С‚Рѕ СЌС‚Рѕ Рє РўРѕСЂСѓСЃСѓ.
 	diego = Hlp_GetNpc(PC_Thief);
 	diego.aivar[AIV_FINDABLE] = TRUE;
 	Thorus = Hlp_GetNpc(GRD_200_Thorus);
@@ -82,7 +82,7 @@ instance Info_Stt_12_DasLager(C_Info)
 	condition = Info_Stt_12_DasLager_Condition;
 	information = Info_Stt_12_DasLager_Info;
 	permanent = 1;
-	description = "А что хорошего в этом лагере? Расскажи, а!";
+	description = "Рђ С‡С‚Рѕ С…РѕСЂРѕС€РµРіРѕ РІ СЌС‚РѕРј Р»Р°РіРµСЂРµ? Р Р°СЃСЃРєР°Р¶Рё, Р°!";
 };
 
 
@@ -93,8 +93,8 @@ func int Info_Stt_12_DasLager_Condition()
 
 func void Info_Stt_12_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Stt_12_DasLager_15_00");	//А что хорошего в этом лагере? Расскажи, а!
-	AI_Output(self,other,"Info_Stt_12_DasLager_12_01");	//Думаю, у рудокопов найдется свободная минутка с тобой об этом поболтать. Они все равно маются без дела.
+	AI_Output(other,self,"Info_Stt_12_DasLager_15_00");	//Рђ С‡С‚Рѕ С…РѕСЂРѕС€РµРіРѕ РІ СЌС‚РѕРј Р»Р°РіРµСЂРµ? Р Р°СЃСЃРєР°Р¶Рё, Р°!
+	AI_Output(self,other,"Info_Stt_12_DasLager_12_01");	//Р”СѓРјР°СЋ, Сѓ СЂСѓРґРѕРєРѕРїРѕРІ РЅР°Р№РґРµС‚СЃСЏ СЃРІРѕР±РѕРґРЅР°СЏ РјРёРЅСѓС‚РєР° СЃ С‚РѕР±РѕР№ РѕР± СЌС‚РѕРј РїРѕР±РѕР»С‚Р°С‚СЊ. РћРЅРё РІСЃРµ СЂР°РІРЅРѕ РјР°СЋС‚СЃСЏ Р±РµР· РґРµР»Р°.
 };
 
 
@@ -104,7 +104,7 @@ instance Info_Stt_12_DieLage(C_Info)
 	condition = Info_Stt_12_DieLage_Condition;
 	information = Info_Stt_12_DieLage_Info;
 	permanent = 1;
-	description = "Ну, как жизнь?";
+	description = "РќСѓ, РєР°Рє Р¶РёР·РЅСЊ?";
 };
 
 
@@ -115,8 +115,8 @@ func int Info_Stt_12_DieLage_Condition()
 
 func void Info_Stt_12_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Stt_12_DieLage_15_00");	//Ну, как жизнь?
-	AI_Output(self,other,"Info_Stt_12_DieLage_12_01");	//Что тебе надо?
+	AI_Output(other,self,"Info_Stt_12_DieLage_15_00");	//РќСѓ, РєР°Рє Р¶РёР·РЅСЊ?
+	AI_Output(self,other,"Info_Stt_12_DieLage_12_01");	//Р§С‚Рѕ С‚РµР±Рµ РЅР°РґРѕ?
 };
 
 func void B_AssignAmbientInfos_Stt_12(var C_Npc slf)

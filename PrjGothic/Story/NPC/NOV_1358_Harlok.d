@@ -1,7 +1,7 @@
 
 instance NOV_1358_Harlok(Npc_Default)
 {
-	name[0] = "Харлок";
+	name[0] = "РҐР°СЂР»РѕРє";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 3;

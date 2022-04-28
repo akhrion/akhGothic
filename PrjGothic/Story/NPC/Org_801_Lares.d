@@ -1,7 +1,7 @@
 
 instance Org_801_Lares(Npc_Default)
 {
-	name[0] = "Λΰπρ";
+	name[0] = "Π›Π°Ρ€Ρ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 15;

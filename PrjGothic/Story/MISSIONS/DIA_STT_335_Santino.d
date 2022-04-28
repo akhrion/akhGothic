@@ -29,7 +29,7 @@ instance STT_335_Santino_BUY(C_Info)
 	information = STT_335_Santino_BUY_Info;
 	important = 0;
 	permanent = 0;
-	description = "Я могу у тебя что-нибудь купить?";
+	description = "РЇ РјРѕРіСѓ Сѓ С‚РµР±СЏ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РєСѓРїРёС‚СЊ?";
 };
 
 
@@ -40,10 +40,10 @@ func int STT_335_Santino_BUY_Condition()
 
 func void STT_335_Santino_BUY_Info()
 {
-	AI_Output(other,self,"STT_335_Santino_BUY_Info_15_01");	//Я могу у тебя что-нибудь купить?
-	AI_Output(self,other,"STT_335_Santino_BUY_Info_07_02");	//У меня есть все, что можно продать. А то, чего у меня нет, все равно никому не нужно.
+	AI_Output(other,self,"STT_335_Santino_BUY_Info_15_01");	//РЇ РјРѕРіСѓ Сѓ С‚РµР±СЏ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РєСѓРїРёС‚СЊ?
+	AI_Output(self,other,"STT_335_Santino_BUY_Info_07_02");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ РІСЃРµ, С‡С‚Рѕ РјРѕР¶РЅРѕ РїСЂРѕРґР°С‚СЊ. Рђ С‚Рѕ, С‡РµРіРѕ Сѓ РјРµРЅСЏ РЅРµС‚, РІСЃРµ СЂР°РІРЅРѕ РЅРёРєРѕРјСѓ РЅРµ РЅСѓР¶РЅРѕ.
 	Log_CreateTopic(GE_TRADEROM,LOG_NOTE);
-	B_LogEntry(GE_TRADEROM,"Сантино продает некоторые припасы: болты, стрелы, еду.");
+	B_LogEntry(GE_TRADEROM,"РЎР°РЅС‚РёРЅРѕ РїСЂРѕРґР°РµС‚ РЅРµРєРѕС‚РѕСЂС‹Рµ РїСЂРёРїР°СЃС‹: Р±РѕР»С‚С‹, СЃС‚СЂРµР»С‹, РµРґСѓ.");
 };
 
 
@@ -69,6 +69,6 @@ func int stt_335_santino_buy2_condition()
 
 func void stt_335_santino_buy2_info()
 {
-	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//Покажи мне свои товары.
+	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//РџРѕРєР°Р¶Рё РјРЅРµ СЃРІРѕРё С‚РѕРІР°СЂС‹.
 };
 

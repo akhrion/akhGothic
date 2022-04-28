@@ -21,7 +21,7 @@ func int DIA_1348_WatchingSea_Condition()
 };
 func void DIA_1348_WatchingSea_Info()
 {
-	AI_Output(self,other,"DIA_1348_WatchingSea_NULL_0");//Выход кажется таким близким.
-	AI_Output(self,other,"DIA_1348_WatchingSea_NULL_1");//Свобода? Но нет ее здесь.
+	AI_Output(self,other,"DIA_1348_WatchingSea_NULL_0");//Р’С‹С…РѕРґ РєР°Р¶РµС‚СЃСЏ С‚Р°РєРёРј Р±Р»РёР·РєРёРј.
+	AI_Output(self,other,"DIA_1348_WatchingSea_NULL_1");//РЎРІРѕР±РѕРґР°? РќРѕ РЅРµС‚ РµРµ Р·РґРµСЃСЊ.
 	AI_StopProcessInfos(self);
 };

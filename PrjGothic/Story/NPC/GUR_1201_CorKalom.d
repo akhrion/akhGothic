@@ -1,7 +1,7 @@
 
 instance GUR_1201_CorKalom(Npc_Default)
 {
-	name[0] = "Кор Галом";
+	name[0] = "РљРѕСЂ Р“Р°Р»РѕРј";
 	npcType = npctype_friend;
 	guild = GIL_GUR;
 	level = 30;

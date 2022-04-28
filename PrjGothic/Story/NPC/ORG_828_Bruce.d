@@ -1,7 +1,7 @@
 
 instance ORG_828_Bruce(Npc_Default)
 {
-	name[0] = "Απώρ";
+	name[0] = "Π‘Ρ€ΡΡ";
 	npcType = npctype_ambient;
 	guild = GIL_ORG;
 	level = 11;

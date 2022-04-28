@@ -29,7 +29,7 @@ instance Tpl_1436_Templer_CRAWLER(C_Info)
 	information = Tpl_1436_Templer_CRAWLER_Info;
 	important = 0;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -40,8 +40,8 @@ func int Tpl_1436_Templer_CRAWLER_Condition()
 
 func void Tpl_1436_Templer_CRAWLER_Info()
 {
-	AI_Output(other,self,"Tpl_1436_Templer_CRAWLER_Info_15_01");	//Как дела?
-	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_02");	//Неплохо. Охотимся на ползунов, а заодно и рудокопов защищаем, - недовольных нет.
-	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_03");	//Основная наша задача - это добывать слюну из челюстей этих ползучих тварей. Из нее Гуру Кор Галом готовит магические эликсиры.
+	AI_Output(other,self,"Tpl_1436_Templer_CRAWLER_Info_15_01");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_02");	//РќРµРїР»РѕС…Рѕ. РћС…РѕС‚РёРјСЃСЏ РЅР° РїРѕР»Р·СѓРЅРѕРІ, Р° Р·Р°РѕРґРЅРѕ Рё СЂСѓРґРѕРєРѕРїРѕРІ Р·Р°С‰РёС‰Р°РµРј, - РЅРµРґРѕРІРѕР»СЊРЅС‹С… РЅРµС‚.
+	AI_Output(self,other,"Tpl_1436_Templer_CRAWLER_Info_13_03");	//РћСЃРЅРѕРІРЅР°СЏ РЅР°С€Р° Р·Р°РґР°С‡Р° - СЌС‚Рѕ РґРѕР±С‹РІР°С‚СЊ СЃР»СЋРЅСѓ РёР· С‡РµР»СЋСЃС‚РµР№ СЌС‚РёС… РїРѕР»Р·СѓС‡РёС… С‚РІР°СЂРµР№. РР· РЅРµРµ Р“СѓСЂСѓ РљРѕСЂ Р“Р°Р»РѕРј РіРѕС‚РѕРІРёС‚ РјР°РіРёС‡РµСЃРєРёРµ СЌР»РёРєСЃРёСЂС‹.
 };
 

@@ -28,7 +28,7 @@ instance DIA_Minecrawler_HELLO(C_Info)
 	information = DIA_Minecrawler_HELLO_Info;
 	permanent = 1;
 	important = 0;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 func int DIA_Minecrawler_HELLO_Condition()
@@ -38,7 +38,7 @@ func int DIA_Minecrawler_HELLO_Condition()
 
 func void DIA_Minecrawler_HELLO_Info()
 {
-	AI_Output(other,self,"DIA_MinecrawlerQueen_Hello_NULL_04");//Как дела?
-	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_05");//Пока не родила!
-	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_06");//А рожу - не сообщу!
+	AI_Output(other,self,"DIA_MinecrawlerQueen_Hello_NULL_04");//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_05");//РџРѕРєР° РЅРµ СЂРѕРґРёР»Р°!
+	AI_Output(self,other,"DIA_MinecrawlerQueen_Hello_NULL_06");//Рђ СЂРѕР¶Сѓ - РЅРµ СЃРѕРѕР±С‰Сѓ!
 };

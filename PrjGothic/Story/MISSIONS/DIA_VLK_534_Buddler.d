@@ -28,7 +28,7 @@ instance DIA_Vlk_534_LeaveMe(C_Info)
 	condition = DIA_Vlk_534_LeaveMe_Condition;
 	information = DIA_Vlk_534_LeaveMe_Info;
 	permanent = 1;
-	description = "œÓ˜ÂÏÛ Ú˚ ÌÂ ‚ Î‡„ÂÂ?";
+	description = "–ü–æ—á–µ–º—É —Ç—ã –Ω–µ –≤ –ª–∞–≥–µ—Ä–µ?";
 };
 
 
@@ -42,9 +42,62 @@ func int DIA_Vlk_534_LeaveMe_Condition()
 
 func void DIA_Vlk_534_LeaveMe_Info()
 {
-	AI_Output(other,self,"DIA_Vlk_534_LeaveMe_15_00");	//œÓ˜ÂÏÛ Ú˚ ÌÂ ‚ Î‡„ÂÂ?
-	AI_Output(self,other,"DIA_Vlk_534_LeaveMe_02_01");	//ﬂ Ê‰Û Ó‰ÌÓ„Ó ‰Û„‡ ËÁ ¯‡ıÚ˚. ŒÌ Á‡‰ÓÎÊ‡Î ÏÌÂ Û‰Û.
-	AI_Output(self,other,"DIA_Vlk_534_LeaveMe_02_02");	//¿ ·ÂÁ Û‰˚ ÏÌÂ ÌÂÎ¸Áˇ ÔÓˇ‚ÎˇÚ¸Òˇ ‚ Î‡„ÂÂ, ÔÓÚÓÏÛ ˜ÚÓ ˇ ÌÂ ÒÏÓ„Û Á‡ÔÎ‡ÚËÚ¸ ÒÚ‡ÊÌËÍ‡Ï Á‡ Á‡˘ËÚÛ, Ë ÚÓ„‰‡ Û ÏÂÌˇ Ì‡˜ÌÛÚÒˇ ·ÓÎ¸¯ËÂ ÌÂÔËˇÚÌÓÒÚË.
-	AI_StopProcessInfos(self);
+	AI_Output(other,self,"DIA_Vlk_534_LeaveMe_15_00");	//–ü–æ—á–µ–º—É —Ç—ã –Ω–µ –≤ –ª–∞–≥–µ—Ä–µ?
+	AI_Output(self,other,"DIA_Vlk_534_LeaveMe_02_01");	//–Ø –∂–¥—É –æ–¥–Ω–æ–≥–æ –¥—Ä—É–≥–∞ –∏–∑ —à–∞—Ö—Ç—ã. –û–Ω –∑–∞–¥–æ–ª–∂–∞–ª –º–Ω–µ —Ä—É–¥—É.
+	AI_Output(self,other,"DIA_Vlk_534_LeaveMe_02_02");	//–ê –±–µ–∑ —Ä—É–¥—ã –º–Ω–µ –Ω–µ–ª—å–∑—è –ø–æ—è–≤–ª—è—Ç—å—Å—è –≤ –ª–∞–≥–µ—Ä–µ, –ø–æ—Ç–æ–º—É —á—Ç–æ —è –Ω–µ —Å–º–æ–≥—É –∑–∞–ø–ª–∞—Ç–∏—Ç—å —Å—Ç—Ä–∞–∂–Ω–∏–∫–∞–º –∑–∞ –∑–∞—â–∏—Ç—É, –∏ —Ç–æ–≥–¥–∞ —É –º–µ–Ω—è –Ω–∞—á–Ω—É—Ç—Å—è –±–æ–ª—å—à–∏–µ –Ω–µ–ø—Ä–∏—è—Ç–Ω–æ—Å—Ç–∏.
+	if(!Npc_KnowsInfo(hero,DIA_Vlk_534_LeaveMe_HowMuchOre_Pay))
+	{
+		Info_ClearChoices(DIA_Vlk_534_LeaveMe);
+		Info_AddChoice(DIA_Vlk_534_LeaveMe,DIALOG_ENDE,DIA_Vlk_534_Exit_Info);
+		Info_AddChoice(DIA_Vlk_534_LeaveMe,"–°–∫–æ–ª—å–∫–æ —Ä—É–¥—ã —Ç–µ–±–µ –Ω–∞–¥–æ",DIA_Vlk_534_LeaveMe_HowMuchOre);
+	}
+	else
+	{
+		AI_StopProcessInfos(self);
+	};
 };
 
+func void DIA_Vlk_534_LeaveMe_HowMuchOre()
+{
+	Npc_KnowsInfo_HowMuchOre534 = true;
+	AI_Output(hero,self,"DIA_Vlk_534_LeaveMe_HowMuchOre_NULL_01"); //–°–∫–æ–ª—å–∫–æ —Ä—É–¥—ã —Ç–µ–±–µ –Ω–∞–¥–æ?
+	AI_Output(self,hero,"DIA_Vlk_534_LeaveMe_HowMuchOre_NULL_02"); //–ú–º? 10 –∫—É—Å–∫–æ–≤.
+	if(Npc_HasItems(hero,ItMiNugget) > 9)
+	{
+		Info_ClearChoices(DIA_Vlk_534_LeaveMe);
+		Info_AddChoice(DIA_Vlk_534_LeaveMe,DIALOG_ENDE,DIA_Vlk_534_Exit_Info);
+		Info_AddChoice(DIA_Vlk_534_LeaveMe,"–ê —É –º–µ–Ω—è –µ—Å—Ç—å 10 –∫—É—Å–∫–æ–≤ —Ä—É–¥—ã –¥–ª—è —Ç–µ–±—è!",DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_Info);
+	};
+};
+
+instance DIA_Vlk_534_LeaveMe_HowMuchOre_Pay(C_Info)
+{
+	npc = VLK_534_Buddler;
+	nr = 10;
+	condition = DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_Condition;
+	information = DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_Info;
+	permanent = 0;
+	description = "–£ –º–µ–Ω—è –µ—Å—Ç—å 10 –∫—É—Å–∫–æ–≤ —Ä—É–¥—ã –¥–ª—è —Ç–µ–±—è!";
+};
+
+
+func int DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_Condition()
+{
+	if(
+		Kapitel < 4
+//	&&	Npc_KnowsInfo(hero,DIA_Vlk_534_LeaveMe_HowMuchOre)
+	&&	Npc_KnowsInfo_534_HowMuchOre_Pay == false
+	&&	Npc_KnowsInfo_HowMuchOre534
+	&&	Npc_HasItems(hero,ItMiNugget) > 9
+	)
+	{
+		return 1;
+	};
+};
+
+func void DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_Info()
+{
+	Npc_KnowsInfo_534_HowMuchOre_Pay = true;
+	AI_Output(hero,self,"DIA_Vlk_534_LeaveMe_HowMuchOre_Pay_NULL_01"); //–£ –º–µ–Ω—è –µ—Å—Ç—å 10 –∫—É—Å–∫–æ–≤ —Ä—É–¥—ã –¥–ª—è —Ç–µ–±—è!
+	Npc_RemoveInvItems(hero,ItMiNugget,10);
+};

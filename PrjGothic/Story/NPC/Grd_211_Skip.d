@@ -1,7 +1,7 @@
 
 instance Grd_211_Skip(Npc_Default)
 {
-	name[0] = "Скип";
+	name[0] = "РЎРєРёРї";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;
@@ -46,7 +46,7 @@ func void rtn_remove_211()
 
 instance GRD_599_SKIP(Npc_Default)
 {
-	name[0] = "Скип";
+	name[0] = "РЎРєРёРї";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;

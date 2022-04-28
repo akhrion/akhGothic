@@ -28,7 +28,7 @@ instance DIA_ARTO_Hello(C_Info)
 	condition = DIA_ARTO_Hello_Condition;
 	information = DIA_ARTO_Hello_Info;
 	permanent = 0;
-	description = "Ты кто?";
+	description = "РўС‹ РєС‚Рѕ?";
 };
 
 
@@ -39,8 +39,8 @@ func int DIA_ARTO_Hello_Condition()
 
 func void DIA_ARTO_Hello_Info()
 {
-	AI_Output(other,self,"DIA_ARTO_Hello_15_00");	//Ты кто?
-	AI_Output(self,other,"DIA_ARTO_Hello_13_01");	//Я Арто.
+	AI_Output(other,self,"DIA_ARTO_Hello_15_00");	//РўС‹ РєС‚Рѕ?
+	AI_Output(self,other,"DIA_ARTO_Hello_13_01");	//РЇ РђСЂС‚Рѕ.
 };
 
 
@@ -51,7 +51,7 @@ instance DIA_ARTO_What(C_Info)
 	condition = DIA_ARTO_What_Condition;
 	information = DIA_ARTO_What_Info;
 	permanent = 0;
-	description = "Что ты здесь делаешь?";
+	description = "Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?";
 };
 
 
@@ -65,8 +65,8 @@ func int DIA_ARTO_What_Condition()
 
 func void DIA_ARTO_What_Info()
 {
-	AI_Output(other,self,"DIA_ARTO_What_15_00");	//Что ты здесь делаешь?
-	AI_Output(self,other,"DIA_ARTO_What_13_01");	//Я охраняю Гомеза.
+	AI_Output(other,self,"DIA_ARTO_What_15_00");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?
+	AI_Output(self,other,"DIA_ARTO_What_13_01");	//РЇ РѕС…СЂР°РЅСЏСЋ Р“РѕРјРµР·Р°.
 };
 
 
@@ -77,7 +77,7 @@ instance DIA_ARTO_PERM(C_Info)
 	condition = DIA_ARTO_PERM_Condition;
 	information = DIA_ARTO_PERM_Info;
 	permanent = 1;
-	description = "А ты, вижу, неразговорчивый?";
+	description = "Рђ С‚С‹, РІРёР¶Сѓ, РЅРµСЂР°Р·РіРѕРІРѕСЂС‡РёРІС‹Р№?";
 };
 
 
@@ -91,7 +91,7 @@ func int DIA_ARTO_PERM_Condition()
 
 func void DIA_ARTO_PERM_Info()
 {
-	AI_Output(other,self,"DIA_ARTO_PERM_15_00");	//А ты, вижу, неразговорчивый?
-	AI_Output(self,other,"DIA_ARTO_PERM_13_01");	//Точно.
+	AI_Output(other,self,"DIA_ARTO_PERM_15_00");	//Рђ С‚С‹, РІРёР¶Сѓ, РЅРµСЂР°Р·РіРѕРІРѕСЂС‡РёРІС‹Р№?
+	AI_Output(self,other,"DIA_ARTO_PERM_13_01");	//РўРѕС‡РЅРѕ.
 };
 

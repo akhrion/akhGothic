@@ -1,9 +1,9 @@
 var int modificator;
 var int isWorking;
 var int Used_ItMi_Alchemy_Quicksilver_01;
-var int NPC_TALENT_FIREMASTER_value;//для хранения инфы о навыке охоты - обучен \ не обучен - это слишком мало
+var int NPC_TALENT_FIREMASTER_value;//РґР»СЏ С…СЂР°РЅРµРЅРёСЏ РёРЅС„С‹ Рѕ РЅР°РІС‹РєРµ РѕС…РѕС‚С‹ - РѕР±СѓС‡РµРЅ \ РЅРµ РѕР±СѓС‡РµРЅ - СЌС‚Рѕ СЃР»РёС€РєРѕРј РјР°Р»Рѕ
 var int isAkhRespawnNeed;
-const int Spawn_MaxInx = 20;//меньше 20 не ставить
+const int Spawn_MaxInx = 20;//РјРµРЅСЊС€Рµ 20 РЅРµ СЃС‚Р°РІРёС‚СЊ
 const int Spawn_scavengersDelay = 2;
 const int Spawn_scavengersLastTime = 0;
 var string Spawn_scavengers[Spawn_MaxInx];

@@ -38,7 +38,7 @@ instance Info_Riordian_NEWS(C_Info)
 	information = Info_Riordian_NEWS_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ìåíÿ ïðèñëàë Ñàòóðàñ.";
+	description = "ÐœÐµÐ½Ñ Ð¿Ñ€Ð¸ÑÐ»Ð°Ð» Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ.";
 };
 
 
@@ -52,9 +52,9 @@ func int Info_Riordian_NEWS_Condition()
 
 func void Info_Riordian_NEWS_Info()
 {
-	AI_Output(other,self,"Info_Riordian_NEWS_15_01");	//Ìåíÿ ïðèñëàë Ñàòóðàñ.
-	AI_Output(self,other,"Info_Riordian_NEWS_14_02");	//Çàõîäè. Ìíå óæå äîëîæèëè î òåáå.
-	AI_Output(self,other,"Info_Riordian_NEWS_14_03");	//Âîò, âîçüìè ýòè ýëèêñèðû. Çäåñü âñå, ÷òî òåáå ìîæåò ïðèãîäèòüñÿ.
+	AI_Output(other,self,"Info_Riordian_NEWS_15_01");	//ÐœÐµÐ½Ñ Ð¿Ñ€Ð¸ÑÐ»Ð°Ð» Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ.
+	AI_Output(self,other,"Info_Riordian_NEWS_14_02");	//Ð—Ð°Ñ…Ð¾Ð´Ð¸. ÐœÐ½Ðµ ÑƒÐ¶Ðµ Ð´Ð¾Ð»Ð¾Ð¶Ð¸Ð»Ð¸ Ð¾ Ñ‚ÐµÐ±Ðµ.
+	AI_Output(self,other,"Info_Riordian_NEWS_14_03");	//Ð’Ð¾Ñ‚, Ð²Ð¾Ð·ÑŒÐ¼Ð¸ ÑÑ‚Ð¸ ÑÐ»Ð¸ÐºÑÐ¸Ñ€Ñ‹. Ð—Ð´ÐµÑÑŒ Ð²ÑÐµ, Ñ‡Ñ‚Ð¾ Ñ‚ÐµÐ±Ðµ Ð¼Ð¾Ð¶ÐµÑ‚ Ð¿Ñ€Ð¸Ð³Ð¾Ð´Ð¸Ñ‚ÑŒÑÑ.
 	CreateInvItems(hero,ItFo_Potion_Health_01,5);
 	CreateInvItems(hero,ItFo_Potion_Mana_01,5);
 	CreateInvItems(hero,ItFo_Potion_Health_02,2);
@@ -66,14 +66,14 @@ func void Info_Riordian_NEWS_Info()
 	{
 		CreateInvItems(hero,ItFo_Potion_Strength_01,1);
 		CreateInvItems(hero,ItFo_Potion_Dex_01,1);
-		b_printtrademsg1("Ïîëó÷åíî 20 ðàçëè÷íûõ ýëèêñèðîâ.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ 20 Ñ€Ð°Ð·Ð»Ð¸Ñ‡Ð½Ñ‹Ñ… ÑÐ»Ð¸ÐºÑÐ¸Ñ€Ð¾Ð².");
 	}
 	else
 	{
 		CreateInvItems(hero,ItFo_Potion_Health_Perma_01,1);
-		b_printtrademsg1("Ïîëó÷åíî 19 ðàçëè÷íûõ ýëèêñèðîâ.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ 19 Ñ€Ð°Ð·Ð»Ð¸Ñ‡Ð½Ñ‹Ñ… ÑÐ»Ð¸ÐºÑÐ¸Ñ€Ð¾Ð².");
 	};
-	AI_Output(self,other,"Info_Riordian_NEWS_14_04");	//Òåïåðü ìîæåøü èäòè. Ýòè êàìíè íàøà ïîñëåäíÿÿ íàäåæäà - îòûùè èõ!
+	AI_Output(self,other,"Info_Riordian_NEWS_14_04");	//Ð¢ÐµÐ¿ÐµÑ€ÑŒ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð¸Ð´Ñ‚Ð¸. Ð­Ñ‚Ð¸ ÐºÐ°Ð¼Ð½Ð¸ Ð½Ð°ÑˆÐ° Ð¿Ð¾ÑÐ»ÐµÐ´Ð½ÑÑ Ð½Ð°Ð´ÐµÐ¶Ð´Ð° - Ð¾Ñ‚Ñ‹Ñ‰Ð¸ Ð¸Ñ…!
 };
 
 
@@ -84,7 +84,7 @@ instance Info_Riordian_REWARD(C_Info)
 	information = Info_Riordian_REWARD_Info;
 	permanent = 0;
 	important = 0;
-	description = "Ñàòóðàñ ñêàçàë, ÷òî ó òåáÿ åñòü äëÿ ìåíÿ íàãðàäà.";
+	description = "Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñƒ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð°.";
 };
 
 
@@ -98,11 +98,11 @@ func int Info_Riordian_REWARD_Condition()
 
 func void Info_Riordian_REWARD_Info()
 {
-	AI_Output(other,self,"Info_Riordian_REWARD_15_01");	//Ñàòóðàñ ñêàçàë, ÷òî ó òåáÿ åñòü äëÿ ìåíÿ íàãðàäà.
-	AI_Output(self,other,"Info_Riordian_REWARD_14_02");	//À, íó ïðîõîäè, ïðîõîäè.
-	AI_Output(self,other,"Info_Riordian_REWARD_14_03");	//Íàø äóõîâíûé íàñòàâíèê ðàññêàçàë î òâîèõ ãåðîéñêèõ ïîñòóïêàõ.
-	AI_Output(self,other,"Info_Riordian_REWARD_14_04");	//Âñå æèòåëè ëàãåðÿ - äà ÷òî òàì, âñåé êîëîíèè - â ãëóáîêîì äîëãó ïåðåä òîáîé.
-	AI_Output(self,other,"Info_Riordian_REWARD_14_05");	//Ïðèìè îò íàñ ýòó ñêðîìíóþ íàãðàäó â çíàê íàøåé áëàãîäàðíîñòè.
+	AI_Output(other,self,"Info_Riordian_REWARD_15_01");	//Ð¡Ð°Ñ‚ÑƒÑ€Ð°Ñ ÑÐºÐ°Ð·Ð°Ð», Ñ‡Ñ‚Ð¾ Ñƒ Ñ‚ÐµÐ±Ñ ÐµÑÑ‚ÑŒ Ð´Ð»Ñ Ð¼ÐµÐ½Ñ Ð½Ð°Ð³Ñ€Ð°Ð´Ð°.
+	AI_Output(self,other,"Info_Riordian_REWARD_14_02");	//Ð, Ð½Ñƒ Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¸, Ð¿Ñ€Ð¾Ñ…Ð¾Ð´Ð¸.
+	AI_Output(self,other,"Info_Riordian_REWARD_14_03");	//ÐÐ°Ñˆ Ð´ÑƒÑ…Ð¾Ð²Ð½Ñ‹Ð¹ Ð½Ð°ÑÑ‚Ð°Ð²Ð½Ð¸Ðº Ñ€Ð°ÑÑÐºÐ°Ð·Ð°Ð» Ð¾ Ñ‚Ð²Ð¾Ð¸Ñ… Ð³ÐµÑ€Ð¾Ð¹ÑÐºÐ¸Ñ… Ð¿Ð¾ÑÑ‚ÑƒÐ¿ÐºÐ°Ñ….
+	AI_Output(self,other,"Info_Riordian_REWARD_14_04");	//Ð’ÑÐµ Ð¶Ð¸Ñ‚ÐµÐ»Ð¸ Ð»Ð°Ð³ÐµÑ€Ñ - Ð´Ð° Ñ‡Ñ‚Ð¾ Ñ‚Ð°Ð¼, Ð²ÑÐµÐ¹ ÐºÐ¾Ð»Ð¾Ð½Ð¸Ð¸ - Ð² Ð³Ð»ÑƒÐ±Ð¾ÐºÐ¾Ð¼ Ð´Ð¾Ð»Ð³Ñƒ Ð¿ÐµÑ€ÐµÐ´ Ñ‚Ð¾Ð±Ð¾Ð¹.
+	AI_Output(self,other,"Info_Riordian_REWARD_14_05");	//ÐŸÑ€Ð¸Ð¼Ð¸ Ð¾Ñ‚ Ð½Ð°Ñ ÑÑ‚Ñƒ ÑÐºÑ€Ð¾Ð¼Ð½ÑƒÑŽ Ð½Ð°Ð³Ñ€Ð°Ð´Ñƒ Ð² Ð·Ð½Ð°Ðº Ð½Ð°ÑˆÐµÐ¹ Ð±Ð»Ð°Ð³Ð¾Ð´Ð°Ñ€Ð½Ð¾ÑÑ‚Ð¸.
 	CreateInvItems(hero,ItFo_Potion_Health_02,5);
 	CreateInvItems(hero,ItFo_Potion_Mana_02,5);
 	CreateInvItems(hero,ItFo_Potion_Health_03,2);
@@ -113,13 +113,13 @@ func void Info_Riordian_REWARD_Info()
 	{
 		CreateInvItems(hero,ItFo_Potion_Master_01,1);
 		CreateInvItems(hero,ItFo_Potion_Mana_Perma_02,1);
-		b_printtrademsg1("Ïîëó÷åíî 20 ðàçëè÷íûõ ýëèêñèðîâ.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ 20 Ñ€Ð°Ð·Ð»Ð¸Ñ‡Ð½Ñ‹Ñ… ÑÐ»Ð¸ÐºÑÐ¸Ñ€Ð¾Ð².");
 	}
 	else
 	{
-		b_printtrademsg1("Ïîëó÷åíî 18 ðàçëè÷íûõ ýëèêñèðîâ.");
+		b_printtrademsg1("ÐŸÐ¾Ð»ÑƒÑ‡ÐµÐ½Ð¾ 18 Ñ€Ð°Ð·Ð»Ð¸Ñ‡Ð½Ñ‹Ñ… ÑÐ»Ð¸ÐºÑÐ¸Ñ€Ð¾Ð².");
 	};
-	B_LogEntry(CH3_BringFoci,"Ðèîðäàí äàë ìíå íåñêîëüêî çåëèé, êîòîðûå ìîãóò ìíå ïðèãîäèòüñÿ â áëèæàéøåå âðåìÿ.");
+	B_LogEntry(CH3_BringFoci,"Ð Ð¸Ð¾Ñ€Ð´Ð°Ð½ Ð´Ð°Ð» Ð¼Ð½Ðµ Ð½ÐµÑÐºÐ¾Ð»ÑŒÐºÐ¾ Ð·ÐµÐ»Ð¸Ð¹, ÐºÐ¾Ñ‚Ð¾Ñ€Ñ‹Ðµ Ð¼Ð¾Ð³ÑƒÑ‚ Ð¼Ð½Ðµ Ð¿Ñ€Ð¸Ð³Ð¾Ð´Ð¸Ñ‚ÑŒÑÑ Ð² Ð±Ð»Ð¸Ð¶Ð°Ð¹ÑˆÐµÐµ Ð²Ñ€ÐµÐ¼Ñ.");
 	if(Npc_KnowsInfo(hero,Info_Cronos_REWARD))
 	{
 		Log_SetTopicStatus(CH3_BringFoci,LOG_SUCCESS);
@@ -147,7 +147,7 @@ func int Info_Riordian_MESSAGE_Condition()
 
 func void Info_Riordian_MESSAGE_Info()
 {
-	AI_Output(self,hero,"Info_Riordian_MESSAGE_14_01");	//Ðàä, ÷òî òû ïðèøåë! ß æäàë òåáÿ!
+	AI_Output(self,hero,"Info_Riordian_MESSAGE_14_01");	//Ð Ð°Ð´, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ð¿Ñ€Ð¸ÑˆÐµÐ»! Ð¯ Ð¶Ð´Ð°Ð» Ñ‚ÐµÐ±Ñ!
 };
 
 
@@ -158,7 +158,7 @@ instance Info_Riordian_MESSAGEWHY(C_Info)
 	information = Info_Riordian_MESSAGEWHY_Info;
 	permanent = 0;
 	important = 0;
-	description = "Òû æäàë ìåíÿ? Çà÷åì?";
+	description = "Ð¢Ñ‹ Ð¶Ð´Ð°Ð» Ð¼ÐµÐ½Ñ? Ð—Ð°Ñ‡ÐµÐ¼?";
 };
 
 
@@ -172,12 +172,12 @@ func int Info_Riordian_MESSAGEWHY_Condition()
 
 func void Info_Riordian_MESSAGEWHY_Info()
 {
-	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_01");	//Òû æäàë ìåíÿ? Çà÷åì?
-	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_02");	//Ãîðí ïðîñèë îòïðàâèòü òåáÿ ê íåìó, êàê òîëüêî òû îáúÿâèøüñÿ!
-	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_03");	//À â ÷åì äåëî?
-	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_04");	//Ó íåãî åñòü ïëàí, êàê îñâîáîäèòü çàõâà÷åííóþ øàõòó.
-	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_05");	//Îí âñå åùå îõðàíÿåò âõîä â øàõòó?
-	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_06");	//Äà! È, ïîæàëóéñòà, îòïðàâëÿéñÿ ê íåìó, êàê ìîæíî áûñòðåå.
+	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_01");	//Ð¢Ñ‹ Ð¶Ð´Ð°Ð» Ð¼ÐµÐ½Ñ? Ð—Ð°Ñ‡ÐµÐ¼?
+	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_02");	//Ð“Ð¾Ñ€Ð½ Ð¿Ñ€Ð¾ÑÐ¸Ð» Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ Ñ‚ÐµÐ±Ñ Ðº Ð½ÐµÐ¼Ñƒ, ÐºÐ°Ðº Ñ‚Ð¾Ð»ÑŒÐºÐ¾ Ñ‚Ñ‹ Ð¾Ð±ÑŠÑÐ²Ð¸ÑˆÑŒÑÑ!
+	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_03");	//Ð Ð² Ñ‡ÐµÐ¼ Ð´ÐµÐ»Ð¾?
+	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_04");	//Ð£ Ð½ÐµÐ³Ð¾ ÐµÑÑ‚ÑŒ Ð¿Ð»Ð°Ð½, ÐºÐ°Ðº Ð¾ÑÐ²Ð¾Ð±Ð¾Ð´Ð¸Ñ‚ÑŒ Ð·Ð°Ñ…Ð²Ð°Ñ‡ÐµÐ½Ð½ÑƒÑŽ ÑˆÐ°Ñ…Ñ‚Ñƒ.
+	AI_Output(hero,self,"Info_Riordian_MESSAGEWHY_15_05");	//ÐžÐ½ Ð²ÑÐµ ÐµÑ‰Ðµ Ð¾Ñ…Ñ€Ð°Ð½ÑÐµÑ‚ Ð²Ñ…Ð¾Ð´ Ð² ÑˆÐ°Ñ…Ñ‚Ñƒ?
+	AI_Output(self,hero,"Info_Riordian_MESSAGEWHY_14_06");	//Ð”Ð°! Ð˜, Ð¿Ð¾Ð¶Ð°Ð»ÑƒÐ¹ÑÑ‚Ð°, Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÐ¹ÑÑ Ðº Ð½ÐµÐ¼Ñƒ, ÐºÐ°Ðº Ð¼Ð¾Ð¶Ð½Ð¾ Ð±Ñ‹ÑÑ‚Ñ€ÐµÐµ.
 };
 
 
@@ -201,7 +201,7 @@ func int KDW_605_Riordian_WELCOME_Condition()
 
 func void KDW_605_Riordian_WELCOME_Info()
 {
-	AI_Output(self,other,"KDW_605_Riordian_WELCOME_Info_14_01");	//ß ðàä, ÷òî òû òåïåðü ñ íàìè.
+	AI_Output(self,other,"KDW_605_Riordian_WELCOME_Info_14_01");	//Ð¯ Ñ€Ð°Ð´, Ñ‡Ñ‚Ð¾ Ñ‚Ñ‹ Ñ‚ÐµÐ¿ÐµÑ€ÑŒ Ñ Ð½Ð°Ð¼Ð¸.
 };
 
 
@@ -225,7 +225,7 @@ func int KDW_605_Riordian_HEAL_Condition()
 
 func void KDW_605_Riordian_HEAL_Info()
 {
-	AI_Output(self,other,"KDW_605_Riordian_HEAL_Info_14_01");	//Åñëè òû ðàíåí, ÿ ìîãó âûëå÷èòü òåáÿ.
+	AI_Output(self,other,"KDW_605_Riordian_HEAL_Info_14_01");	//Ð•ÑÐ»Ð¸ Ñ‚Ñ‹ Ñ€Ð°Ð½ÐµÐ½, Ñ Ð¼Ð¾Ð³Ñƒ Ð²Ñ‹Ð»ÐµÑ‡Ð¸Ñ‚ÑŒ Ñ‚ÐµÐ±Ñ.
 };
 
 
@@ -237,7 +237,7 @@ instance KDW_605_Riordian_HEALINFO(C_Info)
 	information = KDW_605_Riordian_HEALINFO_Info;
 	important = 0;
 	permanent = 1;
-	description = "ß ðàíåí. Òû ìîæåøü âûëå÷èòü ìåíÿ?";
+	description = "Ð¯ Ñ€Ð°Ð½ÐµÐ½. Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð²Ñ‹Ð»ÐµÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ?";
 };
 
 
@@ -251,8 +251,8 @@ func int KDW_605_Riordian_HEALINFO_Condition()
 
 func void KDW_605_Riordian_HEALINFO_Info()
 {
-	AI_Output(other,self,"KDW_605_Riordian_HEALINFO_Info_15_01");	//ß ðàíåí. Òû ìîæåøü âûëå÷èòü ìåíÿ?
-	AI_Output(self,other,"KDW_605_Riordian_HEALINFO_Info_14_02");	//Äà ïîäàðÿò ñëîâà ìîè çäîðîâüå è ñèëó òåáå!
+	AI_Output(other,self,"KDW_605_Riordian_HEALINFO_Info_15_01");	//Ð¯ Ñ€Ð°Ð½ÐµÐ½. Ð¢Ñ‹ Ð¼Ð¾Ð¶ÐµÑˆÑŒ Ð²Ñ‹Ð»ÐµÑ‡Ð¸Ñ‚ÑŒ Ð¼ÐµÐ½Ñ?
+	AI_Output(self,other,"KDW_605_Riordian_HEALINFO_Info_14_02");	//Ð”Ð° Ð¿Ð¾Ð´Ð°Ñ€ÑÑ‚ ÑÐ»Ð¾Ð²Ð° Ð¼Ð¾Ð¸ Ð·Ð´Ð¾Ñ€Ð¾Ð²ÑŒÐµ Ð¸ ÑÐ¸Ð»Ñƒ Ñ‚ÐµÐ±Ðµ!
 	hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 };
 
@@ -264,7 +264,7 @@ instance KDW_605_Riordian_GREET(C_Info)
 	information = KDW_605_Riordian_GREET_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ïðèâåòñòâóþ òåáÿ, ìàã!";
+	description = "ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!";
 };
 
 
@@ -275,10 +275,10 @@ func int KDW_605_Riordian_GREET_Condition()
 
 func void KDW_605_Riordian_GREET_Info()
 {
-	AI_Output(other,self,"KDW_605_Riordian_GREET_Info_15_01");	//Ïðèâåòñòâóþ òåáÿ, ìàã!
-	AI_Output(self,other,"KDW_605_Riordian_GREET_Info_14_02");	//ß Ðèîðäàí, àëõèìèê. Ïîëàãàþ, òåáå íóæåí ýëèêñèð?
+	AI_Output(other,self,"KDW_605_Riordian_GREET_Info_15_01");	//ÐŸÑ€Ð¸Ð²ÐµÑ‚ÑÑ‚Ð²ÑƒÑŽ Ñ‚ÐµÐ±Ñ, Ð¼Ð°Ð³!
+	AI_Output(self,other,"KDW_605_Riordian_GREET_Info_14_02");	//Ð¯ Ð Ð¸Ð¾Ñ€Ð´Ð°Ð½, Ð°Ð»Ñ…Ð¸Ð¼Ð¸Ðº. ÐŸÐ¾Ð»Ð°Ð³Ð°ÑŽ, Ñ‚ÐµÐ±Ðµ Ð½ÑƒÐ¶ÐµÐ½ ÑÐ»Ð¸ÐºÑÐ¸Ñ€?
 	Log_CreateTopic(GE_TraderNC,LOG_NOTE);
-	B_LogEntry(GE_TraderNC,"Ìàã Êðóãà Âîäû Ðèîðäàí ïðîäàåò ìàãè÷åñêèå çåëüÿ. ß ìîãó íàéòè åãî â ëàáîðàòîðèè íà âòîðîì óðîâíå ïåùåðû.");
+	B_LogEntry(GE_TraderNC,"ÐœÐ°Ð³ ÐšÑ€ÑƒÐ³Ð° Ð’Ð¾Ð´Ñ‹ Ð Ð¸Ð¾Ñ€Ð´Ð°Ð½ Ð¿Ñ€Ð¾Ð´Ð°ÐµÑ‚ Ð¼Ð°Ð³Ð¸Ñ‡ÐµÑÐºÐ¸Ðµ Ð·ÐµÐ»ÑŒÑ. Ð¯ Ð¼Ð¾Ð³Ñƒ Ð½Ð°Ð¹Ñ‚Ð¸ ÐµÐ³Ð¾ Ð² Ð»Ð°Ð±Ð¾Ñ€Ð°Ñ‚Ð¾Ñ€Ð¸Ð¸ Ð½Ð° Ð²Ñ‚Ð¾Ñ€Ð¾Ð¼ ÑƒÑ€Ð¾Ð²Ð½Ðµ Ð¿ÐµÑ‰ÐµÑ€Ñ‹.");
 };
 
 
@@ -289,7 +289,7 @@ instance KDW_605_Riordian_TRADE(C_Info)
 	information = KDW_605_Riordian_TRADE_Info;
 	important = 0;
 	permanent = 1;
-	description = "Ïîêàæè ìíå ñâîè òîâàðû.";
+	description = "ÐŸÐ¾ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ ÑÐ²Ð¾Ð¸ Ñ‚Ð¾Ð²Ð°Ñ€Ñ‹.";
 	trade = 1;
 };
 
@@ -304,7 +304,7 @@ func int KDW_605_Riordian_TRADE_Condition()
 
 func void KDW_605_Riordian_TRADE_Info()
 {
-	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01");	//Ïîêàæè ìíå ñâîè òîâàðû.
+	AI_Output(other,self,"KDW_605_Riordian_TRADE_Info_15_01");	//ÐŸÐ¾ÐºÐ°Ð¶Ð¸ Ð¼Ð½Ðµ ÑÐ²Ð¾Ð¸ Ñ‚Ð¾Ð²Ð°Ñ€Ñ‹.
 	if(Npc_HasItems(self,itarrune_3_2_thunderball) >= 1)
 	{
 		Npc_RemoveInvItems(self,itarrune_3_2_thunderball,Npc_HasItems(self,itarrune_3_2_thunderball));

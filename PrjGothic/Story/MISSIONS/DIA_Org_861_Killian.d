@@ -43,7 +43,7 @@ func int ORG_861_Killian_GetLost_Condition()
 
 func void ORG_861_Killian_GetLost_Info()
 {
-	AI_Output(self,other,"Org_861_Killian_GetLost_Info_13_00");	//Убирайся отсюда!
+	AI_Output(self,other,"Org_861_Killian_GetLost_Info_13_00");	//РЈР±РёСЂР°Р№СЃСЏ РѕС‚СЃСЋРґР°!
 	AI_StopProcessInfos(self);
 };
 

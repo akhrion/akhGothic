@@ -28,21 +28,24 @@ instance DIA_Homer_Hello(C_Info)
 	condition = DIA_Homer_Hello_Condition;
 	information = DIA_Homer_Hello_Info;
 	permanent = 0;
-	description = "Ты что-то ищешь?";
+	description = "РўС‹ С‡С‚Рѕ-С‚Рѕ РёС‰РµС€СЊ?";
 };
 
 
 func int DIA_Homer_Hello_Condition()
 {
-	return 1;
+	if(!Npc_KnowsInfo(hero,DIA_Homer_LurkerClaw))
+	{
+		return true;
+	};
 };
 
 func void DIA_Homer_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Homer_Hello_15_00");	//Ты что-то ищешь?
-	AI_Output(self,other,"DIA_Homer_Hello_02_01");	//Я ищу течь в плотине. Похоже, над основанием поработал шныг.
-	AI_Output(self,other,"DIA_Homer_Hello_02_02");	//Эта тварь своими зубами и когтями подтачивает камни и деревянные балки под водой.
-	AI_Output(self,other,"DIA_Homer_Hello_02_03");	//Если так будет продолжаться, плотина вскоре разрушится.
+	AI_Output(other,self,"DIA_Homer_Hello_15_00");	//РўС‹ С‡С‚Рѕ-С‚Рѕ РёС‰РµС€СЊ?
+	AI_Output(self,other,"DIA_Homer_Hello_02_01");	//РЇ РёС‰Сѓ С‚РµС‡СЊ РІ РїР»РѕС‚РёРЅРµ. РџРѕС…РѕР¶Рµ, РЅР°Рґ РѕСЃРЅРѕРІР°РЅРёРµРј РїРѕСЂР°Р±РѕС‚Р°Р» С€РЅС‹Рі.
+	AI_Output(self,other,"DIA_Homer_Hello_02_02");	//Р­С‚Р° С‚РІР°СЂСЊ СЃРІРѕРёРјРё Р·СѓР±Р°РјРё Рё РєРѕРіС‚СЏРјРё РїРѕРґС‚Р°С‡РёРІР°РµС‚ РєР°РјРЅРё Рё РґРµСЂРµРІСЏРЅРЅС‹Рµ Р±Р°Р»РєРё РїРѕРґ РІРѕРґРѕР№.
+	AI_Output(self,other,"DIA_Homer_Hello_02_03");	//Р•СЃР»Рё С‚Р°Рє Р±СѓРґРµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊСЃСЏ, РїР»РѕС‚РёРЅР° РІСЃРєРѕСЂРµ СЂР°Р·СЂСѓС€РёС‚СЃСЏ.
 };
 
 
@@ -53,13 +56,16 @@ instance DIA_Homer_BuiltDam(C_Info)
 	condition = DIA_Homer_BuiltDam_Condition;
 	information = DIA_Homer_BuiltDam_Info;
 	permanent = 0;
-	description = "Это ты ее построил?";
+	description = "Р­С‚Рѕ С‚С‹ РµРµ РїРѕСЃС‚СЂРѕРёР»?";
 };
 
 
 func int DIA_Homer_BuiltDam_Condition()
 {
-	if(Npc_KnowsInfo(hero,DIA_Homer_Hello))
+	if(
+		Npc_KnowsInfo(hero,DIA_Homer_Hello)
+	||	Npc_KnowsInfo(hero,DIA_Homer_LurkerClaw)
+	)
 	{
 		return 1;
 	};
@@ -67,9 +73,9 @@ func int DIA_Homer_BuiltDam_Condition()
 
 func void DIA_Homer_BuiltDam_Info()
 {
-	AI_Output(other,self,"DIA_Homer_BuiltDam_15_00");	//Это ты ее построил?
-	AI_Output(self,other,"DIA_Homer_BuiltDam_02_01");	//Да. Я построил эту плотину, когда мы основали Новый лагерь.
-	AI_Output(self,other,"DIA_Homer_BuiltDam_02_02");	//Конечно, все помогали, но я был главным строителем.
+	AI_Output(other,self,"DIA_Homer_BuiltDam_15_00");	//Р­С‚Рѕ С‚С‹ РµРµ РїРѕСЃС‚СЂРѕРёР»?
+	AI_Output(self,other,"DIA_Homer_BuiltDam_02_01");	//Р”Р°. РЇ РїРѕСЃС‚СЂРѕРёР» СЌС‚Сѓ РїР»РѕС‚РёРЅСѓ, РєРѕРіРґР° РјС‹ РѕСЃРЅРѕРІР°Р»Рё РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ.
+	AI_Output(self,other,"DIA_Homer_BuiltDam_02_02");	//РљРѕРЅРµС‡РЅРѕ, РІСЃРµ РїРѕРјРѕРіР°Р»Рё, РЅРѕ СЏ Р±С‹Р» РіР»Р°РІРЅС‹Рј СЃС‚СЂРѕРёС‚РµР»РµРј.
 };
 
 
@@ -80,13 +86,16 @@ instance DIA_Homer_WannaHelp(C_Info)
 	condition = DIA_Homer_WannaHelp_Condition;
 	information = DIA_Homer_WannaHelp_Info;
 	permanent = 0;
-	description = "Может, я могу тебе чем-нибудь помочь?";
+	description = "РњРѕР¶РµС‚, СЏ РјРѕРіСѓ С‚РµР±Рµ С‡РµРј-РЅРёР±СѓРґСЊ РїРѕРјРѕС‡СЊ?";
 };
 
 
 func int DIA_Homer_WannaHelp_Condition()
 {
-	if(Npc_KnowsInfo(hero,DIA_Homer_Hello))
+	if(
+		Npc_KnowsInfo(hero,DIA_Homer_Hello)
+	&&	!Npc_KnowsInfo(hero,DIA_Homer_LurkerClaw)
+	)
 	{
 		return 1;
 	};
@@ -94,13 +103,13 @@ func int DIA_Homer_WannaHelp_Condition()
 
 func void DIA_Homer_WannaHelp_Info()
 {
-	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00");	//Может, я могу тебе чем-нибудь помочь?
-	AI_Output(self,other,"DIA_Homer_WannaHelp_02_01");	//Конечно. Просто избавься от этой твари, пока она не разрушила плотину.
-	Wld_InsertNpc(DamLurker,"NC_SPAWN_DAM_LURKER2");
+	AI_Output(other,self,"DIA_Homer_WannaHelp_15_00");	//РњРѕР¶РµС‚, СЏ РјРѕРіСѓ С‚РµР±Рµ С‡РµРј-РЅРёР±СѓРґСЊ РїРѕРјРѕС‡СЊ?
+	AI_Output(self,other,"DIA_Homer_WannaHelp_02_01");	//РљРѕРЅРµС‡РЅРѕ. РџСЂРѕСЃС‚Рѕ РёР·Р±Р°РІСЊСЃСЏ РѕС‚ СЌС‚РѕР№ С‚РІР°СЂРё, РїРѕРєР° РѕРЅР° РЅРµ СЂР°Р·СЂСѓС€РёР»Р° РїР»РѕС‚РёРЅСѓ.
+//	Wld_InsertNpc(DamLurker,"NC_SPAWN_DAM_LURKER2");
 	Homer_DamLurker = LOG_RUNNING;
 	Log_CreateTopic(CH1_DamLurker,LOG_MISSION);
 	Log_SetTopicStatus(CH1_DamLurker,LOG_RUNNING);
-	B_LogEntry(CH1_DamLurker,"Гомер рассказал мне, что его плотину подтачивает шныг. Если я расправлюсь с ним, плотину можно будет отремонтировать.");
+	B_LogEntry(CH1_DamLurker,"Р“РѕРјРµСЂ СЂР°СЃСЃРєР°Р·Р°Р» РјРЅРµ, С‡С‚Рѕ РµРіРѕ РїР»РѕС‚РёРЅСѓ РїРѕРґС‚Р°С‡РёРІР°РµС‚ С€РЅС‹Рі. Р•СЃР»Рё СЏ СЂР°СЃРїСЂР°РІР»СЋСЃСЊ СЃ РЅРёРј, РїР»РѕС‚РёРЅСѓ РјРѕР¶РЅРѕ Р±СѓРґРµС‚ РѕС‚СЂРµРјРѕРЅС‚РёСЂРѕРІР°С‚СЊ.");
 };
 
 
@@ -111,7 +120,7 @@ instance DIA_Homer_Running(C_Info)
 	condition = DIA_Homer_Running_Condition;
 	information = DIA_Homer_Running_Info;
 	permanent = 0;
-	description = "Где найти этого шныга?";
+	description = "Р“РґРµ РЅР°Р№С‚Рё СЌС‚РѕРіРѕ С€РЅС‹РіР°?";
 };
 
 
@@ -125,10 +134,10 @@ func int DIA_Homer_Running_Condition()
 
 func void DIA_Homer_Running_Info()
 {
-	AI_Output(other,self,"DIA_Homer_Running_15_00");	//Где найти этого шныга?
-	AI_Output(self,other,"DIA_Homer_Running_02_01");	//Я бы поискал на другой стороне озера. Туда никто не ходит. Скорее всего, именно там находится логово шныга.
+	AI_Output(other,self,"DIA_Homer_Running_15_00");	//Р“РґРµ РЅР°Р№С‚Рё СЌС‚РѕРіРѕ С€РЅС‹РіР°?
+	AI_Output(self,other,"DIA_Homer_Running_02_01");	//РЇ Р±С‹ РїРѕРёСЃРєР°Р» РЅР° РґСЂСѓРіРѕР№ СЃС‚РѕСЂРѕРЅРµ РѕР·РµСЂР°. РўСѓРґР° РЅРёРєС‚Рѕ РЅРµ С…РѕРґРёС‚. РЎРєРѕСЂРµРµ РІСЃРµРіРѕ, РёРјРµРЅРЅРѕ С‚Р°Рј РЅР°С…РѕРґРёС‚СЃСЏ Р»РѕРіРѕРІРѕ С€РЅС‹РіР°.
 	Homer_DamLurker = LOG_RUNNING;
-	B_LogEntry(CH1_DamLurker,"Шныг живет на другом берегу озера.");
+	B_LogEntry(CH1_DamLurker,"РЁРЅС‹Рі Р¶РёРІРµС‚ РЅР° РґСЂСѓРіРѕРј Р±РµСЂРµРіСѓ РѕР·РµСЂР°.");
 };
 
 
@@ -139,7 +148,7 @@ instance DIA_Homer_Success(C_Info)
 	condition = DIA_Homer_Success_Condition;
 	information = DIA_Homer_Success_Info;
 	permanent = 0;
-	description = "Я убил шныга!";
+	description = "РЇ СѓР±РёР» С€РЅС‹РіР°!";
 };
 
 
@@ -147,8 +156,8 @@ func int DIA_Homer_Success_Condition()
 {
 	var C_Npc Lurker;
 	Lurker = Hlp_GetNpc(DamLurker);
-	PrintDebugString(PD_MISSION,"Имя:",Lurker.name);
-	PrintDebugInt(PD_MISSION,"Жизненная сила:",Lurker.attribute);
+	PrintDebugString(PD_MISSION,"РРјСЏ:",Lurker.name);
+	PrintDebugInt(PD_MISSION,"Р–РёР·РЅРµРЅРЅР°СЏ СЃРёР»Р°:",Lurker.attribute);
 	if((Homer_DamLurker == LOG_RUNNING) && Npc_HasItems(hero,ItAt_DamLurker_01))
 	{
 		return 1;
@@ -157,12 +166,12 @@ func int DIA_Homer_Success_Condition()
 
 func void DIA_Homer_Success_Info()
 {
-	AI_Output(other,self,"DIA_Homer_Success_15_00");	//Я убил шныга!
-	AI_Output(self,other,"DIA_Homer_Success_02_01");	//Молодец! Лорд прислал мне в помощь несколько людей, чтобы починить плотину.
-	AI_Output(self,other,"DIA_Homer_Success_02_02");	//Теперь, наконец-то, я смогу немного поспать.
+	AI_Output(other,self,"DIA_Homer_Success_15_00");	//РЇ СѓР±РёР» С€РЅС‹РіР°!
+	AI_Output(self,other,"DIA_Homer_Success_02_01");	//РњРѕР»РѕРґРµС†! Р›РѕСЂРґ РїСЂРёСЃР»Р°Р» РјРЅРµ РІ РїРѕРјРѕС‰СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р»СЋРґРµР№, С‡С‚РѕР±С‹ РїРѕС‡РёРЅРёС‚СЊ РїР»РѕС‚РёРЅСѓ.
+	AI_Output(self,other,"DIA_Homer_Success_02_02");	//РўРµРїРµСЂСЊ, РЅР°РєРѕРЅРµС†-С‚Рѕ, СЏ СЃРјРѕРіСѓ РЅРµРјРЅРѕРіРѕ РїРѕСЃРїР°С‚СЊ.
 	Homer_DamLurker = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_DamLurker,LOG_SUCCESS);
-	B_LogEntry(CH1_DamLurker,"Со шныгом покончено. Гомер теперь может спать спокойно.");
+	B_LogEntry(CH1_DamLurker,"РЎРѕ С€РЅС‹РіРѕРј РїРѕРєРѕРЅС‡РµРЅРѕ. Р“РѕРјРµСЂ С‚РµРїРµСЂСЊ РјРѕР¶РµС‚ СЃРїР°С‚СЊ СЃРїРѕРєРѕР№РЅРѕ.");
 	B_GiveXP(XP_ReportDeadDamLurker);
 	AI_StopProcessInfos(self);
 	Npc_ExchangeRoutine(self,"START");
@@ -170,6 +179,50 @@ func void DIA_Homer_Success_Info()
 	B_ExchangeRoutine(BAU_928_Bauer,"REPAIR");
 	B_ExchangeRoutine(BAU_929_Bauer,"REPAIR");
 	B_ExchangeRoutine(BAU_930_Bauer,"REPAIR");
+};
+instance DIA_Homer_LurkerClaw(C_Info)
+{
+	npc = BAU_935_Homer;
+	nr = 2;
+	condition = DIA_Homer_LurkerClaw_Condition;
+	information = DIA_Homer_LurkerClaw_Info;
+	permanent = 0;
+	important = true;
+};
+func int DIA_Homer_LurkerClaw_Condition()
+{
+	if(
+		Npc_HasItems(hero,ItAt_DamLurker_01)
+	&&	(
+			Homer_DamLurker == LOG_SUCCESS
+		||	Homer_DamLurker == LOG_NOTSTARTED
+		)
+	)
+	{
+		return true;
+	};
+};
+func void DIA_Homer_LurkerClaw_Info()
+{
+	if(Homer_DamLurker == LOG_SUCCESS)
+	{
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_00");	//Рћ, СЌС‚Рѕ РєРѕРіС‚Рё С‚РѕРіРѕ С€РЅС‹РіР° Сѓ С‚РµР±СЏ?
+		AI_Output(other,self,"DIA_Homer_LurkerClaw_NULL_01");	//Р”Р°, СЌС‚Рѕ РѕРЅРё.
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_02");	//РЎРєРѕР»СЊРєРѕ СЌС‚РѕС‚ РіР°Рґ РјРЅРµ РЅРµСЂРІ РїРѕРїРѕСЂС‚РёР»!
+		AI_Output(other,self,"DIA_Homer_LurkerClaw_NULL_03");	//Р’РѕС‚ РІРѕР·СЊРјРё. Р‘СѓРґРµС‚ С‚РµР±Рµ РЅР°РїРѕРјРёРЅР°РЅРёРµРј Рѕ РІР°С€РёС… РѕС‚РЅРѕС€РµРЅРёСЏС….
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_04");	//РЇ СѓР·РЅР°СЋ СЌС‚Сѓ Р»Р°РїСѓ.. С‚С‹ С‚С‹ СѓР±РёР» СЌС‚Сѓ С‚РІР°СЂСЊ!?
+		AI_Output(other,self,"DIA_Homer_LurkerClaw_NULL_05");	//Р§С‚Рѕ?
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_06");	//РўС‹ СѓР±РёР» РµРµ?! Р­С‚Сѓ РіР°РґРёРЅСѓ, С‡С‚Рѕ РїРѕСЃС‚РѕСЏРЅРЅРѕ РїРѕРґС‚Р°С‡РёРІР°Р»Р° РґРѕСЃРєРё РІ РїР»РѕС‚РёРЅРµ?
+		AI_Output(other,self,"DIA_Homer_LurkerClaw_NULL_07");	//РЇ РЅРµ РїРѕРЅРёРјР°СЋ Рѕ С‡РµРј С‚С‹..
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_08");	//Р­С‚РѕС‚ РєРѕРіРѕС‚СЊ! Р­С‚Рѕ РєРѕРіРѕС‚СЊ С€РЅС‹РіР°, РєРѕС‚РѕСЂС‹Р№ РїРѕСЃС‚РѕСЏРЅРЅРѕ СЂР°Р·Р»Р°РјС‹РІР°Р» РјРѕСЋ РїР»РѕС‚РёРЅСѓ. РўС‹-Р¶Рµ СѓР±РёР» РµРіРѕ?
+		AI_Output(other,self,"DIA_Homer_LurkerClaw_NULL_09");	//РђР° С‚С‹ РїСЂРѕ СЌС‚Рѕ. Р”Р°! РЇ РЅР°С‚РєРЅСѓР»СЃСЏ РЅР° РЅРµРіРѕ С‚Р°Рј, Р·Р° РѕР·РµСЂРѕРј. Р–РёРІСѓС‡Р°СЏ С‚РІР°СЂРёРЅР°, СЃРёР»СЊРЅР°СЏ.. Р±С‹Р»Р°.
+		AI_Output(self,other,"DIA_Homer_LurkerClaw_NULL_10");	//РЎРїР°СЃРёР±Рѕ С‚РµР±Рµ!
+	};
+	B_GiveInvItems(other,self,ItAt_DamLurker_01,1);
+	B_GiveXP(XP_DamLurkerClawHomer);
 };
 
 
@@ -180,13 +233,13 @@ instance DIA_Homer_PERM(C_Info)
 	condition = DIA_Homer_PERM_Condition;
 	information = DIA_Homer_PERM_Info;
 	permanent = 1;
-	description = "Плотина в порядке?";
+	description = "РџР»РѕС‚РёРЅР° РІ РїРѕСЂСЏРґРєРµ?";
 };
 
 
 func int DIA_Homer_PERM_Condition()
 {
-	if(Homer_DamLurker == LOG_SUCCESS)
+	if(Npc_KnowsInfo(hero,DIA_Homer_LurkerClaw))
 	{
 		return 1;
 	};
@@ -194,7 +247,7 @@ func int DIA_Homer_PERM_Condition()
 
 func void DIA_Homer_PERM_Info()
 {
-	AI_Output(other,self,"DIA_Homer_PERM_15_00");	//Плотина в порядке?
-	AI_Output(self,other,"DIA_Homer_PERM_02_01");	//Она надежна, как крепость, которую никто не может разрушить.
+	AI_Output(other,self,"DIA_Homer_PERM_15_00");	//РџР»РѕС‚РёРЅР° РІ РїРѕСЂСЏРґРєРµ?
+	AI_Output(self,other,"DIA_Homer_PERM_02_01");	//РћРЅР° РЅР°РґРµР¶РЅР°, РєР°Рє РєСЂРµРїРѕСЃС‚СЊ, РєРѕС‚РѕСЂСѓСЋ РЅРёРєС‚Рѕ РЅРµ РјРѕР¶РµС‚ СЂР°Р·СЂСѓС€РёС‚СЊ.
 };
 

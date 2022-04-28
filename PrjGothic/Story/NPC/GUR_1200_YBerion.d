@@ -1,7 +1,7 @@
 
 instance GUR_1200_YBerion(Npc_Default)
 {
-	name[0] = "Юберион";
+	name[0] = "Р®Р±РµСЂРёРѕРЅ";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 30;

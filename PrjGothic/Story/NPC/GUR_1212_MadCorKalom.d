@@ -1,7 +1,7 @@
 
 instance GUR_1212_MadCorKalom(Npc_Default)
 {
-	name[0] = "Безумный Кор Галом";
+	name[0] = "Р‘РµР·СѓРјРЅС‹Р№ РљРѕСЂ Р“Р°Р»РѕРј";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 1000;

@@ -1,7 +1,7 @@
 
 instance NOV_1332_BaalKagan(Npc_Default)
 {
-	name[0] = "Идол Каган";
+	name[0] = "РРґРѕР» РљР°РіР°РЅ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

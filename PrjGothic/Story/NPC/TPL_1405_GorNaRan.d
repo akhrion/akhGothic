@@ -1,7 +1,7 @@
 
 instance TPL_1405_GorNaRan(Npc_Default)
 {
-	name[0] = "Гор На Ран";
+	name[0] = "Р“РѕСЂ РќР° Р Р°РЅ";
 	npcType = npctype_main;
 	guild = GIL_TPL;
 	level = 17;
@@ -45,7 +45,7 @@ func void rtn_remove_1405()
 
 instance TPL_1490_GORNARAN(Npc_Default)
 {
-	name[0] = "Гор На Ран";
+	name[0] = "Р“РѕСЂ РќР° Р Р°РЅ";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 25;

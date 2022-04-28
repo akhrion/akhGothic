@@ -347,18 +347,18 @@ func int info_grd872_om_condition()
 
 func void info_grd872_om_info()
 {
-	AI_Output(self,hero,"OM_GRD_01");	//Ты что, заблудился? Куда собрался?
+	AI_Output(self,hero,"OM_GRD_01");	//РўС‹ С‡С‚Рѕ, Р·Р°Р±Р»СѓРґРёР»СЃСЏ? РљСѓРґР° СЃРѕР±СЂР°Р»СЃСЏ?
 	if(Diego_BringList == LOG_RUNNING)
 	{
-		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Диего прислал меня сюда. Я должен забрать список.
-		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//Я тебя запомнил...
+		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Р”РёРµРіРѕ РїСЂРёСЃР»Р°Р» РјРµРЅСЏ СЃСЋРґР°. РЇ РґРѕР»Р¶РµРЅ Р·Р°Р±СЂР°С‚СЊ СЃРїРёСЃРѕРє.
+		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//РЇ С‚РµР±СЏ Р·Р°РїРѕРјРЅРёР»...
 		self.aivar[AIV_PASSGATE] = TRUE;
 		AI_StopProcessInfos(self);
 	}
 	else
 	{
-		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//Ну...
-		AI_Output(self,other,"SVM_19_GetOutOfHere");	//Проваливай!
+		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//РќСѓ...
+		AI_Output(self,other,"SVM_19_GetOutOfHere");	//РџСЂРѕРІР°Р»РёРІР°Р№!
 		hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,GRD_872_CHECKPOINT);
 		hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 		AI_StopProcessInfos(self);
@@ -387,11 +387,11 @@ func int info_grd_872_lastwarn_condition()
 
 func void info_grd_872_lastwarn_info()
 {
-	AI_Output(self,other,"SVM_19_GetOutOfHere");	//Проваливай!
+	AI_Output(self,other,"SVM_19_GetOutOfHere");	//РџСЂРѕРІР°Р»РёРІР°Р№!
 	if(Diego_BringList == LOG_RUNNING)
 	{
-		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Диего прислал меня сюда. Я должен забрать список.
-		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//Я тебя запомнил...
+		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Р”РёРµРіРѕ РїСЂРёСЃР»Р°Р» РјРµРЅСЏ СЃСЋРґР°. РЇ РґРѕР»Р¶РµРЅ Р·Р°Р±СЂР°С‚СЊ СЃРїРёСЃРѕРє.
+		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//РЇ С‚РµР±СЏ Р·Р°РїРѕРјРЅРёР»...
 		self.aivar[AIV_PASSGATE] = TRUE;
 	}
 	else
@@ -427,8 +427,8 @@ func void info_grd_872_attack_info()
 	if(Diego_BringList == LOG_RUNNING)
 	{
 		AI_DrawWeapon(self);
-		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Диего прислал меня сюда. Я должен забрать список.
-		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//Я тебя запомнил...
+		AI_Output(other,self,"STT_301_IAN_GETLIST_Info_15_01");	//Р”РёРµРіРѕ РїСЂРёСЃР»Р°Р» РјРµРЅСЏ СЃСЋРґР°. РЇ РґРѕР»Р¶РµРЅ Р·Р°Р±СЂР°С‚СЊ СЃРїРёСЃРѕРє.
+		AI_Output(self,other,"SVM_19_WeWillMeetAgain");	//РЇ С‚РµР±СЏ Р·Р°РїРѕРјРЅРёР»...
 		AI_RemoveWeapon(self);
 		self.aivar[AIV_PASSGATE] = TRUE;
 		AI_StopProcessInfos(self);
@@ -467,27 +467,27 @@ func int info_grd872_om0_condition()
 
 func void info_grd872_om0_info()
 {
-	AI_Output(self,hero,"OM_GRD_01");	//Ты что, заблудился? Куда собрался?
-	AI_Output(hero,self,"Info_Org_876_FirstWarn_Info_15_01");	//Туда.
-	AI_Output(self,hero,"OM_GRD_02");	//Не шляйся тут! Что, в вашей шахте закончилась руда?
-	AI_Output(hero,self,"KDW_600_Saturas_TIMESUP_Info_15_05");	//Нет...
-	AI_Output(self,hero,"OM_GRD_03");	//Тогда поделись! С тебя триста кусков, и я сделаю вид, что не видел здесь придурка из Нового лагеря.
+	AI_Output(self,hero,"OM_GRD_01");	//РўС‹ С‡С‚Рѕ, Р·Р°Р±Р»СѓРґРёР»СЃСЏ? РљСѓРґР° СЃРѕР±СЂР°Р»СЃСЏ?
+	AI_Output(hero,self,"Info_Org_876_FirstWarn_Info_15_01");	//РўСѓРґР°.
+	AI_Output(self,hero,"OM_GRD_02");	//РќРµ С€Р»СЏР№СЃСЏ С‚СѓС‚! Р§С‚Рѕ, РІ РІР°С€РµР№ С€Р°С…С‚Рµ Р·Р°РєРѕРЅС‡РёР»Р°СЃСЊ СЂСѓРґР°?
+	AI_Output(hero,self,"KDW_600_Saturas_TIMESUP_Info_15_05");	//РќРµС‚...
+	AI_Output(self,hero,"OM_GRD_03");	//РўРѕРіРґР° РїРѕРґРµР»РёСЃСЊ! РЎ С‚РµР±СЏ С‚СЂРёСЃС‚Р° РєСѓСЃРєРѕРІ, Рё СЏ СЃРґРµР»Р°СЋ РІРёРґ, С‡С‚Рѕ РЅРµ РІРёРґРµР» Р·РґРµСЃСЊ РїСЂРёРґСѓСЂРєР° РёР· РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ.
 	Info_ClearChoices(info_grd872_om0);
 	if(Npc_HasItems(hero,ItMiNugget) >= 300)
 	{
-		Info_AddChoice(info_grd872_om0,"Ладно, вот тебе руда!",info_grd872_om_1);
+		Info_AddChoice(info_grd872_om0,"Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!",info_grd872_om_1);
 	};
-	Info_AddChoice(info_grd872_om0,"Но у меня не так много руды...",info_grd872_om_2);
-	Info_AddChoice(info_grd872_om0,"Не думаю, что ты получишь от меня хоть что-нибудь.",info_grd872_om_3);
+	Info_AddChoice(info_grd872_om0,"РќРѕ Сѓ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹...",info_grd872_om_2);
+	Info_AddChoice(info_grd872_om0,"РќРµ РґСѓРјР°СЋ, С‡С‚Рѕ С‚С‹ РїРѕР»СѓС‡РёС€СЊ РѕС‚ РјРµРЅСЏ С…РѕС‚СЊ С‡С‚Рѕ-РЅРёР±СѓРґСЊ.",info_grd872_om_3);
 };
 
 func void info_grd872_om_1()
 {
-	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_06");	//Ладно, вот тебе руда!
-	b_printtrademsg1("Отдано руды: 300");
+	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_06");	//Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!
+	b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 300");
 	B_GiveInvItems(hero,self,ItMiNugget,300);
-	AI_Output(self,hero,"OM_GRD_04");	//Не знаю, что ты задумал, но в шахте полно стражников - если решишь что-то стащить, то тебя мигом порубят на куски.
-	AI_Output(self,hero,"OM_GRD_05");	//Пойду-ка я посплю...
+	AI_Output(self,hero,"OM_GRD_04");	//РќРµ Р·РЅР°СЋ, С‡С‚Рѕ С‚С‹ Р·Р°РґСѓРјР°Р», РЅРѕ РІ С€Р°С…С‚Рµ РїРѕР»РЅРѕ СЃС‚СЂР°Р¶РЅРёРєРѕРІ - РµСЃР»Рё СЂРµС€РёС€СЊ С‡С‚Рѕ-С‚Рѕ СЃС‚Р°С‰РёС‚СЊ, С‚Рѕ С‚РµР±СЏ РјРёРіРѕРј РїРѕСЂСѓР±СЏС‚ РЅР° РєСѓСЃРєРё.
+	AI_Output(self,hero,"OM_GRD_05");	//РџРѕР№РґСѓ-РєР° СЏ РїРѕСЃРїР»СЋ...
 	self.aivar[AIV_PASSGATE] = TRUE;
 	Npc_ExchangeRoutine(self,"sleep");
 	AI_StopProcessInfos(self);
@@ -495,8 +495,8 @@ func void info_grd872_om_1()
 
 func void info_grd872_om_2()
 {
-	AI_Output(hero,self,"DIA_Grd_215_Torwache_First_Pay_NoOre_15_00");	//Но у меня не так много руды.
-	AI_Output(self,hero,"OM_GRD_06");	//Тогда я заберу у тебя все, что найду!
+	AI_Output(hero,self,"DIA_Grd_215_Torwache_First_Pay_NoOre_15_00");	//РќРѕ Сѓ РјРµРЅСЏ РЅРµ С‚Р°Рє РјРЅРѕРіРѕ СЂСѓРґС‹.
+	AI_Output(self,hero,"OM_GRD_06");	//РўРѕРіРґР° СЏ Р·Р°Р±РµСЂСѓ Сѓ С‚РµР±СЏ РІСЃРµ, С‡С‚Рѕ РЅР°Р№РґСѓ!
 	AI_StopProcessInfos(self);
 	B_SetAttackReason(self,AIV_AR_INTRUDER);
 	Npc_SetTarget(self,hero);
@@ -505,8 +505,8 @@ func void info_grd872_om_2()
 
 func void info_grd872_om_3()
 {
-	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_08");	//Не думаю, что ты получишь от меня хоть что-нибудь.
-	AI_Output(self,hero,"OM_GRD_06");	//Тогда я заберу у тебя все, что найду!
+	AI_Output(hero,self,"Info_Grd_237_FirstWarn_15_08");	//РќРµ РґСѓРјР°СЋ, С‡С‚Рѕ С‚С‹ РїРѕР»СѓС‡РёС€СЊ РѕС‚ РјРµРЅСЏ С…РѕС‚СЊ С‡С‚Рѕ-РЅРёР±СѓРґСЊ.
+	AI_Output(self,hero,"OM_GRD_06");	//РўРѕРіРґР° СЏ Р·Р°Р±РµСЂСѓ Сѓ С‚РµР±СЏ РІСЃРµ, С‡С‚Рѕ РЅР°Р№РґСѓ!
 	AI_StopProcessInfos(self);
 	B_SetAttackReason(self,AIV_AR_INTRUDER);
 	Npc_SetTarget(self,hero);

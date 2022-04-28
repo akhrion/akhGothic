@@ -1,7 +1,7 @@
 
 instance STT_324_Balam(Npc_Default)
 {
-	name[0] = "¡‡Î‡Ï";
+	name[0] = "–ë–∞–ª–∞–º";
 	npcType = npctype_ambient;
 	guild = GIL_VLK;
 	level = 3;

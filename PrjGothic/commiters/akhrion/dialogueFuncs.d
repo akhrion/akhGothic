@@ -19,8 +19,8 @@ func void akh_PC_DrinkPotionQuicksilver_ACTION()
 {
 	Used_ItMi_Alchemy_Quicksilver_01 = false;
 	AI_StopProcessInfos(self);
-	PrintScreen("Теперь я стал как в марвел?",-1,52,"FONT_OLD_20_WHITE.TGA",7);
-	PrintScreen("Нет, кажется просто мозги вытекают..",-1,56,"FONT_OLD_20_WHITE.TGA",9);
+	PrintScreen("РўРµРїРµСЂСЊ СЏ СЃС‚Р°Р» РєР°Рє РІ РјР°СЂРІРµР»?",-1,52,"FONT_OLD_20_WHITE.TGA",7);
+	PrintScreen("РќРµС‚, РєР°Р¶РµС‚СЃСЏ РїСЂРѕСЃС‚Рѕ РјРѕР·РіРё РІС‹С‚РµРєР°СЋС‚..",-1,56,"FONT_OLD_20_WHITE.TGA",9);
 	Npc_RemoveInvItem(self,ItMi_Alchemy_Quicksilver_01);
 	CreateInvItem(self,ItMi_Potion_Quicksilver_01);
 	AI_UseItem(self,ItMi_Potion_Quicksilver_01);
@@ -32,7 +32,7 @@ func int akh_npcReaction_condition()
 };
 func void akh_npcReaction_action()
 {
-	AI_Output(self,hero,"akh_npcReaction_NULL_01"); //Привет дружище!
+	AI_Output(self,hero,"akh_npcReaction_NULL_01"); //РџСЂРёРІРµС‚ РґСЂСѓР¶РёС‰Рµ!
 };
 
 func int akh_svmTests_cond()

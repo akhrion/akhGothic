@@ -28,7 +28,7 @@ instance DIA_Org_875_PERM(C_Info)
 	condition = DIA_Org_875_PERM_Condition;
 	information = DIA_Org_875_PERM_Info;
 	permanent = 1;
-	description = "Ты пропускаешь кого-нибудь, кроме воров и рудокопов?";
+	description = "РўС‹ РїСЂРѕРїСѓСЃРєР°РµС€СЊ РєРѕРіРѕ-РЅРёР±СѓРґСЊ, РєСЂРѕРјРµ РІРѕСЂРѕРІ Рё СЂСѓРґРѕРєРѕРїРѕРІ?";
 };
 
 
@@ -39,8 +39,8 @@ func int DIA_Org_875_PERM_Condition()
 
 func void DIA_Org_875_PERM_Info()
 {
-	AI_Output(other,self,"DIA_Org_875_PERM_15_00");	//Ты пропускаешь кого-нибудь, кроме воров и рудокопов?
-	AI_Output(self,other,"DIA_Org_875_PERM_13_01");	//Братьям из секты здесь проход всегда открыт.
-	AI_Output(self,other,"DIA_Org_875_PERM_13_02");	//Но кроме них мы никого не пропускаем.
+	AI_Output(other,self,"DIA_Org_875_PERM_15_00");	//РўС‹ РїСЂРѕРїСѓСЃРєР°РµС€СЊ РєРѕРіРѕ-РЅРёР±СѓРґСЊ, РєСЂРѕРјРµ РІРѕСЂРѕРІ Рё СЂСѓРґРѕРєРѕРїРѕРІ?
+	AI_Output(self,other,"DIA_Org_875_PERM_13_01");	//Р‘СЂР°С‚СЊСЏРј РёР· СЃРµРєС‚С‹ Р·РґРµСЃСЊ РїСЂРѕС…РѕРґ РІСЃРµРіРґР° РѕС‚РєСЂС‹С‚.
+	AI_Output(self,other,"DIA_Org_875_PERM_13_02");	//РќРѕ РєСЂРѕРјРµ РЅРёС… РјС‹ РЅРёРєРѕРіРѕ РЅРµ РїСЂРѕРїСѓСЃРєР°РµРј.
 };
 

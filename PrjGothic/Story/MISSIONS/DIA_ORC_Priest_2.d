@@ -20,10 +20,10 @@ func void Info_HighPriest2_Info()
 	B_SelectWeapon(self,other);
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_GotoNpc(self,other);
-	AI_Output(self,other,"Info_HighPriest2_17_01");	//НЕВЕРНЫЙ В НАШЕМ ХРАМЕ!
-	AI_Output(self,other,"Info_HighPriest2_17_02");	//БУДЬ ТЫ ПРОКЛЯТ!
-	AI_Output(other,self,"Info_HighPriest2_15_03");	//Сам будь проклят, гниль!
-	B_LogEntry(CH4_EnterTemple,"Варраг-Казорг, один из пяти орков-шаманов, скоро закончит свое жалкое существование!");
+	AI_Output(self,other,"Info_HighPriest2_17_01");	//РќР•Р’Р•Р РќР«Р™ Р’ РќРђРЁР•Рњ РҐР РђРњР•!
+	AI_Output(self,other,"Info_HighPriest2_17_02");	//Р‘РЈР”Р¬ РўР« РџР РћРљР›РЇРў!
+	AI_Output(other,self,"Info_HighPriest2_15_03");	//РЎР°Рј Р±СѓРґСЊ РїСЂРѕРєР»СЏС‚, РіРЅРёР»СЊ!
+	B_LogEntry(CH4_EnterTemple,"Р’Р°СЂСЂР°Рі-РљР°Р·РѕСЂРі, РѕРґРёРЅ РёР· РїСЏС‚Рё РѕСЂРєРѕРІ-С€Р°РјР°РЅРѕРІ, СЃРєРѕСЂРѕ Р·Р°РєРѕРЅС‡РёС‚ СЃРІРѕРµ Р¶Р°Р»РєРѕРµ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ!");
 	AI_StopProcessInfos(self);
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);

@@ -1,7 +1,7 @@
 
 instance EBR_101_Scar(Npc_Default)
 {
-	name[0] = "Øðàì";
+	name[0] = "Ð¨Ñ€Ð°Ð¼";
 	npcType = npctype_main;
 	guild = GIL_EBR;
 	level = 80;

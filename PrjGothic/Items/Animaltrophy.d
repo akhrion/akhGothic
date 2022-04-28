@@ -1,5 +1,16 @@
 
-const int Value_Zдhne = 10;
+const int Value_WaranClaws = 10;
+const int Value_WaranHaut = 30;
+const int Value_WaranTeeth = 4;
+const int Value_LurkerClaws = 30;
+const int Value_LurkerHaut = 30;
+const int Value_SnapperClaws = 25;
+const int Value_SnapperHaut = 70;
+const int Value_SnapperTeeth = 10;
+const int Value_RazorClaws = 40;
+const int Value_RazorHaut = 100;
+const int Value_RazorTeeth = 10;
+const int Value_ZРґhne = 10;
 const int Value_Zuhne = 10;
 const int Value_Krallen = 8;
 const int Value_Wolfsfell = 10;
@@ -8,14 +19,13 @@ const int Value_Panzerplatte = 20;
 const int Value_Crawlerzangen = 10;
 const int Value_Shadowbeastfell = 400;
 const int Value_Lurkerklaue = 10;
-const int Value_Lurkerhaut = 20;
 const int Value_Sumpfhaihaut = 200;
 const int Value_Trollfell = 300;
-const int Value_Flьgel = 8;
+const int Value_FlСЊgel = 8;
 const int Value_Flugel = 8;
 const int Value_Stachel = 10;
 const int Value_Feuerzunge = 100;
-const int Value_Sumpfhaizдhne = 100;
+const int Value_SumpfhaizРґhne = 100;
 const int Value_Sumpfhaizuhne = 100;
 const int Value_Shadowbeasthorn = 100;
 const int Value_Trollhauer = 100;
@@ -26,7 +36,7 @@ const int Value_Eistueck = 100;
 
 instance ItAt_Teeth_01(C_Item)
 {
-	name = "Клыки";
+	name = "РљР»С‹РєРё";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -38,7 +48,7 @@ instance ItAt_Teeth_01(C_Item)
 };
 instance ItAt_Wolf_Teeth_01(C_Item)
 {
-	name = "Волчьи клыки";
+	name = "Р’РѕР»С‡СЊРё РєР»С‹РєРё";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -51,7 +61,7 @@ instance ItAt_Wolf_Teeth_01(C_Item)
 
 instance ItAt_Wolf_Teeth_Verkohlt_01(C_Item)
 {
-	name = "Обугленные волчьи клыки";
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РІРѕР»С‡СЊРё РєР»С‹РєРё";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -64,7 +74,7 @@ instance ItAt_Wolf_Teeth_Verkohlt_01(C_Item)
 
 instance ItAt_Wolf_01(C_Item)
 {
-	name = "Шкура волка";
+	name = "РЁРєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell;
@@ -77,7 +87,7 @@ instance ItAt_Wolf_01(C_Item)
 
 instance ItAt_Wolf_Fur_01(C_Item)
 {
-	name = "Шкура волка";
+	name = "РЁРєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell;
@@ -89,7 +99,7 @@ instance ItAt_Wolf_Fur_01(C_Item)
 };
 instance ItAt_Wolf_Fur_Good_01(C_Item)
 {
-	name = "Отличная шкура волка";
+	name = "РћС‚Р»РёС‡РЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell * 2;
@@ -101,7 +111,7 @@ instance ItAt_Wolf_Fur_Good_01(C_Item)
 };
 instance ItAt_Wolf_Fur_Dissected_01(C_Item)
 {
-	name = "Изрезанная шкура волка";
+	name = "РР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -113,7 +123,7 @@ instance ItAt_Wolf_Fur_Dissected_01(C_Item)
 };
 instance ItAt_Wolf_Fur_Torn_01(C_Item)
 {
-	name = "Порванная шкура волка";
+	name = "РџРѕСЂРІР°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 3;
@@ -126,7 +136,7 @@ instance ItAt_Wolf_Fur_Torn_01(C_Item)
 
 instance ItAt_Wolf_Fur_Fired_01(C_Item)
 {
-	name = "Подпаленная шкура волка";
+	name = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 2;
@@ -139,7 +149,7 @@ instance ItAt_Wolf_Fur_Fired_01(C_Item)
 
 instance ItAt_Wolf_Fur_Burned_01(C_Item)
 {
-	name = "Обгоревшая шкура волка";
+	name = "РћР±РіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -151,36 +161,36 @@ instance ItAt_Wolf_Fur_Burned_01(C_Item)
 };
 instance ItAt_Wolf_Fur_BD_01(C_Item)
 {
-	name = "Плохая шкура волка";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 10;
 	visual = "ItAt_Wolf_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Обгоревшая и изрезанная шкура волка";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РћР±РіРѕСЂРµРІС€Р°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 instance ItAt_Wolf_Fur_BD_02(C_Item)
 {
-	name = "Плохая шкура волка";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
 	visual = "ItAt_Wolf_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Подпаленная и изрезанная шкура волка";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_Wolf_Fur_Verkohlt_01(C_Item)
 {
-	name = "Сгоревшая шкура волка";
+	name = "РЎРіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -193,7 +203,7 @@ instance ItAt_Wolf_Fur_Verkohlt_01(C_Item)
 
 instance ItAt_OrcDog_Teeth_01(C_Item)
 {
-	name = "Клыки варга";
+	name = "РљР»С‹РєРё РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -206,7 +216,7 @@ instance ItAt_OrcDog_Teeth_01(C_Item)
 
 instance ItAt_OrcDog_Teeth_Verkohlt_01(C_Item)
 {
-	name = "Обугленные клыки варга";
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РєР»С‹РєРё РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -218,7 +228,7 @@ instance ItAt_OrcDog_Teeth_Verkohlt_01(C_Item)
 };
 instance ItAt_OrcDog_Fur_01(C_Item)
 {
-	name = "Шкура варга";
+	name = "РЁРєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell;
@@ -230,7 +240,7 @@ instance ItAt_OrcDog_Fur_01(C_Item)
 };
 instance ItAt_OrcDog_Fur_Good_01(C_Item)
 {
-	name = "Отличная шкура варга";
+	name = "РћС‚Р»РёС‡РЅР°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell * 2;
@@ -242,7 +252,7 @@ instance ItAt_OrcDog_Fur_Good_01(C_Item)
 };
 instance ItAt_OrcDog_Fur_Dissected_01(C_Item)
 {
-	name = "Изрезанная шкура варга";
+	name = "РР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -254,7 +264,7 @@ instance ItAt_OrcDog_Fur_Dissected_01(C_Item)
 };
 instance ItAt_OrcDog_Fur_Torn_01(C_Item)
 {
-	name = "Порванная шкура варга";
+	name = "РџРѕСЂРІР°РЅРЅР°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 3;
@@ -267,7 +277,7 @@ instance ItAt_OrcDog_Fur_Torn_01(C_Item)
 
 instance ItAt_OrcDog_Fur_Fired_01(C_Item)
 {
-	name = "Подпаленная шкура варга";
+	name = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 2;
@@ -280,7 +290,7 @@ instance ItAt_OrcDog_Fur_Fired_01(C_Item)
 
 instance ItAt_OrcDog_Fur_Burned_01(C_Item)
 {
-	name = "Обгоревшая шкура варга";
+	name = "РћР±РіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -292,36 +302,36 @@ instance ItAt_OrcDog_Fur_Burned_01(C_Item)
 };
 instance ItAt_OrcDog_Fur_BD_01(C_Item)
 {
-	name = "Плохая шкура варга";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 10;
 	visual = "ItAt_Wolf_02.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Обгоревшая и изрезанная шкура волка";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РћР±РіРѕСЂРµРІС€Р°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 instance ItAt_OrcDog_Fur_BD_02(C_Item)
 {
-	name = "Плохая шкура варга";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
 	visual = "ItAt_Wolf_02.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Подпаленная и изрезанная шкура волка";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РІРѕР»РєР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_OrcDog_Fur_Verkohlt_01(C_Item)
 {
-	name = "Сгоревшая шкура варга";
+	name = "РЎРіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РІР°СЂРіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -334,7 +344,7 @@ instance ItAt_OrcDog_Fur_Verkohlt_01(C_Item)
 
 instance ItAt_ShadowBeast_Horn_01(C_Item)
 {
-	name = "Осколок рога мракориса";
+	name = "РћСЃРєРѕР»РѕРє СЂРѕРіР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Shadowbeasthorn / 5;
@@ -346,7 +356,7 @@ instance ItAt_ShadowBeast_Horn_01(C_Item)
 };
 instance ItAt_ShadowBeast_Horn_02(C_Item)
 {
-	name = "Рог мракориса";
+	name = "Р РѕРі РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Shadowbeasthorn;
@@ -358,7 +368,7 @@ instance ItAt_ShadowBeast_Horn_02(C_Item)
 };
 instance ItAt_ShadowBeast_Teeth_01(C_Item)
 {
-	name = "Клык мракориса";
+	name = "РљР»С‹Рє РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -370,7 +380,7 @@ instance ItAt_ShadowBeast_Teeth_01(C_Item)
 };
 instance ItAt_ShadowBeast_Teeth_Verkohlt_01(C_Item)
 {
-	name = "Обугленный клык мракориса";
+	name = "РћР±СѓРіР»РµРЅРЅС‹Р№ РєР»С‹Рє РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Zuhne;
@@ -382,7 +392,7 @@ instance ItAt_ShadowBeast_Teeth_Verkohlt_01(C_Item)
 };
 instance ItAt_ShadowBeast_Fur_01(C_Item)
 {
-	name = "Шкура мракориса";
+	name = "РЁРєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell;
@@ -394,7 +404,7 @@ instance ItAt_ShadowBeast_Fur_01(C_Item)
 };
 instance ItAt_ShadowBeast_Fur_Good_01(C_Item)
 {
-	name = "Отличная шкура мракориса";
+	name = "РћС‚Р»РёС‡РЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell * 2;
@@ -406,7 +416,7 @@ instance ItAt_ShadowBeast_Fur_Good_01(C_Item)
 };
 instance ItAt_ShadowBeast_Fur_Dissected_01(C_Item)
 {
-	name = "Изрезанная шкура мракориса";
+	name = "РР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -418,7 +428,7 @@ instance ItAt_ShadowBeast_Fur_Dissected_01(C_Item)
 };
 instance ItAt_ShadowBeast_Fur_Torn_01(C_Item)
 {
-	name = "Порванная шкура мракориса";
+	name = "РџРѕСЂРІР°РЅРЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 3;
@@ -431,7 +441,7 @@ instance ItAt_ShadowBeast_Fur_Torn_01(C_Item)
 
 instance ItAt_ShadowBeast_Fur_Fired_01(C_Item)
 {
-	name = "Подпаленная шкура мракориса";
+	name = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 2;
@@ -444,7 +454,7 @@ instance ItAt_ShadowBeast_Fur_Fired_01(C_Item)
 
 instance ItAt_ShadowBeast_Fur_Burned_01(C_Item)
 {
-	name = "Обгоревшая шкура мракориса";
+	name = "РћР±РіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
@@ -456,36 +466,36 @@ instance ItAt_ShadowBeast_Fur_Burned_01(C_Item)
 };
 instance ItAt_ShadowBeast_Fur_BD_01(C_Item)
 {
-	name = "Плохая шкура мракориса";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 10;
 	visual = "ItAt_Shadowbeast_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Обгоревшая и изрезанная шкура мракориса";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РћР±РіРѕСЂРµРІС€Р°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 instance ItAt_ShadowBeast_Fur_BD_02(C_Item)
 {
-	name = "Плохая шкура мракориса";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Wolfsfell / 5;
 	visual = "ItAt_Shadowbeast_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Подпаленная и изрезанная шкура мракориса";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_ShadowBeast_Fur_Verkohlt_01(C_Item)
 {
-	name = "Сгоревшая шкура мракориса";
+	name = "РЎРіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -497,7 +507,7 @@ instance ItAt_ShadowBeast_Fur_Verkohlt_01(C_Item)
 };
 instance ItAt_Troll_Teeth_Broken_01(C_Item)
 {
-	name = "Осколок зуба тролля";
+	name = "РћСЃРєРѕР»РѕРє Р·СѓР±Р° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollhauer / 5;
@@ -509,7 +519,7 @@ instance ItAt_Troll_Teeth_Broken_01(C_Item)
 };
 instance ItAt_Troll_Teeth_01(C_Item)
 {
-	name = "Зуб тролля";
+	name = "Р—СѓР± С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollhauer;
@@ -521,7 +531,7 @@ instance ItAt_Troll_Teeth_01(C_Item)
 };
 instance ItAt_Troll_Teeth_Verkohlt_Broken_01(C_Item)
 {
-	name = "Обугленный осколок зуба тролля";
+	name = "РћР±СѓРіР»РµРЅРЅС‹Р№ РѕСЃРєРѕР»РѕРє Р·СѓР±Р° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollhauer / 5;
@@ -533,7 +543,7 @@ instance ItAt_Troll_Teeth_Verkohlt_Broken_01(C_Item)
 };
 instance ItAt_Troll_Teeth_Verkohlt_01(C_Item)
 {
-	name = "Обугленный зуб тролля";
+	name = "РћР±СѓРіР»РµРЅРЅС‹Р№ Р·СѓР± С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollhauer;
@@ -545,7 +555,7 @@ instance ItAt_Troll_Teeth_Verkohlt_01(C_Item)
 };
 instance ItAt_Troll_Fur_01(C_Item)
 {
-	name = "Шкура тролля";
+	name = "РЁРєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell;
@@ -557,7 +567,7 @@ instance ItAt_Troll_Fur_01(C_Item)
 };
 instance ItAt_Troll_Fur_Good_01(C_Item)
 {
-	name = "Отличная шкура тролля";
+	name = "РћС‚Р»РёС‡РЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell * 2;
@@ -569,7 +579,7 @@ instance ItAt_Troll_Fur_Good_01(C_Item)
 };
 instance ItAt_Troll_Fur_Dissected_01(C_Item)
 {
-	name = "Изрезанная шкура тролля";
+	name = "РР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 5;
@@ -581,7 +591,7 @@ instance ItAt_Troll_Fur_Dissected_01(C_Item)
 };
 instance ItAt_Troll_Fur_Torn_01(C_Item)
 {
-	name = "Порванная шкура тролля";
+	name = "РџРѕСЂРІР°РЅРЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 3;
@@ -594,7 +604,7 @@ instance ItAt_Troll_Fur_Torn_01(C_Item)
 
 instance ItAt_Troll_Fur_Fired_01(C_Item)
 {
-	name = "Подпаленная шкура тролля";
+	name = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 2;
@@ -607,7 +617,7 @@ instance ItAt_Troll_Fur_Fired_01(C_Item)
 
 instance ItAt_Troll_Fur_Burned_01(C_Item)
 {
-	name = "Обгоревшая шкура тролля";
+	name = "РћР±РіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 5;
@@ -619,36 +629,36 @@ instance ItAt_Troll_Fur_Burned_01(C_Item)
 };
 instance ItAt_Troll_Fur_BD_01(C_Item)
 {
-	name = "Плохая шкура тролля";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 10;
 	visual = "ItAt_Troll_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Обгоревшая и изрезанная шкура тролля";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РћР±РіРѕСЂРµРІС€Р°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 instance ItAt_Troll_Fur_BD_02(C_Item)
 {
-	name = "Плохая шкура тролля";
+	name = "РџР»РѕС…Р°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell / 5;
 	visual = "ItAt_Troll_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
-	text[0] = "Подпаленная и изрезанная шкура тролля";
-	text[1] = "даже не знаю - кому такая может понадобиться..";
+	text[0] = "РџРѕРґРїР°Р»РµРЅРЅР°СЏ Рё РёР·СЂРµР·Р°РЅРЅР°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
+	text[1] = "РґР°Р¶Рµ РЅРµ Р·РЅР°СЋ - РєРѕРјСѓ С‚Р°РєР°СЏ РјРѕР¶РµС‚ РїРѕРЅР°РґРѕР±РёС‚СЊСЃСЏ..";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_Troll_Fur_Verkohlt_01(C_Item)
 {
-	name = "Сгоревшая шкура тролля";
+	name = "РЎРіРѕСЂРµРІС€Р°СЏ С€РєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -661,7 +671,7 @@ instance ItAt_Troll_Fur_Verkohlt_01(C_Item)
 
 instance ItAt_Wolf_02(C_Item)
 {
-	name = "Шкура орочьей собаки";
+	name = "РЁРєСѓСЂР° РѕСЂРѕС‡СЊРµР№ СЃРѕР±Р°РєРё";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Orkhundfell;
@@ -674,7 +684,7 @@ instance ItAt_Wolf_02(C_Item)
 
 instance ItAt_Waran_01(C_Item)
 {
-	name = "Язык огненной ящерицы";
+	name = "РЇР·С‹Рє РѕРіРЅРµРЅРЅРѕР№ СЏС‰РµСЂРёС†С‹";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Feuerzunge;
@@ -687,7 +697,7 @@ instance ItAt_Waran_01(C_Item)
 
 instance ItAt_Claws_01(C_Item)
 {
-	name = "Когти";
+	name = "РљРѕРіС‚Рё";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Krallen;
@@ -697,10 +707,70 @@ instance ItAt_Claws_01(C_Item)
 	text[5] = NAME_Value;
 	count[5] = value;
 };
+instance ItAt_Waran_Claws_01(C_Item)
+{
+	name = "РљРѕРіС‚Рё РІР°СЂР°РЅР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_WaranClaws;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Waran_Claws_Verkohlt_01(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РєРѕРіС‚Рё РІР°СЂР°РЅР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_WaranClaws / 3;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Waran_Teeth(C_Item)
+{
+	name = "Р—СѓР±С‹ РІР°СЂР°РЅР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_WaranTeeth;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Waran_Hide(C_Item)
+{
+	name = "Р’Р°СЂР°РЅСЊСЏ РєРѕР¶Р°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_WaranHaut;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Waran_Hide_Dissected(C_Item)
+{
+	name = "РџРѕР»РѕСЃРєРё РІР°СЂР°РЅСЊРµР№ РєРѕР¶Рё";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_WaranHaut / 8;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
 
 instance ItAt_Crawler_02(C_Item)
 {
-	name = "Панцирная пластина ползуна-воина";
+	name = "РџР°РЅС†РёСЂРЅР°СЏ РїР»Р°СЃС‚РёРЅР° РїРѕР»Р·СѓРЅР°-РІРѕРёРЅР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI | ITEM_MISSION;
 	value = Value_Panzerplatte;
@@ -713,7 +783,7 @@ instance ItAt_Crawler_02(C_Item)
 
 instance ItAt_Crawler_01(C_Item)
 {
-	name = "Челюсти ползуна";
+	name = "Р§РµР»СЋСЃС‚Рё РїРѕР»Р·СѓРЅР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Crawlerzangen;
@@ -726,7 +796,7 @@ instance ItAt_Crawler_01(C_Item)
 
 instance ItAt_Shadow_01(C_Item)
 {
-	name = "Шкура мракориса";
+	name = "РЁРєСѓСЂР° РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -739,7 +809,7 @@ instance ItAt_Shadow_01(C_Item)
 
 instance ItAt_Shadow_02(C_Item)
 {
-	name = "Рог мракориса";
+	name = "Р РѕРі РјСЂР°РєРѕСЂРёСЃР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 0;
@@ -752,7 +822,7 @@ instance ItAt_Shadow_02(C_Item)
 
 instance ItAt_Lurker_01(C_Item)
 {
-	name = "Коготь шныга";
+	name = "РљРѕРіРѕС‚СЊ С€РЅС‹РіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Lurkerklaue;
@@ -765,20 +835,211 @@ instance ItAt_Lurker_01(C_Item)
 
 instance ItAt_Lurker_02(C_Item)
 {
-	name = "Шкура шныга";
+	name = "РЁРєСѓСЂР° С€РЅС‹РіР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
-	value = Value_Lurkerhaut;
+	value = Value_LurkerHaut;
 	visual = "ItAt_Lurker_02.3DS";
 	material = MAT_LEATHER;
 	description = name;
 	text[5] = NAME_Value;
 	count[5] = value;
 };
-
+instance ItAt_Lurker_Claws(C_Item)
+{
+	name = "РљРѕРіС‚Рё С€РЅС‹РіР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_LurkerClaws;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Lurker_Claws_Verkohlt(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РєРѕРіС‚Рё С€РЅС‹РіР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_LurkerClaws / 3;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Lurker_Hide(C_Item)
+{
+	name = "РЁРєСѓСЂР° С€РЅС‹РіР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_LurkerHaut;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Lurker_Hide_Dissected(C_Item)
+{
+	name = "РџРѕР»РѕСЃРєРё С€РЅС‹РіРѕРІРѕР№ РєРѕР¶Рё";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_LurkerHaut / 8;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Claws(C_Item)
+{
+	name = "РљРѕРіС‚Рё СЃРЅРµРїРїРµСЂР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperClaws;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Claws_Verkohlt(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РєРѕРіС‚Рё СЃРЅРµРїРїРµСЂР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperClaws / 3;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Hide(C_Item)
+{
+	name = "РљРѕР¶Р° СЃРЅРµРїРїРµСЂР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperHaut;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Hide_Dissected(C_Item)
+{
+	name = "РџРѕР»РѕСЃРєРё СЃРЅРµРїРїРµСЂРѕРІРѕР№ РєРѕР¶Рё";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperHaut / 8;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Teeth(C_Item)
+{
+	name = "Р—СѓР±С‹ СЃРЅРµРїРїРµСЂР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperTeeth;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Snapper_Teeth_Verkohlt(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ Р·СѓР±С‹ СЃРЅРµРїРїРµСЂР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_SnapperTeeth / 3;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Claws(C_Item)
+{
+	name = "РљРѕРіС‚Рё С€С‚РµРєР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorClaws;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Claws_Verkohlt(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ РєРѕРіС‚Рё С€С‚РµРєР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorClaws / 3;
+	visual = "ItAt_Lurker_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Hide(C_Item)
+{
+	name = "РљРѕР¶Р° С€С‚РµРєР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorHaut;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Hide_Dissected(C_Item)
+{
+	name = "РџРѕР»РѕСЃРєРё С€С‚РµРєРѕРІРѕР№ РєРѕР¶Рё";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorHaut / 8;
+	visual = "ItAt_Lurker_02.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Teeth(C_Item)
+{
+	name = "Р—СѓР±С‹ С€С‚РµРєР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorTeeth;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItAt_Razor_Teeth_Verkohlt(C_Item)
+{
+	name = "РћР±СѓРіР»РµРЅРЅС‹Рµ Р·СѓР±С‹ С€С‚РµРєР°";
+	mainflag = ITEM_KAT_NONE;
+	flags = ITEM_MULTI;
+	value = Value_RazorTeeth / 3;
+	visual = "ItAt_Claws_01.3DS";
+	material = MAT_LEATHER;
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
 instance ItAt_Troll_02(C_Item)
 {
-	name = "Клык тролля";
+	name = "РљР»С‹Рє С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollhauer;
@@ -791,7 +1052,7 @@ instance ItAt_Troll_02(C_Item)
 
 instance ItAt_Troll_01(C_Item)
 {
-	name = "Шкура тролля";
+	name = "РЁРєСѓСЂР° С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Trollfell;
@@ -804,7 +1065,7 @@ instance ItAt_Troll_01(C_Item)
 
 instance ItAt_Swampshark_01(C_Item)
 {
-	name = "Шкура болотожора";
+	name = "РЁРєСѓСЂР° Р±РѕР»РѕС‚РѕР¶РѕСЂР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Sumpfhaihaut;
@@ -817,7 +1078,7 @@ instance ItAt_Swampshark_01(C_Item)
 
 instance ItAt_Swampshark_02(C_Item)
 {
-	name = "Клык болотожора";
+	name = "РљР»С‹Рє Р±РѕР»РѕС‚РѕР¶РѕСЂР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Sumpfhaizuhne;
@@ -830,7 +1091,7 @@ instance ItAt_Swampshark_02(C_Item)
 
 instance ItAt_Bloodfly_01(C_Item)
 {
-	name = "Крылья";
+	name = "РљСЂС‹Р»СЊСЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Flugel;
@@ -843,7 +1104,7 @@ instance ItAt_Bloodfly_01(C_Item)
 
 instance ItAt_Bloodfly_02(C_Item)
 {
-	name = "Жало шершня";
+	name = "Р–Р°Р»Рѕ С€РµСЂС€РЅСЏ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Stachel;
@@ -856,7 +1117,7 @@ instance ItAt_Bloodfly_02(C_Item)
 
 instance ItAt_StoneGolem_01(C_Item)
 {
-	name = "Сердце каменного голема";
+	name = "РЎРµСЂРґС†Рµ РєР°РјРµРЅРЅРѕРіРѕ РіРѕР»РµРјР°";
 	mainflag = ITEM_KAT_RUNE;
 	flags = ITEM_MISSION;
 	spell = SPL_WINDFIST;
@@ -864,17 +1125,17 @@ instance ItAt_StoneGolem_01(C_Item)
 	visual = "ItAt_StoneGolem_01.3DS";
 	material = MAT_STONE;
 	description = name;
-	text[0] = "Это сердце добыто из тела";
-	text[1] = "убитого каменного голема.";
-	text[2] = "Оно обладает силой отбрасывать противника";
-	text[3] = "на большое расстояние.";
+	text[0] = "Р­С‚Рѕ СЃРµСЂРґС†Рµ РґРѕР±С‹С‚Рѕ РёР· С‚РµР»Р°";
+	text[1] = "СѓР±РёС‚РѕРіРѕ РєР°РјРµРЅРЅРѕРіРѕ РіРѕР»РµРјР°.";
+	text[2] = "РћРЅРѕ РѕР±Р»Р°РґР°РµС‚ СЃРёР»РѕР№ РѕС‚Р±СЂР°СЃС‹РІР°С‚СЊ РїСЂРѕС‚РёРІРЅРёРєР°";
+	text[3] = "РЅР° Р±РѕР»СЊС€РѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_FireGolem_01(C_Item)
 {
-	name = "Сердце огненного голема";
+	name = "РЎРµСЂРґС†Рµ РѕРіРЅРµРЅРЅРѕРіРѕ РіРѕР»РµРјР°";
 	mainflag = ITEM_KAT_RUNE;
 	flags = ITEM_MISSION;
 	spell = SPL_FIREBALL;
@@ -882,17 +1143,17 @@ instance ItAt_FireGolem_01(C_Item)
 	visual = "ItAt_FireGolem_01.3DS";
 	material = MAT_STONE;
 	description = name;
-	text[0] = "Это сердце добыто из тела";
-	text[1] = "убитого огненного голема.";
-	text[2] = "Оно обладает силой сжигать";
-	text[3] = "противника заживо.";
+	text[0] = "Р­С‚Рѕ СЃРµСЂРґС†Рµ РґРѕР±С‹С‚Рѕ РёР· С‚РµР»Р°";
+	text[1] = "СѓР±РёС‚РѕРіРѕ РѕРіРЅРµРЅРЅРѕРіРѕ РіРѕР»РµРјР°.";
+	text[2] = "РћРЅРѕ РѕР±Р»Р°РґР°РµС‚ СЃРёР»РѕР№ СЃР¶РёРіР°С‚СЊ";
+	text[3] = "РїСЂРѕС‚РёРІРЅРёРєР° Р·Р°Р¶РёРІРѕ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_IceGolem_01(C_Item)
 {
-	name = "Сердце ледяного голема";
+	name = "РЎРµСЂРґС†Рµ Р»РµРґСЏРЅРѕРіРѕ РіРѕР»РµРјР°";
 	mainflag = ITEM_KAT_RUNE;
 	flags = ITEM_MISSION;
 	spell = SPL_ICECUBE;
@@ -900,17 +1161,17 @@ instance ItAt_IceGolem_01(C_Item)
 	visual = "ItAt_IceGolem_01.3DS";
 	material = MAT_STONE;
 	description = name;
-	text[0] = "Это сердце добыто из тела";
-	text[1] = "убитого ледяного голема.";
-	text[2] = "Оно обладает силой превращать";
-	text[3] = "противника в ледяную глыбу.";
+	text[0] = "Р­С‚Рѕ СЃРµСЂРґС†Рµ РґРѕР±С‹С‚Рѕ РёР· С‚РµР»Р°";
+	text[1] = "СѓР±РёС‚РѕРіРѕ Р»РµРґСЏРЅРѕРіРѕ РіРѕР»РµРјР°.";
+	text[2] = "РћРЅРѕ РѕР±Р»Р°РґР°РµС‚ СЃРёР»РѕР№ РїСЂРµРІСЂР°С‰Р°С‚СЊ";
+	text[3] = "РїСЂРѕС‚РёРІРЅРёРєР° РІ Р»РµРґСЏРЅСѓСЋ РіР»С‹Р±Сѓ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance ItAt_IceGolem_02(C_Item)
 {
-	name = "Осколок ледяного голема";
+	name = "РћСЃРєРѕР»РѕРє Р»РµРґСЏРЅРѕРіРѕ РіРѕР»РµРјР°";
 	mainflag = ITEM_KAT_RUNE;
 	flags = 0;
 	spell = SPL_THUNDERBOLT;
@@ -918,8 +1179,8 @@ instance ItAt_IceGolem_02(C_Item)
 	visual = "ItAt_IceGolem_01.3DS";
 	material = MAT_STONE;
 	description = name;
-	text[0] = "Это осколок от тела";
-	text[1] = "убитого ледяного голема.";
+	text[0] = "Р­С‚Рѕ РѕСЃРєРѕР»РѕРє РѕС‚ С‚РµР»Р°";
+	text[1] = "СѓР±РёС‚РѕРіРѕ Р»РµРґСЏРЅРѕРіРѕ РіРѕР»РµРјР°.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };

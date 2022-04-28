@@ -1,7 +1,7 @@
 
 instance KDF_404_Xardas(Npc_Default)
 {
-	name[0] = "Ксардас";
+	name[0] = "РљСЃР°СЂРґР°СЃ";
 	npcType = npctype_friend;
 	guild = GIL_DMB;
 	level = 50;

@@ -1,7 +1,7 @@
 
 instance Sld_709_Cord(Npc_Default)
 {
-	name[0] = "Корд";
+	name[0] = "РљРѕСЂРґ";
 	npcType = npctype_main;
 	guild = GIL_SLD;
 	level = 18;

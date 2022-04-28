@@ -1,7 +1,7 @@
 
 instance Nov_1303_Nyras(Npc_Default)
 {
-	name[0] = "Нирас";
+	name[0] = "РќРёСЂР°СЃ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 6;

@@ -1,7 +1,7 @@
 
 instance BAU_935_Homer(Npc_Default)
 {
-	name[0] = "Гомер";
+	name[0] = "Р“РѕРјРµСЂ";
 	npcType = npctype_main;
 	guild = GIL_BAU;
 	level = 6;

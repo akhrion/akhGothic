@@ -1,7 +1,7 @@
 
 instance NOV_1310_Ghorim(Npc_Default)
 {
-	name[0] = "Горим";
+	name[0] = "Р“РѕСЂРёРј";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

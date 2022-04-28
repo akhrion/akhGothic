@@ -1,7 +1,7 @@
 
 instance EBR_106_Bartholo(Npc_Default)
 {
-	name[0] = "Бартоло";
+	name[0] = "Р‘Р°СЂС‚РѕР»Рѕ";
 	npcType = npctype_main;
 	guild = GIL_EBR;
 	level = 70;
@@ -49,7 +49,7 @@ func void rtn_remove_106()
 
 instance EBR_598_BARTHOLO(Npc_Default)
 {
-	name[0] = "Бартоло";
+	name[0] = "Р‘Р°СЂС‚РѕР»Рѕ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 70;

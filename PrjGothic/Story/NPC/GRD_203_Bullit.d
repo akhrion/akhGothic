@@ -1,7 +1,7 @@
 
 instance GRD_203_Bullit(Npc_Default)
 {
-	name[0] = "Буллит";
+	name[0] = "Р‘СѓР»Р»РёС‚";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 10;

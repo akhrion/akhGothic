@@ -1,7 +1,7 @@
 
 instance SFB_1037_Swiney(Npc_Default)
 {
-	name[0] = "Суини";
+	name[0] = "РЎСѓРёРЅРё";
 	npcType = npctype_main;
 	guild = GIL_SFB;
 	level = 6;

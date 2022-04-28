@@ -423,6 +423,35 @@ instance ItRw_Bow_War_05(C_Item)
 	count[5] = value;
 };
 
+instance ItRw_Bow_Test(C_ITEM)
+{
+	name = "bow test";
+	mainflag = ITEM_KAT_FF;
+	flags = ITEM_BOW;
+	material = MAT_WOOD;
+	value = 3800;
+	damageTotal = 0;
+	damagetype = DAM_BARRIER;
+	munition = ItAmTestArrow;
+	cond_atr[2] = ATR_DEXTERITY;
+	cond_value[2] = 120;
+	visual = "ItRw_Bow_War_05.mms";
+	description = name;
+};
+
+instance ItAmTestArrow(C_Item)
+{
+	name = "test arrow";
+	mainflag = ITEM_KAT_MUN;
+	flags = ITEM_BOW | ITEM_MULTI;
+	damageTotal = 200;
+	damagetype = DAM_FIRE;
+	value = 0;
+	visual = "ItAm_Arrow_01.3ds";
+	material = MAT_WOOD;
+	description = name;
+};
+
 instance ItRw_Bow_Urizel(C_ITEM)
 {
 	name = "Магический лук";

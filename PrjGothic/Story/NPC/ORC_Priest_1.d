@@ -1,7 +1,7 @@
 
 instance ORC_Priest_1(Npc_Default)
 {
-	name[0] = "Варраг-Хашор";
+	name[0] = "Р’Р°СЂСЂР°Рі-РҐР°С€РѕСЂ";
 	npcType = npctype_main;
 	guild = GIL_ORCSHAMAN;
 	level = 400;
@@ -44,7 +44,7 @@ func void Rtn_PreStart_2995()
 
 instance ORC_Priest_2(Npc_Default)
 {
-	name[0] = "Варраг-Казорг";
+	name[0] = "Р’Р°СЂСЂР°Рі-РљР°Р·РѕСЂРі";
 	npcType = npctype_main;
 	guild = GIL_ORCSHAMAN;
 	level = 400;
@@ -87,7 +87,7 @@ func void Rtn_PreStart_2996()
 
 instance ORC_Priest_3(Npc_Default)
 {
-	name[0] = "Варраг-Унхилькт";
+	name[0] = "Р’Р°СЂСЂР°Рі-РЈРЅС…РёР»СЊРєС‚";
 	npcType = npctype_main;
 	guild = GIL_ORCSHAMAN;
 	level = 400;
@@ -130,7 +130,7 @@ func void Rtn_PreStart_2997()
 
 instance ORC_Priest_4(Npc_Default)
 {
-	name[0] = "Варраг-Руушк";
+	name[0] = "Р’Р°СЂСЂР°Рі-Р СѓСѓС€Рє";
 	npcType = npctype_main;
 	guild = GIL_ORCSHAMAN;
 	level = 400;
@@ -174,7 +174,7 @@ func void Rtn_PreStart_2998()
 
 instance ORC_Priest_5(Npc_Default)
 {
-	name[0] = "Граш-Варраг-Арушат";
+	name[0] = "Р“СЂР°С€-Р’Р°СЂСЂР°Рі-РђСЂСѓС€Р°С‚";
 	npcType = npctype_friend;
 	guild = GIL_ORCSHAMAN;
 	level = 500;

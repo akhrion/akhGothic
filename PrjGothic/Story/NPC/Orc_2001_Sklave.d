@@ -1,8 +1,8 @@
 
 instance Orc_2001_Sklave(Npc_Default)
 {
-	name[0] = "Орк-раб";
-	slot = "Орк-раб";
+	name[0] = "РћСЂРє-СЂР°Р±";
+	slot = "РћСЂРє-СЂР°Р±";
 	guild = GIL_ORCSLAVE;
 	level = 3;
 	flags = 0;
@@ -41,7 +41,7 @@ func void rtn_Stomper_2001()
 
 instance Orc_2002_Sklave(Npc_Default)
 {
-	name[0] = "Орк-раб";
+	name[0] = "РћСЂРє-СЂР°Р±";
 	slot = "Orc Slave";
 	guild = GIL_ORCSLAVE;
 	level = 3;

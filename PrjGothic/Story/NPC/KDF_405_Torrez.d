@@ -1,7 +1,7 @@
 
 instance KDF_405_Torrez(Npc_Default)
 {
-	name[0] = "Òîððåç";
+	name[0] = "Ð¢Ð¾Ñ€Ñ€ÐµÐ·";
 	npcType = npctype_main;
 	guild = GIL_KDF;
 	level = 26;
@@ -56,7 +56,7 @@ func void rtn_dead_405()
 
 instance KDF_4051_TORREZ(Npc_Default)
 {
-	name[0] = "Òîððåç";
+	name[0] = "Ð¢Ð¾Ñ€Ñ€ÐµÐ·";
 	npcType = npctype_main;
 	guild = GIL_KDF;
 	level = 26;

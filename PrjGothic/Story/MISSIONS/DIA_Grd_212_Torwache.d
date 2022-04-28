@@ -34,7 +34,7 @@ func int Info_Grd_212_FirstWarn_Condition()
 };
 func void akh_talk()
 {
-	AI_Output(wache212,hero,"PassToOCInnerRingExpire_NULL_04"); //(претворно недоумевая) Я знать его не знаю!
+	AI_Output(wache212,hero,"PassToOCInnerRingExpire_NULL_04"); //(РїСЂРµС‚РІРѕСЂРЅРѕ РЅРµРґРѕСѓРјРµРІР°СЏ) РЇ Р·РЅР°С‚СЊ РµРіРѕ РЅРµ Р·РЅР°СЋ!
 };
 
 func int isPlayerGoingExit_OCCGATE()
@@ -58,47 +58,47 @@ func int isPlayerGoingExit_OCCGATE()
 				{
 					if(getCurDayHours() < 7)
 					{
-						AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_06"); //Ты меня подставить решил? Не видишь рассвета?
+						AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_06"); //РўС‹ РјРµРЅСЏ РїРѕРґСЃС‚Р°РІРёС‚СЊ СЂРµС€РёР»? РќРµ РІРёРґРёС€СЊ СЂР°СЃСЃРІРµС‚Р°?
 //						AI_StopProcessInfos(self);
 						hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_212_CHECKPOINT);
 						Npc_SetTarget(self,hero);
 						AI_StartState(self,ZS_Attack,1,"");
-//						AI_OutputSVM_Overlay(self,hero,"GRD212FuckAwayAnIdiot"); //Вали отсюда пройдоха!
+//						AI_OutputSVM_Overlay(self,hero,"GRD212FuckAwayAnIdiot"); //Р’Р°Р»Рё РѕС‚СЃСЋРґР° РїСЂРѕР№РґРѕС…Р°!
 					}
 					else
 					{
-						AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_01"); //(притворяясь) О, а ты кто такой?!
+						AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_01"); //(РїСЂРёС‚РІРѕСЂСЏСЏСЃСЊ) Рћ, Р° С‚С‹ РєС‚Рѕ С‚Р°РєРѕР№?!
 						hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 					};
 				};
 			}
 			else
 			{
-				AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_02"); //(вглядывается) Тыы.. кто такой ВООБЩЕ?
+				AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_02"); //(РІРіР»СЏРґС‹РІР°РµС‚СЃСЏ) РўС‹С‹.. РєС‚Рѕ С‚Р°РєРѕР№ Р’РћРћР‘Р©Р•?
 				if(!Npc_IsDead(wache212))
 				{
 //					AI_TurnToNpc(self,wache212);
-					AI_Output(wache213,wache212,"PassToOCInnerRingExpire_NULL_03"); //Эй 212й, это ты его впустил?
-//					B_Say(self,wache212,"$GRD213TPCINTRUDER");	//Эй 212й, это ты его впустил?
+					AI_Output(wache213,wache212,"PassToOCInnerRingExpire_NULL_03"); //Р­Р№ 212Р№, СЌС‚Рѕ С‚С‹ РµРіРѕ РІРїСѓСЃС‚РёР»?
+//					B_Say(self,wache212,"$GRD213TPCINTRUDER");	//Р­Р№ 212Р№, СЌС‚Рѕ С‚С‹ РµРіРѕ РІРїСѓСЃС‚РёР»?
 //					B_Say(wache212,self,"$GRD212TPCINTRUDER");//asd
 					
 //					AI_OutputSVM(self,wache212,"$GRD213TPCINTRUDER");//qweqweqwe
 //					AI_TurnToNpc(wache212,self);
 					AI_WaitTillEnd(wache213,wache212);
 					AI_WaitForQuestion(wache212,akh_talk);
-//					AI_Output(wache212,hero,"PassToOCInnerRingExpire_NULL_04"); //(претворно недоумевая) Я знать его не знаю!
+//					AI_Output(wache212,hero,"PassToOCInnerRingExpire_NULL_04"); //(РїСЂРµС‚РІРѕСЂРЅРѕ РЅРµРґРѕСѓРјРµРІР°СЏ) РЇ Р·РЅР°С‚СЊ РµРіРѕ РЅРµ Р·РЅР°СЋ!
 					hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 					Npc_SetTarget(wache212,hero);
 				}
 				else
 				{
-					AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_05"); //(в сомнениях) Ну ладно.. иди..
-					B_LogEntry(CH1_PassToInnerOldCamp,"Кажется я не успел, но все обошлось..");
+					AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_05"); //(РІ СЃРѕРјРЅРµРЅРёСЏС…) РќСѓ Р»Р°РґРЅРѕ.. РёРґРё..
+					B_LogEntry(CH1_PassToInnerOldCamp,"РљР°Р¶РµС‚СЃСЏ СЏ РЅРµ СѓСЃРїРµР», РЅРѕ РІСЃРµ РѕР±РѕС€Р»РѕСЃСЊ..");
 					AI_StopProcessInfos(self);
 					return false;
 				};
 			};
-			B_LogEntry(CH1_PassToInnerOldCamp,"Кажется я не успел..");
+			B_LogEntry(CH1_PassToInnerOldCamp,"РљР°Р¶РµС‚СЃСЏ СЏ РЅРµ СѓСЃРїРµР»..");
 			
 //			hero.aivar[AIV_LASTDISTTOWP] = 0;
 //			hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
@@ -112,7 +112,7 @@ func int isPlayerGoingExit_OCCGATE()
 		}
 		else
 		{
-			B_LogEntry(CH1_PassToInnerOldCamp,"Кажется мое время вышло. В замок дорога снова закрыта.");
+			B_LogEntry(CH1_PassToInnerOldCamp,"РљР°Р¶РµС‚СЃСЏ РјРѕРµ РІСЂРµРјСЏ РІС‹С€Р»Рѕ. Р’ Р·Р°РјРѕРє РґРѕСЂРѕРіР° СЃРЅРѕРІР° Р·Р°РєСЂС‹С‚Р°.");
 		};
 	};
 */
@@ -121,9 +121,9 @@ func int isPlayerGoingExit_OCCGATE()
 func void Info_Grd_212_FirstWarn_Info()
 {
 	PrintGlobals(PD_MISSION);
-	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_01");	//Стой!
-	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02");	//В чем дело?
-	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03");	//В замок нельзя входить без разрешения. Убирайся отсюда!
+	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_01");	//РЎС‚РѕР№!
+	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02");	//Р’ С‡РµРј РґРµР»Рѕ?
+	AI_Output(self,hero,"Info_Grd_212_FirstWarn_Info_13_03");	//Р’ Р·Р°РјРѕРє РЅРµР»СЊР·СЏ РІС…РѕРґРёС‚СЊ Р±РµР· СЂР°Р·СЂРµС€РµРЅРёСЏ. РЈР±РёСЂР°Р№СЃСЏ РѕС‚СЃСЋРґР°!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_212_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 	AI_StopProcessInfos(self);
@@ -161,7 +161,7 @@ func int Info_Grd_212_LastWarn_Condition()
 
 func void Info_Grd_212_LastWarn_Info()
 {
-	AI_Output(self,hero,"Info_Grd_212_LastWarn_13_01");	//Ты что, оглох? Еще шаг, и я прибью тебя на месте.
+	AI_Output(self,hero,"Info_Grd_212_LastWarn_13_01");	//РўС‹ С‡С‚Рѕ, РѕРіР»РѕС…? Р•С‰Рµ С€Р°Рі, Рё СЏ РїСЂРёР±СЊСЋ С‚РµР±СЏ РЅР° РјРµСЃС‚Рµ.
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_212_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);
@@ -238,16 +238,16 @@ func void Info_Grd_212_LateGoingExit_Info()
 	{
 		if(getCurDayHours() < 7)
 		{
-			AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_06"); //Ты меня подставить решил? Не видишь рассвета?
+			AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_06"); //РўС‹ РјРµРЅСЏ РїРѕРґСЃС‚Р°РІРёС‚СЊ СЂРµС€РёР»? РќРµ РІРёРґРёС€СЊ СЂР°СЃСЃРІРµС‚Р°?
 			hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Grd_212_CHECKPOINT);
 			hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 			Npc_SetTarget(self,hero);
 			AI_StartState(self,ZS_Attack,1,"");
-//			AI_OutputSVM_Overlay(self,hero,"GRD212FuckAwayAnIdiot"); //Вали отсюда пройдоха!
+//			AI_OutputSVM_Overlay(self,hero,"GRD212FuckAwayAnIdiot"); //Р’Р°Р»Рё РѕС‚СЃСЋРґР° РїСЂРѕР№РґРѕС…Р°!
 		}
 		else
 		{
-			AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_01"); //(притворяясь) О, а ты кто такой?!
+			AI_Output(self,hero,"PassToOCInnerRingExpire_NULL_01"); //(РїСЂРёС‚РІРѕСЂСЏСЏСЃСЊ) Рћ, Р° С‚С‹ РєС‚Рѕ С‚Р°РєРѕР№?!
 			hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
 			B_IntruderAlert(self,other);
 			B_SetAttackReason(self,AIV_AR_INTRUDER);
@@ -255,7 +255,7 @@ func void Info_Grd_212_LateGoingExit_Info()
 			AI_StartState(self,ZS_Attack,1,"");
 		};
 	};
-	B_LogEntry(CH1_PassToInnerOldCamp,"Кажется я не успел..");
+	B_LogEntry(CH1_PassToInnerOldCamp,"РљР°Р¶РµС‚СЃСЏ СЏ РЅРµ СѓСЃРїРµР»..");
 	AI_StopProcessInfos(self);
 };
 
@@ -310,7 +310,7 @@ instance Info_Grd_212_Abblitzen(C_Info)
 	condition = Info_Grd_212_Abblitzen_Condition;
 	information = Info_Grd_212_Abblitzen_Info;
 	permanent = 1;
-	description = "Я хочу попасть в замок!";
+	description = "РЇ С…РѕС‡Сѓ РїРѕРїР°СЃС‚СЊ РІ Р·Р°РјРѕРє!";
 };
 
 
@@ -324,11 +324,11 @@ func int Info_Grd_212_Abblitzen_Condition()
 
 func void Info_Grd_212_Abblitzen_Info()
 {
-	AI_Output(other,self,"Info_Grd_212_Abblitzen_15_00");	//Я хочу попасть в замок!
-	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01");	//Да, как интересно! А мне хочется убраться отсюда подальше!
-	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_02");	//И, уж конечно, у меня есть и другие дела, кроме как следить за теми, кто пытается попасть в замок.
-	AI_Output(other,self,"Info_Grd_212_Abblitzen_15_03");	//Ты можешь пропустить меня...
-	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_04");	//Нет, не могу! Поговори с Торусом.
+	AI_Output(other,self,"Info_Grd_212_Abblitzen_15_00");	//РЇ С…РѕС‡Сѓ РїРѕРїР°СЃС‚СЊ РІ Р·Р°РјРѕРє!
+	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_01");	//Р”Р°, РєР°Рє РёРЅС‚РµСЂРµСЃРЅРѕ! Рђ РјРЅРµ С…РѕС‡РµС‚СЃСЏ СѓР±СЂР°С‚СЊСЃСЏ РѕС‚СЃСЋРґР° РїРѕРґР°Р»СЊС€Рµ!
+	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_02");	//Р, СѓР¶ РєРѕРЅРµС‡РЅРѕ, Сѓ РјРµРЅСЏ РµСЃС‚СЊ Рё РґСЂСѓРіРёРµ РґРµР»Р°, РєСЂРѕРјРµ РєР°Рє СЃР»РµРґРёС‚СЊ Р·Р° С‚РµРјРё, РєС‚Рѕ РїС‹С‚Р°РµС‚СЃСЏ РїРѕРїР°СЃС‚СЊ РІ Р·Р°РјРѕРє.
+	AI_Output(other,self,"Info_Grd_212_Abblitzen_15_03");	//РўС‹ РјРѕР¶РµС€СЊ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РјРµРЅСЏ...
+	AI_Output(self,other,"Info_Grd_212_Abblitzen_13_04");	//РќРµС‚, РЅРµ РјРѕРіСѓ! РџРѕРіРѕРІРѕСЂРё СЃ РўРѕСЂСѓСЃРѕРј.
 	AI_StopProcessInfos(self);
 };
 
@@ -356,9 +356,9 @@ func int Info_Grd_212_FirstIn_Condition()
 
 func void Info_Grd_212_FirstIn_Info()
 {
-	AI_Output(self,other,"Info_Grd_212_FirstIn_13_00");	//Стой!
-	AI_Output(other,self,"Info_Grd_212_FirstIn_15_01");	//Да ладно, я поговорил с Торусом. Он разрешил мне войти.
-	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02");	//Я запомню твое лицо. Если ты сделаешь хоть одну ошибку, тебе не сдобровать!
+	AI_Output(self,other,"Info_Grd_212_FirstIn_13_00");	//РЎС‚РѕР№!
+	AI_Output(other,self,"Info_Grd_212_FirstIn_15_01");	//Р”Р° Р»Р°РґРЅРѕ, СЏ РїРѕРіРѕРІРѕСЂРёР» СЃ РўРѕСЂСѓСЃРѕРј. РћРЅ СЂР°Р·СЂРµС€РёР» РјРЅРµ РІРѕР№С‚Рё.
+	AI_Output(self,other,"Info_Grd_212_FirstIn_13_02");	//РЇ Р·Р°РїРѕРјРЅСЋ С‚РІРѕРµ Р»РёС†Рѕ. Р•СЃР»Рё С‚С‹ СЃРґРµР»Р°РµС€СЊ С…РѕС‚СЊ РѕРґРЅСѓ РѕС€РёР±РєСѓ, С‚РµР±Рµ РЅРµ СЃРґРѕР±СЂРѕРІР°С‚СЊ!
 	AI_StopProcessInfos(self);
 };
 
@@ -370,7 +370,7 @@ instance Info_Grd_212_Passgate(C_Info)
 	condition = Info_Grd_212_Passgate_Condition;
 	information = Info_Grd_212_Passgate_Info;
 	permanent = 1;
-	description = "Я могу войти?";
+	description = "РЇ РјРѕРіСѓ РІРѕР№С‚Рё?";
 };
 
 
@@ -384,8 +384,8 @@ func int Info_Grd_212_Passgate_Condition()
 
 func void Info_Grd_212_Passgate_Info()
 {
-	AI_Output(other,self,"Info_Grd_212_Passgate_15_00");	//Я могу войти?
-	AI_Output(self,other,"Info_Grd_212_Passgate_13_01");	//Еще один вопрос, и я уж точно никогда тебя не впущу.
+	AI_Output(other,self,"Info_Grd_212_Passgate_15_00");	//РЇ РјРѕРіСѓ РІРѕР№С‚Рё?
+	AI_Output(self,other,"Info_Grd_212_Passgate_13_01");	//Р•С‰Рµ РѕРґРёРЅ РІРѕРїСЂРѕСЃ, Рё СЏ СѓР¶ С‚РѕС‡РЅРѕ РЅРёРєРѕРіРґР° С‚РµР±СЏ РЅРµ РІРїСѓС‰Сѓ.
 	AI_StopProcessInfos(self);
 };
 

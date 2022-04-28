@@ -1,7 +1,7 @@
 
 instance Kdw_600_Saturas(Npc_Default)
 {
-	name[0] = "Сатурас";
+	name[0] = "РЎР°С‚СѓСЂР°СЃ";
 	npcType = npctype_friend;
 	guild = GIL_KDW;
 	level = 29;

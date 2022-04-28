@@ -1,7 +1,7 @@
 
 instance STT_315_Sly(Npc_Default)
 {
-	name[0] = "—Î‡È";
+	name[0] = "–°–ª–∞–π";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 5;

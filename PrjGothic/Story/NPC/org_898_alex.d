@@ -1,7 +1,7 @@
 
 instance ORG_898_ALEX(Npc_Default)
 {
-	name[0] = "Алекс";
+	name[0] = "РђР»РµРєСЃ";
 	npcType = npctype_friend;
 	guild = GIL_SLD;
 	level = 999;
@@ -66,7 +66,7 @@ instance INFO_ALEX2_LETSGO(C_Info)
 	information = info_alex2_letsgo_info;
 	important = 0;
 	permanent = 1;
-	description = "Пойдем со мной, мне нужна твоя помощь.";
+	description = "РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.";
 };
 
 
@@ -80,8 +80,8 @@ func int info_alex2_letsgo_condition()
 
 func void info_alex2_letsgo_info()
 {
-	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//Пойдем со мной, мне нужна твоя помощь.
-	AI_Output(self,hero,"Alex_03_01");	//Без проблем, дружище!
+	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.
+	AI_Output(self,hero,"Alex_03_01");	//Р‘РµР· РїСЂРѕР±Р»РµРј, РґСЂСѓР¶РёС‰Рµ!
 	self.aivar[AIV_PARTYMEMBER] = TRUE;
 	Npc_ExchangeRoutine(self,"follow");
 	if(FMTaken == TRUE)
@@ -113,7 +113,7 @@ func int alex2_om_condition()
 
 func void alex2_om_info()
 {
-	AI_Output(self,hero,"Alex_OM");	//Шахта? Ну уж нет, у меня до сих пор кашель после сырости в тюрьме.
+	AI_Output(self,hero,"Alex_OM");	//РЁР°С…С‚Р°? РќСѓ СѓР¶ РЅРµС‚, Сѓ РјРµРЅСЏ РґРѕ СЃРёС… РїРѕСЂ РєР°С€РµР»СЊ РїРѕСЃР»Рµ СЃС‹СЂРѕСЃС‚Рё РІ С‚СЋСЂСЊРјРµ.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -142,7 +142,7 @@ func int alex2_am_condition()
 
 func void alex2_am_info()
 {
-	AI_Output(self,hero,"Alex_OM");	//Шахта? Ну уж нет, у меня до сих пор кашель после сырости в тюрьме.
+	AI_Output(self,hero,"Alex_OM");	//РЁР°С…С‚Р°? РќСѓ СѓР¶ РЅРµС‚, Сѓ РјРµРЅСЏ РґРѕ СЃРёС… РїРѕСЂ РєР°С€РµР»СЊ РїРѕСЃР»Рµ СЃС‹СЂРѕСЃС‚Рё РІ С‚СЋСЂСЊРјРµ.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -171,7 +171,7 @@ func int alex2_oc_condition()
 
 func void alex2_oc_info()
 {
-	AI_Output(self,hero,"Alex_OC");	//Прости, больше я в Старый лагерь ни ногой!
+	AI_Output(self,hero,"Alex_OC");	//РџСЂРѕСЃС‚Рё, Р±РѕР»СЊС€Рµ СЏ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ РЅРё РЅРѕРіРѕР№!
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -200,7 +200,7 @@ func int alex2_oc2_condition()
 
 func void alex2_oc2_info()
 {
-	AI_Output(self,hero,"Alex_OC");	//Прости, больше я в Старый лагерь ни ногой!
+	AI_Output(self,hero,"Alex_OC");	//РџСЂРѕСЃС‚Рё, Р±РѕР»СЊС€Рµ СЏ РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ РЅРё РЅРѕРіРѕР№!
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"oc2");
 	Npc_SetRefuseTalk(self,5);
@@ -229,7 +229,7 @@ func int alex2_nc_condition()
 
 func void alex2_nc_info()
 {
-	AI_Output(self,hero,"Alex_NC");	//Извини, в Новый лагерь тебе придется пойти без меня.
+	AI_Output(self,hero,"Alex_NC");	//РР·РІРёРЅРё, РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ РїРѕР№С‚Рё Р±РµР· РјРµРЅСЏ.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -258,7 +258,7 @@ func int alex2_ot_condition()
 
 func void alex2_ot_info()
 {
-	AI_Output(self,hero,"Alex_OT");	//Я вернусь в наше логово, ты сможешь найти меня там.
+	AI_Output(self,hero,"Alex_OT");	//РЇ РІРµСЂРЅСѓСЃСЊ РІ РЅР°С€Рµ Р»РѕРіРѕРІРѕ, С‚С‹ СЃРјРѕР¶РµС€СЊ РЅР°Р№С‚Рё РјРµРЅСЏ С‚Р°Рј.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -287,7 +287,7 @@ func int alex2_pc_condition()
 
 func void alex2_pc_info()
 {
-	AI_Output(self,hero,"Alex_PC");	//В Болотном лагере меня знают в лицо, лучше там не появляться...
+	AI_Output(self,hero,"Alex_PC");	//Р’ Р‘РѕР»РѕС‚РЅРѕРј Р»Р°РіРµСЂРµ РјРµРЅСЏ Р·РЅР°СЋС‚ РІ Р»РёС†Рѕ, Р»СѓС‡С€Рµ С‚Р°Рј РЅРµ РїРѕСЏРІР»СЏС‚СЊСЃСЏ...
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -316,7 +316,7 @@ func int alex2_xardas_condition()
 
 func void alex2_xardas_info()
 {
-	AI_Output(self,hero,"Alex_OT");	//Я вернусь в наше логово, ты сможешь найти меня там.
+	AI_Output(self,hero,"Alex_OT");	//РЇ РІРµСЂРЅСѓСЃСЊ РІ РЅР°С€Рµ Р»РѕРіРѕРІРѕ, С‚С‹ СЃРјРѕР¶РµС€СЊ РЅР°Р№С‚Рё РјРµРЅСЏ С‚Р°Рј.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);
@@ -345,7 +345,7 @@ func int alex2_ogy_condition()
 
 func void alex2_ogy_info()
 {
-	AI_Output(self,hero,"Alex_OT");	//Я вернусь в наше логово, ты сможешь найти меня там.
+	AI_Output(self,hero,"Alex_OT");	//РЇ РІРµСЂРЅСѓСЃСЊ РІ РЅР°С€Рµ Р»РѕРіРѕРІРѕ, С‚С‹ СЃРјРѕР¶РµС€СЊ РЅР°Р№С‚Рё РјРµРЅСЏ С‚Р°Рј.
 	self.aivar[AIV_PARTYMEMBER] = FALSE;
 	Npc_ExchangeRoutine(self,"start");
 	Npc_SetRefuseTalk(self,5);

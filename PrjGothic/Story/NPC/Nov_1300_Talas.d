@@ -1,7 +1,7 @@
 
 instance Nov_1300_Talas(Npc_Default)
 {
-	name[0] = "“‡Î‡Ò";
+	name[0] = "–¢–∞–ª–∞—Å";
 	npcType = npctype_friend;
 	guild = GIL_NOV;
 	level = 4;

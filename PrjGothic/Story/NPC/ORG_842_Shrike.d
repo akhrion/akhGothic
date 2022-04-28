@@ -1,7 +1,7 @@
 
 instance ORG_842_Shrike(Npc_Default)
 {
-	name[0] = "Ψπΰικ";
+	name[0] = "Π¨Ρ€Π°ΠΉΠΊ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 6;

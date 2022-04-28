@@ -19,7 +19,7 @@ func int DIA_SLD_751_Soeldner_INTRO_CONDITION()
 
 func void DIA_SLD_751_Soeldner_INTRO_INFO()
 {
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01");	//А, новенький! Смотри, не создавай нам проблем, ведь мы спросим с тебя!
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_INTRO_INFO_01_01");	//Рђ, РЅРѕРІРµРЅСЊРєРёР№! РЎРјРѕС‚СЂРё, РЅРµ СЃРѕР·РґР°РІР°Р№ РЅР°Рј РїСЂРѕР±Р»РµРј, РІРµРґСЊ РјС‹ СЃРїСЂРѕСЃРёРј СЃ С‚РµР±СЏ!
 };
 
 
@@ -31,7 +31,7 @@ instance DIA_SLD_751_Soeldner_EXIT_1(C_Info)
 	information = DIA_SLD_751_Soeldner_EXIT_1_INFO;
 	important = 0;
 	permanent = 0;
-	description = "Пожалуй, я пойду.";
+	description = "РџРѕР¶Р°Р»СѓР№, СЏ РїРѕР№РґСѓ.";
 };
 
 
@@ -42,8 +42,8 @@ func int DIA_SLD_751_Soeldner_EXIT_1_CONDITION()
 
 func void DIA_SLD_751_Soeldner_EXIT_1_INFO()
 {
-	AI_Output(other,self,"DIA_SLD_751_Soeldner_EXIT_1_INFO_15_01");	//Пожалуй, я пойду.
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");	//Надеюсь, ты понимаешь, как себя вести.
+	AI_Output(other,self,"DIA_SLD_751_Soeldner_EXIT_1_INFO_15_01");	//РџРѕР¶Р°Р»СѓР№, СЏ РїРѕР№РґСѓ.
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_1_INFO_01_02");	//РќР°РґРµСЋСЃСЊ, С‚С‹ РїРѕРЅРёРјР°РµС€СЊ, РєР°Рє СЃРµР±СЏ РІРµСЃС‚Рё.
 	AI_StopProcessInfos(self);
 };
 
@@ -56,7 +56,7 @@ instance DIA_SLD_751_Soeldner_EXIT_2(C_Info)
 	information = DIA_SLD_751_Soeldner_EXIT_2_INFO;
 	important = 0;
 	permanent = 1;
-	description = "Я пойду, ладно?";
+	description = "РЇ РїРѕР№РґСѓ, Р»Р°РґРЅРѕ?";
 };
 
 
@@ -70,8 +70,8 @@ func int DIA_SLD_751_Soeldner_EXIT_2_CONDITION()
 
 func void DIA_SLD_751_Soeldner_EXIT_2_INFO()
 {
-	AI_Output(other,self,"DIA_SLD_751_Soeldner_EXIT_2_INFO_15_01");	//Я пойду, ладно?
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_2_INFO_01_02");	//Да, да, иди.
+	AI_Output(other,self,"DIA_SLD_751_Soeldner_EXIT_2_INFO_15_01");	//РЇ РїРѕР№РґСѓ, Р»Р°РґРЅРѕ?
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_EXIT_2_INFO_01_02");	//Р”Р°, РґР°, РёРґРё.
 	AI_StopProcessInfos(self);
 };
 
@@ -83,7 +83,7 @@ instance DIA_SLD_751_Soeldner_UMSEHEN(C_Info)
 	information = DIA_SLD_751_Soeldner_UMSEHEN_INFO;
 	important = 0;
 	permanent = 0;
-	description = "Я просто хотел посмотреть, что здесь есть.";
+	description = "РЇ РїСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РїРѕСЃРјРѕС‚СЂРµС‚СЊ, С‡С‚Рѕ Р·РґРµСЃСЊ РµСЃС‚СЊ.";
 };
 
 
@@ -94,8 +94,8 @@ func int DIA_SLD_751_Soeldner_UMSEHEN_CONDITION()
 
 func void DIA_SLD_751_Soeldner_UMSEHEN_INFO()
 {
-	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01");	//Я просто хотел посмотреть, что здесь есть.
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_01_02");	//Только будь осторожен и постарайся ни с кем не ссориться.
+	AI_Output(other,self,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_15_01");	//РЇ РїСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РїРѕСЃРјРѕС‚СЂРµС‚СЊ, С‡С‚Рѕ Р·РґРµСЃСЊ РµСЃС‚СЊ.
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_UMSEHEN_INFO_01_02");	//РўРѕР»СЊРєРѕ Р±СѓРґСЊ РѕСЃС‚РѕСЂРѕР¶РµРЅ Рё РїРѕСЃС‚Р°СЂР°Р№СЃСЏ РЅРё СЃ РєРµРј РЅРµ СЃСЃРѕСЂРёС‚СЊСЃСЏ.
 };
 
 
@@ -106,7 +106,7 @@ instance DIA_SLD_751_Soeldner_INMINE(C_Info)
 	information = DIA_SLD_751_Soeldner_INMINE_INFO;
 	important = 0;
 	permanent = 0;
-	description = "Я хочу осмотреть шахту.";
+	description = "РЇ С…РѕС‡Сѓ РѕСЃРјРѕС‚СЂРµС‚СЊ С€Р°С…С‚Сѓ.";
 };
 
 
@@ -117,7 +117,7 @@ func int DIA_SLD_751_Soeldner_INMINE_CONDITION()
 
 func void DIA_SLD_751_Soeldner_INMINE_INFO()
 {
-	AI_Output(other,self,"DIA_SLD_751_Soeldner_INMINE_INFO_15_01");	//Я хочу осмотреть шахту.
-	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");	//Не думаю, что у тебя это получится. Но можешь поговорить об этом с Окилом.
+	AI_Output(other,self,"DIA_SLD_751_Soeldner_INMINE_INFO_15_01");	//РЇ С…РѕС‡Сѓ РѕСЃРјРѕС‚СЂРµС‚СЊ С€Р°С…С‚Сѓ.
+	AI_Output(self,other,"DIA_SLD_751_Soeldner_INMINE_INFO_01_02");	//РќРµ РґСѓРјР°СЋ, С‡С‚Рѕ Сѓ С‚РµР±СЏ СЌС‚Рѕ РїРѕР»СѓС‡РёС‚СЃСЏ. РќРѕ РјРѕР¶РµС€СЊ РїРѕРіРѕРІРѕСЂРёС‚СЊ РѕР± СЌС‚РѕРј СЃ РћРєРёР»РѕРј.
 };
 

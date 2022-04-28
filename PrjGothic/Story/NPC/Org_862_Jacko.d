@@ -1,7 +1,7 @@
 
 instance Org_862_Jacko(Npc_Default)
 {
-	name[0] = "Джеко";
+	name[0] = "Р”Р¶РµРєРѕ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

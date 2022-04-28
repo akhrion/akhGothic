@@ -1,7 +1,7 @@
 
 instance Org_844_Lefty(Npc_Default)
 {
-	name[0] = "Лефти";
+	name[0] = "Р›РµС„С‚Рё";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

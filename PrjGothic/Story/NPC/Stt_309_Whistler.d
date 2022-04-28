@@ -1,7 +1,7 @@
 
 instance Stt_309_Whistler(Npc_Default)
 {
-	name[0] = "Уистлер";
+	name[0] = "РЈРёСЃС‚Р»РµСЂ";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 5;

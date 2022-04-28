@@ -1,7 +1,7 @@
 
 instance GRD_224_Pacho(Npc_Default)
 {
-	name[0] = "œ‡ÍÓ";
+	name[0] = "–ü–∞–∫–æ";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 10;

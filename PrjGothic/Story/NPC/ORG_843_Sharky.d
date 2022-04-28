@@ -1,7 +1,7 @@
 
 instance ORG_843_Sharky(Npc_Default)
 {
-	name[0] = "Шарки";
+	name[0] = "РЁР°СЂРєРё";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

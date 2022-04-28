@@ -1,7 +1,7 @@
 
 instance ORG_819_Drax(Npc_Default)
 {
-	name[0] = "Дракс";
+	name[0] = "Р”СЂР°РєСЃ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 9;

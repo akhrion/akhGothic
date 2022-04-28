@@ -28,7 +28,7 @@ instance DIA_Sfb_1001_Hello(C_Info)
 	condition = DIA_Sfb_1001_Hello_Condition;
 	information = DIA_Sfb_1001_Hello_Info;
 	permanent = 1;
-	description = "Как дела в шахте?";
+	description = "РљР°Рє РґРµР»Р° РІ С€Р°С…С‚Рµ?";
 };
 
 
@@ -42,8 +42,8 @@ func int DIA_Sfb_1001_Hello_Condition()
 
 func void DIA_Sfb_1001_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Sfb_1001_Hello_15_00");	//Как дела в шахте?
-	AI_Output(self,other,"DIA_Sfb_1001_Hello_02_01");	//Самое сложное позади. Еще пара недель, и у нас будет достаточно руды.
+	AI_Output(other,self,"DIA_Sfb_1001_Hello_15_00");	//РљР°Рє РґРµР»Р° РІ С€Р°С…С‚Рµ?
+	AI_Output(self,other,"DIA_Sfb_1001_Hello_02_01");	//РЎР°РјРѕРµ СЃР»РѕР¶РЅРѕРµ РїРѕР·Р°РґРё. Р•С‰Рµ РїР°СЂР° РЅРµРґРµР»СЊ, Рё Сѓ РЅР°СЃ Р±СѓРґРµС‚ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЂСѓРґС‹.
 	AI_StopProcessInfos(self);
 };
 

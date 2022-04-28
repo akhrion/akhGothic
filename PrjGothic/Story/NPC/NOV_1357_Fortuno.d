@@ -1,7 +1,7 @@
 
 instance NOV_1357_Fortuno(Npc_Default)
 {
-	name[0] = "Фортуно";
+	name[0] = "Р¤РѕСЂС‚СѓРЅРѕ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

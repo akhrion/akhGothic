@@ -47,7 +47,7 @@ instance INFO_RAEUBER1_EXIT(C_Info)
 	condition = info_raeuber1_exit_condition;
 	information = info_raeuber1_exit_info;
 	permanent = 0;
-	description = "Лучше я пойду отсюда...";
+	description = "Р›СѓС‡С€Рµ СЏ РїРѕР№РґСѓ РѕС‚СЃСЋРґР°...";
 };
 
 
@@ -61,8 +61,8 @@ func int info_raeuber1_exit_condition()
 
 func void info_raeuber1_exit_info()
 {
-	AI_Output(hero,self,"DIA_SLD_761_Soeldner_EXIT_2_INFO_15_01");	//Лучше я пойду отсюда...
-	AI_Output(self,hero,"SVM_12_GetOutOfHere");	//Сгинь! Здесь тебе не место!
+	AI_Output(hero,self,"DIA_SLD_761_Soeldner_EXIT_2_INFO_15_01");	//Р›СѓС‡С€Рµ СЏ РїРѕР№РґСѓ РѕС‚СЃСЋРґР°...
+	AI_Output(self,hero,"SVM_12_GetOutOfHere");	//РЎРіРёРЅСЊ! Р—РґРµСЃСЊ С‚РµР±Рµ РЅРµ РјРµСЃС‚Рѕ!
 	AI_StopProcessInfos(self);
 };
 
@@ -115,7 +115,7 @@ func int org_867_raeuber_goaway_condition()
 
 func void org_867_raeuber_goaway_info()
 {
-	AI_Output(self,hero,"SVM_12_WhatsThisSupposedToBe");	//Эй, ты! Ты что здесь забыл?
+	AI_Output(self,hero,"SVM_12_WhatsThisSupposedToBe");	//Р­Р№, С‚С‹! РўС‹ С‡С‚Рѕ Р·РґРµСЃСЊ Р·Р°Р±С‹Р»?
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,ORG_867_RAEUBER_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 };
@@ -142,7 +142,7 @@ func int org_867_raeuber_goaway2_condition()
 
 func void org_867_raeuber_goaway2_info()
 {
-	AI_Output(self,hero,"SVM_12_IWillTeachYouRespectForForeignProperty");	//Сейчас я тебе голову оторву!
+	AI_Output(self,hero,"SVM_12_IWillTeachYouRespectForForeignProperty");	//РЎРµР№С‡Р°СЃ СЏ С‚РµР±Рµ РіРѕР»РѕРІСѓ РѕС‚РѕСЂРІСѓ!
 	AI_StopProcessInfos(self);
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,ORG_867_RAEUBER_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
@@ -170,7 +170,7 @@ func int org_867_raeuber_attack_condition()
 
 func void org_867_raeuber_attack_info()
 {
-	AI_Output(self,hero,"SVM_12_IntruderAlert");	//Тревога!
+	AI_Output(self,hero,"SVM_12_IntruderAlert");	//РўСЂРµРІРѕРіР°!
 	hero.aivar[AIV_LASTDISTTOWP] = 0;
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_PUNISH;
 	b_setorg2hostile();
@@ -185,7 +185,7 @@ instance INFO_ORG2_JOIN(C_Info)
 	information = info_org2_join_info;
 	important = 0;
 	permanent = 0;
-	description = "Я хочу присоединиться к вам.";
+	description = "РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.";
 };
 
 
@@ -199,12 +199,12 @@ func int info_org2_join_condition()
 
 func void info_org2_join_info()
 {
-	AI_Output(hero,self,"DIA_Roscoe_WannaJoin_15_00");	//Я хочу присоединиться к вам.
-	AI_Output(self,hero,"DIA_Cipher_Fisk_12_01");	//А мне это неинтересно.
-	AI_Output(hero,self,"DIA_Roscoe_BringList_15_06");	//Так я могу пройти?
-	AI_Output(self,hero,"SVM_12_CheerFight");	//Хорошо!
-	AI_Output(self,hero,"SVM_12_YouDefeatedVLK_Guard");	//Если ты будешь лезть к моим подопечным, я лично с тобой разберусь!
-	B_LogEntry(QUENTIN_GANG,"Я нашел лагерь грабителей и решил присоединиться к ним. Теперь мне нужно поговорить с их главарем, Квентином.");
+	AI_Output(hero,self,"DIA_Roscoe_WannaJoin_15_00");	//РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.
+	AI_Output(self,hero,"DIA_Cipher_Fisk_12_01");	//Рђ РјРЅРµ СЌС‚Рѕ РЅРµРёРЅС‚РµСЂРµСЃРЅРѕ.
+	AI_Output(hero,self,"DIA_Roscoe_BringList_15_06");	//РўР°Рє СЏ РјРѕРіСѓ РїСЂРѕР№С‚Рё?
+	AI_Output(self,hero,"SVM_12_CheerFight");	//РҐРѕСЂРѕС€Рѕ!
+	AI_Output(self,hero,"SVM_12_YouDefeatedVLK_Guard");	//Р•СЃР»Рё С‚С‹ Р±СѓРґРµС€СЊ Р»РµР·С‚СЊ Рє РјРѕРёРј РїРѕРґРѕРїРµС‡РЅС‹Рј, СЏ Р»РёС‡РЅРѕ СЃ С‚РѕР±РѕР№ СЂР°Р·Р±РµСЂСѓСЃСЊ!
+	B_LogEntry(QUENTIN_GANG,"РЇ РЅР°С€РµР» Р»Р°РіРµСЂСЊ РіСЂР°Р±РёС‚РµР»РµР№ Рё СЂРµС€РёР» РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РЅРёРј. РўРµРїРµСЂСЊ РјРЅРµ РЅСѓР¶РЅРѕ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РёС… РіР»Р°РІР°СЂРµРј, РљРІРµРЅС‚РёРЅРѕРј.");
 	self.aivar[AIV_PASSGATE] = TRUE;
 	AI_StopProcessInfos(self);
 };
@@ -217,7 +217,7 @@ instance INFO_ORG2_KILL(C_Info)
 	information = info_org2_kill_info;
 	important = 0;
 	permanent = 0;
-	description = "А ты хочешь меня остановить?";
+	description = "Рђ С‚С‹ С…РѕС‡РµС€СЊ РјРµРЅСЏ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ?";
 };
 
 
@@ -231,16 +231,16 @@ func int info_org2_kill_condition()
 
 func void info_org2_kill_info()
 {
-	AI_Output(hero,self,"Info_TPL_1455_GorBoba1_15_01");	//А ты хочешь меня остановить?
-	AI_Output(self,hero,"SVM_12_IWillTeachYouRespectForForeignProperty");	//Сейчас я тебе голову оторву!
-	AI_Output(self,hero,"SVM_12_IntruderAlert");	//Тревога!
+	AI_Output(hero,self,"Info_TPL_1455_GorBoba1_15_01");	//Рђ С‚С‹ С…РѕС‡РµС€СЊ РјРµРЅСЏ РѕСЃС‚Р°РЅРѕРІРёС‚СЊ?
+	AI_Output(self,hero,"SVM_12_IWillTeachYouRespectForForeignProperty");	//РЎРµР№С‡Р°СЃ СЏ С‚РµР±Рµ РіРѕР»РѕРІСѓ РѕС‚РѕСЂРІСѓ!
+	AI_Output(self,hero,"SVM_12_IntruderAlert");	//РўСЂРµРІРѕРіР°!
 	b_setorg2hostile();
 	AI_StopProcessInfos(self);
 	if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 	{
 		QUENTIN_GANG_QUEST_STARTED = LOG_FAILED;
 		Log_SetTopicStatus(QUENTIN_GANG,LOG_FAILED);
-		B_LogEntry(QUENTIN_GANG,"Я нашел лагерь грабителей Квентина, которые скрывались в горах. Все пошло не совсем так, как я планировал: они сразу набросились на меня.");
+		B_LogEntry(QUENTIN_GANG,"РЇ РЅР°С€РµР» Р»Р°РіРµСЂСЊ РіСЂР°Р±РёС‚РµР»РµР№ РљРІРµРЅС‚РёРЅР°, РєРѕС‚РѕСЂС‹Рµ СЃРєСЂС‹РІР°Р»РёСЃСЊ РІ РіРѕСЂР°С…. Р’СЃРµ РїРѕС€Р»Рѕ РЅРµ СЃРѕРІСЃРµРј С‚Р°Рє, РєР°Рє СЏ РїР»Р°РЅРёСЂРѕРІР°Р»: РѕРЅРё СЃСЂР°Р·Сѓ РЅР°Р±СЂРѕСЃРёР»РёСЃСЊ РЅР° РјРµРЅСЏ.");
 	};
 };
 

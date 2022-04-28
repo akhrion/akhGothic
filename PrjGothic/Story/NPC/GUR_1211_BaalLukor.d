@@ -1,7 +1,7 @@
 
 instance GUR_1211_BaalLukor(Npc_Default)
 {
-	name[0] = "Идол Люкор";
+	name[0] = "РРґРѕР» Р›СЋРєРѕСЂ";
 	npcType = npctype_friend;
 	flags = NPC_FLAG_IMMORTAL;
 	guild = GIL_GUR;
@@ -71,7 +71,7 @@ func void Rtn_Meditate_1211()
 
 instance GUR_999_BAALLUKOR(Npc_Default)
 {
-	name[0] = "Идол Люкор";
+	name[0] = "РРґРѕР» Р›СЋРєРѕСЂ";
 	npcType = npctype_main;
 	flags = NPC_FLAG_IMMORTAL;
 	guild = GIL_GUR;
@@ -126,7 +126,7 @@ instance INFO_LUKOR_PSI_HI(C_Info)
 	information = info_lukor_psi_hi_info;
 	important = 0;
 	permanent = 0;
-	description = "Пробудись!";
+	description = "РџСЂРѕР±СѓРґРёСЃСЊ!";
 };
 
 
@@ -137,15 +137,15 @@ func int info_lukor_psi_hi_condition()
 
 func void info_lukor_psi_hi_info()
 {
-	AI_Output(hero,self,"SVM_15_SectGreetings");	//Пробудись!
+	AI_Output(hero,self,"SVM_15_SectGreetings");	//РџСЂРѕР±СѓРґРёСЃСЊ!
 	if((Npc_GetTrueGuild(hero) != GIL_NOV) && (Npc_GetTrueGuild(hero) != GIL_TPL))
 	{
-		AI_Output(self,hero,"SVM_13_WhatDoYouWant");	//Что тебе от меня нужно?
+		AI_Output(self,hero,"SVM_13_WhatDoYouWant");	//Р§С‚Рѕ С‚РµР±Рµ РѕС‚ РјРµРЅСЏ РЅСѓР¶РЅРѕ?
 		AI_StopProcessInfos(self);
 	}
 	else
 	{
-		AI_Output(self,hero,"SVM_13_FriendlyGreetings");	//У тебя все в порядке?
+		AI_Output(self,hero,"SVM_13_FriendlyGreetings");	//РЈ С‚РµР±СЏ РІСЃРµ РІ РїРѕСЂСЏРґРєРµ?
 	};
 };
 

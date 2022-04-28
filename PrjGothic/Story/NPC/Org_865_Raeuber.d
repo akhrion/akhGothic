@@ -74,15 +74,15 @@ func int org_865_raeuber_alert_condition()
 
 func void org_865_raeuber_alert_info()
 {
-	AI_Output(self,hero,"SVM_10_YouViolatedForbiddenTerritory");	//Эй! А ты откуда здесь взялся?
-	AI_Output(self,hero,"SVM_10_IntruderAlert");	//Тревога! Чужой!
+	AI_Output(self,hero,"SVM_10_YouViolatedForbiddenTerritory");	//Р­Р№! Рђ С‚С‹ РѕС‚РєСѓРґР° Р·РґРµСЃСЊ РІР·СЏР»СЃСЏ?
+	AI_Output(self,hero,"SVM_10_IntruderAlert");	//РўСЂРµРІРѕРіР°! Р§СѓР¶РѕР№!
 	b_setorg2hostile();
 	AI_StopProcessInfos(self);
 	if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 	{
 		QUENTIN_GANG_QUEST_STARTED = LOG_FAILED;
 		Log_SetTopicStatus(QUENTIN_GANG,LOG_FAILED);
-		B_LogEntry(QUENTIN_GANG,"Я нашел лагерь грабителей Квентина, которые скрывались в горах. Все пошло не совсем так, как я планировал: они сразу набросились на меня.");
+		B_LogEntry(QUENTIN_GANG,"РЇ РЅР°С€РµР» Р»Р°РіРµСЂСЊ РіСЂР°Р±РёС‚РµР»РµР№ РљРІРµРЅС‚РёРЅР°, РєРѕС‚РѕСЂС‹Рµ СЃРєСЂС‹РІР°Р»РёСЃСЊ РІ РіРѕСЂР°С…. Р’СЃРµ РїРѕС€Р»Рѕ РЅРµ СЃРѕРІСЃРµРј С‚Р°Рє, РєР°Рє СЏ РїР»Р°РЅРёСЂРѕРІР°Р»: РѕРЅРё СЃСЂР°Р·Сѓ РЅР°Р±СЂРѕСЃРёР»РёСЃСЊ РЅР° РјРµРЅСЏ.");
 	};
 };
 
@@ -108,10 +108,10 @@ func int org2_amulet_cheer_condition()
 
 func void org2_amulet_cheer_info()
 {
-	AI_Output(self,hero,"SVM_10_StoleFromMage");	//Так ты украл у магов что-то ценное, да?
-	AI_Output(self,hero,"DIA_Roscoe_BringList_10_01");	//Неплохо. Как ты его достал?
-	AI_Output(hero,self,"Info_Milten_SHWAIT_15_03");	//Так, стараюсь...
-	AI_Output(self,hero,"GUR_1201_CorKalom_JoinPSI_10_11");	//Добро пожаловать!
+	AI_Output(self,hero,"SVM_10_StoleFromMage");	//РўР°Рє С‚С‹ СѓРєСЂР°Р» Сѓ РјР°РіРѕРІ С‡С‚Рѕ-С‚Рѕ С†РµРЅРЅРѕРµ, РґР°?
+	AI_Output(self,hero,"DIA_Roscoe_BringList_10_01");	//РќРµРїР»РѕС…Рѕ. РљР°Рє С‚С‹ РµРіРѕ РґРѕСЃС‚Р°Р»?
+	AI_Output(hero,self,"Info_Milten_SHWAIT_15_03");	//РўР°Рє, СЃС‚Р°СЂР°СЋСЃСЊ...
+	AI_Output(self,hero,"GUR_1201_CorKalom_JoinPSI_10_11");	//Р”РѕР±СЂРѕ РїРѕР¶Р°Р»РѕРІР°С‚СЊ!
 	AI_StopProcessInfos(self);
 };
 

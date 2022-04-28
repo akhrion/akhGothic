@@ -39,8 +39,8 @@ func int DIA_Gilbert_First_Condition()
 
 func void DIA_Gilbert_First_Info()
 {
-	AI_Output(self,other,"DIA_Gilbert_First_04_00");	//Что ты здесь делаешь? Редко кто заходит ко мне сюда, хе-хе!
-	AI_Output(self,other,"DIA_Gilbert_First_04_01");	//Тебе удалось найти мое убежище, что не многим под силу.
+	AI_Output(self,other,"DIA_Gilbert_First_04_00");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ? Р РµРґРєРѕ РєС‚Рѕ Р·Р°С…РѕРґРёС‚ РєРѕ РјРЅРµ СЃСЋРґР°, С…Рµ-С…Рµ!
+	AI_Output(self,other,"DIA_Gilbert_First_04_01");	//РўРµР±Рµ СѓРґР°Р»РѕСЃСЊ РЅР°Р№С‚Рё РјРѕРµ СѓР±РµР¶РёС‰Рµ, С‡С‚Рѕ РЅРµ РјРЅРѕРіРёРј РїРѕРґ СЃРёР»Сѓ.
 	Npc_ExchangeRoutine(self,"start2");
 	B_GiveXP(XP_GilbertFound);
 };
@@ -53,7 +53,7 @@ instance DIA_Gilbert_Hallo(C_Info)
 	condition = DIA_Gilbert_Hallo_Condition;
 	information = DIA_Gilbert_Hallo_Info;
 	permanent = 0;
-	description = "Что ты здесь делаешь?";
+	description = "Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?";
 };
 
 
@@ -64,9 +64,9 @@ func int DIA_Gilbert_Hallo_Condition()
 
 func void DIA_Gilbert_Hallo_Info()
 {
-	AI_Output(other,self,"DIA_Gilbert_Hallo_15_00");	//Что ты здесь делаешь?
-	AI_Output(self,other,"DIA_Gilbert_Hallo_04_01");	//Старый лагерь мне давно надоел. У нас давние разногласия с людьми Гомеза. Как давно это все началось...
-	AI_Output(self,other,"DIA_Gilbert_Hallo_04_02");	//Теперь обо мне, наверное, никто и не помнит. Но я все равно останусь здесь. В Старом лагере стало слишком много солдатни.
+	AI_Output(other,self,"DIA_Gilbert_Hallo_15_00");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?
+	AI_Output(self,other,"DIA_Gilbert_Hallo_04_01");	//РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ РјРЅРµ РґР°РІРЅРѕ РЅР°РґРѕРµР». РЈ РЅР°СЃ РґР°РІРЅРёРµ СЂР°Р·РЅРѕРіР»Р°СЃРёСЏ СЃ Р»СЋРґСЊРјРё Р“РѕРјРµР·Р°. РљР°Рє РґР°РІРЅРѕ СЌС‚Рѕ РІСЃРµ РЅР°С‡Р°Р»РѕСЃСЊ...
+	AI_Output(self,other,"DIA_Gilbert_Hallo_04_02");	//РўРµРїРµСЂСЊ РѕР±Рѕ РјРЅРµ, РЅР°РІРµСЂРЅРѕРµ, РЅРёРєС‚Рѕ Рё РЅРµ РїРѕРјРЅРёС‚. РќРѕ СЏ РІСЃРµ СЂР°РІРЅРѕ РѕСЃС‚Р°РЅСѓСЃСЊ Р·РґРµСЃСЊ. Р’ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ СЃС‚Р°Р»Рѕ СЃР»РёС€РєРѕРј РјРЅРѕРіРѕ СЃРѕР»РґР°С‚РЅРё.
 };
 
 
@@ -77,7 +77,7 @@ instance DIA_GILBERT_HALLO2(C_Info)
 	condition = dia_gilbert_hallo2_condition;
 	information = dia_gilbert_hallo2_info;
 	permanent = 0;
-	description = "(потребовать дубликат ключа)";
+	description = "(РїРѕС‚СЂРµР±РѕРІР°С‚СЊ РґСѓР±Р»РёРєР°С‚ РєР»СЋС‡Р°)";
 };
 
 
@@ -93,22 +93,22 @@ func void dia_gilbert_hallo2_info()
 {
 	if(hero.level < 6)
 	{
-		AI_Output(self,other,"SVM_4_GetOutOfHere");	//Убирайся отсюда!
+		AI_Output(self,other,"SVM_4_GetOutOfHere");	//РЈР±РёСЂР°Р№СЃСЏ РѕС‚СЃСЋРґР°!
 		AI_StopProcessInfos(self);
 		B_SetAttackReason(self,AIV_AR_INTRUDER);
 		Npc_SetTarget(self,hero);
 		AI_StartState(self,ZS_Attack,1,"");
-		B_LogEntry(QUENTIN_GANG,"Гилберт яростно набросился на меня. Интересно, зачем этот дубликат так нужен Квентину?");
+		B_LogEntry(QUENTIN_GANG,"Р“РёР»Р±РµСЂС‚ СЏСЂРѕСЃС‚РЅРѕ РЅР°Р±СЂРѕСЃРёР»СЃСЏ РЅР° РјРµРЅСЏ. РРЅС‚РµСЂРµСЃРЅРѕ, Р·Р°С‡РµРј СЌС‚РѕС‚ РґСѓР±Р»РёРєР°С‚ С‚Р°Рє РЅСѓР¶РµРЅ РљРІРµРЅС‚РёРЅСѓ?");
 	}
 	else
 	{
-		AI_Output(self,other,"SVM_4_LookAway");	//Не вижу, не слышу и никому ничего не скажу...
-		b_printtrademsg1("Получен дубликат ключа.");
+		AI_Output(self,other,"SVM_4_LookAway");	//РќРµ РІРёР¶Сѓ, РЅРµ СЃР»С‹С€Сѓ Рё РЅРёРєРѕРјСѓ РЅРёС‡РµРіРѕ РЅРµ СЃРєР°Р¶Сѓ...
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅ РґСѓР±Р»РёРєР°С‚ РєР»СЋС‡Р°.");
 		B_GiveXP(100);
 		B_GiveInvItems(self,hero,itke_gilbert,1);
 		AI_StopProcessInfos(self);
 		AI_StartState(self,ZS_Flee,1,"");
-		B_LogEntry(QUENTIN_GANG,"Гилберт вернул мне копию ключа и бросился бежать. Интересно, зачем она так нужна Квентину?");
+		B_LogEntry(QUENTIN_GANG,"Р“РёР»Р±РµСЂС‚ РІРµСЂРЅСѓР» РјРЅРµ РєРѕРїРёСЋ РєР»СЋС‡Р° Рё Р±СЂРѕСЃРёР»СЃСЏ Р±РµР¶Р°С‚СЊ. РРЅС‚РµСЂРµСЃРЅРѕ, Р·Р°С‡РµРј РѕРЅР° С‚Р°Рє РЅСѓР¶РЅР° РљРІРµРЅС‚РёРЅСѓ?");
 	};
 	Npc_ExchangeRoutine(self,"hide");
 };

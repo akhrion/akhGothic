@@ -1,7 +1,7 @@
 
 instance EBR_108_Velaya(Npc_Default)
 {
-	name[0] = "Велайя";
+	name[0] = "Р’РµР»Р°Р№СЏ";
 	npcType = npctype_main;
 	guild = GIL_BAB;
 	level = 1;

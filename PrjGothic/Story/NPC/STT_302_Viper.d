@@ -1,7 +1,7 @@
 
 instance STT_302_Viper(Npc_Default)
 {
-	name[0] = "Βΰιοεπ";
+	name[0] = "Π’Π°ΠΉΠΏΠµΡ€";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 7;

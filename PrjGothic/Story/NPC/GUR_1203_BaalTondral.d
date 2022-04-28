@@ -1,7 +1,7 @@
 
 instance GUR_1203_BaalTondral(Npc_Default)
 {
-	name[0] = "Идол Тондрал";
+	name[0] = "РРґРѕР» РўРѕРЅРґСЂР°Р»";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 28;

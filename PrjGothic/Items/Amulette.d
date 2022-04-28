@@ -8,9 +8,9 @@ instance ItMi_Amulet_Psi_01(C_Item)
 	visual = "ItMi_Amulet_Psi_01.3ds";
 	visual_skin = 0;
 	material = MAT_METAL;
-	description = "Амулет Братства";
-	text[1] = "Знак отличия последователей";
-	text[2] = "Спящего.";
+	description = "РђРјСѓР»РµС‚ Р‘СЂР°С‚СЃС‚РІР°";
+	text[1] = "Р—РЅР°Рє РѕС‚Р»РёС‡РёСЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»РµР№";
+	text[2] = "РЎРїСЏС‰РµРіРѕ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -26,7 +26,7 @@ instance Schutzamulett_Feuer(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Feuer;
 	on_unequip = UnEquip_Schutzamulett_Feuer;
-	description = "Амулет пламени";
+	description = "РђРјСѓР»РµС‚ РїР»Р°РјРµРЅРё";
 	text[2] = NAME_Prot_Fire;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -56,7 +56,7 @@ instance Schutzamulett_Waffen(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Waffen;
 	on_unequip = UnEquip_Schutzamulett_Waffen;
-	description = "Амулет защиты";
+	description = "РђРјСѓР»РµС‚ Р·Р°С‰РёС‚С‹";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 15;
 	text[5] = NAME_Value;
@@ -88,7 +88,7 @@ instance Schutzamulett_Geschosse(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Geschosse;
 	on_unequip = UnEquip_Schutzamulett_Geschosse;
-	description = "Амулет дубовой кожи";
+	description = "РђРјСѓР»РµС‚ РґСѓР±РѕРІРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Point;
 	count[2] = 15;
 	text[5] = NAME_Value;
@@ -118,7 +118,7 @@ instance Schutzamulett_Magie(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Magie;
 	on_unequip = UnEquip_Schutzamulett_Magie;
-	description = "Амулет силы духа";
+	description = "РђРјСѓР»РµС‚ СЃРёР»С‹ РґСѓС…Р°";
 	text[2] = NAME_Prot_Magic;
 	count[2] = 8;
 	text[5] = NAME_Value;
@@ -148,7 +148,7 @@ instance Schutzamulett_Magie_Feuer(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Magie_Feuer;
 	on_unequip = UnEquip_Schutzamulett_Magie_Feuer;
-	description = "Амулет очищения";
+	description = "РђРјСѓР»РµС‚ РѕС‡РёС‰РµРЅРёСЏ";
 	text[2] = NAME_Prot_Fire;
 	count[2] = 10;
 	text[3] = NAME_Prot_Magic;
@@ -182,7 +182,7 @@ instance Schutzamulett_Waffen_Geschosse(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Waffen_Geschosse;
 	on_unequip = UnEquip_Schutzamulett_Waffen_Geschosse;
-	description = "Амулет каменной кожи";
+	description = "РђРјСѓР»РµС‚ РєР°РјРµРЅРЅРѕР№ РєРѕР¶Рё";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 15;
 	text[3] = NAME_Prot_Point;
@@ -218,7 +218,7 @@ instance Schutzamulett_Total(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Total;
 	on_unequip = UnEquip_Schutzamulett_Total;
-	description = "Амулет железной кожи";
+	description = "РђРјСѓР»РµС‚ Р¶РµР»РµР·РЅРѕР№ РєРѕР¶Рё";
 	text[1] = NAME_Prot_Fire;
 	count[1] = 10;
 	text[2] = NAME_Prot_Magic;
@@ -262,7 +262,7 @@ instance Gewandtheitsamulett(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Gewandtheitsamulett;
 	on_unequip = UnEquip_Gewandtheitsamulett;
-	description = "Амулет подвижности";
+	description = "РђРјСѓР»РµС‚ РїРѕРґРІРёР¶РЅРѕСЃС‚Рё";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -292,7 +292,7 @@ instance Gewandtheitsamulett2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Gewandtheitsamulett2;
 	on_unequip = UnEquip_Gewandtheitsamulett2;
-	description = "Амулет ловкости";
+	description = "РђРјСѓР»РµС‚ Р»РѕРІРєРѕСЃС‚Рё";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 20;
 	text[5] = NAME_Value;
@@ -322,7 +322,7 @@ instance Staerkeamulett(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Staerkeamulett;
 	on_unequip = UnEquip_Staerkeamulett;
-	description = "Амулет мощи";
+	description = "РђРјСѓР»РµС‚ РјРѕС‰Рё";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -352,7 +352,7 @@ instance Staerkeamulett2(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Staerkeamulett2;
 	on_unequip = UnEquip_Staerkeamulett2;
-	description = "Амулет силы";
+	description = "РђРјСѓР»РµС‚ СЃРёР»С‹";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 20;
 	text[5] = NAME_Value;
@@ -382,7 +382,7 @@ instance Lebensamulett(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Lebensamulett;
 	on_unequip = UnEquip_Lebensamulett;
-	description = "Амулет жизненной силы";
+	description = "РђРјСѓР»РµС‚ Р¶РёР·РЅРµРЅРЅРѕР№ СЃРёР»С‹";
 	text[2] = NAME_Bonus_HpMax;
 	count[2] = 30;
 	text[5] = NAME_Value;
@@ -421,7 +421,7 @@ instance Amulett_der_Magie(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Amulett_der_Magie;
 	on_unequip = UnEquip_Amulett_der_Magie;
-	description = "Амулет магии";
+	description = "РђРјСѓР»РµС‚ РјР°РіРёРё";
 	text[2] = NAME_Bonus_ManaMax;
 	count[2] = 10;
 	text[5] = NAME_Value;
@@ -451,7 +451,7 @@ func void UnEquip_Amulett_der_Magie()
 
 instance Amulett_der_Macht(C_Item)
 {
-	name = "Амулет силы";
+	name = "РђРјСѓР»РµС‚ СЃРёР»С‹";
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET;
 	value = 600;
@@ -460,7 +460,7 @@ instance Amulett_der_Macht(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Amulett_der_Macht;
 	on_unequip = UnEquip_Amulett_der_Macht;
-	description = "Амулет силы";
+	description = "РђРјСѓР»РµС‚ СЃРёР»С‹";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 7;
 	text[3] = NAME_Bonus_Str;
@@ -485,7 +485,7 @@ func void UnEquip_Amulett_der_Macht()
 
 instance Amulett_der_Erleuchtung(C_Item)
 {
-	name = "Амулет освещения";
+	name = "РђРјСѓР»РµС‚ РѕСЃРІРµС‰РµРЅРёСЏ";
 	mainflag = ITEM_KAT_MAGIC;
 	flags = ITEM_AMULET;
 	value = 1000;
@@ -494,7 +494,7 @@ instance Amulett_der_Erleuchtung(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Amulett_der_Erleuchtung;
 	on_unequip = UnEquip_Amulett_der_Erleuchtung;
-	description = "Амулет освещения";
+	description = "РђРјСѓР»РµС‚ РѕСЃРІРµС‰РµРЅРёСЏ";
 	text[2] = NAME_Bonus_HpMax;
 	count[2] = 25;
 	text[3] = NAME_Bonus_ManaMax;

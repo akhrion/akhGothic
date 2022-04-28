@@ -1,7 +1,7 @@
 
 instance ORG_873_Cipher(Npc_Default)
 {
-	name[0] = "Ρΰιτεπ";
+	name[0] = "Π΅Π°ΠΉΡ„ΠµΡ€";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

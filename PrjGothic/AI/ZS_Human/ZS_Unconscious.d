@@ -102,7 +102,7 @@ func void ZS_Unconscious()
 		};
 		if(Npc_CanSeeNpc(self,other) && (self.guild < GIL_SEPERATOR_ORC))
 		{
-			PrintDebugNpc(PD_ZS_Check,"...NSC kann Täter sehen!");
+			PrintDebugNpc(PD_ZS_Check,"...NSC kann TÐ´ter sehen!");
 			if(!Npc_IsPlayer(self))
 			{
 				B_AssessAndMemorize(NEWS_DEFEAT,NEWS_SOURCE_WITNESS,self,other,self);
@@ -214,7 +214,7 @@ func void ZS_Unconscious_End()
 	B_RegainDroppedWeapon(self);
 	if(Npc_HasNews(self,NEWS_DEFEAT,other,self) && !Npc_IsInState(other,ZS_Unconscious) && !Npc_IsDead(other))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC kann den Attackierer noch sehen und der ist bei Bewußtsein!");
+		PrintDebugNpc(PD_ZS_Check,"...NSC kann den Attackierer noch sehen und der ist bei BewuÐ¯tsein!");
 		AI_QuickLook(self,other);
 		if(self.id == 251)
 		{

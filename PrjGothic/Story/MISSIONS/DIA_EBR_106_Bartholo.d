@@ -35,7 +35,7 @@ instance Info_Bartholo_HAllo(C_Info)
 	condition = Info_Bartholo_HAllo_Condition;
 	information = Info_Bartholo_HAllo_Info;
 	permanent = 0;
-	description = "Кто ты?";
+	description = "РљС‚Рѕ С‚С‹?";
 };
 
 
@@ -46,13 +46,13 @@ func int Info_Bartholo_HAllo_Condition()
 
 func void Info_Bartholo_HAllo_Info()
 {
-	AI_Output(other,self,"Info_Bartholo_HAllo_15_00");	//Кто ты?
-	AI_Output(self,other,"Info_Bartholo_HAllo_12_01");	//Я Бартоло. Слежу, чтобы Бароны получали припасы вовремя.
-	AI_Output(self,other,"Info_Bartholo_HAllo_12_02");	//Еда, болотник, продовольствие для женщин...
-	AI_Output(self,other,"Info_Bartholo_HAllo_12_03");	//Также приходится следить за этими идиотами поварами.
-	AI_Output(self,other,"Info_Bartholo_HAllo_12_04");	//Гомез не любит оплошностей. Последних двух поваров он скормил речным шныгам.
+	AI_Output(other,self,"Info_Bartholo_HAllo_15_00");	//РљС‚Рѕ С‚С‹?
+	AI_Output(self,other,"Info_Bartholo_HAllo_12_01");	//РЇ Р‘Р°СЂС‚РѕР»Рѕ. РЎР»РµР¶Сѓ, С‡С‚РѕР±С‹ Р‘Р°СЂРѕРЅС‹ РїРѕР»СѓС‡Р°Р»Рё РїСЂРёРїР°СЃС‹ РІРѕРІСЂРµРјСЏ.
+	AI_Output(self,other,"Info_Bartholo_HAllo_12_02");	//Р•РґР°, Р±РѕР»РѕС‚РЅРёРє, РїСЂРѕРґРѕРІРѕР»СЊСЃС‚РІРёРµ РґР»СЏ Р¶РµРЅС‰РёРЅ...
+	AI_Output(self,other,"Info_Bartholo_HAllo_12_03");	//РўР°РєР¶Рµ РїСЂРёС…РѕРґРёС‚СЃСЏ СЃР»РµРґРёС‚СЊ Р·Р° СЌС‚РёРјРё РёРґРёРѕС‚Р°РјРё РїРѕРІР°СЂР°РјРё.
+	AI_Output(self,other,"Info_Bartholo_HAllo_12_04");	//Р“РѕРјРµР· РЅРµ Р»СЋР±РёС‚ РѕРїР»РѕС€РЅРѕСЃС‚РµР№. РџРѕСЃР»РµРґРЅРёС… РґРІСѓС… РїРѕРІР°СЂРѕРІ РѕРЅ СЃРєРѕСЂРјРёР» СЂРµС‡РЅС‹Рј С€РЅС‹РіР°Рј.
 	Log_CreateTopic(GE_TraderOC,LOG_NOTE);
-	B_LogEntry(GE_TraderOC,"У Бартоло можно купить еду, болотник и прочие припасы. Я могу найти его в замке Баронов.");
+	B_LogEntry(GE_TraderOC,"РЈ Р‘Р°СЂС‚РѕР»Рѕ РјРѕР¶РЅРѕ РєСѓРїРёС‚СЊ РµРґСѓ, Р±РѕР»РѕС‚РЅРёРє Рё РїСЂРѕС‡РёРµ РїСЂРёРїР°СЃС‹. РЇ РјРѕРіСѓ РЅР°Р№С‚Рё РµРіРѕ РІ Р·Р°РјРєРµ Р‘Р°СЂРѕРЅРѕРІ.");
 };
 
 
@@ -63,7 +63,7 @@ instance Info_Bartholo_PERM(C_Info)
 	condition = Info_Bartholo_PERM_Condition;
 	information = Info_Bartholo_PERM_Info;
 	permanent = 1;
-	description = "Я хочу поторговать с тобой.";
+	description = "РЇ С…РѕС‡Сѓ РїРѕС‚РѕСЂРіРѕРІР°С‚СЊ СЃ С‚РѕР±РѕР№.";
 	trade = 1;
 };
 
@@ -78,8 +78,8 @@ func int Info_Bartholo_PERM_Condition()
 
 func void Info_Bartholo_PERM_Info()
 {
-	AI_Output(other,self,"Info_Bartholo_PERM_15_00");	//Я хочу поторговать с тобой.
-	AI_Output(self,other,"Info_Bartholo_PERM_12_01");	//У меня много чего есть для тех, у кого есть руда, конечно.
+	AI_Output(other,self,"Info_Bartholo_PERM_15_00");	//РЇ С…РѕС‡Сѓ РїРѕС‚РѕСЂРіРѕРІР°С‚СЊ СЃ С‚РѕР±РѕР№.
+	AI_Output(self,other,"Info_Bartholo_PERM_12_01");	//РЈ РјРµРЅСЏ РјРЅРѕРіРѕ С‡РµРіРѕ РµСЃС‚СЊ РґР»СЏ С‚РµС…, Сѓ РєРѕРіРѕ РµСЃС‚СЊ СЂСѓРґР°, РєРѕРЅРµС‡РЅРѕ.
 	if(Npc_HasItems(self,ItKe_Storage_01))
 	{
 		Npc_RemoveInvItems(self,ItKe_Storage_01,1);
@@ -99,7 +99,7 @@ instance Info_Bartholo_Krautbote(C_Info)
 	condition = Info_Bartholo_Krautbote_Condition;
 	information = Info_Bartholo_Krautbote_Info;
 	permanent = 1;
-	description = "У меня болотник для Гомеза. Его послал Кор Галом.";
+	description = "РЈ РјРµРЅСЏ Р±РѕР»РѕС‚РЅРёРє РґР»СЏ Р“РѕРјРµР·Р°. Р•РіРѕ РїРѕСЃР»Р°Р» РљРѕСЂ Р“Р°Р»РѕРј.";
 };
 
 
@@ -113,27 +113,27 @@ func int Info_Bartholo_Krautbote_Condition()
 
 func void Info_Bartholo_Krautbote_Info()
 {
-	AI_Output(other,self,"Info_Bartholo_Krautbote_15_00");	//У меня болотник для Гомеза. Его послал Кор Галом.
-	AI_Output(self,other,"Info_Bartholo_Krautbote_12_01");	//Покажи!
+	AI_Output(other,self,"Info_Bartholo_Krautbote_15_00");	//РЈ РјРµРЅСЏ Р±РѕР»РѕС‚РЅРёРє РґР»СЏ Р“РѕРјРµР·Р°. Р•РіРѕ РїРѕСЃР»Р°Р» РљРѕСЂ Р“Р°Р»РѕРј.
+	AI_Output(self,other,"Info_Bartholo_Krautbote_12_01");	//РџРѕРєР°Р¶Рё!
 	if(Npc_HasItems(other,ItMiJoint_3) >= 30)
 	{
-		b_printtrademsg1("Отдан болотник (30).");
-		AI_Output(self,other,"Info_Bartholo_Krautbote_12_02");	//М-ммммммммм...
-		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03");	//Это хорошо. А то Гомез уже начал терять терпение. Это просто удача, что ты объявился сегодня.
-		AI_Output(other,self,"Info_Bartholo_Krautbote_15_04");	//Как насчет платы?
-		AI_Output(self,other,"Info_Bartholo_Krautbote_12_05");	//Не так быстро... Вот, держи. Как договаривались - пять сотен.
-		b_printtrademsg2("Получено руды: 500");
+		b_printtrademsg1("РћС‚РґР°РЅ Р±РѕР»РѕС‚РЅРёРє (30).");
+		AI_Output(self,other,"Info_Bartholo_Krautbote_12_02");	//Рњ-РјРјРјРјРјРјРјРјРј...
+		AI_Output(self,other,"Info_Bartholo_Krautbote_12_03");	//Р­С‚Рѕ С…РѕСЂРѕС€Рѕ. Рђ С‚Рѕ Р“РѕРјРµР· СѓР¶Рµ РЅР°С‡Р°Р» С‚РµСЂСЏС‚СЊ С‚РµСЂРїРµРЅРёРµ. Р­С‚Рѕ РїСЂРѕСЃС‚Рѕ СѓРґР°С‡Р°, С‡С‚Рѕ С‚С‹ РѕР±СЉСЏРІРёР»СЃСЏ СЃРµРіРѕРґРЅСЏ.
+		AI_Output(other,self,"Info_Bartholo_Krautbote_15_04");	//РљР°Рє РЅР°СЃС‡РµС‚ РїР»Р°С‚С‹?
+		AI_Output(self,other,"Info_Bartholo_Krautbote_12_05");	//РќРµ С‚Р°Рє Р±С‹СЃС‚СЂРѕ... Р’РѕС‚, РґРµСЂР¶Рё. РљР°Рє РґРѕРіРѕРІР°СЂРёРІР°Р»РёСЃСЊ - РїСЏС‚СЊ СЃРѕС‚РµРЅ.
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 500");
 		B_GiveInvItems(other,self,ItMiJoint_3,30);
 		CreateInvItems(self,ItMiNugget,500);
 		B_GiveInvItems(self,other,ItMiNugget,500);
 		Kalom_DeliveredWeed = TRUE;
-		B_LogEntry(CH1_KrautBote,"Бартоло дал мне 500 кусков руды за болотник, который я принес для Гомеза.");
+		B_LogEntry(CH1_KrautBote,"Р‘Р°СЂС‚РѕР»Рѕ РґР°Р» РјРЅРµ 500 РєСѓСЃРєРѕРІ СЂСѓРґС‹ Р·Р° Р±РѕР»РѕС‚РЅРёРє, РєРѕС‚РѕСЂС‹Р№ СЏ РїСЂРёРЅРµСЃ РґР»СЏ Р“РѕРјРµР·Р°.");
 		B_GiveXP(XP_WeedShipmentDelivered);
 	}
 	else
 	{
-		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//Ну...
-		AI_Output(self,other,"Info_Bartholo_Krautbote_NoKraut_12_00");	//У тебя слишком мало болотника! Надеюсь, ты не продал его на сторону. Будет нормальный запас, тогда и приходи.
+		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//РќСѓ...
+		AI_Output(self,other,"Info_Bartholo_Krautbote_NoKraut_12_00");	//РЈ С‚РµР±СЏ СЃР»РёС€РєРѕРј РјР°Р»Рѕ Р±РѕР»РѕС‚РЅРёРєР°! РќР°РґРµСЋСЃСЊ, С‚С‹ РЅРµ РїСЂРѕРґР°Р» РµРіРѕ РЅР° СЃС‚РѕСЂРѕРЅСѓ. Р‘СѓРґРµС‚ РЅРѕСЂРјР°Р»СЊРЅС‹Р№ Р·Р°РїР°СЃ, С‚РѕРіРґР° Рё РїСЂРёС…РѕРґРё.
 		AI_StopProcessInfos(self);
 	};
 };
@@ -164,11 +164,11 @@ func void DIA_EBR_106_Bartholo_Wait4SC_Info()
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_UnreadySpell(hero);
 	AI_GotoNpc(self,other);
-	AI_Output(self,other,"Info_Bartholo_12_01");	//Я знал, что кто-нибудь попытается добраться до нас через пентаграмму!
-	AI_Output(self,other,"Info_Bartholo_12_02");	//Но в отличие от этого предателя кузнеца Стоуна, ты нам больше не нужен!
-	AI_Output(other,self,"Info_Bartholo_15_03");	//Где Стоун?
-	AI_Output(self,other,"Info_Bartholo_12_04");	//За решеткой! А ты через минуту окажешься на полметра ниже.
-	AI_Output(self,other,"Info_Bartholo_12_05");	//Взять его, парни! Порубить на куски!
+	AI_Output(self,other,"Info_Bartholo_12_01");	//РЇ Р·РЅР°Р», С‡С‚Рѕ РєС‚Рѕ-РЅРёР±СѓРґСЊ РїРѕРїС‹С‚Р°РµС‚СЃСЏ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ РЅР°СЃ С‡РµСЂРµР· РїРµРЅС‚Р°РіСЂР°РјРјСѓ!
+	AI_Output(self,other,"Info_Bartholo_12_02");	//РќРѕ РІ РѕС‚Р»РёС‡РёРµ РѕС‚ СЌС‚РѕРіРѕ РїСЂРµРґР°С‚РµР»СЏ РєСѓР·РЅРµС†Р° РЎС‚РѕСѓРЅР°, С‚С‹ РЅР°Рј Р±РѕР»СЊС€Рµ РЅРµ РЅСѓР¶РµРЅ!
+	AI_Output(other,self,"Info_Bartholo_15_03");	//Р“РґРµ РЎС‚РѕСѓРЅ?
+	AI_Output(self,other,"Info_Bartholo_12_04");	//Р—Р° СЂРµС€РµС‚РєРѕР№! Рђ С‚С‹ С‡РµСЂРµР· РјРёРЅСѓС‚Сѓ РѕРєР°Р¶РµС€СЊСЃСЏ РЅР° РїРѕР»РјРµС‚СЂР° РЅРёР¶Рµ.
+	AI_Output(self,other,"Info_Bartholo_12_05");	//Р’Р·СЏС‚СЊ РµРіРѕ, РїР°СЂРЅРё! РџРѕСЂСѓР±РёС‚СЊ РЅР° РєСѓСЃРєРё!
 	AI_StopProcessInfos(self);
 	self.guild = GIL_EBR;
 	Npc_SetTrueGuild(self,GIL_EBR);
@@ -209,8 +209,8 @@ func void dia_ebr_106_bartholo_wait4sc2_info()
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_UnreadySpell(hero);
 	AI_GotoNpc(self,other);
-	AI_Output(self,other,"SVM_12_YouViolatedForbiddenTerritory");	//Что это ты здесь делаешь?
-	AI_Output(self,other,"Info_Bartholo_12_05");	//Взять его, парни! Порубить на куски!
+	AI_Output(self,other,"SVM_12_YouViolatedForbiddenTerritory");	//Р§С‚Рѕ СЌС‚Рѕ С‚С‹ Р·РґРµСЃСЊ РґРµР»Р°РµС€СЊ?
+	AI_Output(self,other,"Info_Bartholo_12_05");	//Р’Р·СЏС‚СЊ РµРіРѕ, РїР°СЂРЅРё! РџРѕСЂСѓР±РёС‚СЊ РЅР° РєСѓСЃРєРё!
 	if(!Npc_KnowsInfo(hero,info_cutter_die) && !Npc_KnowsInfo(hero,Info_Fletcher_DIE) && !Npc_KnowsInfo(hero,info_grd238_die))
 	{
 		Wld_ExchangeGuildAttitudes("GIL_ATTITUDES_FMTAKEN");

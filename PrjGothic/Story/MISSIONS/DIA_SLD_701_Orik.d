@@ -29,7 +29,7 @@ instance SLD_701_ORIK_DIELAGE(C_Info)
 	condition = sld_701_orik_dielage_condition;
 	information = sld_701_orik_dielage_info;
 	permanent = 1;
-	description = "Как идут дела?";
+	description = "РљР°Рє РёРґСѓС‚ РґРµР»Р°?";
 };
 
 
@@ -50,15 +50,15 @@ func int sld_701_orik_dielage_condition()
 
 func void sld_701_orik_dielage_info()
 {
-	AI_Output(other,self,"Info_Sld_8_DieLage_15_00");	//Как идут дела?
+	AI_Output(other,self,"Info_Sld_8_DieLage_15_00");	//РљР°Рє РёРґСѓС‚ РґРµР»Р°?
 	if(!FMTaken)
 	{
-		AI_Output(self,other,"Sld_701_Orik_DieLage_02_01");	//Пока магам удается поддерживать хрупкий мир в Колонии. Но если набеги на караваны Гомеза не прекратятся...
+		AI_Output(self,other,"Sld_701_Orik_DieLage_02_01");	//РџРѕРєР° РјР°РіР°Рј СѓРґР°РµС‚СЃСЏ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ С…СЂСѓРїРєРёР№ РјРёСЂ РІ РљРѕР»РѕРЅРёРё. РќРѕ РµСЃР»Рё РЅР°Р±РµРіРё РЅР° РєР°СЂР°РІР°РЅС‹ Р“РѕРјРµР·Р° РЅРµ РїСЂРµРєСЂР°С‚СЏС‚СЃСЏ...
 	}
 	else
 	{
-		AI_Output(self,other,"Sld_701_Orik_DieLage_02_02");	//Обстановка напряженная. После захвата нашей шахты Гомез выжидает. Мы тоже выжидаем, пока.
-		AI_Output(self,other,"Sld_701_Orik_DieLage_02_03");	//У Ли есть план, скоро все изменится.
+		AI_Output(self,other,"Sld_701_Orik_DieLage_02_02");	//РћР±СЃС‚Р°РЅРѕРІРєР° РЅР°РїСЂСЏР¶РµРЅРЅР°СЏ. РџРѕСЃР»Рµ Р·Р°С…РІР°С‚Р° РЅР°С€РµР№ С€Р°С…С‚С‹ Р“РѕРјРµР· РІС‹Р¶РёРґР°РµС‚. РњС‹ С‚РѕР¶Рµ РІС‹Р¶РёРґР°РµРј, РїРѕРєР°.
+		AI_Output(self,other,"Sld_701_Orik_DieLage_02_03");	//РЈ Р›Рё РµСЃС‚СЊ РїР»Р°РЅ, СЃРєРѕСЂРѕ РІСЃРµ РёР·РјРµРЅРёС‚СЃСЏ.
 	};
 	if(Npc_KnowsInfo(hero,sld_701_orik_daslager) && Npc_KnowsInfo(hero,sld_701_orik_einervoneuchwerden) && Npc_KnowsInfo(hero,sld_701_orik_krautprobe))
 	{
@@ -75,7 +75,7 @@ instance SLD_701_ORIK_DASLAGER(C_Info)
 	condition = sld_701_orik_daslager_condition;
 	information = sld_701_orik_daslager_info;
 	permanent = 0;
-	description = "Расскажи мне об этом Лагере.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ РѕР± СЌС‚РѕРј Р›Р°РіРµСЂРµ.";
 };
 
 
@@ -86,8 +86,8 @@ func int sld_701_orik_daslager_condition()
 
 func void sld_701_orik_daslager_info()
 {
-	AI_Output(other,self,"Info_Sld_8_DasLager_15_00");	//Расскажи мне об этом лагере.
-	AI_Output(self,other,"Sld_701_Orik_DasLager_02_01");	//Походи по лагерю, поговори с людьми. Ты сам все увидишь. Только не вздумай беспокоить магов по пустякам.
+	AI_Output(other,self,"Info_Sld_8_DasLager_15_00");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ.
+	AI_Output(self,other,"Sld_701_Orik_DasLager_02_01");	//РџРѕС…РѕРґРё РїРѕ Р»Р°РіРµСЂСЋ, РїРѕРіРѕРІРѕСЂРё СЃ Р»СЋРґСЊРјРё. РўС‹ СЃР°Рј РІСЃРµ СѓРІРёРґРёС€СЊ. РўРѕР»СЊРєРѕ РЅРµ РІР·РґСѓРјР°Р№ Р±РµСЃРїРѕРєРѕРёС‚СЊ РјР°РіРѕРІ РїРѕ РїСѓСЃС‚СЏРєР°Рј.
 };
 
 
@@ -98,7 +98,7 @@ instance SLD_701_ORIK_EINERVONEUCHWERDEN(C_Info)
 	condition = sld_701_orik_einervoneuchwerden_condition;
 	information = sld_701_orik_einervoneuchwerden_info;
 	permanent = 0;
-	description = "Как мне присоединиться к вам?";
+	description = "РљР°Рє РјРЅРµ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј?";
 };
 
 
@@ -112,8 +112,8 @@ func int sld_701_orik_einervoneuchwerden_condition()
 
 func void sld_701_orik_einervoneuchwerden_info()
 {
-	AI_Output(other,self,"Info_Mine_Sld_11_EinerVonEuchWerden_15_00");	//Как мне присоединиться к вам?
-	AI_Output(self,other,"Sld_701_Orik_EinerVonEuchWerden_02_01");	//Нам не нужны слабаки. Но если ты - крепкий парень, у тебя есть шанс. Поговори с Ли.
+	AI_Output(other,self,"Info_Mine_Sld_11_EinerVonEuchWerden_15_00");	//РљР°Рє РјРЅРµ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј?
+	AI_Output(self,other,"Sld_701_Orik_EinerVonEuchWerden_02_01");	//РќР°Рј РЅРµ РЅСѓР¶РЅС‹ СЃР»Р°Р±Р°РєРё. РќРѕ РµСЃР»Рё С‚С‹ - РєСЂРµРїРєРёР№ РїР°СЂРµРЅСЊ, Сѓ С‚РµР±СЏ РµСЃС‚СЊ С€Р°РЅСЃ. РџРѕРіРѕРІРѕСЂРё СЃ Р›Рё.
 };
 
 
@@ -124,14 +124,14 @@ instance SLD_701_ORIK_KRAUTPROBE(C_Info)
 	condition = sld_701_orik_krautprobe_condition;
 	information = sld_701_orik_krautprobe_info;
 	permanent = 0;
-	description = "У меня есть болотник. Хочешь?";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ Р±РѕР»РѕС‚РЅРёРє. РҐРѕС‡РµС€СЊ?";
 };
 
 
 
 
-var int isExplainJoint;    //Орик объяснил, почему считает болотник опасной вещью
-var int cntrOrikJoint;      //Сколько раз ГГ обращался к Орику по поводу травы
+var int isExplainJoint;    //РћСЂРёРє РѕР±СЉСЏСЃРЅРёР», РїРѕС‡РµРјСѓ СЃС‡РёС‚Р°РµС‚ Р±РѕР»РѕС‚РЅРёРє РѕРїР°СЃРЅРѕР№ РІРµС‰СЊСЋ
+var int cntrOrikJoint;      //РЎРєРѕР»СЊРєРѕ СЂР°Р· Р“Р“ РѕР±СЂР°С‰Р°Р»СЃСЏ Рє РћСЂРёРєСѓ РїРѕ РїРѕРІРѕРґСѓ С‚СЂР°РІС‹
 
 func int sld_701_orik_krautprobe_condition()
 {
@@ -153,25 +153,25 @@ func int sld_701_orik_krautprobe_condition()
 
 func void orikExplainJoint()
 {
-		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_03");	//У некоторых из-за болотника беда с головой случается. Ты знаешь Торлофа?
+		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_03");	//РЈ РЅРµРєРѕС‚РѕСЂС‹С… РёР·-Р·Р° Р±РѕР»РѕС‚РЅРёРєР° Р±РµРґР° СЃ РіРѕР»РѕРІРѕР№ СЃР»СѓС‡Р°РµС‚СЃСЏ. РўС‹ Р·РЅР°РµС€СЊ РўРѕСЂР»РѕС„Р°?
 		if(Npc_KnowsInfo(hero,DIA_Torlof_Hallo))
 		{
-			AI_Output(other,self,"INFO_THORUS_LETTERFORMAGES_15_02");	//Да.
+			AI_Output(other,self,"INFO_THORUS_LETTERFORMAGES_15_02");	//Р”Р°.
 		}
 		else
 		{
-			AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Еще нет.
+			AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Р•С‰Рµ РЅРµС‚.
 		};
-		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_06");	    //Крепкий парень! Старый морской волк! Но с некоторых пор он не может нормально спать. Говорит, что ему мерещутся какие-то люди в черных рясах.
-		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_07");	    //Мне плевать на людей Ларса, пусть хоть передерутся, обкурившись или с плотины прыгают. Но к моим парням с этой дурью не приставай! Понял?
-		AI_Output(other,self,"DIA_Harlok_FetchHarlok_BACK_15_00");	//Да ладно, не волнуйся так.
+		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_06");	    //РљСЂРµРїРєРёР№ РїР°СЂРµРЅСЊ! РЎС‚Р°СЂС‹Р№ РјРѕСЂСЃРєРѕР№ РІРѕР»Рє! РќРѕ СЃ РЅРµРєРѕС‚РѕСЂС‹С… РїРѕСЂ РѕРЅ РЅРµ РјРѕР¶РµС‚ РЅРѕСЂРјР°Р»СЊРЅРѕ СЃРїР°С‚СЊ. Р“РѕРІРѕСЂРёС‚, С‡С‚Рѕ РµРјСѓ РјРµСЂРµС‰СѓС‚СЃСЏ РєР°РєРёРµ-С‚Рѕ Р»СЋРґРё РІ С‡РµСЂРЅС‹С… СЂСЏСЃР°С….
+		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_07");	    //РњРЅРµ РїР»РµРІР°С‚СЊ РЅР° Р»СЋРґРµР№ Р›Р°СЂСЃР°, РїСѓСЃС‚СЊ С…РѕС‚СЊ РїРµСЂРµРґРµСЂСѓС‚СЃСЏ, РѕР±РєСѓСЂРёРІС€РёСЃСЊ РёР»Рё СЃ РїР»РѕС‚РёРЅС‹ РїСЂС‹РіР°СЋС‚. РќРѕ Рє РјРѕРёРј РїР°СЂРЅСЏРј СЃ СЌС‚РѕР№ РґСѓСЂСЊСЋ РЅРµ РїСЂРёСЃС‚Р°РІР°Р№! РџРѕРЅСЏР»?
+		AI_Output(other,self,"DIA_Harlok_FetchHarlok_BACK_15_00");	//Р”Р° Р»Р°РґРЅРѕ, РЅРµ РІРѕР»РЅСѓР№СЃСЏ С‚Р°Рє.
 		isExplainJoint = true;
 };
 func void sld_701_orik_krautprobe_info()
 {
-	AI_Output(other,self,"Info_Org_6_Krautprobe_15_00"); 	//<задолбался переписывать эти символы.. почему не работает копи-паст? почему вставляются кракозябры? агррррххххххх>
-	AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_01");	//Нет, парень. И знаешь что, прекращай снабжать этой гадостью моих ребят.
-	AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_02");	//Ты думаешь, это курево так безобидно? Как бы не так!
+	AI_Output(other,self,"Info_Org_6_Krautprobe_15_00"); 	//<Р·Р°РґРѕР»Р±Р°Р»СЃСЏ РїРµСЂРµРїРёСЃС‹РІР°С‚СЊ СЌС‚Рё СЃРёРјРІРѕР»С‹.. РїРѕС‡РµРјСѓ РЅРµ СЂР°Р±РѕС‚Р°РµС‚ РєРѕРїРё-РїР°СЃС‚? РїРѕС‡РµРјСѓ РІСЃС‚Р°РІР»СЏСЋС‚СЃСЏ РєСЂР°РєРѕР·СЏР±СЂС‹? Р°РіСЂСЂСЂСЂС…С…С…С…С…С…С…>
+	AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_01");	//РќРµС‚, РїР°СЂРµРЅСЊ. Р Р·РЅР°РµС€СЊ С‡С‚Рѕ, РїСЂРµРєСЂР°С‰Р°Р№ СЃРЅР°Р±Р¶Р°С‚СЊ СЌС‚РѕР№ РіР°РґРѕСЃС‚СЊСЋ РјРѕРёС… СЂРµР±СЏС‚.
+	AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_02");	//РўС‹ РґСѓРјР°РµС€СЊ, СЌС‚Рѕ РєСѓСЂРµРІРѕ С‚Р°Рє Р±РµР·РѕР±РёРґРЅРѕ? РљР°Рє Р±С‹ РЅРµ С‚Р°Рє!
 	orikExplainJoint();
 	cntrOrikJoint = cntrOrikJoint + 1;
 	AI_StopProcessInfos(self);
@@ -185,7 +185,7 @@ instance orik_krautprobeAgain(C_Info)
 	information = orik_krautprobeAgain_info;
 	important = 0;
 	permanent = 1;
-	description = "Эмм.. у меня есть немного болот..";
+	description = "Р­РјРј.. Сѓ РјРµРЅСЏ РµСЃС‚СЊ РЅРµРјРЅРѕРіРѕ Р±РѕР»РѕС‚..";
 };
 
 func int orik_krautprobeAgain_condition()
@@ -211,20 +211,20 @@ func int orik_krautprobeAgain_condition()
 
 func void orik_krautprobeAgain_info()
 {
-	AI_Output(other,self,"akh_GG_OrikKey_NULL_00");   //Эмм.. у меня есть немного болот..
+	AI_Output(other,self,"akh_GG_OrikKey_NULL_00");   //Р­РјРј.. Сѓ РјРµРЅСЏ РµСЃС‚СЊ РЅРµРјРЅРѕРіРѕ Р±РѕР»РѕС‚..
 	if(isExplainJoint && cntrOrikJoint < 4)
 	{
-		AI_Output(self,other,"akh_Orik_OrikKey_NULL_01"); //Я-же предупреждал тебя об этой гадости малец!
-		AI_Output(self,other,"akh_Orik_OrikKey_NULL_02"); //Уматывай отсюда! Продолжишь заниматься этой глупостью и это закончится плохо.
-		AI_Output(self,other,"akh_Orik_OrikKey_NULL_03"); //Я (суровый взгляд) не шучу..
+		AI_Output(self,other,"akh_Orik_OrikKey_NULL_01"); //РЇ-Р¶Рµ РїСЂРµРґСѓРїСЂРµР¶РґР°Р» С‚РµР±СЏ РѕР± СЌС‚РѕР№ РіР°РґРѕСЃС‚Рё РјР°Р»РµС†!
+		AI_Output(self,other,"akh_Orik_OrikKey_NULL_02"); //РЈРјР°С‚С‹РІР°Р№ РѕС‚СЃСЋРґР°! РџСЂРѕРґРѕР»Р¶РёС€СЊ Р·Р°РЅРёРјР°С‚СЊСЃСЏ СЌС‚РѕР№ РіР»СѓРїРѕСЃС‚СЊСЋ Рё СЌС‚Рѕ Р·Р°РєРѕРЅС‡РёС‚СЃСЏ РїР»РѕС…Рѕ.
+		AI_Output(self,other,"akh_Orik_OrikKey_NULL_03"); //РЇ (СЃСѓСЂРѕРІС‹Р№ РІР·РіР»СЏРґ) РЅРµ С€СѓС‡Сѓ..
 		cntrOrikJoint = cntrOrikJoint + 1;
 		AI_StopProcessInfos(self);
 	} else if(isExplainJoint && cntrOrikJoint > 3)
 	{
-		AI_Output(self,other,"akh_Orik_OrikKey_NULL_04"); //Хмм (слегка охренев) даа парень. Именно об этом я и говорил.. Ладно.. забудем об этом.
+		AI_Output(self,other,"akh_Orik_OrikKey_NULL_04"); //РҐРјРј (СЃР»РµРіРєР° РѕС…СЂРµРЅРµРІ) РґР°Р° РїР°СЂРµРЅСЊ. РРјРµРЅРЅРѕ РѕР± СЌС‚РѕРј СЏ Рё РіРѕРІРѕСЂРёР».. Р›Р°РґРЅРѕ.. Р·Р°Р±СѓРґРµРј РѕР± СЌС‚РѕРј.
 	} else if(cntrOrikJoint == 1)
 	{
-		AI_Output(self,other,"akh_Orik_OrikKey_NULL_5");//(снисходительно) Эх парень..
+		AI_Output(self,other,"akh_Orik_OrikKey_NULL_5");//(СЃРЅРёСЃС…РѕРґРёС‚РµР»СЊРЅРѕ) Р­С… РїР°СЂРµРЅСЊ..
 		orikExplainJoint();
 		cntrOrikJoint = cntrOrikJoint + 1;
 	};
@@ -238,7 +238,7 @@ instance ORIK_STEALKEY(C_Info)
 	information = orik_stealkey_info;
 	important = 0;
 	permanent = 0;
-	description = "(украсть ключ)";
+	description = "(СѓРєСЂР°СЃС‚СЊ РєР»СЋС‡)";
 };
 
 
@@ -253,14 +253,14 @@ func int orik_stealkey_condition()
 func void orik_stealkey_info()
 {
 	AI_GotoNpc(other,self);
-	AI_Output(other,self,"Info_Org_6_Krautprobe_15_00");	//У меня есть болотник. Хочешь?
+	AI_Output(other,self,"Info_Org_6_Krautprobe_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ Р±РѕР»РѕС‚РЅРёРє. РҐРѕС‡РµС€СЊ?
 	if(cntrOrikJoint > 0){
-		AI_Output(self,other,"akh_Orik_OrikKey_ZADOLBAL_NULL_01");  //Даа парень, странный ты малый..
+		AI_Output(self,other,"akh_Orik_OrikKey_ZADOLBAL_NULL_01");  //Р”Р°Р° РїР°СЂРµРЅСЊ, СЃС‚СЂР°РЅРЅС‹Р№ С‚С‹ РјР°Р»С‹Р№..
 	} else {
-		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_01");	//Нет, парень. И знаешь что, прекращай снабжать этой гадостью моих ребят.
-		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_02");	//Ты думаешь, это курево так безобидно? Как бы не так!
+		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_01");	//РќРµС‚, РїР°СЂРµРЅСЊ. Р Р·РЅР°РµС€СЊ С‡С‚Рѕ, РїСЂРµРєСЂР°С‰Р°Р№ СЃРЅР°Р±Р¶Р°С‚СЊ СЌС‚РѕР№ РіР°РґРѕСЃС‚СЊСЋ РјРѕРёС… СЂРµР±СЏС‚.
+		AI_Output(self,other,"Sld_701_Orik_Krautprobe_02_02");	//РўС‹ РґСѓРјР°РµС€СЊ, СЌС‚Рѕ РєСѓСЂРµРІРѕ С‚Р°Рє Р±РµР·РѕР±РёРґРЅРѕ? РљР°Рє Р±С‹ РЅРµ С‚Р°Рє!
 	};
-	PrintScreen("Украден ключ.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
+	PrintScreen("РЈРєСЂР°РґРµРЅ РєР»СЋС‡.",-1,_YPOS_MESSAGE_TAKEN,"FONT_OLD_10_WHITE.TGA",_TIME_MESSAGE_TAKEN);
 	CreateInvItem(hero,orik_key);
 	Npc_RemoveInvItem(self,orik_key);
 	cntrOrikJoint = cntrOrikJoint + 1;

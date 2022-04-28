@@ -26,7 +26,7 @@ instance Info_Org_7_EinerVonEuchWerden(C_Info)
 	condition = Info_Org_7_EinerVonEuchWerden_Condition;
 	information = Info_Org_7_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Я хочу присоединиться к вашему лагерю. Как это сделать?";
+	description = "РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°С€РµРјСѓ Р»Р°РіРµСЂСЋ. РљР°Рє СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ?";
 };
 
 
@@ -41,10 +41,10 @@ func int Info_Org_7_EinerVonEuchWerden_Condition()
 func void Info_Org_7_EinerVonEuchWerden_Info()
 {
 	var C_Npc Lares;
-	AI_Output(other,self,"Info_Org_7_EinerVonEuchWerden_15_00");	//Я хочу присоединиться к вашему лагерю. Как это сделать?
-	AI_Output(self,other,"Info_Org_7_EinerVonEuchWerden_07_01");	//Мы можем принять тебя в нашу шайку. Но ты должен доказать нам, что ты против Гомеза.
-	AI_Output(other,self,"Info_Org_7_EinerVonEuchWerden_15_02");	//И как это можно доказать?
-	AI_Output(self,other,"Info_Org_7_EinerVonEuchWerden_07_03");	//На твоем месте я бы принес Ларсу что-нибудь очень важное из Старого лагеря или из их шахты.
+	AI_Output(other,self,"Info_Org_7_EinerVonEuchWerden_15_00");	//РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°С€РµРјСѓ Р»Р°РіРµСЂСЋ. РљР°Рє СЌС‚Рѕ СЃРґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"Info_Org_7_EinerVonEuchWerden_07_01");	//РњС‹ РјРѕР¶РµРј РїСЂРёРЅСЏС‚СЊ С‚РµР±СЏ РІ РЅР°С€Сѓ С€Р°Р№РєСѓ. РќРѕ С‚С‹ РґРѕР»Р¶РµРЅ РґРѕРєР°Р·Р°С‚СЊ РЅР°Рј, С‡С‚Рѕ С‚С‹ РїСЂРѕС‚РёРІ Р“РѕРјРµР·Р°.
+	AI_Output(other,self,"Info_Org_7_EinerVonEuchWerden_15_02");	//Р РєР°Рє СЌС‚Рѕ РјРѕР¶РЅРѕ РґРѕРєР°Р·Р°С‚СЊ?
+	AI_Output(self,other,"Info_Org_7_EinerVonEuchWerden_07_03");	//РќР° С‚РІРѕРµРј РјРµСЃС‚Рµ СЏ Р±С‹ РїСЂРёРЅРµСЃ Р›Р°СЂСЃСѓ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РѕС‡РµРЅСЊ РІР°Р¶РЅРѕРµ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ РёР»Рё РёР· РёС… С€Р°С…С‚С‹.
 	Lares = Hlp_GetNpc(Org_801_Lares);
 	Lares.aivar[AIV_FINDABLE] = TRUE;
 };
@@ -56,7 +56,7 @@ instance Info_Org_7_WichtigePersonen(C_Info)
 	condition = Info_Org_7_WichtigePersonen_Condition;
 	information = Info_Org_7_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто у вас главный?";
+	description = "РљС‚Рѕ Сѓ РІР°СЃ РіР»Р°РІРЅС‹Р№?";
 };
 
 
@@ -68,9 +68,9 @@ func int Info_Org_7_WichtigePersonen_Condition()
 func void Info_Org_7_WichtigePersonen_Info()
 {
 	var C_Npc Lares;
-	AI_Output(other,self,"Info_Org_7_WichtigePersonen_15_00");	//Кто у вас главный?
-	AI_Output(self,other,"Info_Org_7_WichtigePersonen_07_01");	//Глава нашей шайки - Ларс. Большинство наших подчиняется ему.
-	AI_Output(self,other,"Info_Org_7_WichtigePersonen_07_02");	//Но он никогда не указывает нам, что делать.
+	AI_Output(other,self,"Info_Org_7_WichtigePersonen_15_00");	//РљС‚Рѕ Сѓ РІР°СЃ РіР»Р°РІРЅС‹Р№?
+	AI_Output(self,other,"Info_Org_7_WichtigePersonen_07_01");	//Р“Р»Р°РІР° РЅР°С€РµР№ С€Р°Р№РєРё - Р›Р°СЂСЃ. Р‘РѕР»СЊС€РёРЅСЃС‚РІРѕ РЅР°С€РёС… РїРѕРґС‡РёРЅСЏРµС‚СЃСЏ РµРјСѓ.
+	AI_Output(self,other,"Info_Org_7_WichtigePersonen_07_02");	//РќРѕ РѕРЅ РЅРёРєРѕРіРґР° РЅРµ СѓРєР°Р·С‹РІР°РµС‚ РЅР°Рј, С‡С‚Рѕ РґРµР»Р°С‚СЊ.
 	Lares = Hlp_GetNpc(Org_801_Lares);
 	Lares.aivar[AIV_FINDABLE] = TRUE;
 };
@@ -82,7 +82,7 @@ instance Info_Org_7_DasLager(C_Info)
 	condition = Info_Org_7_DasLager_Condition;
 	information = Info_Org_7_DasLager_Info;
 	permanent = 1;
-	description = "Расскажешь мне о лагере?";
+	description = "Р Р°СЃСЃРєР°Р¶РµС€СЊ РјРЅРµ Рѕ Р»Р°РіРµСЂРµ?";
 };
 
 
@@ -93,11 +93,11 @@ func int Info_Org_7_DasLager_Condition()
 
 func void Info_Org_7_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Org_7_DasLager_15_00");	//Расскажешь мне о лагере?
-	AI_Output(self,other,"Info_Org_7_DasLager_07_01");	//В нашем лагере нет никаких особых правил. Каждый делает то, что считает нужным, но нас так много, что Гомезу не так уж легко будет от нас избавиться.
-	AI_Output(self,other,"Info_Org_7_DasLager_07_02");	//А он бы сделал это с огромным удовольствием.
-	AI_Output(other,self,"Info_Org_7_DasLager_15_03");	//Почему же он вас так не любит?
-	AI_Output(self,other,"Info_Org_7_DasLager_07_04");	//Мы воруем его вещи!
+	AI_Output(other,self,"Info_Org_7_DasLager_15_00");	//Р Р°СЃСЃРєР°Р¶РµС€СЊ РјРЅРµ Рѕ Р»Р°РіРµСЂРµ?
+	AI_Output(self,other,"Info_Org_7_DasLager_07_01");	//Р’ РЅР°С€РµРј Р»Р°РіРµСЂРµ РЅРµС‚ РЅРёРєР°РєРёС… РѕСЃРѕР±С‹С… РїСЂР°РІРёР». РљР°Р¶РґС‹Р№ РґРµР»Р°РµС‚ С‚Рѕ, С‡С‚Рѕ СЃС‡РёС‚Р°РµС‚ РЅСѓР¶РЅС‹Рј, РЅРѕ РЅР°СЃ С‚Р°Рє РјРЅРѕРіРѕ, С‡С‚Рѕ Р“РѕРјРµР·Сѓ РЅРµ С‚Р°Рє СѓР¶ Р»РµРіРєРѕ Р±СѓРґРµС‚ РѕС‚ РЅР°СЃ РёР·Р±Р°РІРёС‚СЊСЃСЏ.
+	AI_Output(self,other,"Info_Org_7_DasLager_07_02");	//Рђ РѕРЅ Р±С‹ СЃРґРµР»Р°Р» СЌС‚Рѕ СЃ РѕРіСЂРѕРјРЅС‹Рј СѓРґРѕРІРѕР»СЊСЃС‚РІРёРµРј.
+	AI_Output(other,self,"Info_Org_7_DasLager_15_03");	//РџРѕС‡РµРјСѓ Р¶Рµ РѕРЅ РІР°СЃ С‚Р°Рє РЅРµ Р»СЋР±РёС‚?
+	AI_Output(self,other,"Info_Org_7_DasLager_07_04");	//РњС‹ РІРѕСЂСѓРµРј РµРіРѕ РІРµС‰Рё!
 };
 
 
@@ -107,7 +107,7 @@ instance Info_Org_7_DieLage(C_Info)
 	condition = Info_Org_7_DieLage_Condition;
 	information = Info_Org_7_DieLage_Info;
 	permanent = 1;
-	description = "Каковы здешние порядки?";
+	description = "РљР°РєРѕРІС‹ Р·РґРµС€РЅРёРµ РїРѕСЂСЏРґРєРё?";
 };
 
 
@@ -118,10 +118,10 @@ func int Info_Org_7_DieLage_Condition()
 
 func void Info_Org_7_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Org_7_DieLage_15_00");	//Как здесь живется?
-	AI_Output(self,other,"Info_Org_7_DieLage_07_01");	//Ты прибыл сюда недавно, да?
-	AI_Output(self,other,"Info_Org_7_DieLage_07_02");	//Маги многие годы вели приготовления, чтобы взорвать гору руды. Судя по всему, очень скоро они так и сделают.
-	AI_Output(self,other,"Info_Org_7_DieLage_07_03");	//По крайней мере, именно это мне приходит в голову, когда я вижу нашу гору руды, которую добыли рудокопы.
+	AI_Output(other,self,"Info_Org_7_DieLage_15_00");	//РљР°Рє Р·РґРµСЃСЊ Р¶РёРІРµС‚СЃСЏ?
+	AI_Output(self,other,"Info_Org_7_DieLage_07_01");	//РўС‹ РїСЂРёР±С‹Р» СЃСЋРґР° РЅРµРґР°РІРЅРѕ, РґР°?
+	AI_Output(self,other,"Info_Org_7_DieLage_07_02");	//РњР°РіРё РјРЅРѕРіРёРµ РіРѕРґС‹ РІРµР»Рё РїСЂРёРіРѕС‚РѕРІР»РµРЅРёСЏ, С‡С‚РѕР±С‹ РІР·РѕСЂРІР°С‚СЊ РіРѕСЂСѓ СЂСѓРґС‹. РЎСѓРґСЏ РїРѕ РІСЃРµРјСѓ, РѕС‡РµРЅСЊ СЃРєРѕСЂРѕ РѕРЅРё С‚Р°Рє Рё СЃРґРµР»Р°СЋС‚.
+	AI_Output(self,other,"Info_Org_7_DieLage_07_03");	//РџРѕ РєСЂР°Р№РЅРµР№ РјРµСЂРµ, РёРјРµРЅРЅРѕ СЌС‚Рѕ РјРЅРµ РїСЂРёС…РѕРґРёС‚ РІ РіРѕР»РѕРІСѓ, РєРѕРіРґР° СЏ РІРёР¶Сѓ РЅР°С€Сѓ РіРѕСЂСѓ СЂСѓРґС‹, РєРѕС‚РѕСЂСѓСЋ РґРѕР±С‹Р»Рё СЂСѓРґРѕРєРѕРїС‹.
 };
 
 
@@ -131,7 +131,7 @@ instance Info_Org_7_Krautprobe(C_Info)
 	condition = Info_Org_7_Krautprobe_Condition;
 	information = Info_Org_7_Krautprobe_Info;
 	permanent = 1;
-	description = "Болотника хочешь?";
+	description = "Р‘РѕР»РѕС‚РЅРёРєР° С…РѕС‡РµС€СЊ?";
 };
 
 
@@ -145,27 +145,27 @@ func int Info_Org_7_Krautprobe_Condition()
 
 func void Info_Org_7_Krautprobe_Info()
 {
-	AI_Output(other,self,"Info_Org_7_Krautprobe_15_00");	//Болотника хочешь?
+	AI_Output(other,self,"Info_Org_7_Krautprobe_15_00");	//Р‘РѕР»РѕС‚РЅРёРєР° С…РѕС‡РµС€СЊ?
 	if((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if(Npc_HasItems(other,ItMiJoint_1))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_1,1);
-			b_printtrademsg1("Отдан 'Новичок'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РќРѕРІРёС‡РѕРє'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_2))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_2,1);
-			b_printtrademsg1("Отдан 'Северный темный'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_3))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_3,1);
-			b_printtrademsg1("Отдан 'Зов мечты'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'Р—РѕРІ РјРµС‡С‚С‹'.");
 		};
-		AI_Output(self,other,"Info_Org_7_Krautprobe_07_01");	//Да, вот тебе за него десять кусков руды.
-		AI_Output(self,other,"Info_Org_7_Krautprobe_07_02");	//Если захочешь продать еще, приходи ко мне.
-		b_printtrademsg2("Получено руды: 10");
+		AI_Output(self,other,"Info_Org_7_Krautprobe_07_01");	//Р”Р°, РІРѕС‚ С‚РµР±Рµ Р·Р° РЅРµРіРѕ РґРµСЃСЏС‚СЊ РєСѓСЃРєРѕРІ СЂСѓРґС‹.
+		AI_Output(self,other,"Info_Org_7_Krautprobe_07_02");	//Р•СЃР»Рё Р·Р°С…РѕС‡РµС€СЊ РїСЂРѕРґР°С‚СЊ РµС‰Рµ, РїСЂРёС…РѕРґРё РєРѕ РјРЅРµ.
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 10");
 		CreateInvItems(self,ItMiNugget,10);
 		B_GiveInvItems(self,other,ItMiNugget,10);
 		self.aivar[AIV_DEALDAY] = Wld_GetDay() + 1;
@@ -173,7 +173,7 @@ func void Info_Org_7_Krautprobe_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"Info_Org_7_Krautprobe_No_Joint_07_00");	//Какого болотника? У тебя же его нет!
+		AI_Output(self,other,"Info_Org_7_Krautprobe_No_Joint_07_00");	//РљР°РєРѕРіРѕ Р±РѕР»РѕС‚РЅРёРєР°? РЈ С‚РµР±СЏ Р¶Рµ РµРіРѕ РЅРµС‚!
 	};
 };
 

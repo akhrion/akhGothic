@@ -28,7 +28,7 @@ instance DIA_Melvin_Hello(C_Info)
 	condition = DIA_Melvin_Hello_Condition;
 	information = DIA_Melvin_Hello_Info;
 	permanent = 0;
-	description = "Привет! Ты не похож на послушника. Ты из этого лагеря?";
+	description = "РџСЂРёРІРµС‚! РўС‹ РЅРµ РїРѕС…РѕР¶ РЅР° РїРѕСЃР»СѓС€РЅРёРєР°. РўС‹ РёР· СЌС‚РѕРіРѕ Р»Р°РіРµСЂСЏ?";
 };
 
 
@@ -42,12 +42,12 @@ func int DIA_Melvin_Hello_Condition()
 
 func void DIA_Melvin_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Melvin_Hello_15_00");	//Привет! Ты не похож на послушника. Ты из этого лагеря?
-	AI_Output(self,other,"DIA_Melvin_Hello_03_01");	//Да! Неделя прошла с тех пор, как я покинул Старый лагерь. Я предлагал моему другу Дасти пойти со мной, он засомневался и сказал, что подождет еще немного.
+	AI_Output(other,self,"DIA_Melvin_Hello_15_00");	//РџСЂРёРІРµС‚! РўС‹ РЅРµ РїРѕС…РѕР¶ РЅР° РїРѕСЃР»СѓС€РЅРёРєР°. РўС‹ РёР· СЌС‚РѕРіРѕ Р»Р°РіРµСЂСЏ?
+	AI_Output(self,other,"DIA_Melvin_Hello_03_01");	//Р”Р°! РќРµРґРµР»СЏ РїСЂРѕС€Р»Р° СЃ С‚РµС… РїРѕСЂ, РєР°Рє СЏ РїРѕРєРёРЅСѓР» РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ. РЇ РїСЂРµРґР»Р°РіР°Р» РјРѕРµРјСѓ РґСЂСѓРіСѓ Р”Р°СЃС‚Рё РїРѕР№С‚Рё СЃРѕ РјРЅРѕР№, РѕРЅ Р·Р°СЃРѕРјРЅРµРІР°Р»СЃСЏ Рё СЃРєР°Р·Р°Р», С‡С‚Рѕ РїРѕРґРѕР¶РґРµС‚ РµС‰Рµ РЅРµРјРЅРѕРіРѕ.
 	GETNEWGUY_STARTED = TRUE;
 	Log_CreateTopic(CH1_RecruitDusty,LOG_MISSION);
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_RUNNING);
-	B_LogEntry(CH1_RecruitDusty,"Рудокоп Мелвин присоединился к Братству. Его друг Дасти остался в Старом лагере. Но он постоянно думает о том, чтобы тоже уйти в Болотный лагерь.");
+	B_LogEntry(CH1_RecruitDusty,"Р СѓРґРѕРєРѕРї РњРµР»РІРёРЅ РїСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р‘СЂР°С‚СЃС‚РІСѓ. Р•РіРѕ РґСЂСѓРі Р”Р°СЃС‚Рё РѕСЃС‚Р°Р»СЃСЏ РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ. РќРѕ РѕРЅ РїРѕСЃС‚РѕСЏРЅРЅРѕ РґСѓРјР°РµС‚ Рѕ С‚РѕРј, С‡С‚РѕР±С‹ С‚РѕР¶Рµ СѓР№С‚Рё РІ Р‘РѕР»РѕС‚РЅС‹Р№ Р»Р°РіРµСЂСЊ.");
 };
 
 
@@ -58,7 +58,7 @@ instance DIA_Melvin_MetDusty(C_Info)
 	condition = DIA_Melvin_MetDusty_Condition;
 	information = DIA_Melvin_MetDusty_Info;
 	permanent = 0;
-	description = "Я знаю Дасти. Разговаривал с ним совсем недавно.";
+	description = "РЇ Р·РЅР°СЋ Р”Р°СЃС‚Рё. Р Р°Р·РіРѕРІР°СЂРёРІР°Р» СЃ РЅРёРј СЃРѕРІСЃРµРј РЅРµРґР°РІРЅРѕ.";
 };
 
 
@@ -74,9 +74,9 @@ func int DIA_Melvin_MetDusty_Condition()
 
 func void DIA_Melvin_MetDusty_Info()
 {
-	AI_Output(other,self,"DIA_Melvin_MetDusty_15_00");	//Я знаю Дасти. Разговаривал с ним совсем недавно.
-	AI_Output(self,other,"DIA_Melvin_MetDusty_03_01");	//Если ты увидишь его, передай, что он зря остался там. Здесь же гораздо лучше, чем в Старом лагере, где стражники издеваются над бедными рудокопами. Надеюсь, ему тоже здесь понравится.
-	AI_Output(other,self,"DIA_Melvin_MetDusty_15_02");	//Ну, если увижу, передам, конечно.
+	AI_Output(other,self,"DIA_Melvin_MetDusty_15_00");	//РЇ Р·РЅР°СЋ Р”Р°СЃС‚Рё. Р Р°Р·РіРѕРІР°СЂРёРІР°Р» СЃ РЅРёРј СЃРѕРІСЃРµРј РЅРµРґР°РІРЅРѕ.
+	AI_Output(self,other,"DIA_Melvin_MetDusty_03_01");	//Р•СЃР»Рё С‚С‹ СѓРІРёРґРёС€СЊ РµРіРѕ, РїРµСЂРµРґР°Р№, С‡С‚Рѕ РѕРЅ Р·СЂСЏ РѕСЃС‚Р°Р»СЃСЏ С‚Р°Рј. Р—РґРµСЃСЊ Р¶Рµ РіРѕСЂР°Р·РґРѕ Р»СѓС‡С€Рµ, С‡РµРј РІ РЎС‚Р°СЂРѕРј Р»Р°РіРµСЂРµ, РіРґРµ СЃС‚СЂР°Р¶РЅРёРєРё РёР·РґРµРІР°СЋС‚СЃСЏ РЅР°Рґ Р±РµРґРЅС‹РјРё СЂСѓРґРѕРєРѕРїР°РјРё. РќР°РґРµСЋСЃСЊ, РµРјСѓ С‚РѕР¶Рµ Р·РґРµСЃСЊ РїРѕРЅСЂР°РІРёС‚СЃСЏ.
+	AI_Output(other,self,"DIA_Melvin_MetDusty_15_02");	//РќСѓ, РµСЃР»Рё СѓРІРёР¶Сѓ, РїРµСЂРµРґР°Рј, РєРѕРЅРµС‡РЅРѕ.
 };
 
 
@@ -87,7 +87,7 @@ instance DIA_MELVIN_METDUSTY2(C_Info)
 	condition = dia_melvin_metdusty2_condition;
 	information = dia_melvin_metdusty2_info;
 	permanent = 0;
-	description = "Cо мной пришел человек...";
+	description = "CРѕ РјРЅРѕР№ РїСЂРёС€РµР» С‡РµР»РѕРІРµРє...";
 };
 
 
@@ -107,8 +107,8 @@ func void dia_melvin_metdusty2_info()
 	Dusty = Hlp_GetNpc(VLK_524_Dusty);
 	Dusty.aivar[AIV_PARTYMEMBER] = FALSE;
 	Dusty.flags = 0;
-	AI_Output(other,self,"DIA_Melvin_MetDusty_15_03");	//Cо мной пришел человек...
-	AI_Output(self,other,"SVM_3_YeahWellDone");	//Да! Отлично!
+	AI_Output(other,self,"DIA_Melvin_MetDusty_15_03");	//CРѕ РјРЅРѕР№ РїСЂРёС€РµР» С‡РµР»РѕРІРµРє...
+	AI_Output(self,other,"SVM_3_YeahWellDone");	//Р”Р°! РћС‚Р»РёС‡РЅРѕ!
 	if(C_BodyStateContains(self,BS_SIT))
 	{
 		AI_Standup(self);
@@ -116,8 +116,8 @@ func void dia_melvin_metdusty2_info()
 	};
 	AI_TurnToNPC(self,Dusty);
 	AI_PlayAni(self,"T_COMEOVERHERE");
-	AI_Output(self,NULL,"SVM_3_SectGreetings");	//Пробудись!
-	B_LogEntry(CH1_RecruitDusty,"Дасти присоединился к Болотному лагерю. Я выполнил свое задание.");
+	AI_Output(self,NULL,"SVM_3_SectGreetings");	//РџСЂРѕР±СѓРґРёСЃСЊ!
+	B_LogEntry(CH1_RecruitDusty,"Р”Р°СЃС‚Рё РїСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ Рє Р‘РѕР»РѕС‚РЅРѕРјСѓ Р»Р°РіРµСЂСЋ. РЇ РІС‹РїРѕР»РЅРёР» СЃРІРѕРµ Р·Р°РґР°РЅРёРµ.");
 	Log_SetTopicStatus(CH1_RecruitDusty,LOG_SUCCESS);
 	B_GiveXP(XP_DeliveredDusty);
 	GETNEWGUY_DUSTY_JOINED = TRUE;

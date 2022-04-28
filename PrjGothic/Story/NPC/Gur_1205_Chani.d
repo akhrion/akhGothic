@@ -1,7 +1,7 @@
 
 instance Gur_1205_Chani(Npc_Default)
 {
-	name[0] = "’‡ÌË";
+	name[0] = "–•–∞–Ω–∏";
 	npcType = npctype_main;
 	guild = GIL_BAB;
 	level = 1;

@@ -1,7 +1,7 @@
 
 instance Grd_201_Jackal(Npc_Default)
 {
-	name[0] = "ÿ‡Í‡Î";
+	name[0] = "–®–∞–∫–∞–ª";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 50;

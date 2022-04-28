@@ -26,7 +26,7 @@ instance INFO_SFB_13_HI(C_Info)
 	condition = info_sfb_13_hi_condition;
 	information = info_sfb_13_hi_info;
 	permanent = 1;
-	description = "Как ты?";
+	description = "РљР°Рє С‚С‹?";
 };
 
 
@@ -37,8 +37,8 @@ func int info_sfb_13_hi_condition()
 
 func void info_sfb_13_hi_info()
 {
-	AI_Output(other,self,"DIA_Pock_ForgotAll_15_00");	//Как ты?
-	AI_Output(self,other,"SVM_13_TheyKilledMyFriend");	//Один из наших людей был зверски убит. Его кровь взывает к мести!
+	AI_Output(other,self,"DIA_Pock_ForgotAll_15_00");	//РљР°Рє С‚С‹?
+	AI_Output(self,other,"SVM_13_TheyKilledMyFriend");	//РћРґРёРЅ РёР· РЅР°С€РёС… Р»СЋРґРµР№ Р±С‹Р» Р·РІРµСЂСЃРєРё СѓР±РёС‚. Р•РіРѕ РєСЂРѕРІСЊ РІР·С‹РІР°РµС‚ Рє РјРµСЃС‚Рё!
 };
 
 func void b_assignambientinfos_sfb_13(var C_Npc slf)
@@ -75,7 +75,7 @@ instance INFO_SFB_14_HI(C_Info)
 	condition = info_sfb_14_hi_condition;
 	information = info_sfb_14_hi_info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -86,8 +86,8 @@ func int info_sfb_14_hi_condition()
 
 func void info_sfb_14_hi_info()
 {
-	AI_Output(other,self,"DIA_Jesse_Hallo_15_00");	//Как дела?
-	AI_Output(self,other,"SVM_14_Help");	//Я должен вернуться к своему занятию!
+	AI_Output(other,self,"DIA_Jesse_Hallo_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"SVM_14_Help");	//РЇ РґРѕР»Р¶РµРЅ РІРµСЂРЅСѓС‚СЊСЃСЏ Рє СЃРІРѕРµРјСѓ Р·Р°РЅСЏС‚РёСЋ!
 	AI_StopProcessInfos(self);
 };
 

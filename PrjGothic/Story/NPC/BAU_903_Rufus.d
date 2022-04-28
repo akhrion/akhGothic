@@ -1,7 +1,7 @@
 
 instance BAU_903_Rufus(Npc_Default)
 {
-	name[0] = "Πστσρ";
+	name[0] = "Π ΡƒΡ„ΡƒΡ";
 	npcType = npctype_main;
 	guild = GIL_BAU;
 	level = 4;

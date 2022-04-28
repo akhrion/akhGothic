@@ -1,7 +1,7 @@
 
 instance TPL_1439_GorNaDrak(Npc_Default)
 {
-	name[0] = "Гор На Драк";
+	name[0] = "Р“РѕСЂ РќР° Р”СЂР°Рє";
 	npcType = npctype_main;
 	guild = GIL_TPL;
 	level = 21;

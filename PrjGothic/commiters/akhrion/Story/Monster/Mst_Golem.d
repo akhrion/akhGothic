@@ -1,13 +1,13 @@
 
-//Прописать в функцию получения урона
-//если это каменный голем, то он становится крепче
-//после каждого удара
-//Лор: по мере приближения к сердцу голема, его сила возрастает
-//т.к. исчезает необходимость поддерживать ту часть внешней скорлупы,
-//которую воин с него сбил.
+//РџСЂРѕРїРёСЃР°С‚СЊ РІ С„СѓРЅРєС†РёСЋ РїРѕР»СѓС‡РµРЅРёСЏ СѓСЂРѕРЅР°
+//РµСЃР»Рё СЌС‚Рѕ РєР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј, С‚Рѕ РѕРЅ СЃС‚Р°РЅРѕРІРёС‚СЃСЏ РєСЂРµРїС‡Рµ
+//РїРѕСЃР»Рµ РєР°Р¶РґРѕРіРѕ СѓРґР°СЂР°
+//Р›РѕСЂ: РїРѕ РјРµСЂРµ РїСЂРёР±Р»РёР¶РµРЅРёСЏ Рє СЃРµСЂРґС†Сѓ РіРѕР»РµРјР°, РµРіРѕ СЃРёР»Р° РІРѕР·СЂР°СЃС‚Р°РµС‚
+//С‚.Рє. РёСЃС‡РµР·Р°РµС‚ РЅРµРѕР±С…РѕРґРёРјРѕСЃС‚СЊ РїРѕРґРґРµСЂР¶РёРІР°С‚СЊ С‚Сѓ С‡Р°СЃС‚СЊ РІРЅРµС€РЅРµР№ СЃРєРѕСЂР»СѓРїС‹,
+//РєРѕС‚РѕСЂСѓСЋ РІРѕРёРЅ СЃ РЅРµРіРѕ СЃР±РёР».
 prototype akh_Mst_Default_Golem(C_Npc)
 {
-	name[0] = "Голем";
+	name[0] = "Р“РѕР»РµРј";
 	guild = GIL_GOLEM;
 	level = 100;
 	attribute[ATR_STRENGTH] = 200;
@@ -60,7 +60,7 @@ func void akh_Set_IceGolem_Visuals()
 
 instance akh_StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_stonegolem;
 	protection[PROT_BLUNT] = 75;
 	Set_StoneGolem_Visuals();
@@ -70,7 +70,7 @@ instance akh_StoneGolem(Mst_Default_Golem)
 
 instance akh_SummonedByPC_StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Призванный голем";
+	name[0] = "РџСЂРёР·РІР°РЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	level = 0;
 	Set_StoneGolem_Visuals();
@@ -86,7 +86,7 @@ instance akh_SummonedByPC_StoneGolem(Mst_Default_Golem)
 
 instance akh_SummonedByNPC_StoneGolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	Set_StoneGolem_Visuals();
 	Npc_SetToFistMode(self);
@@ -96,7 +96,7 @@ instance akh_SummonedByNPC_StoneGolem(Mst_Default_Golem)
 
 instance akh_FireGolem(Mst_Default_Golem)
 {
-	name[0] = "Огненный голем";
+	name[0] = "РћРіРЅРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_firegolem;
 	Set_FireGolem_Visuals();
 	Npc_SetToFistMode(self);
@@ -110,7 +110,7 @@ instance akh_FireGolem(Mst_Default_Golem)
 
 instance akh_IceGolem(Mst_Default_Golem)
 {
-	name[0] = "Ледяной голем";
+	name[0] = "Р›РµРґСЏРЅРѕР№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = id_icegolem;
 	Set_IceGolem_Visuals();
 	attribute[ATR_MANA_MAX] = 500;
@@ -126,7 +126,7 @@ instance akh_IceGolem(Mst_Default_Golem)
 
 instance akh_Bridgegolem(Mst_Default_Golem)
 {
-	name[0] = "Каменный голем";
+	name[0] = "РљР°РјРµРЅРЅС‹Р№ РіРѕР»РµРј";
 	aivar[AIV_IMPORTANT] = ID_STONEGOLEM;
 	level = 50;
 	Set_StoneGolem_Visuals();

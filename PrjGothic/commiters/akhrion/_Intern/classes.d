@@ -1,5 +1,5 @@
-//Для передачи глобалок: self, other; в функции используется специальное наименование: slf, oth; нельзя использовать иные: slf_,thr_, и т.д. - аффтор в шоке.. и хотел-бы сказать "ебаный рот", но ограничится, лишь написанием оного.
-//Объявленные в классе константы, не отображаются в автокомплите, однако вродебы вызываются.. я забыл.
+//Р”Р»СЏ РїРµСЂРµРґР°С‡Рё РіР»РѕР±Р°Р»РѕРє: self, other; РІ С„СѓРЅРєС†РёРё РёСЃРїРѕР»СЊР·СѓРµС‚СЃСЏ СЃРїРµС†РёР°Р»СЊРЅРѕРµ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ: slf, oth; РЅРµР»СЊР·СЏ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РёРЅС‹Рµ: slf_,thr_, Рё С‚.Рґ. - Р°С„С„С‚РѕСЂ РІ С€РѕРєРµ.. Рё С…РѕС‚РµР»-Р±С‹ СЃРєР°Р·Р°С‚СЊ "РµР±Р°РЅС‹Р№ СЂРѕС‚", РЅРѕ РѕРіСЂР°РЅРёС‡РёС‚СЃСЏ, Р»РёС€СЊ РЅР°РїРёСЃР°РЅРёРµРј РѕРЅРѕРіРѕ.
+//РћР±СЉСЏРІР»РµРЅРЅС‹Рµ РІ РєР»Р°СЃСЃРµ РєРѕРЅСЃС‚Р°РЅС‚С‹, РЅРµ РѕС‚РѕР±СЂР°Р¶Р°СЋС‚СЃСЏ РІ Р°РІС‚РѕРєРѕРјРїР»РёС‚Рµ, РѕРґРЅР°РєРѕ РІСЂРѕРґРµР±С‹ РІС‹Р·С‹РІР°СЋС‚СЃСЏ.. СЏ Р·Р°Р±С‹Р».
 
 class NOT_AN_EXTENDED_CLASS
 {
@@ -50,35 +50,35 @@ class C_ITEM_EXT
 
 class RESPAWN
 {
-	var int isRespawnRequested;	//если массив приближается к концу, то функция ставит этот флаг,
-									//чтобы другая функция произвела выгрузку старых спавнов..
-									//т.е. что-бы респавны досрочно прошли и освободили место.
-	var int lstInxNAStateBefoReset;	//последнее состояние в котором был inxNA перед сбросом до нуля;
-	var int isArrEmpty;			//если в пуле нет существ, то необходимо переинициализировать некоторые переменные
-	var int instanceID;			//ну как-бы.. это.. это указатель на вашего монстра: Hlp_GetInstanceID(Molerat);
+	var int isRespawnRequested;	//РµСЃР»Рё РјР°СЃСЃРёРІ РїСЂРёР±Р»РёР¶Р°РµС‚СЃСЏ Рє РєРѕРЅС†Сѓ, С‚Рѕ С„СѓРЅРєС†РёСЏ СЃС‚Р°РІРёС‚ СЌС‚РѕС‚ С„Р»Р°Рі,
+									//С‡С‚РѕР±С‹ РґСЂСѓРіР°СЏ С„СѓРЅРєС†РёСЏ РїСЂРѕРёР·РІРµР»Р° РІС‹РіСЂСѓР·РєСѓ СЃС‚Р°СЂС‹С… СЃРїР°РІРЅРѕРІ..
+									//С‚.Рµ. С‡С‚Рѕ-Р±С‹ СЂРµСЃРїР°РІРЅС‹ РґРѕСЃСЂРѕС‡РЅРѕ РїСЂРѕС€Р»Рё Рё РѕСЃРІРѕР±РѕРґРёР»Рё РјРµСЃС‚Рѕ.
+	var int lstInxNAStateBefoReset;	//РїРѕСЃР»РµРґРЅРµРµ СЃРѕСЃС‚РѕСЏРЅРёРµ РІ РєРѕС‚РѕСЂРѕРј Р±С‹Р» inxNA РїРµСЂРµРґ СЃР±СЂРѕСЃРѕРј РґРѕ РЅСѓР»СЏ;
+	var int isArrEmpty;			//РµСЃР»Рё РІ РїСѓР»Рµ РЅРµС‚ СЃСѓС‰РµСЃС‚РІ, С‚Рѕ РЅРµРѕР±С…РѕРґРёРјРѕ РїРµСЂРµРёРЅРёС†РёР°Р»РёР·РёСЂРѕРІР°С‚СЊ РЅРµРєРѕС‚РѕСЂС‹Рµ РїРµСЂРµРјРµРЅРЅС‹Рµ
+	var int instanceID;			//РЅСѓ РєР°Рє-Р±С‹.. СЌС‚Рѕ.. СЌС‚Рѕ СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РІР°С€РµРіРѕ РјРѕРЅСЃС‚СЂР°: Hlp_GetInstanceID(Molerat);
 	var int delay;					//delay between respawns in game minutes;1 game min. == 4 real sec.
 	var int lastRespawnTime;		//last time respawn was; timestamp();
 	const int arrSize = 200;		//
 	var string spMemo[200];		//spawn points stored here; should be equal to the previous field;
 	const int inxNA = 0;					//next inx for write; next where will be saved spawn point;
 	const int inxNE = 0;					//next inx for extracted; next will be respawned spawn point;
-	var int notRespawnedAmount;	//количество неотреспавленных мобов;
-									//Здесь должны быть внутренние функции, но я не пойму как их подвязать.
+	var int notRespawnedAmount;	//РєРѕР»РёС‡РµСЃС‚РІРѕ РЅРµРѕС‚СЂРµСЃРїР°РІР»РµРЅРЅС‹С… РјРѕР±РѕРІ;
+									//Р—РґРµСЃСЊ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РІРЅСѓС‚СЂРµРЅРЅРёРµ С„СѓРЅРєС†РёРё, РЅРѕ СЏ РЅРµ РїРѕР№РјСѓ РєР°Рє РёС… РїРѕРґРІСЏР·Р°С‚СЊ.
 	var func main;					//akh_Respawn();
-	var func memoDeath;			//Вот тут прям. if someone die then trigger akh_memo_death(var C_NPC dead_);
-	var func flush;					//И здеся. я хз. isRespawnRequested then trigger akh_Respawn_cb(instanceID,0);
+	var func memoDeath;			//Р’РѕС‚ С‚СѓС‚ РїСЂСЏРј. if someone die then trigger akh_memo_death(var C_NPC dead_);
+	var func flush;					//Р Р·РґРµСЃСЏ. СЏ С…Р·. isRespawnRequested then trigger akh_Respawn_cb(instanceID,0);
 };
 class RESPAWNN
 {
 	//public
 	var func insertNew;			//Func which allocate instanceID, SP and dTimestamp
 	var func extractOne;			//Func which extract those, whos spawn time is reaches
-	var func isTimeForSpawn;		//Функция проверки наступления времени спавна.
+	var func isTimeForSpawn;		//Р¤СѓРЅРєС†РёСЏ РїСЂРѕРІРµСЂРєРё РЅР°СЃС‚СѓРїР»РµРЅРёСЏ РІСЂРµРјРµРЅРё СЃРїР°РІРЅР°.
 	//private
 	var int instanceID[200];		//InstanceID's of a spawning monster
 	var string SP[200];				//Spawn Points
 	var int dTimestamp[200];		//Death timestamps
-	var int spawnDelay[200];		//Delay of the monster.. может не совпадать со стандартным временем спавна монстра, что приведёт к увеличению или уменьшению времени спавна данной особи вида.
+	var int spawnDelay[200];		//Delay of the monster.. РјРѕР¶РµС‚ РЅРµ СЃРѕРІРїР°РґР°С‚СЊ СЃРѕ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рј РІСЂРµРјРµРЅРµРј СЃРїР°РІРЅР° РјРѕРЅСЃС‚СЂР°, С‡С‚Рѕ РїСЂРёРІРµРґС‘С‚ Рє СѓРІРµР»РёС‡РµРЅРёСЋ РёР»Рё СѓРјРµРЅСЊС€РµРЅРёСЋ РІСЂРµРјРµРЅРё СЃРїР°РІРЅР° РґР°РЅРЅРѕР№ РѕСЃРѕР±Рё РІРёРґР°.
 };
 instance resp(RESPAWNN)
 {

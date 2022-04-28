@@ -32,22 +32,22 @@ func void Info_Erpresser_Info()
 	eqarmor2 = Npc_GetEquippedArmor(hero);
 	if(Hlp_IsItem(eqarmor2,org2n) || Hlp_IsItem(eqarmor2,org2l))
 	{
-		AI_Output(self,other,"SVM_13_GetOutOfHere");	//Сгинь! Здесь тебе не место!
+		AI_Output(self,other,"SVM_13_GetOutOfHere");	//РЎРіРёРЅСЊ! Р—РґРµСЃСЊ С‚РµР±Рµ РЅРµ РјРµСЃС‚Рѕ!
 		self.aivar[AIV_HAS_ERPRESSED] = 2;
 		AI_StopProcessInfos(self);
 	}
 	else
 	{
-		AI_Output(self,other,"Info_Erpresser_Info_13_01");	//Если ты хочешь пройти, тебе придется заплатить 10 кусков руды, иначе ничего не выйдет, понял?
+		AI_Output(self,other,"Info_Erpresser_Info_13_01");	//Р•СЃР»Рё С‚С‹ С…РѕС‡РµС€СЊ РїСЂРѕР№С‚Рё, С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ Р·Р°РїР»Р°С‚РёС‚СЊ 10 РєСѓСЃРєРѕРІ СЂСѓРґС‹, РёРЅР°С‡Рµ РЅРёС‡РµРіРѕ РЅРµ РІС‹Р№РґРµС‚, РїРѕРЅСЏР»?
 		Info_ClearChoices(Info_Erpresser);
-		Info_AddChoice(Info_Erpresser,"Кажется, настало время проучить тебя!",Info_Erpresser_Choice_AufsMaul);
+		Info_AddChoice(Info_Erpresser,"РљР°Р¶РµС‚СЃСЏ, РЅР°СЃС‚Р°Р»Рѕ РІСЂРµРјСЏ РїСЂРѕСѓС‡РёС‚СЊ С‚РµР±СЏ!",Info_Erpresser_Choice_AufsMaul);
 		if(Npc_HasItems(other,ItMiNugget) >= 10)
 		{
-			Info_AddChoice(Info_Erpresser,"Вот десять кусков.",Info_Erpresser_Choice_Zahlen);
+			Info_AddChoice(Info_Erpresser,"Р’РѕС‚ РґРµСЃСЏС‚СЊ РєСѓСЃРєРѕРІ.",Info_Erpresser_Choice_Zahlen);
 		}
 		else
 		{
-			Info_AddChoice(Info_Erpresser,"Э... у меня сейчас нет десяти кусков...",info_erpresser_choice_noore);
+			Info_AddChoice(Info_Erpresser,"Р­... Сѓ РјРµРЅСЏ СЃРµР№С‡Р°СЃ РЅРµС‚ РґРµСЃСЏС‚Рё РєСѓСЃРєРѕРІ...",info_erpresser_choice_noore);
 		};
 	};
 };
@@ -56,8 +56,8 @@ func void Info_Erpresser_Choice_AufsMaul()
 {
 	var C_Npc coerpresser;
 	coerpresser = Hlp_GetNpc(ORG_889_CoErpresser);
-	AI_Output(other,self,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_15_01");	//Кажется, настало время проучить тебя!
-	AI_Output(self,other,"Info_Erpresser_Choice_Zahlen_13_02");	//Вот не везет.
+	AI_Output(other,self,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_15_01");	//РљР°Р¶РµС‚СЃСЏ, РЅР°СЃС‚Р°Р»Рѕ РІСЂРµРјСЏ РїСЂРѕСѓС‡РёС‚СЊ С‚РµР±СЏ!
+	AI_Output(self,other,"Info_Erpresser_Choice_Zahlen_13_02");	//Р’РѕС‚ РЅРµ РІРµР·РµС‚.
 	GOPSTOPPED_BRIDGE = TRUE;
 	self.aivar[AIV_HAS_ERPRESSED] = 2;
 	AI_StopProcessInfos(self);
@@ -76,9 +76,9 @@ func void Info_Erpresser_Choice_Zahlen()
 {
 	var C_Npc coerpresser;
 	coerpresser = Hlp_GetNpc(ORG_889_CoErpresser);
-	AI_Output(other,self,"Info_Erpresser_Choice_Zahlen_15_01");	//Вот десять кусков.
-	b_printtrademsg1("Отдано руды: 10");
-	AI_Output(self,other,"Info_Erpresser_Choice_AufsMaul_13_02");	//Спасибо. Ты меня выручил.
+	AI_Output(other,self,"Info_Erpresser_Choice_Zahlen_15_01");	//Р’РѕС‚ РґРµСЃСЏС‚СЊ РєСѓСЃРєРѕРІ.
+	b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 10");
+	AI_Output(self,other,"Info_Erpresser_Choice_AufsMaul_13_02");	//РЎРїР°СЃРёР±Рѕ. РўС‹ РјРµРЅСЏ РІС‹СЂСѓС‡РёР».
 	self.aivar[AIV_HAS_ERPRESSED] = 1;
 	B_GiveInvItems(other,self,ItMiNugget,10);
 	AI_StopProcessInfos(self);
@@ -88,8 +88,8 @@ func void info_erpresser_choice_noore()
 {
 	var C_Npc coerpresser;
 	coerpresser = Hlp_GetNpc(ORG_889_CoErpresser);
-	AI_Output(other,self,"Info_Erpresser_Choice_Zahlen_15_03");	//Э... у меня сейчас нет десяти кусков...
-	AI_Output(self,other,"Info_Erpresser_Choice_Zahlen_13_04");	//Какая жалость...
+	AI_Output(other,self,"Info_Erpresser_Choice_Zahlen_15_03");	//Р­... Сѓ РјРµРЅСЏ СЃРµР№С‡Р°СЃ РЅРµС‚ РґРµСЃСЏС‚Рё РєСѓСЃРєРѕРІ...
+	AI_Output(self,other,"Info_Erpresser_Choice_Zahlen_13_04");	//РљР°РєР°СЏ Р¶Р°Р»РѕСЃС‚СЊ...
 	GOPSTOPPED_BRIDGE = TRUE;
 	self.aivar[AIV_HAS_ERPRESSED] = 2;
 	AI_StopProcessInfos(self);
@@ -127,7 +127,7 @@ func int Info_BereitsErpresst_Condition()
 
 func void Info_BereitsErpresst_Info()
 {
-	AI_Output(self,other,"Info_BereitsErpresst_Info_13_02");	//Ты заплатил. Проходи, пока я не передумал.
+	AI_Output(self,other,"Info_BereitsErpresst_Info_13_02");	//РўС‹ Р·Р°РїР»Р°С‚РёР». РџСЂРѕС…РѕРґРё, РїРѕРєР° СЏ РЅРµ РїРµСЂРµРґСѓРјР°Р».
 	AI_StopProcessInfos(self);
 };
 
@@ -153,7 +153,7 @@ func int Info_BereitsAufsMaul_Condition()
 
 func void Info_BereitsAufsMaul_Info()
 {
-	AI_Output(self,other,"Info_BereitsAufsMaul_Info_13_02");	//Пошел отсюда, пока я не рассердился!
+	AI_Output(self,other,"Info_BereitsAufsMaul_Info_13_02");	//РџРѕС€РµР» РѕС‚СЃСЋРґР°, РїРѕРєР° СЏ РЅРµ СЂР°СЃСЃРµСЂРґРёР»СЃСЏ!
 	AI_StopProcessInfos(self);
 };
 

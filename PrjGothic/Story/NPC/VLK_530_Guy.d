@@ -1,7 +1,7 @@
 
 instance VLK_530_Guy(Npc_Default)
 {
-	name[0] = "√‡È";
+	name[0] = "–ì–∞–π";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 2;

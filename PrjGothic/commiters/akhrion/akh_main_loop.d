@@ -1,3 +1,69 @@
+var C_ITEM itm;
+func void akh_OverlayTest()
+{
+	if(Npc_HasReadiedWeapon(hero))
+	{
+		itm = Npc_GetReadiedWeapon(hero);
+		if(itm.damagetype == DAM_BLUNT)
+		{
+			msgSI("DAM_BLUNT: ",itm.damagetype,80,-1);
+		};
+		if(itm.damagetype == DAM_EDGE)
+		{
+			msgSI("DAM_EDGE: ",itm.damagetype,80,52);
+		};
+		if(itm.damagetype == DAM_EDGE + DAM_BLUNT)
+		{
+			msgSI("DAM_EDGE + DAM_BLUNT: ",itm.damagetype,80,54);
+		};
+		if(itm.damagetype == (DAM_EDGE | DAM_BLUNT))
+		{
+			msgSI("DAM_EDGE | DAM_BLUNT: ",itm.damagetype,80,56);
+		};
+		if(itm.damagetype == (DAM_EDGE || DAM_BLUNT))
+		{
+			msgSI("DAM_EDGE || DAM_BLUNT: ",itm.damagetype,80,58);
+		};
+		if(isFlagsContainCategorie(itm.damagetype,DAM_BLUNT))
+		{
+			msgSI("damagetype contain DAM_BLUNT: ",itm.damagetype,80,60);			
+		};
+	};
+	msgSI("last dist: ",hero.aivar[AIV_LASTDISTTOWP],0,50);
+	msgSI("OCC_GATE: ",Npc_GetDistToWP(hero,"OCC_GATE"),0,52);
+	msgSI("OCC_GATE_INSIDE: ",Npc_GetDistToWP(hero,"OCC_GATE_INSIDE"),0,54);
+	
+	msgSI("FIREMASTER Skill0058: ",Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER),0,58);
+	msgSI("FIREMASTER Value0060: ",Npc_GetTalentValue(hero,NPC_TALENT_FIREMASTER),0,60);
+	msgI(Npc_GetBodyState(hero),0,62);
+
+	msgSS("MOB: ",Npc_GetDetectedMob(hero),0,68);
+	if(Npc_GetTarget(hero))
+	{
+//msgSI("WarDmg: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_EDGE),		80,40);
+//msgSI("Fire: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_FIRE),		80,42);
+//msgSI("Magic: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_MAGIC),	80,44);
+//msgSI("HuntDmg: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_POINT),	80,46);
+		msgSI("ID: ",other.id,0,70);
+		msgSS("SP: ",other.spawnPoint,0,72);
+		msgSS("WP: ",other.wp,0,74);
+	}
+	else
+	{
+		msg("ID: target isn't exist",0,70);
+		msg("SP: target isn't exist",0,72);
+		msg("WP: target isn't exist",0,74);
+	};
+	msgSS("Self: ",self.name,0,76);	msgSI("sense_range: ",other.senses_range,17,76);
+	msgSS("Other: ",other.name,0,78);	msgSI("Dist: ",Npc_GetDistToNpc(hero,other),17,78);
+										msgSI("PCISSTRONGER: ",other.aivar[AIV_PCISSTRONGER],17,80);
+										msgSI("BEENATTACKED: ",other.aivar[AIV_BEENATTACKED],17,82);
+										
+	msgSS("Victim: ",victim.name,0,80);
+	msgSI("ScavengerInstID: ",Hlp_GetInstanceID(Scavenger),0,82);
+	msgSI("MoleratInstID: ",Hlp_GetInstanceID(Molerat),0,84);
+};
+
 func void josefFight()
 {
 	var C_NPC josef;
@@ -109,7 +175,7 @@ func void AssessPerson()
 		Npc_IsDead(other)
 	)
 	{
-		B_LogEntry(Baloros_Waffe,"������ �� ������� ��������� �� ��������� �����. ������ � �� �����, ����� ������ �� ������ ���.");
+		B_LogEntry(Baloros_Waffe,"Балоро не пережил нападение на Свободную шахту. Теперь я не узнаю, какое оружие он обещал мне.");
 //		Log_SetTopicStatus(Baloros_Waffe,LOG_FAILED);
 //		SLD_753_Baloro_SC_besorgt_den_Kram = LOG_FAILED;
 
@@ -130,17 +196,67 @@ func void RingOfTemporalisPower_Handler()
 };
 func void akh_Regeneration()
 {
+//	PrintSI("aaaa",SC_GetState());
+//	PrintSI("bbbb",Satiety_State_Normal);
+	if(SC_GetState() == Satiety_State_Overeat)
+	{
+		//А как ты себя чувствуешь, когда обожрёшься? Тебе хочется что-то делать?
+		//Я лично, повевеситься готов в такие моменты.. омг..
+		Npc_DecreaseHP(hero,1);
+		return;
+	}
+	else if(SC_GetState() == Satiety_State_Good)
+	{
+		Npc_RegenHP(hero,2);
+		return;
+	}
+	else if(SC_GetState() == Satiety_State_Normal)
+	{
+//		Print("regen+1");
+		Npc_RegenHP(hero,1);
+		return;
+	};
+};
+func void akh_Buff_Hydration()
+{
+	if(getTimestamp() > SC_Buff_GTSEnd_Hydration)
+	{
+		SC_Buff_bHydration = false;
+	};
+};
+func void akh_Buff_Exp()
+{
+	if(
+		Achieve_bHoneycombLover
+	&&	Achieve_timeHoneycombLover + HoneycombLover_ExpPeriod < getTimestamp()
+	)
+	{
+		Achieve_timeHoneycombLover = getTimestamp();
+		B_GiveXP(100);
+	};
 };
 func void akh_Buff()
 {
-	if(
-		Buff_iHeal1
-	&&	Npc_GetHPMax(hero) != Npc_GetHP(hero)
-	)
+	if(Npc_GetHPMax(hero) > Npc_GetHP(hero))
 	{
-		Buff_iHeal1 -=1;
-		Npc_IncreaseHP(hero,Buff_Heal1);
+		if(Buff_Heal1_counter)
+		{
+			Buff_Heal1_counter -=1;
+			Npc_IncreaseHP(hero,Buff_Heal1_Val);
+		};
+		if(Buff_Heal2_counter)
+		{
+			Buff_Heal2_counter -=1;
+			Npc_IncreaseHP(hero,Buff_Heal2_Val);
+		};
+		if(Buff_Heal3_counter)
+		{
+			Buff_Heal3_counter -=1;
+			Npc_IncreaseHP(hero,Buff_Heal3_Val);
+		};
 	};
+	akh_Buff_Hydration();
+	akh_Buff_Exp();
 };
 
 // //////////////////////
@@ -282,79 +398,246 @@ func void akh_SurpriseSystem()
 	};
 	Surprise_Refresh();
 };
+func void akh_ShowHeroProtection()
+{
+	msgSI("Защита от кулаков: ", hero.protection[1],0,20);
+	msgSI("Защита от режущего: ", hero.protection[2],0,22);
+	msgSI("Защита от стрел: ", hero.protection[6],0,24);
+	msgSI("Защита от огня: ", hero.protection[3],0,26);
+	msgSI("Защита от магии: ", hero.protection[5],0,28);
+	msgSI("Защита от падения: ", hero.protection[7] / 3,0,30);
+};
+func void akh_ShowHeroParameters()
+{
+	msgSI("Выносливость: ", SC_Stamina,0,36);
+};
+func void SC_Stamina_Regeneration()
+{
+	if(SC_Stamina_Max > SC_Stamina){SC_Stamina +=1;};
+};
+func void akh_Satiety()
+{
+	//Периодически уменьшает сытость ГГ
+	//Каждые Satiety_Decreasing_Per_Time секунд
+	if(
+		Npc_GetBodyState(hero) == BS_STAND
+	|| Npc_GetBodyState(hero) == BS_DEAD
+	|| SC_State_IsDeadly
+	){return;};
+//	if(Npc_HasBodyFlag(hero,BS_STAND)){return;};
+	if(SC_Buff_bHydration){return;};
+	if(SC_Jumped()){SC_Satiety_Increase(1);};
+//	if(SC_Jumped()){SC_Satiety_Counter +=1;};
+	SC_Satiety_Increase(1);
+//	SC_Satiety_Counter +=1;
+	msgSI("SC_Satiety_Counter: ", SC_Satiety_Counter,0,34);
+	SC_Satiety_Count();
+};
+func void akh_SatietyState()
+{
+	if(!SC_Satiety_State_isChange()){return;};
+	SC_SetState_Cur();
+	if(SC_GetState() == Satiety_State_Overeat)
+	{
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_GetState() == Satiety_State_Good)
+	{
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_GetState() == Satiety_State_Normal)
+	{
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_GetState() == Satiety_State_Hunger)
+	{
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_GetState() == Satiety_State_Starvation)
+	{
+		Mdl_ApplyOverlayMds(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_GetState() == Satiety_State_Deadly)
+	{
+		Mdl_ApplyOverlayMds(hero,"HUMANS_DRUNKEN.MDS");
+		Npc_SetHP(hero,1);
+	};
+	return;
+	if(SC_Satiety > Satiety_Overeat)
+	{
+		SC_SetState(Satiety_Overeat);
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_Satiety > Satiety_Good)
+	{
+		SC_SetState(Satiety_Good);
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_Satiety > Satiety_Normal)
+	{
+		SC_SetState(Satiety_Normal);
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_Satiety > Satiety_Hunger)
+	{
+		SC_SetState(Satiety_Hunger);
+		Mdl_RemoveOverlayMDS(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_Satiety > Satiety_Starvation)
+	{
+		PrintI(2);
+		SC_SetState(Satiety_Starvation);
+		Mdl_ApplyOverlayMds(hero,"HUMANS_DRUNKEN.MDS");
+	}
+	else if(SC_Satiety == Satiety_Deadly)
+	{
+		PrintI(3);
+		SC_SetState(Satiety_Deadly);
+		Mdl_ApplyOverlayMds(hero,"HUMANS_DRUNKEN.MDS");
+		Npc_SetHP(hero,1);
+	};
+};
 // //////////////////////
 // //////////////////////
 // //////////////////////
+func void akh_ShowSatietyState()
+{
+	if(SC_GetState() == Satiety_State_Overeat){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[0],0,32);}
+	else if(SC_GetState() == Satiety_State_Good){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[1],0,32);}
+	else if(SC_GetState() == Satiety_State_Normal){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[2],0,32);}
+	else if(SC_GetState() == Satiety_State_Hunger){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[3],0,32);}
+	else if(SC_GetState() == Satiety_State_Starvation){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[4],0,32);}
+	else if(SC_GetState() == Satiety_State_Deadly){msgSS(NAME_SC_PARAM_SATIETY, NAME_SC_PARAM_SATIETY_V[5],0,32);};
+};
+func void akh_SC_DmgManager()
+{
+	if(SC_GetState() == Satiety_State_Overeat)
+	{
+		SC_DmgManager_SetOvereat();
+	}
+	else if(SC_GetState() == Satiety_State_Good)
+	{
+		SC_DmgManager_SetGood();
+	}
+	else if(SC_GetState() == Satiety_State_Normal)
+	{
+		SC_DmgManager_SetNormal();
+	}
+	else if(SC_GetState() == Satiety_State_Hunger)
+	{
+		SC_DmgManager_SetHunger();
+	}
+	else if(SC_GetState() == Satiety_State_Starvation)
+	{
+		SC_DmgManager_SetStarvation();
+	}
+	else if(SC_GetState() == Satiety_State_Deadly)
+	{
+		SC_DmgManager_SetDeadly();
+	};
+};
+func void akh_Overlay()
+{
+	akh_ShowHeroProtection();
+	akh_ShowSatietyState();
+	akh_ShowHeroParameters();
+};
+func void akh_Achieve()
+{
+	Achieve_Jumper();
+	Achieve_Forsage();
+};
+var int tone;
+var int one;
+func void akh_maintest()
+{
+	akh_OverlayTest();
+	return;
+	if(Npc_IsInFightMode(hero,FMODE_FIST))
+	{
+		if(!one)
+		{
+			one = true;
+			if(Npc_IsDead(Non_1640_Killer))
+			{
+				Wld_InsertNpc(Non_1640_Killer,Npc_GetNearestWP(hero));
+			};
+		};
+	}
+	else
+	{
+		if(!Npc_IsDead(Non_1640_Killer))
+		{
+			AI_Teleport(Non_1640_Killer,Npc_GetNearestWP(hero));
+		};
+		if(one)
+		{
+			one = false;
+		};
+	};
+	return;
+	if(Npc_GetTarget(hero))
+	{
+		if(tone){return;};
+		tone = true;
+		one +=1;	
+		if(!Npc_HasBleeding(other))
+		{
+//			PrintSS("set BLEEDING: ", other.name);
+//			other.aivar[AIV_MM_VisualType] += VT_BLOODY;
+		};
+	}
+	else
+	{
+		tone = false;
+	};
+};
+//Функция проверяет позицию ГГ в мире
+func void akh_SC_Position()
+{
+	if(!SC_WasInOldCamp)
+	{
+		if(
+			Npc_GetDistToWP(hero,"OCR_MAINGATE_SQUARE") < 1000
+		||	Npc_GetDistToWP(hero,"OCR_NORTHGATE_RAMP_ATOP") < 300
+		){SC_WasInOldCamp = true;};
+	};
+	if(!SC_WasInNewCamp)
+	{
+		if(Npc_GetDistToWP(hero,"NC_DAM") < 4000){SC_WasInNewCamp = true;};
+	};
+	if(!SC_WasInPsiCamp)
+	{
+		if(Npc_GetDistToWP(hero,"PSI_PLACE_1") < 4000){SC_WasInPsiCamp = true;};
+	};
+};
+
 func void akhrion_Loop(){
+	EVENT_Killers();
+	
+	akh_maintest();
+	if(!SC_IsAlive()){return;};
+	akh_SC_Position();
 	josefFight();
 	RingOfTemporalisPower_Handler();
-	akh_Regeneration();
 	akh_Buff();
+	akh_Satiety();
+	akh_SatietyState();
+//	akh_SC_DmgManager();
+	akh_Regeneration();
+	SC_Stamina_Regeneration();
+	akh_Overlay();
+	akh_Achieve();
 //	akh_SurpriseSystem();
 //	return;
 //	Print("MAIN LOOP");
 //	akh_RescaleDamage(hero);
-	if(Npc_HasReadiedWeapon(hero))
-	{
-		var C_ITEM itm;
-		itm = Npc_GetReadiedWeapon(hero);
-		if(itm.damagetype == DAM_BLUNT)
-		{
-			msgSI("DAM_BLUNT: ",itm.damagetype,-1,-1);
-		};
-		if(itm.damagetype == DAM_EDGE)
-		{
-			msgSI("DAM_EDGE: ",itm.damagetype,-1,52);
-		};
-		if(itm.damagetype == DAM_EDGE + DAM_BLUNT)
-		{
-			msgSI("DAM_EDGE + DAM_BLUNT: ",itm.damagetype,-1,54);
-		};
-		if(itm.damagetype == (DAM_EDGE | DAM_BLUNT))
-		{
-			msgSI("DAM_EDGE | DAM_BLUNT: ",itm.damagetype,-1,56);
-		};
-		if(itm.damagetype == (DAM_EDGE || DAM_BLUNT))
-		{
-			msgSI("DAM_EDGE || DAM_BLUNT: ",itm.damagetype,-1,58);
-		};
-		if(isFlagsContainCategorie(itm.damagetype,DAM_BLUNT))
-		{
-			msgSI("damagetype contain DAM_BLUNT: ",itm.damagetype,-1,60);			
-		};
-	};
-
-	msgSI("last dist: ",hero.aivar[AIV_LASTDISTTOWP],0,50);
-	msgSI("OCC_GATE: ",Npc_GetDistToWP(hero,"OCC_GATE"),0,52);
-	msgSI("OCC_GATE_INSIDE: ",Npc_GetDistToWP(hero,"OCC_GATE_INSIDE"),0,54);
-	
-	msgSI("FIREMASTER Skill0058: ",Npc_GetTalentSkill(hero,NPC_TALENT_FIREMASTER),0,58);
-	msgSI("FIREMASTER Value0060: ",Npc_GetTalentValue(hero,NPC_TALENT_FIREMASTER),0,60);
-	msgI(Npc_GetBodyState(hero),0,62);
-
-	msgSS("MOB: ",Npc_GetDetectedMob(hero),0,68);
-	if(Npc_GetTarget(hero))
-	{
-//msgSI("WarDmg: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_EDGE),		80,40);
-//msgSI("Fire: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_FIRE),		80,42);
-//msgSI("Magic: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_MAGIC),	80,44);
-//msgSI("HuntDmg: ", 	C_Npc_GetDamageRecieved(other,DAM_INDEX_POINT),	80,46);
-		msgSI("ID: ",other.id,0,70);
-		msgSS("SP: ",other.spawnPoint,0,72);
-		msgSS("WP: ",other.wp,0,74);
-	}
-	else
-	{
-		msg("ID: target isn't exist",0,70);
-		msg("SP: target isn't exist",0,72);
-		msg("WP: target isn't exist",0,74);
-	};
-	msgSS("Self: ",self.name,0,76);	msgSI("sense_range: ",other.senses_range,17,76);
-	msgSS("Other: ",other.name,0,78);	msgSI("Dist: ",Npc_GetDistToNpc(hero,other),17,78);
-										msgSI("PCISSTRONGER: ",other.aivar[AIV_PCISSTRONGER],17,80);
-										msgSI("BEENATTACKED: ",other.aivar[AIV_BEENATTACKED],17,82);
-										
-	msgSS("Victim: ",victim.name,0,80);
-	msgSI("ScavengerInstID: ",Hlp_GetInstanceID(Scavenger),0,82);
-	msgSI("MoleratInstID: ",Hlp_GetInstanceID(Molerat),0,84);
 };
+
+
+//TODO
+//задание на преданность от Диего только после выполнения пары поручений по лагерю.
+//добавить больших кротокрысов
+//экспа за собирательство
+//рескейл експы в зависимости от плейстайла
+//попрыгунчик

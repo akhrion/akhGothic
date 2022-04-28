@@ -1,7 +1,7 @@
 
 instance GRD_260_Drake(Npc_Default)
 {
-	name[0] = "Δπεικ";
+	name[0] = "Π”Ρ€ΠµΠΉΠΊ";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 4;

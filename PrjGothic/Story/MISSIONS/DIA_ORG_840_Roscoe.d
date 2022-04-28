@@ -28,7 +28,7 @@ instance DIA_Roscoe_BringList(C_Info)
 	condition = DIA_Roscoe_BringList_Condition;
 	information = DIA_Roscoe_BringList_Info;
 	permanent = 0;
-	description = "У меня есть список припасов для Старой шахты.";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.";
 };
 
 
@@ -42,27 +42,27 @@ func int DIA_Roscoe_BringList_Condition()
 
 func void DIA_Roscoe_BringList_Info()
 {
-	AI_Output(other,self,"DIA_Roscoe_BringList_15_00");	//У меня есть список припасов для Старой шахты.
-	AI_Output(self,other,"DIA_Roscoe_BringList_10_01");	//Неплохо. Как ты его достал?
+	AI_Output(other,self,"DIA_Roscoe_BringList_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ СЃРїРёСЃРѕРє РїСЂРёРїР°СЃРѕРІ РґР»СЏ РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹.
+	AI_Output(self,other,"DIA_Roscoe_BringList_10_01");	//РќРµРїР»РѕС…Рѕ. РљР°Рє С‚С‹ РµРіРѕ РґРѕСЃС‚Р°Р»?
 	if(Npc_KnowsInfo(hero,stt_301_ian_getlist))
 	{
-		AI_Output(other,self,"DIA_Roscoe_BringList_15_02");	//Его дал мне Ян.
+		AI_Output(other,self,"DIA_Roscoe_BringList_15_02");	//Р•РіРѕ РґР°Р» РјРЅРµ РЇРЅ.
 	}
 	else
 	{
-		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//Ну...
+		AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_01");	//РќСѓ...
 	};
 	if(hero.guild != GIL_ORG)
 	{
-		AI_Output(self,other,"DIA_Roscoe_BringList_10_03");	//Ты смелый! Тебя прислали испытать меня, ведь так? Торус должно быть уже сходит с ума, я уверен.
+		AI_Output(self,other,"DIA_Roscoe_BringList_10_03");	//РўС‹ СЃРјРµР»С‹Р№! РўРµР±СЏ РїСЂРёСЃР»Р°Р»Рё РёСЃРїС‹С‚Р°С‚СЊ РјРµРЅСЏ, РІРµРґСЊ С‚Р°Рє? РўРѕСЂСѓСЃ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ СѓР¶Рµ СЃС…РѕРґРёС‚ СЃ СѓРјР°, СЏ СѓРІРµСЂРµРЅ.
 		if(Npc_KnowsInfo(hero,Info_Diego_BringList_Offer))
 		{
-			AI_Output(other,self,"DIA_Roscoe_BringList_15_04");	//Я получил задание от Диего.
-			AI_Output(self,other,"DIA_Roscoe_BringList_10_05");	//А Диего приказывает Торус.
+			AI_Output(other,self,"DIA_Roscoe_BringList_15_04");	//РЇ РїРѕР»СѓС‡РёР» Р·Р°РґР°РЅРёРµ РѕС‚ Р”РёРµРіРѕ.
+			AI_Output(self,other,"DIA_Roscoe_BringList_10_05");	//Рђ Р”РёРµРіРѕ РїСЂРёРєР°Р·С‹РІР°РµС‚ РўРѕСЂСѓСЃ.
 		};
-		AI_Output(other,self,"DIA_Roscoe_BringList_15_06");	//Так я могу пройти?
+		AI_Output(other,self,"DIA_Roscoe_BringList_15_06");	//РўР°Рє СЏ РјРѕРіСѓ РїСЂРѕР№С‚Рё?
 	};
-	AI_Output(self,other,"DIA_Roscoe_BringList_10_07");	//Да, проходи! Ларс не поверит своим глазам.
+	AI_Output(self,other,"DIA_Roscoe_BringList_10_07");	//Р”Р°, РїСЂРѕС…РѕРґРё! Р›Р°СЂСЃ РЅРµ РїРѕРІРµСЂРёС‚ СЃРІРѕРёРј РіР»Р°Р·Р°Рј.
 	self.aivar[AIV_PASSGATE] = TRUE;
 };
 
@@ -74,7 +74,7 @@ instance DIA_Roscoe_Mordrag(C_Info)
 	condition = DIA_Roscoe_Mordrag_Condition;
 	information = DIA_Roscoe_Mordrag_Info;
 	important = 0;
-	description = "Меня прислал Мордраг.";
+	description = "РњРµРЅСЏ РїСЂРёСЃР»Р°Р» РњРѕСЂРґСЂР°Рі.";
 };
 
 
@@ -88,14 +88,14 @@ func int DIA_Roscoe_Mordrag_Condition()
 
 func void DIA_Roscoe_Mordrag_Info()
 {
-	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_00");	//Меня прислал Мордраг.
-	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_01");	//Его уже давно здесь никто не видел. Похоже на то, что он переметнулся к Старому лагерю.
-	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_02");	//Он показал мне дорогу сюда.
-	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_03");	//Мордраг вернулся? Если встретишь его, то передай, что Ларс хочет видеть его.
-	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_04");	//Мордраг передал кое-что для Ларса.
-	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_05");	//Что?
-	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_06");	//Кольцо.
-	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_07");	//Наверняка дорогая вещь... Хорошо, можешь увидеться с ним.
+	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_00");	//РњРµРЅСЏ РїСЂРёСЃР»Р°Р» РњРѕСЂРґСЂР°Рі.
+	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_01");	//Р•РіРѕ СѓР¶Рµ РґР°РІРЅРѕ Р·РґРµСЃСЊ РЅРёРєС‚Рѕ РЅРµ РІРёРґРµР». РџРѕС…РѕР¶Рµ РЅР° С‚Рѕ, С‡С‚Рѕ РѕРЅ РїРµСЂРµРјРµС‚РЅСѓР»СЃСЏ Рє РЎС‚Р°СЂРѕРјСѓ Р»Р°РіРµСЂСЋ.
+	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_02");	//РћРЅ РїРѕРєР°Р·Р°Р» РјРЅРµ РґРѕСЂРѕРіСѓ СЃСЋРґР°.
+	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_03");	//РњРѕСЂРґСЂР°Рі РІРµСЂРЅСѓР»СЃСЏ? Р•СЃР»Рё РІСЃС‚СЂРµС‚РёС€СЊ РµРіРѕ, С‚Рѕ РїРµСЂРµРґР°Р№, С‡С‚Рѕ Р›Р°СЂСЃ С…РѕС‡РµС‚ РІРёРґРµС‚СЊ РµРіРѕ.
+	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_04");	//РњРѕСЂРґСЂР°Рі РїРµСЂРµРґР°Р» РєРѕРµ-С‡С‚Рѕ РґР»СЏ Р›Р°СЂСЃР°.
+	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_05");	//Р§С‚Рѕ?
+	AI_Output(other,self,"DIA_Roscoe_Mordrag_15_06");	//РљРѕР»СЊС†Рѕ.
+	AI_Output(self,other,"DIA_Roscoe_Mordrag_10_07");	//РќР°РІРµСЂРЅСЏРєР° РґРѕСЂРѕРіР°СЏ РІРµС‰СЊ... РҐРѕСЂРѕС€Рѕ, РјРѕР¶РµС€СЊ СѓРІРёРґРµС‚СЊСЃСЏ СЃ РЅРёРј.
 	self.aivar[AIV_PASSGATE] = TRUE;
 };
 
@@ -107,7 +107,7 @@ instance DIA_Roscoe_WannaJoin(C_Info)
 	condition = DIA_Roscoe_WannaJoin_Condition;
 	information = DIA_Roscoe_WannaJoin_Info;
 	permanent = 0;
-	description = "Я хочу присоединиться к вам.";
+	description = "РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.";
 };
 
 
@@ -121,8 +121,8 @@ func int DIA_Roscoe_WannaJoin_Condition()
 
 func void DIA_Roscoe_WannaJoin_Info()
 {
-	AI_Output(other,self,"DIA_Roscoe_WannaJoin_15_00");	//Я хочу присоединиться к вам.
-	AI_Output(self,other,"DIA_Roscoe_WannaJoin_10_01");	//Ты не один такой. Если хочешь пройти, тебе придется предложить нечто особенное.
+	AI_Output(other,self,"DIA_Roscoe_WannaJoin_15_00");	//РЇ С…РѕС‡Сѓ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РІР°Рј.
+	AI_Output(self,other,"DIA_Roscoe_WannaJoin_10_01");	//РўС‹ РЅРµ РѕРґРёРЅ С‚Р°РєРѕР№. Р•СЃР»Рё С…РѕС‡РµС€СЊ РїСЂРѕР№С‚Рё, С‚РµР±Рµ РїСЂРёРґРµС‚СЃСЏ РїСЂРµРґР»РѕР¶РёС‚СЊ РЅРµС‡С‚Рѕ РѕСЃРѕР±РµРЅРЅРѕРµ.
 };
 
 
@@ -139,7 +139,10 @@ instance DIA_Roscoe_ComeAgain(C_Info)
 
 func int DIA_Roscoe_ComeAgain_Condition()
 {
-	if(((Npc_HasItems(other,TheList) >= 1) && Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe)) || (Npc_KnowsInfo(hero,Org_826_Mordrag_AtNewcamp) && Npc_KnowsInfo(hero,ORG_801_Lares_BringList)))
+	if(
+		((Npc_HasItems(hero,TheList) >= 1)
+	&&	Npc_KnowsInfo(hero,ORG_801_Lares_MordragSentMe))
+	|| (Npc_KnowsInfo(hero,Org_826_Mordrag_AtNewcamp) && Npc_KnowsInfo(hero,ORG_801_Lares_BringList)))
 	{
 		return 1;
 	};
@@ -147,7 +150,7 @@ func int DIA_Roscoe_ComeAgain_Condition()
 
 func void DIA_Roscoe_ComeAgain_Info()
 {
-	AI_Output(self,other,"DIA_Roscoe_ComeAgain_10_00");	//Опять ты.
+	AI_Output(self,other,"DIA_Roscoe_ComeAgain_10_00");	//РћРїСЏС‚СЊ С‚С‹.
 };
 
 
@@ -175,9 +178,9 @@ func int Info_Roscoe_FirstWarn_Condition()
 func void Info_Roscoe_FirstWarn_Info()
 {
 	PrintGlobals(PD_MISSION);
-	AI_Output(self,hero,"Info_Roscoe_FirstWarn_Info_10_00");	//И куда это ты собрался?
-	AI_Output(hero,self,"Info_Roscoe_FirstWarn_Info_15_01");	//Я хочу поговорить с Ларсом.
-	AI_Output(self,hero,"Info_Roscoe_FirstWarn_Info_10_02");	//Ларс здесь, но у тебя должна быть веская причина, чтобы побеспокоить его.
+	AI_Output(self,hero,"Info_Roscoe_FirstWarn_Info_10_00");	//Р РєСѓРґР° СЌС‚Рѕ С‚С‹ СЃРѕР±СЂР°Р»СЃСЏ?
+	AI_Output(hero,self,"Info_Roscoe_FirstWarn_Info_15_01");	//РЇ С…РѕС‡Сѓ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ Р›Р°СЂСЃРѕРј.
+	AI_Output(self,hero,"Info_Roscoe_FirstWarn_Info_10_02");	//Р›Р°СЂСЃ Р·РґРµСЃСЊ, РЅРѕ Сѓ С‚РµР±СЏ РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІРµСЃРєР°СЏ РїСЂРёС‡РёРЅР°, С‡С‚РѕР±С‹ РїРѕР±РµСЃРїРѕРєРѕРёС‚СЊ РµРіРѕ.
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Roscoe_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 };
@@ -204,7 +207,7 @@ func int Info_Roscoe_LastWarn_Condition()
 
 func void Info_Roscoe_LastWarn_Info()
 {
-	AI_Output(self,hero,"Info_Roscoe_LastWarn_10_00");	//Ты что, глухой?
+	AI_Output(self,hero,"Info_Roscoe_LastWarn_10_00");	//РўС‹ С‡С‚Рѕ, РіР»СѓС…РѕР№?
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,Roscoe_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);
@@ -264,7 +267,7 @@ func int info_roscoe_newwarn_condition()
 
 func void info_roscoe_newwarn_info()
 {
-	AI_Output(self,hero,"SVM_11_YouDeafOrWhat");	//Ты хочешь, чтобы я лично занялся тобой? Убирайся!
+	AI_Output(self,hero,"SVM_11_YouDeafOrWhat");	//РўС‹ С…РѕС‡РµС€СЊ, С‡С‚РѕР±С‹ СЏ Р»РёС‡РЅРѕ Р·Р°РЅСЏР»СЃСЏ С‚РѕР±РѕР№? РЈР±РёСЂР°Р№СЃСЏ!
 	AI_StopProcessInfos(self);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_BEGIN;
 	LARES_STOP = FALSE;

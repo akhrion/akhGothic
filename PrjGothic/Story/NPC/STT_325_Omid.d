@@ -1,7 +1,7 @@
 
 instance STT_325_Omid(Npc_Default)
 {
-	name[0] = "Îìèä";
+	name[0] = "ĞĞ¼Ğ¸Ğ´";
 	npcType = npctype_ambient;
 	guild = GIL_VLK;
 	level = 3;

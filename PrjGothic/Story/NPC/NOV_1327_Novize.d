@@ -57,7 +57,7 @@ func int dia_whereisfortuno_condition()
 
 func void dia_whereisfortuno_info()
 {
-	AI_Output(self,other,"Info_WhereIsFortuno_01");	//Если ты ищешь Фортуно, то он теперь работает в лаборатории Кор Галома. Варит какие-то зелья и провонял всю мою хижину!
+	AI_Output(self,other,"Info_WhereIsFortuno_01");	//Р•СЃР»Рё С‚С‹ РёС‰РµС€СЊ Р¤РѕСЂС‚СѓРЅРѕ, С‚Рѕ РѕРЅ С‚РµРїРµСЂСЊ СЂР°Р±РѕС‚Р°РµС‚ РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё РљРѕСЂ Р“Р°Р»РѕРјР°. Р’Р°СЂРёС‚ РєР°РєРёРµ-С‚Рѕ Р·РµР»СЊСЏ Рё РїСЂРѕРІРѕРЅСЏР» РІСЃСЋ РјРѕСЋ С…РёР¶РёРЅСѓ!
 	Npc_ExchangeRoutine(self,"start");
 	AI_StopProcessInfos(self);
 };

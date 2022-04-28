@@ -26,7 +26,7 @@ instance Info_Nov_5_EinerVonEuchWerden(C_Info)
 	condition = Info_Nov_5_EinerVonEuchWerden_Condition;
 	information = Info_Nov_5_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Как мне присоединиться к этому лагерю?";
+	description = "РљР°Рє РјРЅРµ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє СЌС‚РѕРјСѓ Р»Р°РіРµСЂСЋ?";
 };
 
 
@@ -40,9 +40,9 @@ func int Info_Nov_5_EinerVonEuchWerden_Condition()
 
 func void Info_Nov_5_EinerVonEuchWerden_Info()
 {
-	AI_Output(other,self,"Info_Nov_5_EinerVonEuchWerden_15_00");	//Как мне присоединиться к этому лагерю?
-	AI_Output(self,other,"Info_Nov_5_EinerVonEuchWerden_05_01");	//Это очень просто. Поговори с кем-нибудь из младших Гуру. Они тебе помогут.
-	AI_Output(self,other,"Info_Nov_5_EinerVonEuchWerden_05_02");	//Тебе у нас понравится, поверь мне.
+	AI_Output(other,self,"Info_Nov_5_EinerVonEuchWerden_15_00");	//РљР°Рє РјРЅРµ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє СЌС‚РѕРјСѓ Р»Р°РіРµСЂСЋ?
+	AI_Output(self,other,"Info_Nov_5_EinerVonEuchWerden_05_01");	//Р­С‚Рѕ РѕС‡РµРЅСЊ РїСЂРѕСЃС‚Рѕ. РџРѕРіРѕРІРѕСЂРё СЃ РєРµРј-РЅРёР±СѓРґСЊ РёР· РјР»Р°РґС€РёС… Р“СѓСЂСѓ. РћРЅРё С‚РµР±Рµ РїРѕРјРѕРіСѓС‚.
+	AI_Output(self,other,"Info_Nov_5_EinerVonEuchWerden_05_02");	//РўРµР±Рµ Сѓ РЅР°СЃ РїРѕРЅСЂР°РІРёС‚СЃСЏ, РїРѕРІРµСЂСЊ РјРЅРµ.
 };
 
 
@@ -52,7 +52,7 @@ instance Info_Nov_5_WichtigePersonen(C_Info)
 	condition = Info_Nov_5_WichtigePersonen_Condition;
 	information = Info_Nov_5_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Кто здесь всем командует?";
+	description = "РљС‚Рѕ Р·РґРµСЃСЊ РІСЃРµРј РєРѕРјР°РЅРґСѓРµС‚?";
 };
 
 
@@ -63,8 +63,8 @@ func int Info_Nov_5_WichtigePersonen_Condition()
 
 func void Info_Nov_5_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Nov_5_WichtigePersonen_15_00");	//Кто здесь всем командует?
-	AI_Output(self,other,"Info_Nov_5_WichtigePersonen_05_01");	//Власть здесь принадлежит Гуру. Но если ты не будешь нарушать наших законов, они тебя не тронут.
+	AI_Output(other,self,"Info_Nov_5_WichtigePersonen_15_00");	//РљС‚Рѕ Р·РґРµСЃСЊ РІСЃРµРј РєРѕРјР°РЅРґСѓРµС‚?
+	AI_Output(self,other,"Info_Nov_5_WichtigePersonen_05_01");	//Р’Р»Р°СЃС‚СЊ Р·РґРµСЃСЊ РїСЂРёРЅР°РґР»РµР¶РёС‚ Р“СѓСЂСѓ. РќРѕ РµСЃР»Рё С‚С‹ РЅРµ Р±СѓРґРµС€СЊ РЅР°СЂСѓС€Р°С‚СЊ РЅР°С€РёС… Р·Р°РєРѕРЅРѕРІ, РѕРЅРё С‚РµР±СЏ РЅРµ С‚СЂРѕРЅСѓС‚.
 };
 
 
@@ -74,7 +74,7 @@ instance Info_Nov_5_DasLager(C_Info)
 	condition = Info_Nov_5_DasLager_Condition;
 	information = Info_Nov_5_DasLager_Info;
 	permanent = 1;
-	description = "Ты можешь рассказать мне об этом лагере?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ?";
 };
 
 
@@ -86,11 +86,11 @@ func int Info_Nov_5_DasLager_Condition()
 func void Info_Nov_5_DasLager_Info()
 {
 	var C_Npc CorKalom;
-	AI_Output(other,self,"Info_Nov_5_DasLager_15_00");	//Ты можешь рассказать мне об этом лагере?
-	AI_Output(self,other,"Info_Nov_5_DasLager_05_01");	//Таких мест, как это, ты во всей колонии не найдешь.
-	AI_Output(self,other,"Info_Nov_5_DasLager_05_02");	//В нашем лагере ты сможешь ежедневно получать еду и болотник, даже если ты равнодушен к учению Спящего. Просто поговори с Фортуно.
-	AI_Output(other,self,"Info_Nov_5_DasLager_15_03");	//Где я могу найти его?
-	AI_Output(self,other,"Info_Nov_5_DasLager_05_04");	//В доме под лабораторией Кор Галома, рядом с нашим храмом.
+	AI_Output(other,self,"Info_Nov_5_DasLager_15_00");	//РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ?
+	AI_Output(self,other,"Info_Nov_5_DasLager_05_01");	//РўР°РєРёС… РјРµСЃС‚, РєР°Рє СЌС‚Рѕ, С‚С‹ РІРѕ РІСЃРµР№ РєРѕР»РѕРЅРёРё РЅРµ РЅР°Р№РґРµС€СЊ.
+	AI_Output(self,other,"Info_Nov_5_DasLager_05_02");	//Р’ РЅР°С€РµРј Р»Р°РіРµСЂРµ С‚С‹ СЃРјРѕР¶РµС€СЊ РµР¶РµРґРЅРµРІРЅРѕ РїРѕР»СѓС‡Р°С‚СЊ РµРґСѓ Рё Р±РѕР»РѕС‚РЅРёРє, РґР°Р¶Рµ РµСЃР»Рё С‚С‹ СЂР°РІРЅРѕРґСѓС€РµРЅ Рє СѓС‡РµРЅРёСЋ РЎРїСЏС‰РµРіРѕ. РџСЂРѕСЃС‚Рѕ РїРѕРіРѕРІРѕСЂРё СЃ Р¤РѕСЂС‚СѓРЅРѕ.
+	AI_Output(other,self,"Info_Nov_5_DasLager_15_03");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё РµРіРѕ?
+	AI_Output(self,other,"Info_Nov_5_DasLager_05_04");	//Р’ РґРѕРјРµ РїРѕРґ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРµР№ РљРѕСЂ Р“Р°Р»РѕРјР°, СЂСЏРґРѕРј СЃ РЅР°С€РёРј С…СЂР°РјРѕРј.
 	CorKalom = Hlp_GetNpc(GUR_1201_CorKalom);
 	CorKalom.aivar[AIV_FINDABLE] = TRUE;
 };
@@ -102,7 +102,7 @@ instance Info_Nov_5_DieLage(C_Info)
 	condition = Info_Nov_5_DieLage_Condition;
 	information = Info_Nov_5_DieLage_Info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -113,15 +113,15 @@ func int Info_Nov_5_DieLage_Condition()
 
 func void Info_Nov_5_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Nov_5_DieLage_15_00");	//Как дела?
+	AI_Output(other,self,"Info_Nov_5_DieLage_15_00");	//РљР°Рє РґРµР»Р°?
 	if((Npc_GetTrueGuild(other) == GIL_None) || (Npc_GetTrueGuild(other) == GIL_NOV))
 	{
-		AI_Output(self,other,"Info_Nov_5_DieLage_05_01");	//Хорошо. Мне не на что жаловаться. А ты здесь новенький?
-		AI_Output(other,self,"Info_Nov_5_DieLage_15_02");	//Да, совсем недавно прибыл.
+		AI_Output(self,other,"Info_Nov_5_DieLage_05_01");	//РҐРѕСЂРѕС€Рѕ. РњРЅРµ РЅРµ РЅР° С‡С‚Рѕ Р¶Р°Р»РѕРІР°С‚СЊСЃСЏ. Рђ С‚С‹ Р·РґРµСЃСЊ РЅРѕРІРµРЅСЊРєРёР№?
+		AI_Output(other,self,"Info_Nov_5_DieLage_15_02");	//Р”Р°, СЃРѕРІСЃРµРј РЅРµРґР°РІРЅРѕ РїСЂРёР±С‹Р».
 	}
 	else
 	{
-		AI_Output(self,other,"SVM_5_SectGreetings");	//Пробудись!
+		AI_Output(self,other,"SVM_5_SectGreetings");	//РџСЂРѕР±СѓРґРёСЃСЊ!
 	};
 };
 

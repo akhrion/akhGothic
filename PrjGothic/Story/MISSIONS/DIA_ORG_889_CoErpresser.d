@@ -20,7 +20,7 @@ func int info_coerpresser_exit_condition()
 
 func void info_coerpresser_exit_info()
 {
-	AI_Output(self,other,"SVM_7_YouDeafOrWhat");	//Хочешь со мной поссориться? Уйди с дороги!
+	AI_Output(self,other,"SVM_7_YouDeafOrWhat");	//РҐРѕС‡РµС€СЊ СЃРѕ РјРЅРѕР№ РїРѕСЃСЃРѕСЂРёС‚СЊСЃСЏ? РЈР№РґРё СЃ РґРѕСЂРѕРіРё!
 	AI_StopProcessInfos(self);
 };
 

@@ -44,28 +44,28 @@ func void DIA_BaalNamib_NoTalk_Info()
 {
 	Info_ClearChoices(DIA_BaalNamib_NoTalk);
 	Info_AddChoice(DIA_BaalNamib_NoTalk,DIALOG_ENDE,DIA_BaalNamib_NoTalk_ENDE);
-	Info_AddChoice(DIA_BaalNamib_NoTalk,"С тобой все нормально, приятель?",DIA_BaalNamib_NoTalk_Imp);
-	Info_AddChoice(DIA_BaalNamib_NoTalk,"Да пребудет с тобой Спящий!",DIA_BaalNamib_NoTalk_Sleeper);
-	Info_AddChoice(DIA_BaalNamib_NoTalk,"Привет! Я здесь новенький!",DIA_BaalNamib_NoTalk_Hi);
+	Info_AddChoice(DIA_BaalNamib_NoTalk,"РЎ С‚РѕР±РѕР№ РІСЃРµ РЅРѕСЂРјР°Р»СЊРЅРѕ, РїСЂРёСЏС‚РµР»СЊ?",DIA_BaalNamib_NoTalk_Imp);
+	Info_AddChoice(DIA_BaalNamib_NoTalk,"Р”Р° РїСЂРµР±СѓРґРµС‚ СЃ С‚РѕР±РѕР№ РЎРїСЏС‰РёР№!",DIA_BaalNamib_NoTalk_Sleeper);
+	Info_AddChoice(DIA_BaalNamib_NoTalk,"РџСЂРёРІРµС‚! РЇ Р·РґРµСЃСЊ РЅРѕРІРµРЅСЊРєРёР№!",DIA_BaalNamib_NoTalk_Hi);
 };
 
 func void DIA_BaalNamib_NoTalk_Hi()
 {
-	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Hi_15_00");	//Привет! Я здесь новенький!
+	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Hi_15_00");	//РџСЂРёРІРµС‚! РЇ Р·РґРµСЃСЊ РЅРѕРІРµРЅСЊРєРёР№!
 	AI_Output(self,other,"DIA_BaalNamib_NoTalk_Hi_02_01");	//
 	BaalNamib_Sakrileg = TRUE;
 };
 
 func void DIA_BaalNamib_NoTalk_Sleeper()
 {
-	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Sleeper_15_00");	//Да пребудет с тобой Спящий!
+	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Sleeper_15_00");	//Р”Р° РїСЂРµР±СѓРґРµС‚ СЃ С‚РѕР±РѕР№ РЎРїСЏС‰РёР№!
 	AI_Output(self,other,"DIA_BaalNamib_NoTalk_Sleeper_02_01");	//
 	BaalNamib_Sakrileg = TRUE;
 };
 
 func void DIA_BaalNamib_NoTalk_Imp()
 {
-	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Imp_15_00");	//С тобой все нормально, приятель?
+	AI_Output(other,self,"DIA_BaalNamib_NoTalk_Imp_15_00");	//РЎ С‚РѕР±РѕР№ РІСЃРµ РЅРѕСЂРјР°Р»СЊРЅРѕ, РїСЂРёСЏС‚РµР»СЊ?
 	AI_Output(self,other,"DIA_BaalNamib_NoTalk_Imp_02_01");	//
 	BaalNamib_Sakrileg = TRUE;
 };
@@ -98,25 +98,25 @@ func int DIA_BaalNamib_FirstTalk_Condition()
 func void DIA_BaalNamib_FirstTalk_Info()
 {
 	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_02_00");	//
-	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_02_01");	//Спящий избрал тебя. Ты и в самом деле хочешь присоединиться к нам?
+	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_02_01");	//РЎРїСЏС‰РёР№ РёР·Р±СЂР°Р» С‚РµР±СЏ. РўС‹ Рё РІ СЃР°РјРѕРј РґРµР»Рµ С…РѕС‡РµС€СЊ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє РЅР°Рј?
 	Info_ClearChoices(DIA_BaalNamib_FirstTalk);
-	Info_AddChoice(DIA_BaalNamib_FirstTalk,"(промолчать)",DIA_BaalNamib_FirstTalk_Mute);
-	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Да, я хочу вступить на путь, указанный Спящим.",DIA_BaalNamib_FirstTalk_Sleeper);
+	Info_AddChoice(DIA_BaalNamib_FirstTalk,"(РїСЂРѕРјРѕР»С‡Р°С‚СЊ)",DIA_BaalNamib_FirstTalk_Mute);
+	Info_AddChoice(DIA_BaalNamib_FirstTalk,"Р”Р°, СЏ С…РѕС‡Сѓ РІСЃС‚СѓРїРёС‚СЊ РЅР° РїСѓС‚СЊ, СѓРєР°Р·Р°РЅРЅС‹Р№ РЎРїСЏС‰РёРј.",DIA_BaalNamib_FirstTalk_Sleeper);
 };
 
 func void DIA_BaalNamib_FirstTalk_Mute()
 {
-	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Mute_02_01");	//Ну?
+	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Mute_02_01");	//РќСѓ?
 };
 
 func void DIA_BaalNamib_FirstTalk_Sleeper()
 {
-	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00");	//Да, я хочу вступить на путь, указанный Спящим.
-	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01");	//Иди к Кор Галому. Скажи ему, что я считаю тебя истинно верующим!
+	AI_Output(other,self,"DIA_BaalNamib_FirstTalk_Sleeper_15_00");	//Р”Р°, СЏ С…РѕС‡Сѓ РІСЃС‚СѓРїРёС‚СЊ РЅР° РїСѓС‚СЊ, СѓРєР°Р·Р°РЅРЅС‹Р№ РЎРїСЏС‰РёРј.
+	AI_Output(self,other,"DIA_BaalNamib_FirstTalk_Sleeper_02_01");	//РРґРё Рє РљРѕСЂ Р“Р°Р»РѕРјСѓ. РЎРєР°Р¶Рё РµРјСѓ, С‡С‚Рѕ СЏ СЃС‡РёС‚Р°СЋ С‚РµР±СЏ РёСЃС‚РёРЅРЅРѕ РІРµСЂСѓСЋС‰РёРј!
 	Info_ClearChoices(DIA_BaalNamib_FirstTalk);
 	Log_CreateTopic(CH1_JoinPsi,LOG_MISSION);
 	Log_SetTopicStatus(CH1_JoinPsi,LOG_RUNNING);
-	B_LogEntry(CH1_JoinPsi,"Задумка Лестера удалась. Идол Намиб заговорил со мной. Теперь он думает, что я стал убежденным верующим. Мне нужно увидеть Гуру Кор Галома в лаборатории!");
+	B_LogEntry(CH1_JoinPsi,"Р—Р°РґСѓРјРєР° Р›РµСЃС‚РµСЂР° СѓРґР°Р»Р°СЃСЊ. РРґРѕР» РќР°РјРёР± Р·Р°РіРѕРІРѕСЂРёР» СЃРѕ РјРЅРѕР№. РўРµРїРµСЂСЊ РѕРЅ РґСѓРјР°РµС‚, С‡С‚Рѕ СЏ СЃС‚Р°Р» СѓР±РµР¶РґРµРЅРЅС‹Рј РІРµСЂСѓСЋС‰РёРј. РњРЅРµ РЅСѓР¶РЅРѕ СѓРІРёРґРµС‚СЊ Р“СѓСЂСѓ РљРѕСЂ Р“Р°Р»РѕРјР° РІ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРё!");
 	B_GiveXP(XP_ImpressBaalNamib);
 };
 
@@ -130,7 +130,7 @@ instance GUR_1204_BaalNamib_ARMOR(C_Info)
 	information = GUR_1204_BaalNamib_ARMOR_Info;
 	important = 0;
 	permanent = 1;
-	description = "Мне нужны хорошие доспехи.";
+	description = "РњРЅРµ РЅСѓР¶РЅС‹ С…РѕСЂРѕС€РёРµ РґРѕСЃРїРµС…Рё.";
 };
 
 
@@ -144,11 +144,11 @@ func int GUR_1204_BaalNamib_ARMOR_Condition()
 
 func void GUR_1204_BaalNamib_ARMOR_Info()
 {
-	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");	//Мне нужны хорошие доспехи.
-	AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_04");	//Эти доспехи защитят тело твое, так же как Спящий защищает твою душу!
+	AI_Output(hero,self,"GUR_1204_BaalNamib_ARMOR_Info_15_01");	//РњРЅРµ РЅСѓР¶РЅС‹ С…РѕСЂРѕС€РёРµ РґРѕСЃРїРµС…Рё.
+	AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_04");	//Р­С‚Рё РґРѕСЃРїРµС…Рё Р·Р°С‰РёС‚СЏС‚ С‚РµР»Рѕ С‚РІРѕРµ, С‚Р°Рє Р¶Рµ РєР°Рє РЎРїСЏС‰РёР№ Р·Р°С‰РёС‰Р°РµС‚ С‚РІРѕСЋ РґСѓС€Сѓ!
 	Info_ClearChoices(GUR_1204_BaalNamib_ARMOR);
 	Info_AddChoice(GUR_1204_BaalNamib_ARMOR,DIALOG_BACK,gur_1204_baalnamib_armor_back);
-	Info_AddChoice(GUR_1204_BaalNamib_ARMOR,B_BuildBuyArmorString("Доспех послушника, защита: 40/5/20/0",VALUE_NOV_ARMOR_H),gur_1204_baalnamib_armor_buy);
+	Info_AddChoice(GUR_1204_BaalNamib_ARMOR,B_BuildBuyArmorString("Р”РѕСЃРїРµС… РїРѕСЃР»СѓС€РЅРёРєР°, Р·Р°С‰РёС‚Р°: 40/5/20/0",VALUE_NOV_ARMOR_H),gur_1204_baalnamib_armor_buy);
 };
 
 func void gur_1204_baalnamib_armor_back()
@@ -160,15 +160,15 @@ func void gur_1204_baalnamib_armor_buy()
 {
 	if(Npc_HasItems(hero,ItMiNugget) < VALUE_NOV_ARMOR_H)
 	{
-		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_03");	//Возвращайся, когда соберешь достаточно руды.
+		AI_Output(self,other,"GUR_1204_BaalNamib_ARMOR_Info_02_03");	//Р’РѕР·РІСЂР°С‰Р°Р№СЃСЏ, РєРѕРіРґР° СЃРѕР±РµСЂРµС€СЊ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЂСѓРґС‹.
 		Info_ClearChoices(GUR_1204_BaalNamib_ARMOR);
 	}
 	else
 	{
-		AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_TakeIt_15_00");	//Хорошо, я покупаю его.
-		b_printtrademsg1("Отдано руды: 1200");
-		AI_Output(self,other,"SVM_2_OkayKeepIt");	//Хорошо. Это твое.
-		b_printtrademsg2("Получен доспех послушника.");
+		AI_Output(other,self,"Stt_311_Fisk_WhistlersSword_TakeIt_15_00");	//РҐРѕСЂРѕС€Рѕ, СЏ РїРѕРєСѓРїР°СЋ РµРіРѕ.
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 1200");
+		AI_Output(self,other,"SVM_2_OkayKeepIt");	//РҐРѕСЂРѕС€Рѕ. Р­С‚Рѕ С‚РІРѕРµ.
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅ РґРѕСЃРїРµС… РїРѕСЃР»СѓС€РЅРёРєР°.");
 		B_GiveInvItems(hero,self,ItMiNugget,VALUE_NOV_ARMOR_H);
 		CreateInvItem(self,nov_armor_h);
 		B_GiveInvItems(self,hero,nov_armor_h,1);

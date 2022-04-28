@@ -1,7 +1,7 @@
 
 instance ORG_850_Wedge(Npc_Default)
 {
-	name[0] = "Ведж";
+	name[0] = "Р’РµРґР¶";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 11;

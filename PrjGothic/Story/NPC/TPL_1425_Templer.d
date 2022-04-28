@@ -1,7 +1,7 @@
 
 instance TPL_1425_Templer(Npc_Default)
 {
-	name[0] = "Гор Боба";
+	name[0] = "Р“РѕСЂ Р‘РѕР±Р°";
 	npcType = npctype_guard;
 	guild = GIL_TPL;
 	level = 17;

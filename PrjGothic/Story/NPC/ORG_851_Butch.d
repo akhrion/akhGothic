@@ -1,7 +1,7 @@
 
 instance ORG_851_Butch(Npc_Default)
 {
-	name[0] = "Áóò÷";
+	name[0] = "Ğ‘ÑƒÑ‚Ñ‡";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 15;

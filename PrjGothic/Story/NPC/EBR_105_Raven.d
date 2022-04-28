@@ -1,7 +1,7 @@
 
 instance EBR_105_Raven(Npc_Default)
 {
-	name[0] = "Πΰβεν";
+	name[0] = "Π Π°Π²ΠµΠ½";
 	npcType = npctype_main;
 	guild = GIL_EBR;
 	level = 80;

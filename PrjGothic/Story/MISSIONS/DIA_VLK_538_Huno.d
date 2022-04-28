@@ -49,7 +49,7 @@ instance DIA_Huno_YouKnowYourJob(C_Info)
 	information = DIA_Huno_YouKnowYourJob_Info;
 	permanent = 0;
 	important = 0;
-	description = "А у тебя неплохо получается, как я вижу.";
+	description = "Рђ Сѓ С‚РµР±СЏ РЅРµРїР»РѕС…Рѕ РїРѕР»СѓС‡Р°РµС‚СЃСЏ, РєР°Рє СЏ РІРёР¶Сѓ.";
 };
 
 
@@ -60,9 +60,9 @@ func int DIA_Huno_YouKnowYourJob_Condition()
 
 func void DIA_Huno_YouKnowYourJob_Info()
 {
-	AI_Output(other,self,"DIA_Huno_YouKnowYourJob_15_00");	//А у тебя неплохо получается, как я вижу.
-	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_01");	//Да уж, недовольных я еще не встречал.
-	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02");	//Но если таковые и найдутся, им же хуже. Здесь никто не хочет оставаться без оружия, а ковать хорошие мечи умею только я.
+	AI_Output(other,self,"DIA_Huno_YouKnowYourJob_15_00");	//Рђ Сѓ С‚РµР±СЏ РЅРµРїР»РѕС…Рѕ РїРѕР»СѓС‡Р°РµС‚СЃСЏ, РєР°Рє СЏ РІРёР¶Сѓ.
+	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_01");	//Р”Р° СѓР¶, РЅРµРґРѕРІРѕР»СЊРЅС‹С… СЏ РµС‰Рµ РЅРµ РІСЃС‚СЂРµС‡Р°Р».
+	AI_Output(self,other,"DIA_Huno_YouKnowYourJob_09_02");	//РќРѕ РµСЃР»Рё С‚Р°РєРѕРІС‹Рµ Рё РЅР°Р№РґСѓС‚СЃСЏ, РёРј Р¶Рµ С…СѓР¶Рµ. Р—РґРµСЃСЊ РЅРёРєС‚Рѕ РЅРµ С…РѕС‡РµС‚ РѕСЃС‚Р°РІР°С‚СЊСЃСЏ Р±РµР· РѕСЂСѓР¶РёСЏ, Р° РєРѕРІР°С‚СЊ С…РѕСЂРѕС€РёРµ РјРµС‡Рё СѓРјРµСЋ С‚РѕР»СЊРєРѕ СЏ.
 };
 
 
@@ -74,7 +74,7 @@ instance DIA_Huno_HowLong(C_Info)
 	information = DIA_Huno_HowLong_Info;
 	permanent = 0;
 	important = 0;
-	description = "Много времени уходит на один меч?";
+	description = "РњРЅРѕРіРѕ РІСЂРµРјРµРЅРё СѓС…РѕРґРёС‚ РЅР° РѕРґРёРЅ РјРµС‡?";
 };
 
 
@@ -88,14 +88,15 @@ func int DIA_Huno_HowLong_Condition()
 
 func void DIA_Huno_HowLong_Info()
 {
-	AI_Output(other,self,"DIA_Huno_HowLong_15_00");	//Много времени уходит на один меч?
-	AI_Output(self,other,"DIA_Huno_HowLong_09_01");	//Все зависит от меча. Обычный меч я могу выковать очень быстро. Ты и глазом моргнуть не успеешь.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_02");	//Если, конечно, моя работа будет достойно оплачена.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_03");	//А вот таким, как Уистлер, приходится ждать дольше всех.
-	AI_Output(other,self,"DIA_Huno_HowLong_15_04");	//Почему? Платит слишком мало?
-	AI_Output(self,other,"DIA_Huno_HowLong_09_05");	//Да нет, как раз наоборот. За последний меч он заплатил мне 150 кусков руды.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_06");	//Ему подавай не простой меч, а с завитушками и прочими бабьими штучками, а это стоит недешево.
-	AI_Output(self,other,"DIA_Huno_HowLong_09_07");	//Эй, мне кажется, ты меня не слушаешь!
+	AI_Output(other,self,"DIA_Huno_HowLong_15_00");	//РњРЅРѕРіРѕ РІСЂРµРјРµРЅРё СѓС…РѕРґРёС‚ РЅР° РѕРґРёРЅ РјРµС‡?
+	AI_Output(self,other,"DIA_Huno_HowLong_09_01");	//Р’СЃРµ Р·Р°РІРёСЃРёС‚ РѕС‚ РјРµС‡Р°. РћР±С‹С‡РЅС‹Р№ РјРµС‡ СЏ РјРѕРіСѓ РІС‹РєРѕРІР°С‚СЊ РѕС‡РµРЅСЊ Р±С‹СЃС‚СЂРѕ. РўС‹ Рё РіР»Р°Р·РѕРј РјРѕСЂРіРЅСѓС‚СЊ РЅРµ СѓСЃРїРµРµС€СЊ.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_02");	//Р•СЃР»Рё, РєРѕРЅРµС‡РЅРѕ, РјРѕСЏ СЂР°Р±РѕС‚Р° Р±СѓРґРµС‚ РґРѕСЃС‚РѕР№РЅРѕ РѕРїР»Р°С‡РµРЅР°.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_03");	//Рђ РІРѕС‚ С‚Р°РєРёРј, РєР°Рє РЈРёСЃС‚Р»РµСЂ, РїСЂРёС…РѕРґРёС‚СЃСЏ Р¶РґР°С‚СЊ РґРѕР»СЊС€Рµ РІСЃРµС….
+	AI_Output(other,self,"DIA_Huno_HowLong_15_04");	//РџРѕС‡РµРјСѓ? РџР»Р°С‚РёС‚ СЃР»РёС€РєРѕРј РјР°Р»Рѕ?
+	AI_Output(self,other,"DIA_Huno_HowLong_09_05");	//Р”Р° РЅРµС‚, РєР°Рє СЂР°Р· РЅР°РѕР±РѕСЂРѕС‚. Р—Р° РїРѕСЃР»РµРґРЅРёР№ РјРµС‡ РѕРЅ Р·Р°РїР»Р°С‚РёР» РјРЅРµ 150 РєСѓСЃРєРѕРІ СЂСѓРґС‹.
+	AI_Output(self,other,"DIA_Huno_HowLong_09_06");	//Р•РјСѓ РїРѕРґР°РІР°Р№ РЅРµ РїСЂРѕСЃС‚РѕР№ РјРµС‡, Р° СЃ Р·Р°РІРёС‚СѓС€РєР°РјРё Рё РїСЂРѕС‡РёРјРё Р±Р°Р±СЊРёРјРё С€С‚СѓС‡РєР°РјРё, Р° СЌС‚Рѕ СЃС‚РѕРёС‚ РЅРµРґРµС€РµРІРѕ.
+	Npc_KnowsInfo_HunoMakeSwordForWhistler = true;
+	AI_Output(self,other,"DIA_Huno_HowLong_09_07");	//Р­Р№, РјРЅРµ РєР°Р¶РµС‚СЃСЏ, С‚С‹ РјРµРЅСЏ РЅРµ СЃР»СѓС€Р°РµС€СЊ!
 };
 
 
@@ -107,7 +108,7 @@ instance DIA_Huno_HowsYourBusiness(C_Info)
 	information = DIA_Huno_HowsYourBusiness_Info;
 	permanent = 1;
 	important = 0;
-	description = "Ну, кузнец, как дела?";
+	description = "РќСѓ, РєСѓР·РЅРµС†, РєР°Рє РґРµР»Р°?";
 };
 
 
@@ -119,35 +120,102 @@ func int DIA_Huno_HowsYourBusiness_Condition()
 	};
 };
 
+func void DIA_WhistlerSword_AskHunoMakeSwordForWhistler()
+{
+	Npc_Hero_bAskHunoMakeSwordForWhistler = true;
+	AI_Output(hero,self,"AskHunoMakeSwordForWhistler_NULL_01"); //РќРµ СЃРѕРІСЃРµРј. РЈРёСЃС‚Р»РµСЂСѓ СЃРЅРѕРІР° РЅСѓР¶РµРЅ РјРµС‡.
+	AI_Output(hero,self,"AskHunoMakeSwordForWhistler_NULL_02"); //РўРѕС‚ РјРµС‡, С‡С‚Рѕ С‚С‹ РєРѕРІР°Р», РєР°РєРёРј-С‚Рѕ РѕР±СЂР°Р·Рѕ РѕРєР°Р·Р°Р»СЃСЏ Сѓ Р¤РёСЃРєР° Рё РѕРЅ РЅРµ С…РѕС‡РµС‚ РµРіРѕ РѕС‚РґР°РІР°С‚ РѕР±СЂР°С‚РЅРѕ РЈРёСЃС‚Р»РµСЂСѓ.
+	AI_Output(hero,self,"AskHunoMakeSwordForWhistler_NULL_03"); //РџСЂРѕРґР°С‚СЊ С‚РѕР¶Рµ РѕС‚РєР°Р·С‹РІР°РµС‚СЃСЏ. Р§С‚Рѕ-С‚Рѕ РѕРЅРё СЃ РЈРёСЃС‚Р»РµСЂРѕРј РЅРµ РїРѕРґРµР»РёР»Рё.
+	AI_Output(self,hero,"AskHunoMakeSwordForWhistler_NULL_04"); //РџРѕРЅСЏС‚РЅРѕ. Рђ С‚РµР±Рµ РІРѕРѕР±С‰Рµ РєР°РєРѕРµ РґРѕ СЌС‚РѕРіРѕ РґРµР»Рѕ?
+	AI_Output(hero,self,"AskHunoMakeSwordForWhistler_NULL_05"); //РЇ Р·РґРµСЃСЊ РЅРµРґР°РІРЅРѕ - РёС‰Сѓ РґСЂСѓР·РµР№.
+	AI_Output(self,hero,"AskHunoMakeSwordForWhistler_NULL_06"); //Р”Р°, СЏ С‚Р°Рє Рё РїРѕРґСѓРјР°Р» (СѓРґСЂСѓС‡РµРЅРЅРѕ СЃРјРѕС‚СЂРёС‚ РІ СЃС‚РѕСЂРѕРЅСѓ)
+	AI_Output(self,hero,"AskHunoMakeSwordForWhistler_NULL_07"); //РўРѕР»СЊРєРѕ РІРѕС‚, С‚С‹ РїРѕРјРЅРёС€СЊ С‡С‚Рѕ СЏ РіРѕРІРѕСЂРёР»? РЈРёСЃС‚Р»РµСЂ РЅРµ РїСЂРѕСЃС‚РѕР№ РјРµС‡ Р·Р°РєР°Р·Р°Р». Р”РµР»Р°С‚СЊ РµРіРѕ РґРѕР»РіРѕ, РґР° Рё РґРѕСЂРѕРіРѕ. Р‘РѕСЋСЃСЊ Сѓ С‚РµР±СЏ РЅРµ С…РІР°С‚РёС‚ СЂСѓРґС‹.
+	Info_ClearChoices(DIA_Huno_HowsYourBusiness);
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,DIALOG_ENDE,DIA_Huno_Exit_Info);
+	if(Npc_HasItems(hero,ItMiNugget) > 149)
+	{
+		Info_AddChoice(DIA_Huno_HowsYourBusiness,"РЈ РјРµРЅСЏ РµСЃС‚СЊ СЂСѓРґР°",DIA_WhistlerSword_IHaveOre);
+	};
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,"РЇ РЅР°Р№РґСѓ СЂСѓРґСѓ, СЃРґРµР»Р°Р№ РјРµС‡!",DIA_WhistlerSword_IFindOre);
+};
+func void AskHunoAboutSwordForWhistler()
+{
+	AI_Output(hero,self,"AskHunoAboutSwordForWhistler_NULL_01"); //РўС‹ РіРѕРІРѕСЂРёР», С‡С‚Рѕ РґРµР»Р°Р» РґР»СЏ РЈРёСЃС‚Р»РµСЂР° РјРµС‡..
+	AI_Output(self,hero,"AskHunoAboutSwordForWhistler_NULL_02"); //РќСѓ РґР°, Рё?
+	AI_Output(self,hero,"AskHunoAboutSwordForWhistler_NULL_03"); //РҐРѕС‡РµС€СЊ СЃРµР±Рµ С‚Р°РєРѕР№-Р¶Рµ?
+	Info_ClearChoices(DIA_Huno_HowsYourBusiness);
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,DIALOG_ENDE,DIA_Huno_Exit_Info);
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,"РќРµ СЃРѕРІСЃРµРј. РЈРёСЃС‚Р»РµСЂСѓ СЃРЅРѕРІР° РЅСѓР¶РµРЅ РјРµС‡.",DIA_WhistlerSword_AskHunoMakeSwordForWhistler);
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,"Р­РјРј.. РґР°Р°Р° С‡С‚Рѕ-С‚Рѕ С‚РёРїР° С‚РѕРіРѕ. РўС‹ РјРѕР¶РµС€СЊ СЃРґРµР»Р°С‚СЊ С‚РѕС‡РЅРѕ С‚Р°РєРѕР№-Р¶Рµ РјРµС‡?",DIA_WhistlerSword_AskHunoMakeSwordForWhistler);
+	Info_AddChoice(DIA_Huno_HowsYourBusiness,"Р”Р°-РґР°! РРјРµРЅРЅРѕ. РҐРѕС‡Сѓ СЃРµР±Рµ С‚Р°РєРѕР№-Р¶Рµ РјРµС‡!",DIA_WhistlerSword_AskHunoMakeSwordForWhistler);
+};
 func void DIA_Huno_HowsYourBusiness_Info()
 {
-	AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_00");	//Ну, кузнец, как дела?
-	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_01");	//А зачем ты хочешь это знать?
-	AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_02");	//Может быть, я закажу тебе что-нибудь.
-	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_03");	//Правда? И что же это?
+	AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_00");	//РќСѓ, РєСѓР·РЅРµС†, РєР°Рє РґРµР»Р°?
+	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_01");	//Рђ Р·Р°С‡РµРј С‚С‹ С…РѕС‡РµС€СЊ СЌС‚Рѕ Р·РЅР°С‚СЊ?
+	AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_02");	//РњРѕР¶РµС‚ Р±С‹С‚СЊ, СЏ Р·Р°РєР°Р¶Сѓ С‚РµР±Рµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ.
+	AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_03");	//РџСЂР°РІРґР°? Р С‡С‚Рѕ Р¶Рµ СЌС‚Рѕ?
 	if(Npc_HasItems(hero,goldensword))
 	{
 		AI_UnequipWeapons(other);
-		AI_Output(other,self,"Info_Xardas_LOADSWORD_15_01");	//Я нашел один очень странный меч.
-		b_printtrademsg1("Отдан золотой меч.");
+		AI_Output(other,self,"Info_Xardas_LOADSWORD_15_01");	//РЇ РЅР°С€РµР» РѕРґРёРЅ РѕС‡РµРЅСЊ СЃС‚СЂР°РЅРЅС‹Р№ РјРµС‡.
+		b_printtrademsg1("РћС‚РґР°РЅ Р·РѕР»РѕС‚РѕР№ РјРµС‡.");
 		CreateInvItem(self,goldensword);
 		AI_EquipBestMeleeWeapon(self);
 		AI_ReadyMeleeWeapon(self);
 		AI_PlayAni(self,"T_URISELINSPECT");
 		AI_RemoveWeapon(self);
 		AI_UnequipWeapons(self);
-		AI_Output(self,other,"Info_Wolf_MCPLATESENOUGH_09_04");	//Не знаю. Я же никогда еще не обрабатывал такой материал.
-		AI_Output(self,other,"SVM_9_NotNow");	//Нет, не сейчас.
-		b_printtrademsg2("Получен золотой меч.");
+		AI_Output(self,other,"Info_Wolf_MCPLATESENOUGH_09_04");	//РќРµ Р·РЅР°СЋ. РЇ Р¶Рµ РЅРёРєРѕРіРґР° РµС‰Рµ РЅРµ РѕР±СЂР°Р±Р°С‚С‹РІР°Р» С‚Р°РєРѕР№ РјР°С‚РµСЂРёР°Р».
+		AI_Output(self,other,"SVM_9_NotNow");	//РќРµС‚, РЅРµ СЃРµР№С‡Р°СЃ.
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅ Р·РѕР»РѕС‚РѕР№ РјРµС‡.");
 		HUNO_GOLDENSWORD = TRUE;
+	}
+	else if(
+		Npc_KnowsInfo_HunoMakeSwordForWhistler
+	&&	!Npc_Huno_bMakeSwordForWhistler
+	)
+	{
+		Info_ClearChoices(DIA_Huno_HowsYourBusiness);
+		Info_AddChoice(DIA_Huno_HowsYourBusiness,DIALOG_ENDE,DIA_Huno_Exit_Info);
+		Info_AddChoice(DIA_Huno_HowsYourBusiness,"РўС‹ РіРѕРІРѕСЂРёР», С‡С‚Рѕ РґРµР»Р°Р» РґР»СЏ РЈРёСЃС‚Р»РµСЂР° РјРµС‡..",AskHunoAboutSwordForWhistler);
 	}
 	else
 	{
-		AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_04");	//Я еще не решил.
-		AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05");	//Приходи ко мне, когда тебе действительно что-нибудь понадобится, и не тревожь меня по пустякам.
+		AI_Output(other,self,"DIA_Huno_HowsYourBusiness_15_04");	//РЇ РµС‰Рµ РЅРµ СЂРµС€РёР».
+		AI_Output(self,other,"DIA_Huno_HowsYourBusiness_09_05");	//РџСЂРёС…РѕРґРё РєРѕ РјРЅРµ, РєРѕРіРґР° С‚РµР±Рµ РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ, Рё РЅРµ С‚СЂРµРІРѕР¶СЊ РјРµРЅСЏ РїРѕ РїСѓСЃС‚СЏРєР°Рј.
 	};
 };
 
+instance DIA_Huno_WhistlerSword_SoExpensive(C_Info)
+{
+	npc = VLK_538_Huno;
+	nr = 2;
+	condition = DIA_Huno_WhistlerSword_SoExpensive_Condition;
+	information = DIA_Huno_WhistlerSword_SoExpensive_Info;
+	permanent = 1;
+	important = 1;
+};
+func int DIA_Huno_WhistlerSword_SoExpensive_Condition()
+{
+	if(
+		Npc_Hero_bAskHunoMakeSwordForWhistler
+	&&	!Npc_Huno_bMakeSwordForWhistler
+	)
+	{
+		Npc_Huno_bMakeSwordForWhistler = true;
+		return true;
+	};
+	return false;
+};
+func void DIA_Huno_WhistlerSword_SoExpensive_Info()
+{
+	AI_Output(self,hero,"DIA_Huno_WhistlerSword_SoExpensive_NULL_01"); //Р›Р°РґРЅРѕ СЃС‚РѕР№.
+	AI_Output(self,hero,"DIA_Huno_WhistlerSword_SoExpensive_NULL_02"); //РЇ РєСѓР·РЅРµС†, СЏ Р»СЋР±Р»СЋ СЂР°Р±РѕС‚Р°С‚СЊ РјРѕР»РѕС‚РєРѕРј. РќРѕ РјРЅРµ РЅСѓР¶РЅРѕ Р¶РµР»РµР·Рѕ.
+	AI_Output(self,hero,"DIA_Huno_WhistlerSword_SoExpensive_NULL_03"); //Р‘РµР· Р¶РµР»РµР·Р° РЅРµС‚ СЃРјС‹СЃР»Р° Р±РёС‚СЊ РїРѕ СЌС‚РѕР№ РЅР°РєРѕРІР°Р»СЊРЅРµ, РїРѕРЅРёРјР°РµС€СЊ?
+	AI_Output(self,hero,"DIA_Huno_WhistlerSword_SoExpensive_NULL_04"); //Р—РІСѓРє РµСЃС‚СЊ - РґР°, РЅРѕ СЌС‚Рѕ РїР»РѕС…РѕР№ Р·РІСѓРє.. РїСѓСЃС‚РѕР№.. РѕРґРёРЅРѕРєРёР№.
+	AI_Output(self,hero,"DIA_Huno_WhistlerSword_SoExpensive_NULL_05"); //РњРЅРµ РЅСѓР¶РЅРѕ Р¶РµР»РµР·Рѕ, РґРѕР±СѓРґСЊ РјРЅРµ Р¶РµР»РµР·Рѕ Рё Р±СѓРґРµС‚ С‚РµР±Рµ РјРµС‡.
+};
 
 var int Huno_LearnSmith;
 
@@ -159,7 +227,7 @@ instance DIA_Huno_LEARNSMITH(C_Info)
 	information = DIA_Huno_LEARNSMITH_Info;
 	permanent = 0;
 	important = 0;
-	description = "Я хотел бы попробовать поработать у тебя в кузнице.";
+	description = "РЇ С…РѕС‚РµР» Р±С‹ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ РїРѕСЂР°Р±РѕС‚Р°С‚СЊ Сѓ С‚РµР±СЏ РІ РєСѓР·РЅРёС†Рµ.";
 };
 
 
@@ -173,15 +241,15 @@ func int DIA_Huno_LEARNSMITH_Condition()
 
 func void DIA_Huno_LEARNSMITH_Info()
 {
-	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_00");	//Я хотел бы попробовать поработать у тебя в кузнице.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01");	//Так, так... только с первого раза у тебя все равно не получится выковать хороший клинок!
-	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_02");	//Что мне нужно делать?
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_03");	//Что ж, возьми заготовку и подержи ее над огнем.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04");	//Раскаленную докрасна заготовку положи на наковальню и сформируй меч.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05");	//Когда он будет готов, его нужно закалить, опустив в ведро с водой.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06");	//Потом охлажденный клинок нужно будет заточить на точильном камне.
-	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07");	//Я все понял.
-	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08");	//Но без материалов у тебя ничего не выйдет. Если хочешь, можешь купить их у меня.
+	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_00");	//РЇ С…РѕС‚РµР» Р±С‹ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ РїРѕСЂР°Р±РѕС‚Р°С‚СЊ Сѓ С‚РµР±СЏ РІ РєСѓР·РЅРёС†Рµ.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_01");	//РўР°Рє, С‚Р°Рє... С‚РѕР»СЊРєРѕ СЃ РїРµСЂРІРѕРіРѕ СЂР°Р·Р° Сѓ С‚РµР±СЏ РІСЃРµ СЂР°РІРЅРѕ РЅРµ РїРѕР»СѓС‡РёС‚СЃСЏ РІС‹РєРѕРІР°С‚СЊ С…РѕСЂРѕС€РёР№ РєР»РёРЅРѕРє!
+	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_02");	//Р§С‚Рѕ РјРЅРµ РЅСѓР¶РЅРѕ РґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_03");	//Р§С‚Рѕ Р¶, РІРѕР·СЊРјРё Р·Р°РіРѕС‚РѕРІРєСѓ Рё РїРѕРґРµСЂР¶Рё РµРµ РЅР°Рґ РѕРіРЅРµРј.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_04");	//Р Р°СЃРєР°Р»РµРЅРЅСѓСЋ РґРѕРєСЂР°СЃРЅР° Р·Р°РіРѕС‚РѕРІРєСѓ РїРѕР»РѕР¶Рё РЅР° РЅР°РєРѕРІР°Р»СЊРЅСЋ Рё СЃС„РѕСЂРјРёСЂСѓР№ РјРµС‡.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_05");	//РљРѕРіРґР° РѕРЅ Р±СѓРґРµС‚ РіРѕС‚РѕРІ, РµРіРѕ РЅСѓР¶РЅРѕ Р·Р°РєР°Р»РёС‚СЊ, РѕРїСѓСЃС‚РёРІ РІ РІРµРґСЂРѕ СЃ РІРѕРґРѕР№.
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_06");	//РџРѕС‚РѕРј РѕС…Р»Р°Р¶РґРµРЅРЅС‹Р№ РєР»РёРЅРѕРє РЅСѓР¶РЅРѕ Р±СѓРґРµС‚ Р·Р°С‚РѕС‡РёС‚СЊ РЅР° С‚РѕС‡РёР»СЊРЅРѕРј РєР°РјРЅРµ.
+	AI_Output(other,self,"DIA_Huno_LEARNSMITH_15_07");	//РЇ РІСЃРµ РїРѕРЅСЏР».
+	AI_Output(self,other,"DIA_Huno_LEARNSMITH_09_08");	//РќРѕ Р±РµР· РјР°С‚РµСЂРёР°Р»РѕРІ Сѓ С‚РµР±СЏ РЅРёС‡РµРіРѕ РЅРµ РІС‹Р№РґРµС‚. Р•СЃР»Рё С…РѕС‡РµС€СЊ, РјРѕР¶РµС€СЊ РєСѓРїРёС‚СЊ РёС… Сѓ РјРµРЅСЏ.
 	if(Npc_HasItems(self,ItMiSwordraw) < 5)
 	{
 		CreateInvItems(self,ItMiSwordraw,5);
@@ -214,7 +282,7 @@ instance DIA_Huno_BUYSMITH(C_Info)
 	information = DIA_Huno_BUYSMITH_Info;
 	permanent = 1;
 	important = 0;
-	description = "Я хочу купить у тебя заготовки.";
+	description = "РЇ С…РѕС‡Сѓ РєСѓРїРёС‚СЊ Сѓ С‚РµР±СЏ Р·Р°РіРѕС‚РѕРІРєРё.";
 	trade = 1;
 };
 
@@ -253,6 +321,24 @@ func void DIA_Huno_BUYSMITH_Info()
 	{
 		CreateInvItem(self,ItMw_1H_Sledgehammer_01);
 	};
-	AI_Output(other,self,"DIA_Huno_BUYSMITH_15_00");	//Я хочу купить у тебя заготовки.
+	AI_Output(other,self,"DIA_Huno_BUYSMITH_15_00");	//РЇ С…РѕС‡Сѓ РєСѓРїРёС‚СЊ Сѓ С‚РµР±СЏ Р·Р°РіРѕС‚РѕРІРєРё.
 };
 
+func void DIA_WhistlerSword_IHaveOre()
+{
+	Npc_Huno_bMakeSwordForWhistler = true;
+	AI_Output(hero,self,"DIA_WhistlerSword_IHaveOre_NULL_01"); //РЈ РјРµРЅСЏ РµСЃС‚СЊ СЂСѓРґР°.
+	AI_Output(hero,self,"DIA_WhistlerSword_IHaveOre_NULL_02"); //Р¤РёСЃРє РїСЂРѕСЃРёР» Р·Р° РЅРµРіРѕ 150 РєСѓСЃРєРѕРІ. Р”СѓРјР°СЋ - РµСЃР»Рё С‚РѕСЂРіРѕРІС†Сѓ СЌС‚РѕР№ С†РµРЅС‹ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ, С‚Рѕ Рё РєСѓР·РЅРµС† РЅРµ СЃС‚Р°РЅРµС‚ РѕС‚РєР°Р·С‹РІР°С‚СЊСЃСЏ.
+	AI_Output(self,hero,"DIA_WhistlerSword_IHaveOre_NULL_03"); //РҐРј.. РєСѓР·РЅРµС† - РЅРµ С‚РѕСЂРіРѕРІРµС†. Р­С‚Рё РїСЂРѕР№РґРѕС…Рё РѕС‚РєСѓРґР° С‚РѕР»СЊРєРѕ С‚РѕРІР°СЂ РЅРµ Р±РµСЂСѓС‚ Рё С‡Р°СЃС‚Рѕ СЌС‚РѕС‚ С‚РѕРІР°СЂ РІРѕРІСЃРµ РёРј РЅРµ РїСЂРµРЅР°РґР»РµР¶РёС‚.
+	AI_Output(self,hero,"DIA_WhistlerSword_IHaveOre_NULL_04"); //Рђ СЏ РєСѓР·РЅРµС† - РґР°. Р Р°Р±РѕС‚Р°СЋ С‡РµСЃС‚РЅРѕ Рё РїРѕС‚РѕРјСѓ 50Рё РєСѓСЃРєРѕРІ Р±СѓРґРµС‚ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ. Р¦..
+	AI_Output(self,hero,"DIA_WhistlerSword_IHaveOre_NULL_05"); //(Р±РѕСЂРјРѕС‡РµС‚ СЃРµР±Рµ РїРѕРґ РЅРѕСЃ) СЌСЌС… С‚СѓРЅРµСЏРґС†С‹ РґР° РїСЂРѕР№РґРѕС…Рё РєСЂСѓРіРѕРј..
+	AI_StopProcessInfos(self);
+};
+func void DIA_WhistlerSword_IFindOre()
+{
+	Npc_Huno_bMakeSwordForWhistler = true;
+	AI_Output(hero,self,"DIA_WhistlerSword_IFindOre_NULL_01"); //РЇ РЅР°Р№РґСѓ СЂСѓРґСѓ - СЃРґРµР»Р°Р№ РјРµС‡.
+	AI_Output(self,hero,"DIA_WhistlerSword_IFindOre_NULL_02"); //РќСѓ РґРЅРё СЃРµР№С‡Р°СЃ СЃРІРѕР±РѕРґРЅС‹Рµ, Р° СЏ Р±РµР· РґРµР»Р° СЃРёРґРµС‚СЊ РЅРµ РїСЂРёРІС‹Рє. РҐРѕСЂРѕС€Рѕ, СЃРґРµР»Р°СЋ РјРµС‡.
+	AI_Output(self,hero,"DIA_WhistlerSword_IFindOre_NULL_03"); //РќРѕ РґР°Р¶Рµ РЅРµ РґСѓРјР°Р№, С‡С‚Рѕ СЏ РѕС‚РґР°Рј РµРіРѕ С‚РµР±Рµ РїСЂРѕСЃС‚Рѕ С‚Р°Рє. РќРµ Р±СѓРґРµС‚ СЂСѓРґС‹ - РјРµС‡ РѕСЃС‚Р°РЅРµС‚СЃСЏ Сѓ РєСѓР·РЅРµС†Р°. РЈ РјРµРЅСЏ.
+	AI_StopProcessInfos(self);
+};

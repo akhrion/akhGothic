@@ -1,7 +1,7 @@
 
 instance Sld_729_Kharim(Npc_Default)
 {
-	name[0] = "Карим";
+	name[0] = "РљР°СЂРёРј";
 	npcType = npctype_main;
 	flags = NPC_FLAG_IMMORTAL;
 	guild = GIL_None;

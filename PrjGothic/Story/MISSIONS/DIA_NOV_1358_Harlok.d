@@ -29,7 +29,7 @@ instance DIA_Harlok_FetchHarlok(C_Info)
 	condition = DIA_Harlok_FetchHarlok_Condition;
 	information = DIA_Harlok_FetchHarlok_Info;
 	permanent = 0;
-	description = "Меня прислал Горим.";
+	description = "РњРµРЅСЏ РїСЂРёСЃР»Р°Р» Р“РѕСЂРёРј.";
 };
 
 
@@ -44,14 +44,14 @@ func int DIA_Harlok_FetchHarlok_Condition()
 func void DIA_Harlok_FetchHarlok_Info()
 {
 	var C_Npc Ghorim;
-	AI_Output(other,self,"DIA_Harlok_FetchHarlok_15_00");	//Меня прислал Горим.
-	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01");	//Что?
+	AI_Output(other,self,"DIA_Harlok_FetchHarlok_15_00");	//РњРµРЅСЏ РїСЂРёСЃР»Р°Р» Р“РѕСЂРёРј.
+	AI_Output(self,other,"DIA_Harlok_FetchHarlok_01_01");	//Р§С‚Рѕ?
 	if(self.aivar[AIV_WASDEFEATEDBYSC] == TRUE)
 	{
-		AI_Output(other,self,"DIA_Harlok_FetchHarlok_OrElse_15_00");	//Быстро иди к прессу и начинай работать, иначе тебе будет худо!
-		AI_Output(self,other,"DIA_Harlok_SendHarlok_01_03");	//Ладно уж, иду... Я уже иду...
+		AI_Output(other,self,"DIA_Harlok_FetchHarlok_OrElse_15_00");	//Р‘С‹СЃС‚СЂРѕ РёРґРё Рє РїСЂРµСЃСЃСѓ Рё РЅР°С‡РёРЅР°Р№ СЂР°Р±РѕС‚Р°С‚СЊ, РёРЅР°С‡Рµ С‚РµР±Рµ Р±СѓРґРµС‚ С…СѓРґРѕ!
+		AI_Output(self,other,"DIA_Harlok_SendHarlok_01_03");	//Р›Р°РґРЅРѕ СѓР¶, РёРґСѓ... РЇ СѓР¶Рµ РёРґСѓ...
 		self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS_MAX];
-		B_LogEntry(CH1_GhorimsRelief,"Харлок меня правильно понял. Он согласен сменить Горима.");
+		B_LogEntry(CH1_GhorimsRelief,"РҐР°СЂР»РѕРє РјРµРЅСЏ РїСЂР°РІРёР»СЊРЅРѕ РїРѕРЅСЏР». РћРЅ СЃРѕРіР»Р°СЃРµРЅ СЃРјРµРЅРёС‚СЊ Р“РѕСЂРёРјР°.");
 		B_GiveXP(XP_SentHarlok);
 		Npc_ExchangeRoutine(self,"START");
 		Ghorim = Hlp_GetNpc(NOV_1310_Ghorim);
@@ -65,27 +65,27 @@ func void DIA_Harlok_FetchHarlok_Info()
 	{
 		Info_ClearChoices(DIA_Harlok_FetchHarlok);
 		Info_AddChoice(DIA_Harlok_FetchHarlok,DIALOG_BACK,DIA_Harlok_FetchHarlok_BACK);
-		Info_AddChoice(DIA_Harlok_FetchHarlok,"Быстро иди к прессу и начинай работать, иначе тебе будет худо!",DIA_Harlok_FetchHarlok_OrElse);
-		Info_AddChoice(DIA_Harlok_FetchHarlok,"Я должен напомнить тебе, что пора работать.",DIA_Harlok_FetchHarlok_Please);
+		Info_AddChoice(DIA_Harlok_FetchHarlok,"Р‘С‹СЃС‚СЂРѕ РёРґРё Рє РїСЂРµСЃСЃСѓ Рё РЅР°С‡РёРЅР°Р№ СЂР°Р±РѕС‚Р°С‚СЊ, РёРЅР°С‡Рµ С‚РµР±Рµ Р±СѓРґРµС‚ С…СѓРґРѕ!",DIA_Harlok_FetchHarlok_OrElse);
+		Info_AddChoice(DIA_Harlok_FetchHarlok,"РЇ РґРѕР»Р¶РµРЅ РЅР°РїРѕРјРЅРёС‚СЊ С‚РµР±Рµ, С‡С‚Рѕ РїРѕСЂР° СЂР°Р±РѕС‚Р°С‚СЊ.",DIA_Harlok_FetchHarlok_Please);
 	};
 };
 
 func void DIA_Harlok_FetchHarlok_Please()
 {
-	AI_Output(other,self,"DIA_Harlok_FetchHarlok_Please_15_00");	//Я должен напомнить тебе, что пора работать.
-	AI_Output(self,other,"DIA_Harlok_FetchHarlok_Please_01_01");	//Ой, какой ты добрый. Напомни мне об этом, когда я высплюсь, ладно?
+	AI_Output(other,self,"DIA_Harlok_FetchHarlok_Please_15_00");	//РЇ РґРѕР»Р¶РµРЅ РЅР°РїРѕРјРЅРёС‚СЊ С‚РµР±Рµ, С‡С‚Рѕ РїРѕСЂР° СЂР°Р±РѕС‚Р°С‚СЊ.
+	AI_Output(self,other,"DIA_Harlok_FetchHarlok_Please_01_01");	//РћР№, РєР°РєРѕР№ С‚С‹ РґРѕР±СЂС‹Р№. РќР°РїРѕРјРЅРё РјРЅРµ РѕР± СЌС‚РѕРј, РєРѕРіРґР° СЏ РІС‹СЃРїР»СЋСЃСЊ, Р»Р°РґРЅРѕ?
 };
 
 func void DIA_Harlok_FetchHarlok_OrElse()
 {
-	AI_Output(other,self,"DIA_Harlok_FetchHarlok_OrElse_15_00");	//Быстро иди к прессу и начинай работать, иначе тебе будет худо!
-	AI_Output(self,other,"DIA_Harlok_FetchHarlok_OrElse_01_01");	//Только попробуй подойти ко мне еще раз, щенок!
+	AI_Output(other,self,"DIA_Harlok_FetchHarlok_OrElse_15_00");	//Р‘С‹СЃС‚СЂРѕ РёРґРё Рє РїСЂРµСЃСЃСѓ Рё РЅР°С‡РёРЅР°Р№ СЂР°Р±РѕС‚Р°С‚СЊ, РёРЅР°С‡Рµ С‚РµР±Рµ Р±СѓРґРµС‚ С…СѓРґРѕ!
+	AI_Output(self,other,"DIA_Harlok_FetchHarlok_OrElse_01_01");	//РўРѕР»СЊРєРѕ РїРѕРїСЂРѕР±СѓР№ РїРѕРґРѕР№С‚Рё РєРѕ РјРЅРµ РµС‰Рµ СЂР°Р·, С‰РµРЅРѕРє!
 	AI_StopProcessInfos(self);
 };
 
 func void DIA_Harlok_FetchHarlok_BACK()
 {
-	AI_Output(other,self,"DIA_Harlok_FetchHarlok_BACK_15_00");	//Да ладно, не волнуйся так.
+	AI_Output(other,self,"DIA_Harlok_FetchHarlok_BACK_15_00");	//Р”Р° Р»Р°РґРЅРѕ, РЅРµ РІРѕР»РЅСѓР№СЃСЏ С‚Р°Рє.
 	Info_ClearChoices(DIA_Harlok_FetchHarlok);
 };
 
@@ -97,7 +97,7 @@ instance DIA_Harlok_HarlokAgain(C_Info)
 	condition = DIA_Harlok_HarlokAgain_Condition;
 	information = DIA_Harlok_HarlokAgain_Info;
 	permanent = 0;
-	description = "Я просто хотел напомнить тебе, что пора бы сменить твоего друга!";
+	description = "РЇ РїСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РЅР°РїРѕРјРЅРёС‚СЊ С‚РµР±Рµ, С‡С‚Рѕ РїРѕСЂР° Р±С‹ СЃРјРµРЅРёС‚СЊ С‚РІРѕРµРіРѕ РґСЂСѓРіР°!";
 };
 
 
@@ -111,9 +111,9 @@ func int DIA_Harlok_HarlokAgain_Condition()
 
 func void DIA_Harlok_HarlokAgain_Info()
 {
-	AI_Output(other,self,"DIA_Harlok_HarlokAgain_15_00");	//Я просто хотел напомнить тебе, что пора бы сменить твоего друга!
-	AI_Output(self,other,"DIA_Harlok_HarlokAgain_01_01");	//Слушай! Убирайся отсюда, пока жив!
-	B_LogEntry(CH1_GhorimsRelief,"Кажется, Харлок самый ленивый из всех, кого я видел. Думаю, мне стоит помочь ему собраться с силами...");
+	AI_Output(other,self,"DIA_Harlok_HarlokAgain_15_00");	//РЇ РїСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РЅР°РїРѕРјРЅРёС‚СЊ С‚РµР±Рµ, С‡С‚Рѕ РїРѕСЂР° Р±С‹ СЃРјРµРЅРёС‚СЊ С‚РІРѕРµРіРѕ РґСЂСѓРіР°!
+	AI_Output(self,other,"DIA_Harlok_HarlokAgain_01_01");	//РЎР»СѓС€Р°Р№! РЈР±РёСЂР°Р№СЃСЏ РѕС‚СЃСЋРґР°, РїРѕРєР° Р¶РёРІ!
+	B_LogEntry(CH1_GhorimsRelief,"РљР°Р¶РµС‚СЃСЏ, РҐР°СЂР»РѕРє СЃР°РјС‹Р№ Р»РµРЅРёРІС‹Р№ РёР· РІСЃРµС…, РєРѕРіРѕ СЏ РІРёРґРµР». Р”СѓРјР°СЋ, РјРЅРµ СЃС‚РѕРёС‚ РїРѕРјРѕС‡СЊ РµРјСѓ СЃРѕР±СЂР°С‚СЊСЃСЏ СЃ СЃРёР»Р°РјРё...");
 };
 
 
@@ -124,7 +124,7 @@ instance DIA_Harlok_SendHarlok(C_Info)
 	condition = DIA_Harlok_SendHarlok_Condition;
 	information = DIA_Harlok_SendHarlok_Info;
 	permanent = 0;
-	description = "Ну, что, ты уже готов сменить своего друга?";
+	description = "РќСѓ, С‡С‚Рѕ, С‚С‹ СѓР¶Рµ РіРѕС‚РѕРІ СЃРјРµРЅРёС‚СЊ СЃРІРѕРµРіРѕ РґСЂСѓРіР°?";
 };
 
 
@@ -139,12 +139,12 @@ func int DIA_Harlok_SendHarlok_Condition()
 func void DIA_Harlok_SendHarlok_Info()
 {
 	var C_Npc Ghorim;
-	AI_Output(other,self,"DIA_Harlok_SendHarlok_15_00");	//Ну, что, ты уже готов сменить своего друга?
-	AI_Output(self,other,"DIA_Harlok_SendHarlok_01_01");	//Сколько можно приставать ко мне?! Не суй свой нос в чужие дела!
-	AI_Output(other,self,"DIA_Harlok_SendHarlok_15_02");	//Просто хотел посмотреть, как ты работаешь.
-	AI_Output(self,other,"DIA_Harlok_SendHarlok_01_03");	//Ладно уж, иду... Я уже иду...
+	AI_Output(other,self,"DIA_Harlok_SendHarlok_15_00");	//РќСѓ, С‡С‚Рѕ, С‚С‹ СѓР¶Рµ РіРѕС‚РѕРІ СЃРјРµРЅРёС‚СЊ СЃРІРѕРµРіРѕ РґСЂСѓРіР°?
+	AI_Output(self,other,"DIA_Harlok_SendHarlok_01_01");	//РЎРєРѕР»СЊРєРѕ РјРѕР¶РЅРѕ РїСЂРёСЃС‚Р°РІР°С‚СЊ РєРѕ РјРЅРµ?! РќРµ СЃСѓР№ СЃРІРѕР№ РЅРѕСЃ РІ С‡СѓР¶РёРµ РґРµР»Р°!
+	AI_Output(other,self,"DIA_Harlok_SendHarlok_15_02");	//РџСЂРѕСЃС‚Рѕ С…РѕС‚РµР» РїРѕСЃРјРѕС‚СЂРµС‚СЊ, РєР°Рє С‚С‹ СЂР°Р±РѕС‚Р°РµС€СЊ.
+	AI_Output(self,other,"DIA_Harlok_SendHarlok_01_03");	//Р›Р°РґРЅРѕ СѓР¶, РёРґСѓ... РЇ СѓР¶Рµ РёРґСѓ...
 	self.attribute[ATR_HITPOINTS] = self.attribute[ATR_HITPOINTS_MAX];
-	B_LogEntry(CH1_GhorimsRelief,"Харлок меня правильно понял. Он согласен сменить Горима.");
+	B_LogEntry(CH1_GhorimsRelief,"РҐР°СЂР»РѕРє РјРµРЅСЏ РїСЂР°РІРёР»СЊРЅРѕ РїРѕРЅСЏР». РћРЅ СЃРѕРіР»Р°СЃРµРЅ СЃРјРµРЅРёС‚СЊ Р“РѕСЂРёРјР°.");
 	B_GiveXP(XP_SentHarlok);
 	Npc_ExchangeRoutine(self,"START");
 	Ghorim = Hlp_GetNpc(NOV_1310_Ghorim);
@@ -177,7 +177,7 @@ func int DIA_Harlok_Angry_Condition()
 
 func void DIA_Harlok_Angry_Info()
 {
-	AI_Output(self,other,"DIA_Harlok_Angry_01_00");	//Да оставь же меня в покое! Я иду, не видишь?!
+	AI_Output(self,other,"DIA_Harlok_Angry_01_00");	//Р”Р° РѕСЃС‚Р°РІСЊ Р¶Рµ РјРµРЅСЏ РІ РїРѕРєРѕРµ! РЇ РёРґСѓ, РЅРµ РІРёРґРёС€СЊ?!
 	AI_StopProcessInfos(self);
 };
 

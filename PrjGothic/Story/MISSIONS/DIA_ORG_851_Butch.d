@@ -45,35 +45,35 @@ func void butch_getlost_info()
 {
 	if(Npc_GetTrueGuild(hero) != GIL_ORG)
 	{
-		AI_Output(self,other,"DIA_Butch_GS_01");	//Чего уставился?
+		AI_Output(self,other,"DIA_Butch_GS_01");	//Р§РµРіРѕ СѓСЃС‚Р°РІРёР»СЃСЏ?
 	};
 	if(((BaalKagan_VerteilKraut == LOG_RUNNING) || (BaalKagan_VerteilKraut == LOG_SUCCESS)) && ((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0)))
 	{
-		AI_Output(other,self,"Info_Org_13_Krautprobe_15_00");	//Просто подумал, может быть, ты захочешь болотника.
+		AI_Output(other,self,"Info_Org_13_Krautprobe_15_00");	//РџСЂРѕСЃС‚Рѕ РїРѕРґСѓРјР°Р», РјРѕР¶РµС‚ Р±С‹С‚СЊ, С‚С‹ Р·Р°С…РѕС‡РµС€СЊ Р±РѕР»РѕС‚РЅРёРєР°.
 		if(Npc_HasItems(other,ItMiJoint_1))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_1,1);
-			b_printtrademsg1("Отдан 'Новичок'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РќРѕРІРёС‡РѕРє'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_2))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_2,1);
-			b_printtrademsg1("Отдан 'Северный темный'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_3))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_3,1);
-			b_printtrademsg1("Отдан 'Зов мечты'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'Р—РѕРІ РјРµС‡С‚С‹'.");
 		};
 		NC_Joints_verteilt = NC_Joints_verteilt + 1;
-		AI_Output(self,other,"DIA_Butch_GS_02");	//О, давай его сюда! Гуляй пока, малыш...
+		AI_Output(self,other,"DIA_Butch_GS_02");	//Рћ, РґР°РІР°Р№ РµРіРѕ СЃСЋРґР°! Р“СѓР»СЏР№ РїРѕРєР°, РјР°Р»С‹С€...
 		Info_ClearChoices(butch_getlost);
-		Info_AddChoice(butch_getlost,"Я думаю, ты меня не так понял!",butch_getlost_take);
-		Info_AddChoice(butch_getlost,"Лучше я пойду отсюда...",butch_getlost_forget);
+		Info_AddChoice(butch_getlost,"РЇ РґСѓРјР°СЋ, С‚С‹ РјРµРЅСЏ РЅРµ С‚Р°Рє РїРѕРЅСЏР»!",butch_getlost_take);
+		Info_AddChoice(butch_getlost,"Р›СѓС‡С€Рµ СЏ РїРѕР№РґСѓ РѕС‚СЃСЋРґР°...",butch_getlost_forget);
 	}
 	else if((Npc_GetTrueGuild(hero) == GIL_None) || (Npc_GetTrueGuild(hero) == GIL_STT) || (Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_KDF))
 	{
-		AI_Output(self,other,"DIA_Butch_GS_03");	//Что ты здесь забыл, оборванец вонючий?
+		AI_Output(self,other,"DIA_Butch_GS_03");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ Р·Р°Р±С‹Р», РѕР±РѕСЂРІР°РЅРµС† РІРѕРЅСЋС‡РёР№?
 		AI_StopProcessInfos(self);
 		Npc_SetTarget(self,other);
 		AI_StartState(self,ZS_Attack,1,"");
@@ -85,13 +85,13 @@ func void butch_getlost_info()
 	else if((Npc_GetTrueGuild(hero) == GIL_ORG) || (Npc_GetTrueGuild(hero) == GIL_SLD) || (Npc_GetTrueGuild(hero) == GIL_KDW))
 	{
 		AI_DrawWeapon(self);
-		AI_Output(self,other,"DIA_Butch_GS_04");	//Не нравится мне твоя рожа... Попробуй только чихнуть громко, мигом глотку перережу!
+		AI_Output(self,other,"DIA_Butch_GS_04");	//РќРµ РЅСЂР°РІРёС‚СЃСЏ РјРЅРµ С‚РІРѕСЏ СЂРѕР¶Р°... РџРѕРїСЂРѕР±СѓР№ С‚РѕР»СЊРєРѕ С‡РёС…РЅСѓС‚СЊ РіСЂРѕРјРєРѕ, РјРёРіРѕРј РіР»РѕС‚РєСѓ РїРµСЂРµСЂРµР¶Сѓ!
 		AI_StopProcessInfos(self);
 		AI_RemoveWeapon(self);
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Butch_GS_05");	//Не нравится мне твоя рожа...
+		AI_Output(self,other,"DIA_Butch_GS_05");	//РќРµ РЅСЂР°РІРёС‚СЃСЏ РјРЅРµ С‚РІРѕСЏ СЂРѕР¶Р°...
 		AI_StopProcessInfos(self);
 		Npc_SetTarget(self,other);
 		AI_StartState(self,ZS_Attack,0,"");
@@ -100,8 +100,8 @@ func void butch_getlost_info()
 
 func void butch_getlost_take()
 {
-	AI_Output(other,self,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_15_02");	//Я думаю, ты меня не так понял!
-	AI_Output(self,other,"DIA_Butch_GS_06");	//Чего??
+	AI_Output(other,self,"DIA_SLD_753_Baloro_SC_wills_wissen_Info_15_02");	//РЇ РґСѓРјР°СЋ, С‚С‹ РјРµРЅСЏ РЅРµ С‚Р°Рє РїРѕРЅСЏР»!
+	AI_Output(self,other,"DIA_Butch_GS_06");	//Р§РµРіРѕ??
 	if((Npc_GetTrueGuild(hero) == GIL_None) || (Npc_GetTrueGuild(hero) == GIL_STT) || (Npc_GetTrueGuild(hero) == GIL_GRD) || (Npc_GetTrueGuild(hero) == GIL_KDF))
 	{
 		AI_StopProcessInfos(self);
@@ -122,7 +122,7 @@ func void butch_getlost_take()
 
 func void butch_getlost_forget()
 {
-	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_2_INFO_15_01");	//Лучше я пойду отсюда...
+	AI_Output(other,self,"DIA_SLD_761_Soeldner_EXIT_2_INFO_15_01");	//Р›СѓС‡С€Рµ СЏ РїРѕР№РґСѓ РѕС‚СЃСЋРґР°...
 	AI_StopProcessInfos(self);
 };
 
@@ -148,7 +148,7 @@ func int butch_getlost2_condition()
 
 func void butch_getlost2_info()
 {
-	AI_Output(self,other,"SVM_19_GetOutOfHere");	//Проваливай!
+	AI_Output(self,other,"SVM_19_GetOutOfHere");	//РџСЂРѕРІР°Р»РёРІР°Р№!
 	AI_StopProcessInfos(self);
 };
 

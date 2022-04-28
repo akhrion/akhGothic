@@ -1,7 +1,7 @@
 
 instance GUR_1209_BaalOrun(Npc_Default)
 {
-	name[0] = "Идол Оран";
+	name[0] = "РРґРѕР» РћСЂР°РЅ";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 28;

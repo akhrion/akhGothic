@@ -26,7 +26,7 @@ instance Info_Stt_10_EinerVonEuchWerden(C_Info)
 	condition = Info_Stt_10_EinerVonEuchWerden_Condition;
 	information = Info_Stt_10_EinerVonEuchWerden_Info;
 	permanent = 1;
-	description = "Я бы хотел стать Призраком.";
+	description = "РЇ Р±С‹ С…РѕС‚РµР» СЃС‚Р°С‚СЊ РџСЂРёР·СЂР°РєРѕРј.";
 };
 
 
@@ -41,26 +41,26 @@ func int Info_Stt_10_EinerVonEuchWerden_Condition()
 func void Info_Stt_10_EinerVonEuchWerden_Info()
 {
 	var C_Npc diego;
-	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_15_00");	//Я бы хотел стать Призраком.
-	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_10_01");	//Да? А ты уже поговорил с Диего?
+	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_15_00");	//РЇ Р±С‹ С…РѕС‚РµР» СЃС‚Р°С‚СЊ РџСЂРёР·СЂР°РєРѕРј.
+	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_10_01");	//Р”Р°? Рђ С‚С‹ СѓР¶Рµ РїРѕРіРѕРІРѕСЂРёР» СЃ Р”РёРµРіРѕ?
 	diego = Hlp_GetNpc(PC_Thief);
 	diego.aivar[AIV_FINDABLE] = TRUE;
 	Info_ClearChoices(Info_Stt_10_EinerVonEuchWerden);
-	Info_AddChoice(Info_Stt_10_EinerVonEuchWerden,"Еще нет.",Info_Stt_10_EinerVonEuchWerden_Nein);
-	Info_AddChoice(Info_Stt_10_EinerVonEuchWerden,"Я подойду к нему.",Info_Stt_10_EinerVonEuchWerden_Ja);
+	Info_AddChoice(Info_Stt_10_EinerVonEuchWerden,"Р•С‰Рµ РЅРµС‚.",Info_Stt_10_EinerVonEuchWerden_Nein);
+	Info_AddChoice(Info_Stt_10_EinerVonEuchWerden,"РЇ РїРѕРґРѕР№РґСѓ Рє РЅРµРјСѓ.",Info_Stt_10_EinerVonEuchWerden_Ja);
 };
 
 func void Info_Stt_10_EinerVonEuchWerden_Nein()
 {
-	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_Nein_15_00");	//Еще нет.
-	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_Nein_10_01");	//Так поговори. Ты найдешь его перед воротами замка.
+	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_Nein_15_00");	//Р•С‰Рµ РЅРµС‚.
+	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_Nein_10_01");	//РўР°Рє РїРѕРіРѕРІРѕСЂРё. РўС‹ РЅР°Р№РґРµС€СЊ РµРіРѕ РїРµСЂРµРґ РІРѕСЂРѕС‚Р°РјРё Р·Р°РјРєР°.
 	Info_ClearChoices(Info_Stt_10_EinerVonEuchWerden);
 };
 
 func void Info_Stt_10_EinerVonEuchWerden_Ja()
 {
-	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_Ja_15_00");	//Я подойду к нему.
-	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_Ja_10_01");	//Хорошо. Делай то, что он тебе скажет. Мне это никак не повредит. Но кто знает...
+	AI_Output(other,self,"Info_Stt_10_EinerVonEuchWerden_Ja_15_00");	//РЇ РїРѕРґРѕР№РґСѓ Рє РЅРµРјСѓ.
+	AI_Output(self,other,"Info_Stt_10_EinerVonEuchWerden_Ja_10_01");	//РҐРѕСЂРѕС€Рѕ. Р”РµР»Р°Р№ С‚Рѕ, С‡С‚Рѕ РѕРЅ С‚РµР±Рµ СЃРєР°Р¶РµС‚. РњРЅРµ СЌС‚Рѕ РЅРёРєР°Рє РЅРµ РїРѕРІСЂРµРґРёС‚. РќРѕ РєС‚Рѕ Р·РЅР°РµС‚...
 	Info_ClearChoices(Info_Stt_10_EinerVonEuchWerden);
 };
 
@@ -71,7 +71,7 @@ instance Info_Stt_10_WichtigePersonen(C_Info)
 	condition = Info_Stt_10_WichtigePersonen_Condition;
 	information = Info_Stt_10_WichtigePersonen_Info;
 	permanent = 1;
-	description = "Есть еще кто-нибудь, кто может быть мне полезен?";
+	description = "Р•СЃС‚СЊ РµС‰Рµ РєС‚Рѕ-РЅРёР±СѓРґСЊ, РєС‚Рѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ РјРЅРµ РїРѕР»РµР·РµРЅ?";
 };
 
 
@@ -82,8 +82,8 @@ func int Info_Stt_10_WichtigePersonen_Condition()
 
 func void Info_Stt_10_WichtigePersonen_Info()
 {
-	AI_Output(other,self,"Info_Stt_10_WichtigePersonen_15_00");	//Есть еще кто-нибудь, кто может быть мне полезен?
-	AI_Output(self,other,"Info_Stt_10_WichtigePersonen_10_01");	//Если ты испортишь отношения с кем-нибудь из лагеря, обратись к Граво. Он сидит возле купальни рядом с воротами замка. Он помогает людям улаживать их проблемы. А проблемы чаще всего возникают у таких новичков, как ты.
+	AI_Output(other,self,"Info_Stt_10_WichtigePersonen_15_00");	//Р•СЃС‚СЊ РµС‰Рµ РєС‚Рѕ-РЅРёР±СѓРґСЊ, РєС‚Рѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ РјРЅРµ РїРѕР»РµР·РµРЅ?
+	AI_Output(self,other,"Info_Stt_10_WichtigePersonen_10_01");	//Р•СЃР»Рё С‚С‹ РёСЃРїРѕСЂС‚РёС€СЊ РѕС‚РЅРѕС€РµРЅРёСЏ СЃ РєРµРј-РЅРёР±СѓРґСЊ РёР· Р»Р°РіРµСЂСЏ, РѕР±СЂР°С‚РёСЃСЊ Рє Р“СЂР°РІРѕ. РћРЅ СЃРёРґРёС‚ РІРѕР·Р»Рµ РєСѓРїР°Р»СЊРЅРё СЂСЏРґРѕРј СЃ РІРѕСЂРѕС‚Р°РјРё Р·Р°РјРєР°. РћРЅ РїРѕРјРѕРіР°РµС‚ Р»СЋРґСЏРј СѓР»Р°Р¶РёРІР°С‚СЊ РёС… РїСЂРѕР±Р»РµРјС‹. Рђ РїСЂРѕР±Р»РµРјС‹ С‡Р°С‰Рµ РІСЃРµРіРѕ РІРѕР·РЅРёРєР°СЋС‚ Сѓ С‚Р°РєРёС… РЅРѕРІРёС‡РєРѕРІ, РєР°Рє С‚С‹.
 };
 
 
@@ -93,7 +93,7 @@ instance Info_Stt_10_DasLager(C_Info)
 	condition = Info_Stt_10_DasLager_Condition;
 	information = Info_Stt_10_DasLager_Info;
 	permanent = 1;
-	description = "Что ты можешь рассказать об этом лагере?";
+	description = "Р§С‚Рѕ С‚С‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ?";
 };
 
 
@@ -104,9 +104,9 @@ func int Info_Stt_10_DasLager_Condition()
 
 func void Info_Stt_10_DasLager_Info()
 {
-	AI_Output(other,self,"Info_Stt_10_DasLager_15_00");	//Что ты можешь рассказать об этом лагере?
-	AI_Output(self,other,"Info_Stt_10_DasLager_10_01");	//По-моему, самое интересное место в лагере - рынок. Там продается почти все. Так что заходи туда, если что-нибудь понадобится.
-	AI_Output(self,other,"Info_Stt_10_DasLager_10_02");	//Он находится под большой крышей на Внешнем Кольце, к югу от замка.
+	AI_Output(other,self,"Info_Stt_10_DasLager_15_00");	//Р§С‚Рѕ С‚С‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РѕР± СЌС‚РѕРј Р»Р°РіРµСЂРµ?
+	AI_Output(self,other,"Info_Stt_10_DasLager_10_01");	//РџРѕ-РјРѕРµРјСѓ, СЃР°РјРѕРµ РёРЅС‚РµСЂРµСЃРЅРѕРµ РјРµСЃС‚Рѕ РІ Р»Р°РіРµСЂРµ - СЂС‹РЅРѕРє. РўР°Рј РїСЂРѕРґР°РµС‚СЃСЏ РїРѕС‡С‚Рё РІСЃРµ. РўР°Рє С‡С‚Рѕ Р·Р°С…РѕРґРё С‚СѓРґР°, РµСЃР»Рё С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ.
+	AI_Output(self,other,"Info_Stt_10_DasLager_10_02");	//РћРЅ РЅР°С…РѕРґРёС‚СЃСЏ РїРѕРґ Р±РѕР»СЊС€РѕР№ РєСЂС‹С€РµР№ РЅР° Р’РЅРµС€РЅРµРј РљРѕР»СЊС†Рµ, Рє СЋРіСѓ РѕС‚ Р·Р°РјРєР°.
 };
 
 
@@ -116,7 +116,7 @@ instance Info_Stt_10_DieLage(C_Info)
 	condition = Info_Stt_10_DieLage_Condition;
 	information = Info_Stt_10_DieLage_Info;
 	permanent = 1;
-	description = "Привет!";
+	description = "РџСЂРёРІРµС‚!";
 };
 
 
@@ -127,8 +127,8 @@ func int Info_Stt_10_DieLage_Condition()
 
 func void Info_Stt_10_DieLage_Info()
 {
-	AI_Output(other,self,"Info_Stt_10_DieLage_15_00");	//Привет!
-	AI_Output(self,other,"Info_Stt_10_DieLage_10_01");	//Что тебе нужно?
+	AI_Output(other,self,"Info_Stt_10_DieLage_15_00");	//РџСЂРёРІРµС‚!
+	AI_Output(self,other,"Info_Stt_10_DieLage_10_01");	//Р§С‚Рѕ С‚РµР±Рµ РЅСѓР¶РЅРѕ?
 };
 
 func void B_AssignAmbientInfos_Stt_10(var C_Npc slf)

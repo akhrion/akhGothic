@@ -28,7 +28,7 @@ instance DIA_Cutter_Hello(C_Info)
 	condition = DIA_Cutter_Hello_Condition;
 	information = DIA_Cutter_Hello_Info;
 	permanent = 0;
-	description = "Да, какой большой замок.";
+	description = "Р”Р°, РєР°РєРѕР№ Р±РѕР»СЊС€РѕР№ Р·Р°РјРѕРє.";
 };
 
 
@@ -42,9 +42,9 @@ func int DIA_Cutter_Hello_Condition()
 
 func void DIA_Cutter_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Cutter_Hello_15_00");	//Да, какой большой замок.
-	AI_Output(self,other,"DIA_Cutter_Hello_08_01");	//Раньше я тебя здесь не видел. Кто ты?
-	AI_Output(other,self,"DIA_Cutter_Hello_15_02");	//Я здесь недавно. Хочу немного осмотреть это место.
+	AI_Output(other,self,"DIA_Cutter_Hello_15_00");	//Р”Р°, РєР°РєРѕР№ Р±РѕР»СЊС€РѕР№ Р·Р°РјРѕРє.
+	AI_Output(self,other,"DIA_Cutter_Hello_08_01");	//Р Р°РЅСЊС€Рµ СЏ С‚РµР±СЏ Р·РґРµСЃСЊ РЅРµ РІРёРґРµР». РљС‚Рѕ С‚С‹?
+	AI_Output(other,self,"DIA_Cutter_Hello_15_02");	//РЇ Р·РґРµСЃСЊ РЅРµРґР°РІРЅРѕ. РҐРѕС‡Сѓ РЅРµРјРЅРѕРіРѕ РѕСЃРјРѕС‚СЂРµС‚СЊ СЌС‚Рѕ РјРµСЃС‚Рѕ.
 };
 
 
@@ -55,7 +55,7 @@ instance DIA_Cutter_Burg(C_Info)
 	condition = DIA_Cutter_Burg_Condition;
 	information = DIA_Cutter_Burg_Info;
 	permanent = 0;
-	description = "Ты можешь рассказать мне что-нибудь о замке?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ Рѕ Р·Р°РјРєРµ?";
 };
 
 
@@ -69,12 +69,12 @@ func int DIA_Cutter_Burg_Condition()
 
 func void DIA_Cutter_Burg_Info()
 {
-	AI_Output(other,self,"DIA_Cutter_Burg_15_00");	//Ты можешь рассказать мне что-нибудь о замке?
-	AI_Output(self,other,"DIA_Cutter_Burg_08_01");	//После великого восстания он был занят Гомезом и его людьми. Теперь никто другой не смеет приближаться к нему.
-	AI_Output(self,other,"DIA_Cutter_Burg_08_02");	//Я еще тогда понял, что лучше всего будет присоединиться к Гомезу.
-	AI_Output(self,other,"DIA_Cutter_Burg_08_03");	//Еще в те времена, когда все мы сидели в подземельях и работали на шахте, он был самым влиятельным среди заключенных.
-	AI_Output(other,self,"DIA_Cutter_Burg_15_04");	//Так под замком есть подземелья?
-	AI_Output(self,other,"DIA_Cutter_Burg_08_05");	//Да, но сейчас они пусты. Со времен восстания туда никто не спускался.
+	AI_Output(other,self,"DIA_Cutter_Burg_15_00");	//РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ Рѕ Р·Р°РјРєРµ?
+	AI_Output(self,other,"DIA_Cutter_Burg_08_01");	//РџРѕСЃР»Рµ РІРµР»РёРєРѕРіРѕ РІРѕСЃСЃС‚Р°РЅРёСЏ РѕРЅ Р±С‹Р» Р·Р°РЅСЏС‚ Р“РѕРјРµР·РѕРј Рё РµРіРѕ Р»СЋРґСЊРјРё. РўРµРїРµСЂСЊ РЅРёРєС‚Рѕ РґСЂСѓРіРѕР№ РЅРµ СЃРјРµРµС‚ РїСЂРёР±Р»РёР¶Р°С‚СЊСЃСЏ Рє РЅРµРјСѓ.
+	AI_Output(self,other,"DIA_Cutter_Burg_08_02");	//РЇ РµС‰Рµ С‚РѕРіРґР° РїРѕРЅСЏР», С‡С‚Рѕ Р»СѓС‡С€Рµ РІСЃРµРіРѕ Р±СѓРґРµС‚ РїСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ Рє Р“РѕРјРµР·Сѓ.
+	AI_Output(self,other,"DIA_Cutter_Burg_08_03");	//Р•С‰Рµ РІ С‚Рµ РІСЂРµРјРµРЅР°, РєРѕРіРґР° РІСЃРµ РјС‹ СЃРёРґРµР»Рё РІ РїРѕРґР·РµРјРµР»СЊСЏС… Рё СЂР°Р±РѕС‚Р°Р»Рё РЅР° С€Р°С…С‚Рµ, РѕРЅ Р±С‹Р» СЃР°РјС‹Рј РІР»РёСЏС‚РµР»СЊРЅС‹Рј СЃСЂРµРґРё Р·Р°РєР»СЋС‡РµРЅРЅС‹С….
+	AI_Output(other,self,"DIA_Cutter_Burg_15_04");	//РўР°Рє РїРѕРґ Р·Р°РјРєРѕРј РµСЃС‚СЊ РїРѕРґР·РµРјРµР»СЊСЏ?
+	AI_Output(self,other,"DIA_Cutter_Burg_08_05");	//Р”Р°, РЅРѕ СЃРµР№С‡Р°СЃ РѕРЅРё РїСѓСЃС‚С‹. РЎРѕ РІСЂРµРјРµРЅ РІРѕСЃСЃС‚Р°РЅРёСЏ С‚СѓРґР° РЅРёРєС‚Рѕ РЅРµ СЃРїСѓСЃРєР°Р»СЃСЏ.
 };
 
 
@@ -85,7 +85,7 @@ instance DIA_Cutter_PERM(C_Info)
 	condition = DIA_Cutter_PERM_Condition;
 	information = DIA_Cutter_PERM_Info;
 	permanent = 1;
-	description = "Как живется здесь стражникам?";
+	description = "РљР°Рє Р¶РёРІРµС‚СЃСЏ Р·РґРµСЃСЊ СЃС‚СЂР°Р¶РЅРёРєР°Рј?";
 };
 
 
@@ -99,9 +99,9 @@ func int DIA_Cutter_PERM_Condition()
 
 func void DIA_Cutter_PERM_Info()
 {
-	AI_Output(other,self,"DIA_Cutter_PERM_15_00");	//Как живется здесь стражникам?
-	AI_Output(self,other,"DIA_Cutter_PERM_08_01");	//Спокойно живется. Наш лагерь сильнейший в колонии. С нами лучше не ссориться.
-	AI_Output(other,self,"DIA_Cutter_PERM_15_02");	//Я уже понял.
+	AI_Output(other,self,"DIA_Cutter_PERM_15_00");	//РљР°Рє Р¶РёРІРµС‚СЃСЏ Р·РґРµСЃСЊ СЃС‚СЂР°Р¶РЅРёРєР°Рј?
+	AI_Output(self,other,"DIA_Cutter_PERM_08_01");	//РЎРїРѕРєРѕР№РЅРѕ Р¶РёРІРµС‚СЃСЏ. РќР°С€ Р»Р°РіРµСЂСЊ СЃРёР»СЊРЅРµР№С€РёР№ РІ РєРѕР»РѕРЅРёРё. РЎ РЅР°РјРё Р»СѓС‡С€Рµ РЅРµ СЃСЃРѕСЂРёС‚СЊСЃСЏ.
+	AI_Output(other,self,"DIA_Cutter_PERM_15_02");	//РЇ СѓР¶Рµ РїРѕРЅСЏР».
 	AI_StopProcessInfos(self);
 };
 
@@ -126,7 +126,7 @@ func int GRD_208_Cutter_WELCOME_Condition()
 
 func void GRD_208_Cutter_WELCOME_Info()
 {
-	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01");	//Ты принял правильное решение. Думаю, тебе понравится быть стражником.
+	AI_Output(self,other,"GRD_208_Cutter_WELCOME_Info_08_01");	//РўС‹ РїСЂРёРЅСЏР» РїСЂР°РІРёР»СЊРЅРѕРµ СЂРµС€РµРЅРёРµ. Р”СѓРјР°СЋ, С‚РµР±Рµ РїРѕРЅСЂР°РІРёС‚СЃСЏ Р±С‹С‚СЊ СЃС‚СЂР°Р¶РЅРёРєРѕРј.
 	AI_StopProcessInfos(self);
 };
 
@@ -156,53 +156,53 @@ func void info_cutter_die_info()
 	{
 		if(oldHeroGuild == GIL_GRD)
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01");	//Среди нас появился предатель! И мы еще называли тебя стражником!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_01");	//РЎСЂРµРґРё РЅР°СЃ РїРѕСЏРІРёР»СЃСЏ РїСЂРµРґР°С‚РµР»СЊ! Р РјС‹ РµС‰Рµ РЅР°Р·С‹РІР°Р»Рё С‚РµР±СЏ СЃС‚СЂР°Р¶РЅРёРєРѕРј!
 		}
 		else if(oldHeroGuild == GIL_KDF)
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02");	//Похоже, одного их мятежных магов Огня мы пропустили!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_02");	//РџРѕС…РѕР¶Рµ, РѕРґРЅРѕРіРѕ РёС… РјСЏС‚РµР¶РЅС‹С… РјР°РіРѕРІ РћРіРЅСЏ РјС‹ РїСЂРѕРїСѓСЃС‚РёР»Рё!
 		}
 		else
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//Один из Призраков оказался предателем!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_03");	//РћРґРёРЅ РёР· РџСЂРёР·СЂР°РєРѕРІ РѕРєР°Р·Р°Р»СЃСЏ РїСЂРµРґР°С‚РµР»РµРј!
 		};
-		AI_Output(hero,self,"VLK_585_Aleph_GUARDS_Info_15_01");	//О чем ты говоришь?
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05");	//Ты ведешь какие-то дела с Новым лагерем, да?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06");	//Постой, но я все еще...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07");	//А ты думал, что так будет продолжаться вечно?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08");	//Прекрати нести весь этот вздор...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09");	//Предателей обычно убивают.
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10");	//Так умри, предатель!
+		AI_Output(hero,self,"VLK_585_Aleph_GUARDS_Info_15_01");	//Рћ С‡РµРј С‚С‹ РіРѕРІРѕСЂРёС€СЊ?
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_05");	//РўС‹ РІРµРґРµС€СЊ РєР°РєРёРµ-С‚Рѕ РґРµР»Р° СЃ РќРѕРІС‹Рј Р»Р°РіРµСЂРµРј, РґР°?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_06");	//РџРѕСЃС‚РѕР№, РЅРѕ СЏ РІСЃРµ РµС‰Рµ...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_07");	//Рђ С‚С‹ РґСѓРјР°Р», С‡С‚Рѕ С‚Р°Рє Р±СѓРґРµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊСЃСЏ РІРµС‡РЅРѕ?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_08");	//РџСЂРµРєСЂР°С‚Рё РЅРµСЃС‚Рё РІРµСЃСЊ СЌС‚РѕС‚ РІР·РґРѕСЂ...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_09");	//РџСЂРµРґР°С‚РµР»РµР№ РѕР±С‹С‡РЅРѕ СѓР±РёРІР°СЋС‚.
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_10");	//РўР°Рє СѓРјСЂРё, РїСЂРµРґР°С‚РµР»СЊ!
 		if(Npc_KnowsInfo(hero,Info_Fletcher_DIE))
 		{
-			B_LogEntry(CH4_BannedFromOC,"Палач, который сейчас охраняет главные ворота, повел себя точно так же, как и Флетчер. Он что-то знает о том, что я ищу юниторы для Нового лагеря.");
+			B_LogEntry(CH4_BannedFromOC,"РџР°Р»Р°С‡, РєРѕС‚РѕСЂС‹Р№ СЃРµР№С‡Р°СЃ РѕС…СЂР°РЅСЏРµС‚ РіР»Р°РІРЅС‹Рµ РІРѕСЂРѕС‚Р°, РїРѕРІРµР» СЃРµР±СЏ С‚РѕС‡РЅРѕ С‚Р°Рє Р¶Рµ, РєР°Рє Рё Р¤Р»РµС‚С‡РµСЂ. РћРЅ С‡С‚Рѕ-С‚Рѕ Р·РЅР°РµС‚ Рѕ С‚РѕРј, С‡С‚Рѕ СЏ РёС‰Сѓ СЋРЅРёС‚РѕСЂС‹ РґР»СЏ РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		}
 		else if(!Npc_KnowsInfo(hero,Info_Jackal_PAYDAY) && !Npc_KnowsInfo(hero,Info_Fletcher_DIE) && !Npc_KnowsInfo(hero,info_grd238_die))
 		{
 			Log_CreateTopic(CH4_BannedFromOC,LOG_MISSION);
 			Log_SetTopicStatus(CH4_BannedFromOC,LOG_RUNNING);
-			B_LogEntry(CH4_BannedFromOC,"Палач, который теперь вместе с группой стражников охраняет северные ворота, назвал меня предателем и перебежчиком. Без дальнейших разговоров он напал на меня!");
-			B_LogEntry(CH4_BannedFromOC,"Кажется, меня прогнали из Старого лагеря!");
+			B_LogEntry(CH4_BannedFromOC,"РџР°Р»Р°С‡, РєРѕС‚РѕСЂС‹Р№ С‚РµРїРµСЂСЊ РІРјРµСЃС‚Рµ СЃ РіСЂСѓРїРїРѕР№ СЃС‚СЂР°Р¶РЅРёРєРѕРІ РѕС…СЂР°РЅСЏРµС‚ СЃРµРІРµСЂРЅС‹Рµ РІРѕСЂРѕС‚Р°, РЅР°Р·РІР°Р» РјРµРЅСЏ РїСЂРµРґР°С‚РµР»РµРј Рё РїРµСЂРµР±РµР¶С‡РёРєРѕРј. Р‘РµР· РґР°Р»СЊРЅРµР№С€РёС… СЂР°Р·РіРѕРІРѕСЂРѕРІ РѕРЅ РЅР°РїР°Р» РЅР° РјРµРЅСЏ!");
+			B_LogEntry(CH4_BannedFromOC,"РљР°Р¶РµС‚СЃСЏ, РјРµРЅСЏ РїСЂРѕРіРЅР°Р»Рё РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ!");
 		};
 	}
 	else
 	{
 		if(C_NpcBelongsToNewCamp(hero))
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11");	//И как это ты осмелился выйти из Нового лагеря? Неразумный поступок!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_11");	//Р РєР°Рє СЌС‚Рѕ С‚С‹ РѕСЃРјРµР»РёР»СЃСЏ РІС‹Р№С‚Рё РёР· РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ? РќРµСЂР°Р·СѓРјРЅС‹Р№ РїРѕСЃС‚СѓРїРѕРє!
 		}
 		else
 		{
-			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12");	//И ты решился выйти из своего Болотного лагеря? Как глупо с твоей стороны!
+			AI_Output(self,hero,"Info_Bloodwyn_DIE_08_12");	//Р С‚С‹ СЂРµС€РёР»СЃСЏ РІС‹Р№С‚Рё РёР· СЃРІРѕРµРіРѕ Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ? РљР°Рє РіР»СѓРїРѕ СЃ С‚РІРѕРµР№ СЃС‚РѕСЂРѕРЅС‹!
 		};
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Что такое? О чем ты говоришь?
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//Так ты ничего не слышал о нападении на Новую шахту, да?
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//О чем ты...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//Прости, но мы не можем позволить тебе разгуливать здесь. Ты знаешь слишком много!
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17");	//Эй, я не хочу драться с тобой...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_18");	//Об этом раньше нужно было думать!
-		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19");	//Все, с меня хватит...
-		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20");	//И правда, хватит! Убить его!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_13");	//Р§С‚Рѕ С‚Р°РєРѕРµ? Рћ С‡РµРј С‚С‹ РіРѕРІРѕСЂРёС€СЊ?
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_14");	//РўР°Рє С‚С‹ РЅРёС‡РµРіРѕ РЅРµ СЃР»С‹С€Р°Р» Рѕ РЅР°РїР°РґРµРЅРёРё РЅР° РќРѕРІСѓСЋ С€Р°С…С‚Сѓ, РґР°?
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_15");	//Рћ С‡РµРј С‚С‹...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_16");	//РџСЂРѕСЃС‚Рё, РЅРѕ РјС‹ РЅРµ РјРѕР¶РµРј РїРѕР·РІРѕР»РёС‚СЊ С‚РµР±Рµ СЂР°Р·РіСѓР»РёРІР°С‚СЊ Р·РґРµСЃСЊ. РўС‹ Р·РЅР°РµС€СЊ СЃР»РёС€РєРѕРј РјРЅРѕРіРѕ!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_17");	//Р­Р№, СЏ РЅРµ С…РѕС‡Сѓ РґСЂР°С‚СЊСЃСЏ СЃ С‚РѕР±РѕР№...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_18");	//РћР± СЌС‚РѕРј СЂР°РЅСЊС€Рµ РЅСѓР¶РЅРѕ Р±С‹Р»Рѕ РґСѓРјР°С‚СЊ!
+		AI_Output(hero,self,"Info_Bloodwyn_DIE_15_19");	//Р’СЃРµ, СЃ РјРµРЅСЏ С…РІР°С‚РёС‚...
+		AI_Output(self,hero,"Info_Bloodwyn_DIE_08_20");	//Р РїСЂР°РІРґР°, С…РІР°С‚РёС‚! РЈР±РёС‚СЊ РµРіРѕ!
 	};
 	Npc_ExchangeRoutine(self,"FMTaken2");
 	B_ExchangeRoutine(GRD_232_Gardist,"FMTaken2");
@@ -211,7 +211,7 @@ func void info_cutter_die_info()
 	B_ExchangeRoutine(GRD_217_Torwache,"FMTaken2");
 	if((GETNEWGUY_STARTED == TRUE) && (OC_BANNED == FALSE))
 	{
-		B_LogEntry(CH1_RecruitDusty,"Теперь я не смогу вывести кого-либо из Старого лагеря.");
+		B_LogEntry(CH1_RecruitDusty,"РўРµРїРµСЂСЊ СЏ РЅРµ СЃРјРѕРіСѓ РІС‹РІРµСЃС‚Рё РєРѕРіРѕ-Р»РёР±Рѕ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ.");
 		Log_SetTopicStatus(CH1_RecruitDusty,LOG_FAILED);
 		GETNEWGUY_STARTED = LOG_FAILED;
 	};
@@ -223,7 +223,7 @@ func void info_cutter_die_info()
 	Wld_ExchangeGuildAttitudes("GIL_ATTITUDES_FMTAKEN");
 	if(!Npc_KnowsInfo(hero,Info_Fletcher_DIE) && !Npc_KnowsInfo(hero,info_grd238_die))
 	{
-		B_LogEntry(CH4_Firemages,"Ворота в Старый лагерь закрыты и охраняются стражниками. Они нападают на любого, кто окажется слишком неосторожен, чтобы подойти к ним.");
+		B_LogEntry(CH4_Firemages,"Р’РѕСЂРѕС‚Р° РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ Р·Р°РєСЂС‹С‚С‹ Рё РѕС…СЂР°РЅСЏСЋС‚СЃСЏ СЃС‚СЂР°Р¶РЅРёРєР°РјРё. РћРЅРё РЅР°РїР°РґР°СЋС‚ РЅР° Р»СЋР±РѕРіРѕ, РєС‚Рѕ РѕРєР°Р¶РµС‚СЃСЏ СЃР»РёС€РєРѕРј РЅРµРѕСЃС‚РѕСЂРѕР¶РµРЅ, С‡С‚РѕР±С‹ РїРѕРґРѕР№С‚Рё Рє РЅРёРј.");
 	};
 	AI_StopProcessInfos(self);
 	OC_BANNED = TRUE;

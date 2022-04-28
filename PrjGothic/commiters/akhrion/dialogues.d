@@ -17,7 +17,7 @@ instance akh_PC_DrinkPotionQuicksilver(C_Info)
 	permanent = 1;			
 	condition = akh_PC_DrinkPotionQuicksilver_CONDITION;		
 	information = akh_PC_DrinkPotionQuicksilver_ACTION;		
-	description = "Всегда было интересно, какая она на вкус..";	
+	description = "Р’СЃРµРіРґР° Р±С‹Р»Рѕ РёРЅС‚РµСЂРµСЃРЅРѕ, РєР°РєР°СЏ РѕРЅР° РЅР° РІРєСѓСЃ..";	
 };
 
 instance akh_npcReaction(C_Info)

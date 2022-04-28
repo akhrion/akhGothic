@@ -44,7 +44,7 @@ func void ORG_862_Jacko_GoAway_Info()
 {
 	var C_Npc Killian;
 	var C_Npc Renyu;
-	AI_Output(self,other,"ORG_862_Jacko_GoAway_Info_06_00");	//Что тебе здесь нужно?
+	AI_Output(self,other,"ORG_862_Jacko_GoAway_Info_06_00");	//Р§С‚Рѕ С‚РµР±Рµ Р·РґРµСЃСЊ РЅСѓР¶РЅРѕ?
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,other);
 	AI_StartState(self,ZS_Attack,1,"");
@@ -84,24 +84,24 @@ func int ORG_862_Jacko_GUARD_Condition()
 
 func void ORG_862_Jacko_GUARD_Info()
 {
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_Info_06_00");	//Ты что, заблудился?
-	AI_Output(other,self,"ORG_862_Jacko_GUARD_Info_15_01");	//Кор Галом уже знает, что у вас тут творится.
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_Info_06_02");	//Что? А откуда ты это знаешь?
-	B_LogEntry(CH1_DrugMonopol,"Я нашел место подпольного производства болотника. Над этим работают Джеко и два других вора.");
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_Info_06_00");	//РўС‹ С‡С‚Рѕ, Р·Р°Р±Р»СѓРґРёР»СЃСЏ?
+	AI_Output(other,self,"ORG_862_Jacko_GUARD_Info_15_01");	//РљРѕСЂ Р“Р°Р»РѕРј СѓР¶Рµ Р·РЅР°РµС‚, С‡С‚Рѕ Сѓ РІР°СЃ С‚СѓС‚ С‚РІРѕСЂРёС‚СЃСЏ.
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_Info_06_02");	//Р§С‚Рѕ? Рђ РѕС‚РєСѓРґР° С‚С‹ СЌС‚Рѕ Р·РЅР°РµС€СЊ?
+	B_LogEntry(CH1_DrugMonopol,"РЇ РЅР°С€РµР» РјРµСЃС‚Рѕ РїРѕРґРїРѕР»СЊРЅРѕРіРѕ РїСЂРѕРёР·РІРѕРґСЃС‚РІР° Р±РѕР»РѕС‚РЅРёРєР°. РќР°Рґ СЌС‚РёРј СЂР°Р±РѕС‚Р°СЋС‚ Р”Р¶РµРєРѕ Рё РґРІР° РґСЂСѓРіРёС… РІРѕСЂР°.");
 	Info_ClearChoices(ORG_862_Jacko_GUARD);
-	Info_AddChoice(ORG_862_Jacko_GUARD,"Кор Галом послал сюда пятерых Стражей...",ORG_862_Jacko_GUARD_Templer);
-	Info_AddChoice(ORG_862_Jacko_GUARD,"Интересно, насколько ценным может быть то, что я скажу.",ORG_862_Jacko_GUARD_InfoWert);
-	Info_AddChoice(ORG_862_Jacko_GUARD,"Я хочу прикрыть это дело.",ORG_862_Jacko_GUARD_Angriff);
+	Info_AddChoice(ORG_862_Jacko_GUARD,"РљРѕСЂ Р“Р°Р»РѕРј РїРѕСЃР»Р°Р» СЃСЋРґР° РїСЏС‚РµСЂС‹С… РЎС‚СЂР°Р¶РµР№...",ORG_862_Jacko_GUARD_Templer);
+	Info_AddChoice(ORG_862_Jacko_GUARD,"РРЅС‚РµСЂРµСЃРЅРѕ, РЅР°СЃРєРѕР»СЊРєРѕ С†РµРЅРЅС‹Рј РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚Рѕ, С‡С‚Рѕ СЏ СЃРєР°Р¶Сѓ.",ORG_862_Jacko_GUARD_InfoWert);
+	Info_AddChoice(ORG_862_Jacko_GUARD,"РЇ С…РѕС‡Сѓ РїСЂРёРєСЂС‹С‚СЊ СЌС‚Рѕ РґРµР»Рѕ.",ORG_862_Jacko_GUARD_Angriff);
 };
 
 func void ORG_862_Jacko_GUARD_Templer()
 {
-	AI_Output(other,self,"ORG_862_Jacko_GUARD_Templer_Info_15_00");	//Кор Галом послал сюда пятерых Стражей. Ему не нравится то, чем вы здесь занимаетесь.
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_Templer_Info_06_01");	//Нет! Этого не может быть!
-	AI_Output(other,self,"ORG_862_Jacko_GUARD_Templer_Info_15_02");	//Они будут здесь очень скоро.
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_Templer_Info_06_03");	//Черт! Нам нужно уходить отсюда!
+	AI_Output(other,self,"ORG_862_Jacko_GUARD_Templer_Info_15_00");	//РљРѕСЂ Р“Р°Р»РѕРј РїРѕСЃР»Р°Р» СЃСЋРґР° РїСЏС‚РµСЂС‹С… РЎС‚СЂР°Р¶РµР№. Р•РјСѓ РЅРµ РЅСЂР°РІРёС‚СЃСЏ С‚Рѕ, С‡РµРј РІС‹ Р·РґРµСЃСЊ Р·Р°РЅРёРјР°РµС‚РµСЃСЊ.
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_Templer_Info_06_01");	//РќРµС‚! Р­С‚РѕРіРѕ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ!
+	AI_Output(other,self,"ORG_862_Jacko_GUARD_Templer_Info_15_02");	//РћРЅРё Р±СѓРґСѓС‚ Р·РґРµСЃСЊ РѕС‡РµРЅСЊ СЃРєРѕСЂРѕ.
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_Templer_Info_06_03");	//Р§РµСЂС‚! РќР°Рј РЅСѓР¶РЅРѕ СѓС…РѕРґРёС‚СЊ РѕС‚СЃСЋРґР°!
 	Info_ClearChoices(ORG_862_Jacko_GUARD);
-	B_LogEntry(CH1_DrugMonopol,"Несколько имен несуществующих Стражей Братства обратили этих трусов в бегство. Проблему можно считать решенной.");
+	B_LogEntry(CH1_DrugMonopol,"РќРµСЃРєРѕР»СЊРєРѕ РёРјРµРЅ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёС… РЎС‚СЂР°Р¶РµР№ Р‘СЂР°С‚СЃС‚РІР° РѕР±СЂР°С‚РёР»Рё СЌС‚РёС… С‚СЂСѓСЃРѕРІ РІ Р±РµРіСЃС‚РІРѕ. РџСЂРѕР±Р»РµРјСѓ РјРѕР¶РЅРѕ СЃС‡РёС‚Р°С‚СЊ СЂРµС€РµРЅРЅРѕР№.");
 	B_GiveXP(XP_JackoRetired);
 	Npc_ExchangeRoutine(self,"ARBEITSLOS");
 	B_ExchangeRoutine(Org_861_Killian,"ARBEITSLOS");
@@ -112,16 +112,16 @@ func void ORG_862_Jacko_GUARD_Templer()
 
 func void ORG_862_Jacko_GUARD_InfoWert()
 {
-	AI_Output(other,self,"ORG_862_Jacko_GUARD_InfoWert_Info_15_00");	//Интересно, насколько ценным может быть то, что я скажу.
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_InfoWert_Info_06_01");	//Ах, вот в чем дело... Ладно. Ты помог мне. У меня есть немного руды. Забирай ее.
-	b_printtrademsg1("Получено руды: 95");
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_InfoWert_Info_06_02");	//А нам пора уходить. Думаю, тебе тоже не стоит здесь задерживаться.
+	AI_Output(other,self,"ORG_862_Jacko_GUARD_InfoWert_Info_15_00");	//РРЅС‚РµСЂРµСЃРЅРѕ, РЅР°СЃРєРѕР»СЊРєРѕ С†РµРЅРЅС‹Рј РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚Рѕ, С‡С‚Рѕ СЏ СЃРєР°Р¶Сѓ.
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_InfoWert_Info_06_01");	//РђС…, РІРѕС‚ РІ С‡РµРј РґРµР»Рѕ... Р›Р°РґРЅРѕ. РўС‹ РїРѕРјРѕРі РјРЅРµ. РЈ РјРµРЅСЏ РµСЃС‚СЊ РЅРµРјРЅРѕРіРѕ СЂСѓРґС‹. Р—Р°Р±РёСЂР°Р№ РµРµ.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 95");
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_InfoWert_Info_06_02");	//Рђ РЅР°Рј РїРѕСЂР° СѓС…РѕРґРёС‚СЊ. Р”СѓРјР°СЋ, С‚РµР±Рµ С‚РѕР¶Рµ РЅРµ СЃС‚РѕРёС‚ Р·РґРµСЃСЊ Р·Р°РґРµСЂР¶РёРІР°С‚СЊСЃСЏ.
 	B_GiveInvItems(self,other,ItMiNugget,95);
 	Npc_ExchangeRoutine(self,"ARBEITSLOS");
 	B_ExchangeRoutine(Org_861_Killian,"ARBEITSLOS");
 	B_ExchangeRoutine(Org_860_Renyu,"ARBEITSLOS");
 	Stooges_Fled = TRUE;
-	B_LogEntry(CH1_DrugMonopol,"Я сумел решить проблему, воспользовавшись своим даром убеждения. Джеко бросил свое дело и сбежал.");
+	B_LogEntry(CH1_DrugMonopol,"РЇ СЃСѓРјРµР» СЂРµС€РёС‚СЊ РїСЂРѕР±Р»РµРјСѓ, РІРѕСЃРїРѕР»СЊР·РѕРІР°РІС€РёСЃСЊ СЃРІРѕРёРј РґР°СЂРѕРј СѓР±РµР¶РґРµРЅРёСЏ. Р”Р¶РµРєРѕ Р±СЂРѕСЃРёР» СЃРІРѕРµ РґРµР»Рѕ Рё СЃР±РµР¶Р°Р».");
 	B_GiveXP(XP_JackoRetired);
 	Info_ClearChoices(ORG_862_Jacko_GUARD);
 	AI_StopProcessInfos(self);
@@ -131,8 +131,8 @@ func void ORG_862_Jacko_GUARD_Angriff()
 {
 	var C_Npc Killian;
 	var C_Npc Renyu;
-	AI_Output(other,self,"ORG_862_Jacko_GUARD_Angriff_Info_15_00");	//Я хочу прикрыть это дело.
-	AI_Output(self,other,"ORG_862_Jacko_GUARD_Angriff_Info_06_01");	//Эй, парни! Идите-ка сюда на минутку!
+	AI_Output(other,self,"ORG_862_Jacko_GUARD_Angriff_Info_15_00");	//РЇ С…РѕС‡Сѓ РїСЂРёРєСЂС‹С‚СЊ СЌС‚Рѕ РґРµР»Рѕ.
+	AI_Output(self,other,"ORG_862_Jacko_GUARD_Angriff_Info_06_01");	//Р­Р№, РїР°СЂРЅРё! РРґРёС‚Рµ-РєР° СЃСЋРґР° РЅР° РјРёРЅСѓС‚РєСѓ!
 	Info_ClearChoices(ORG_862_Jacko_GUARD);
 	AI_StopProcessInfos(self);
 	Npc_SetTarget(self,hero);
@@ -159,7 +159,7 @@ instance ORG_862_Jacko_Banditencamp(C_Info)
 	condition = ORG_862_Jacko_Banditencamp_Condition;
 	information = ORG_862_Jacko_Banditencamp_Info;
 	permanent = 1;
-	description = "А, вот вы где спрятались.";
+	description = "Рђ, РІРѕС‚ РІС‹ РіРґРµ СЃРїСЂСЏС‚Р°Р»РёСЃСЊ.";
 };
 
 
@@ -173,8 +173,8 @@ func int ORG_862_Jacko_Banditencamp_Condition()
 
 func void ORG_862_Jacko_Banditencamp_Info()
 {
-	AI_Output(other,self,"ORG_862_Jacko_Banditencamp_15_00");	//А, вот вы где спрятались.
-	AI_Output(self,other,"ORG_862_Jacko_Banditencamp_06_01");	//Да, мы были на волосок от смерти. Стражи из секты не стали бы долго раздумывать.
+	AI_Output(other,self,"ORG_862_Jacko_Banditencamp_15_00");	//Рђ, РІРѕС‚ РІС‹ РіРґРµ СЃРїСЂСЏС‚Р°Р»РёСЃСЊ.
+	AI_Output(self,other,"ORG_862_Jacko_Banditencamp_06_01");	//Р”Р°, РјС‹ Р±С‹Р»Рё РЅР° РІРѕР»РѕСЃРѕРє РѕС‚ СЃРјРµСЂС‚Рё. РЎС‚СЂР°Р¶Рё РёР· СЃРµРєС‚С‹ РЅРµ СЃС‚Р°Р»Рё Р±С‹ РґРѕР»РіРѕ СЂР°Р·РґСѓРјС‹РІР°С‚СЊ.
 	AI_StopProcessInfos(self);
 };
 

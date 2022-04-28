@@ -1,7 +1,7 @@
 
 instance TPL_1402_GorNaToth(Npc_Default)
 {
-	name[0] = "Гор На Тоф";
+	name[0] = "Р“РѕСЂ РќР° РўРѕС„";
 	npcType = npctype_main;
 	guild = GIL_TPL;
 	level = 21;

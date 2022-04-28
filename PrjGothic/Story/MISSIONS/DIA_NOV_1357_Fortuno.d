@@ -47,7 +47,7 @@ func int DIA_Fortuno_Greet_Condition()
 
 func void DIA_Fortuno_Greet_Info()
 {
-	AI_Output(self,other,"DIA_Fortuno_Greet_05_00");	//Иди-ка сюда. Я ни одного новичка не отпускаю без подарка.
+	AI_Output(self,other,"DIA_Fortuno_Greet_05_00");	//РРґРё-РєР° СЃСЋРґР°. РЇ РЅРё РѕРґРЅРѕРіРѕ РЅРѕРІРёС‡РєР° РЅРµ РѕС‚РїСѓСЃРєР°СЋ Р±РµР· РїРѕРґР°СЂРєР°.
 };
 
 
@@ -60,7 +60,7 @@ instance DIA_Fortuno_GetGeschenk(C_Info)
 	condition = DIA_Fortuno_GetGeschenk_Condition;
 	information = DIA_Fortuno_GetGeschenk_Info;
 	permanent = 0;
-	description = "Что это за подарок?";
+	description = "Р§С‚Рѕ СЌС‚Рѕ Р·Р° РїРѕРґР°СЂРѕРє?";
 };
 
 
@@ -74,16 +74,16 @@ func int DIA_Fortuno_GetGeschenk_Condition()
 
 func void DIA_Fortuno_GetGeschenk_Info()
 {
-	AI_Output(other,self,"DIA_Fortuno_GetGeschenk_15_00");	//Что это за подарок?
-	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_01");	//Вот, возьми этот болотник. Это 'Северный темный'. Отличная вещь!
-	b_printtrademsg1("Получено 3 'Северных темных'.");
-	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_02");	//Каждый день я буду давать тебе немного болотника, но если тебе нужно больше, чем три сигареты, ты должен будешь заплатить.
-	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_03");	//Если найдешь какие-нибудь травы или ягоды, заходи ко мне. Я с удовольствием куплю их у тебя.
+	AI_Output(other,self,"DIA_Fortuno_GetGeschenk_15_00");	//Р§С‚Рѕ СЌС‚Рѕ Р·Р° РїРѕРґР°СЂРѕРє?
+	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_01");	//Р’РѕС‚, РІРѕР·СЊРјРё СЌС‚РѕС‚ Р±РѕР»РѕС‚РЅРёРє. Р­С‚Рѕ 'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'. РћС‚Р»РёС‡РЅР°СЏ РІРµС‰СЊ!
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ 3 'РЎРµРІРµСЂРЅС‹С… С‚РµРјРЅС‹С…'.");
+	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_02");	//РљР°Р¶РґС‹Р№ РґРµРЅСЊ СЏ Р±СѓРґСѓ РґР°РІР°С‚СЊ С‚РµР±Рµ РЅРµРјРЅРѕРіРѕ Р±РѕР»РѕС‚РЅРёРєР°, РЅРѕ РµСЃР»Рё С‚РµР±Рµ РЅСѓР¶РЅРѕ Р±РѕР»СЊС€Рµ, С‡РµРј С‚СЂРё СЃРёРіР°СЂРµС‚С‹, С‚С‹ РґРѕР»Р¶РµРЅ Р±СѓРґРµС€СЊ Р·Р°РїР»Р°С‚РёС‚СЊ.
+	AI_Output(self,other,"DIA_Fortuno_GetGeschenk_05_03");	//Р•СЃР»Рё РЅР°Р№РґРµС€СЊ РєР°РєРёРµ-РЅРёР±СѓРґСЊ С‚СЂР°РІС‹ РёР»Рё СЏРіРѕРґС‹, Р·Р°С…РѕРґРё РєРѕ РјРЅРµ. РЇ СЃ СѓРґРѕРІРѕР»СЊСЃС‚РІРёРµРј РєСѓРїР»СЋ РёС… Сѓ С‚РµР±СЏ.
 	CreateInvItems(self,ItMiJoint_2,3);
 	B_GiveInvItems(self,other,ItMiJoint_2,3);
 	Fortuno_RationDay = Wld_GetDay();
 	Log_CreateTopic(GE_TraderPSI,LOG_NOTE);
-	B_LogEntry(GE_TraderPSI,"Фортуно торгует травами и алхимическими принадлежностями. Его дом находится под лабораторией Кор Галома.");
+	B_LogEntry(GE_TraderPSI,"Р¤РѕСЂС‚СѓРЅРѕ С‚РѕСЂРіСѓРµС‚ С‚СЂР°РІР°РјРё Рё Р°Р»С…РёРјРёС‡РµСЃРєРёРјРё РїСЂРёРЅР°РґР»РµР¶РЅРѕСЃС‚СЏРјРё. Р•РіРѕ РґРѕРј РЅР°С…РѕРґРёС‚СЃСЏ РїРѕРґ Р»Р°Р±РѕСЂР°С‚РѕСЂРёРµР№ РљРѕСЂ Р“Р°Р»РѕРјР°.");
 };
 
 
@@ -94,7 +94,7 @@ instance DIA_Fortuno_DailyRation(C_Info)
 	condition = DIA_Fortuno_DailyRation_Condition;
 	information = DIA_Fortuno_DailyRation_Info;
 	permanent = 1;
-	description = "Я хочу взять дневную порцию болотника.";
+	description = "РЇ С…РѕС‡Сѓ РІР·СЏС‚СЊ РґРЅРµРІРЅСѓСЋ РїРѕСЂС†РёСЋ Р±РѕР»РѕС‚РЅРёРєР°.";
 };
 
 
@@ -108,18 +108,18 @@ func int DIA_Fortuno_DailyRation_Condition()
 
 func void DIA_Fortuno_DailyRation_Info()
 {
-	AI_Output(other,self,"DIA_Fortuno_DailyRation_15_00");	//Я хочу взять дневную порцию болотника.
+	AI_Output(other,self,"DIA_Fortuno_DailyRation_15_00");	//РЇ С…РѕС‡Сѓ РІР·СЏС‚СЊ РґРЅРµРІРЅСѓСЋ РїРѕСЂС†РёСЋ Р±РѕР»РѕС‚РЅРёРєР°.
 	if(Fortuno_RationDay != Wld_GetDay())
 	{
-		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_01");	//Вот, возьми. Три 'Северных темных'. Только не стоит курить их все сразу!
-		b_printtrademsg1("Получено 3 'Северных темных'.");
+		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_01");	//Р’РѕС‚, РІРѕР·СЊРјРё. РўСЂРё 'РЎРµРІРµСЂРЅС‹С… С‚РµРјРЅС‹С…'. РўРѕР»СЊРєРѕ РЅРµ СЃС‚РѕРёС‚ РєСѓСЂРёС‚СЊ РёС… РІСЃРµ СЃСЂР°Р·Сѓ!
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ 3 'РЎРµРІРµСЂРЅС‹С… С‚РµРјРЅС‹С…'.");
 		CreateInvItems(self,ItMiJoint_2,3);
 		B_GiveInvItems(self,other,ItMiJoint_2,3);
 		Fortuno_RationDay = Wld_GetDay();
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_02");	//Свою дневную порцию ты уже получил. Если тебе нужно больше, приходи утром, или купи сейчас.
+		AI_Output(self,other,"DIA_Fortuno_DailyRation_05_02");	//РЎРІРѕСЋ РґРЅРµРІРЅСѓСЋ РїРѕСЂС†РёСЋ С‚С‹ СѓР¶Рµ РїРѕР»СѓС‡РёР». Р•СЃР»Рё С‚РµР±Рµ РЅСѓР¶РЅРѕ Р±РѕР»СЊС€Рµ, РїСЂРёС…РѕРґРё СѓС‚СЂРѕРј, РёР»Рё РєСѓРїРё СЃРµР№С‡Р°СЃ.
 	};
 };
 
@@ -131,7 +131,7 @@ instance DIA_Fortuno_BuyJoints(C_Info)
 	condition = DIA_Fortuno_BuyJoints_Condition;
 	information = DIA_Fortuno_BuyJoints_Info;
 	permanent = 0;
-	description = "Давай меняться.";
+	description = "Р”Р°РІР°Р№ РјРµРЅСЏС‚СЊСЃСЏ.";
 	trade = 1;
 };
 
@@ -146,8 +146,8 @@ func int DIA_Fortuno_BuyJoints_Condition()
 
 func void DIA_Fortuno_BuyJoints_Info()
 {
-	AI_Output(other,self,"DIA_Fortuno_BuyJoints_15_00");	//Давай меняться.
-	AI_Output(self,other,"DIA_Fortuno_BuyJoints_05_01");	//Что ты от меня хочешь? Быть может, что-нибудь купить?
+	AI_Output(other,self,"DIA_Fortuno_BuyJoints_15_00");	//Р”Р°РІР°Р№ РјРµРЅСЏС‚СЊСЃСЏ.
+	AI_Output(self,other,"DIA_Fortuno_BuyJoints_05_01");	//Р§С‚Рѕ С‚С‹ РѕС‚ РјРµРЅСЏ С…РѕС‡РµС€СЊ? Р‘С‹С‚СЊ РјРѕР¶РµС‚, С‡С‚Рѕ-РЅРёР±СѓРґСЊ РєСѓРїРёС‚СЊ?
 };
 
 
@@ -173,7 +173,7 @@ func int dia_fortuno_buyjoints2_condition()
 
 func void dia_fortuno_buyjoints2_info()
 {
-	AI_Output(other,self,"DIA_Fortuno_BuyJoints_15_00");	//Давай меняться.
+	AI_Output(other,self,"DIA_Fortuno_BuyJoints_15_00");	//Р”Р°РІР°Р№ РјРµРЅСЏС‚СЊСЃСЏ.
 };
 
 
@@ -184,7 +184,7 @@ instance DIA_FORTUNO_HELP(C_Info)
 	condition = dia_fortuno_help_condition;
 	information = dia_fortuno_help_info;
 	permanent = 0;
-	description = "Как мне узнать те травы, которые помогут Юбериону?";
+	description = "РљР°Рє РјРЅРµ СѓР·РЅР°С‚СЊ С‚Рµ С‚СЂР°РІС‹, РєРѕС‚РѕСЂС‹Рµ РїРѕРјРѕРіСѓС‚ Р®Р±РµСЂРёРѕРЅСѓ?";
 };
 
 
@@ -198,17 +198,17 @@ func int dia_fortuno_help_condition()
 
 func void dia_fortuno_help_info()
 {
-	AI_Output(other,self,"Info_CorAngar_FindHerb_LOOK_15_01");	//Как мне узнать те травы, которые помогут Юбериону?
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_01");	//Ты ищешь травы для Юбериона? Тебя прислал Кор Ангар?
-	AI_Output(other,self,"GUR_1201_CorKalom_SACHE_JA_15_01");	//Да.
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_02");	//И он поручил тебе принести ему какие-то целебные травки? О, Спящий, это не поможет! У Юбериона тяжелая магическая травма!
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_03");	//Послушай, я изучал записи и рецепты Кор Галома после его ухода... Кажется, Юбериону можно помочь.
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_04");	//Я разработал рецепт мощного лечебного зелья, которое укрепит его дух. Но чтобы приготовить это зелье, мне не хватает одного очень редкого компонента...
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_05");	//Это растение называется Мертвый лист. К счастью, я знаю где его можно найти.
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_06");	//Выше по течению реки, которая заканчивается водопадом у нашего лагеря, находится озеро с затонувшей башней. Поищи вокруг нее, на острове.
-	AI_Output(other,self,"Info_FreemineOrc_OFFER_15_01");	//Я постараюсь найти его тебе!
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_07");	//Пару месяцев назад я был там, но меня чуть не загрыз шныг. Поторопись, у нас очень мало времени!
-	B_LogEntry(CH3_FindHerbs,"Фортуно предложил другой план: найти редкое растение у затонувшей башни на озере и сделать из него лечебное зелье.");
+	AI_Output(other,self,"Info_CorAngar_FindHerb_LOOK_15_01");	//РљР°Рє РјРЅРµ СѓР·РЅР°С‚СЊ С‚Рµ С‚СЂР°РІС‹, РєРѕС‚РѕСЂС‹Рµ РїРѕРјРѕРіСѓС‚ Р®Р±РµСЂРёРѕРЅСѓ?
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_01");	//РўС‹ РёС‰РµС€СЊ С‚СЂР°РІС‹ РґР»СЏ Р®Р±РµСЂРёРѕРЅР°? РўРµР±СЏ РїСЂРёСЃР»Р°Р» РљРѕСЂ РђРЅРіР°СЂ?
+	AI_Output(other,self,"GUR_1201_CorKalom_SACHE_JA_15_01");	//Р”Р°.
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_02");	//Р РѕРЅ РїРѕСЂСѓС‡РёР» С‚РµР±Рµ РїСЂРёРЅРµСЃС‚Рё РµРјСѓ РєР°РєРёРµ-С‚Рѕ С†РµР»РµР±РЅС‹Рµ С‚СЂР°РІРєРё? Рћ, РЎРїСЏС‰РёР№, СЌС‚Рѕ РЅРµ РїРѕРјРѕР¶РµС‚! РЈ Р®Р±РµСЂРёРѕРЅР° С‚СЏР¶РµР»Р°СЏ РјР°РіРёС‡РµСЃРєР°СЏ С‚СЂР°РІРјР°!
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_03");	//РџРѕСЃР»СѓС€Р°Р№, СЏ РёР·СѓС‡Р°Р» Р·Р°РїРёСЃРё Рё СЂРµС†РµРїС‚С‹ РљРѕСЂ Р“Р°Р»РѕРјР° РїРѕСЃР»Рµ РµРіРѕ СѓС…РѕРґР°... РљР°Р¶РµС‚СЃСЏ, Р®Р±РµСЂРёРѕРЅСѓ РјРѕР¶РЅРѕ РїРѕРјРѕС‡СЊ.
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_04");	//РЇ СЂР°Р·СЂР°Р±РѕС‚Р°Р» СЂРµС†РµРїС‚ РјРѕС‰РЅРѕРіРѕ Р»РµС‡РµР±РЅРѕРіРѕ Р·РµР»СЊСЏ, РєРѕС‚РѕСЂРѕРµ СѓРєСЂРµРїРёС‚ РµРіРѕ РґСѓС…. РќРѕ С‡С‚РѕР±С‹ РїСЂРёРіРѕС‚РѕРІРёС‚СЊ СЌС‚Рѕ Р·РµР»СЊРµ, РјРЅРµ РЅРµ С…РІР°С‚Р°РµС‚ РѕРґРЅРѕРіРѕ РѕС‡РµРЅСЊ СЂРµРґРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°...
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_05");	//Р­С‚Рѕ СЂР°СЃС‚РµРЅРёРµ РЅР°Р·С‹РІР°РµС‚СЃСЏ РњРµСЂС‚РІС‹Р№ Р»РёСЃС‚. Рљ СЃС‡Р°СЃС‚СЊСЋ, СЏ Р·РЅР°СЋ РіРґРµ РµРіРѕ РјРѕР¶РЅРѕ РЅР°Р№С‚Рё.
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_06");	//Р’С‹С€Рµ РїРѕ С‚РµС‡РµРЅРёСЋ СЂРµРєРё, РєРѕС‚РѕСЂР°СЏ Р·Р°РєР°РЅС‡РёРІР°РµС‚СЃСЏ РІРѕРґРѕРїР°РґРѕРј Сѓ РЅР°С€РµРіРѕ Р»Р°РіРµСЂСЏ, РЅР°С…РѕРґРёС‚СЃСЏ РѕР·РµСЂРѕ СЃ Р·Р°С‚РѕРЅСѓРІС€РµР№ Р±Р°С€РЅРµР№. РџРѕРёС‰Рё РІРѕРєСЂСѓРі РЅРµРµ, РЅР° РѕСЃС‚СЂРѕРІРµ.
+	AI_Output(other,self,"Info_FreemineOrc_OFFER_15_01");	//РЇ РїРѕСЃС‚Р°СЂР°СЋСЃСЊ РЅР°Р№С‚Рё РµРіРѕ С‚РµР±Рµ!
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_07");	//РџР°СЂСѓ РјРµСЃСЏС†РµРІ РЅР°Р·Р°Рґ СЏ Р±С‹Р» С‚Р°Рј, РЅРѕ РјРµРЅСЏ С‡СѓС‚СЊ РЅРµ Р·Р°РіСЂС‹Р· С€РЅС‹Рі. РџРѕС‚РѕСЂРѕРїРёСЃСЊ, Сѓ РЅР°СЃ РѕС‡РµРЅСЊ РјР°Р»Рѕ РІСЂРµРјРµРЅРё!
+	B_LogEntry(CH3_FindHerbs,"Р¤РѕСЂС‚СѓРЅРѕ РїСЂРµРґР»РѕР¶РёР» РґСЂСѓРіРѕР№ РїР»Р°РЅ: РЅР°Р№С‚Рё СЂРµРґРєРѕРµ СЂР°СЃС‚РµРЅРёРµ Сѓ Р·Р°С‚РѕРЅСѓРІС€РµР№ Р±Р°С€РЅРё РЅР° РѕР·РµСЂРµ Рё СЃРґРµР»Р°С‚СЊ РёР· РЅРµРіРѕ Р»РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ.");
 	if(Npc_HasItems(other,alchemybook))
 	{
 		Npc_RemoveInvItem(other,alchemybook);
@@ -225,7 +225,7 @@ instance DIA_FORTUNO_DEADLEAFFOUND(C_Info)
 	condition = dia_fortuno_deadleaffound_condition;
 	information = dia_fortuno_deadleaffound_info;
 	permanent = 0;
-	description = "Вот, возьми его. Как ты и просил.";
+	description = "Р’РѕС‚, РІРѕР·СЊРјРё РµРіРѕ. РљР°Рє С‚С‹ Рё РїСЂРѕСЃРёР».";
 };
 
 
@@ -239,35 +239,35 @@ func int dia_fortuno_deadleaffound_condition()
 
 func void dia_fortuno_deadleaffound_info()
 {
-	AI_Output(hero,self,"Info_Milten_SHSUCCESS_15_02");	//Вот, возьми его. Как ты и просил.
-	AI_Output(self,other,"DIA_Fortuno_SaveYberion_08");	//Отлично! Все готово! Скажи, ты знаком с алхимией?
+	AI_Output(hero,self,"Info_Milten_SHSUCCESS_15_02");	//Р’РѕС‚, РІРѕР·СЊРјРё РµРіРѕ. РљР°Рє С‚С‹ Рё РїСЂРѕСЃРёР».
+	AI_Output(self,other,"DIA_Fortuno_SaveYberion_08");	//РћС‚Р»РёС‡РЅРѕ! Р’СЃРµ РіРѕС‚РѕРІРѕ! РЎРєР°Р¶Рё, С‚С‹ Р·РЅР°РєРѕРј СЃ Р°Р»С…РёРјРёРµР№?
 	if(ALCHEMYACTIVE == TRUE)
 	{
-		AI_Output(other,self,"Info_Milten_SHWAIT_15_03");	//Так, стараюсь...
-		AI_Output(self,other,"DIA_Fortuno_SaveYberion_09");	//Пока тебя не было, я приготовил основу из того, что было. Держи рецепт и закончи зелье, а потом скорее отнеси его Кор Ангару!
-		b_printtrademsg1("Получен рецепт и основа зелья.");
+		AI_Output(other,self,"Info_Milten_SHWAIT_15_03");	//РўР°Рє, СЃС‚Р°СЂР°СЋСЃСЊ...
+		AI_Output(self,other,"DIA_Fortuno_SaveYberion_09");	//РџРѕРєР° С‚РµР±СЏ РЅРµ Р±С‹Р»Рѕ, СЏ РїСЂРёРіРѕС‚РѕРІРёР» РѕСЃРЅРѕРІСѓ РёР· С‚РѕРіРѕ, С‡С‚Рѕ Р±С‹Р»Рѕ. Р”РµСЂР¶Рё СЂРµС†РµРїС‚ Рё Р·Р°РєРѕРЅС‡Рё Р·РµР»СЊРµ, Р° РїРѕС‚РѕРј СЃРєРѕСЂРµРµ РѕС‚РЅРµСЃРё РµРіРѕ РљРѕСЂ РђРЅРіР°СЂСѓ!
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅ СЂРµС†РµРїС‚ Рё РѕСЃРЅРѕРІР° Р·РµР»СЊСЏ.");
 		if(!Npc_HasItems(hero,ItMiFlask))
 		{
 			CreateInvItem(hero,ItMiFlask);
 		};
 		CreateInvItem(hero,SpecialWater);
 		CreateInvItem(hero,alchemy_fortuno);
-		B_LogEntry(CH3_FindHerbs,"Фортуно дал мне рецепт и основу зелья, нужно быстро приготовить его и отнести в храм Кор Ангару.");
+		B_LogEntry(CH3_FindHerbs,"Р¤РѕСЂС‚СѓРЅРѕ РґР°Р» РјРЅРµ СЂРµС†РµРїС‚ Рё РѕСЃРЅРѕРІСѓ Р·РµР»СЊСЏ, РЅСѓР¶РЅРѕ Р±С‹СЃС‚СЂРѕ РїСЂРёРіРѕС‚РѕРІРёС‚СЊ РµРіРѕ Рё РѕС‚РЅРµСЃС‚Рё РІ С…СЂР°Рј РљРѕСЂ РђРЅРіР°СЂСѓ.");
 	}
 	else
 	{
-		AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Еще нет.
-		AI_Output(self,other,"DIA_Fortuno_SaveYberion_10");	//Хм, тогда я сам приготовлю зелье... Подожди...
-		b_printtrademsg1("Отдан Мертвый лист.");
+		AI_Output(other,self,"DIA_Orry_GuardGate_No_15_00");	//Р•С‰Рµ РЅРµС‚.
+		AI_Output(self,other,"DIA_Fortuno_SaveYberion_10");	//РҐРј, С‚РѕРіРґР° СЏ СЃР°Рј РїСЂРёРіРѕС‚РѕРІР»СЋ Р·РµР»СЊРµ... РџРѕРґРѕР¶РґРё...
+		b_printtrademsg1("РћС‚РґР°РЅ РњРµСЂС‚РІС‹Р№ Р»РёСЃС‚.");
 		Npc_RemoveInvItems(hero,itfo_plants_deadleaf,1);
 		AI_UseMob(self,"LAB",1);
 		AI_Wait(self,13);
 		AI_UseMob(self,"LAB",-1);
 		AI_GotoNpc(self,other);
-		AI_Output(self,other,"DIA_Fortuno_SaveYberion_11");	//Вот, быстрее отнеси его Кор Ангару! Торопись!
-		b_printtrademsg2("Получено лечебное зелье Фортуно.");
+		AI_Output(self,other,"DIA_Fortuno_SaveYberion_11");	//Р’РѕС‚, Р±С‹СЃС‚СЂРµРµ РѕС‚РЅРµСЃРё РµРіРѕ РљРѕСЂ РђРЅРіР°СЂСѓ! РўРѕСЂРѕРїРёСЃСЊ!
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅРѕ Р»РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ.");
 		CreateInvItem(hero,HealthWater);
-		B_LogEntry(CH3_FindHerbs,"Лечебное зелье готово! Теперь нужно быстрее отнести его в храм и отдать Кор Ангару.");
+		B_LogEntry(CH3_FindHerbs,"Р›РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ РіРѕС‚РѕРІРѕ! РўРµРїРµСЂСЊ РЅСѓР¶РЅРѕ Р±С‹СЃС‚СЂРµРµ РѕС‚РЅРµСЃС‚Рё РµРіРѕ РІ С…СЂР°Рј Рё РѕС‚РґР°С‚СЊ РљРѕСЂ РђРЅРіР°СЂСѓ.");
 	};
 	if(Npc_HasItems(other,alchemybook))
 	{

@@ -1,7 +1,7 @@
 
 instance Org_861_Killian(Npc_Default)
 {
-	name[0] = "Киллиан";
+	name[0] = "РљРёР»Р»РёР°РЅ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

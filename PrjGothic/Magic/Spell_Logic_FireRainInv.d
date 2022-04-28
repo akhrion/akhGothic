@@ -12,6 +12,7 @@ func int Spell_Logic_FirerainInv(var int manaInvested)
 		};
 		if(manaInvested >= SPL_SENDCAST_FIRERAIN)
 		{
+			Spell_FireRainInv.damage_per_level = SPL_DAMAGE_FIRERAIN;
 			return SPL_SENDCAST;
 		};
 		if((manaInvested >= 1) && (manaInvested < SPL_SENDCAST_FIRERAIN))

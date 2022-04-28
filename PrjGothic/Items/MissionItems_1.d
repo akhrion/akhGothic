@@ -10,7 +10,7 @@ instance MordragsRing(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_MordragsRing;
 	on_unequip = UnEquip_MordragsRing;
-	description = "Кольцо Мордрага";
+	description = "РљРѕР»СЊС†Рѕ РњРѕСЂРґСЂР°РіР°";
 	text[2] = NAME_Bonus_Dex;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -31,7 +31,7 @@ func void UnEquip_MordragsRing()
 
 instance SpecialJoint(C_Item)
 {
-	name = "Улучшенный 'Зов мечты'";
+	name = "РЈР»СѓС‡С€РµРЅРЅС‹Р№ 'Р—РѕРІ РјРµС‡С‚С‹'";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = Value_Joint3 * 10;
@@ -40,9 +40,9 @@ instance SpecialJoint(C_Item)
 	scemeName = "JOINT";
 	on_state[0] = UseSpecialJoint;
 	description = name;
-	text[0] = "Этот болотник действует гораздо";
-	text[1] = "сильнее, чем обычный 'Зов мечты'.";
-	text[3] = "Он приготовлен для Гуру Идола Тиона!";
+	text[0] = "Р­С‚РѕС‚ Р±РѕР»РѕС‚РЅРёРє РґРµР№СЃС‚РІСѓРµС‚ РіРѕСЂР°Р·РґРѕ";
+	text[1] = "СЃРёР»СЊРЅРµРµ, С‡РµРј РѕР±С‹С‡РЅС‹Р№ 'Р—РѕРІ РјРµС‡С‚С‹'.";
+	text[3] = "РћРЅ РїСЂРёРіРѕС‚РѕРІР»РµРЅ РґР»СЏ Р“СѓСЂСѓ РРґРѕР»Р° РўРёРѕРЅР°!";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -56,20 +56,20 @@ func void UseSpecialJoint()
 
 instance ItAt_DamLurker_01(C_Item)
 {
-	name = "Когти шныга с плотины";
+	name = "РљРѕРіС‚Рё С€РЅС‹РіР° СЃ РїР»РѕС‚РёРЅС‹";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
-	value = Value_Lurkerklaue;
+	value = Value_Lurkerklaue * 5;
 	visual = "ItAt_Lurker_01.3DS";
 	material = MAT_LEATHER;
 	description = name;
 	text[5] = NAME_Value;
-	count[5] = Value_Lurkerklaue;
+	count[5] = value;
 };
 
 instance ItWrOMMap(C_Item)
 {
-	name = "Карта";
+	name = "РљР°СЂС‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
@@ -77,7 +77,7 @@ instance ItWrOMMap(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	on_state[0] = UseOMmap;
-	description = "Карта дороги к Старой шахте";
+	description = "РљР°СЂС‚Р° РґРѕСЂРѕРіРё Рє РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -96,7 +96,7 @@ func void UseOMmap()
 
 instance AltesSchwertVM(C_Item)
 {
-	name = "Старый меч";
+	name = "РЎС‚Р°СЂС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD | ITEM_MISSION;
 	material = MAT_METAL;
@@ -118,7 +118,7 @@ instance AltesSchwertVM(C_Item)
 
 instance AltesSchwert(C_Item)
 {
-	name = "Старый меч";
+	name = "РЎС‚Р°СЂС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD | ITEM_MISSION;
 	material = MAT_METAL;
@@ -139,7 +139,7 @@ instance AltesSchwert(C_Item)
 
 instance JackalsSword(C_Item)
 {
-	name = "Меч Шакала";
+	name = "РњРµС‡ РЁР°РєР°Р»Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -171,7 +171,7 @@ instance KdW_Amulett(C_Item)
 	material = MAT_METAL;
 	on_equip = equip_kdw_amulett;
 	on_unequip = unequip_kdw_amulett;
-	description = "Амулет посланника магов Воды";
+	description = "РђРјСѓР»РµС‚ РїРѕСЃР»Р°РЅРЅРёРєР° РјР°РіРѕРІ Р’РѕРґС‹";
 	text[2] = NAME_Bonus_ManaMax;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -201,7 +201,7 @@ func void unequip_kdw_amulett()
 
 instance Cronos_Brief(C_Item)
 {
-	name = "Письмо";
+	name = "РџРёСЃСЊРјРѕ";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
@@ -209,7 +209,7 @@ instance Cronos_Brief(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = UseCronosBrief;
 	scemeName = "MAP";
-	description = "Письмо Кроноса к магам Огня";
+	description = "РџРёСЃСЊРјРѕ РљСЂРѕРЅРѕСЃР° Рє РјР°РіР°Рј РћРіРЅСЏ";
 };
 
 
@@ -222,14 +222,14 @@ func void UseCronosBrief()
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Великий Мастер Корристо,");
+	Doc_PrintLine(nDocID,0,"Р’РµР»РёРєРёР№ РњР°СЃС‚РµСЂ РљРѕСЂСЂРёСЃС‚Рѕ,");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
-	Doc_PrintLines(nDocID,0,"Сатурас, почтенный Мастер магов Круга Воды, просит Вас не отказать нам в поддержке. Я искренне надеюсь, что Вы разделяете наше стремление удерживать нарастающее недовольство среди жителей Старого и Нового лагерей в приемлемых рамках. Так как Вы заботитесь о поставках руды, мы можем ограничить деятельность воров Нового лагеря, действуя в Ваших интересах. Поэтому для Вас и для нас будет лучше, если Старый лагерь не будет препятствовать осуществлению нашего плана.");
+	Doc_PrintLines(nDocID,0,"РЎР°С‚СѓСЂР°СЃ, РїРѕС‡С‚РµРЅРЅС‹Р№ РњР°СЃС‚РµСЂ РјР°РіРѕРІ РљСЂСѓРіР° Р’РѕРґС‹, РїСЂРѕСЃРёС‚ Р’Р°СЃ РЅРµ РѕС‚РєР°Р·Р°С‚СЊ РЅР°Рј РІ РїРѕРґРґРµСЂР¶РєРµ. РЇ РёСЃРєСЂРµРЅРЅРµ РЅР°РґРµСЋСЃСЊ, С‡С‚Рѕ Р’С‹ СЂР°Р·РґРµР»СЏРµС‚Рµ РЅР°С€Рµ СЃС‚СЂРµРјР»РµРЅРёРµ СѓРґРµСЂР¶РёРІР°С‚СЊ РЅР°СЂР°СЃС‚Р°СЋС‰РµРµ РЅРµРґРѕРІРѕР»СЊСЃС‚РІРѕ СЃСЂРµРґРё Р¶РёС‚РµР»РµР№ РЎС‚Р°СЂРѕРіРѕ Рё РќРѕРІРѕРіРѕ Р»Р°РіРµСЂРµР№ РІ РїСЂРёРµРјР»РµРјС‹С… СЂР°РјРєР°С…. РўР°Рє РєР°Рє Р’С‹ Р·Р°Р±РѕС‚РёС‚РµСЃСЊ Рѕ РїРѕСЃС‚Р°РІРєР°С… СЂСѓРґС‹, РјС‹ РјРѕР¶РµРј РѕРіСЂР°РЅРёС‡РёС‚СЊ РґРµСЏС‚РµР»СЊРЅРѕСЃС‚СЊ РІРѕСЂРѕРІ РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ, РґРµР№СЃС‚РІСѓСЏ РІ Р’Р°С€РёС… РёРЅС‚РµСЂРµСЃР°С…. РџРѕСЌС‚РѕРјСѓ РґР»СЏ Р’Р°СЃ Рё РґР»СЏ РЅР°СЃ Р±СѓРґРµС‚ Р»СѓС‡С€Рµ, РµСЃР»Рё РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ РЅРµ Р±СѓРґРµС‚ РїСЂРµРїСЏС‚СЃС‚РІРѕРІР°С‚СЊ РѕСЃСѓС‰РµСЃС‚РІР»РµРЅРёСЋ РЅР°С€РµРіРѕ РїР»Р°РЅР°.");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Жду Вашего скорого ответа.");
+	Doc_PrintLine(nDocID,0,"Р–РґСѓ Р’Р°С€РµРіРѕ СЃРєРѕСЂРѕРіРѕ РѕС‚РІРµС‚Р°.");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Кронос, хранитель руды.");
+	Doc_PrintLine(nDocID,0,"РљСЂРѕРЅРѕСЃ, С…СЂР°РЅРёС‚РµР»СЊ СЂСѓРґС‹.");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
@@ -248,8 +248,8 @@ instance Neks_Amulett(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Schutzamulett_Nek;
 	on_unequip = UnEquip_Schutzamulett_Nek;
-	description = "Амулет убитого стражника";
-	text[1] = "На обратной стороне выбито имя 'Нек'";
+	description = "РђРјСѓР»РµС‚ СѓР±РёС‚РѕРіРѕ СЃС‚СЂР°Р¶РЅРёРєР°";
+	text[1] = "РќР° РѕР±СЂР°С‚РЅРѕР№ СЃС‚РѕСЂРѕРЅРµ РІС‹Р±РёС‚Рѕ РёРјСЏ 'РќРµРє'";
 	text[2] = NAME_Prot_Edge;
 	count[2] = 5;
 	text[5] = NAME_Value;
@@ -272,7 +272,7 @@ func void UnEquip_Schutzamulett_Nek()
 
 instance RecruitJoint(C_Item)
 {
-	name = "Болотник для рудокопов";
+	name = "Р‘РѕР»РѕС‚РЅРёРє РґР»СЏ СЂСѓРґРѕРєРѕРїРѕРІ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MULTI;
 	value = 1;
@@ -294,7 +294,7 @@ instance HealthWater(C_Item)
 	material = MAT_GLAS;
 	on_state[0] = usehealthwater;
 	scemeName = "POTIONFAST";
-	description = "Лечебное зелье Фортуно";
+	description = "Р›РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ Р¤РѕСЂС‚СѓРЅРѕ";
 	text[1] = NAME_Bonus_ManaMax;
 	count[1] = 10;
 	text[2] = NAME_Bonus_HpMax;
@@ -310,13 +310,13 @@ func void usehealthwater()
 	Npc_ChangeAttribute(self,ATR_HITPOINTS_MAX,10);
 	Npc_ChangeAttribute(self,ATR_MANA,10);
 	Npc_ChangeAttribute(self,ATR_HITPOINTS,10);
-	PrintScreen("Макс. магическая и жизненная сила +10",-1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
+	PrintScreen("РњР°РєСЃ. РјР°РіРёС‡РµСЃРєР°СЏ Рё Р¶РёР·РЅРµРЅРЅР°СЏ СЃРёР»Р° +10",-1,-1,"FONT_OLD_20_WHITE.TGA",_TIME_MESSAGE_RAISEATTRIBUTE);
 };
 
 
 instance TheList(C_Item)
 {
-	name = "Список";
+	name = "РЎРїРёСЃРѕРє";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	visual = "ITAR_SCROLL_01_EG.3ds";
@@ -324,8 +324,8 @@ instance TheList(C_Item)
 	scemeName = "MAP";
 	on_state[0] = UseTheList;
 	description = name;
-	text[0] = "Ян, глава Старой шахты, занес в этот список";
-	text[1] = "все необходимое для работы рудокопов.";
+	text[0] = "РЇРЅ, РіР»Р°РІР° РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹, Р·Р°РЅРµСЃ РІ СЌС‚РѕС‚ СЃРїРёСЃРѕРє";
+	text[1] = "РІСЃРµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЂСѓРґРѕРєРѕРїРѕРІ.";
 };
 
 
@@ -337,19 +337,19 @@ func void UseTheList()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Список");
+	Doc_PrintLine(nDocID,0,"РЎРїРёСЃРѕРє");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"20 буханок хлеба - не заплесневелого!");
-	Doc_PrintLine(nDocID,0,"25-30 яблок");
-	Doc_PrintLine(nDocID,0,"10 кусков сыра");
-	Doc_PrintLine(nDocID,0,"1 черпак");
-	Doc_PrintLine(nDocID,0,"1 щетка");
-	Doc_PrintLine(nDocID,0,"5 кирок + 3 молотка");
-	Doc_PrintLines(nDocID,0,"и много болотника - это же первый груз за этот месяц!");
-	Doc_PrintLine(nDocID,0,"Груз должен быть доставлен послезавтра.");
+	Doc_PrintLines(nDocID,0,"20 Р±СѓС…Р°РЅРѕРє С…Р»РµР±Р° - РЅРµ Р·Р°РїР»РµСЃРЅРµРІРµР»РѕРіРѕ!");
+	Doc_PrintLine(nDocID,0,"25-30 СЏР±Р»РѕРє");
+	Doc_PrintLine(nDocID,0,"10 РєСѓСЃРєРѕРІ СЃС‹СЂР°");
+	Doc_PrintLine(nDocID,0,"1 С‡РµСЂРїР°Рє");
+	Doc_PrintLine(nDocID,0,"1 С‰РµС‚РєР°");
+	Doc_PrintLine(nDocID,0,"5 РєРёСЂРѕРє + 3 РјРѕР»РѕС‚РєР°");
+	Doc_PrintLines(nDocID,0,"Рё РјРЅРѕРіРѕ Р±РѕР»РѕС‚РЅРёРєР° - СЌС‚Рѕ Р¶Рµ РїРµСЂРІС‹Р№ РіСЂСѓР· Р·Р° СЌС‚РѕС‚ РјРµСЃСЏС†!");
+	Doc_PrintLine(nDocID,0,"Р“СЂСѓР· РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕСЃС‚Р°РІР»РµРЅ РїРѕСЃР»РµР·Р°РІС‚СЂР°.");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Ян");
+	Doc_PrintLine(nDocID,0,"РЇРЅ");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
@@ -358,7 +358,7 @@ func void UseTheList()
 
 instance TheListNC(C_Item)
 {
-	name = "Список (дополненный)";
+	name = "РЎРїРёСЃРѕРє (РґРѕРїРѕР»РЅРµРЅРЅС‹Р№)";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	visual = "ITAR_SCROLL_01_EG.3ds";
@@ -366,10 +366,10 @@ instance TheListNC(C_Item)
 	scemeName = "MAP";
 	on_state[0] = UseTheListNC;
 	description = name;
-	text[0] = "Ян, глава Старой шахты, занес в этот список";
-	text[1] = "все необходимое для работы рудокопов.";
-	text[2] = "(Ларс добавил в него еще несколько пунктов.";
-	text[3] = "Подделка высокого качества!)";
+	text[0] = "РЇРЅ, РіР»Р°РІР° РЎС‚Р°СЂРѕР№ С€Р°С…С‚С‹, Р·Р°РЅРµСЃ РІ СЌС‚РѕС‚ СЃРїРёСЃРѕРє";
+	text[1] = "РІСЃРµ РЅРµРѕР±С…РѕРґРёРјРѕРµ РґР»СЏ СЂР°Р±РѕС‚С‹ СЂСѓРґРѕРєРѕРїРѕРІ.";
+	text[2] = "(Р›Р°СЂСЃ РґРѕР±Р°РІРёР» РІ РЅРµРіРѕ РµС‰Рµ РЅРµСЃРєРѕР»СЊРєРѕ РїСѓРЅРєС‚РѕРІ.";
+	text[3] = "РџРѕРґРґРµР»РєР° РІС‹СЃРѕРєРѕРіРѕ РєР°С‡РµСЃС‚РІР°!)";
 };
 
 
@@ -381,25 +381,25 @@ func void UseTheListNC()
 	Doc_SetPage(nDocID,0,"letters.TGA",0);
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-	Doc_PrintLine(nDocID,0,"Список");
+	Doc_PrintLine(nDocID,0,"РЎРїРёСЃРѕРє");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"20 буханок хлеба - не заплесневелого!");
-	Doc_PrintLine(nDocID,0,"25-30 яблок");
-	Doc_PrintLine(nDocID,0,"10 кусков сыра");
-	Doc_PrintLine(nDocID,0,"1 черпак");
-	Doc_PrintLine(nDocID,0,"1 щетка");
-	Doc_PrintLine(nDocID,0,"5 кирок + 3 молотка");
-	Doc_PrintLines(nDocID,0,"и много болотника - это же первый груз за этот месяц!");
-	Doc_PrintLine(nDocID,0,"Груз должен быть доставлен послезавтра.");
+	Doc_PrintLines(nDocID,0,"20 Р±СѓС…Р°РЅРѕРє С…Р»РµР±Р° - РЅРµ Р·Р°РїР»РµСЃРЅРµРІРµР»РѕРіРѕ!");
+	Doc_PrintLine(nDocID,0,"25-30 СЏР±Р»РѕРє");
+	Doc_PrintLine(nDocID,0,"10 РєСѓСЃРєРѕРІ СЃС‹СЂР°");
+	Doc_PrintLine(nDocID,0,"1 С‡РµСЂРїР°Рє");
+	Doc_PrintLine(nDocID,0,"1 С‰РµС‚РєР°");
+	Doc_PrintLine(nDocID,0,"5 РєРёСЂРѕРє + 3 РјРѕР»РѕС‚РєР°");
+	Doc_PrintLines(nDocID,0,"Рё РјРЅРѕРіРѕ Р±РѕР»РѕС‚РЅРёРєР° - СЌС‚Рѕ Р¶Рµ РїРµСЂРІС‹Р№ РіСЂСѓР· Р·Р° СЌС‚РѕС‚ РјРµСЃСЏС†!");
+	Doc_PrintLine(nDocID,0,"Р“СЂСѓР· РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РґРѕСЃС‚Р°РІР»РµРЅ РїРѕСЃР»РµР·Р°РІС‚СЂР°.");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Ян");
+	Doc_PrintLine(nDocID,0,"РЇРЅ");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Да, есть кое-что еще...");
-	Doc_PrintLine(nDocID,0,"30 бутылок пива");
-	Doc_PrintLine(nDocID,0,"5 бутылок вина");
-	Doc_PrintLine(nDocID,0,"25 жареных окороков");
-	Doc_PrintLine(nDocID,0,"полдюжины мечей");
+	Doc_PrintLine(nDocID,0,"Р”Р°, РµСЃС‚СЊ РєРѕРµ-С‡С‚Рѕ РµС‰Рµ...");
+	Doc_PrintLine(nDocID,0,"30 Р±СѓС‚С‹Р»РѕРє РїРёРІР°");
+	Doc_PrintLine(nDocID,0,"5 Р±СѓС‚С‹Р»РѕРє РІРёРЅР°");
+	Doc_PrintLine(nDocID,0,"25 Р¶Р°СЂРµРЅС‹С… РѕРєРѕСЂРѕРєРѕРІ");
+	Doc_PrintLine(nDocID,0,"РїРѕР»РґСЋР¶РёРЅС‹ РјРµС‡РµР№");
 	Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 	Doc_Show(nDocID);
 };
@@ -416,7 +416,7 @@ instance Lares_Ring(C_Item)
 	material = MAT_METAL;
 	on_equip = Equip_Lares_Ring;
 	on_unequip = UnEquip_Lares_Ring;
-	description = "Кольцо Ларса";
+	description = "РљРѕР»СЊС†Рѕ Р›Р°СЂСЃР°";
 	text[2] = NAME_Bonus_Str;
 	count[2] = 3;
 	text[5] = NAME_Value;
@@ -445,7 +445,7 @@ instance Heiltrank(C_Item)
 	material = MAT_GLAS;
 	on_state[0] = UseHeiltrank;
 	scemeName = "POTIONFAST";
-	description = "Зелье быстрого лечения";
+	description = "Р—РµР»СЊРµ Р±С‹СЃС‚СЂРѕРіРѕ Р»РµС‡РµРЅРёСЏ";
 	text[1] = NAME_Bonus_HP;
 	count[1] = 30;
 	text[5] = NAME_Value;
@@ -461,27 +461,27 @@ func void UseHeiltrank()
 
 instance SpecialWater(C_Item)
 {
-	name = "Бутыль";
+	name = "Р‘СѓС‚С‹Р»СЊ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 10;
 	visual = "ItFo_Potion_Yberion.3ds";
 	material = MAT_GLAS;
-	description = "Основа зелья Фортуно";
+	description = "РћСЃРЅРѕРІР° Р·РµР»СЊСЏ Р¤РѕСЂС‚СѓРЅРѕ";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
 
 instance KalomsRecipe(C_Item)
 {
-	name = "Рецепт Галома";
+	name = "Р РµС†РµРїС‚ Р“Р°Р»РѕРјР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 60;
 	visual = "HP0RECIPE.3DS";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Рецепт Галома";
+	description = "Р РµС†РµРїС‚ Р“Р°Р»РѕРјР°";
 	text[1] = NAME_Bonus_HP;
 	count[1] = 30;
 	text[5] = NAME_Value;
@@ -495,7 +495,7 @@ func void Use_KalomsRecipe()
 	var int nDocID;
 	if(ALCHEMYACTIVE == FALSE)
 	{
-		PrintScreen("Необходимо изучение навыка алхимии!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+		PrintScreen("РќРµРѕР±С…РѕРґРёРјРѕ РёР·СѓС‡РµРЅРёРµ РЅР°РІС‹РєР° Р°Р»С…РёРјРёРё!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 	}
 	else
 	{
@@ -504,15 +504,15 @@ func void Use_KalomsRecipe()
 		Doc_SetPage(nDocID,0,"letters2.TGA",0);
 		Doc_SetFont(nDocID,-1,"font_10_book.tga");
 		Doc_SetMargins(nDocID,-1,50,50,50,50,1);
-		Doc_PrintLines(nDocID,0,"После изучения свойств ночной тьмы понял, как усилить целебный эффект. Листья нужно высушить на солнце, измельчить и высыпать в чистую воду. Кипятить не нужно. Это зелье не намного сильнее обычного целебного корня, но быстро в приготовлении и подойдет для употребления внутрь: поможет от внутреннего кровотечения или изжоги.");
+		Doc_PrintLines(nDocID,0,"РџРѕСЃР»Рµ РёР·СѓС‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ РЅРѕС‡РЅРѕР№ С‚СЊРјС‹ РїРѕРЅСЏР», РєР°Рє СѓСЃРёР»РёС‚СЊ С†РµР»РµР±РЅС‹Р№ СЌС„С„РµРєС‚. Р›РёСЃС‚СЊСЏ РЅСѓР¶РЅРѕ РІС‹СЃСѓС€РёС‚СЊ РЅР° СЃРѕР»РЅС†Рµ, РёР·РјРµР»СЊС‡РёС‚СЊ Рё РІС‹СЃС‹РїР°С‚СЊ РІ С‡РёСЃС‚СѓСЋ РІРѕРґСѓ. РљРёРїСЏС‚РёС‚СЊ РЅРµ РЅСѓР¶РЅРѕ. Р­С‚Рѕ Р·РµР»СЊРµ РЅРµ РЅР°РјРЅРѕРіРѕ СЃРёР»СЊРЅРµРµ РѕР±С‹С‡РЅРѕРіРѕ С†РµР»РµР±РЅРѕРіРѕ РєРѕСЂРЅСЏ, РЅРѕ Р±С‹СЃС‚СЂРѕ РІ РїСЂРёРіРѕС‚РѕРІР»РµРЅРёРё Рё РїРѕРґРѕР№РґРµС‚ РґР»СЏ СѓРїРѕС‚СЂРµР±Р»РµРЅРёСЏ РІРЅСѓС‚СЂСЊ: РїРѕРјРѕР¶РµС‚ РѕС‚ РІРЅСѓС‚СЂРµРЅРЅРµРіРѕ РєСЂРѕРІРѕС‚РµС‡РµРЅРёСЏ РёР»Рё РёР·Р¶РѕРіРё.");
 		Doc_PrintLine(nDocID,0,"");
-		Doc_PrintLines(nDocID,0,"- Галом");
+		Doc_PrintLines(nDocID,0,"- Р“Р°Р»РѕРј");
 		Doc_SetMargins(nDocID,-1,200,50,50,50,1);
 		Doc_Show(nDocID);
 		if(HP0RECIPE == FALSE)
 		{
-			PrintScreen("Изучен новый рецепт!",-1,12,"FONT_OLD_20_WHITE.TGA",4);
-			B_LogEntry("Алхимия","Изучен рецепт зелья быстрого лечения (жизненная сила +30). Требуется: ночная тьма (1).");
+			PrintScreen("РР·СѓС‡РµРЅ РЅРѕРІС‹Р№ СЂРµС†РµРїС‚!",-1,12,"FONT_OLD_20_WHITE.TGA",4);
+			B_LogEntry("РђР»С…РёРјРёСЏ","РР·СѓС‡РµРЅ СЂРµС†РµРїС‚ Р·РµР»СЊСЏ Р±С‹СЃС‚СЂРѕРіРѕ Р»РµС‡РµРЅРёСЏ (Р¶РёР·РЅРµРЅРЅР°СЏ СЃРёР»Р° +30). РўСЂРµР±СѓРµС‚СЃСЏ: РЅРѕС‡РЅР°СЏ С‚СЊРјР° (1).");
 			HP0RECIPE = TRUE;
 		};
 	};
@@ -521,7 +521,7 @@ func void Use_KalomsRecipe()
 
 instance ItWrWorldmap(C_Item)
 {
-	name = "Карта";
+	name = "РљР°СЂС‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION | ITEM_MULTI;
 	value = 50;
@@ -529,9 +529,9 @@ instance ItWrWorldmap(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	on_state[0] = UseWorldmap;
-	description = "Карта колонии";
-	text[0] = "К сожалению, здесь не хватает";
-	text[1] = "области на юго-западе.";
+	description = "РљР°СЂС‚Р° РєРѕР»РѕРЅРёРё";
+	text[0] = "Рљ СЃРѕР¶Р°Р»РµРЅРёСЋ, Р·РґРµСЃСЊ РЅРµ С…РІР°С‚Р°РµС‚";
+	text[1] = "РѕР±Р»Р°СЃС‚Рё РЅР° СЋРіРѕ-Р·Р°РїР°РґРµ.";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -550,7 +550,7 @@ func void UseWorldmap()
 
 instance ItWrOCmap(C_Item)
 {
-	name = "Карта";
+	name = "РљР°СЂС‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 40;
@@ -558,7 +558,7 @@ instance ItWrOCmap(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	on_state[0] = UseOCmap;
-	description = "Схема Старого лагеря";
+	description = "РЎС…РµРјР° РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -576,7 +576,7 @@ func void UseOCmap()
 
 instance ItWrNCmap(C_Item)
 {
-	name = "Карта";
+	name = "РљР°СЂС‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 40;
@@ -584,7 +584,7 @@ instance ItWrNCmap(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	on_state[0] = UseNCmap;
-	description = "Схема Нового лагеря";
+	description = "РЎС…РµРјР° РќРѕРІРѕРіРѕ Р»Р°РіРµСЂСЏ";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -602,7 +602,7 @@ func void UseNCmap()
 
 instance ItWrPSImap(C_Item)
 {
-	name = "Карта";
+	name = "РљР°СЂС‚Р°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 40;
@@ -610,7 +610,7 @@ instance ItWrPSImap(C_Item)
 	material = MAT_LEATHER;
 	scemeName = "MAP";
 	on_state[0] = UsePSImap;
-	description = "Схема Болотного лагеря";
+	description = "РЎС…РµРјР° Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ";
 	text[5] = NAME_Value;
 	count[5] = value;
 };
@@ -628,7 +628,7 @@ func void UsePSImap()
 
 instance ItWrPinup(C_Item)
 {
-	name = "Набросок";
+	name = "РќР°Р±СЂРѕСЃРѕРє";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 60;
@@ -654,7 +654,7 @@ func void UsePinUp()
 
 instance ItWrDieVerurteilten(C_Item)
 {
-	name = "Приговоренные";
+	name = "РџСЂРёРіРѕРІРѕСЂРµРЅРЅС‹Рµ";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 100;
@@ -668,7 +668,7 @@ instance ItWrDieVerurteilten(C_Item)
 
 instance ItWr_Fire_Letter_01(C_Item)
 {
-	name = "Запечатанное письмо";
+	name = "Р—Р°РїРµС‡Р°С‚Р°РЅРЅРѕРµ РїРёСЃСЊРјРѕ";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
@@ -676,8 +676,8 @@ instance ItWr_Fire_Letter_01(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = UseFireletter;
 	scemeName = "MAPSEALED";
-	description = "Запечатанное письмо магам Огня";
-	text[1] = "Не вскрывать!";
+	description = "Р—Р°РїРµС‡Р°С‚Р°РЅРЅРѕРµ РїРёСЃСЊРјРѕ РјР°РіР°Рј РћРіРЅСЏ";
+	text[1] = "РќРµ РІСЃРєСЂС‹РІР°С‚СЊ!";
 };
 
 
@@ -691,12 +691,12 @@ func void UseFireletter()
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Многоуважаемый Мастер Ксардас,");
+	Doc_PrintLine(nDocID,0,"РњРЅРѕРіРѕСѓРІР°Р¶Р°РµРјС‹Р№ РњР°СЃС‚РµСЂ РљСЃР°СЂРґР°СЃ,");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
-	Doc_PrintLines(nDocID,0,"Ваше предыдущее письмо вызвало беспокойство среди магов. Мы посоветовались и в этом послании сообщаем Вам о нашем решении. Братство представляет собой большую опасность. Оно угрожает нашей торговле с королем, угрожает нашему королевству и Вашей жизни. Вам необходимо отправить к сектантам одного из своих людей, чтобы он разузнал, какой бог наделяет их силой и какими знаниями они обладают. Когда это станет известно, мы сообщим священнослужителям о том, что мы вместе отправим этого темного бога туда, откуда он явился. Наши ученые работают над древними манускриптами. Мы постараемся сообщить Вам все, что сможем узнать.");
+	Doc_PrintLines(nDocID,0,"Р’Р°С€Рµ РїСЂРµРґС‹РґСѓС‰РµРµ РїРёСЃСЊРјРѕ РІС‹Р·РІР°Р»Рѕ Р±РµСЃРїРѕРєРѕР№СЃС‚РІРѕ СЃСЂРµРґРё РјР°РіРѕРІ. РњС‹ РїРѕСЃРѕРІРµС‚РѕРІР°Р»РёСЃСЊ Рё РІ СЌС‚РѕРј РїРѕСЃР»Р°РЅРёРё СЃРѕРѕР±С‰Р°РµРј Р’Р°Рј Рѕ РЅР°С€РµРј СЂРµС€РµРЅРёРё. Р‘СЂР°С‚СЃС‚РІРѕ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ Р±РѕР»СЊС€СѓСЋ РѕРїР°СЃРЅРѕСЃС‚СЊ. РћРЅРѕ СѓРіСЂРѕР¶Р°РµС‚ РЅР°С€РµР№ С‚РѕСЂРіРѕРІР»Рµ СЃ РєРѕСЂРѕР»РµРј, СѓРіСЂРѕР¶Р°РµС‚ РЅР°С€РµРјСѓ РєРѕСЂРѕР»РµРІСЃС‚РІСѓ Рё Р’Р°С€РµР№ Р¶РёР·РЅРё. Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РѕС‚РїСЂР°РІРёС‚СЊ Рє СЃРµРєС‚Р°РЅС‚Р°Рј РѕРґРЅРѕРіРѕ РёР· СЃРІРѕРёС… Р»СЋРґРµР№, С‡С‚РѕР±С‹ РѕРЅ СЂР°Р·СѓР·РЅР°Р», РєР°РєРѕР№ Р±РѕРі РЅР°РґРµР»СЏРµС‚ РёС… СЃРёР»РѕР№ Рё РєР°РєРёРјРё Р·РЅР°РЅРёСЏРјРё РѕРЅРё РѕР±Р»Р°РґР°СЋС‚. РљРѕРіРґР° СЌС‚Рѕ СЃС‚Р°РЅРµС‚ РёР·РІРµСЃС‚РЅРѕ, РјС‹ СЃРѕРѕР±С‰РёРј СЃРІСЏС‰РµРЅРЅРѕСЃР»СѓР¶РёС‚РµР»СЏРј Рѕ С‚РѕРј, С‡С‚Рѕ РјС‹ РІРјРµСЃС‚Рµ РѕС‚РїСЂР°РІРёРј СЌС‚РѕРіРѕ С‚РµРјРЅРѕРіРѕ Р±РѕРіР° С‚СѓРґР°, РѕС‚РєСѓРґР° РѕРЅ СЏРІРёР»СЃСЏ. РќР°С€Рё СѓС‡РµРЅС‹Рµ СЂР°Р±РѕС‚Р°СЋС‚ РЅР°Рґ РґСЂРµРІРЅРёРјРё РјР°РЅСѓСЃРєСЂРёРїС‚Р°РјРё. РњС‹ РїРѕСЃС‚Р°СЂР°РµРјСЃСЏ СЃРѕРѕР±С‰РёС‚СЊ Р’Р°Рј РІСЃРµ, С‡С‚Рѕ СЃРјРѕР¶РµРј СѓР·РЅР°С‚СЊ.");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Да поможет нам Иннос!");
+	Doc_PrintLine(nDocID,0,"Р”Р° РїРѕРјРѕР¶РµС‚ РЅР°Рј РРЅРЅРѕСЃ!");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
@@ -708,7 +708,7 @@ func void UseFireletter()
 
 instance ItWr_Fire_Letter_02(C_Item)
 {
-	name = "Вскрытое письмо";
+	name = "Р’СЃРєСЂС‹С‚РѕРµ РїРёСЃСЊРјРѕ";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 0;
@@ -716,7 +716,7 @@ instance ItWr_Fire_Letter_02(C_Item)
 	material = MAT_LEATHER;
 	on_state[0] = UseFireletter2;
 	scemeName = "MAP";
-	description = "Письмо магам Огня";
+	description = "РџРёСЃСЊРјРѕ РјР°РіР°Рј РћРіРЅСЏ";
 };
 
 
@@ -729,12 +729,12 @@ func void UseFireletter2()
 	Doc_SetFont(nDocID,-1,"font_10_book.tga");
 	Doc_SetMargins(nDocID,-1,50,50,50,50,1);
 	Doc_PrintLine(nDocID,0," ");
-	Doc_PrintLine(nDocID,0,"Многоуважаемый Мастер Ксардас,");
+	Doc_PrintLine(nDocID,0,"РњРЅРѕРіРѕСѓРІР°Р¶Р°РµРјС‹Р№ РњР°СЃС‚РµСЂ РљСЃР°СЂРґР°СЃ,");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
-	Doc_PrintLines(nDocID,0,"Ваше предыдущее письмо вызвало беспокойство среди магов. Мы посоветовались и в этом послании сообщаем Вам о нашем решении. Братство представляет собой большую опасность. Оно угрожает нашей торговле с королем, угрожает нашему королевству и Вашей жизни. Вам необходимо отправить к сектантам одного из своих людей, чтобы он разузнал, какой бог наделяет их силой и какими знаниями они обладают. Когда это станет известно, мы сообщим священнослужителям о том, что мы вместе отправим этого темного бога туда, откуда он явился. Наши ученые работают над древними манускриптами. Мы постараемся сообщить Вам все, что сможем узнать.");
+	Doc_PrintLines(nDocID,0,"Р’Р°С€Рµ РїСЂРµРґС‹РґСѓС‰РµРµ РїРёСЃСЊРјРѕ РІС‹Р·РІР°Р»Рѕ Р±РµСЃРїРѕРєРѕР№СЃС‚РІРѕ СЃСЂРµРґРё РјР°РіРѕРІ. РњС‹ РїРѕСЃРѕРІРµС‚РѕРІР°Р»РёСЃСЊ Рё РІ СЌС‚РѕРј РїРѕСЃР»Р°РЅРёРё СЃРѕРѕР±С‰Р°РµРј Р’Р°Рј Рѕ РЅР°С€РµРј СЂРµС€РµРЅРёРё. Р‘СЂР°С‚СЃС‚РІРѕ РїСЂРµРґСЃС‚Р°РІР»СЏРµС‚ СЃРѕР±РѕР№ Р±РѕР»СЊС€СѓСЋ РѕРїР°СЃРЅРѕСЃС‚СЊ. РћРЅРѕ СѓРіСЂРѕР¶Р°РµС‚ РЅР°С€РµР№ С‚РѕСЂРіРѕРІР»Рµ СЃ РєРѕСЂРѕР»РµРј, СѓРіСЂРѕР¶Р°РµС‚ РЅР°С€РµРјСѓ РєРѕСЂРѕР»РµРІСЃС‚РІСѓ Рё Р’Р°С€РµР№ Р¶РёР·РЅРё. Р’Р°Рј РЅРµРѕР±С…РѕРґРёРјРѕ РѕС‚РїСЂР°РІРёС‚СЊ Рє СЃРµРєС‚Р°РЅС‚Р°Рј РѕРґРЅРѕРіРѕ РёР· СЃРІРѕРёС… Р»СЋРґРµР№, С‡С‚РѕР±С‹ РѕРЅ СЂР°Р·СѓР·РЅР°Р», РєР°РєРѕР№ Р±РѕРі РЅР°РґРµР»СЏРµС‚ РёС… СЃРёР»РѕР№ Рё РєР°РєРёРјРё Р·РЅР°РЅРёСЏРјРё РѕРЅРё РѕР±Р»Р°РґР°СЋС‚. РљРѕРіРґР° СЌС‚Рѕ СЃС‚Р°РЅРµС‚ РёР·РІРµСЃС‚РЅРѕ, РјС‹ СЃРѕРѕР±С‰РёРј СЃРІСЏС‰РµРЅРЅРѕСЃР»СѓР¶РёС‚РµР»СЏРј Рѕ С‚РѕРј, С‡С‚Рѕ РјС‹ РІРјРµСЃС‚Рµ РѕС‚РїСЂР°РІРёРј СЌС‚РѕРіРѕ С‚РµРјРЅРѕРіРѕ Р±РѕРіР° С‚СѓРґР°, РѕС‚РєСѓРґР° РѕРЅ СЏРІРёР»СЃСЏ. РќР°С€Рё СѓС‡РµРЅС‹Рµ СЂР°Р±РѕС‚Р°СЋС‚ РЅР°Рґ РґСЂРµРІРЅРёРјРё РјР°РЅСѓСЃРєСЂРёРїС‚Р°РјРё. РњС‹ РїРѕСЃС‚Р°СЂР°РµРјСЃСЏ СЃРѕРѕР±С‰РёС‚СЊ Р’Р°Рј РІСЃРµ, С‡С‚Рѕ СЃРјРѕР¶РµРј СѓР·РЅР°С‚СЊ.");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Да поможет нам Иннос!");
+	Doc_PrintLine(nDocID,0,"Р”Р° РїРѕРјРѕР¶РµС‚ РЅР°Рј РРЅРЅРѕСЃ!");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
 	Doc_PrintLine(nDocID,0,"");
@@ -745,38 +745,38 @@ func void UseFireletter2()
 
 instance ItKe_Gomez_01(C_Item)
 {
-	name = "Ключ Гомеза";
+	name = "РљР»СЋС‡ Р“РѕРјРµР·Р°";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Открывает сундук Гомеза.";
+	text[0] = "РћС‚РєСЂС‹РІР°РµС‚ СЃСѓРЅРґСѓРє Р“РѕРјРµР·Р°.";
 };
 
 instance ItKey_RB_01(C_Item)
 {
-	name = "Ключ Лорда";
+	name = "РљР»СЋС‡ Р›РѕСЂРґР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Открывает сундук Лорда.";
+	text[0] = "РћС‚РєСЂС‹РІР°РµС‚ СЃСѓРЅРґСѓРє Р›РѕСЂРґР°.";
 };
 
 instance ITKEY_OB_SMITH_01(C_Item)
 {
-	name = "Железный ключ";
+	name = "Р–РµР»РµР·РЅС‹Р№ РєР»СЋС‡";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Найден в кузнице старого лагеря, во внутреннем кольце.";
+	text[0] = "РќР°Р№РґРµРЅ РІ РєСѓР·РЅРёС†Рµ СЃС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ, РІРѕ РІРЅСѓС‚СЂРµРЅРЅРµРј РєРѕР»СЊС†Рµ.";
 };
 
 instance ItKe_Storage_01(C_Item)
@@ -788,7 +788,7 @@ instance ItKe_Storage_01(C_Item)
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Этот ключ я нашел на теле Бартоло.";
+	text[0] = "Р­С‚РѕС‚ РєР»СЋС‡ СЏ РЅР°С€РµР» РЅР° С‚РµР»Рµ Р‘Р°СЂС‚РѕР»Рѕ.";
 };
 
 instance ItKe_Nek_01(C_Item)
@@ -800,78 +800,78 @@ instance ItKe_Nek_01(C_Item)
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Найден на теле Нека.";
+	text[0] = "РќР°Р№РґРµРЅ РЅР° С‚РµР»Рµ РќРµРєР°.";
 };
 
 instance ItKe_OM_01(C_Item)
 {
-	name = "Ключ от сундука";
+	name = "РљР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_01.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Место Сантино";
-	text[1] = "Верхняя площадка для обмена";
-	text[2] = "Старая шахта";
+	text[0] = "РњРµСЃС‚Рѕ РЎР°РЅС‚РёРЅРѕ";
+	text[1] = "Р’РµСЂС…РЅСЏСЏ РїР»РѕС‰Р°РґРєР° РґР»СЏ РѕР±РјРµРЅР°";
+	text[2] = "РЎС‚Р°СЂР°СЏ С€Р°С…С‚Р°";
 };
 
 instance ItKe_OM_02(C_Item)
 {
-	name = "Ключ Аарона";
+	name = "РљР»СЋС‡ РђР°СЂРѕРЅР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_02.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Открывает сундук Аарона";
-	text[1] = "в Старой шахте.";
+	text[0] = "РћС‚РєСЂС‹РІР°РµС‚ СЃСѓРЅРґСѓРє РђР°СЂРѕРЅР°";
+	text[1] = "РІ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ.";
 };
 
 instance ItKe_OM_03(C_Item)
 {
-	name = "Ключ от склада";
+	name = "РљР»СЋС‡ РѕС‚ СЃРєР»Р°РґР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_03.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Открывает сундуки";
-	text[1] = "на складе в Старой шахте.";
+	text[0] = "РћС‚РєСЂС‹РІР°РµС‚ СЃСѓРЅРґСѓРєРё";
+	text[1] = "РЅР° СЃРєР»Р°РґРµ РІ РЎС‚Р°СЂРѕР№ С€Р°С…С‚Рµ.";
 };
 
 instance ItKe_OM_04(C_Item)
 {
-	name = "Ключ от сундука";
+	name = "РљР»СЋС‡ РѕС‚ СЃСѓРЅРґСѓРєР°";
 	mainflag = ITEM_KAT_NONE;
 	flags = 0;
 	value = 0;
 	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Место Альберто";
-	text[1] = "Нижняя площадка обмена";
+	text[0] = "РњРµСЃС‚Рѕ РђР»СЊР±РµСЂС‚Рѕ";
+	text[1] = "РќРёР¶РЅСЏСЏ РїР»РѕС‰Р°РґРєР° РѕР±РјРµРЅР°";
 };
 
 instance ITKE_WEAPONRY(C_Item)
 {
-	name = "Ключ от оружейной";
+	name = "РљР»СЋС‡ РѕС‚ РѕСЂСѓР¶РµР№РЅРѕР№";
 	mainflag = ITEM_KAT_NONE;
 	flags = ITEM_MISSION;
 	value = 0;
 	visual = "ItKe_Key_04.3ds";
 	material = MAT_METAL;
 	description = name;
-	text[0] = "Открывает сундуки";
-	text[1] = "в оружейной замка Баронов.";
+	text[0] = "РћС‚РєСЂС‹РІР°РµС‚ СЃСѓРЅРґСѓРєРё";
+	text[1] = "РІ РѕСЂСѓР¶РµР№РЅРѕР№ Р·Р°РјРєР° Р‘Р°СЂРѕРЅРѕРІ.";
 };
 
 instance ItFo_OM_Beer_01(C_Item)
 {
-	name = "Крепкое пиво";
+	name = "РљСЂРµРїРєРѕРµ РїРёРІРѕ";
 	mainflag = ITEM_KAT_FOOD;
 	flags = ITEM_MULTI;
 	value = 30;
@@ -927,14 +927,14 @@ var int riddle6;
 
 instance theriddle1(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин";
+	description = "РҐСЂРѕРјР°РЅРёРЅ";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle1;
@@ -951,11 +951,11 @@ func void Usetheriddle1()
 	Doc_SetFont(nDocID,-1,"font_15_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Хроманин");
+	Doc_PrintLine(nDocID,0,"РҐСЂРѕРјР°РЅРёРЅ");
 	Doc_PrintLine(nDocID,0,"-----------");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Тот, кто готов отказаться от всех земных страстей и следовать тропами правды, должен узнать, где сокрыт источник моей силы. Найдя его, он будет способен разрушить все, что соединяет его с этим миром, и покажет, что он готов принять знания Хроманина.");
+	Doc_PrintLines(nDocID,0,"РўРѕС‚, РєС‚Рѕ РіРѕС‚РѕРІ РѕС‚РєР°Р·Р°С‚СЊСЃСЏ РѕС‚ РІСЃРµС… Р·РµРјРЅС‹С… СЃС‚СЂР°СЃС‚РµР№ Рё СЃР»РµРґРѕРІР°С‚СЊ С‚СЂРѕРїР°РјРё РїСЂР°РІРґС‹, РґРѕР»Р¶РµРЅ СѓР·РЅР°С‚СЊ, РіРґРµ СЃРѕРєСЂС‹С‚ РёСЃС‚РѕС‡РЅРёРє РјРѕРµР№ СЃРёР»С‹. РќР°Р№РґСЏ РµРіРѕ, РѕРЅ Р±СѓРґРµС‚ СЃРїРѕСЃРѕР±РµРЅ СЂР°Р·СЂСѓС€РёС‚СЊ РІСЃРµ, С‡С‚Рѕ СЃРѕРµРґРёРЅСЏРµС‚ РµРіРѕ СЃ СЌС‚РёРј РјРёСЂРѕРј, Рё РїРѕРєР°Р¶РµС‚, С‡С‚Рѕ РѕРЅ РіРѕС‚РѕРІ РїСЂРёРЅСЏС‚СЊ Р·РЅР°РЅРёСЏ РҐСЂРѕРјР°РЅРёРЅР°.");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
@@ -966,13 +966,13 @@ func void Usetheriddle1()
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Мудрый пересматривает свои прошлые дела свысока, прежде чем начать что-то новое.");
+	Doc_PrintLines(nDocID,1,"РњСѓРґСЂС‹Р№ РїРµСЂРµСЃРјР°С‚СЂРёРІР°РµС‚ СЃРІРѕРё РїСЂРѕС€Р»С‹Рµ РґРµР»Р° СЃРІС‹СЃРѕРєР°, РїСЂРµР¶РґРµ С‡РµРј РЅР°С‡Р°С‚СЊ С‡С‚Рѕ-С‚Рѕ РЅРѕРІРѕРµ.");
 	Doc_Show(nDocID);
 	if(riddle1 == FALSE)
 	{
 		Log_CreateTopic(theriddle_log,LOG_MISSION);
 		Log_SetTopicStatus(theriddle_log,LOG_RUNNING);
-		B_LogEntry(theriddle_log,"Я взял у скелета-мага в туманной башне одну очень странную книгу. 'Хроманин'! Она содержит непонятные вещи. В ней написано, что таинственный Некто создал этот мир: ...Мудрый пересматривает свои прошлые дела свысока, прежде чем начать что-то новое... Да... Я еще ничего не понимаю, но, может быть, скоро что-нибудь прояснится.");
+		B_LogEntry(theriddle_log,"РЇ РІР·СЏР» Сѓ СЃРєРµР»РµС‚Р°-РјР°РіР° РІ С‚СѓРјР°РЅРЅРѕР№ Р±Р°С€РЅРµ РѕРґРЅСѓ РѕС‡РµРЅСЊ СЃС‚СЂР°РЅРЅСѓСЋ РєРЅРёРіСѓ. 'РҐСЂРѕРјР°РЅРёРЅ'! РћРЅР° СЃРѕРґРµСЂР¶РёС‚ РЅРµРїРѕРЅСЏС‚РЅС‹Рµ РІРµС‰Рё. Р’ РЅРµР№ РЅР°РїРёСЃР°РЅРѕ, С‡С‚Рѕ С‚Р°РёРЅСЃС‚РІРµРЅРЅС‹Р№ РќРµРєС‚Рѕ СЃРѕР·РґР°Р» СЌС‚РѕС‚ РјРёСЂ: ...РњСѓРґСЂС‹Р№ РїРµСЂРµСЃРјР°С‚СЂРёРІР°РµС‚ СЃРІРѕРё РїСЂРѕС€Р»С‹Рµ РґРµР»Р° СЃРІС‹СЃРѕРєР°, РїСЂРµР¶РґРµ С‡РµРј РЅР°С‡Р°С‚СЊ С‡С‚Рѕ-С‚Рѕ РЅРѕРІРѕРµ... Р”Р°... РЇ РµС‰Рµ РЅРёС‡РµРіРѕ РЅРµ РїРѕРЅРёРјР°СЋ, РЅРѕ, РјРѕР¶РµС‚ Р±С‹С‚СЊ, СЃРєРѕСЂРѕ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїСЂРѕСЏСЃРЅРёС‚СЃСЏ.");
 		Snd_Play("AMBIENTTONE_03_DARK");
 		riddle1 = TRUE;
 		RIDDLE1INSERT = TRUE;
@@ -982,14 +982,14 @@ func void Usetheriddle1()
 
 instance theriddle2(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин 2";
+	description = "РҐСЂРѕРјР°РЅРёРЅ 2";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle2;
@@ -1006,11 +1006,11 @@ func void Usetheriddle2()
 	Doc_SetFont(nDocID,-1,"font_15_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Хроманин");
+	Doc_PrintLine(nDocID,0,"РҐСЂРѕРјР°РЅРёРЅ");
 	Doc_PrintLine(nDocID,0,"-----------");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"В приносимых ветрами видениях Хроманина открывалось передо мной будущее. За веру в него я готов был отдать все, но и этого было бы мало. Они потрясли меня до глубины души.");
+	Doc_PrintLines(nDocID,0,"Р’ РїСЂРёРЅРѕСЃРёРјС‹С… РІРµС‚СЂР°РјРё РІРёРґРµРЅРёСЏС… РҐСЂРѕРјР°РЅРёРЅР° РѕС‚РєСЂС‹РІР°Р»РѕСЃСЊ РїРµСЂРµРґРѕ РјРЅРѕР№ Р±СѓРґСѓС‰РµРµ. Р—Р° РІРµСЂСѓ РІ РЅРµРіРѕ СЏ РіРѕС‚РѕРІ Р±С‹Р» РѕС‚РґР°С‚СЊ РІСЃРµ, РЅРѕ Рё СЌС‚РѕРіРѕ Р±С‹Р»Рѕ Р±С‹ РјР°Р»Рѕ. РћРЅРё РїРѕС‚СЂСЏСЃР»Рё РјРµРЅСЏ РґРѕ РіР»СѓР±РёРЅС‹ РґСѓС€Рё.");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
@@ -1021,12 +1021,12 @@ func void Usetheriddle2()
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Что было разделено, снова станет единым, если разделение длится недолго.");
+	Doc_PrintLines(nDocID,1,"Р§С‚Рѕ Р±С‹Р»Рѕ СЂР°Р·РґРµР»РµРЅРѕ, СЃРЅРѕРІР° СЃС‚Р°РЅРµС‚ РµРґРёРЅС‹Рј, РµСЃР»Рё СЂР°Р·РґРµР»РµРЅРёРµ РґР»РёС‚СЃСЏ РЅРµРґРѕР»РіРѕ.");
 	Doc_Show(nDocID);
 	if(riddle2 == FALSE)
 	{
 		B_GiveXP(300);
-		B_LogEntry(theriddle_log,"Я нашел вторую книгу, на которой стоит слово 'Хроманин'. Она оказалась не менее загадочной... Что было разделено, снова станет единым, если разделение длится недолго...");
+		B_LogEntry(theriddle_log,"РЇ РЅР°С€РµР» РІС‚РѕСЂСѓСЋ РєРЅРёРіСѓ, РЅР° РєРѕС‚РѕСЂРѕР№ СЃС‚РѕРёС‚ СЃР»РѕРІРѕ 'РҐСЂРѕРјР°РЅРёРЅ'. РћРЅР° РѕРєР°Р·Р°Р»Р°СЃСЊ РЅРµ РјРµРЅРµРµ Р·Р°РіР°РґРѕС‡РЅРѕР№... Р§С‚Рѕ Р±С‹Р»Рѕ СЂР°Р·РґРµР»РµРЅРѕ, СЃРЅРѕРІР° СЃС‚Р°РЅРµС‚ РµРґРёРЅС‹Рј, РµСЃР»Рё СЂР°Р·РґРµР»РµРЅРёРµ РґР»РёС‚СЃСЏ РЅРµРґРѕР»РіРѕ...");
 		Snd_Play("FoundRiddlersBook");
 		riddle2 = TRUE;
 		RIDDLE2INSERT = TRUE;
@@ -1036,14 +1036,14 @@ func void Usetheriddle2()
 
 instance theriddle3(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин 3";
+	description = "РҐСЂРѕРјР°РЅРёРЅ 3";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle3;
@@ -1060,11 +1060,11 @@ func void Usetheriddle3()
 	Doc_SetFont(nDocID,-1,"font_15_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Хроманин");
+	Doc_PrintLine(nDocID,0,"РҐСЂРѕРјР°РЅРёРЅ");
 	Doc_PrintLine(nDocID,0,"-----------");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"О, боги древних времен. Возможно ли, чтобы такой человек, как я, недостойный, получил эту силу. Как велик страх потерять все, выказав малейшее слово сомнения.");
+	Doc_PrintLines(nDocID,0,"Рћ, Р±РѕРіРё РґСЂРµРІРЅРёС… РІСЂРµРјРµРЅ. Р’РѕР·РјРѕР¶РЅРѕ Р»Рё, С‡С‚РѕР±С‹ С‚Р°РєРѕР№ С‡РµР»РѕРІРµРє, РєР°Рє СЏ, РЅРµРґРѕСЃС‚РѕР№РЅС‹Р№, РїРѕР»СѓС‡РёР» СЌС‚Сѓ СЃРёР»Сѓ. РљР°Рє РІРµР»РёРє СЃС‚СЂР°С… РїРѕС‚РµСЂСЏС‚СЊ РІСЃРµ, РІС‹РєР°Р·Р°РІ РјР°Р»РµР№С€РµРµ СЃР»РѕРІРѕ СЃРѕРјРЅРµРЅРёСЏ.");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
@@ -1075,12 +1075,12 @@ func void Usetheriddle3()
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Умный рыбак попробует найти удачу и на другом берегу моря.");
+	Doc_PrintLines(nDocID,1,"РЈРјРЅС‹Р№ СЂС‹Р±Р°Рє РїРѕРїСЂРѕР±СѓРµС‚ РЅР°Р№С‚Рё СѓРґР°С‡Сѓ Рё РЅР° РґСЂСѓРіРѕРј Р±РµСЂРµРіСѓ РјРѕСЂСЏ.");
 	Doc_Show(nDocID);
 	if(riddle3 == FALSE)
 	{
 		B_GiveXP(500);
-		B_LogEntry(theriddle_log,"Я нашел третью книгу. Кажется, я начинаю понимать, что хотел сказать ее автор... Умный рыбак попробует найти удачу и на другом берегу моря...");
+		B_LogEntry(theriddle_log,"РЇ РЅР°С€РµР» С‚СЂРµС‚СЊСЋ РєРЅРёРіСѓ. РљР°Р¶РµС‚СЃСЏ, СЏ РЅР°С‡РёРЅР°СЋ РїРѕРЅРёРјР°С‚СЊ, С‡С‚Рѕ С…РѕС‚РµР» СЃРєР°Р·Р°С‚СЊ РµРµ Р°РІС‚РѕСЂ... РЈРјРЅС‹Р№ СЂС‹Р±Р°Рє РїРѕРїСЂРѕР±СѓРµС‚ РЅР°Р№С‚Рё СѓРґР°С‡Сѓ Рё РЅР° РґСЂСѓРіРѕРј Р±РµСЂРµРіСѓ РјРѕСЂСЏ...");
 		Snd_Play("FoundRiddlersBook");
 		riddle3 = TRUE;
 		RIDDLE3INSERT = TRUE;
@@ -1090,14 +1090,14 @@ func void Usetheriddle3()
 
 instance theriddle4(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин 4";
+	description = "РҐСЂРѕРјР°РЅРёРЅ 4";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle4;
@@ -1114,11 +1114,11 @@ func void Usetheriddle4()
 	Doc_SetFont(nDocID,-1,"font_15_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Хроманин");
+	Doc_PrintLine(nDocID,0,"РҐСЂРѕРјР°РЅРёРЅ");
 	Doc_PrintLine(nDocID,0,"-----------");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Я даже не смею надеяться когда-нибудь самому пережить Хроманин. Прошли дни растрат и пустых слов. Теперь будет так просто достичь исполнения, и очень скоро я это сделаю.");
+	Doc_PrintLines(nDocID,0,"РЇ РґР°Р¶Рµ РЅРµ СЃРјРµСЋ РЅР°РґРµСЏС‚СЊСЃСЏ РєРѕРіРґР°-РЅРёР±СѓРґСЊ СЃР°РјРѕРјСѓ РїРµСЂРµР¶РёС‚СЊ РҐСЂРѕРјР°РЅРёРЅ. РџСЂРѕС€Р»Рё РґРЅРё СЂР°СЃС‚СЂР°С‚ Рё РїСѓСЃС‚С‹С… СЃР»РѕРІ. РўРµРїРµСЂСЊ Р±СѓРґРµС‚ С‚Р°Рє РїСЂРѕСЃС‚Рѕ РґРѕСЃС‚РёС‡СЊ РёСЃРїРѕР»РЅРµРЅРёСЏ, Рё РѕС‡РµРЅСЊ СЃРєРѕСЂРѕ СЏ СЌС‚Рѕ СЃРґРµР»Р°СЋ.");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
@@ -1129,12 +1129,12 @@ func void Usetheriddle4()
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Забыты дела тех, кто был когда-то на борту.");
+	Doc_PrintLines(nDocID,1,"Р—Р°Р±С‹С‚С‹ РґРµР»Р° С‚РµС…, РєС‚Рѕ Р±С‹Р» РєРѕРіРґР°-С‚Рѕ РЅР° Р±РѕСЂС‚Сѓ.");
 	Doc_Show(nDocID);
 	if(riddle4 == FALSE)
 	{
 		B_GiveXP(700);
-		B_LogEntry(theriddle_log,"Книга четвертая. И зачем только я позволяю этим книжкам морочить мне голову... Забыты дела тех, кто был когда-то на борту...");
+		B_LogEntry(theriddle_log,"РљРЅРёРіР° С‡РµС‚РІРµСЂС‚Р°СЏ. Р Р·Р°С‡РµРј С‚РѕР»СЊРєРѕ СЏ РїРѕР·РІРѕР»СЏСЋ СЌС‚РёРј РєРЅРёР¶РєР°Рј РјРѕСЂРѕС‡РёС‚СЊ РјРЅРµ РіРѕР»РѕРІСѓ... Р—Р°Р±С‹С‚С‹ РґРµР»Р° С‚РµС…, РєС‚Рѕ Р±С‹Р» РєРѕРіРґР°-С‚Рѕ РЅР° Р±РѕСЂС‚Сѓ...");
 		Snd_Play("FoundRiddlersBook");
 		riddle4 = TRUE;
 		RIDDLE4INSERT = TRUE;
@@ -1144,14 +1144,14 @@ func void Usetheriddle4()
 
 instance theriddle5(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин 5";
+	description = "РҐСЂРѕРјР°РЅРёРЅ 5";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle5;
@@ -1169,11 +1169,11 @@ func void Usetheriddle5()
 	Doc_SetFont(nDocID,-1,"font_15_book.tga");
 	Doc_SetMargins(nDocID,0,275,20,30,20,1);
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLine(nDocID,0,"Хроманин");
+	Doc_PrintLine(nDocID,0,"РҐСЂРѕРјР°РЅРёРЅ");
 	Doc_PrintLine(nDocID,0,"-----------");
 	Doc_SetFont(nDocID,-1,"font_10_book.TGA");
 	Doc_PrintLine(nDocID,0,"");
-	Doc_PrintLines(nDocID,0,"Но я не буду вставать на этот путь один. Я должен буду разделить силу, сокрытую во мне, с достойным, который найдет меня. Надеюсь, мое ожидание не затянется надолго...");
+	Doc_PrintLines(nDocID,0,"РќРѕ СЏ РЅРµ Р±СѓРґСѓ РІСЃС‚Р°РІР°С‚СЊ РЅР° СЌС‚РѕС‚ РїСѓС‚СЊ РѕРґРёРЅ. РЇ РґРѕР»Р¶РµРЅ Р±СѓРґСѓ СЂР°Р·РґРµР»РёС‚СЊ СЃРёР»Сѓ, СЃРѕРєСЂС‹С‚СѓСЋ РІРѕ РјРЅРµ, СЃ РґРѕСЃС‚РѕР№РЅС‹Рј, РєРѕС‚РѕСЂС‹Р№ РЅР°Р№РґРµС‚ РјРµРЅСЏ. РќР°РґРµСЋСЃСЊ, РјРѕРµ РѕР¶РёРґР°РЅРёРµ РЅРµ Р·Р°С‚СЏРЅРµС‚СЃСЏ РЅР°РґРѕР»РіРѕ...");
 	Doc_SetMargins(nDocID,-1,30,20,275,20,1);
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
@@ -1184,12 +1184,12 @@ func void Usetheriddle5()
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
 	Doc_PrintLine(nDocID,1,"");
-	Doc_PrintLines(nDocID,1,"Ты найдешь меня там, где все началось.");
+	Doc_PrintLines(nDocID,1,"РўС‹ РЅР°Р№РґРµС€СЊ РјРµРЅСЏ С‚Р°Рј, РіРґРµ РІСЃРµ РЅР°С‡Р°Р»РѕСЃСЊ.");
 	Doc_Show(nDocID);
 	if(riddle5 == FALSE)
 	{
 		B_GiveXP(850);
-		B_LogEntry(theriddle_log,"Кажется, это последняя книга. Интересно, с кем мне предстоит встретиться... Ты найдешь меня там, где все началось.");
+		B_LogEntry(theriddle_log,"РљР°Р¶РµС‚СЃСЏ, СЌС‚Рѕ РїРѕСЃР»РµРґРЅСЏСЏ РєРЅРёРіР°. РРЅС‚РµСЂРµСЃРЅРѕ, СЃ РєРµРј РјРЅРµ РїСЂРµРґСЃС‚РѕРёС‚ РІСЃС‚СЂРµС‚РёС‚СЊСЃСЏ... РўС‹ РЅР°Р№РґРµС€СЊ РјРµРЅСЏ С‚Р°Рј, РіРґРµ РІСЃРµ РЅР°С‡Р°Р»РѕСЃСЊ.");
 		Snd_Play("FoundRiddlersBook");
 		Wld_InsertNpc(Bau_940_Riddler,"");
 		riddler = Hlp_GetNpc(Bau_940_Riddler);
@@ -1201,14 +1201,14 @@ func void Usetheriddle5()
 
 instance theriddle6(C_Item)
 {
-	name = "Старая книга";
+	name = "РЎС‚Р°СЂР°СЏ РєРЅРёРіР°";
 	mainflag = ITEM_KAT_DOCS;
 	flags = ITEM_MISSION;
 	value = 50;
 	visual = "ITWR_BOOK_RIDDLE.3ds";
 	material = MAT_LEATHER;
 	scemeName = "MAP";
-	description = "Хроманин 6";
+	description = "РҐСЂРѕРјР°РЅРёРЅ 6";
 	text[5] = NAME_Value;
 	count[5] = value;
 	on_state[0] = Usetheriddle6;
@@ -1246,7 +1246,7 @@ func void Usetheriddle6()
 	if(riddle6 == FALSE)
 	{
 		B_GiveXP(1000);
-		B_LogEntry(theriddle_log,"Таинственный Некто мертв. Его убили какие-то демоны. Что-то связывало его с этими порождениями ада. Иначе он никогда не вернулся бы в это забытое богами место. Он не разделил со мной свою тайну, она умерла вместе с ним.");
+		B_LogEntry(theriddle_log,"РўР°РёРЅСЃС‚РІРµРЅРЅС‹Р№ РќРµРєС‚Рѕ РјРµСЂС‚РІ. Р•РіРѕ СѓР±РёР»Рё РєР°РєРёРµ-С‚Рѕ РґРµРјРѕРЅС‹. Р§С‚Рѕ-С‚Рѕ СЃРІСЏР·С‹РІР°Р»Рѕ РµРіРѕ СЃ СЌС‚РёРјРё РїРѕСЂРѕР¶РґРµРЅРёСЏРјРё Р°РґР°. РРЅР°С‡Рµ РѕРЅ РЅРёРєРѕРіРґР° РЅРµ РІРµСЂРЅСѓР»СЃСЏ Р±С‹ РІ СЌС‚Рѕ Р·Р°Р±С‹С‚РѕРµ Р±РѕРіР°РјРё РјРµСЃС‚Рѕ. РћРЅ РЅРµ СЂР°Р·РґРµР»РёР» СЃРѕ РјРЅРѕР№ СЃРІРѕСЋ С‚Р°Р№РЅСѓ, РѕРЅР° СѓРјРµСЂР»Р° РІРјРµСЃС‚Рµ СЃ РЅРёРј.");
 		Log_SetTopicStatus(theriddle_log,LOG_SUCCESS);
 		Snd_Play("FoundRiddler");
 		Wld_InsertNpc(SkeletonMage,"OW_FOGDUNGEON_36_MOVEMENT");

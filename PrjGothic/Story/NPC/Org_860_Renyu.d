@@ -1,7 +1,7 @@
 
 instance Org_860_Renyu(Npc_Default)
 {
-	name[0] = "Πενθ";
+	name[0] = "Π ΠµΠ½ΠΈ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 8;

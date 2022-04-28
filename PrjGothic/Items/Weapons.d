@@ -1,7 +1,7 @@
 
 instance Thorus_Schwert(C_Item)
 {
-	name = "Меч Торуса";
+	name = "РњРµС‡ РўРѕСЂСѓСЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
@@ -25,7 +25,7 @@ instance Thorus_Schwert(C_Item)
 
 instance Innos_Zorn(C_Item)
 {
-	name = "Гнев Инноса";
+	name = "Р“РЅРµРІ РРЅРЅРѕСЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
@@ -49,7 +49,7 @@ instance Innos_Zorn(C_Item)
 
 instance Scars_Schwert(C_Item)
 {
-	name = "Меч Шрама";
+	name = "РњРµС‡ РЁСЂР°РјР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -73,7 +73,7 @@ instance Scars_Schwert(C_Item)
 
 instance Artos_Schwert(C_Item)
 {
-	name = "Меч Арто";
+	name = "РњРµС‡ РђСЂС‚Рѕ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -97,7 +97,7 @@ instance Artos_Schwert(C_Item)
 
 instance Rabenrecht(C_Item)
 {
-	name = "Суд Равена";
+	name = "РЎСѓРґ Р Р°РІРµРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -121,7 +121,7 @@ instance Rabenrecht(C_Item)
 
 instance Prankenhieb(C_Item)
 {
-	name = "Коготь глорха";
+	name = "РљРѕРіРѕС‚СЊ РіР»РѕСЂС…Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -145,7 +145,7 @@ instance Prankenhieb(C_Item)
 
 instance Diegos_Bogen(C_Item)
 {
-	name = "Лук Диего";
+	name = "Р›СѓРє Р”РёРµРіРѕ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -161,8 +161,8 @@ instance Diegos_Bogen(C_Item)
 	on_equip = Equip_Diegos_Bogen;
 	on_unequip = UnEquip_Diegos_Bogen;
 	description = name;
-	count[0] = 143;//урон равен 143% от агила
-	text[1] = "Я ни разу не видел Диего без него..";
+	count[0] = 143;//СѓСЂРѕРЅ СЂР°РІРµРЅ 143% РѕС‚ Р°РіРёР»Р°
+	text[1] = "РЇ РЅРё СЂР°Р·Сѓ РЅРµ РІРёРґРµР» Р”РёРµРіРѕ Р±РµР· РЅРµРіРѕ..";
 	text[2] = NAME_Damage;
 	count[2] = damage[DAM_INDEX_POINT];
 	text[3] = NAME_Dex_needed;
@@ -188,7 +188,7 @@ func void UnEquip_Diegos_Bogen()
 
 instance Whistlers_Schwert(C_Item)
 {
-	name = "Меч Уистлера";
+	name = "РњРµС‡ РЈРёСЃС‚Р»РµСЂР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -198,9 +198,10 @@ instance Whistlers_Schwert(C_Item)
 	range = 100;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 10;
+	owner = Stt_309_Whistler;
 	visual = "ItMw_Beta_Sword_Runes.3DS";
 	description = name;
-	text[0] = "Сверкает как макакина задница.. ей богу.";
+	text[0] = "РЎРІРµСЂРєР°РµС‚ РєР°Рє РјР°РєР°РєРёРЅР° Р·Р°РґРЅРёС†Р°.. РµР№ Р±РѕРіСѓ.";
 	text[2] = NAME_Damage;
 	count[2] = damageTotal;
 	text[3] = NAME_Str_needed;
@@ -212,7 +213,7 @@ instance Whistlers_Schwert(C_Item)
 
 instance Stab_des_Lichts(C_Item)
 {
-	name = "Посох света";
+	name = "РџРѕСЃРѕС… СЃРІРµС‚Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -227,7 +228,7 @@ instance Stab_des_Lichts(C_Item)
 	owner = GUR_1200_YBerion;
 	visual = "ItMw_2H_Staff_03.3DS";
 	description = name;
-	text[0] = "Выглядит чарующе.";//Это поле БУДЕТ меняеться внешней функцией в зависимости от гильдии ГГ
+	text[0] = "Р’С‹РіР»СЏРґРёС‚ С‡Р°СЂСѓСЋС‰Рµ.";//Р­С‚Рѕ РїРѕР»Рµ Р‘РЈР”Р•Рў РјРµРЅСЏРµС‚СЊСЃСЏ РІРЅРµС€РЅРµР№ С„СѓРЅРєС†РёРµР№ РІ Р·Р°РІРёСЃРёРјРѕСЃС‚Рё РѕС‚ РіРёР»СЊРґРёРё Р“Р“
 	text[2] = NAME_Damage;
 	count[2] = damageTotal;
 	text[3] = NAME_Str_needed;
@@ -239,7 +240,7 @@ instance Stab_des_Lichts(C_Item)
 
 instance Kaloms_Schwert(C_Item)
 {
-	name = "Меч Галома";
+	name = "РњРµС‡ Р“Р°Р»РѕРјР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -263,7 +264,7 @@ instance Kaloms_Schwert(C_Item)
 
 instance Streitschlichter(C_Item)
 {
-	name = "Судья Лестера";
+	name = "РЎСѓРґСЊСЏ Р›РµСЃС‚РµСЂР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -287,7 +288,7 @@ instance Streitschlichter(C_Item)
 
 instance Roter_Wind(C_Item)
 {
-	name = "Красный ветер";
+	name = "РљСЂР°СЃРЅС‹Р№ РІРµС‚РµСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
@@ -314,7 +315,7 @@ instance Roter_Wind(C_Item)
 
 instance Namibs_Keule(C_Item)
 {
-	name = "Дубина Намиба";
+	name = "Р”СѓР±РёРЅР° РќР°РјРёР±Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -338,7 +339,7 @@ instance Namibs_Keule(C_Item)
 
 instance Oruns_Keule(C_Item)
 {
-	name = "Дубина Орана";
+	name = "Р”СѓР±РёРЅР° РћСЂР°РЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -362,7 +363,7 @@ instance Oruns_Keule(C_Item)
 
 instance Fortunos_Keule(C_Item)
 {
-	name = "Серп Фортуно";
+	name = "РЎРµСЂРї Р¤РѕСЂС‚СѓРЅРѕ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_METAL;
@@ -386,7 +387,7 @@ instance Fortunos_Keule(C_Item)
 
 instance Lees_Axt(C_Item)
 {
-	name = "Топор Ли";
+	name = "РўРѕРїРѕСЂ Р›Рё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -410,7 +411,7 @@ instance Lees_Axt(C_Item)
 
 instance Oriks_Axt(C_Item)
 {
-	name = "Топор Орика";
+	name = "РўРѕРїРѕСЂ РћСЂРёРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -434,7 +435,7 @@ instance Oriks_Axt(C_Item)
 
 instance Torlofs_Axt(C_Item)
 {
-	name = "Топор Торлофа";
+	name = "РўРѕРїРѕСЂ РўРѕСЂР»РѕС„Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -458,7 +459,7 @@ instance Torlofs_Axt(C_Item)
 
 instance Cords_Spalter(C_Item)
 {
-	name = "Раскалыватель Корда";
+	name = "Р Р°СЃРєР°Р»С‹РІР°С‚РµР»СЊ РљРѕСЂРґР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -482,7 +483,7 @@ instance Cords_Spalter(C_Item)
 
 instance Gorns_Rache(C_Item)
 {
-	name = "Месть Горна";
+	name = "РњРµСЃС‚СЊ Р“РѕСЂРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -506,7 +507,7 @@ instance Gorns_Rache(C_Item)
 
 instance Lares_Axt(C_Item)
 {
-	name = "Топор Ларса";
+	name = "РўРѕРїРѕСЂ Р›Р°СЂСЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_METAL;
@@ -530,7 +531,7 @@ instance Lares_Axt(C_Item)
 
 instance Wolfs_Bogen(C_Item)
 {
-	name = "Лук Волка";
+	name = "Р›СѓРє Р’РѕР»РєР°";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -553,7 +554,7 @@ instance Wolfs_Bogen(C_Item)
 
 instance Silas_Axt(C_Item)
 {
-	name = "Топор Силаса";
+	name = "РўРѕРїРѕСЂ РЎРёР»Р°СЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_METAL;
@@ -577,7 +578,7 @@ instance Silas_Axt(C_Item)
 
 instance Heerscherstab(C_Item)
 {
-	name = "Посох Мастера";
+	name = "РџРѕСЃРѕС… РњР°СЃС‚РµСЂР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -601,7 +602,7 @@ instance Heerscherstab(C_Item)
 
 instance ITRW_SCORPIO_CROSSBOW(C_Item)
 {
-	name = "Арбалет Скорпио";
+	name = "РђСЂР±Р°Р»РµС‚ РЎРєРѕСЂРїРёРѕ";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_CROSSBOW;
 	material = MAT_WOOD;
@@ -624,7 +625,7 @@ instance ITRW_SCORPIO_CROSSBOW(C_Item)
 
 instance ITMW_GORHANIS(C_Item)
 {
-	name = "Посох Гор Ханиса";
+	name = "РџРѕСЃРѕС… Р“РѕСЂ РҐР°РЅРёСЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -648,7 +649,7 @@ instance ITMW_GORHANIS(C_Item)
 
 instance ITMW_KIRGO(C_Item)
 {
-	name = "Дубина Кирго";
+	name = "Р”СѓР±РёРЅР° РљРёСЂРіРѕ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -672,7 +673,7 @@ instance ITMW_KIRGO(C_Item)
 
 instance ITMW_KHARIM(C_Item)
 {
-	name = "Булава Карима";
+	name = "Р‘СѓР»Р°РІР° РљР°СЂРёРјР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -696,7 +697,7 @@ instance ITMW_KHARIM(C_Item)
 
 instance TR_M_CAVALORN(C_Item)
 {
-	name = "Меч Кавалорна";
+	name = "РњРµС‡ РљР°РІР°Р»РѕСЂРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -720,7 +721,7 @@ instance TR_M_CAVALORN(C_Item)
 
 instance TR_R_CAVALORN(C_Item)
 {
-	name = "Лук Кавалорна";
+	name = "Р›СѓРє РљР°РІР°Р»РѕСЂРЅР°";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;
@@ -743,7 +744,7 @@ instance TR_R_CAVALORN(C_Item)
 
 instance TR_M_DARRION(C_Item)
 {
-	name = "Посох Дарриона";
+	name = "РџРѕСЃРѕС… Р”Р°СЂСЂРёРѕРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -767,7 +768,7 @@ instance TR_M_DARRION(C_Item)
 
 instance TR_M_FISK(C_Item)
 {
-	name = "Меч Фиска";
+	name = "РњРµС‡ Р¤РёСЃРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -791,7 +792,7 @@ instance TR_M_FISK(C_Item)
 
 instance TR_M_SCORPIO(C_Item)
 {
-	name = "Меч Скорпио";
+	name = "РњРµС‡ РЎРєРѕСЂРїРёРѕ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -815,7 +816,7 @@ instance TR_M_SCORPIO(C_Item)
 
 instance TR_M_SHARKY(C_Item)
 {
-	name = "Топор Шарки";
+	name = "РўРѕРїРѕСЂ РЁР°СЂРєРё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -839,7 +840,7 @@ instance TR_M_SHARKY(C_Item)
 
 instance TR_M_SKIP(C_Item)
 {
-	name = "Меч Скипа";
+	name = "РњРµС‡ РЎРєРёРїР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -863,7 +864,7 @@ instance TR_M_SKIP(C_Item)
 
 instance TR_R_WOLF(C_Item)
 {
-	name = "Лук Волка";
+	name = "Р›СѓРє Р’РѕР»РєР°";
 	mainflag = ITEM_KAT_FF;
 	flags = ITEM_BOW;
 	material = MAT_WOOD;

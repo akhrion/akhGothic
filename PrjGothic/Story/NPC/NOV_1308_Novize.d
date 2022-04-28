@@ -85,15 +85,15 @@ func int dia_1308_novize_hi_condition()
 
 func void dia_1308_novize_hi_info()
 {
-	AI_Output(self,other,"DIA_Baal1308_01");	//Приветствую тебя, незнакомец! Я продаю косяки из свежайшего болотника, прямиком из Болотного лагеря! Обращайся ко мне, договоримся...
+	AI_Output(self,other,"DIA_Baal1308_01");	//РџСЂРёРІРµС‚СЃС‚РІСѓСЋ С‚РµР±СЏ, РЅРµР·РЅР°РєРѕРјРµС†! РЇ РїСЂРѕРґР°СЋ РєРѕСЃСЏРєРё РёР· СЃРІРµР¶Р°Р№С€РµРіРѕ Р±РѕР»РѕС‚РЅРёРєР°, РїСЂСЏРјРёРєРѕРј РёР· Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ! РћР±СЂР°С‰Р°Р№СЃСЏ РєРѕ РјРЅРµ, РґРѕРіРѕРІРѕСЂРёРјСЃСЏ...
 	if((BAALISIDRO_JOINTS_STARTED == TRUE) && !Npc_KnowsInfo(hero,dia_baalisidro_revenge) && !Npc_KnowsInfo(hero,dia_baalisidro_hello_ch5))
 	{
-		AI_Output(other,self,"DIA_Baal1308_02");	//Где я могу найти...
-		AI_Output(self,other,"DIA_Baal1308_03");	//...Идола Исидро? Теперь я вместо него. Он поддался искушению мирской жизни вдали от своих братьев и больше не мог выполнять свои обязанности.
-		AI_Output(self,other,"DIA_Baal1308_04");	//Гуру решили вернуть его к более простой работе.
+		AI_Output(other,self,"DIA_Baal1308_02");	//Р“РґРµ СЏ РјРѕРіСѓ РЅР°Р№С‚Рё...
+		AI_Output(self,other,"DIA_Baal1308_03");	//...РРґРѕР»Р° РСЃРёРґСЂРѕ? РўРµРїРµСЂСЊ СЏ РІРјРµСЃС‚Рѕ РЅРµРіРѕ. РћРЅ РїРѕРґРґР°Р»СЃСЏ РёСЃРєСѓС€РµРЅРёСЋ РјРёСЂСЃРєРѕР№ Р¶РёР·РЅРё РІРґР°Р»Рё РѕС‚ СЃРІРѕРёС… Р±СЂР°С‚СЊРµРІ Рё Р±РѕР»СЊС€Рµ РЅРµ РјРѕРі РІС‹РїРѕР»РЅСЏС‚СЊ СЃРІРѕРё РѕР±СЏР·Р°РЅРЅРѕСЃС‚Рё.
+		AI_Output(self,other,"DIA_Baal1308_04");	//Р“СѓСЂСѓ СЂРµС€РёР»Рё РІРµСЂРЅСѓС‚СЊ РµРіРѕ Рє Р±РѕР»РµРµ РїСЂРѕСЃС‚РѕР№ СЂР°Р±РѕС‚Рµ.
 	};
 	Log_CreateTopic(GE_TraderNC,LOG_NOTE);
-	B_LogEntry(GE_TraderNC,"В баре на озере появился послушник из Болотного лагеря. Он продает косяки из болотника.");
+	B_LogEntry(GE_TraderNC,"Р’ Р±Р°СЂРµ РЅР° РѕР·РµСЂРµ РїРѕСЏРІРёР»СЃСЏ РїРѕСЃР»СѓС€РЅРёРє РёР· Р‘РѕР»РѕС‚РЅРѕРіРѕ Р»Р°РіРµСЂСЏ. РћРЅ РїСЂРѕРґР°РµС‚ РєРѕСЃСЏРєРё РёР· Р±РѕР»РѕС‚РЅРёРєР°.");
 };
 
 
@@ -104,7 +104,7 @@ instance DIA_1308_NOVIZE_TRADE(C_Info)
 	condition = dia_1308_novize_trade_condition;
 	information = dia_1308_novize_trade_info;
 	permanent = 1;
-	description = "Покажи, что ты там продаешь.";
+	description = "РџРѕРєР°Р¶Рё, С‡С‚Рѕ С‚С‹ С‚Р°Рј РїСЂРѕРґР°РµС€СЊ.";
 	trade = 1;
 };
 
@@ -119,7 +119,7 @@ func int dia_1308_novize_trade_condition()
 
 func void dia_1308_novize_trade_info()
 {
-	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00");	//Покажи, что ты там продаешь.
+	AI_Output(other,self,"DIA_BaalIsidro_TRADE_15_00");	//РџРѕРєР°Р¶Рё, С‡С‚Рѕ С‚С‹ С‚Р°Рј РїСЂРѕРґР°РµС€СЊ.
 };
 
 
@@ -130,7 +130,7 @@ instance DIA_1308_NOVIZE_PRECH2(C_Info)
 	condition = dia_1308_novize_prech2_condition;
 	information = dia_1308_novize_prech2_info;
 	permanent = 1;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -144,8 +144,8 @@ func int dia_1308_novize_prech2_condition()
 
 func void dia_1308_novize_prech2_info()
 {
-	AI_Output(other,self,"DIA_Gravo_Hallo_15_00");	//Как дела?
-	AI_Output(self,other,"DIA_BaalParvez_Sleeper_10_01");	//Спящий говорит с нами во снах и видениях.
-	AI_Output(self,other,"DIA_BaalParvez_PSIMagic_10_02");	//Только Гуру посвящены в таинство магии Спящего.
+	AI_Output(other,self,"DIA_Gravo_Hallo_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"DIA_BaalParvez_Sleeper_10_01");	//РЎРїСЏС‰РёР№ РіРѕРІРѕСЂРёС‚ СЃ РЅР°РјРё РІРѕ СЃРЅР°С… Рё РІРёРґРµРЅРёСЏС….
+	AI_Output(self,other,"DIA_BaalParvez_PSIMagic_10_02");	//РўРѕР»СЊРєРѕ Р“СѓСЂСѓ РїРѕСЃРІСЏС‰РµРЅС‹ РІ С‚Р°РёРЅСЃС‚РІРѕ РјР°РіРёРё РЎРїСЏС‰РµРіРѕ.
 };
 

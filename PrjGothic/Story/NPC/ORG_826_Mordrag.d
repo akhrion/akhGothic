@@ -1,7 +1,7 @@
 
 instance ORG_826_Mordrag(Npc_Default)
 {
-	name[0] = "Мордраг";
+	name[0] = "РњРѕСЂРґСЂР°Рі";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 10;

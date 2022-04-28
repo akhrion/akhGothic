@@ -1,7 +1,7 @@
 
 instance SLD_704_Blade(Npc_Default)
 {
-	name[0] = "Αλειδ";
+	name[0] = "Π‘Π»ΠµΠΉΠ΄";
 	npcType = npctype_ambient;
 	guild = GIL_SLD;
 	level = 18;

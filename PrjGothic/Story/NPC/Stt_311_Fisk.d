@@ -1,7 +1,7 @@
 
 instance Stt_311_Fisk(Npc_Default)
 {
-	name[0] = "Фиск";
+	name[0] = "Р¤РёСЃРє";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 7;

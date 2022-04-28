@@ -28,7 +28,7 @@ instance DIA_Silas_Hehler(C_Info)
 	condition = DIA_Silas_Hehler_Condition;
 	information = DIA_Silas_Hehler_Info;
 	permanent = 0;
-	description = "Как живешь?";
+	description = "РљР°Рє Р¶РёРІРµС€СЊ?";
 };
 
 
@@ -39,11 +39,11 @@ func int DIA_Silas_Hehler_Condition()
 
 func void DIA_Silas_Hehler_Info()
 {
-	AI_Output(other,self,"DIA_Silas_Hehler_15_00");	//Как живешь?
-	AI_Output(self,other,"DIA_Silas_Hehler_06_01");	//Здорово! Мы продаем здесь рисовый шнапс и получаем взамен руду.
-	AI_Output(self,other,"DIA_Silas_Hehler_06_02");	//Это прибыльное дело. Да и на что здесь еще тратить руду, кроме выпивки?
+	AI_Output(other,self,"DIA_Silas_Hehler_15_00");	//РљР°Рє Р¶РёРІРµС€СЊ?
+	AI_Output(self,other,"DIA_Silas_Hehler_06_01");	//Р—РґРѕСЂРѕРІРѕ! РњС‹ РїСЂРѕРґР°РµРј Р·РґРµСЃСЊ СЂРёСЃРѕРІС‹Р№ С€РЅР°РїСЃ Рё РїРѕР»СѓС‡Р°РµРј РІР·Р°РјРµРЅ СЂСѓРґСѓ.
+	AI_Output(self,other,"DIA_Silas_Hehler_06_02");	//Р­С‚Рѕ РїСЂРёР±С‹Р»СЊРЅРѕРµ РґРµР»Рѕ. Р”Р° Рё РЅР° С‡С‚Рѕ Р·РґРµСЃСЊ РµС‰Рµ С‚СЂР°С‚РёС‚СЊ СЂСѓРґСѓ, РєСЂРѕРјРµ РІС‹РїРёРІРєРё?
 	Log_CreateTopic(GE_TraderNC,LOG_NOTE);
-	B_LogEntry(GE_TraderNC,"Силас продает еду и выпивку в баре на озере.");
+	B_LogEntry(GE_TraderNC,"РЎРёР»Р°СЃ РїСЂРѕРґР°РµС‚ РµРґСѓ Рё РІС‹РїРёРІРєСѓ РІ Р±Р°СЂРµ РЅР° РѕР·РµСЂРµ.");
 };
 
 
@@ -54,7 +54,7 @@ instance DIA_Silas_Trade(C_Info)
 	condition = DIA_Silas_Trade_Condition;
 	information = DIA_Silas_Trade_Info;
 	permanent = 1;
-	description = "Я хочу выпить.";
+	description = "РЇ С…РѕС‡Сѓ РІС‹РїРёС‚СЊ.";
 	trade = 1;
 };
 
@@ -66,7 +66,7 @@ func int DIA_Silas_Trade_Condition()
 
 func void DIA_Silas_Trade_Info()
 {
-	AI_Output(other,self,"DIA_Silas_Trade_15_00");	//Я хочу выпить.
-	AI_Output(self,other,"DIA_Silas_Trade_06_01");	//Заплати и пей на здоровье.
+	AI_Output(other,self,"DIA_Silas_Trade_15_00");	//РЇ С…РѕС‡Сѓ РІС‹РїРёС‚СЊ.
+	AI_Output(self,other,"DIA_Silas_Trade_06_01");	//Р—Р°РїР»Р°С‚Рё Рё РїРµР№ РЅР° Р·РґРѕСЂРѕРІСЊРµ.
 };
 

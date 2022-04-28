@@ -1,7 +1,7 @@
 
 instance STT_300_Alberto(Npc_Default)
 {
-	name[0] = "Альберто";
+	name[0] = "РђР»СЊР±РµСЂС‚Рѕ";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 13;

@@ -12,7 +12,7 @@ func void PC_Sleep(var int t)
 		t = t + 24;
 		Wld_SetTime(t,0);
 	};
-	PrintScreen("Ты хорошо выспался!",-1,-1,"font_old_20_white.tga",3);
+	PrintScreen("РўС‹ С…РѕСЂРѕС€Рѕ РІС‹СЃРїР°Р»СЃСЏ!",-1,-1,"font_old_20_white.tga",3);
 	hero.attribute[ATR_HITPOINTS] = hero.attribute[ATR_HITPOINTS_MAX];
 	hero.attribute[ATR_MANA] = hero.attribute[ATR_MANA_MAX];
 	PrintGlobals(PD_ITEM_MOBSI);
@@ -57,7 +57,7 @@ func void sleepabit_s1()
 		self.aivar[AIV_INVINCIBLE] = TRUE;
 		if(Npc_RefuseTalk(self) == TRUE)
 		{
-			PrintScreen("Сейчас здесь нельзя спать...",-1,-1,"font_old_20_white.tga",3);
+			PrintScreen("РЎРµР№С‡Р°СЃ Р·РґРµСЃСЊ РЅРµР»СЊР·СЏ СЃРїР°С‚СЊ...",-1,-1,"font_old_20_white.tga",3);
 			self.aivar[AIV_INVINCIBLE] = FALSE;
 		};
 		AI_ProcessInfos(her);
@@ -96,11 +96,12 @@ func void PC_NoSleep_Info()
 instance PC_SleepTime_Morning(C_Info)
 {
 	npc = PC_Hero;
+	nr = 4;
 	condition = PC_SleepTime_Morning_Condition;
 	information = PC_SleepTime_Morning_Info;
 	important = 0;
 	permanent = 1;
-	description = "Спать до утра.";
+	description = "РЎРїР°С‚СЊ РґРѕ СѓС‚СЂР°.";
 };
 
 
@@ -114,18 +115,44 @@ func int PC_SleepTime_Morning_Condition()
 
 func void PC_SleepTime_Morning_Info()
 {
-	PC_Sleep(8);
+	PC_Sleep(6);
+};
+
+instance PC_SleepTime_Day(C_Info)
+{
+	npc = PC_Hero;
+	nr = 5;
+	condition = PC_SleepTime_Day_Condition;
+	information = PC_SleepTime_Day_Info;
+	important = 0;
+	permanent = 1;
+	description = "РЎРїР°С‚СЊ РґРѕ РґРЅСЏ.";
+};
+
+
+func int PC_SleepTime_Day_Condition()
+{
+	if((Npc_RefuseTalk(self) == FALSE) && (PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT))
+	{
+		return 1;
+	};
+};
+
+func void PC_SleepTime_Day_Info()
+{
+	PC_Sleep(9);
 };
 
 
 instance PC_SleepTime_Noon(C_Info)
 {
 	npc = PC_Hero;
+	nr = 6;
 	condition = PC_SleepTime_Noon_Condition;
 	information = PC_SleepTime_Noon_Info;
 	important = 0;
 	permanent = 1;
-	description = "Спать до полудня.";
+	description = "РЎРїР°С‚СЊ РґРѕ РїРѕР»СѓРґРЅСЏ.";
 };
 
 
@@ -146,11 +173,12 @@ func void PC_SleepTime_Noon_Info()
 instance PC_SleepTime_Evening(C_Info)
 {
 	npc = PC_Hero;
+	nr = 7;
 	condition = PC_SleepTime_Evening_Condition;
 	information = PC_SleepTime_Evening_Info;
 	important = 0;
 	permanent = 1;
-	description = "Спать до вечера.";
+	description = "РЎРїР°С‚СЊ РґРѕ РІРµС‡РµСЂР°.";
 };
 
 
@@ -164,18 +192,69 @@ func int PC_SleepTime_Evening_Condition()
 
 func void PC_SleepTime_Evening_Info()
 {
-	PC_Sleep(19);
+	PC_Sleep(18);
+};
+
+instance PC_SleepTime_Twilight(C_Info)
+{
+	npc = PC_Hero;
+	nr = 8;
+	condition = PC_SleepTime_Twilight_Condition;
+	information = PC_SleepTime_Twilight_Info;
+	important = 0;
+	permanent = 1;
+	description = "РЎРїР°С‚СЊ РґРѕ СЃСѓРјРµСЂРµРє.";
+};
+
+
+func int PC_SleepTime_Twilight_Condition()
+{
+	if((Npc_RefuseTalk(self) == FALSE) && (PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT))
+	{
+		return 1;
+	};
+};
+
+func void PC_SleepTime_Twilight_Info()
+{
+	PC_Sleep(18);
+};
+
+instance PC_SleepTime_Night(C_Info)
+{
+	npc = PC_Hero;
+	nr = 9;
+	condition = PC_SleepTime_Night_Condition;
+	information = PC_SleepTime_Night_Info;
+	important = 0;
+	permanent = 1;
+	description = "РЎРїР°С‚СЊ РґРѕ РЅРѕС‡Рё.";
+};
+
+
+func int PC_SleepTime_Night_Condition()
+{
+	if((Npc_RefuseTalk(self) == FALSE) && (PLAYER_MOBSI_PRODUCTION == MOBSI_SLEEPABIT))
+	{
+		return 1;
+	};
+};
+
+func void PC_SleepTime_Night_Info()
+{
+	PC_Sleep(21);
 };
 
 
 instance PC_SleepTime_Midnight(C_Info)
 {
 	npc = PC_Hero;
+	nr = 10;
 	condition = PC_SleepTime_Midnight_Condition;
 	information = PC_SleepTime_Midnight_Info;
 	important = 0;
 	permanent = 1;
-	description = "Спать до полуночи.";
+	description = "РЎРїР°С‚СЊ РґРѕ РїРѕР»СѓРЅРѕС‡Рё.";
 };
 
 

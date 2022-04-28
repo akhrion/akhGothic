@@ -1,7 +1,7 @@
 
 instance GRD_282_Nek(Npc_Default)
 {
-	name[0] = "Убитый стражник";
+	name[0] = "РЈР±РёС‚С‹Р№ СЃС‚СЂР°Р¶РЅРёРє";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 10;

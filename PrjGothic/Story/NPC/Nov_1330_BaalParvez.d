@@ -1,7 +1,7 @@
 
 instance Nov_1330_BaalParvez(Npc_Default)
 {
-	name[0] = "Идол Парвез";
+	name[0] = "РРґРѕР» РџР°СЂРІРµР·";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 18;

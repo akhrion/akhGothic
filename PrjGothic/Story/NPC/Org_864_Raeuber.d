@@ -70,15 +70,15 @@ func int org_864_raeuber_alert_condition()
 
 func void org_864_raeuber_alert_info()
 {
-	AI_Output(self,hero,"SVM_14_YouViolatedForbiddenTerritory");	//Как ты здесь оказался?
-	AI_Output(self,hero,"SVM_14_IntruderAlert");	//Чужой!
+	AI_Output(self,hero,"SVM_14_YouViolatedForbiddenTerritory");	//РљР°Рє С‚С‹ Р·РґРµСЃСЊ РѕРєР°Р·Р°Р»СЃСЏ?
+	AI_Output(self,hero,"SVM_14_IntruderAlert");	//Р§СѓР¶РѕР№!
 	b_setorg2hostile();
 	AI_StopProcessInfos(self);
 	if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 	{
 		QUENTIN_GANG_QUEST_STARTED = LOG_FAILED;
 		Log_SetTopicStatus(QUENTIN_GANG,LOG_FAILED);
-		B_LogEntry(QUENTIN_GANG,"Я нашел лагерь грабителей Квентина, которые скрывались в горах. Все пошло не совсем так, как я планировал: они сразу набросились на меня.");
+		B_LogEntry(QUENTIN_GANG,"РЇ РЅР°С€РµР» Р»Р°РіРµСЂСЊ РіСЂР°Р±РёС‚РµР»РµР№ РљРІРµРЅС‚РёРЅР°, РєРѕС‚РѕСЂС‹Рµ СЃРєСЂС‹РІР°Р»РёСЃСЊ РІ РіРѕСЂР°С…. Р’СЃРµ РїРѕС€Р»Рѕ РЅРµ СЃРѕРІСЃРµРј С‚Р°Рє, РєР°Рє СЏ РїР»Р°РЅРёСЂРѕРІР°Р»: РѕРЅРё СЃСЂР°Р·Сѓ РЅР°Р±СЂРѕСЃРёР»РёСЃСЊ РЅР° РјРµРЅСЏ.");
 	};
 };
 

@@ -19,10 +19,10 @@ func void Info_HighPriest3_Info()
 	B_SelectWeapon(self,other);
 	AI_SetWalkMode(self,NPC_WALK);
 	AI_GotoNpc(self,other);
-	AI_Output(self,other,"Info_HighPriest3_17_01");	//СМЕРТНЫЙ!
-	AI_Output(self,other,"Info_HighPriest3_17_02");	//ЗДЕСЬ ТВОЙ ЗЕМНОЙ ПУТЬ ЗАВЕРШИТСЯ!
-	AI_Output(other,self,"Info_HighPriest3_15_03");	//Сначала я тебя отправлю в путешествие, чудовище!
-	B_LogEntry(CH4_EnterTemple,"Передо мной Варраг-Унхилькт, один из пяти орков-шаманов, служителей Спящего. Живым останется только один из нас!");
+	AI_Output(self,other,"Info_HighPriest3_17_01");	//РЎРњР•Р РўРќР«Р™!
+	AI_Output(self,other,"Info_HighPriest3_17_02");	//Р—Р”Р•РЎР¬ РўР’РћР™ Р—Р•РњРќРћР™ РџРЈРўР¬ Р—РђР’Р•Р РЁРРўРЎРЇ!
+	AI_Output(other,self,"Info_HighPriest3_15_03");	//РЎРЅР°С‡Р°Р»Р° СЏ С‚РµР±СЏ РѕС‚РїСЂР°РІР»СЋ РІ РїСѓС‚РµС€РµСЃС‚РІРёРµ, С‡СѓРґРѕРІРёС‰Рµ!
+	B_LogEntry(CH4_EnterTemple,"РџРµСЂРµРґРѕ РјРЅРѕР№ Р’Р°СЂСЂР°Рі-РЈРЅС…РёР»СЊРєС‚, РѕРґРёРЅ РёР· РїСЏС‚Рё РѕСЂРєРѕРІ-С€Р°РјР°РЅРѕРІ, СЃР»СѓР¶РёС‚РµР»РµР№ РЎРїСЏС‰РµРіРѕ. Р–РёРІС‹Рј РѕСЃС‚Р°РЅРµС‚СЃСЏ С‚РѕР»СЊРєРѕ РѕРґРёРЅ РёР· РЅР°СЃ!");
 	AI_StopProcessInfos(self);
 	Npc_SetAttitude(self,ATT_HOSTILE);
 	Npc_SetTempAttitude(self,ATT_HOSTILE);

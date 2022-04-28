@@ -1,7 +1,7 @@
 
 instance CS_Richter(Npc_Default)
 {
-	name[0] = "ั๓ไüÿ";
+	name[0] = "ะกัะดัั";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 5;

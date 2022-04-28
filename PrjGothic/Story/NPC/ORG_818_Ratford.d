@@ -1,7 +1,7 @@
 
 instance ORG_818_Ratford(Npc_Default)
 {
-	name[0] = "ะๅ๒๔๎๐ไ";
+	name[0] = "ะ ะตััะพั€ะด";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 9;

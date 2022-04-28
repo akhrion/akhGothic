@@ -1,7 +1,7 @@
 
 instance STT_328_Schatten(Npc_Default)
 {
-	name[0] = "Сэм";
+	name[0] = "РЎСЌРј";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 5;
@@ -53,7 +53,7 @@ func void rtn_noarena_328()
 
 func void info_sam_back()
 {
-	AI_Output(other,self,"GRD_219_Stone_BETTERARMOR_Info_BACK_15_01");	//Я передумал.
+	AI_Output(other,self,"GRD_219_Stone_BETTERARMOR_Info_BACK_15_01");	//РЇ РїРµСЂРµРґСѓРјР°Р».
 	Info_ClearChoices(DIA_Scatty_WannaBet);
 };
 
@@ -65,7 +65,7 @@ instance DIA_Scatty_WannaBet(C_Info)
 	condition = DIA_Scatty_WannaBet_Condition;
 	information = DIA_Scatty_WannaBet_Info;
 	permanent = 1;
-	description = "Я хочу сделать ставку.";
+	description = "РЇ С…РѕС‡Сѓ СЃРґРµР»Р°С‚СЊ СЃС‚Р°РІРєСѓ.";
 };
 
 
@@ -79,10 +79,10 @@ func int DIA_Scatty_WannaBet_Condition()
 
 func void DIA_Scatty_WannaBet_Info()
 {
-	AI_Output(other,self,"DIA_Scatty_WannaBet_15_00");	//Я хочу сделать ставку.
+	AI_Output(other,self,"DIA_Scatty_WannaBet_15_00");	//РЇ С…РѕС‡Сѓ СЃРґРµР»Р°С‚СЊ СЃС‚Р°РІРєСѓ.
 	if(ARENA_BET_DAY == Wld_GetDay())
 	{
-		AI_Output(self,other,"DIA_Sam_15");	//Приходи завтра вечером.
+		AI_Output(self,other,"DIA_Sam_15");	//РџСЂРёС…РѕРґРё Р·Р°РІС‚СЂР° РІРµС‡РµСЂРѕРј.
 		AI_StopProcessInfos(self);
 	}
 	else if(Wld_IsTime(19,10,22,52))
@@ -91,34 +91,34 @@ func void DIA_Scatty_WannaBet_Info()
 		Info_AddChoice(DIA_Scatty_WannaBet,DIALOG_BACK,info_sam_back);
 		if(Wld_IsTime(19,10,20,13))
 		{
-			AI_Output(self,other,"DIA_Sam_11");	//Но не более одной ставки за вечер.
-			Info_AddChoice(DIA_Scatty_WannaBet,"Кирго (ставка: 50, выигрыш: 100).",dia_scatty_arenabet_kirgo);
-			Info_AddChoice(DIA_Scatty_WannaBet,"Карим (ставка: 30, выигрыш: 30).",dia_scatty_arenabet_kharim);
+			AI_Output(self,other,"DIA_Sam_11");	//РќРѕ РЅРµ Р±РѕР»РµРµ РѕРґРЅРѕР№ СЃС‚Р°РІРєРё Р·Р° РІРµС‡РµСЂ.
+			Info_AddChoice(DIA_Scatty_WannaBet,"РљРёСЂРіРѕ (СЃС‚Р°РІРєР°: 50, РІС‹РёРіСЂС‹С€: 100).",dia_scatty_arenabet_kirgo);
+			Info_AddChoice(DIA_Scatty_WannaBet,"РљР°СЂРёРј (СЃС‚Р°РІРєР°: 30, РІС‹РёРіСЂС‹С€: 30).",dia_scatty_arenabet_kharim);
 		}
 		else if(Wld_IsTime(20,20,21,35))
 		{
-			AI_Output(self,other,"DIA_Sam_11");	//Но не более одной ставки за вечер.
-			Info_AddChoice(DIA_Scatty_WannaBet,"Кирго (ставка: 50, выигрыш: 100).",dia_scatty_arenabet_kirgo);
-			Info_AddChoice(DIA_Scatty_WannaBet,"Гор Ханис (ставка: 15, выигрыш: 10).",dia_scatty_arenabet_gorhanis);
+			AI_Output(self,other,"DIA_Sam_11");	//РќРѕ РЅРµ Р±РѕР»РµРµ РѕРґРЅРѕР№ СЃС‚Р°РІРєРё Р·Р° РІРµС‡РµСЂ.
+			Info_AddChoice(DIA_Scatty_WannaBet,"РљРёСЂРіРѕ (СЃС‚Р°РІРєР°: 50, РІС‹РёРіСЂС‹С€: 100).",dia_scatty_arenabet_kirgo);
+			Info_AddChoice(DIA_Scatty_WannaBet,"Р“РѕСЂ РҐР°РЅРёСЃ (СЃС‚Р°РІРєР°: 15, РІС‹РёРіСЂС‹С€: 10).",dia_scatty_arenabet_gorhanis);
 		}
 		else if(Wld_IsTime(21,40,22,52))
 		{
-			AI_Output(self,other,"DIA_Sam_11");	//Но не более одной ставки за вечер.
-			Info_AddChoice(DIA_Scatty_WannaBet,"Карим (ставка: 30, выигрыш: 30).",dia_scatty_arenabet_kharim);
-			Info_AddChoice(DIA_Scatty_WannaBet,"Гор Ханис (ставка: 15, выигрыш: 10).",dia_scatty_arenabet_gorhanis);
+			AI_Output(self,other,"DIA_Sam_11");	//РќРѕ РЅРµ Р±РѕР»РµРµ РѕРґРЅРѕР№ СЃС‚Р°РІРєРё Р·Р° РІРµС‡РµСЂ.
+			Info_AddChoice(DIA_Scatty_WannaBet,"РљР°СЂРёРј (СЃС‚Р°РІРєР°: 30, РІС‹РёРіСЂС‹С€: 30).",dia_scatty_arenabet_kharim);
+			Info_AddChoice(DIA_Scatty_WannaBet,"Р“РѕСЂ РҐР°РЅРёСЃ (СЃС‚Р°РІРєР°: 15, РІС‹РёРіСЂС‹С€: 10).",dia_scatty_arenabet_gorhanis);
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Sam_05");	//Приходи вечером, когда все соберутся.
+			AI_Output(self,other,"DIA_Sam_05");	//РџСЂРёС…РѕРґРё РІРµС‡РµСЂРѕРј, РєРѕРіРґР° РІСЃРµ СЃРѕР±РµСЂСѓС‚СЃСЏ.
 		};
 	}
 	else if(Wld_IsTime(22,52,23,59))
 	{
-		AI_Output(self,other,"DIA_Sam_06");	//Сегодняшний бой уже закончился. Приходи завтра вечером.
+		AI_Output(self,other,"DIA_Sam_06");	//РЎРµРіРѕРґРЅСЏС€РЅРёР№ Р±РѕР№ СѓР¶Рµ Р·Р°РєРѕРЅС‡РёР»СЃСЏ. РџСЂРёС…РѕРґРё Р·Р°РІС‚СЂР° РІРµС‡РµСЂРѕРј.
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sam_05");	//Приходи вечером, когда все соберутся.
+		AI_Output(self,other,"DIA_Sam_05");	//РџСЂРёС…РѕРґРё РІРµС‡РµСЂРѕРј, РєРѕРіРґР° РІСЃРµ СЃРѕР±РµСЂСѓС‚СЃСЏ.
 	};
 };
 
@@ -127,12 +127,12 @@ func void dia_scatty_arenabet_kirgo()
 	var C_Npc Kirgo;
 	var C_Npc Kharim;
 	var C_Npc GorHanis;
-	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Ладно, вот тебе руда!
+	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!
 	if(Npc_HasItems(other,ItMiNugget) >= 50)
 	{
-		b_printtrademsg1("Отдано руды: 50");
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 50");
 		Npc_RemoveInvItems(hero,ItMiNugget,50);
-		AI_Output(self,other,"DIA_Sam_10");	//Так, а теперь посмотрим, кто кого!
+		AI_Output(self,other,"DIA_Sam_10");	//РўР°Рє, Р° С‚РµРїРµСЂСЊ РїРѕСЃРјРѕС‚СЂРёРј, РєС‚Рѕ РєРѕРіРѕ!
 		AI_TurnToNPC(self,GRD_251_Kirgo);
 		B_ClearImmortal(GRD_251_Kirgo);
 		B_ClearImmortal(Sld_729_Kharim);
@@ -152,7 +152,7 @@ func void dia_scatty_arenabet_kirgo()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sam_09");	//У тебя же нет столько!
+		AI_Output(self,other,"DIA_Sam_09");	//РЈ С‚РµР±СЏ Р¶Рµ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ!
 	};
 	Info_ClearChoices(DIA_Scatty_WannaBet);
 };
@@ -162,12 +162,12 @@ func void dia_scatty_arenabet_kharim()
 	var C_Npc Kirgo;
 	var C_Npc Kharim;
 	var C_Npc GorHanis;
-	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_30_15_01");	//Предлагаю 30 кусков.
+	AI_Output(other,self,"VLK_585_Aleph_SCHUPPEN_30_15_01");	//РџСЂРµРґР»Р°РіР°СЋ 30 РєСѓСЃРєРѕРІ.
 	if(Npc_HasItems(other,ItMiNugget) >= 30)
 	{
-		b_printtrademsg1("Отдано руды: 30");
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 30");
 		Npc_RemoveInvItems(hero,ItMiNugget,30);
-		AI_Output(self,other,"DIA_Sam_10");	//Так, а теперь посмотрим, кто кого!
+		AI_Output(self,other,"DIA_Sam_10");	//РўР°Рє, Р° С‚РµРїРµСЂСЊ РїРѕСЃРјРѕС‚СЂРёРј, РєС‚Рѕ РєРѕРіРѕ!
 		AI_TurnToNPC(self,Sld_729_Kharim);
 		B_ClearImmortal(GRD_251_Kirgo);
 		B_ClearImmortal(Sld_729_Kharim);
@@ -187,7 +187,7 @@ func void dia_scatty_arenabet_kharim()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sam_09");	//У тебя же нет столько!
+		AI_Output(self,other,"DIA_Sam_09");	//РЈ С‚РµР±СЏ Р¶Рµ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ!
 	};
 	Info_ClearChoices(DIA_Scatty_WannaBet);
 };
@@ -197,12 +197,12 @@ func void dia_scatty_arenabet_gorhanis()
 	var C_Npc Kirgo;
 	var C_Npc Kharim;
 	var C_Npc GorHanis;
-	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Ладно, вот тебе руда!
+	AI_Output(other,self,"Info_Grd_237_FirstWarn_15_06");	//Р›Р°РґРЅРѕ, РІРѕС‚ С‚РµР±Рµ СЂСѓРґР°!
 	if(Npc_HasItems(other,ItMiNugget) >= 15)
 	{
-		b_printtrademsg1("Отдано руды: 15");
+		b_printtrademsg1("РћС‚РґР°РЅРѕ СЂСѓРґС‹: 15");
 		Npc_RemoveInvItems(hero,ItMiNugget,15);
-		AI_Output(self,other,"DIA_Sam_10");	//Так, а теперь посмотрим, кто кого!
+		AI_Output(self,other,"DIA_Sam_10");	//РўР°Рє, Р° С‚РµРїРµСЂСЊ РїРѕСЃРјРѕС‚СЂРёРј, РєС‚Рѕ РєРѕРіРѕ!
 		AI_TurnToNPC(self,Tpl_1422_GorHanis);
 		B_ClearImmortal(GRD_251_Kirgo);
 		B_ClearImmortal(Sld_729_Kharim);
@@ -222,7 +222,7 @@ func void dia_scatty_arenabet_gorhanis()
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sam_09");	//У тебя же нет столько!
+		AI_Output(self,other,"DIA_Sam_09");	//РЈ С‚РµР±СЏ Р¶Рµ РЅРµС‚ СЃС‚РѕР»СЊРєРѕ!
 	};
 	Info_ClearChoices(DIA_Scatty_WannaBet);
 };
@@ -256,39 +256,39 @@ func void dia_scatty_betresult_info()
 	{
 		if(ARENA_BET_KIRGO_WON == TRUE)
 		{
-			AI_Output(self,other,"DIA_Sam_08");	//Хороший бой. Поздравляю, держи свой выигрыш.
-			b_printtrademsg1("Получено руды: 150");
+			AI_Output(self,other,"DIA_Sam_08");	//РҐРѕСЂРѕС€РёР№ Р±РѕР№. РџРѕР·РґСЂР°РІР»СЏСЋ, РґРµСЂР¶Рё СЃРІРѕР№ РІС‹РёРіСЂС‹С€.
+			b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 150");
 			CreateInvItems(hero,ItMiNugget,150);
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Sam_07");	//Эх, не повезло! Ничего, попробуешь завтра...
+			AI_Output(self,other,"DIA_Sam_07");	//Р­С…, РЅРµ РїРѕРІРµР·Р»Рѕ! РќРёС‡РµРіРѕ, РїРѕРїСЂРѕР±СѓРµС€СЊ Р·Р°РІС‚СЂР°...
 		};
 	};
 	if(ARENA_BET_KHARIM == TRUE)
 	{
 		if(ARENA_BET_KHARIM_WON == TRUE)
 		{
-			AI_Output(self,other,"DIA_Sam_08");	//Хороший бой. Поздравляю, держи свой выигрыш.
-			b_printtrademsg1("Получено руды: 60");
+			AI_Output(self,other,"DIA_Sam_08");	//РҐРѕСЂРѕС€РёР№ Р±РѕР№. РџРѕР·РґСЂР°РІР»СЏСЋ, РґРµСЂР¶Рё СЃРІРѕР№ РІС‹РёРіСЂС‹С€.
+			b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 60");
 			CreateInvItems(hero,ItMiNugget,60);
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Sam_07");	//Эх, не повезло! Ничего, попробуешь завтра...
+			AI_Output(self,other,"DIA_Sam_07");	//Р­С…, РЅРµ РїРѕРІРµР·Р»Рѕ! РќРёС‡РµРіРѕ, РїРѕРїСЂРѕР±СѓРµС€СЊ Р·Р°РІС‚СЂР°...
 		};
 	};
 	if(ARENA_BET_GORHANIS == TRUE)
 	{
 		if(ARENA_BET_GORHANIS_WON == TRUE)
 		{
-			AI_Output(self,other,"DIA_Sam_08");	//Хороший бой. Поздравляю, держи свой выигрыш.
-			b_printtrademsg1("Получено руды: 25");
+			AI_Output(self,other,"DIA_Sam_08");	//РҐРѕСЂРѕС€РёР№ Р±РѕР№. РџРѕР·РґСЂР°РІР»СЏСЋ, РґРµСЂР¶Рё СЃРІРѕР№ РІС‹РёРіСЂС‹С€.
+			b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 25");
 			CreateInvItems(hero,ItMiNugget,25);
 		}
 		else
 		{
-			AI_Output(self,other,"DIA_Sam_07");	//Эх, не повезло! Ничего, попробуешь завтра...
+			AI_Output(self,other,"DIA_Sam_07");	//Р­С…, РЅРµ РїРѕРІРµР·Р»Рѕ! РќРёС‡РµРіРѕ, РїРѕРїСЂРѕР±СѓРµС€СЊ Р·Р°РІС‚СЂР°...
 		};
 	};
 	ARENA_BET_KIRGO = FALSE;
@@ -354,18 +354,18 @@ func void dia_sam_hi_info()
 {
 	if(Npc_KnowsInfo(hero,Info_Kirgo_InArena) || Npc_KnowsInfo(hero,Info_Kharim_InArena) || Npc_KnowsInfo(hero,info_gorhanis_inarena))
 	{
-		AI_Output(self,other,"DIA_Sam_02");	//Привет! Видел тебя в бою - неплохие движения!
+		AI_Output(self,other,"DIA_Sam_02");	//РџСЂРёРІРµС‚! Р’РёРґРµР» С‚РµР±СЏ РІ Р±РѕСЋ - РЅРµРїР»РѕС…РёРµ РґРІРёР¶РµРЅРёСЏ!
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Sam_01");	//Погоди! Я тебя здесь раньше не видел.
+		AI_Output(self,other,"DIA_Sam_01");	//РџРѕРіРѕРґРё! РЇ С‚РµР±СЏ Р·РґРµСЃСЊ СЂР°РЅСЊС€Рµ РЅРµ РІРёРґРµР».
 	};
-	AI_Output(self,other,"DIA_Sam_03");	//Меня зовут Сэм. Я организую ставки.
-	AI_Output(self,other,"DIA_Sam_04");	//Каждый вечер на арене устраиваются бои, а рудокопы и Призраки ставят руду на любимых бойцов. Хочешь поучаствовать?
-	AI_Output(other,self,"DIA_SLD_753_Baloro_Worumgehts_ja_15_05");	//А что для этого нужно сделать?
-	AI_Output(self,other,"DIA_Sam_12");	//Приходи вечером, когда все соберутся. Дождешься выхода своего бойца и обратишься ко мне.
-	AI_Output(self,other,"DIA_Sam_13");	//Я возьму твою руду и выплачу выигрыш, если твой боец останется стоять на ногах, хехе.
-	AI_Output(self,other,"DIA_Sam_14");	//Но не более одной ставки за вечер! А то были тут у нас случаи...
+	AI_Output(self,other,"DIA_Sam_03");	//РњРµРЅСЏ Р·РѕРІСѓС‚ РЎСЌРј. РЇ РѕСЂРіР°РЅРёР·СѓСЋ СЃС‚Р°РІРєРё.
+	AI_Output(self,other,"DIA_Sam_04");	//РљР°Р¶РґС‹Р№ РІРµС‡РµСЂ РЅР° Р°СЂРµРЅРµ СѓСЃС‚СЂР°РёРІР°СЋС‚СЃСЏ Р±РѕРё, Р° СЂСѓРґРѕРєРѕРїС‹ Рё РџСЂРёР·СЂР°РєРё СЃС‚Р°РІСЏС‚ СЂСѓРґСѓ РЅР° Р»СЋР±РёРјС‹С… Р±РѕР№С†РѕРІ. РҐРѕС‡РµС€СЊ РїРѕСѓС‡Р°СЃС‚РІРѕРІР°С‚СЊ?
+	AI_Output(other,self,"DIA_SLD_753_Baloro_Worumgehts_ja_15_05");	//Рђ С‡С‚Рѕ РґР»СЏ СЌС‚РѕРіРѕ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ?
+	AI_Output(self,other,"DIA_Sam_12");	//РџСЂРёС…РѕРґРё РІРµС‡РµСЂРѕРј, РєРѕРіРґР° РІСЃРµ СЃРѕР±РµСЂСѓС‚СЃСЏ. Р”РѕР¶РґРµС€СЊСЃСЏ РІС‹С…РѕРґР° СЃРІРѕРµРіРѕ Р±РѕР№С†Р° Рё РѕР±СЂР°С‚РёС€СЊСЃСЏ РєРѕ РјРЅРµ.
+	AI_Output(self,other,"DIA_Sam_13");	//РЇ РІРѕР·СЊРјСѓ С‚РІРѕСЋ СЂСѓРґСѓ Рё РІС‹РїР»Р°С‡Сѓ РІС‹РёРіСЂС‹С€, РµСЃР»Рё С‚РІРѕР№ Р±РѕРµС† РѕСЃС‚Р°РЅРµС‚СЃСЏ СЃС‚РѕСЏС‚СЊ РЅР° РЅРѕРіР°С…, С…РµС…Рµ.
+	AI_Output(self,other,"DIA_Sam_14");	//РќРѕ РЅРµ Р±РѕР»РµРµ РѕРґРЅРѕР№ СЃС‚Р°РІРєРё Р·Р° РІРµС‡РµСЂ! Рђ С‚Рѕ Р±С‹Р»Рё С‚СѓС‚ Сѓ РЅР°СЃ СЃР»СѓС‡Р°Рё...
 	Npc_ExchangeRoutine(self,"START");
 	ARENA_BET_DAY = Wld_GetDay() - 1;
 };
@@ -395,7 +395,7 @@ func void dia_sam_wtf_info()
 	var C_Npc Kirgo;
 	var C_Npc Kharim;
 	var C_Npc GorHanis;
-	AI_Output(self,other,"DIA_Sam_16");	//Что же ты не дождался конца боя? Даже не думай, что я верну твою ставку!
+	AI_Output(self,other,"DIA_Sam_16");	//Р§С‚Рѕ Р¶Рµ С‚С‹ РЅРµ РґРѕР¶РґР°Р»СЃСЏ РєРѕРЅС†Р° Р±РѕСЏ? Р”Р°Р¶Рµ РЅРµ РґСѓРјР°Р№, С‡С‚Рѕ СЏ РІРµСЂРЅСѓ С‚РІРѕСЋ СЃС‚Р°РІРєСѓ!
 	ARENA_BET_KIRGO = FALSE;
 	ARENA_BET_KHARIM = FALSE;
 	ARENA_BET_GORHANIS = FALSE;

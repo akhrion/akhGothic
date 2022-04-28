@@ -1,7 +1,7 @@
 
 instance KDF_406_OTXardas(Npc_Default)
 {
-	name[0] = "Ксардас";
+	name[0] = "РљСЃР°СЂРґР°СЃ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 50;

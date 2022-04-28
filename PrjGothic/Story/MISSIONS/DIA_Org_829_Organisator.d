@@ -28,7 +28,7 @@ instance Info_ORG_829_Hello(C_Info)
 	condition = Info_ORG_829_Hello_Condition;
 	information = Info_ORG_829_Hello_Info;
 	permanent = 0;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -42,8 +42,8 @@ func int Info_ORG_829_Hello_Condition()
 
 func void Info_ORG_829_Hello_Info()
 {
-	AI_Output(other,self,"Info_ORG_829_Hello_15_00");	//Как дела?
-	AI_Output(self,other,"Info_ORG_829_Hello_06_01");	//Так себе. У меня закончилось курево.
+	AI_Output(other,self,"Info_ORG_829_Hello_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"Info_ORG_829_Hello_06_01");	//РўР°Рє СЃРµР±Рµ. РЈ РјРµРЅСЏ Р·Р°РєРѕРЅС‡РёР»РѕСЃСЊ РєСѓСЂРµРІРѕ.
 };
 
 
@@ -56,7 +56,7 @@ instance Info_ORG_829_OfferJoint(C_Info)
 	condition = Info_ORG_829_OfferJoint_Condition;
 	information = Info_ORG_829_OfferJoint_Info;
 	permanent = 1;
-	description = "У меня есть болотник. Будешь?";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ Р±РѕР»РѕС‚РЅРёРє. Р‘СѓРґРµС€СЊ?";
 };
 
 
@@ -70,37 +70,37 @@ func int Info_ORG_829_OfferJoint_Condition()
 
 func void Info_ORG_829_OfferJoint_Info()
 {
-	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00");	//У меня есть болотник. Будешь?
+	AI_Output(other,self,"Info_ORG_829_OfferJoint_15_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ Р±РѕР»РѕС‚РЅРёРє. Р‘СѓРґРµС€СЊ?
 	if((Npc_HasItems(other,ItMiJoint_1) > 0) || (Npc_HasItems(other,ItMiJoint_2) > 0) || (Npc_HasItems(other,ItMiJoint_3) > 0))
 	{
 		if(Npc_HasItems(other,ItMiJoint_1))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_1,1);
-			b_printtrademsg1("Отдан 'Новичок'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РќРѕРІРёС‡РѕРє'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_2))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_2,1);
-			b_printtrademsg1("Отдан 'Северный темный'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'РЎРµРІРµСЂРЅС‹Р№ С‚РµРјРЅС‹Р№'.");
 		}
 		else if(Npc_HasItems(other,ItMiJoint_3))
 		{
 			B_GiveInvItems(other,self,ItMiJoint_3,1);
-			b_printtrademsg1("Отдан 'Зов мечты'.");
+			b_printtrademsg1("РћС‚РґР°РЅ 'Р—РѕРІ РјРµС‡С‚С‹'.");
 		};
-		AI_Output(self,other,"Info_ORG_829_OfferJoint_06_01");	//Еще бы! Ты ведь из Лагеря сектантов, да?
+		AI_Output(self,other,"Info_ORG_829_OfferJoint_06_01");	//Р•С‰Рµ Р±С‹! РўС‹ РІРµРґСЊ РёР· Р›Р°РіРµСЂСЏ СЃРµРєС‚Р°РЅС‚РѕРІ, РґР°?
 		if((other.guild == GIL_NOV) || (other.guild == GIL_TPL))
 		{
-			AI_Output(other,self,"Info_Swiney_Schuerfer_Ja_15_00");	//Да.
+			AI_Output(other,self,"Info_Swiney_Schuerfer_Ja_15_00");	//Р”Р°.
 		}
 		else
 		{
-			AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_05");	//Нет...
+			AI_Output(other,self,"KDW_600_Saturas_TIMESUP_Info_15_05");	//РќРµС‚...
 		};
 		if((BaalKagan_VerteilKraut == LOG_RUNNING) || (BaalKagan_VerteilKraut == LOG_SUCCESS))
 		{
 			NC_Joints_verteilt = NC_Joints_verteilt + 1;
-			b_printtrademsg2("Получено руды: 10");
+			b_printtrademsg2("РџРѕР»СѓС‡РµРЅРѕ СЂСѓРґС‹: 10");
 			CreateInvItems(self,ItMiNugget,10);
 			B_GiveInvItems(self,other,ItMiNugget,10);
 		};
@@ -108,7 +108,7 @@ func void Info_ORG_829_OfferJoint_Info()
 	}
 	else
 	{
-		AI_Output(self,other,"Info_ORG_829_OfferJoint_No_Joint_06_00");	//Эй! Ты обмануть меня захотел, да? Мне это не нравится!
+		AI_Output(self,other,"Info_ORG_829_OfferJoint_No_Joint_06_00");	//Р­Р№! РўС‹ РѕР±РјР°РЅСѓС‚СЊ РјРµРЅСЏ Р·Р°С…РѕС‚РµР», РґР°? РњРЅРµ СЌС‚Рѕ РЅРµ РЅСЂР°РІРёС‚СЃСЏ!
 	};
 };
 
@@ -120,7 +120,7 @@ instance Info_ORG_829_SpecialInfo(C_Info)
 	condition = Info_ORG_829_SpecialInfo_Condition;
 	information = Info_ORG_829_SpecialInfo_Info;
 	permanent = 0;
-	description = "Я здесь недавно. Можешь мне что-нибудь посоветовать?";
+	description = "РЇ Р·РґРµСЃСЊ РЅРµРґР°РІРЅРѕ. РњРѕР¶РµС€СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїРѕСЃРѕРІРµС‚РѕРІР°С‚СЊ?";
 };
 
 
@@ -134,10 +134,10 @@ func int Info_ORG_829_SpecialInfo_Condition()
 
 func void Info_ORG_829_SpecialInfo_Info()
 {
-	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_00");	//Я здесь недавно. Можешь мне что-нибудь посоветовать?
-	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_01");	//Конечно! Когда придешь в лагерь, поговори с Горном. Он один из наемников, охраняет магов, но с ним можно иметь дело. Он был один из нас.
-	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_02");	//Один из вас?
-	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03");	//Ну, из воров, знаешь? Таких, которым даже Бароны нипочем. Вот так.
+	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_00");	//РЇ Р·РґРµСЃСЊ РЅРµРґР°РІРЅРѕ. РњРѕР¶РµС€СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїРѕСЃРѕРІРµС‚РѕРІР°С‚СЊ?
+	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_01");	//РљРѕРЅРµС‡РЅРѕ! РљРѕРіРґР° РїСЂРёРґРµС€СЊ РІ Р»Р°РіРµСЂСЊ, РїРѕРіРѕРІРѕСЂРё СЃ Р“РѕСЂРЅРѕРј. РћРЅ РѕРґРёРЅ РёР· РЅР°РµРјРЅРёРєРѕРІ, РѕС…СЂР°РЅСЏРµС‚ РјР°РіРѕРІ, РЅРѕ СЃ РЅРёРј РјРѕР¶РЅРѕ РёРјРµС‚СЊ РґРµР»Рѕ. РћРЅ Р±С‹Р» РѕРґРёРЅ РёР· РЅР°СЃ.
+	AI_Output(other,self,"Info_ORG_829_SpecialInfo_15_02");	//РћРґРёРЅ РёР· РІР°СЃ?
+	AI_Output(self,other,"Info_ORG_829_SpecialInfo_06_03");	//РќСѓ, РёР· РІРѕСЂРѕРІ, Р·РЅР°РµС€СЊ? РўР°РєРёС…, РєРѕС‚РѕСЂС‹Рј РґР°Р¶Рµ Р‘Р°СЂРѕРЅС‹ РЅРёРїРѕС‡РµРј. Р’РѕС‚ С‚Р°Рє.
 };
 
 
@@ -148,7 +148,7 @@ instance Info_ORG_829_PERM(C_Info)
 	condition = Info_ORG_829_PERM_Condition;
 	information = Info_ORG_829_PERM_Info;
 	permanent = 0;
-	description = "А ты можешь рассказать мне, что это за лагерь?";
+	description = "Рђ С‚С‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ, С‡С‚Рѕ СЌС‚Рѕ Р·Р° Р»Р°РіРµСЂСЊ?";
 };
 
 
@@ -162,7 +162,7 @@ func int Info_ORG_829_PERM_Condition()
 
 func void Info_ORG_829_PERM_Info()
 {
-	AI_Output(other,self,"Info_ORG_829_PERM_15_00");	//А ты можешь рассказать мне, что это за лагерь?
-	AI_Output(self,other,"Info_ORG_829_PERM_06_01");	//Просто пойди туда, и сам все увидишь.
+	AI_Output(other,self,"Info_ORG_829_PERM_15_00");	//Рђ С‚С‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ, С‡С‚Рѕ СЌС‚Рѕ Р·Р° Р»Р°РіРµСЂСЊ?
+	AI_Output(self,other,"Info_ORG_829_PERM_06_01");	//РџСЂРѕСЃС‚Рѕ РїРѕР№РґРё С‚СѓРґР°, Рё СЃР°Рј РІСЃРµ СѓРІРёРґРёС€СЊ.
 };
 

@@ -1,7 +1,7 @@
 
 instance ORG_888_Erpresser(Npc_Default)
 {
-	name[0] = "Разбойник";
+	name[0] = "Р Р°Р·Р±РѕР№РЅРёРє";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 15;

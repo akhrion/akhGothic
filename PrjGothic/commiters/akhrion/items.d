@@ -1,6 +1,6 @@
 instance ItMi_Potion_Quicksilver_01(C_Item)
 {
-	name = "Ртуть";
+	name = "Р С‚СѓС‚СЊ";
 	mainflag = ITEM_KAT_POTIONS;
 	flags = ITEM_MULTI;
 	value = Value_Quecksilber;
@@ -9,9 +9,9 @@ instance ItMi_Potion_Quicksilver_01(C_Item)
 	change_atr = ATR_HITPOINTS;
 	change_value = -40;
 	description = name;
-	text[0] = "Однажды я решился ее выпить, но некая тайная";
-	text[1] = " сила отворотила меня от этого.";
-	text[2] = "Быть может теперь..?";
+	text[0] = "РћРґРЅР°Р¶РґС‹ СЏ СЂРµС€РёР»СЃСЏ РµРµ РІС‹РїРёС‚СЊ, РЅРѕ РЅРµРєР°СЏ С‚Р°Р№РЅР°СЏ";
+	text[1] = " СЃРёР»Р° РѕС‚РІРѕСЂРѕС‚РёР»Р° РјРµРЅСЏ РѕС‚ СЌС‚РѕРіРѕ.";
+	text[2] = "Р‘С‹С‚СЊ РјРѕР¶РµС‚ С‚РµРїРµСЂСЊ..?";
 	text[5] = NAME_Value;
 	count[5] = value;
 	scemeName = "POTION";

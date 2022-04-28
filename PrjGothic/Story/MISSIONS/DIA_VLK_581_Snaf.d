@@ -28,7 +28,7 @@ instance DIA_Snaf_Hello(C_Info)
 	condition = DIA_Snaf_Hello_Condition;
 	information = DIA_Snaf_Hello_Info;
 	permanent = 0;
-	description = "Как у тебя дела?";
+	description = "РљР°Рє Сѓ С‚РµР±СЏ РґРµР»Р°?";
 };
 
 
@@ -39,12 +39,12 @@ func int DIA_Snaf_Hello_Condition()
 
 func void DIA_Snaf_Hello_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_Hello_15_00");	//Как у тебя дела?
-	AI_Output(self,other,"DIA_Snaf_Hello_01_01");	//Неплохо. Если умеешь хорошо готовить, друзья к тебе сами придут.
-	AI_Output(self,other,"DIA_Snaf_Hello_01_02");	//Хочешь попробовать тушеный рис? Вот возьми, и сам убедись, как это вкусно.
-	b_printtrademsg1("Получен рис.");
-	AI_Output(other,self,"DIA_Snaf_Hello_15_03");	//Спасибо.
-	AI_Output(self,other,"DIA_Snaf_Hello_01_04");	//А ты мог бы мне помочь.
+	AI_Output(other,self,"DIA_Snaf_Hello_15_00");	//РљР°Рє Сѓ С‚РµР±СЏ РґРµР»Р°?
+	AI_Output(self,other,"DIA_Snaf_Hello_01_01");	//РќРµРїР»РѕС…Рѕ. Р•СЃР»Рё СѓРјРµРµС€СЊ С…РѕСЂРѕС€Рѕ РіРѕС‚РѕРІРёС‚СЊ, РґСЂСѓР·СЊСЏ Рє С‚РµР±Рµ СЃР°РјРё РїСЂРёРґСѓС‚.
+	AI_Output(self,other,"DIA_Snaf_Hello_01_02");	//РҐРѕС‡РµС€СЊ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ С‚СѓС€РµРЅС‹Р№ СЂРёСЃ? Р’РѕС‚ РІРѕР·СЊРјРё, Рё СЃР°Рј СѓР±РµРґРёСЃСЊ, РєР°Рє СЌС‚Рѕ РІРєСѓСЃРЅРѕ.
+	b_printtrademsg1("РџРѕР»СѓС‡РµРЅ СЂРёСЃ.");
+	AI_Output(other,self,"DIA_Snaf_Hello_15_03");	//РЎРїР°СЃРёР±Рѕ.
+	AI_Output(self,other,"DIA_Snaf_Hello_01_04");	//Рђ С‚С‹ РјРѕРі Р±С‹ РјРЅРµ РїРѕРјРѕС‡СЊ.
 	CreateInvItem(self,ItFoRice);
 	B_GiveInvItems(self,other,ItFoRice,1);
 };
@@ -57,7 +57,7 @@ instance DIA_Snaf_Zutaten(C_Info)
 	condition = DIA_Snaf_Zutaten_Condition;
 	information = DIA_Snaf_Zutaten_Info;
 	permanent = 0;
-	description = "Что тебе нужно?";
+	description = "Р§С‚Рѕ С‚РµР±Рµ РЅСѓР¶РЅРѕ?";
 };
 
 
@@ -71,37 +71,37 @@ func int DIA_Snaf_Zutaten_Condition()
 
 func void DIA_Snaf_Zutaten_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_Zutaten_15_00");	//Что тебе нужно?
-	AI_Output(self,other,"DIA_Snaf_Zutaten_01_01");	//Думаю, ты любишь вкусно поесть. Я придумал новое блюдо: рагу из мясных жуков а-ля Снэф с рисом и грибами.
-	AI_Output(self,other,"DIA_Snaf_Zutaten_01_02");	//Я дам тебе столько рагу, сколько захочешь, но для его приготовления мне нужно три жука и немного грибов. Пяти должно быть достаточно.
-	AI_Output(self,other,"DIA_Snaf_WhereMushrooms_01_01");	//Когда ты выйдешь через южные ворота - там, где разрушенная башня, - ты сразу увидишь поляну, на которой они растут.
+	AI_Output(other,self,"DIA_Snaf_Zutaten_15_00");	//Р§С‚Рѕ С‚РµР±Рµ РЅСѓР¶РЅРѕ?
+	AI_Output(self,other,"DIA_Snaf_Zutaten_01_01");	//Р”СѓРјР°СЋ, С‚С‹ Р»СЋР±РёС€СЊ РІРєСѓСЃРЅРѕ РїРѕРµСЃС‚СЊ. РЇ РїСЂРёРґСѓРјР°Р» РЅРѕРІРѕРµ Р±Р»СЋРґРѕ: СЂР°РіСѓ РёР· РјСЏСЃРЅС‹С… Р¶СѓРєРѕРІ Р°-Р»СЏ РЎРЅСЌС„ СЃ СЂРёСЃРѕРј Рё РіСЂРёР±Р°РјРё.
+	AI_Output(self,other,"DIA_Snaf_Zutaten_01_02");	//РЇ РґР°Рј С‚РµР±Рµ СЃС‚РѕР»СЊРєРѕ СЂР°РіСѓ, СЃРєРѕР»СЊРєРѕ Р·Р°С…РѕС‡РµС€СЊ, РЅРѕ РґР»СЏ РµРіРѕ РїСЂРёРіРѕС‚РѕРІР»РµРЅРёСЏ РјРЅРµ РЅСѓР¶РЅРѕ С‚СЂРё Р¶СѓРєР° Рё РЅРµРјРЅРѕРіРѕ РіСЂРёР±РѕРІ. РџСЏС‚Рё РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ.
+	AI_Output(self,other,"DIA_Snaf_WhereMushrooms_01_01");	//РљРѕРіРґР° С‚С‹ РІС‹Р№РґРµС€СЊ С‡РµСЂРµР· СЋР¶РЅС‹Рµ РІРѕСЂРѕС‚Р° - С‚Р°Рј, РіРґРµ СЂР°Р·СЂСѓС€РµРЅРЅР°СЏ Р±Р°С€РЅСЏ, - С‚С‹ СЃСЂР°Р·Сѓ СѓРІРёРґРёС€СЊ РїРѕР»СЏРЅСѓ, РЅР° РєРѕС‚РѕСЂРѕР№ РѕРЅРё СЂР°СЃС‚СѓС‚.
 	Info_ClearChoices(DIA_Snaf_Zutaten);
-	Info_AddChoice(DIA_Snaf_Zutaten,"Ты хочешь меня отравить?",DIA_Snaf_Zutaten_KOTZ);
-	Info_AddChoice(DIA_Snaf_Zutaten,"Мне нравится идея с рагу.",DIA_Snaf_Zutaten_DoIt);
+	Info_AddChoice(DIA_Snaf_Zutaten,"РўС‹ С…РѕС‡РµС€СЊ РјРµРЅСЏ РѕС‚СЂР°РІРёС‚СЊ?",DIA_Snaf_Zutaten_KOTZ);
+	Info_AddChoice(DIA_Snaf_Zutaten,"РњРЅРµ РЅСЂР°РІРёС‚СЃСЏ РёРґРµСЏ СЃ СЂР°РіСѓ.",DIA_Snaf_Zutaten_DoIt);
 };
 
 func void DIA_Snaf_Zutaten_KOTZ()
 {
-	AI_Output(other,self,"DIA_Snaf_Zutaten_KOTZ_15_00");	//Ты хочешь меня отравить?
-	AI_Output(self,other,"DIA_Snaf_Zutaten_KOTZ_01_01");	//Если не хочешь есть, не ешь. Никто не заставляет. Но может быть, ты все же попробуешь? Если достанешь все, что мне нужно, приходи.
-	AI_Output(self,other,"DIA_Snaf_Zutaten_KOTZ_01_02");	//Я уже просил кого-то сходить за грибами, но он так и не вернулся. Наверное, ушел в Новый лагерь.
+	AI_Output(other,self,"DIA_Snaf_Zutaten_KOTZ_15_00");	//РўС‹ С…РѕС‡РµС€СЊ РјРµРЅСЏ РѕС‚СЂР°РІРёС‚СЊ?
+	AI_Output(self,other,"DIA_Snaf_Zutaten_KOTZ_01_01");	//Р•СЃР»Рё РЅРµ С…РѕС‡РµС€СЊ РµСЃС‚СЊ, РЅРµ РµС€СЊ. РќРёРєС‚Рѕ РЅРµ Р·Р°СЃС‚Р°РІР»СЏРµС‚. РќРѕ РјРѕР¶РµС‚ Р±С‹С‚СЊ, С‚С‹ РІСЃРµ Р¶Рµ РїРѕРїСЂРѕР±СѓРµС€СЊ? Р•СЃР»Рё РґРѕСЃС‚Р°РЅРµС€СЊ РІСЃРµ, С‡С‚Рѕ РјРЅРµ РЅСѓР¶РЅРѕ, РїСЂРёС…РѕРґРё.
+	AI_Output(self,other,"DIA_Snaf_Zutaten_KOTZ_01_02");	//РЇ СѓР¶Рµ РїСЂРѕСЃРёР» РєРѕРіРѕ-С‚Рѕ СЃС…РѕРґРёС‚СЊ Р·Р° РіСЂРёР±Р°РјРё, РЅРѕ РѕРЅ С‚Р°Рє Рё РЅРµ РІРµСЂРЅСѓР»СЃСЏ. РќР°РІРµСЂРЅРѕРµ, СѓС€РµР» РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ.
 	Snaf_Zutaten = LOG_RUNNING;
 	Log_CreateTopic(CH1_SnafsRecipe,LOG_MISSION);
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_RUNNING);
-	B_LogEntry(CH1_SnafsRecipe,"Повар Снэф из Старого лагеря попросил меня найти для него трех мясных жуков и пять адских грибов. Он хочет приготовить новое блюдо.");
+	B_LogEntry(CH1_SnafsRecipe,"РџРѕРІР°СЂ РЎРЅСЌС„ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ РїРѕРїСЂРѕСЃРёР» РјРµРЅСЏ РЅР°Р№С‚Рё РґР»СЏ РЅРµРіРѕ С‚СЂРµС… РјСЏСЃРЅС‹С… Р¶СѓРєРѕРІ Рё РїСЏС‚СЊ Р°РґСЃРєРёС… РіСЂРёР±РѕРІ. РћРЅ С…РѕС‡РµС‚ РїСЂРёРіРѕС‚РѕРІРёС‚СЊ РЅРѕРІРѕРµ Р±Р»СЋРґРѕ.");
 	Info_ClearChoices(DIA_Snaf_Zutaten);
 };
 
 func void DIA_Snaf_Zutaten_DoIt()
 {
-	AI_Output(other,self,"DIA_Snaf_Zutaten_DoIt_15_00");	//Мне нравится идея с рагу.
-	AI_Output(self,other,"DIA_Snaf_Zutaten_DoIt_01_01");	//Тогда постарайся достать мне нужные ингредиенты.
-	AI_Output(self,other,"DIA_Snaf_Zutaten_DoIt_01_02");	//Тот, кого я в последний раз отправлял за ними, так и не вернулся. Наверное, ушел в Новый лагерь.
+	AI_Output(other,self,"DIA_Snaf_Zutaten_DoIt_15_00");	//РњРЅРµ РЅСЂР°РІРёС‚СЃСЏ РёРґРµСЏ СЃ СЂР°РіСѓ.
+	AI_Output(self,other,"DIA_Snaf_Zutaten_DoIt_01_01");	//РўРѕРіРґР° РїРѕСЃС‚Р°СЂР°Р№СЃСЏ РґРѕСЃС‚Р°С‚СЊ РјРЅРµ РЅСѓР¶РЅС‹Рµ РёРЅРіСЂРµРґРёРµРЅС‚С‹.
+	AI_Output(self,other,"DIA_Snaf_Zutaten_DoIt_01_02");	//РўРѕС‚, РєРѕРіРѕ СЏ РІ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· РѕС‚РїСЂР°РІР»СЏР» Р·Р° РЅРёРјРё, С‚Р°Рє Рё РЅРµ РІРµСЂРЅСѓР»СЃСЏ. РќР°РІРµСЂРЅРѕРµ, СѓС€РµР» РІ РќРѕРІС‹Р№ Р»Р°РіРµСЂСЊ.
 	Snaf_Zutaten = LOG_RUNNING;
 	Snaf_FreeMBRagout = TRUE;
 	Log_CreateTopic(CH1_SnafsRecipe,LOG_MISSION);
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_RUNNING);
-	B_LogEntry(CH1_SnafsRecipe,"Повар Снэф из Старого лагеря попросил меня найти для него трех мясных жуков и пять адских грибов. Он хочет приготовить новое блюдо. Я тоже смогу его попробовать.");
+	B_LogEntry(CH1_SnafsRecipe,"РџРѕРІР°СЂ РЎРЅСЌС„ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ РїРѕРїСЂРѕСЃРёР» РјРµРЅСЏ РЅР°Р№С‚Рё РґР»СЏ РЅРµРіРѕ С‚СЂРµС… РјСЏСЃРЅС‹С… Р¶СѓРєРѕРІ Рё РїСЏС‚СЊ Р°РґСЃРєРёС… РіСЂРёР±РѕРІ. РћРЅ С…РѕС‡РµС‚ РїСЂРёРіРѕС‚РѕРІРёС‚СЊ РЅРѕРІРѕРµ Р±Р»СЋРґРѕ. РЇ С‚РѕР¶Рµ СЃРјРѕРіСѓ РµРіРѕ РїРѕРїСЂРѕР±РѕРІР°С‚СЊ.");
 	Info_ClearChoices(DIA_Snaf_Zutaten);
 };
 
@@ -113,7 +113,7 @@ instance DIA_Snaf_ZutatenSuccess(C_Info)
 	condition = DIA_Snaf_ZutatenSuccess_Condition;
 	information = DIA_Snaf_ZutatenSuccess_Info;
 	permanent = 0;
-	description = "Я достал все ингредиенты, посмотри.";
+	description = "РЇ РґРѕСЃС‚Р°Р» РІСЃРµ РёРЅРіСЂРµРґРёРµРЅС‚С‹, РїРѕСЃРјРѕС‚СЂРё.";
 };
 
 
@@ -146,34 +146,35 @@ func void akh_RemoveItAtMeatbug(var int a_)
 var int Snaf_RagoutDay;
 func void DIA_Snaf_ZutatenSuccess_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_ZutatenSuccess_15_00");	//Я достал все ингредиенты, посмотри.
-	b_printtrademsg1("Отданы адские грибы и мясо жуков.");
+	AI_Output(other,self,"DIA_Snaf_ZutatenSuccess_15_00");	//РЇ РґРѕСЃС‚Р°Р» РІСЃРµ РёРЅРіСЂРµРґРёРµРЅС‚С‹, РїРѕСЃРјРѕС‚СЂРё.
+	b_printtrademsg1("РћС‚РґР°РЅС‹ Р°РґСЃРєРёРµ РіСЂРёР±С‹ Рё РјСЏСЃРѕ Р¶СѓРєРѕРІ.");
 	Npc_RemoveInvItems(hero,ItFo_Plants_mushroom_01,5);
 	akh_RemoveItAtMeatbug(3);
 	if(Wld_IsTime(8,0,22,0) && (Npc_GetDistToWP(self,"OCR_CAULDRON_2") < 230))
 	{
-		AI_Output(self,other,"DIA_Snaf_ZutatenSuccess_01_01");	//Хорошо! Теперь их нужно положить в котел, и рагу будет готово... Вот так...
+		AI_Output(self,other,"DIA_Snaf_ZutatenSuccess_01_01");	//РҐРѕСЂРѕС€Рѕ! РўРµРїРµСЂСЊ РёС… РЅСѓР¶РЅРѕ РїРѕР»РѕР¶РёС‚СЊ РІ РєРѕС‚РµР», Рё СЂР°РіСѓ Р±СѓРґРµС‚ РіРѕС‚РѕРІРѕ... Р’РѕС‚ С‚Р°Рє...
 		AI_UseMob(self,"CAULDRON",1);
 		AI_Wait(self,2);
 		AI_UseMob(self,"CAULDRON",-1);
-		AI_Output(self,other,"DIA_Snaf_Hello_01_02_01");	//Вот возьми, и сам убедись, как это вкусно.
-		b_printtrademsg2("Получено рагу из жуков.");
+		AI_Output(self,other,"DIA_Snaf_Hello_01_02_01");	//Р’РѕС‚ РІРѕР·СЊРјРё, Рё СЃР°Рј СѓР±РµРґРёСЃСЊ, РєР°Рє СЌС‚Рѕ РІРєСѓСЃРЅРѕ.
+		b_printtrademsg2("РџРѕР»СѓС‡РµРЅРѕ СЂР°РіСѓ РёР· Р¶СѓРєРѕРІ.");
 		CreateInvItems(hero,ItFoMeatbugragout,1);
 		Snaf_RagoutDay = Wld_GetDay();
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Snaf_Hello_01_01");	//Неплохо. Если умеешь хорошо готовить, друзья к тебе сами придут.
+		AI_Output(self,other,"DIA_Snaf_Hello_01_01");	//РќРµРїР»РѕС…Рѕ. Р•СЃР»Рё СѓРјРµРµС€СЊ С…РѕСЂРѕС€Рѕ РіРѕС‚РѕРІРёС‚СЊ, РґСЂСѓР·СЊСЏ Рє С‚РµР±Рµ СЃР°РјРё РїСЂРёРґСѓС‚.
 		Snaf_RagoutDay = Wld_GetDay();
 	};
 	Snaf_Zutaten = LOG_SUCCESS;
 	Log_SetTopicStatus(CH1_SnafsRecipe,LOG_SUCCESS);
-	B_LogEntry(CH1_SnafsRecipe,"Снэф остался доволен тем, что я принес ему необходимые ингредиенты.");
+	B_LogEntry(CH1_SnafsRecipe,"РЎРЅСЌС„ РѕСЃС‚Р°Р»СЃСЏ РґРѕРІРѕР»РµРЅ С‚РµРј, С‡С‚Рѕ СЏ РїСЂРёРЅРµСЃ РµРјСѓ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РёРЅРіСЂРµРґРёРµРЅС‚С‹.");
 	if(Snaf_FreeMBRagout == TRUE)
 	{
-		B_LogEntry(CH1_SnafsRecipe,"Теперь я смогу каждый день получать у него порцию рагу из мясных жуков.");
+		B_LogEntry(CH1_SnafsRecipe,"РўРµРїРµСЂСЊ СЏ СЃРјРѕРіСѓ РєР°Р¶РґС‹Р№ РґРµРЅСЊ РїРѕР»СѓС‡Р°С‚СЊ Сѓ РЅРµРіРѕ РїРѕСЂС†РёСЋ СЂР°РіСѓ РёР· РјСЏСЃРЅС‹С… Р¶СѓРєРѕРІ.");
 	};
 	B_GiveXP(100);
+	B_ExchangeRoutine(GRD_208_Cutter,"SNAFF");
 	AI_StopProcessInfos(self);
 };
 
@@ -185,7 +186,7 @@ instance DIA_Snaf_AfterSuccess(C_Info)
 	condition = DIA_Snaf_AfterSuccess_Condition;
 	information = DIA_Snaf_AfterSuccess_Info;
 	permanent = 1;
-	description = "Ты говорил, что я могу взять столько порций, сколько захочу...";
+	description = "РўС‹ РіРѕРІРѕСЂРёР», С‡С‚Рѕ СЏ РјРѕРіСѓ РІР·СЏС‚СЊ СЃС‚РѕР»СЊРєРѕ РїРѕСЂС†РёР№, СЃРєРѕР»СЊРєРѕ Р·Р°С…РѕС‡Сѓ...";
 };
 
 
@@ -199,18 +200,18 @@ func int DIA_Snaf_AfterSuccess_Condition()
 
 func void DIA_Snaf_AfterSuccess_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_AfterSuccess_15_00");	//Ты говорил, что я могу взять столько порций, сколько захочу...
+	AI_Output(other,self,"DIA_Snaf_AfterSuccess_15_00");	//РўС‹ РіРѕРІРѕСЂРёР», С‡С‚Рѕ СЏ РјРѕРіСѓ РІР·СЏС‚СЊ СЃС‚РѕР»СЊРєРѕ РїРѕСЂС†РёР№, СЃРєРѕР»СЊРєРѕ Р·Р°С…РѕС‡Сѓ...
 	if(Snaf_RagoutDay != Wld_GetDay())
 	{
-		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_01");	//Да, так и есть. Вот, возьми три порции.
-		b_printtrademsg1("Получено 3 порции рагу из жуков.");
+		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_01");	//Р”Р°, С‚Р°Рє Рё РµСЃС‚СЊ. Р’РѕС‚, РІРѕР·СЊРјРё С‚СЂРё РїРѕСЂС†РёРё.
+		b_printtrademsg1("РџРѕР»СѓС‡РµРЅРѕ 3 РїРѕСЂС†РёРё СЂР°РіСѓ РёР· Р¶СѓРєРѕРІ.");
 		CreateInvItems(self,ItFoMeatbugragout,3);
 		B_GiveInvItems(self,other,ItFoMeatbugragout,3);
 		Snaf_RagoutDay = Wld_GetDay();
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_02");	//Конечно! Но сегодняшнее рагу закончилось. Приходи завтра.
+		AI_Output(self,other,"DIA_Snaf_AfterSuccess_01_02");	//РљРѕРЅРµС‡РЅРѕ! РќРѕ СЃРµРіРѕРґРЅСЏС€РЅРµРµ СЂР°РіСѓ Р·Р°РєРѕРЅС‡РёР»РѕСЃСЊ. РџСЂРёС…РѕРґРё Р·Р°РІС‚СЂР°.
 	};
 };
 
@@ -222,7 +223,7 @@ instance DIA_Snaf_WhereMeatbugs(C_Info)
 	condition = DIA_Snaf_WhereMeatbugs_Condition;
 	information = DIA_Snaf_WhereMeatbugs_Info;
 	permanent = 0;
-	description = "Ты знаешь, где найти жуков?";
+	description = "РўС‹ Р·РЅР°РµС€СЊ, РіРґРµ РЅР°Р№С‚Рё Р¶СѓРєРѕРІ?";
 };
 
 
@@ -236,10 +237,10 @@ func int DIA_Snaf_WhereMeatbugs_Condition()
 
 func void DIA_Snaf_WhereMeatbugs_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_WhereMeatbugs_15_00");	//Ты знаешь, где найти жуков?
-	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_01");	//Там, где много мусора. Возле стен лагеря есть несколько заброшенных домов, может быть, там ты что-нибудь найдешь.
-	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_02");	//На первый взгляд они кажутся несъедобными, но это обманчивое впечатление. Из них получается отличное рагу.
-	B_LogEntry(CH1_SnafsRecipe,"Мясных жуков можно найти в заброшенных домах у стен замка.");
+	AI_Output(other,self,"DIA_Snaf_WhereMeatbugs_15_00");	//РўС‹ Р·РЅР°РµС€СЊ, РіРґРµ РЅР°Р№С‚Рё Р¶СѓРєРѕРІ?
+	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_01");	//РўР°Рј, РіРґРµ РјРЅРѕРіРѕ РјСѓСЃРѕСЂР°. Р’РѕР·Р»Рµ СЃС‚РµРЅ Р»Р°РіРµСЂСЏ РµСЃС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р·Р°Р±СЂРѕС€РµРЅРЅС‹С… РґРѕРјРѕРІ, РјРѕР¶РµС‚ Р±С‹С‚СЊ, С‚Р°Рј С‚С‹ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РЅР°Р№РґРµС€СЊ.
+	AI_Output(self,other,"DIA_Snaf_WhereMeatbugs_01_02");	//РќР° РїРµСЂРІС‹Р№ РІР·РіР»СЏРґ РѕРЅРё РєР°Р¶СѓС‚СЃСЏ РЅРµСЃСЉРµРґРѕР±РЅС‹РјРё, РЅРѕ СЌС‚Рѕ РѕР±РјР°РЅС‡РёРІРѕРµ РІРїРµС‡Р°С‚Р»РµРЅРёРµ. РР· РЅРёС… РїРѕР»СѓС‡Р°РµС‚СЃСЏ РѕС‚Р»РёС‡РЅРѕРµ СЂР°РіСѓ.
+	B_LogEntry(CH1_SnafsRecipe,"РњСЏСЃРЅС‹С… Р¶СѓРєРѕРІ РјРѕР¶РЅРѕ РЅР°Р№С‚Рё РІ Р·Р°Р±СЂРѕС€РµРЅРЅС‹С… РґРѕРјР°С… Сѓ СЃС‚РµРЅ Р·Р°РјРєР°.");
 };
 
 
@@ -250,7 +251,7 @@ instance DIA_Snaf_WhereNek(C_Info)
 	condition = DIA_Snaf_WhereNek_Condition;
 	information = DIA_Snaf_WhereNek_Info;
 	permanent = 0;
-	description = "А как звали того, кого ты посылал за грибами до меня?";
+	description = "Рђ РєР°Рє Р·РІР°Р»Рё С‚РѕРіРѕ, РєРѕРіРѕ С‚С‹ РїРѕСЃС‹Р»Р°Р» Р·Р° РіСЂРёР±Р°РјРё РґРѕ РјРµРЅСЏ?";
 };
 
 
@@ -264,14 +265,70 @@ func int DIA_Snaf_WhereNek_Condition()
 
 func void DIA_Snaf_WhereNek_Info()
 {
-	AI_Output(other,self,"DIA_Snaf_WhereNek_15_00");	//А как звали того, кого ты посылал за грибами до меня?
-	AI_Output(self,other,"DIA_Snaf_WhereNek_01_01");	//Нек. Ему здесь не очень нравилось. Думаю, он уже сидит где-нибудь в Новом лагере.
-	AI_Output(self,other,"DIA_Snaf_WhereNek_01_02");	//Я посылал его за грибами, но он так и не вернулся...
+	AI_Output(other,self,"DIA_Snaf_WhereNek_15_00");	//Рђ РєР°Рє Р·РІР°Р»Рё С‚РѕРіРѕ, РєРѕРіРѕ С‚С‹ РїРѕСЃС‹Р»Р°Р» Р·Р° РіСЂРёР±Р°РјРё РґРѕ РјРµРЅСЏ?
+	AI_Output(self,other,"DIA_Snaf_WhereNek_01_01");	//РќРµРє. Р•РјСѓ Р·РґРµСЃСЊ РЅРµ РѕС‡РµРЅСЊ РЅСЂР°РІРёР»РѕСЃСЊ. Р”СѓРјР°СЋ, РѕРЅ СѓР¶Рµ СЃРёРґРёС‚ РіРґРµ-РЅРёР±СѓРґСЊ РІ РќРѕРІРѕРј Р»Р°РіРµСЂРµ.
+	AI_Output(self,other,"DIA_Snaf_WhereNek_01_02");	//РЇ РїРѕСЃС‹Р»Р°Р» РµРіРѕ Р·Р° РіСЂРёР±Р°РјРё, РЅРѕ РѕРЅ С‚Р°Рє Рё РЅРµ РІРµСЂРЅСѓР»СЃСЏ...
 	if((Sly_LostNek != LOG_SUCCESS) && (Npc_GetTrueGuild(hero) == GIL_None))
 	{
 		Log_CreateTopic(CH1_LostNek,LOG_MISSION);
 		Log_SetTopicStatus(CH1_LostNek,LOG_RUNNING);
-		B_LogEntry(CH1_LostNek,"Повар Снэф послал Нека за грибами. После этого он его ни разу не видел.");
+		B_LogEntry(CH1_LostNek,"РџРѕРІР°СЂ РЎРЅСЌС„ РїРѕСЃР»Р°Р» РќРµРєР° Р·Р° РіСЂРёР±Р°РјРё. РџРѕСЃР»Рµ СЌС‚РѕРіРѕ РѕРЅ РµРіРѕ РЅРё СЂР°Р·Сѓ РЅРµ РІРёРґРµР».");
+	};
+};
+
+instance DIA_Snaf_MeatForOC(C_Info)
+{
+	npc = VLK_581_Snaf;
+	nr = 5;
+	condition = DIA_Snaf_MeatForOC_Condition;
+	information = DIA_Snaf_MeatForOC_Info;
+	permanent = 1;
+	description = "Р’РѕС‚, СЏ РїСЂРёРЅРµСЃ РµС‰Рµ РјСЏСЃР°.";
+};
+func int DIA_Snaf_MeatForOC_Condition()
+{
+	if(Snaf_Zutaten == LOG_SUCCESS)
+	{
+		return true;
+	};
+	return false;
+};
+func void DIA_Snaf_MeatForOC_Info()
+{
+	AI_Output(other,self,"DIA_Snaf_MeatForOC_NULL_00"); //Р’РѕС‚, СЏ РїСЂРёРЅРµСЃ РµС‰Рµ РјСЏСЃР°.
+	if(Npc_HasItems(other,ItFoMuttonRaw) < 1)
+	{
+		AI_Output(self,other,"DIA_Snaf_MeatForOC_NULL_01"); //Р РіРґРµ-Р¶Рµ РѕРЅРѕ? РўРµР±СЏ С‡С‚Рѕ, РєР°РєРѕР№ СЃС‚РµСЂРІСЏС‚РЅРёРє РІ РіРѕР»РѕРІСѓ РєР»СЋРЅСѓР»?
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Snaf_MeatForOC_NULL_02"); //Рћ.. РґР°РІР°Р№ РµРіРѕ СЃРєРѕСЂРµРµ СЃСЋРґР°.
+		if(Npc_HasItems(other,ItFoMuttonRaw) < 10)
+		{
+			if(!Achieve_bPovarenok)
+			{
+				Snaff_MeatCounter += Npc_HasItems(other,ItFoMuttonRaw);
+				if(Snaff_MeatCounter > 100)
+				{
+					Achieve_bPovarenok = true;
+				};
+			};
+			B_GiveXP(Npc_HasItems(other,ItFoMuttonRaw) * 10);
+			B_GiveInvItems(other,self,ItFoMuttonRaw,Npc_HasItems(other,ItFoMuttonRaw));
+		}
+		else
+		{
+			if(!Achieve_bPovarenok)
+			{
+				Snaff_MeatCounter += 10;
+				if(Snaff_MeatCounter > 100)
+				{
+					Achieve_bPovarenok = true;
+				};
+			};
+			B_GiveXP(100);
+			B_GiveInvItems(other,self,ItFoMuttonRaw,10);
+		};
 	};
 };
 

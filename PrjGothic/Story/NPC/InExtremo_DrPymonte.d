@@ -1,7 +1,7 @@
 
 instance InExtremo_DrPymonte(Npc_Default)
 {
-	name[0] = "Др.Пимонт";
+	name[0] = "Р”СЂ.РџРёРјРѕРЅС‚";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -37,7 +37,7 @@ func void Rtn_off_390()
 
 instance InExtremo_TheFlail(Npc_Default)
 {
-	name[0] = "Кубок";
+	name[0] = "РљСѓР±РѕРє";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -74,7 +74,7 @@ func void Rtn_off_391()
 
 instance InExtremo_ThomasTheForger(Npc_Default)
 {
-	name[0] = "Томас";
+	name[0] = "РўРѕРјР°СЃ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -111,7 +111,7 @@ func void Rtn_off_392()
 
 instance InExtremo_Unicorn(Npc_Default)
 {
-	name[0] = "Юникорн";
+	name[0] = "Р®РЅРёРєРѕСЂРЅ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -148,7 +148,7 @@ func void Rtn_off_393()
 
 instance InExtremo_YellowPfeiffer(Npc_Default)
 {
-	name[0] = "Желтый курильщик";
+	name[0] = "Р–РµР»С‚С‹Р№ РєСѓСЂРёР»СЊС‰РёРє";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -185,7 +185,7 @@ func void Rtn_off_394()
 
 instance InExtremo_Lutter(Npc_Default)
 {
-	name[0] = "Латтер";
+	name[0] = "Р›Р°С‚С‚РµСЂ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -221,7 +221,7 @@ func void Rtn_off_395()
 
 instance InExtremo_Flex(Npc_Default)
 {
-	name[0] = "Флекс";
+	name[0] = "Р¤Р»РµРєСЃ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -258,7 +258,7 @@ func void Rtn_off_396()
 
 instance IE_397_Announcer(Npc_Default)
 {
-	name[0] = "Стив";
+	name[0] = "РЎС‚РёРІ";
 	npcType = npctype_main;
 	guild = GIL_None;
 	level = 4;
@@ -300,7 +300,7 @@ func void Rtn_off_397()
 
 instance Charlotte(Npc_Default)
 {
-	name[0] = "Шарлотта";
+	name[0] = "РЁР°СЂР»РѕС‚С‚Р°";
 	npcType = npctype_main;
 	guild = GIL_BAB;
 	level = 1;

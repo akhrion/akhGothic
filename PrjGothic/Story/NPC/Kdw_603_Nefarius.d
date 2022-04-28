@@ -1,7 +1,7 @@
 
 instance Kdw_603_Nefarius(Npc_Default)
 {
-	name[0] = "Нефариус";
+	name[0] = "РќРµС„Р°СЂРёСѓСЃ";
 	npcType = npctype_main;
 	guild = GIL_KDW;
 	level = 25;

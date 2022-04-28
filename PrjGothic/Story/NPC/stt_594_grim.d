@@ -1,7 +1,7 @@
 
 instance STT_594_GRIM(Npc_Default)
 {
-	name[0] = "Ãðèì";
+	name[0] = "Ð“Ñ€Ð¸Ð¼";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 10;

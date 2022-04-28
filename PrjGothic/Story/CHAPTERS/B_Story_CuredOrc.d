@@ -1,7 +1,7 @@
 
 func void B_Story_CuredOrc()
 {
-	B_LogEntry(CH4_UluMulu,"Я отдал орку-рабу Тарроку лечебное зелье, и он сказал, что сможет мне помочь.");
+	B_LogEntry(CH4_UluMulu,"РЇ РѕС‚РґР°Р» РѕСЂРєСѓ-СЂР°Р±Сѓ РўР°СЂСЂРѕРєСѓ Р»РµС‡РµР±РЅРѕРµ Р·РµР»СЊРµ, Рё РѕРЅ СЃРєР°Р·Р°Р», С‡С‚Рѕ СЃРјРѕР¶РµС‚ РјРЅРµ РїРѕРјРѕС‡СЊ.");
 	B_GiveXP(XP_CuredOrcSlave);
 	FreemineOrc_SuchePotion = LOG_SUCCESS;
 	FreemineOrc_LookingUlumulu = LOG_RUNNING;

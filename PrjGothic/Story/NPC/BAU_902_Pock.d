@@ -1,7 +1,7 @@
 
 instance BAU_902_Pock(Npc_Default)
 {
-	name[0] = "Пок";
+	name[0] = "РџРѕРє";
 	npcType = npctype_main;
 	guild = GIL_BAU;
 	level = 4;

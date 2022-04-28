@@ -1,7 +1,7 @@
 
 instance GRD_251_Kirgo(Npc_Default)
 {
-	name[0] = "Кирго";
+	name[0] = "РљРёСЂРіРѕ";
 	npcType = npctype_main;
 	flags = NPC_FLAG_IMMORTAL;
 	guild = GIL_None;

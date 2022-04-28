@@ -1,7 +1,7 @@
 
 instance NOV_1373_MELVIN(Npc_Default)
 {
-	name[0] = "Мелвин";
+	name[0] = "РњРµР»РІРёРЅ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 10;

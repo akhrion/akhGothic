@@ -1,7 +1,7 @@
 
 instance ORG_857_Calash(Npc_Default)
 {
-	name[0] = "Калеш";
+	name[0] = "РљР°Р»РµС€";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 11;
@@ -78,7 +78,7 @@ instance INFO_CALASH_DIA1(C_Info)
 	condition = info_calash_dia1_condition;
 	information = info_calash_dia1_info;
 	permanent = 0;
-	description = "У меня есть для тебя письмо.";
+	description = "РЈ РјРµРЅСЏ РµСЃС‚СЊ РґР»СЏ С‚РµР±СЏ РїРёСЃСЊРјРѕ.";
 };
 
 
@@ -92,8 +92,8 @@ func int info_calash_dia1_condition()
 
 func void info_calash_dia1_info()
 {
-	AI_Output(hero,self,"Calash_DIA1_00");	//У меня есть для тебя письмо.
-	b_printtrademsg1("Отдано письмо.");
+	AI_Output(hero,self,"Calash_DIA1_00");	//РЈ РјРµРЅСЏ РµСЃС‚СЊ РґР»СЏ С‚РµР±СЏ РїРёСЃСЊРјРѕ.
+	b_printtrademsg1("РћС‚РґР°РЅРѕ РїРёСЃСЊРјРѕ.");
 	if(Npc_HasItems(hero,calashnote))
 	{
 		B_GiveInvItems(hero,self,calashnote,1);
@@ -105,27 +105,27 @@ func void info_calash_dia1_info()
 	B_UseFakeScroll();
 	if(FMTaken == TRUE)
 	{
-		AI_Output(self,hero,"Calash_DIA1_02");	//Это от Квентина... Пишет, что ты полный идиот, и что мне следует тебя избить.
-		AI_Output(self,hero,"Calash_DIA1_03");	//Делать мне больше нечего! Он вообще в курсе того, что здесь произошло? Да я чудом выжил!
+		AI_Output(self,hero,"Calash_DIA1_02");	//Р­С‚Рѕ РѕС‚ РљРІРµРЅС‚РёРЅР°... РџРёС€РµС‚, С‡С‚Рѕ С‚С‹ РїРѕР»РЅС‹Р№ РёРґРёРѕС‚, Рё С‡С‚Рѕ РјРЅРµ СЃР»РµРґСѓРµС‚ С‚РµР±СЏ РёР·Р±РёС‚СЊ.
+		AI_Output(self,hero,"Calash_DIA1_03");	//Р”РµР»Р°С‚СЊ РјРЅРµ Р±РѕР»СЊС€Рµ РЅРµС‡РµРіРѕ! РћРЅ РІРѕРѕР±С‰Рµ РІ РєСѓСЂСЃРµ С‚РѕРіРѕ, С‡С‚Рѕ Р·РґРµСЃСЊ РїСЂРѕРёР·РѕС€Р»Рѕ? Р”Р° СЏ С‡СѓРґРѕРј РІС‹Р¶РёР»!
 		if(Lee_freeminereport == 0)
 		{
-			AI_Output(self,hero,"Calash_DIA1_04");	//Парень, беги отсюда, пока можешь! Я еще немного отсижусь здесь и тоже дам деру.
+			AI_Output(self,hero,"Calash_DIA1_04");	//РџР°СЂРµРЅСЊ, Р±РµРіРё РѕС‚СЃСЋРґР°, РїРѕРєР° РјРѕР¶РµС€СЊ! РЇ РµС‰Рµ РЅРµРјРЅРѕРіРѕ РѕС‚СЃРёР¶СѓСЃСЊ Р·РґРµСЃСЊ Рё С‚РѕР¶Рµ РґР°Рј РґРµСЂСѓ.
 		};
 		AI_StopProcessInfos(self);
 		if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 		{
-			B_LogEntry(QUENTIN_GANG,"Калеш решил не нападать на меня.");
+			B_LogEntry(QUENTIN_GANG,"РљР°Р»РµС€ СЂРµС€РёР» РЅРµ РЅР°РїР°РґР°С‚СЊ РЅР° РјРµРЅСЏ.");
 		};
 	}
 	else
 	{
-		AI_Output(self,hero,"Calash_DIA1_01");	//Как интересно... Тут написано, что ты полный идиот!
+		AI_Output(self,hero,"Calash_DIA1_01");	//РљР°Рє РёРЅС‚РµСЂРµСЃРЅРѕ... РўСѓС‚ РЅР°РїРёСЃР°РЅРѕ, С‡С‚Рѕ С‚С‹ РїРѕР»РЅС‹Р№ РёРґРёРѕС‚!
 		AI_StopProcessInfos(self);
 		Npc_SetTarget(self,hero);
 		AI_StartState(self,ZS_Attack,1,"");
 		if(QUENTIN_GANG_QUEST_STARTED == LOG_RUNNING)
 		{
-			B_LogEntry(QUENTIN_GANG,"Калеш напал на меня!");
+			B_LogEntry(QUENTIN_GANG,"РљР°Р»РµС€ РЅР°РїР°Р» РЅР° РјРµРЅСЏ!");
 		};
 	};
 	B_GiveXP(200);
@@ -154,11 +154,11 @@ func int calash_dia2_condition()
 func void calash_dia2_info()
 {
 	AI_DrawWeapon(self);
-	AI_Output(self,hero,"Calash_DIA2_01");	//Не подходи ко мне!
-	AI_Output(hero,self,"Stt_311_Fisk_MordragKO_Relax_15_00");	//Успокойся! Быть может, я помогу тебе?
-	AI_Output(self,hero,"Calash_DIA2_02");	//То есть, ты не собираешься меня убить?
-	AI_Output(hero,self,"Info_Swiney_Schuerfer_Nein_15_00");	//Нет.
-	AI_Output(self,hero,"Calash_DIA2_03");	//Ладно... Убедил...
+	AI_Output(self,hero,"Calash_DIA2_01");	//РќРµ РїРѕРґС…РѕРґРё РєРѕ РјРЅРµ!
+	AI_Output(hero,self,"Stt_311_Fisk_MordragKO_Relax_15_00");	//РЈСЃРїРѕРєРѕР№СЃСЏ! Р‘С‹С‚СЊ РјРѕР¶РµС‚, СЏ РїРѕРјРѕРіСѓ С‚РµР±Рµ?
+	AI_Output(self,hero,"Calash_DIA2_02");	//РўРѕ РµСЃС‚СЊ, С‚С‹ РЅРµ СЃРѕР±РёСЂР°РµС€СЊСЃСЏ РјРµРЅСЏ СѓР±РёС‚СЊ?
+	AI_Output(hero,self,"Info_Swiney_Schuerfer_Nein_15_00");	//РќРµС‚.
+	AI_Output(self,hero,"Calash_DIA2_03");	//Р›Р°РґРЅРѕ... РЈР±РµРґРёР»...
 	AI_RemoveWeapon(self);
 };
 
@@ -170,7 +170,7 @@ instance INFO_CALASH_DIA3(C_Info)
 	condition = info_calash_dia3_condition;
 	information = info_calash_dia3_info;
 	permanent = 0;
-	description = "Люди Гомеза больше не опасны!";
+	description = "Р›СЋРґРё Р“РѕРјРµР·Р° Р±РѕР»СЊС€Рµ РЅРµ РѕРїР°СЃРЅС‹!";
 };
 
 
@@ -184,8 +184,8 @@ func int info_calash_dia3_condition()
 
 func void info_calash_dia3_info()
 {
-	AI_Output(hero,self,"Info_Lee_now_freeminefree_15_01");	//Люди Гомеза больше не опасны!
-	AI_Output(self,hero,"Calash_DIA3_01");	//Наконец! Теперь я могу вернуться в лагерь!
+	AI_Output(hero,self,"Info_Lee_now_freeminefree_15_01");	//Р›СЋРґРё Р“РѕРјРµР·Р° Р±РѕР»СЊС€Рµ РЅРµ РѕРїР°СЃРЅС‹!
+	AI_Output(self,hero,"Calash_DIA3_01");	//РќР°РєРѕРЅРµС†! РўРµРїРµСЂСЊ СЏ РјРѕРіСѓ РІРµСЂРЅСѓС‚СЊСЃСЏ РІ Р»Р°РіРµСЂСЊ!
 	B_GiveXP(100);
 	Npc_ExchangeRoutine(self,"FMTakenBack");
 	AI_StopProcessInfos(self);

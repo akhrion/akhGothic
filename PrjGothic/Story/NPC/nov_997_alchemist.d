@@ -1,7 +1,7 @@
 
 instance NOV_997_ALCHEMIST(Npc_Default)
 {
-	name[0] = "Труп";
+	name[0] = "РўСЂСѓРї";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 10;

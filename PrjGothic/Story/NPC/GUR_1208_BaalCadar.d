@@ -1,7 +1,7 @@
 
 instance GUR_1208_BaalCadar(Npc_Default)
 {
-	name[0] = "Идол Кадар";
+	name[0] = "РРґРѕР» РљР°РґР°СЂ";
 	npcType = npctype_main;
 	guild = GIL_GUR;
 	level = 28;

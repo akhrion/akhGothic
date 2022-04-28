@@ -1,7 +1,7 @@
 
 instance KDW_605_Riordian(Npc_Default)
 {
-	name[0] = "Риордан";
+	name[0] = "Р РёРѕСЂРґР°РЅ";
 	npcType = npctype_friend;
 	guild = GIL_KDW;
 	level = 25;

@@ -20,11 +20,11 @@ func int KDF_401_Damarok_WELCOME_Condition()
 func void KDF_401_Damarok_WELCOME_Info()
 {
 	AI_GotoNpc(self,hero);
-	AI_Output(self,other,"KDF_401_Damarok_Alchemy_01");	//Теперь я могу уделить тебе время и обучить тебя искусству алхимии.
+	AI_Output(self,other,"KDF_401_Damarok_Alchemy_01");	//РўРµРїРµСЂСЊ СЏ РјРѕРіСѓ СѓРґРµР»РёС‚СЊ С‚РµР±Рµ РІСЂРµРјСЏ Рё РѕР±СѓС‡РёС‚СЊ С‚РµР±СЏ РёСЃРєСѓСЃСЃС‚РІСѓ Р°Р»С…РёРјРёРё.
 	if(ALCHEMYACTIVE == FALSE)
 	{
 		Log_CreateTopic(GE_TeacherOC,LOG_NOTE);
-		B_LogEntry(GE_TeacherOC,"Маг Огня Дамарок может обучить меня алхимии.");
+		B_LogEntry(GE_TeacherOC,"РњР°Рі РћРіРЅСЏ Р”Р°РјР°СЂРѕРє РјРѕР¶РµС‚ РѕР±СѓС‡РёС‚СЊ РјРµРЅСЏ Р°Р»С…РёРјРёРё.");
 	};
 	Corristo_KDFAufnahme = 6;
 	B_Story_Feueraufnahme();
@@ -62,7 +62,7 @@ instance KDF_401_DAMAROK_TEACH(C_Info)
 	information = kdf_401_damarok_teach_info;
 	important = 0;
 	permanent = 1;
-	description = "Я хочу обрести магические знания.";
+	description = "РЇ С…РѕС‡Сѓ РѕР±СЂРµСЃС‚Рё РјР°РіРёС‡РµСЃРєРёРµ Р·РЅР°РЅРёСЏ.";
 };
 
 
@@ -76,17 +76,17 @@ func int kdf_401_damarok_teach_condition()
 
 func void kdf_401_damarok_teach_info()
 {
-	AI_Output(other,self,"Kdf_404_Xardas_SELLMAGICSTUFF_Info_15_01");	//Я хочу обрести магические знания.
+	AI_Output(other,self,"Kdf_404_Xardas_SELLMAGICSTUFF_Info_15_01");	//РЇ С…РѕС‡Сѓ РѕР±СЂРµСЃС‚Рё РјР°РіРёС‡РµСЃРєРёРµ Р·РЅР°РЅРёСЏ.
 	if(ALCHEMYACTIVE == FALSE)
 	{
-		AI_Output(self,other,"KDF_401_Damarok_Alchemy_02");	//Что ты хочешь узнать?
+		AI_Output(self,other,"KDF_401_Damarok_Alchemy_02");	//Р§С‚Рѕ С‚С‹ С…РѕС‡РµС€СЊ СѓР·РЅР°С‚СЊ?
 		Info_ClearChoices(kdf_401_damarok_teach);
 		Info_AddChoice(kdf_401_damarok_teach,DIALOG_BACK,kdf_401_damarok_teach_back);
-		Info_AddChoice(kdf_401_damarok_teach,"Алхимия (10 очков обучения)",kdf_401_damarok_teach_alchemy);
+		Info_AddChoice(kdf_401_damarok_teach,"РђР»С…РёРјРёСЏ (10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",kdf_401_damarok_teach_alchemy);
 	}
 	else
 	{
-		AI_Output(self,other,"KDF_401_Damarok_Alchemy_05");	//Ты уже знаешь все, чему я мог обучить тебя.
+		AI_Output(self,other,"KDF_401_Damarok_Alchemy_05");	//РўС‹ СѓР¶Рµ Р·РЅР°РµС€СЊ РІСЃРµ, С‡РµРјСѓ СЏ РјРѕРі РѕР±СѓС‡РёС‚СЊ С‚РµР±СЏ.
 		LOG_DAMAROKTRAIN = TRUE;
 	};
 };
@@ -100,19 +100,19 @@ func void kdf_401_damarok_teach_alchemy()
 {
 	if(hero.lp < 10)
 	{
-		PrintScreen("Недостаточно очков обучения!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
+		PrintScreen("РќРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕ РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ!",-1,-1,"FONT_OLD_20_WHITE.TGA",2);
 		Info_ClearChoices(kdf_401_damarok_teach);
 		Info_AddChoice(kdf_401_damarok_teach,DIALOG_BACK,kdf_401_damarok_teach_back);
-		Info_AddChoice(kdf_401_damarok_teach,"Алхимия (10 очков обучения)",kdf_401_damarok_teach_alchemy);
+		Info_AddChoice(kdf_401_damarok_teach,"РђР»С…РёРјРёСЏ (10 РѕС‡РєРѕРІ РѕР±СѓС‡РµРЅРёСЏ)",kdf_401_damarok_teach_alchemy);
 	}
 	else
 	{
-		AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01");	//Начнем прямо сейчас.
-		AI_Output(self,other,"KDF_401_Damarok_Alchemy_03");	//Чтобы приготовить зелье на алхимическом столе, тебе понадобится лабораторная пробирка.
-		AI_Output(self,other,"KDF_401_Damarok_Alchemy_04");	//Также тебе понадобятся различные растения и другие ингредиенты.
-		Log_CreateTopic("Алхимия",LOG_NOTE);
-		B_LogEntry("Алхимия","Дамарок рассказал мне о базовых требованиях для приготовления зелий. Теперь нужно искать рецепты.");
-		PrintScreen("Изучен навык алхимии!",-1,-1,"FONT_OLD_20_WHITE.TGA",4);
+		AI_Output(other,self,"GRD_205_Scorpio_CROSSBOW2_OK_15_01");	//РќР°С‡РЅРµРј РїСЂСЏРјРѕ СЃРµР№С‡Р°СЃ.
+		AI_Output(self,other,"KDF_401_Damarok_Alchemy_03");	//Р§С‚РѕР±С‹ РїСЂРёРіРѕС‚РѕРІРёС‚СЊ Р·РµР»СЊРµ РЅР° Р°Р»С…РёРјРёС‡РµСЃРєРѕРј СЃС‚РѕР»Рµ, С‚РµР±Рµ РїРѕРЅР°РґРѕР±РёС‚СЃСЏ Р»Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ РїСЂРѕР±РёСЂРєР°.
+		AI_Output(self,other,"KDF_401_Damarok_Alchemy_04");	//РўР°РєР¶Рµ С‚РµР±Рµ РїРѕРЅР°РґРѕР±СЏС‚СЃСЏ СЂР°Р·Р»РёС‡РЅС‹Рµ СЂР°СЃС‚РµРЅРёСЏ Рё РґСЂСѓРіРёРµ РёРЅРіСЂРµРґРёРµРЅС‚С‹.
+		Log_CreateTopic("РђР»С…РёРјРёСЏ",LOG_NOTE);
+		B_LogEntry("РђР»С…РёРјРёСЏ","Р”Р°РјР°СЂРѕРє СЂР°СЃСЃРєР°Р·Р°Р» РјРЅРµ Рѕ Р±Р°Р·РѕРІС‹С… С‚СЂРµР±РѕРІР°РЅРёСЏС… РґР»СЏ РїСЂРёРіРѕС‚РѕРІР»РµРЅРёСЏ Р·РµР»РёР№. РўРµРїРµСЂСЊ РЅСѓР¶РЅРѕ РёСЃРєР°С‚СЊ СЂРµС†РµРїС‚С‹.");
+		PrintScreen("РР·СѓС‡РµРЅ РЅР°РІС‹Рє Р°Р»С…РёРјРёРё!",-1,-1,"FONT_OLD_20_WHITE.TGA",4);
 		hero.lp = hero.lp - 10;
 		ALCHEMYACTIVE = TRUE;
 		Npc_SetTalentSkill(hero,NPC_TALENT_REGENERATE,1);
@@ -149,7 +149,7 @@ instance KDF_401_DAMAROK_TRADE(C_Info)
 	information = kdf_401_damarok_trade_info;
 	important = 0;
 	permanent = 1;
-	description = "Покажи мне свои товары.";
+	description = "РџРѕРєР°Р¶Рё РјРЅРµ СЃРІРѕРё С‚РѕРІР°СЂС‹.";
 	trade = 1;
 };
 
@@ -164,6 +164,6 @@ func int kdf_401_damarok_trade_condition()
 
 func void kdf_401_damarok_trade_info()
 {
-	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//Покажи мне свои товары.
+	AI_Output(other,self,"DIA_BaalKagan_TRADE_15_00");	//РџРѕРєР°Р¶Рё РјРЅРµ СЃРІРѕРё С‚РѕРІР°СЂС‹.
 };
 

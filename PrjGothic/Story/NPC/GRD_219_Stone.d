@@ -1,7 +1,7 @@
 
 instance GRD_219_Stone(Npc_Default)
 {
-	name[0] = "Стоун";
+	name[0] = "РЎС‚РѕСѓРЅ";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;

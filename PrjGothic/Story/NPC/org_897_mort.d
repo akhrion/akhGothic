@@ -1,7 +1,7 @@
 
 instance ORG_897_MORT(Npc_Default)
 {
-	name[0] = "Морт";
+	name[0] = "РњРѕСЂС‚";
 	npcType = npctype_friend;
 	guild = GIL_KDF;
 	level = 999;
@@ -68,7 +68,7 @@ instance INFO_MORT_LETSGO(C_Info)
 	information = info_mort_letsgo_info;
 	important = 0;
 	permanent = 1;
-	description = "Пойдем со мной, мне нужна твоя помощь.";
+	description = "РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.";
 };
 
 
@@ -82,7 +82,7 @@ func int info_mort_letsgo_condition()
 
 func void info_mort_letsgo_info()
 {
-	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//Пойдем со мной, мне нужна твоя помощь.
+	AI_Output(hero,self,"Info_GornFM_FOLLOW_15_01");	//РџРѕР№РґРµРј СЃРѕ РјРЅРѕР№, РјРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ.
 	AI_Standup(self);
 	B_GiveXP(100);
 	self.aivar[AIV_PARTYMEMBER] = TRUE;

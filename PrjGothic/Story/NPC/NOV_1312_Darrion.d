@@ -1,7 +1,7 @@
 
 instance NOV_1312_Darrion(Npc_Default)
 {
-	name[0] = "Даррион";
+	name[0] = "Р”Р°СЂСЂРёРѕРЅ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

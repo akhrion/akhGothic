@@ -1,7 +1,7 @@
 
 instance KDF_403_Drago(Npc_Default)
 {
-	name[0] = "Драго";
+	name[0] = "Р”СЂР°РіРѕ";
 	npcType = npctype_main;
 	guild = GIL_KDF;
 	level = 28;

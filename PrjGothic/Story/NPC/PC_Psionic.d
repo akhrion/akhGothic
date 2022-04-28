@@ -1,7 +1,7 @@
 
 instance PC_Psionic(Npc_Default)
 {
-	name[0] = "Лестер";
+	name[0] = "Р›РµСЃС‚РµСЂ";
 	npcType = npctype_friend;
 	guild = GIL_NOV;
 	level = 999;

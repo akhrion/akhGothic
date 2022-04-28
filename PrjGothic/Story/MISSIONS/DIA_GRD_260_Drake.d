@@ -18,7 +18,7 @@ func int Grd_260_Drake_Exit_Condition()
 
 func void Grd_260_Drake_Exit_Info()
 {
-	AI_Output(other,self,"Info_Exit_Info_15_01");	//До встречи!
+	AI_Output(other,self,"Info_Exit_Info_15_01");	//Р”Рѕ РІСЃС‚СЂРµС‡Рё!
 	AI_StopProcessInfos(self);
 };
 
@@ -30,7 +30,7 @@ instance Grd_260_Drake_Gefahr(C_Info)
 	information = Grd_260_Drake_Gefahr_Info;
 	important = 0;
 	permanent = 0;
-	description = "Расскажи мне, чего здесь следует остерегаться.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ, С‡РµРіРѕ Р·РґРµСЃСЊ СЃР»РµРґСѓРµС‚ РѕСЃС‚РµСЂРµРіР°С‚СЊСЃСЏ.";
 };
 
 
@@ -41,12 +41,12 @@ func int Grd_260_Drake_Gefahr_Condition()
 
 func void Grd_260_Drake_Gefahr_Info()
 {
-	AI_Output(other,self,"Grd_260_Drake_Gefahr_Info_15_01");	//Расскажи мне, чего здесь следует остерегаться.
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_02");	//Главную опасность представляют ползуны.
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_03");	//Из-за них мы вынуждены были оставить несколько забоев. Они даже съели нескольких рудокопов.
-	AI_Output(other,self,"Grd_260_Drake_Gefahr_Info_15_04");	//Расскажи мне о ползунах.
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");	//У меня в горле совсем пересохло...
-	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");	//Если ты принесешь мне пиво, я расскажу тебе о них.
+	AI_Output(other,self,"Grd_260_Drake_Gefahr_Info_15_01");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ, С‡РµРіРѕ Р·РґРµСЃСЊ СЃР»РµРґСѓРµС‚ РѕСЃС‚РµСЂРµРіР°С‚СЊСЃСЏ.
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_02");	//Р“Р»Р°РІРЅСѓСЋ РѕРїР°СЃРЅРѕСЃС‚СЊ РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‚ РїРѕР»Р·СѓРЅС‹.
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_03");	//РР·-Р·Р° РЅРёС… РјС‹ РІС‹РЅСѓР¶РґРµРЅС‹ Р±С‹Р»Рё РѕСЃС‚Р°РІРёС‚СЊ РЅРµСЃРєРѕР»СЊРєРѕ Р·Р°Р±РѕРµРІ. РћРЅРё РґР°Р¶Рµ СЃСЉРµР»Рё РЅРµСЃРєРѕР»СЊРєРёС… СЂСѓРґРѕРєРѕРїРѕРІ.
+	AI_Output(other,self,"Grd_260_Drake_Gefahr_Info_15_04");	//Р Р°СЃСЃРєР°Р¶Рё РјРЅРµ Рѕ РїРѕР»Р·СѓРЅР°С….
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_05");	//РЈ РјРµРЅСЏ РІ РіРѕСЂР»Рµ СЃРѕРІСЃРµРј РїРµСЂРµСЃРѕС…Р»Рѕ...
+	AI_Output(self,other,"Grd_260_Drake_Gefahr_Info_11_06");	//Р•СЃР»Рё С‚С‹ РїСЂРёРЅРµСЃРµС€СЊ РјРЅРµ РїРёРІРѕ, СЏ СЂР°СЃСЃРєР°Р¶Сѓ С‚РµР±Рµ Рѕ РЅРёС….
 };
 
 
@@ -57,7 +57,7 @@ instance Grd_260_Drake_Crawler_Okay(C_Info)
 	information = Grd_260_Drake_Crawler_Okay_Info;
 	important = 0;
 	permanent = 1;
-	description = "(предложить пиво)";
+	description = "(РїСЂРµРґР»РѕР¶РёС‚СЊ РїРёРІРѕ)";
 };
 
 
@@ -71,10 +71,10 @@ func int Grd_260_Drake_Crawler_Okay_Condition()
 
 func void Grd_260_Drake_Crawler_Okay_Info()
 {
-	AI_Output(hero,self,"Grd_260_Drake_Crawler_Okay_15_01");	//Вот, выпей это за мое здоровье!
+	AI_Output(hero,self,"Grd_260_Drake_Crawler_Okay_15_01");	//Р’РѕС‚, РІС‹РїРµР№ СЌС‚Рѕ Р·Р° РјРѕРµ Р·РґРѕСЂРѕРІСЊРµ!
 	if(Npc_HasItems(hero,ItFoBeer))
 	{
-		b_printtrademsg1("Отдано пиво.");
+		b_printtrademsg1("РћС‚РґР°РЅРѕ РїРёРІРѕ.");
 		B_GiveInvItems(hero,self,ItFoBeer,1);
 		DRAKE_BEER = TRUE;
 		if(C_BodyStateContains(self,BS_SIT))
@@ -83,13 +83,13 @@ func void Grd_260_Drake_Crawler_Okay_Info()
 			AI_TurnToNPC(self,hero);
 		};
 		AI_UseItem(self,ItFoBeer);
-		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");	//Спасибо. Ползуны живут большими стаями в старых заброшенных забоях.
-		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_03");	//В основном стволе они еще ни на кого не нападали. Если ты наткнешься на ползуна, беги от него как можно скорее!
-		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_04");	//Или стань спиной к стене. Тогда, может быть, тебе удастся спастись.
+		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_02");	//РЎРїР°СЃРёР±Рѕ. РџРѕР»Р·СѓРЅС‹ Р¶РёРІСѓС‚ Р±РѕР»СЊС€РёРјРё СЃС‚Р°СЏРјРё РІ СЃС‚Р°СЂС‹С… Р·Р°Р±СЂРѕС€РµРЅРЅС‹С… Р·Р°Р±РѕСЏС….
+		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_03");	//Р’ РѕСЃРЅРѕРІРЅРѕРј СЃС‚РІРѕР»Рµ РѕРЅРё РµС‰Рµ РЅРё РЅР° РєРѕРіРѕ РЅРµ РЅР°РїР°РґР°Р»Рё. Р•СЃР»Рё С‚С‹ РЅР°С‚РєРЅРµС€СЊСЃСЏ РЅР° РїРѕР»Р·СѓРЅР°, Р±РµРіРё РѕС‚ РЅРµРіРѕ РєР°Рє РјРѕР¶РЅРѕ СЃРєРѕСЂРµРµ!
+		AI_Output(self,hero,"Grd_260_Drake_Crawler_Okay_11_04");	//РР»Рё СЃС‚Р°РЅСЊ СЃРїРёРЅРѕР№ Рє СЃС‚РµРЅРµ. РўРѕРіРґР°, РјРѕР¶РµС‚ Р±С‹С‚СЊ, С‚РµР±Рµ СѓРґР°СЃС‚СЃСЏ СЃРїР°СЃС‚РёСЃСЊ.
 	}
 	else
 	{
-		AI_Output(self,other,"Grd_260_Drake_Crawler_Okay_11_06");	//Ты шутишь, да? Приходи, когда у тебя будет пиво.
+		AI_Output(self,other,"Grd_260_Drake_Crawler_Okay_11_06");	//РўС‹ С€СѓС‚РёС€СЊ, РґР°? РџСЂРёС…РѕРґРё, РєРѕРіРґР° Сѓ С‚РµР±СЏ Р±СѓРґРµС‚ РїРёРІРѕ.
 	};
 };
 
@@ -101,7 +101,7 @@ instance Grd_260_Drake_Mine(C_Info)
 	information = Grd_260_Drake_Mine_Info;
 	important = 0;
 	permanent = 0;
-	description = "Ты можешь рассказать мне что-нибудь о шахте?";
+	description = "РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ Рѕ С€Р°С…С‚Рµ?";
 };
 
 
@@ -112,10 +112,10 @@ func int Grd_260_Drake_Mine_Condition()
 
 func void Grd_260_Drake_Mine_Info()
 {
-	AI_Output(other,self,"Grd_260_Drake_Mine_Info_15_01");	//Ты можешь рассказать мне что-нибудь о шахте?
-	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");	//Мы находимся в главном стволе. Вниз можно спуститься с помощью системы переходов.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");	//Рудокопы работают везде. Но будь осторожен, здесь очень много ползунов.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_04");	//На нижнем горизонте стоит плавильня. Мы сами плавим небольшую часть добываемой руды.
+	AI_Output(other,self,"Grd_260_Drake_Mine_Info_15_01");	//РўС‹ РјРѕР¶РµС€СЊ СЂР°СЃСЃРєР°Р·Р°С‚СЊ РјРЅРµ С‡С‚Рѕ-РЅРёР±СѓРґСЊ Рѕ С€Р°С…С‚Рµ?
+	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_02");	//РњС‹ РЅР°С…РѕРґРёРјСЃСЏ РІ РіР»Р°РІРЅРѕРј СЃС‚РІРѕР»Рµ. Р’РЅРёР· РјРѕР¶РЅРѕ СЃРїСѓСЃС‚РёС‚СЊСЃСЏ СЃ РїРѕРјРѕС‰СЊСЋ СЃРёСЃС‚РµРјС‹ РїРµСЂРµС…РѕРґРѕРІ.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_03");	//Р СѓРґРѕРєРѕРїС‹ СЂР°Р±РѕС‚Р°СЋС‚ РІРµР·РґРµ. РќРѕ Р±СѓРґСЊ РѕСЃС‚РѕСЂРѕР¶РµРЅ, Р·РґРµСЃСЊ РѕС‡РµРЅСЊ РјРЅРѕРіРѕ РїРѕР»Р·СѓРЅРѕРІ.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Info_11_04");	//РќР° РЅРёР¶РЅРµРј РіРѕСЂРёР·РѕРЅС‚Рµ СЃС‚РѕРёС‚ РїР»Р°РІРёР»СЊРЅСЏ. РњС‹ СЃР°РјРё РїР»Р°РІРёРј РЅРµР±РѕР»СЊС€СѓСЋ С‡Р°СЃС‚СЊ РґРѕР±С‹РІР°РµРјРѕР№ СЂСѓРґС‹.
 };
 
 
@@ -126,7 +126,7 @@ instance Grd_260_Drake_Mine_Mehr(C_Info)
 	information = Grd_260_Drake_Mine_Mehr_Info;
 	important = 0;
 	permanent = 0;
-	description = "Расскажи об этом что-нибудь еще.";
+	description = "Р Р°СЃСЃРєР°Р¶Рё РѕР± СЌС‚РѕРј С‡С‚Рѕ-РЅРёР±СѓРґСЊ РµС‰Рµ.";
 };
 
 
@@ -140,9 +140,9 @@ func int Grd_260_Drake_Mine_Mehr_Condition()
 
 func void Grd_260_Drake_Mine_Mehr_Info()
 {
-	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");	//Расскажи об этом что-нибудь еще.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_02");	//Я думаю, Вайпер сможет рассказать тебе больше. Спроси его. Он наш плавильщик.
-	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_03");	//Или поговори с Яном. Он управляет всеми делами шахты.
+	AI_Output(other,self,"Grd_260_Drake_Mine_Mehr_Info_15_01");	//Р Р°СЃСЃРєР°Р¶Рё РѕР± СЌС‚РѕРј С‡С‚Рѕ-РЅРёР±СѓРґСЊ РµС‰Рµ.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_02");	//РЇ РґСѓРјР°СЋ, Р’Р°Р№РїРµСЂ СЃРјРѕР¶РµС‚ СЂР°СЃСЃРєР°Р·Р°С‚СЊ С‚РµР±Рµ Р±РѕР»СЊС€Рµ. РЎРїСЂРѕСЃРё РµРіРѕ. РћРЅ РЅР°С€ РїР»Р°РІРёР»СЊС‰РёРє.
+	AI_Output(self,other,"Grd_260_Drake_Mine_Mehr_Info_11_03");	//РР»Рё РїРѕРіРѕРІРѕСЂРё СЃ РЇРЅРѕРј. РћРЅ СѓРїСЂР°РІР»СЏРµС‚ РІСЃРµРјРё РґРµР»Р°РјРё С€Р°С…С‚С‹.
 };
 
 
@@ -153,7 +153,7 @@ instance Grd_260_Drake_Ian(C_Info)
 	information = Grd_260_Drake_Ian_Info;
 	important = 0;
 	permanent = 0;
-	description = "Где мне найти Яна?";
+	description = "Р“РґРµ РјРЅРµ РЅР°Р№С‚Рё РЇРЅР°?";
 };
 
 
@@ -167,11 +167,11 @@ func int Grd_260_Drake_Ian_Condition()
 
 func void Grd_260_Drake_Ian_Info()
 {
-	AI_Output(other,self,"Grd_260_Drake_Ian_Info_15_01");	//Где мне найти Яна?
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");	//Он находится в центре главного ствола, возле склада.
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");	//Да, ты знаешь Торуса? Забудь здесь о нем!
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_04");	//В шахте командует только один человек, и это Ян. Он у нас главный.
-	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_05");	//Если ты поссорился с ним, считай, что ты поссорился со всеми в шахте, понял?
+	AI_Output(other,self,"Grd_260_Drake_Ian_Info_15_01");	//Р“РґРµ РјРЅРµ РЅР°Р№С‚Рё РЇРЅР°?
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_02");	//РћРЅ РЅР°С…РѕРґРёС‚СЃСЏ РІ С†РµРЅС‚СЂРµ РіР»Р°РІРЅРѕРіРѕ СЃС‚РІРѕР»Р°, РІРѕР·Р»Рµ СЃРєР»Р°РґР°.
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_03");	//Р”Р°, С‚С‹ Р·РЅР°РµС€СЊ РўРѕСЂСѓСЃР°? Р—Р°Р±СѓРґСЊ Р·РґРµСЃСЊ Рѕ РЅРµРј!
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_04");	//Р’ С€Р°С…С‚Рµ РєРѕРјР°РЅРґСѓРµС‚ С‚РѕР»СЊРєРѕ РѕРґРёРЅ С‡РµР»РѕРІРµРє, Рё СЌС‚Рѕ РЇРЅ. РћРЅ Сѓ РЅР°СЃ РіР»Р°РІРЅС‹Р№.
+	AI_Output(self,other,"Grd_260_Drake_Ian_Info_11_05");	//Р•СЃР»Рё С‚С‹ РїРѕСЃСЃРѕСЂРёР»СЃСЏ СЃ РЅРёРј, СЃС‡РёС‚Р°Р№, С‡С‚Рѕ С‚С‹ РїРѕСЃСЃРѕСЂРёР»СЃСЏ СЃРѕ РІСЃРµРјРё РІ С€Р°С…С‚Рµ, РїРѕРЅСЏР»?
 };
 
 
@@ -195,9 +195,9 @@ func int Grd_260_Drake_GARDEAUFNAHME_Condition()
 
 func void Grd_260_Drake_GARDEAUFNAHME_Info()
 {
-	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_01");	//Эй! Ты отлично расправился с ползунами! Думаю, теперь ты заслуживаешь должности стражника.
-	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02");	//Иди в Старый лагерь и поговори с Торусом!
+	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_01");	//Р­Р№! РўС‹ РѕС‚Р»РёС‡РЅРѕ СЂР°СЃРїСЂР°РІРёР»СЃСЏ СЃ РїРѕР»Р·СѓРЅР°РјРё! Р”СѓРјР°СЋ, С‚РµРїРµСЂСЊ С‚С‹ Р·Р°СЃР»СѓР¶РёРІР°РµС€СЊ РґРѕР»Р¶РЅРѕСЃС‚Рё СЃС‚СЂР°Р¶РЅРёРєР°.
+	AI_Output(self,other,"Grd_260_Drake_GARDEAUFNAHME_Info_11_02");	//РРґРё РІ РЎС‚Р°СЂС‹Р№ Р»Р°РіРµСЂСЊ Рё РїРѕРіРѕРІРѕСЂРё СЃ РўРѕСЂСѓСЃРѕРј!
 	Log_CreateTopic(GE_BecomeGuard,LOG_NOTE);
-	B_LogEntry(GE_BecomeGuard,"Когда я вынесу яйца ползунов из шахты, то должен буду поговорить с Торусом. Может быть, он зачислит меня в ряды стражников.");
+	B_LogEntry(GE_BecomeGuard,"РљРѕРіРґР° СЏ РІС‹РЅРµСЃСѓ СЏР№С†Р° РїРѕР»Р·СѓРЅРѕРІ РёР· С€Р°С…С‚С‹, С‚Рѕ РґРѕР»Р¶РµРЅ Р±СѓРґСѓ РїРѕРіРѕРІРѕСЂРёС‚СЊ СЃ РўРѕСЂСѓСЃРѕРј. РњРѕР¶РµС‚ Р±С‹С‚СЊ, РѕРЅ Р·Р°С‡РёСЃР»РёС‚ РјРµРЅСЏ РІ СЂСЏРґС‹ СЃС‚СЂР°Р¶РЅРёРєРѕРІ.");
 };
 

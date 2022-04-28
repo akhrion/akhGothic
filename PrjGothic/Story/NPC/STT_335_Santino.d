@@ -1,7 +1,7 @@
 
 instance STT_335_Santino(Npc_Default)
 {
-	name[0] = "Сантино";
+	name[0] = "РЎР°РЅС‚РёРЅРѕ";
 	npcType = npctype_main;
 	guild = GIL_STT;
 	level = 7;

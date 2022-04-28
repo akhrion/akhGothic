@@ -1,7 +1,7 @@
 
 instance NOV_1372_DUSTY(Npc_Default)
 {
-	name[0] = "Дасти";
+	name[0] = "Р”Р°СЃС‚Рё";
 	npcType = npctype_friend;
 	guild = GIL_NOV;
 	level = 15;

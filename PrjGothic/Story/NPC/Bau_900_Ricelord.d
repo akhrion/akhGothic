@@ -1,7 +1,7 @@
 
 instance Bau_900_Ricelord(Npc_Default)
 {
-	name[0] = "Ëîðä";
+	name[0] = "Ð›Ð¾Ñ€Ð´";
 	npcType = npctype_main;
 	guild = GIL_BAU;
 	level = 10;

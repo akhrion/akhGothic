@@ -3,14 +3,14 @@ const int Value_1H_Sword_01 = 100;
 
 instance ItMw_1H_Club_01(C_Item)
 {
-	name = "Дубина";
+	name = "РџР°Р»РєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
 	value = 2;
 	damageTotal = 5;
 	damagetype = DAM_BLUNT;
-	range = 100;
+	range = 70;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 5;
 	visual = "ItMw_1H_Club_01.3DS";
@@ -23,10 +23,78 @@ instance ItMw_1H_Club_01(C_Item)
 	text[5] = NAME_Value;
 	count[5] = value;
 };
+instance ItMw_1H_Club_02(C_Item)
+{
+	name = "Р”СѓР±РёРЅР°";
+	mainflag = ITEM_KAT_NF;
+	flags = ITEM_AXE;
+	material = MAT_WOOD;
+	value = 2;
+	damageTotal = 10;
+	damagetype = DAM_BLUNT;
+	range = 100;
+	cond_atr[2] = ATR_STRENGTH;
+	cond_value[2] = 10;
+	visual = "ItMw_1H_Club_01.3DS";
+	description = name;
+	text[2] = NAME_Damage;
+	count[2] = damageTotal;
+	text[3] = NAME_Str_needed;
+	count[3] = cond_value[2];
+	text[4] = NAME_OneHanded;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItMw_2H_Club_01(C_Item)
+{
+	name = "Р”СЂС‹РЅ";
+	mainflag = ITEM_KAT_NF;
+	flags = ITEM_2HD_AXE;
+	material = MAT_WOOD;
+	value = 5;
+	damageTotal = 30;
+	damagetype = DAM_BLUNT;
+	range = 150;
+	cond_atr[2] = ATR_STRENGTH;
+	cond_value[2] = 30;
+	visual = "ItMw_1H_Club_01.3DS";
+	description = name;
+	text[2] = NAME_Damage;
+	count[2] = damageTotal;
+	text[3] = NAME_Str_needed;
+	count[3] = cond_value[2];
+	text[4] = NAME_TwoHanded;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+instance ItMw_2H_Club_02(C_Item)
+{
+	name = "РЈСЃРёР»РµРЅРЅС‹Р№ Р”СЂС‹РЅ";
+	mainflag = ITEM_KAT_NF;
+	flags = ITEM_2HD_AXE;
+	material = MAT_WOOD;
+	value = 15;
+	damageTotal = 40;
+	damagetype = DAM_BLUNT;
+	range = 150;
+	cond_atr[2] = ATR_STRENGTH;
+	cond_value[2] = 40;
+	visual = "ItMw_1H_Club_01.3DS";
+	description = name;
+	text[0] = "РћР±С‹С‡РЅС‹Р№ РґСЂС‹РЅ, РЅРѕ РЅР° РЅРµРј РµСЃС‚СЊ Р¶РµР»РµР·РЅС‹Рµ РєРѕР»СЊС†Р°.";
+	text[1] = "РњРѕР¶РЅРѕ Р±РёС‚СЊ СЃРёР»СЊРЅРµРµ Рё РЅРµ Р±РѕСЏС‚СЊСЃСЏ,С‡С‚Рѕ РїР°Р»РєР° СЂР°Р·Р»РµС‚РёС‚СЃСЏ РІ С‰РµРїРєРё.";
+	text[2] = NAME_Damage;
+	count[2] = damageTotal;
+	text[3] = NAME_Str_needed;
+	count[3] = cond_value[2];
+	text[4] = NAME_TwoHanded;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
 
 instance ItMw_1H_Poker_01(C_Item)
 {
-	name = "Кочерга";
+	name = "РљРѕС‡РµСЂРіР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -49,7 +117,7 @@ instance ItMw_1H_Poker_01(C_Item)
 
 instance ItMw_1H_Sickle_01(C_Item)
 {
-	name = "Серп";
+	name = "РЎРµСЂРї";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_METAL;
@@ -72,7 +140,7 @@ instance ItMw_1H_Sickle_01(C_Item)
 
 instance ItMwPickaxe(C_Item)
 {
-	name = "Кирка";
+	name = "РљРёСЂРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	value = 2;
@@ -95,7 +163,7 @@ instance ItMwPickaxe(C_Item)
 
 instance ItMw_1H_Sledgehammer_01(C_Item)
 {
-	name = "Кузнечный молот";
+	name = "РљСѓР·РЅРµС‡РЅС‹Р№ РјРѕР»РѕС‚";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -118,7 +186,7 @@ instance ItMw_1H_Sledgehammer_01(C_Item)
 
 instance ItMw_1H_Mace_Light_01(C_Item)
 {
-	name = "Палица";
+	name = "РџР°Р»РёС†Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -141,7 +209,7 @@ instance ItMw_1H_Mace_Light_01(C_Item)
 
 instance ItMw_1H_Hatchet_01(C_Item)
 {
-	name = "Топорик";
+	name = "РўРѕРїРѕСЂРёРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -164,11 +232,11 @@ instance ItMw_1H_Hatchet_01(C_Item)
 
 instance ITMW_SKELETON_SWORD(C_Item)
 {
-	name = "Древний меч";
+	name = "Р”СЂРµРІРЅРёР№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
-	value = 0;
+	value = 5;
 	damageTotal = 10;
 	damagetype = DAM_EDGE;
 	range = 100;
@@ -185,16 +253,16 @@ instance ITMW_SKELETON_SWORD(C_Item)
 
 instance ItMw_1H_Sword_Old_01(C_Item)
 {
-	name = "Ржавый меч";
+	name = "Р Р¶Р°РІС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = 10;
 	damageTotal = 10;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 70;
 	cond_atr[2] = ATR_STRENGTH;
-	cond_value[2] = 6;
+	cond_value[2] = 5;
 	visual = "ItMw_1H_Sword_Old_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
@@ -208,7 +276,7 @@ instance ItMw_1H_Sword_Old_01(C_Item)
 
 instance ItMw_1H_Nailmace_01(C_Item)
 {
-	name = "Дубина с гвоздями";
+	name = "Р”СѓР±РёРЅР° СЃ РіРІРѕР·РґСЏРјРё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -231,14 +299,14 @@ instance ItMw_1H_Nailmace_01(C_Item)
 
 instance ItMw_1H_Sword_Short_01(C_Item)
 {
-	name = "Короткий меч";
+	name = "РљРѕСЂРѕС‚РєРёР№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = 40;
 	damageTotal = 12;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 80;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 8;
 	visual = "ItMw_1H_Sword_Short_01.3DS";
@@ -254,14 +322,14 @@ instance ItMw_1H_Sword_Short_01(C_Item)
 
 instance ItMw_1H_Sword_Short_02(C_Item)
 {
-	name = "Защитник крестьянина";
+	name = "Р—Р°С‰РёС‚РЅРёРє РєСЂРµСЃС‚СЊСЏРЅРёРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = 60;
 	damageTotal = 14;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 80;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 10;
 	visual = "ItMw_1H_Sword_Short_02.3DS";
@@ -277,14 +345,14 @@ instance ItMw_1H_Sword_Short_02(C_Item)
 
 instance ItMw_1H_Sword_Short_03(C_Item)
 {
-	name = "Укус шныга";
+	name = "РЈРєСѓСЃ С€РЅС‹РіР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = 70;
 	damageTotal = 16;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 90;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 12;
 	visual = "ItMw_1H_Sword_Short_03.3DS";
@@ -300,7 +368,7 @@ instance ItMw_1H_Sword_Short_03(C_Item)
 
 instance ItMw_1H_Sword_Short_04(C_Item)
 {
-	name = "Шип ранений";
+	name = "РЁРёРї СЂР°РЅРµРЅРёР№";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -323,7 +391,7 @@ instance ItMw_1H_Sword_Short_04(C_Item)
 
 instance ItMw_1H_Sword_Short_05(C_Item)
 {
-	name = "Смирение рудокопа";
+	name = "РЎРјРёСЂРµРЅРёРµ СЂСѓРґРѕРєРѕРїР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -346,14 +414,14 @@ instance ItMw_1H_Sword_Short_05(C_Item)
 
 instance ItMw_1H_Axe_Old_01(C_Item)
 {
-	name = "Старый топор";
+	name = "РЎС‚Р°СЂС‹Р№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
-	value = 45;
+	value = 20;
 	damageTotal = 13;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 110;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 9;
 	visual = "ItMw_1H_Axe_Old_01.3DS";
@@ -369,11 +437,11 @@ instance ItMw_1H_Axe_Old_01(C_Item)
 
 instance ITMW_SKELETON_AXE(C_Item)
 {
-	name = "Древний топор";
+	name = "Р”СЂРµРІРЅРёР№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
-	value = 0;
+	value = 5;
 	damageTotal = 13;
 	damagetype = DAM_EDGE;
 	range = 100;
@@ -390,7 +458,7 @@ instance ITMW_SKELETON_AXE(C_Item)
 
 instance ItMw_1H_Scythe_01(C_Item)
 {
-	name = "Коса";
+	name = "РљРѕСЃР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -413,11 +481,11 @@ instance ItMw_1H_Scythe_01(C_Item)
 
 instance ITMW_SKELETON_SCYTHE(C_Item)
 {
-	name = "Древний косарь";
+	name = "Р”СЂРµРІРЅРёР№ РєРѕСЃР°СЂСЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
-	value = 0;
+	value = 5;
 	damageTotal = 15;
 	damagetype = DAM_EDGE;
 	range = 100;
@@ -434,12 +502,12 @@ instance ITMW_SKELETON_SCYTHE(C_Item)
 
 instance ItMw_2H_Staff_01(C_Item)
 {
-	name = "Боевой посох";
+	name = "Р‘РѕРµРІРѕР№ РїРѕСЃРѕС…";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 80;
-	damageTotal = 17;
+	damageTotal = 8;
 	damagetype = DAM_BLUNT;
 	range = 160;
 	cond_atr[2] = ATR_STRENGTH;
@@ -447,7 +515,7 @@ instance ItMw_2H_Staff_01(C_Item)
 	visual = "ItMw_2H_Staff_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -457,12 +525,12 @@ instance ItMw_2H_Staff_01(C_Item)
 
 instance ItMw_2H_Staff_02(C_Item)
 {
-	name = "Посох судьи";
+	name = "РџРѕСЃРѕС… СЃСѓРґСЊРё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 95;
-	damageTotal = 19;
+	damageTotal = 11;
 	damagetype = DAM_EDGE;
 	range = 160;
 	cond_atr[2] = ATR_STRENGTH;
@@ -470,7 +538,7 @@ instance ItMw_2H_Staff_02(C_Item)
 	visual = "ItMw_2H_Staff_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -480,12 +548,12 @@ instance ItMw_2H_Staff_02(C_Item)
 
 instance ItMw_2H_Staff_03(C_Item)
 {
-	name = "Посох священника";
+	name = "РџРѕСЃРѕС… СЃРІСЏС‰РµРЅРЅРёРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 125;
-	damageTotal = 22;
+	damageTotal = 14;
 	damagetype = DAM_BLUNT;
 	range = 160;
 	cond_atr[2] = ATR_STRENGTH;
@@ -493,7 +561,7 @@ instance ItMw_2H_Staff_03(C_Item)
 	visual = "ItMw_2H_Staff_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -503,7 +571,7 @@ instance ItMw_2H_Staff_03(C_Item)
 
 instance ItMw_1H_LightGuardsSword_03(C_Item)
 {
-	name = "Легкий меч стражника";
+	name = "Р›РµРіРєРёР№ РјРµС‡ СЃС‚СЂР°Р¶РЅРёРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -527,7 +595,7 @@ instance ItMw_1H_LightGuardsSword_03(C_Item)
 
 instance ItMw_1H_LightGuardsSword_03_Original(C_Item)
 {
-	name = "Легкий меч стражника";
+	name = "Р›РµРіРєРёР№ РјРµС‡ СЃС‚СЂР°Р¶РЅРёРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -550,7 +618,7 @@ instance ItMw_1H_LightGuardsSword_03_Original(C_Item)
 
 instance ItMw_1H_Mace_01(C_Item)
 {
-	name = "Тяжелая булава";
+	name = "РўСЏР¶РµР»Р°СЏ Р±СѓР»Р°РІР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -573,7 +641,7 @@ instance ItMw_1H_Mace_01(C_Item)
 
 instance ItMw_1H_Mace_02(C_Item)
 {
-	name = "Булава с шипами";
+	name = "Р‘СѓР»Р°РІР° СЃ С€РёРїР°РјРё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -596,7 +664,7 @@ instance ItMw_1H_Mace_02(C_Item)
 
 instance ItMw_1H_Mace_03(C_Item)
 {
-	name = "Жало шершня";
+	name = "Р–Р°Р»Рѕ С€РµСЂС€РЅСЏ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -619,7 +687,7 @@ instance ItMw_1H_Mace_03(C_Item)
 
 instance ItMw_1H_Mace_04(C_Item)
 {
-	name = "Стальной язык";
+	name = "РЎС‚Р°Р»СЊРЅРѕР№ СЏР·С‹Рє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -642,7 +710,7 @@ instance ItMw_1H_Mace_04(C_Item)
 
 instance ItMw_1H_Axe_01(C_Item)
 {
-	name = "Топор";
+	name = "РўРѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -665,7 +733,7 @@ instance ItMw_1H_Axe_01(C_Item)
 
 instance ItMw_1H_Sword_01(C_Item)
 {
-	name = "Обычный меч";
+	name = "РћР±С‹С‡РЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -688,7 +756,7 @@ instance ItMw_1H_Sword_01(C_Item)
 
 instance ItMw_1H_Sword_02(C_Item)
 {
-	name = "Хороший меч";
+	name = "РҐРѕСЂРѕС€РёР№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -711,7 +779,7 @@ instance ItMw_1H_Sword_02(C_Item)
 
 instance ItMw_1H_Sword_03(C_Item)
 {
-	name = "Меч стражника";
+	name = "РњРµС‡ СЃС‚СЂР°Р¶РЅРёРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -734,7 +802,7 @@ instance ItMw_1H_Sword_03(C_Item)
 
 instance ItMw_1H_Sword_04(C_Item)
 {
-	name = "Боевой меч";
+	name = "Р‘РѕРµРІРѕР№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -757,7 +825,7 @@ instance ItMw_1H_Sword_04(C_Item)
 
 instance ItMw_1H_Sword_05(C_Item)
 {
-	name = "Военный меч";
+	name = "Р’РѕРµРЅРЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -780,7 +848,7 @@ instance ItMw_1H_Sword_05(C_Item)
 
 instance ItMw_1H_Mace_War_01(C_Item)
 {
-	name = "Моргенштерн";
+	name = "РњРѕСЂРіРµРЅС€С‚РµСЂРЅ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -803,7 +871,7 @@ instance ItMw_1H_Mace_War_01(C_Item)
 
 instance ItMw_1H_Mace_War_02(C_Item)
 {
-	name = "Стальное жало";
+	name = "РЎС‚Р°Р»СЊРЅРѕРµ Р¶Р°Р»Рѕ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -826,7 +894,7 @@ instance ItMw_1H_Mace_War_02(C_Item)
 
 instance ItMw_1H_Mace_War_03(C_Item)
 {
-	name = "Камнелом";
+	name = "РљР°РјРЅРµР»РѕРј";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -849,7 +917,7 @@ instance ItMw_1H_Mace_War_03(C_Item)
 
 instance ItMw_1H_Mace_War_04(C_Item)
 {
-	name = "Разбивающий сердца";
+	name = "Р Р°Р·Р±РёРІР°СЋС‰РёР№ СЃРµСЂРґС†Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -872,7 +940,7 @@ instance ItMw_1H_Mace_War_04(C_Item)
 
 instance ItMw_1H_Sword_Long_01(C_Item)
 {
-	name = "Длинный меч";
+	name = "Р”Р»РёРЅРЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -895,7 +963,7 @@ instance ItMw_1H_Sword_Long_01(C_Item)
 
 instance ItMw_1H_Sword_Long_02(C_Item)
 {
-	name = "Сеющий страх";
+	name = "РЎРµСЋС‰РёР№ СЃС‚СЂР°С…";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -918,7 +986,7 @@ instance ItMw_1H_Sword_Long_02(C_Item)
 
 instance ItMw_1H_Sword_Long_03(C_Item)
 {
-	name = "Сеющий ненависть";
+	name = "РЎРµСЋС‰РёР№ РЅРµРЅР°РІРёСЃС‚СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -941,7 +1009,7 @@ instance ItMw_1H_Sword_Long_03(C_Item)
 
 instance ItMw_1H_Sword_Long_04(C_Item)
 {
-	name = "Победоносный";
+	name = "РџРѕР±РµРґРѕРЅРѕСЃРЅС‹Р№";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -964,7 +1032,7 @@ instance ItMw_1H_Sword_Long_04(C_Item)
 
 instance ItMw_1H_Sword_Long_05(C_Item)
 {
-	name = "Несущий смерть";
+	name = "РќРµСЃСѓС‰РёР№ СЃРјРµСЂС‚СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -987,7 +1055,7 @@ instance ItMw_1H_Sword_Long_05(C_Item)
 
 instance ItMw_1H_Warhammer_01(C_Item)
 {
-	name = "Орочий молот";
+	name = "РћСЂРѕС‡РёР№ РјРѕР»РѕС‚";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -1010,7 +1078,7 @@ instance ItMw_1H_Warhammer_01(C_Item)
 
 instance ItMw_1H_Warhammer_02(C_Item)
 {
-	name = "Боевой молот";
+	name = "Р‘РѕРµРІРѕР№ РјРѕР»РѕС‚";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -1033,7 +1101,7 @@ instance ItMw_1H_Warhammer_02(C_Item)
 
 instance ItMw_1H_Warhammer_03(C_Item)
 {
-	name = "Молот богов";
+	name = "РњРѕР»РѕС‚ Р±РѕРіРѕРІ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -1056,7 +1124,7 @@ instance ItMw_1H_Warhammer_03(C_Item)
 
 instance ItMw_1H_Axe_02(C_Item)
 {
-	name = "Череполом";
+	name = "Р§РµСЂРµРїРѕР»РѕРј";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -1079,7 +1147,7 @@ instance ItMw_1H_Axe_02(C_Item)
 
 instance ItMw_1H_Axe_03(C_Item)
 {
-	name = "Беспощадный";
+	name = "Р‘РµСЃРїРѕС‰Р°РґРЅС‹Р№";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
@@ -1102,7 +1170,7 @@ instance ItMw_1H_Axe_03(C_Item)
 
 instance ItMw_1H_Sword_Broad_01(C_Item)
 {
-	name = "Палаш";
+	name = "РџР°Р»Р°С€";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1125,7 +1193,7 @@ instance ItMw_1H_Sword_Broad_01(C_Item)
 
 instance ItMw_1H_Sword_Broad_02(C_Item)
 {
-	name = "Смертельный приговор";
+	name = "РЎРјРµСЂС‚РµР»СЊРЅС‹Р№ РїСЂРёРіРѕРІРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1148,7 +1216,7 @@ instance ItMw_1H_Sword_Broad_02(C_Item)
 
 instance ItMw_1H_Sword_Broad_03(C_Item)
 {
-	name = "Шепот смерти";
+	name = "РЁРµРїРѕС‚ СЃРјРµСЂС‚Рё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1171,7 +1239,7 @@ instance ItMw_1H_Sword_Broad_03(C_Item)
 
 instance ItMw_1H_Sword_Broad_04(C_Item)
 {
-	name = "Кулак бойца";
+	name = "РљСѓР»Р°Рє Р±РѕР№С†Р°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1194,12 +1262,12 @@ instance ItMw_1H_Sword_Broad_04(C_Item)
 
 instance ItMw_2H_Sword_Old_01(C_Item)
 {
-	name = "Ржавый двуручный меч";
+	name = "Р Р¶Р°РІС‹Р№ РґРІСѓСЂСѓС‡РЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 150;
-	damageTotal = 61;
+	damageTotal = 31;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1207,7 +1275,7 @@ instance ItMw_2H_Sword_Old_01(C_Item)
 	visual = "ItMw_2H_Sword_Old_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1217,7 +1285,7 @@ instance ItMw_2H_Sword_Old_01(C_Item)
 
 instance ItMw_1H_Sword_Bastard_01(C_Item)
 {
-	name = "Ржавый меч-бастард";
+	name = "Р Р¶Р°РІС‹Р№ РјРµС‡-Р±Р°СЃС‚Р°СЂРґ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1240,7 +1308,7 @@ instance ItMw_1H_Sword_Bastard_01(C_Item)
 
 instance ItMw_1H_Sword_Bastard_02(C_Item)
 {
-	name = "Палач";
+	name = "РџР°Р»Р°С‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1263,7 +1331,7 @@ instance ItMw_1H_Sword_Bastard_02(C_Item)
 
 instance ItMw_1H_Sword_Bastard_03(C_Item)
 {
-	name = "Исполнитель";
+	name = "РСЃРїРѕР»РЅРёС‚РµР»СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1286,7 +1354,7 @@ instance ItMw_1H_Sword_Bastard_03(C_Item)
 
 instance ItMw_1H_Sword_Bastard_04(C_Item)
 {
-	name = "Удар ярости";
+	name = "РЈРґР°СЂ СЏСЂРѕСЃС‚Рё";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -1309,12 +1377,12 @@ instance ItMw_1H_Sword_Bastard_04(C_Item)
 
 instance ItMw_2H_Axe_Old_01(C_Item)
 {
-	name = "Старый боевой топор";
+	name = "РЎС‚Р°СЂС‹Р№ Р±РѕРµРІРѕР№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 400;
-	damageTotal = 67;
+	damageTotal = 33;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1322,7 +1390,7 @@ instance ItMw_2H_Axe_Old_01(C_Item)
 	visual = "ItMw_2H_Axe_Old_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1332,12 +1400,12 @@ instance ItMw_2H_Axe_Old_01(C_Item)
 
 instance ItMw_2H_Axe_Old_02(C_Item)
 {
-	name = "Кровавая жатва";
+	name = "РљСЂРѕРІР°РІР°СЏ Р¶Р°С‚РІР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 710;
-	damageTotal = 68;
+	damageTotal = 35;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1345,7 +1413,7 @@ instance ItMw_2H_Axe_Old_02(C_Item)
 	visual = "ItMw_2H_Axe_Old_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1355,12 +1423,12 @@ instance ItMw_2H_Axe_Old_02(C_Item)
 
 instance ItMw_2H_Axe_Old_03(C_Item)
 {
-	name = "Старый судейский топор";
+	name = "РЎС‚Р°СЂС‹Р№ СЃСѓРґРµР№СЃРєРёР№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 725;
-	damageTotal = 69;
+	damageTotal = 37;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1368,7 +1436,7 @@ instance ItMw_2H_Axe_Old_03(C_Item)
 	visual = "ItMw_2H_Axe_Old_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1378,12 +1446,12 @@ instance ItMw_2H_Axe_Old_03(C_Item)
 
 instance ItMw_2H_Sword_Light_01(C_Item)
 {
-	name = "Легкий двуручник";
+	name = "Р›РµРіРєРёР№ РґРІСѓСЂСѓС‡РЅРёРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 740;
-	damageTotal = 70;
+	damageTotal = 40;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1391,7 +1459,7 @@ instance ItMw_2H_Sword_Light_01(C_Item)
 	visual = "ItMw_2H_Sword_Light_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1401,14 +1469,14 @@ instance ItMw_2H_Sword_Light_01(C_Item)
 
 instance ITMW_2H_SWORD_LIGHT_01_PRICED(C_Item)
 {
-	name = "Легкий двуручник";
+	name = "Р›РµРіРєРёР№ РґРІСѓСЂСѓС‡РЅРёРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	on_equip = equip_2hbonus;
 	on_unequip = unequip_2hbonus;
 	value = 1090;
-	damageTotal = 70;
+	damageTotal = 40;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1416,7 +1484,7 @@ instance ITMW_2H_SWORD_LIGHT_01_PRICED(C_Item)
 	visual = "ItMw_2H_Sword_Light_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TWOHANDED_BONUS;
@@ -1426,12 +1494,12 @@ instance ITMW_2H_SWORD_LIGHT_01_PRICED(C_Item)
 
 instance ItMw_2H_Sword_Light_02(C_Item)
 {
-	name = "Хранитель";
+	name = "РҐСЂР°РЅРёС‚РµР»СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 200;
-	damageTotal = 71;
+	damageTotal = 41;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1439,7 +1507,7 @@ instance ItMw_2H_Sword_Light_02(C_Item)
 	visual = "ItMw_2H_Sword_Light_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1449,14 +1517,14 @@ instance ItMw_2H_Sword_Light_02(C_Item)
 
 instance ITMW_2H_SWORD_LIGHT_02_PRICED(C_Item)
 {
-	name = "Хранитель";
+	name = "РҐСЂР°РЅРёС‚РµР»СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	on_equip = equip_2hbonus;
 	on_unequip = unequip_2hbonus;
 	value = 1105;
-	damageTotal = 71;
+	damageTotal = 41;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1464,7 +1532,7 @@ instance ITMW_2H_SWORD_LIGHT_02_PRICED(C_Item)
 	visual = "ItMw_2H_Sword_Light_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TWOHANDED_BONUS;
@@ -1474,12 +1542,12 @@ instance ITMW_2H_SWORD_LIGHT_02_PRICED(C_Item)
 
 instance ItMw_2H_Sword_Light_03(C_Item)
 {
-	name = "Солдатский клинок";
+	name = "РЎРѕР»РґР°С‚СЃРєРёР№ РєР»РёРЅРѕРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 775;
-	damageTotal = 73;
+	damageTotal = 43;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1487,7 +1555,7 @@ instance ItMw_2H_Sword_Light_03(C_Item)
 	visual = "ItMw_2H_Sword_Light_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1497,12 +1565,12 @@ instance ItMw_2H_Sword_Light_03(C_Item)
 
 instance ItMw_2H_Sword_Light_04(C_Item)
 {
-	name = "Королевский клинок";
+	name = "РљРѕСЂРѕР»РµРІСЃРєРёР№ РєР»РёРЅРѕРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 790;
-	damageTotal = 74;
+	damageTotal = 44;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1510,7 +1578,7 @@ instance ItMw_2H_Sword_Light_04(C_Item)
 	visual = "ItMw_2H_Sword_Light_04.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1520,12 +1588,12 @@ instance ItMw_2H_Sword_Light_04(C_Item)
 
 instance ItMw_2H_Sword_Light_05(C_Item)
 {
-	name = "Клинок демона";
+	name = "РљР»РёРЅРѕРє РґРµРјРѕРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 810;
-	damageTotal = 76;
+	damageTotal = 46;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1533,7 +1601,7 @@ instance ItMw_2H_Sword_Light_05(C_Item)
 	visual = "ItMw_2H_Sword_Light_05.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1543,12 +1611,12 @@ instance ItMw_2H_Sword_Light_05(C_Item)
 
 instance ItMw_2H_Axe_light_01(C_Item)
 {
-	name = "Легкий боевой топор";
+	name = "Р›РµРіРєРёР№ Р±РѕРµРІРѕР№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 825;
-	damageTotal = 77;
+	damageTotal = 47;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1556,7 +1624,7 @@ instance ItMw_2H_Axe_light_01(C_Item)
 	visual = "ItMw_2H_Axe_light_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1566,12 +1634,12 @@ instance ItMw_2H_Axe_light_01(C_Item)
 
 instance ItMw_2H_Axe_light_02(C_Item)
 {
-	name = "Удар грома";
+	name = "РЈРґР°СЂ РіСЂРѕРјР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 845;
-	damageTotal = 79;
+	damageTotal = 49;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1579,7 +1647,7 @@ instance ItMw_2H_Axe_light_02(C_Item)
 	visual = "ItMw_2H_Axe_light_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1589,12 +1657,12 @@ instance ItMw_2H_Axe_light_02(C_Item)
 
 instance ItMw_2H_Axe_light_03(C_Item)
 {
-	name = "Час расплаты";
+	name = "Р§Р°СЃ СЂР°СЃРїР»Р°С‚С‹";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 860;
-	damageTotal = 80;
+	damageTotal = 50;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1602,7 +1670,7 @@ instance ItMw_2H_Axe_light_03(C_Item)
 	visual = "ItMw_2H_Axe_light_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1612,12 +1680,12 @@ instance ItMw_2H_Axe_light_03(C_Item)
 
 instance ItMw_2H_Sword_01(C_Item)
 {
-	name = "Усиленный двуручник";
+	name = "РЈСЃРёР»РµРЅРЅС‹Р№ РґРІСѓСЂСѓС‡РЅРёРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 875;
-	damageTotal = 81;
+	damageTotal = 20;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1625,7 +1693,7 @@ instance ItMw_2H_Sword_01(C_Item)
 	visual = "ItMw_2H_Sword_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1635,12 +1703,12 @@ instance ItMw_2H_Sword_01(C_Item)
 
 instance ItMw_2H_Sword_02(C_Item)
 {
-	name = "Отвага героя";
+	name = "РћС‚РІР°РіР° РіРµСЂРѕСЏ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 895;
-	damageTotal = 83;
+	damageTotal = 43;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1648,7 +1716,7 @@ instance ItMw_2H_Sword_02(C_Item)
 	visual = "ItMw_2H_Sword_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1658,12 +1726,12 @@ instance ItMw_2H_Sword_02(C_Item)
 
 instance ItMw_2H_Sword_03(C_Item)
 {
-	name = "Кровавая атака";
+	name = "РљСЂРѕРІР°РІР°СЏ Р°С‚Р°РєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 915;
-	damageTotal = 85;
+	damageTotal = 45;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1671,7 +1739,7 @@ instance ItMw_2H_Sword_03(C_Item)
 	visual = "ItMw_2H_Sword_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1681,12 +1749,12 @@ instance ItMw_2H_Sword_03(C_Item)
 
 instance ItMw_2H_Sword_Heavy_01(C_Item)
 {
-	name = "Тяжелый двуручник";
+	name = "РўСЏР¶РµР»С‹Р№ РґРІСѓСЂСѓС‡РЅРёРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 930;
-	damageTotal = 86;
+	damageTotal = 46;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1694,7 +1762,7 @@ instance ItMw_2H_Sword_Heavy_01(C_Item)
 	visual = "ItMw_2H_Sword_Heavy_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1704,12 +1772,12 @@ instance ItMw_2H_Sword_Heavy_01(C_Item)
 
 instance ItMw_2H_Sword_Heavy_02(C_Item)
 {
-	name = "Стальная ярость";
+	name = "РЎС‚Р°Р»СЊРЅР°СЏ СЏСЂРѕСЃС‚СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 950;
-	damageTotal = 88;
+	damageTotal = 48;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1717,7 +1785,7 @@ instance ItMw_2H_Sword_Heavy_02(C_Item)
 	visual = "ItMw_2H_Sword_Heavy_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1727,12 +1795,12 @@ instance ItMw_2H_Sword_Heavy_02(C_Item)
 
 instance ItMw_2H_Sword_Heavy_03(C_Item)
 {
-	name = "Молниеносный";
+	name = "РњРѕР»РЅРёРµРЅРѕСЃРЅС‹Р№";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 970;
-	damageTotal = 90;
+	damageTotal = 50;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1740,7 +1808,7 @@ instance ItMw_2H_Sword_Heavy_03(C_Item)
 	visual = "ItMw_2H_Sword_Heavy_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1750,12 +1818,12 @@ instance ItMw_2H_Sword_Heavy_03(C_Item)
 
 instance ItMw_2H_Sword_Heavy_04(C_Item)
 {
-	name = "Мстительная сталь";
+	name = "РњСЃС‚РёС‚РµР»СЊРЅР°СЏ СЃС‚Р°Р»СЊ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	value = 990;
-	damageTotal = 92;
+	damageTotal = 52;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1763,7 +1831,7 @@ instance ItMw_2H_Sword_Heavy_04(C_Item)
 	visual = "ItMw_2H_Sword_Heavy_04.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1773,12 +1841,12 @@ instance ItMw_2H_Sword_Heavy_04(C_Item)
 
 instance ItMw_2H_Axe_Heavy_01(C_Item)
 {
-	name = "Боевой топор";
+	name = "Р‘РѕРµРІРѕР№ С‚РѕРїРѕСЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 1010;
-	damageTotal = 94;
+	damageTotal = 54;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1786,7 +1854,7 @@ instance ItMw_2H_Axe_Heavy_01(C_Item)
 	visual = "ItMw_2H_Axe_Heavy_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1796,12 +1864,12 @@ instance ItMw_2H_Axe_Heavy_01(C_Item)
 
 instance ItMw_2H_Axe_Heavy_02(C_Item)
 {
-	name = "Глас воина";
+	name = "Р“Р»Р°СЃ РІРѕРёРЅР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 1030;
-	damageTotal = 96;
+	damageTotal = 56;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1809,7 +1877,7 @@ instance ItMw_2H_Axe_Heavy_02(C_Item)
 	visual = "ItMw_2H_Axe_Heavy_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1819,12 +1887,12 @@ instance ItMw_2H_Axe_Heavy_02(C_Item)
 
 instance ItMw_2H_Axe_Heavy_03(C_Item)
 {
-	name = "Кулак варвара";
+	name = "РљСѓР»Р°Рє РІР°СЂРІР°СЂР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 1050;
-	damageTotal = 98;
+	damageTotal = 58;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1832,7 +1900,7 @@ instance ItMw_2H_Axe_Heavy_03(C_Item)
 	visual = "ItMw_2H_Axe_Heavy_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1842,12 +1910,12 @@ instance ItMw_2H_Axe_Heavy_03(C_Item)
 
 instance ItMw_2H_Axe_Heavy_04(C_Item)
 {
-	name = "Кулак тролля";
+	name = "РљСѓР»Р°Рє С‚СЂРѕР»Р»СЏ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 1070;
-	damageTotal = 100;
+	damageTotal = 60;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1855,7 +1923,7 @@ instance ItMw_2H_Axe_Heavy_04(C_Item)
 	visual = "ItMw_2H_Axe_Heavy_04.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1865,12 +1933,12 @@ instance ItMw_2H_Axe_Heavy_04(C_Item)
 
 instance ItMw2hOrcSword01(C_Item)
 {
-	name = "Краш Варрок";
+	name = "РљСЂР°С€ Р’Р°СЂСЂРѕРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_WOOD;
 	value = 10;
-	damageTotal = 40;
+	damageTotal = 20;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1878,7 +1946,7 @@ instance ItMw2hOrcSword01(C_Item)
 	visual = "ItMw_2H_OrcSword_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1888,12 +1956,12 @@ instance ItMw2hOrcSword01(C_Item)
 
 instance ItMw2hOrcAxe01(C_Item)
 {
-	name = "Краш Пагх";
+	name = "РљСЂР°С€ РџР°РіС…";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 14;
-	damageTotal = 50;
+	damageTotal = 24;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1901,7 +1969,7 @@ instance ItMw2hOrcAxe01(C_Item)
 	visual = "ItMw_2H_OrcAxe_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1911,12 +1979,12 @@ instance ItMw2hOrcAxe01(C_Item)
 
 instance ItMw2hOrcAxe02(C_Item)
 {
-	name = "Краш Уррок";
+	name = "РљСЂР°С€ РЈСЂСЂРѕРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 18;
-	damageTotal = 55;
+	damageTotal = 27;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1924,7 +1992,7 @@ instance ItMw2hOrcAxe02(C_Item)
 	visual = "ItMw_2H_OrcAxe_02.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1934,12 +2002,12 @@ instance ItMw2hOrcAxe02(C_Item)
 
 instance ItMw2hOrcAxe03(C_Item)
 {
-	name = "Краш Агаш";
+	name = "РљСЂР°С€ РђРіР°С€";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 20;
-	damageTotal = 60;
+	damageTotal = 30;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1947,7 +2015,7 @@ instance ItMw2hOrcAxe03(C_Item)
 	visual = "ItMw_2H_OrcAxe_03.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1957,12 +2025,12 @@ instance ItMw2hOrcAxe03(C_Item)
 
 instance ItMw2hOrcAxe04(C_Item)
 {
-	name = "Краш Брокдар";
+	name = "РљСЂР°С€ Р‘СЂРѕРєРґР°СЂ";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 22;
-	damageTotal = 65;
+	damageTotal = 35;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1970,7 +2038,7 @@ instance ItMw2hOrcAxe04(C_Item)
 	visual = "ItMw_2H_OrcAxe_04.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -1980,12 +2048,12 @@ instance ItMw2hOrcAxe04(C_Item)
 
 instance ItMw2hOrcMace01(C_Item)
 {
-	name = "Краш Каррок";
+	name = "РљСЂР°С€ РљР°СЂСЂРѕРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
 	value = 24;
-	damageTotal = 75;
+	damageTotal = 45;
 	damagetype = DAM_BLUNT;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -1993,7 +2061,7 @@ instance ItMw2hOrcMace01(C_Item)
 	visual = "ItMw_2H_OrcMace_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TwoHanded;
@@ -2003,7 +2071,7 @@ instance ItMw2hOrcMace01(C_Item)
 
 instance ItRwOrcstaff(C_Item)
 {
-	name = "Грахтнакк";
+	name = "Р“СЂР°С…С‚РЅР°РєРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -2022,7 +2090,7 @@ instance ItRwOrcstaff(C_Item)
 
 instance ItRwUdOrcstaff(C_Item)
 {
-	name = "ШаБаНакк";
+	name = "РЁР°Р‘Р°РќР°РєРє";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_AXE;
 	material = MAT_WOOD;
@@ -2038,14 +2106,14 @@ instance ItRwUdOrcstaff(C_Item)
 
 instance GOLDENSWORD(C_Item)
 {
-	name = "Длань предка";
+	name = "Р”Р»Р°РЅСЊ РїСЂРµРґРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	on_equip = equip_2hbonus;
 	on_unequip = unequip_2hbonus;
 	value = 500;
-	damageTotal = 40;
+	damageTotal = 20;
 	damagetype = DAM_EDGE;
 	range = 100;
 	cond_atr[2] = ATR_STRENGTH;
@@ -2053,7 +2121,7 @@ instance GOLDENSWORD(C_Item)
 	visual = "ItMw_Beta_Sword_Gold.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TWOHANDED_BONUS;
@@ -2063,7 +2131,7 @@ instance GOLDENSWORD(C_Item)
 
 instance GS1H(C_Item)
 {
-	name = "Длань предка";
+	name = "Р”Р»Р°РЅСЊ РїСЂРµРґРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_METAL;
@@ -2088,14 +2156,14 @@ instance GS1H(C_Item)
 
 instance GS2H(C_Item)
 {
-	name = "Длань предка";
+	name = "Р”Р»Р°РЅСЊ РїСЂРµРґРєР°";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_2HD_SWD;
 	material = MAT_METAL;
 	on_equip = equip_2hbonus;
 	on_unequip = unequip_2hbonus;
 	value = 1000;
-	damageTotal = 60;
+	damageTotal = 30;
 	damagetype = DAM_EDGE;
 	range = 150;
 	cond_atr[2] = ATR_STRENGTH;
@@ -2103,7 +2171,7 @@ instance GS2H(C_Item)
 	visual = "ItMw_Beta_Sword_Gold.3DS";
 	description = name;
 	text[2] = NAME_Damage;
-	count[2] = damageTotal;
+	count[2] = MultiplicateIntOnFloat(damageTotal,Damage_StaminaMultiplicator);
 	text[3] = NAME_Str_needed;
 	count[3] = cond_value[2];
 	text[4] = NAME_TWOHANDED_BONUS;
@@ -2113,7 +2181,7 @@ instance GS2H(C_Item)
 
 instance ITMW_TRAINSWORD(C_Item)
 {
-	name = "Тренировочный меч";
+	name = "РўСЂРµРЅРёСЂРѕРІРѕС‡РЅС‹Р№ РјРµС‡";
 	mainflag = ITEM_KAT_NF;
 	flags = ITEM_SWD;
 	material = MAT_WOOD;
@@ -2135,12 +2203,12 @@ instance ITMW_TRAINSWORD(C_Item)
 
 func void equip_2hbonus()
 {
-	Npc_SetTalentValue(hero,NPC_TALENT_2H,Npc_GetTalentValue(hero,NPC_TALENT_2H) + 3);
+	Npc_SetTalentValue(hero,NPC_TALENT_2H,Npc_GetTalentValue(hero,NPC_TALENT_2H) + 13);
 };
 
 func void unequip_2hbonus()
 {
-	Npc_SetTalentValue(hero,NPC_TALENT_2H,Npc_GetTalentValue(hero,NPC_TALENT_2H) - 3);
+	Npc_SetTalentValue(hero,NPC_TALENT_2H,Npc_GetTalentValue(hero,NPC_TALENT_2H) - 13);
 };
 
 func void equip_1hbonus()

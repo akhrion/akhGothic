@@ -15,13 +15,13 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 	Kapitel = neues_Kapitel;
 	if(neues_Kapitel == 1)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ПЕРВАЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ РџР•Р Р’РђРЇ ===---");
 		b_give_skipchapter1weapons();
-		IntroduceChapter("Глава 1","Мир обреченных","chapter1.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 1","РњРёСЂ РѕР±СЂРµС‡РµРЅРЅС‹С…","chapter1.tga","levelup.wav",6000);
 	}
 	else if(neues_Kapitel == 2)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ВТОРАЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ Р’РўРћР РђРЇ ===---");
 		B_Give_FiskChapter2Weapons();
 		B_Give_DarrionChapter2Weapons();
 		B_Give_SharkyChapter2Weapons();
@@ -48,12 +48,13 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		B_Story_RespawnOW();
 		B_InsertInExtremo();
 		B_ExchangeRoutine(VLK_572_Gravo,"WATCH");
-		IntroduceChapter("Глава 2","Логово ползунов","chapter2.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 2","Р›РѕРіРѕРІРѕ РїРѕР»Р·СѓРЅРѕРІ","chapter2.tga","levelup.wav",6000);
 	}
 	else if(neues_Kapitel == 3)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ТРЕТЬЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ РўР Р•РўР¬РЇ ===---");
 		YBerion = Hlp_GetNpc(GUR_1200_YBerion);
+		yberion_day = Wld_GetDay();
 		AI_Teleport(YBerion,"PSI_TEST");
 		Npc_ExchangeRoutine(YBerion,"DEAD");
 		AI_ContinueRoutine(YBerion);
@@ -80,7 +81,7 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		CorKalom_BringBook = LOG_SUCCESS;
 		Log_CreateTopic(CH3_OrcGraveyard,LOG_MISSION);
 		Log_SetTopicStatus(CH3_OrcGraveyard,LOG_RUNNING);
-		B_LogEntry(CH3_OrcGraveyard,"Великая Церемония вызова Спящего прошла не так, как планировали Гуру. Мы увидели лишь нечеткое изображение орка и какой-то пещеры. Юберион, духовный Учитель Братства, не выдержал напряжения и потерял сознание! Сейчас он пытается прийти в себя в своих покоях, Кор Галом и Кор Ангар присматривают за ним.");
+		B_LogEntry(CH3_OrcGraveyard,"Р’РµР»РёРєР°СЏ Р¦РµСЂРµРјРѕРЅРёСЏ РІС‹Р·РѕРІР° РЎРїСЏС‰РµРіРѕ РїСЂРѕС€Р»Р° РЅРµ С‚Р°Рє, РєР°Рє РїР»Р°РЅРёСЂРѕРІР°Р»Рё Р“СѓСЂСѓ. РњС‹ СѓРІРёРґРµР»Рё Р»РёС€СЊ РЅРµС‡РµС‚РєРѕРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ РѕСЂРєР° Рё РєР°РєРѕР№-С‚Рѕ РїРµС‰РµСЂС‹. Р®Р±РµСЂРёРѕРЅ, РґСѓС…РѕРІРЅС‹Р№ РЈС‡РёС‚РµР»СЊ Р‘СЂР°С‚СЃС‚РІР°, РЅРµ РІС‹РґРµСЂР¶Р°Р» РЅР°РїСЂСЏР¶РµРЅРёСЏ Рё РїРѕС‚РµСЂСЏР» СЃРѕР·РЅР°РЅРёРµ! РЎРµР№С‡Р°СЃ РѕРЅ РїС‹С‚Р°РµС‚СЃСЏ РїСЂРёР№С‚Рё РІ СЃРµР±СЏ РІ СЃРІРѕРёС… РїРѕРєРѕСЏС…, РљРѕСЂ Р“Р°Р»РѕРј Рё РљРѕСЂ РђРЅРіР°СЂ РїСЂРёСЃРјР°С‚СЂРёРІР°СЋС‚ Р·Р° РЅРёРј.");
 		B_Give_FiskChapter3Weapons();
 		B_Give_DarrionChapter3Weapons();
 		B_Give_SharkyChapter3Weapons();
@@ -145,11 +146,11 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 			B_ExchangeRoutine(NOV_1332_BaalKagan,"ch5");
 			B_ExchangeRoutine(ORG_806_Organisator,"ch5");
 		};
-		IntroduceChapter("Глава 3","Артефакты древней силы","chapter3.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 3","РђСЂС‚РµС„Р°РєС‚С‹ РґСЂРµРІРЅРµР№ СЃРёР»С‹","chapter3.tga","levelup.wav",6000);
 	}
 	else if(neues_Kapitel == 4)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ЧЕТВЕРТАЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ Р§Р•РўР’Р•Р РўРђРЇ ===---");
 		B_ChangeGuild(VLK_511_Herek,GIL_VLK);
 		B_ChangeGuild(STT_336_Cavalorn,GIL_None);
 		B_Give_ScorpioChapter4Weapons();
@@ -172,7 +173,7 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		CreateInvItem(hero,itarrune_1_4_teleport2);
 		Log_CreateTopic(CH4_Firemages,LOG_MISSION);
 		Log_SetTopicStatus(CH4_Firemages,LOG_RUNNING);
-		B_LogEntry(CH4_Firemages,"Сатурас, глава магов Круга Воды, попросил меня о последней услуге. Чтобы взорвать рудную гору, ему потребуется помощь магов Огня из Старого лагеря. Я не знаю, удастся ли мне убедить их помочь Сатурасу, ведь им не выгодно разрушать Барьер. Так они потеряют всю свою власть. Но я постараюсь что-нибудь придумать.");
+		B_LogEntry(CH4_Firemages,"РЎР°С‚СѓСЂР°СЃ, РіР»Р°РІР° РјР°РіРѕРІ РљСЂСѓРіР° Р’РѕРґС‹, РїРѕРїСЂРѕСЃРёР» РјРµРЅСЏ Рѕ РїРѕСЃР»РµРґРЅРµР№ СѓСЃР»СѓРіРµ. Р§С‚РѕР±С‹ РІР·РѕСЂРІР°С‚СЊ СЂСѓРґРЅСѓСЋ РіРѕСЂСѓ, РµРјСѓ РїРѕС‚СЂРµР±СѓРµС‚СЃСЏ РїРѕРјРѕС‰СЊ РјР°РіРѕРІ РћРіРЅСЏ РёР· РЎС‚Р°СЂРѕРіРѕ Р»Р°РіРµСЂСЏ. РЇ РЅРµ Р·РЅР°СЋ, СѓРґР°СЃС‚СЃСЏ Р»Рё РјРЅРµ СѓР±РµРґРёС‚СЊ РёС… РїРѕРјРѕС‡СЊ РЎР°С‚СѓСЂР°СЃСѓ, РІРµРґСЊ РёРј РЅРµ РІС‹РіРѕРґРЅРѕ СЂР°Р·СЂСѓС€Р°С‚СЊ Р‘Р°СЂСЊРµСЂ. РўР°Рє РѕРЅРё РїРѕС‚РµСЂСЏСЋС‚ РІСЃСЋ СЃРІРѕСЋ РІР»Р°СЃС‚СЊ. РќРѕ СЏ РїРѕСЃС‚Р°СЂР°СЋСЃСЊ С‡С‚Рѕ-РЅРёР±СѓРґСЊ РїСЂРёРґСѓРјР°С‚СЊ.");
 		B_ExchangeRoutine(Sld_700_Lee,"DAMNPAST");
 		B_ExchangeRoutine(BAU_935_Homer,"DAMNPAST");
 		B_ExchangeRoutine(BAU_924_Bauer,"START");
@@ -328,11 +329,11 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		B_Story_RespawnOW();
 		B_ExchangeRoutine(Gur_1205_Chani,"wash");
 		B_ExchangeRoutine(Gur_1207_Natalia,"wash");
-		IntroduceChapter("Глава 4","Ксардас","chapter4.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 4","РљСЃР°СЂРґР°СЃ","chapter4.tga","levelup.wav",6000);
 	}
 	else if(neues_Kapitel == 5)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ПЯТАЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ РџРЇРўРђРЇ ===---");
 		B_Give_ScorpioChapter5Weapons();
 		B_Give_DarrionChapter5Weapons();
 		B_Give_SharkyChapter5Weapons();
@@ -350,13 +351,13 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		B_GiveRiordianChapter5Potions();
 		b_give_gornchapter5crap();
 		B_ExchangeRoutine(TPL_1405_GorNaRan,"Remove");
-		B_LogEntry(CH4_EnterTemple,"Горн сомневается, что Улу-Мулу поможет мне пройти в город орков. Так или иначе, скоро я узнаю насколько он прав!");
+		B_LogEntry(CH4_EnterTemple,"Р“РѕСЂРЅ СЃРѕРјРЅРµРІР°РµС‚СЃСЏ, С‡С‚Рѕ РЈР»Сѓ-РњСѓР»Сѓ РїРѕРјРѕР¶РµС‚ РјРЅРµ РїСЂРѕР№С‚Рё РІ РіРѕСЂРѕРґ РѕСЂРєРѕРІ. РўР°Рє РёР»Рё РёРЅР°С‡Рµ, СЃРєРѕСЂРѕ СЏ СѓР·РЅР°СЋ РЅР°СЃРєРѕР»СЊРєРѕ РѕРЅ РїСЂР°РІ!");
 		B_Story_RespawnOW();
-		IntroduceChapter("Глава 5","Хранители порталов","chapter5.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 5","РҐСЂР°РЅРёС‚РµР»Рё РїРѕСЂС‚Р°Р»РѕРІ","chapter5.tga","levelup.wav",6000);
 	}
 	else if(neues_Kapitel == 6)
 	{
-		PrintDebugNpc(PD_MISSION,"---=== ГЛАВА ШЕСТАЯ ===---");
+		PrintDebugNpc(PD_MISSION,"---=== Р“Р›РђР’Рђ РЁР•РЎРўРђРЇ ===---");
 		B_Give_ScorpioChapter6Weapons();
 		B_Give_DarrionChapter6Weapons();
 		B_Give_SharkyChapter6Weapons();
@@ -385,7 +386,7 @@ func void B_Kapitelwechsel(var int neues_Kapitel)
 		Npc_RemoveInvItems(KDW_605_Riordian,ItFo_Potion_Mana_02,Npc_HasItems(KDW_605_Riordian,ItFo_Potion_Mana_02));
 		Npc_RemoveInvItems(KDW_605_Riordian,ItFo_Potion_Mana_03,Npc_HasItems(KDW_605_Riordian,ItFo_Potion_Mana_03));
 		Npc_RemoveInvItems(KDW_605_Riordian,ItMiNugget,Npc_HasItems(KDW_605_Riordian,ItMiNugget));
-		IntroduceChapter("Глава 6","Храм Спящего","chapter6.tga","levelup.wav",6000);
+		IntroduceChapter("Р“Р»Р°РІР° 6","РҐСЂР°Рј РЎРїСЏС‰РµРіРѕ","chapter6.tga","levelup.wav",6000);
 	};
 };
 

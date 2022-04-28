@@ -1,7 +1,7 @@
 
 instance GRD_255_Fletcher(Npc_Default)
 {
-	name[0] = "Τλεςχεπ";
+	name[0] = "Π¤Π»ΠµΡ‚Ρ‡ΠµΡ€";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 15;

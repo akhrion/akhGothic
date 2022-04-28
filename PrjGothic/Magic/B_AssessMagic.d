@@ -119,7 +119,7 @@ func void B_AssessMagic_Charm()
 	Npc_ClearAIQueue(self);
 	if(!Npc_IsInState(self,ZS_Unconscious))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...NSC ist ein Mensch bei bewuﬂtsein!");
+		PrintDebugNpc(PD_ZS_Check,"...NSC ist ein Mensch bei bewu–Øtsein!");
 		Npc_SetTempAttitude(self,ATT_FRIENDLY);
 		B_FullStop(self);
 		if(Npc_IsInState(self,ZS_Attack))
@@ -142,7 +142,7 @@ func void B_AssessMagic_Pyrokinesis()
 	Npc_SendPassivePerc(self,PERC_ASSESSFIGHTSOUND,self,other);
 	if(!Npc_IsDead(self) && !Npc_IsInState(self,ZS_Unconscious))
 	{
-		PrintDebugNpc(PD_MAGIC,"...weder bewuﬂtlos noch tot!");
+		PrintDebugNpc(PD_MAGIC,"...weder bewu–Øtlos noch tot!");
 		AI_StartState(self,ZS_Pyro,0,"");
 	};
 };

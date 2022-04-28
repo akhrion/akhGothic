@@ -33,8 +33,8 @@ func void info_oreguard_info()
 	AI_ReadySpell(milten,SPL_SLEEP,0);
 	AI_TurnToNPC(milten,self);
 	AI_PlayAni(milten,"T_MAGRUN_2_SLESHOOT");
-	AI_Output(self,hero,"SVM_11_YouViolatedForbiddenTerritory");	//Эй, а ты как сюда попал?
-	AI_Output(self,hero,"SVM_11_WhatDidYouInThere");	//Что это тебе здесь нужно? Убирайся, пока я не убрал тебя сам!
+	AI_Output(self,hero,"SVM_11_YouViolatedForbiddenTerritory");	//Р­Р№, Р° С‚С‹ РєР°Рє СЃСЋРґР° РїРѕРїР°Р»?
+	AI_Output(self,hero,"SVM_11_WhatDidYouInThere");	//Р§С‚Рѕ СЌС‚Рѕ С‚РµР±Рµ Р·РґРµСЃСЊ РЅСѓР¶РЅРѕ? РЈР±РёСЂР°Р№СЃСЏ, РїРѕРєР° СЏ РЅРµ СѓР±СЂР°Р» С‚РµР±СЏ СЃР°Рј!
 	AI_PlayAniBS(self,"T_STAND_2_VICTIM_SLE",BS_LIE);
 	AI_UnreadySpell(milten);
 	AI_StopProcessInfos(self);
@@ -65,7 +65,7 @@ func int info_oreguard_firstwarn_condition()
 
 func void info_oreguard_firstwarn_info()
 {
-	AI_Output(self,hero,"SVM_11_GetOutOfHere");	//Убирайся, или я вышвырну тебя отсюда!
+	AI_Output(self,hero,"SVM_11_GetOutOfHere");	//РЈР±РёСЂР°Р№СЃСЏ, РёР»Рё СЏ РІС‹С€РІС‹СЂРЅСѓ С‚РµР±СЏ РѕС‚СЃСЋРґР°!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,OREGUARD_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_FIRSTWARN;
 	AI_StopProcessInfos(self);
@@ -93,7 +93,7 @@ func int info_oreguard_lastwarn_condition()
 
 func void info_oreguard_lastwarn_info()
 {
-	AI_Output(self,hero,"SVM_11_YouWannaFoolMe");	//Не шути со мной!
+	AI_Output(self,hero,"SVM_11_YouWannaFoolMe");	//РќРµ С€СѓС‚Рё СЃРѕ РјРЅРѕР№!
 	hero.aivar[AIV_LASTDISTTOWP] = Npc_GetDistToWP(hero,OREGUARD_CHECKPOINT);
 	hero.aivar[AIV_GUARDPASSAGE_STATUS] = AIV_GPS_LASTWARN;
 	AI_StopProcessInfos(self);

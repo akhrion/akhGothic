@@ -20,7 +20,7 @@ instance Grd_212_Torwache(Npc_Default)
 	Mdl_SetModelFatness(self,0);
 	aivar[AIV_IMPORTANT] = TRUE;
 	aivar[AIV_RESPAWN] = TRUE;
-	aivar[AIV_PASSGATE] = true; //с этой хуйнёй сопряжён баг: крашится игра, если у 213ого false и 213ый находится не в воротах, а ГГ находится на WP: OCC_GATE.. вообще странный баг, ибо он тригирится извне.. если ГГ на OCC_GATE, то тригирится алерт, но алерт не от 212 или 213, а хуй знает откуда..
+	aivar[AIV_PASSGATE] = true; //СЃ СЌС‚РѕР№ С…СѓР№РЅС‘Р№ СЃРѕРїСЂСЏР¶С‘РЅ Р±Р°Рі: РєСЂР°С€РёС‚СЃСЏ РёРіСЂР°, РµСЃР»Рё Сѓ 213РѕРіРѕ false Рё 213С‹Р№ РЅР°С…РѕРґРёС‚СЃСЏ РЅРµ РІ РІРѕСЂРѕС‚Р°С…, Р° Р“Р“ РЅР°С…РѕРґРёС‚СЃСЏ РЅР° WP: OCC_GATE.. РІРѕРѕР±С‰Рµ СЃС‚СЂР°РЅРЅС‹Р№ Р±Р°Рі, РёР±Рѕ РѕРЅ С‚СЂРёРіРёСЂРёС‚СЃСЏ РёР·РІРЅРµ.. РµСЃР»Рё Р“Р“ РЅР° OCC_GATE, С‚Рѕ С‚СЂРёРіРёСЂРёС‚СЃСЏ Р°Р»РµСЂС‚, РЅРѕ Р°Р»РµСЂС‚ РЅРµ РѕС‚ 212 РёР»Рё 213, Р° С…СѓР№ Р·РЅР°РµС‚ РѕС‚РєСѓРґР°..
 	fight_tactic = FAI_HUMAN_RANGED;
 	Npc_SetTalentSkill(self,NPC_TALENT_1H,2);
 	Npc_SetTalentSkill(self,NPC_TALENT_2H,1);
@@ -65,7 +65,7 @@ instance INFO_GRD212_FireMagesLetter(C_Info)
 	condition = INFO_GRD212_FireMagesLetter_condition;
 	information = INFO_GRD212_FireMagesLetter_info;
 	permanent = 0;
-	description = "Слушай, мне очень нужно попасть внутрь.";
+	description = "РЎР»СѓС€Р°Р№, РјРЅРµ РѕС‡РµРЅСЊ РЅСѓР¶РЅРѕ РїРѕРїР°СЃС‚СЊ РІРЅСѓС‚СЂСЊ.";
 };
 
 func int info_grd212_FireMagesLetter_condition()
@@ -83,13 +83,13 @@ func int info_grd212_FireMagesLetter_condition()
 
 func void info_grd212_FireMagesLetter_info()
 {
-	AI_Output(hero,self,"FireMagesLetter_NULL_01"); //Слушай мне очень шужно попасть внутрь.
-	AI_Output(self,hero,"FireMagesLetter_NULL_02"); //Да что ты говоришь..
-	AI_Output(self,hero,"FireMagesLetter_NULL_03"); //А мне очень нужно, что-бы было много пива, много мяса и НИКОГО больше.
-	AI_Output(self,hero,"FireMagesLetter_NULL_04"); //Тебе что-то нужно? Вали отсюда!
+	AI_Output(hero,self,"FireMagesLetter_NULL_01"); //РЎР»СѓС€Р°Р№ РјРЅРµ РѕС‡РµРЅСЊ С€СѓР¶РЅРѕ РїРѕРїР°СЃС‚СЊ РІРЅСѓС‚СЂСЊ.
+	AI_Output(self,hero,"FireMagesLetter_NULL_02"); //Р”Р° С‡С‚Рѕ С‚С‹ РіРѕРІРѕСЂРёС€СЊ..
+	AI_Output(self,hero,"FireMagesLetter_NULL_03"); //Рђ РјРЅРµ РѕС‡РµРЅСЊ РЅСѓР¶РЅРѕ, С‡С‚Рѕ-Р±С‹ Р±С‹Р»Рѕ РјРЅРѕРіРѕ РїРёРІР°, РјРЅРѕРіРѕ РјСЏСЃР° Рё РќРРљРћР“Рћ Р±РѕР»СЊС€Рµ.
+	AI_Output(self,hero,"FireMagesLetter_NULL_04"); //РўРµР±Рµ С‡С‚Рѕ-С‚Рѕ РЅСѓР¶РЅРѕ? Р’Р°Р»Рё РѕС‚СЃСЋРґР°!
 	Log_CreateTopic(CH1_PassToInnerOldCamp,LOG_NOTE);
-	B_LogEntry(CH1_PassToInnerOldCamp,"Один из стражников, у входа во внутреннее кольцо, возможно пропустит меня, если я принесу ему немного пива и мяса.");
-	B_LogEntry(CH1_PassToInnerOldCamp,"Или-же я что-то не так понял и мне каюк..");
+	B_LogEntry(CH1_PassToInnerOldCamp,"РћРґРёРЅ РёР· СЃС‚СЂР°Р¶РЅРёРєРѕРІ, Сѓ РІС…РѕРґР° РІРѕ РІРЅСѓС‚СЂРµРЅРЅРµРµ РєРѕР»СЊС†Рѕ, РІРѕР·РјРѕР¶РЅРѕ РїСЂРѕРїСѓСЃС‚РёС‚ РјРµРЅСЏ, РµСЃР»Рё СЏ РїСЂРёРЅРµСЃСѓ РµРјСѓ РЅРµРјРЅРѕРіРѕ РїРёРІР° Рё РјСЏСЃР°.");
+	B_LogEntry(CH1_PassToInnerOldCamp,"РР»Рё-Р¶Рµ СЏ С‡С‚Рѕ-С‚Рѕ РЅРµ С‚Р°Рє РїРѕРЅСЏР» Рё РјРЅРµ РєР°СЋРє..");
 	AI_StopProcessInfos(self);
 };
 
@@ -99,7 +99,7 @@ instance INFO_GRD212_FireMagesLetterFood(C_Info)
 	condition = INFO_GRD212_FireMagesLetterFood_condition;
 	information = INFO_GRD212_FireMagesLetterFood_info;
 	permanent = 1;
-	description = "Вот, посмотри что я тут принес.";
+	description = "Р’РѕС‚, РїРѕСЃРјРѕС‚СЂРё С‡С‚Рѕ СЏ С‚СѓС‚ РїСЂРёРЅРµСЃ.";
 };
 
 func int info_grd212_FireMagesLetterFood_condition()
@@ -117,7 +117,7 @@ func int info_grd212_FireMagesLetterFood_condition()
 
 func void info_grd212_FireMagesLetterFood_info()
 {
-	AI_Output(hero,self,"FireMagesLetterFood_NULL_01"); //Вот, посмотри что я тут принес.
+	AI_Output(hero,self,"FireMagesLetterFood_NULL_01"); //Р’РѕС‚, РїРѕСЃРјРѕС‚СЂРё С‡С‚Рѕ СЏ С‚СѓС‚ РїСЂРёРЅРµСЃ.
 	if(
 		Npc_GetDistToNpc(self,GRD_200_Thorus) > 2000
 	)
@@ -130,25 +130,25 @@ func void info_grd212_FireMagesLetterFood_info()
 			isTempPass_grd212 = true;
 			tempPassExpires_grd212 = getTimestamp() / 1440 * 1440 + 5 * 60;
 			B_GiveInvItems(hero,self,ItFoBeer,5);
-			b_printtrademsg1("Отдано 5 бутылок пива");
+			b_printtrademsg1("РћС‚РґР°РЅРѕ 5 Р±СѓС‚С‹Р»РѕРє РїРёРІР°");
 			B_GiveInvItems(hero,self,ItFoMutton,10);
-			b_printtrademsg2("И 10 кусков мяса");
+			b_printtrademsg2("Р 10 РєСѓСЃРєРѕРІ РјСЏСЃР°");
 //			Npc_GiveItem(hero,ItFoBeer,self);
 //			AI_TakeItem(self,ItFoBeer);
 //			Npc_GiveItem(hero,ItFoMutton,self);
-//			AI_TakeItem(self,ItFoMutton);//Визуально это выглядит, как Милтен бегает после получения письма.. это нерабочая функция.
-			B_LogEntry(CH1_PassToInnerOldCamp,"Так, стражник сказал, что я могу пройти, но выйти должен до утра. Эх жаль никто не изобрел часов.. что?");
-			AI_Output(self,hero,"FireMagesLetterFood_NULL_02"); //Хмм.. ну. Топай.
+//			AI_TakeItem(self,ItFoMutton);//Р’РёР·СѓР°Р»СЊРЅРѕ СЌС‚Рѕ РІС‹РіР»СЏРґРёС‚, РєР°Рє РњРёР»С‚РµРЅ Р±РµРіР°РµС‚ РїРѕСЃР»Рµ РїРѕР»СѓС‡РµРЅРёСЏ РїРёСЃСЊРјР°.. СЌС‚Рѕ РЅРµСЂР°Р±РѕС‡Р°СЏ С„СѓРЅРєС†РёСЏ.
+			B_LogEntry(CH1_PassToInnerOldCamp,"РўР°Рє, СЃС‚СЂР°Р¶РЅРёРє СЃРєР°Р·Р°Р», С‡С‚Рѕ СЏ РјРѕРіСѓ РїСЂРѕР№С‚Рё, РЅРѕ РІС‹Р№С‚Рё РґРѕР»Р¶РµРЅ РґРѕ СѓС‚СЂР°. Р­С… Р¶Р°Р»СЊ РЅРёРєС‚Рѕ РЅРµ РёР·РѕР±СЂРµР» С‡Р°СЃРѕРІ.. С‡С‚Рѕ?");
+			AI_Output(self,hero,"FireMagesLetterFood_NULL_02"); //РҐРјРј.. РЅСѓ. РўРѕРїР°Р№.
 		}
 		else
 		{
-			AI_Output(self,hero,"FireMagesLetterFood_NULL_06"); //Эх парень, ты меня разочаровываешь. Этим ты будешь кормить свою мышку. Такую маааленькую, знаешь..
+			AI_Output(self,hero,"FireMagesLetterFood_NULL_06"); //Р­С… РїР°СЂРµРЅСЊ, С‚С‹ РјРµРЅСЏ СЂР°Р·РѕС‡Р°СЂРѕРІС‹РІР°РµС€СЊ. Р­С‚РёРј С‚С‹ Р±СѓРґРµС€СЊ РєРѕСЂРјРёС‚СЊ СЃРІРѕСЋ РјС‹С€РєСѓ. РўР°РєСѓСЋ РјР°Р°Р°Р»РµРЅСЊРєСѓСЋ, Р·РЅР°РµС€СЊ..
 		};
 	}
 	else
 	{
-		AI_Output(self,hero,"FireMagesLetterFood_NULL_04"); //Тебе что здесь, олух надо?!
-		AI_Output(self,hero,"FireMagesLetterFood_NULL_05"); //Что ты несешь?!
+		AI_Output(self,hero,"FireMagesLetterFood_NULL_04"); //РўРµР±Рµ С‡С‚Рѕ Р·РґРµСЃСЊ, РѕР»СѓС… РЅР°РґРѕ?!
+		AI_Output(self,hero,"FireMagesLetterFood_NULL_05"); //Р§С‚Рѕ С‚С‹ РЅРµСЃРµС€СЊ?!
 		AI_StopProcessInfos(self);
 		Npc_SetTarget(self,hero);
 		AI_StartState(self,ZS_Attack,1,"");
@@ -176,6 +176,6 @@ func int info_grd212_FireMagesLetterFoodNote_condition()
 func void INFO_GRD212_FireMagesLetterFoodNote_info()
 {
 	AI_UseItem(self,ItFoMutton);
-	AI_Output(self,hero,"FireMagesLetterFood_NULL_03"); //А.. и да.. (ном-ном) не выйдешь до утра - пиняй на себя.
+	AI_Output(self,hero,"FireMagesLetterFood_NULL_03"); //Рђ.. Рё РґР°.. (РЅРѕРј-РЅРѕРј) РЅРµ РІС‹Р№РґРµС€СЊ РґРѕ СѓС‚СЂР° - РїРёРЅСЏР№ РЅР° СЃРµР±СЏ.
 	AI_StopProcessInfos(self);
 };

@@ -1,7 +1,7 @@
 
 instance NOV_1305_Joru(Npc_Default)
 {
-	name[0] = "Éîðó";
+	name[0] = "Ð™Ð¾Ñ€Ñƒ";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 9;

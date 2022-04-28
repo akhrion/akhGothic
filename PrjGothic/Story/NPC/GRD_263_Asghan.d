@@ -1,7 +1,7 @@
 
 instance GRD_263_Asghan(Npc_Default)
 {
-	name[0] = "¿Ò„ı‡Ì";
+	name[0] = "–ê—Å–≥—Ö–∞–Ω";
 	npcType = npctype_main;
 	guild = GIL_GRD;
 	level = 20;

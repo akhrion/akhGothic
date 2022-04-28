@@ -14,7 +14,7 @@ func int ZS_MM_AttackMage_Loop()
 	Npc_GetTarget(self);
 	if(Npc_IsInState(other,ZS_Unconscious) || Npc_IsDead(other) || Npc_IsInState(other,ZS_Dead))
 	{
-		PrintDebugNpc(PD_ZS_Check,"...Ziel bewuﬂtlos oder tot!");
+		PrintDebugNpc(PD_ZS_Check,"...Ziel bewu–Øtlos oder tot!");
 		if(Npc_IsNextTargetAvailable(self))
 		{
 			Npc_GetNextTarget(self);

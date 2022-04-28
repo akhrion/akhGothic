@@ -1,7 +1,7 @@
 
 instance Sld_700_Lee(Npc_Default)
 {
-	name[0] = "Ëè";
+	name[0] = "Ð›Ð¸";
 	npcType = npctype_main;
 	guild = GIL_SLD;
 	level = 50;

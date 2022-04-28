@@ -1,7 +1,7 @@
 
 instance NOV_1371_BaalNetbek(Npc_Default)
 {
-	name[0] = "Идол Нетбек";
+	name[0] = "РРґРѕР» РќРµС‚Р±РµРє";
 	npcType = npctype_main;
 	guild = GIL_NOV;
 	level = 3;

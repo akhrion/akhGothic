@@ -1,7 +1,7 @@
 
 instance VLK_505_Buddler(Npc_Default)
 {
-	name[0] = "Марус";
+	name[0] = "РњР°СЂСѓСЃ";
 	npcType = npctype_main;
 	guild = GIL_VLK;
 	level = 5;
@@ -79,37 +79,37 @@ func int dia_vlk505_hi_condition()
 
 func void dia_vlk505_hi_info()
 {
-	AI_Output(self,other,"DIA_LetterFight_01");	//Иди сюда! Быстрее!
-	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02");	//В чем дело?
+	AI_Output(self,other,"DIA_LetterFight_01");	//РРґРё СЃСЋРґР°! Р‘С‹СЃС‚СЂРµРµ!
+	AI_Output(hero,self,"Info_Grd_212_FirstWarn_Info_15_02");	//Р’ С‡РµРј РґРµР»Рѕ?
 	if(Sly_LostNek == LOG_RUNNING)
 	{
-		AI_Output(self,other,"DIA_LetterFight_02");	//Это Нек, они нашли его! Идем за мной, я покажу!
+		AI_Output(self,other,"DIA_LetterFight_02");	//Р­С‚Рѕ РќРµРє, РѕРЅРё РЅР°С€Р»Рё РµРіРѕ! РРґРµРј Р·Р° РјРЅРѕР№, СЏ РїРѕРєР°Р¶Сѓ!
 	}
 	else if(Dexter_GetKalomsRecipe == LOG_RUNNING)
 	{
-		AI_Output(self,other,"DIA_LetterFight_03");	//Я слышал, что ты ищешь рецепт для Декстера. Я могу помочь тебе, идем за мной!
+		AI_Output(self,other,"DIA_LetterFight_03");	//РЇ СЃР»С‹С€Р°Р», С‡С‚Рѕ С‚С‹ РёС‰РµС€СЊ СЂРµС†РµРїС‚ РґР»СЏ Р”РµРєСЃС‚РµСЂР°. РЇ РјРѕРіСѓ РїРѕРјРѕС‡СЊ С‚РµР±Рµ, РёРґРµРј Р·Р° РјРЅРѕР№!
 	}
 	else
 	{
-		AI_Output(self,other,"DIA_LetterFight_04");	//Мне нужна твоя помощь! Иди за мной, пожалуйста!
+		AI_Output(self,other,"DIA_LetterFight_04");	//РњРЅРµ РЅСѓР¶РЅР° С‚РІРѕСЏ РїРѕРјРѕС‰СЊ! РРґРё Р·Р° РјРЅРѕР№, РїРѕР¶Р°Р»СѓР№СЃС‚Р°!
 	};
 	Npc_ExchangeRoutine(VLK_506_Buddler,"start");
 	Info_ClearChoices(dia_vlk505_hi);
-	Info_AddChoice(dia_vlk505_hi,"Ладно. Пойдем.",dia_vlk505_hi_yes);
-	Info_AddChoice(dia_vlk505_hi,"Мне это не нужно!",dia_vlk505_hi_no);
+	Info_AddChoice(dia_vlk505_hi,"Р›Р°РґРЅРѕ. РџРѕР№РґРµРј.",dia_vlk505_hi_yes);
+	Info_AddChoice(dia_vlk505_hi,"РњРЅРµ СЌС‚Рѕ РЅРµ РЅСѓР¶РЅРѕ!",dia_vlk505_hi_no);
 };
 
 func void dia_vlk505_hi_yes()
 {
-	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03");	//Ладно. Пойдем.
+	AI_Output(other,self,"DIA_Dusty_LetsGo_15_03");	//Р›Р°РґРЅРѕ. РџРѕР№РґРµРј.
 	Npc_ExchangeRoutine(self,"guide");
 	AI_StopProcessInfos(self);
 };
 
 func void dia_vlk505_hi_no()
 {
-	AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01");	//Мне это не нужно!
-	AI_Output(self,other,"DIA_LetterFight_05");	//Так, ладно... Здесь слухи расходятся быстро: я знаю, что у тебя есть письмо для магов! Отдай его мне!
+	AI_Output(other,self,"DIA_SLD_753_Baloro_Exit_Info_15_01");	//РњРЅРµ СЌС‚Рѕ РЅРµ РЅСѓР¶РЅРѕ!
+	AI_Output(self,other,"DIA_LetterFight_05");	//РўР°Рє, Р»Р°РґРЅРѕ... Р—РґРµСЃСЊ СЃР»СѓС…Рё СЂР°СЃС…РѕРґСЏС‚СЃСЏ Р±С‹СЃС‚СЂРѕ: СЏ Р·РЅР°СЋ, С‡С‚Рѕ Сѓ С‚РµР±СЏ РµСЃС‚СЊ РїРёСЃСЊРјРѕ РґР»СЏ РјР°РіРѕРІ! РћС‚РґР°Р№ РµРіРѕ РјРЅРµ!
 	self.guild = GIL_None;
 	Npc_SetTrueGuild(self,GIL_None);
 	AI_StopProcessInfos(self);
@@ -141,7 +141,7 @@ func int dia_vlk505_hi2_condition()
 
 func void dia_vlk505_hi2_info()
 {
-	AI_Output(self,other,"DIA_LetterFight_05");	//Так, ладно... Здесь слухи расходятся быстро: я знаю, что у тебя есть письмо для магов! Отдай его мне!
+	AI_Output(self,other,"DIA_LetterFight_05");	//РўР°Рє, Р»Р°РґРЅРѕ... Р—РґРµСЃСЊ СЃР»СѓС…Рё СЂР°СЃС…РѕРґСЏС‚СЃСЏ Р±С‹СЃС‚СЂРѕ: СЏ Р·РЅР°СЋ, С‡С‚Рѕ Сѓ С‚РµР±СЏ РµСЃС‚СЊ РїРёСЃСЊРјРѕ РґР»СЏ РјР°РіРѕРІ! РћС‚РґР°Р№ РµРіРѕ РјРЅРµ!
 	self.guild = GIL_None;
 	Npc_SetTrueGuild(self,GIL_None);
 	AI_StopProcessInfos(self);
@@ -173,7 +173,7 @@ func int vlk505_getlost_condition()
 
 func void vlk505_getlost_info()
 {
-	AI_Output(self,other,"SVM_19_GetOutOfHere");	//Проваливай!
+	AI_Output(self,other,"SVM_19_GetOutOfHere");	//РџСЂРѕРІР°Р»РёРІР°Р№!
 	AI_StopProcessInfos(self);
 };
 
@@ -186,7 +186,7 @@ instance DIA_VLK505_HI_01(C_Info)
 	information = dia_vlk505_hi_01_info;
 	permanent = 1;
 	important = 0;
-	description = "Привет!";
+	description = "РџСЂРёРІРµС‚!";
 };
 
 
@@ -197,8 +197,8 @@ func int dia_vlk505_hi_01_condition()
 
 func void dia_vlk505_hi_01_info()
 {
-	AI_Output(other,self,"Info_Stt_10_DieLage_15_00");	//Привет!
-	AI_Output(self,other,"SVM_2_WhatsThisSupposedToBe");	//Что ты здесь шатаешься?
+	AI_Output(other,self,"Info_Stt_10_DieLage_15_00");	//РџСЂРёРІРµС‚!
+	AI_Output(self,other,"SVM_2_WhatsThisSupposedToBe");	//Р§С‚Рѕ С‚С‹ Р·РґРµСЃСЊ С€Р°С‚Р°РµС€СЊСЃСЏ?
 	AI_StopProcessInfos(self);
 };
 
@@ -211,7 +211,7 @@ instance DIA_VLK505_HI_02(C_Info)
 	information = dia_vlk505_hi_02_info;
 	permanent = 1;
 	important = 0;
-	description = "Как дела?";
+	description = "РљР°Рє РґРµР»Р°?";
 };
 
 
@@ -222,8 +222,8 @@ func int dia_vlk505_hi_02_condition()
 
 func void dia_vlk505_hi_02_info()
 {
-	AI_Output(other,self,"DIA_Jesse_Hallo_15_00");	//Как дела?
-	AI_Output(self,other,"SVM_2_YouDeafOrWhat");	//Убирайся. Иначе тебе не поздоровится.
+	AI_Output(other,self,"DIA_Jesse_Hallo_15_00");	//РљР°Рє РґРµР»Р°?
+	AI_Output(self,other,"SVM_2_YouDeafOrWhat");	//РЈР±РёСЂР°Р№СЃСЏ. РРЅР°С‡Рµ С‚РµР±Рµ РЅРµ РїРѕР·РґРѕСЂРѕРІРёС‚СЃСЏ.
 	AI_StopProcessInfos(self);
 };
 

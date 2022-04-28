@@ -41,9 +41,10 @@ instance Gil_Values(C_GILVALUES)
 	blood_texture[GIL_BLOODFLY] = "BQM_Meatbug.tga";
 	swim_time[GIL_MINECRAWLER] = 0;
 	dive_time[GIL_MINECRAWLER] = 0;
+	step_height[GIL_MINECRAWLER] = 3000;
 	water_depth_knee[GIL_MINECRAWLER] = 75;
 	water_depth_chest[GIL_MINECRAWLER] = 100;
-	slide_angle[GIL_MINECRAWLER] = 60;
+	slide_angle[GIL_MINECRAWLER] = 90;
 	disable_autoroll[GIL_MINECRAWLER] = 1;
 	surface_align[GIL_MINECRAWLER] = 2;
 	turn_speed[GIL_MINECRAWLER] = 100;

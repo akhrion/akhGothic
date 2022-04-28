@@ -1,7 +1,7 @@
 
 instance ORG_841_Silas(Npc_Default)
 {
-	name[0] = "Силас";
+	name[0] = "РЎРёР»Р°СЃ";
 	npcType = npctype_main;
 	guild = GIL_ORG;
 	level = 15;
