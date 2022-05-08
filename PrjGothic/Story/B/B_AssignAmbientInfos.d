@@ -21,6 +21,7 @@ func void B_AssignAmbientInfos(var C_Npc amb_self)
 			{
 				B_AssignAmbientInfos_Vlk_4(amb_self);
 			};
+			B_AssignAmbientInfos_Vlk(amb_self);
 		}
 		else if(amb_self.guild == GIL_GRD)
 		{

@@ -844,3 +844,14 @@ func void UnEquip_RingOfTemporalisPower_Script(var C_NPC npc)
 	npc.damage[DAM_INDEX_MAGIC] -= 99999;
 	RingOfTemporalisPowerEquiped = false;
 };
+
+instance ItRg_DiegosPass(C_Item)
+{
+	name = NAME_Ring;
+	mainflag = ITEM_KAT_MAGIC;
+	flags = ITEM_RING;
+	visual = "ItMi_Ring_01.3ds";
+	visual_skin = 0;
+	material = MAT_METAL;
+	description = "Кольцо Диего";
+};

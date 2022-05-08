@@ -89,7 +89,17 @@ func void DIA_Grd_215_Torwache_First_JustLooking()
 func void DIA_Grd_215_Torwache_First_Diego()
 {
 	AI_Output(other,self,"DIA_Grd_215_Torwache_First_Diego_15_00");	//Диего сказал, что я должен встретиться с ним в лагере.
-	AI_Output(self,other,"DIA_Grd_215_Torwache_First_Diego_06_01");	//Ладно, раз так - проходи.
+	if(Npc_HasItems(hero,ItRg_DiegosPass))
+	{
+		AI_Output(other,self,"DIA_Grd_215_Torwache_First_Diego_NULL_02"); //Вот смотри *показывает кольцо*
+		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Diego_06_01"); //Ладно, раз так - проходи.
+	}
+	else
+	{
+		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Diego_NULL_03"); //Диего? А кто это такой вообще?.
+		AI_Output(other,self,"DIA_Grd_215_Torwache_First_Diego_NULL_04"); //Он.. нуу он эм.. он сказал что мы вст..
+		AI_Output(self,other,"DIA_Grd_215_Torwache_First_Diego_NULL_04"); //Проходи.
+	};
 	Info_ClearChoices(DIA_Grd_215_Torwache_First);
 	AI_StopProcessInfos(self);
 };

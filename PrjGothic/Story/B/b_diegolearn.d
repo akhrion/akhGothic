@@ -93,6 +93,8 @@ func void Info_Diego_EXIT_Gamestart_Info()
 	else
 	{
 		AI_Output(self,hero,"Info_Diego_EXIT_Gamestart_11_02");	//Встретимся в Старом лагере.
+		AI_Output(self,hero,"Info_Diego_EXIT_Gamestart_NULL_03"); //И вот, возьми это кольцо - покажешь его охране ворот на входе в лагерь и тогда у них не должно возникнуть лишних вопросов.
+		B_GiveInvItems(self,hero,ItRg_DiegosPass,1);
 	};
 	AI_StopProcessInfos(self);
 	if(Kapitel < 2)
