@@ -1,3 +1,7 @@
+func int B_Day_IsOdd()
+{
+	return Wld_GetDay() % 2;
+};
 //Возвращает строку обьединённую с интом.
 func string getConcatSI(var string s1, var int i)
 {
@@ -1278,20 +1282,31 @@ func void B_Npc_SetHP_AfterRevive(var C_NPC npc,var C_NPC prevInstance)
 };
 //Вызывается в функции Info_Vlk_GiveMeOre_Condition
 //Возвращает true если НПС заплатил руду сегодня.
-//Каждый день в 00:00 устанавливается в false из akhrion_Loop().
 func int B_Npc_PayDayOre_IsPayed(var C_NPC npc)
 {
-	return isFlagsContainCategorie(npc.aivar[AIV_BOOLPOOL47],BP47_PAYDAY);
-};
-//Вызывается из функции Info_Vlk_GiveMeOre_Info
-//И каждую ночь в 00:00 из функции akhrion_Loop() устанавливается в false
-//Установи bMode в true, если НПС заплатил руду, в противном случае false
-func void B_Npc_PayDayOre_SetPayed(var C_NPC npc, var int bMode)
-{
-	if(B_Npc_PayDayOre_IsPayed(npc) && !bMode){
-		npc.aivar[AIV_BOOLPOOL47] -= bMode;
+	if(
+		(
+		B_Day_IsOdd()
+	&&	isFlagsContainCategorie(npc.aivar[AIV_BOOLPOOL47],BP47_PAYDAY)
+		)
+	||
+		(
+		!B_Day_IsOdd()
+	&&	!isFlagsContainCategorie(npc.aivar[AIV_BOOLPOOL47],BP47_PAYDAY)
+		)
+	)
+	{
+		return true;
 	};
-	if(!B_Npc_PayDayOre_IsPayed(npc) && bMode){
-		npc.aivar[AIV_BOOLPOOL47] += bMode;		
+	return false;
+};
+func void B_Npc_PayDayOre_FlipPayedFlag(var C_NPC npc)
+{
+	if(isFlagsContainCategorie(npc.aivar[AIV_BOOLPOOL47],BP47_PAYDAY)){
+		npc.aivar[AIV_BOOLPOOL47] -= BP47_PAYDAY;
+	}
+	else
+	{
+		npc.aivar[AIV_BOOLPOOL47] += BP47_PAYDAY;		
 	};
 };

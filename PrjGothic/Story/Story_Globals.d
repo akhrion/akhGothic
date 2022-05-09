@@ -482,3 +482,4 @@ var int SC_WasInOldCamp;
 var int SC_WasInNewCamp;
 var int bDIA_Nyras_Ort_Holy;
 var int bFireGolem_Part_Spawned;
+var int DailyReset_LastDay ;

@@ -611,10 +611,8 @@ func void akh_SC_Position()
 		if(Npc_GetDistToWP(hero,"PSI_PLACE_1") < 4000){SC_WasInPsiCamp = true;};
 	};
 };
-
 func void akhrion_Loop(){
 	EVENT_Killers();
-	
 	akh_maintest();
 	if(!SC_IsAlive()){return;};
 	akh_SC_Position();
