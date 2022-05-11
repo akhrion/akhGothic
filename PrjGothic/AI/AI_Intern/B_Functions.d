@@ -504,7 +504,7 @@ func void B_PrintGuildCondition(var int level)
 func void B_Print(var string msg)
 {
 	PrintDebugNpc(PD_ZS_FRAME,"B_Print");
-	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,FONT_GS10,_TIME_MESSAGE_Joincamp);
+	PrintScreen(msg,-1,_YPOS_MESSAGE_Joincamp,FONT_SCREEN,_TIME_MESSAGE_Joincamp);
 };
 func void B_PrintB(var string msg)
 {

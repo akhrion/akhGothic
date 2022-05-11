@@ -21,7 +21,10 @@ func string getConcatSIS(var string s1, var int i, var string s2)
 		s2
 	);
 };
-
+func int Math_GetPcntFrom(var int pcnt,var int num)
+{
+	return num * pcnt / 100;
+};
 func void msg(var string str, var int x, var int y){
 	PrintScreen(str,x,y,FONT_SCREEN,5);
 };

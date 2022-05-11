@@ -319,6 +319,10 @@ const string _STR_MESSAGE_ORE_TAKEN = "Кусков руды получено: "
 const string _STR_MESSAGE_TRADE_FAILURE = "Это неравноценный обмен.";
 const string _STR_MESSAGE_Joincamp = "Условие: уровень ";
 const string _STR_MESSAGE_CANNOTSTEAL = "Воровство невозможно.";
+const string _STR_MESSAGE_GoldGiven = "Отдано руды: ";
+const string _STR_MESSAGE_GoldLost = "Потеряно руды: ";
+const string _STR_MESSAGE_GoldReceived = "Получено руды: ";
+const string _STR_MESSAGE_GoldFound = "Найдено руды: ";
 
 const int _YPOS_MESSAGE_GIVEN = 37;
 const int _YPOS_MESSAGE_TAKEN = 40;

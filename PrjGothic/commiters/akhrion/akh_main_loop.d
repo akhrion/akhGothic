@@ -615,6 +615,7 @@ func void akhrion_Loop(){
 	EVENT_Killers();
 	akh_maintest();
 	if(!SC_IsAlive()){return;};
+	EVENT_Daily();
 	akh_SC_Position();
 	josefFight();
 	RingOfTemporalisPower_Handler();

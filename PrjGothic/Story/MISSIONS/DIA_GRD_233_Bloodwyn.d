@@ -318,6 +318,31 @@ func void GRD_233_Bloodwyn_WELCOME_Info()
 	AI_Output(self,other,"GRD_233_Bloodwyn_WELCOME_Info_08_01");	//Теперь ты один из нас. Отлично. Нам нужны такие люди как ты.
 };
 
+instance GRD_233_Bloodwyn_SCTookOreFromMiner(C_Info)
+{
+	npc = GRD_233_Bloodwyn;
+	condition = GRD_233_Bloodwyn_SCTookOreFromMiner_Condition;
+	information = GRD_233_Bloodwyn_SCTookOreFromMiner_Info;
+	important = 1;
+	permanent = 1;
+};
+func int GRD_233_Bloodwyn_SCTookOreFromMiner_Condition()
+{
+	if(
+		Npc_GetTrueGuild(hero) == GIL_GRD
+	&&	Info_Vlk_GiveMeOre_iSCTaxCounter > 2
+	)
+	{
+		return TRUE;
+	};
+};
+func void GRD_233_Bloodwyn_SCTookOreFromMiner_Info()
+{
+	AI_Output(self,other,"GRD_233_Bloodwyn_SCTookOreFromMiner_NULL_01"); //Я потрясен малец, что ты научился зарабатывать на бедных рудокопах. Но не думаешь-же ты, что можно вот так просто обобрать их всех и не поделиться с остальными стражниками?
+	Game_Msg_GoldLost(Math_GetPcntFrom(80, Info_Vlk_GiveMeOre_iSCTaxCounter * 10));
+	B_GiveInvItems(other,self,ItMiNugget,Math_GetPcntFrom(80, Info_Vlk_GiveMeOre_iSCTaxCounter * 10));
+	Info_Vlk_GiveMeOre_iSCTaxCounter = 0;
+};
 
 instance Info_Bloodwyn_DIE(C_Info)
 {

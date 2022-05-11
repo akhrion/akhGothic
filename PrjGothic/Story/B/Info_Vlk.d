@@ -26,7 +26,9 @@ func void Info_Vlk_GiveMeOre_Info()
 	}
 	else
 	{
+		Info_Vlk_GiveMeOre_iSCTaxCounter +=1;
 		AI_Output(self,other,"Vlk_GiveMeOre_NULL_03"); //Да, конечно.
+		Game_Msg_GoldReceived(10);
 		B_GiveInvItems(self,other,ItMiNugget,10);
 		B_Npc_PayDayOre_FlipPayedFlag(self);
 	};
