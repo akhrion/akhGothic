@@ -701,4 +701,22 @@ instance ItAmBolt(C_Item)
 	text[5] = NAME_Value;
 	count[5] = value;
 };
-
+instance ItAmArrowPack(C_Item)
+{
+	name = "Пакет стрел";
+	mainflag = ITEM_KAT_MUN;
+	flags = ITEM_BOW | ITEM_MULTI;
+	value = ItAmArrow.value * 100;
+	visual = "ItAm_Arrow_01.3ds";
+	material = MAT_WOOD;
+	on_state[0] = UseUnpack_ArrowPack;
+	scemeName = "MAP";
+	description = name;
+	text[5] = NAME_Value;
+	count[5] = value;
+};
+func void UseUnpack_ArrowPack()
+{
+	Npc_RemoveInvItems(self,ItAmArrowPack,1);
+	CreateInvItems(self,ItAmArrow,100);
+};
