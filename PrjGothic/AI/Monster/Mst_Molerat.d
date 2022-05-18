@@ -11,8 +11,8 @@ prototype Mst_Default_Molerat(C_Npc)
 	attribute[ATR_HITPOINTS] = 40;
 	attribute[ATR_MANA_MAX] = 0;
 	attribute[ATR_MANA] = 0;
-	protection[PROT_BLUNT] = 8;
-	protection[PROT_EDGE] = 8;
+	protection[PROT_BLUNT] = 15;
+	protection[PROT_EDGE] = 25;
 	protection[PROT_POINT] = 25;
 	protection[PROT_FIRE] = 5;
 	protection[PROT_FLY] = 0;

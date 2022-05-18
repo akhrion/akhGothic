@@ -191,7 +191,7 @@ instance ItMw_1H_Mace_Light_01(C_Item)
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
 	value = 5;
-	damageTotal = 8;
+	damageTotal = 15;
 	damagetype = DAM_BLUNT;
 	range = 100;
 	cond_atr[2] = ATR_STRENGTH;
@@ -214,9 +214,9 @@ instance ItMw_1H_Hatchet_01(C_Item)
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
 	value = 6;
-	damageTotal = 9;
+	damageTotal = 10;
 	damagetype = DAM_EDGE;
-	range = 100;
+	range = 70;
 	cond_atr[2] = ATR_STRENGTH;
 	cond_value[2] = 5;
 	visual = "ItMw_1H_Hatchet_01.3DS";
@@ -241,7 +241,7 @@ instance ITMW_SKELETON_SWORD(C_Item)
 	damagetype = DAM_EDGE;
 	range = 100;
 	cond_atr[2] = ATR_STRENGTH;
-	cond_value[2] = 6;
+	cond_value[2] = 5;
 	visual = "ItMw_Skeleton_Sword.3DS";
 	description = name;
 	text[2] = NAME_Damage;
@@ -281,11 +281,11 @@ instance ItMw_1H_Nailmace_01(C_Item)
 	flags = ITEM_AXE;
 	material = MAT_WOOD;
 	value = 13;
-	damageTotal = 11;
+	damageTotal = 20;
 	damagetype = DAM_BLUNT;
 	range = 100;
 	cond_atr[2] = ATR_STRENGTH;
-	cond_value[2] = 7;
+	cond_value[2] = 10;
 	visual = "ItMw_1H_Nailmace_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;
@@ -304,11 +304,11 @@ instance ItMw_1H_Sword_Short_01(C_Item)
 	flags = ITEM_SWD;
 	material = MAT_METAL;
 	value = 40;
-	damageTotal = 12;
+	damageTotal = 30;
 	damagetype = DAM_EDGE;
 	range = 80;
 	cond_atr[2] = ATR_STRENGTH;
-	cond_value[2] = 8;
+	cond_value[2] = 10;
 	visual = "ItMw_1H_Sword_Short_01.3DS";
 	description = name;
 	text[2] = NAME_Damage;

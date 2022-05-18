@@ -11,8 +11,8 @@ prototype Mst_Default_Scavenger(C_Npc)
 	attribute[ATR_HITPOINTS] = 40;
 	attribute[ATR_MANA_MAX] = 0;
 	attribute[ATR_MANA] = 0;
-	protection[PROT_BLUNT] = 9;
-	protection[PROT_EDGE] = 9;
+	protection[PROT_BLUNT] = 20;
+	protection[PROT_EDGE] = 15;
 	protection[PROT_POINT] = 5;
 	protection[PROT_FIRE] = 0;
 	protection[PROT_FLY] = 0;
@@ -79,7 +79,7 @@ instance YScavenger(Mst_Default_Scavenger)
 	attribute[ATR_DEXTERITY] = 6;
 	attribute[ATR_HITPOINTS_MAX] = 35;
 	attribute[ATR_HITPOINTS] = 35;
-	protection[PROT_BLUNT] = 8;
+	protection[PROT_BLUNT] = 12;
 	protection[PROT_EDGE] = 8;
 	fight_tactic = FAI_MONSTER_COWARD;
 	set_yscavenger_visuals();
